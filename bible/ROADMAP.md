@@ -2,7 +2,7 @@
 
 > A detailed, faithful dramatization of the Bible. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-**Status:** v2.4, 2026-10-01. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done, and the [treatment](./story/arcs/07-ruth/TREATMENT.md) is drafted. The whole-Bible [working chronology](./world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
+**Status:** v2.5, 2026-10-01. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done, and the [treatment](./story/arcs/07-ruth/TREATMENT.md) is on its second draft. v2.5 adds one language rule for the whole series (§5.7), uses God's name more sparingly (§5.5), and plans for live action, with the 3D animation as its placeholder (§1.1, §15). The whole-Bible [working chronology](./world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
@@ -51,7 +51,7 @@ Read §0 for the short version and §19 for what's decided and what's still open
 
 ## 0. The short version
 
-**What we're making.** A dramatization of the whole biblical narrative, one arc at a time. It stays faithful to the text and uses modern dialogue. The text comes first: research, then treatments, then screenplays. 3D animation comes later, once the stories are written and locked.
+**What we're making.** A dramatization of the whole biblical narrative, one arc at a time. It stays faithful to the text and uses modern dialogue. The text comes first: research, then treatments, then screenplays. 3D animation comes later, once the stories are written and locked, and it's the placeholder for what you eventually want: a live-action series or films.
 
 **The core idea: modern words, ancient minds.** Characters speak the way people speak now, so the audience hears them as people rather than statues. But they *think* like people of their own time. Their fears, loyalties, beliefs and knowledge belong to their world, not ours. Most weak Bible adaptations fail on one side or the other. Either the words are archaic, which makes the story feel distant, or the characters have modern minds under their robes, which makes it false.
 
@@ -80,7 +80,7 @@ Read §0 for the short version and §19 for what's decided and what's still open
 
 - A **multi-part dramatized series** covering the biblical narrative from creation to Revelation. It is organized into arcs such as Joseph, the Exodus, David and the Gospels, and each arc stands on its own.
 - It is written first as **screenplays**. A **series bible** (world, characters, timeline) and a **research dossier** for every passage support the scripts.
-- It is eventually produced as a **fully rendered 3D animated series**.
+- It is produced as a **fully rendered 3D animated series**, which is the placeholder for an eventual **live-action series or films**. The animation should be good to watch in its own right, and also serve as the blueprint for live action (§15).
 - **Its purpose is an accurate and powerful expression of Christianity, as you understand it.** It is a creative project, not a historical one. It stays bound to the texts, but not to convention. It doesn't need to match any denomination's framework.
 - **Its audience, for now, is you.** The test is whether you think it's right, true and good. There's no rating to aim at.
 
@@ -425,9 +425,7 @@ This changes from era to era. It's a small detail that makes each era sound diff
   - The Mishnah describes the high priest pronouncing it in the Temple on the Day of Atonement, with the people bowing when they heard it (Yoma 6:2). It condemns anyone who pronounces it "according to its letters" (Sanhedrin 10:1).
 - **The pronunciation is reconstructed.** "Yahweh" is a scholarly reconstruction based on early Greek transcriptions. It's widely accepted but not certain. "Jehovah" is a later hybrid: the consonants of YHWH with the vowels of *Adonai*.
 
-So your rule makes "Yahweh" common in Old Testament dialogue and nearly absent in the New Testament era, apart from the high priest on the Day of Atonement. That gives the two eras an audible difference, which I like.
-
-**Decided (v2.1):** apply the rule fully for now. Boaz says "Yahweh be with you" in Ruth 2:4, and Old Testament characters use the Name wherever they would have.
+**Decided (v2.1), then revised (v2.5, 2026-10-01): use the Name sparingly.** Characters say "Yahweh" in oaths, where swearing by the Name is the point ("as Yahweh lives"), and where the Name itself is the subject (Exod 3:13–15; 1 Kgs 18:39, "Yahweh, he is God"). Everywhere else they say "God" or "the Lord." That keeps the Name rare and weighty in the Old Testament. In the New Testament era it drops out of speech entirely, as it did historically. In Ruth it's heard twice, in Ruth's oath (1:17) and in Boaz's (3:13).
 
 ### 5.6 Names
 
@@ -444,30 +442,45 @@ So your rule makes "Yahweh" common in Old Testament dialogue and nearly absent i
 
 ### 5.7 Languages and accents
 
-**Decided: we use the original languages, not only English.** How far to take that was settled below (approach C, reading 1). There are four basic approaches:
+**Decided (v2.5, 2026-10-01): one fixed rule for the whole series.** Earlier versions let language follow point of view: whoever we were following spoke English. That breaks once the episodes are put together, because the same language would sound like English in one episode and like itself in another. So English now always stands for the same thing.
 
-| Approach | How it works | For | Against |
-|---|---|---|---|
-| **A. English, with original words kept** | All dialogue is in English, and the Aramaic words the Gospels preserve stay in Aramaic | Fully keeps the "modern speech" goal; easiest to write, revise and voice | The least texture |
-| **B. Original languages throughout, with subtitles** | Hebrew, Aramaic, Greek, Latin and the rest are spoken aloud, with modern-English subtitles (the *Passion of the Christ* approach) | The most authentic and immersive. The subtitles can still be written in setting-2 English. | The audience hears foreign speech, so the modern-voice connection moves from the ear to the eye. Every revision needs translating, casting gets harder, and some languages are partly reconstructed. |
-| **C. Language follows point of view** | The group we're inside speaks English. Outsiders speak their own language, with or without subtitles. In the Joseph arc, the Hebrews speak English and the Egyptians speak Egyptian until Joseph's world becomes Egyptian. In the Gospels, Jesus's circle speaks English, Roman soldiers speak Latin, and perhaps Pilate questions Jesus in Greek. | Keeps the intimacy of modern speech for the people we're inside, and turns language into a dramatic tool | Needs consistent rules |
-| **D. Transition** | A scene opens in the original language and then dissolves into English | Signals authenticity once and then gets out of the way | It's a device, and it feels gimmicky if overused |
+1. **English is Israel's own language.** It renders the everyday speech of Abraham's family and the people of Israel: Hebrew through the Old Testament period, then Aramaic, which replaced Hebrew as the everyday language of Jews after the exile.
+2. **Sister dialects that Israelites could understand are English with an accent.** Moabite, Ammonite, Edomite and Phoenician were close relatives of Hebrew, and the Bible never shows anyone needing an interpreter for them: Ruth talks with Boaz, Ehud with Eglon (Judg 3:19–20), Solomon's men with Hiram's (1 Kgs 5). They're English with their own accents, the same way regional accents inside Israel are (Judg 12:6; Matt 26:73).
+3. **Languages Israelites couldn't understand are spoken as themselves.** The Bible marks where that line falls. Joseph speaks to his brothers through an interpreter (Gen 42:23). Judah's officials ask the Assyrian envoy to speak Aramaic so that the people on the wall won't understand (2 Kgs 18:26). The prophets threaten "a nation whose language you do not understand" (Deut 28:49; Jer 5:15). Which form of each language we use follows your three tiers, below.
+4. **Characters change language only when they would in real life.** Nobody's language depends on whose episode it is.
 
-**Recommendation:** C as the backbone, keeping A's preserved words, with D used sparingly. This keeps your core idea (people sounding like people) and still puts real ancient language on screen where it does dramatic work.
+The result: most main characters speak English almost all the time, because most of them are Israelites. The exceptions are the moments the Bible itself makes about language. Joseph speaks Egyptian at court and with his brothers through an interpreter. Esther speaks Persian in the palace and English with Mordecai, which plays out the secret she's keeping (Esth 2:10). Paul speaks Greek to the Roman commander, then turns to the crowd in his people's language, and they go quiet (Acts 21:37–22:2).
 
-**Decided (v2.1): C.** The characters we're following speak English, and other languages use "modern equivalents where possible." **v2.2: Reading 1, the modern pronunciation of the ancient language.** The two readings were:
+**Your three tiers, for every language that isn't English:**
 
-| Language | Reading 1: modern pronunciation of the ancient language (recommended) | Reading 2: the modern descendant language |
-|---|---|---|
-| Egyptian | Coptic-based pronunciation. Coptic is Egyptian's last stage, the only one written with vowels, and still used in the Coptic Church's liturgy. | Coptic itself. (Egyptian Arabic would be wrong: Arabic arrived in the 7th century AD.) |
-| Aramaic | Neo-Aramaic speakers, especially Western Neo-Aramaic from Maaloula in Syria, the closest living relative of the dialect Jesus spoke | The same |
-| Greek | Koine with Modern Greek pronunciation, which is closer to how Koine sounded than the classroom pronunciation | Modern Greek |
-| Latin | Church (ecclesiastical) pronunciation, which is still in use | Italian |
-| Persian | Modern Persian (Farsi). Old Persian survives only in royal inscriptions. | Farsi |
-| Akkadian (Assyria, Babylon) | No living descendant, so it must be reconstructed, or replaced with Aramaic, which did replace Akkadian as the empire's common language (Dan 2:4) | None |
-| Philistine | Unknown. A decision is needed. | None |
+1. **The original language, reconstructed,** but only if it can be reconstructed with high confidence.
+2. **Otherwise, its descendant language,** if there is one.
+3. **Otherwise, the language commonly spoken in that region today.**
 
-Reading 1 keeps the languages ancient but speakable. It also means native speakers can check the lines and voice them, which raises the confidence of the translations.
+| Language | Who speaks it | Tier | What we'd use | Decide by |
+|---|---|---|---|---|
+| Egyptian | Joseph's Egypt; the Exodus | 2 | **Coptic,** Egyptian's last stage, still used in the Coptic Church's liturgy. Egyptian writing left out the vowels, so a reconstruction can't reach high confidence. | Joseph |
+| Aramaic, in the Old Testament period | Laban (Gen 31:47); Aramean kings; the Assyrian envoy; the Babylonian and Persian courts (Dan 2:4) | 1 or 2 | The words are well documented, in the Bible and in inscriptions. If a specialist can't vouch for the sound with high confidence, then **Neo-Aramaic,** its living descendant. | Jacob |
+| Akkadian | Assyrian and Babylonian rituals, inscriptions and court | 1 or 3 | Cuneiform wrote the vowels and thousands of texts survive, so a careful reconstruction may reach high confidence. If it can't, Iraqi Arabic. Assyrian and Babylonian officials mostly speak to Israel in Aramaic anyway. | The divided kingdom |
+| Old Persian | The Persian court (Esther; Cyrus) | 2 | **Farsi** (modern Persian), its descendant. Old Persian survives only in a few royal inscriptions. | Esther |
+| Greek | Pilate; Gentiles; Paul's mission | 1 or 2 | Koine Greek. Tier 1 if a specialist rates the reconstructed first-century pronunciation as high confidence; otherwise Modern Greek. | The Gospels |
+| Latin | Roman soldiers and officials | 1 | **Reconstructed first-century Latin.** Its pronunciation is well established. | The Gospels |
+| Hebrew, heard as itself | Scripture read aloud in Jesus's time (Luke 4:16–20), when English stands for Aramaic | 1 | **Biblical Hebrew,** which has a continuous reading tradition | The Gospels |
+| Philistine | Samson; Saul; David | ? | Their original Aegean language is almost unknown, but by Samson's day Israelites talk with them without interpreters. Probably English with an accent (rule 2). | Judges |
+| Lycaonian | The crowd at Lystra (Acts 14:11) | 3 | **Turkish,** the region's language today | Acts |
+
+**Why Moabite isn't Arabic.** On the three tiers alone, Moabites would speak Arabic, because Moabite can't be reconstructed with high confidence and has no descendant. I think that would mislead. It would tell the audience that Ruth's people and Naomi's couldn't understand each other, when their speech was nearly the same. It would also bring modern Arab–Israeli associations into a story that has nothing to do with them. Rule 2 keeps the tiers for real language barriers and treats sister dialects as accents.
+
+**Edge cases to settle when we reach them:**
+
+- **Before Babel** there's one language (Gen 11:1), so everyone speaks English.
+- **The patriarchs.** Abraham's family came from Aramaic-speaking country, and Jacob's sons were born in Haran to Aramean mothers (Gen 31:47; Deut 26:5, "a wandering Aramean was my father"). How much of Jacob's household speaks Aramaic is a decision for Genesis.
+- **When God speaks to someone outside Israel** (Abimelech, Pharaoh, Balaam, Nebuchadnezzar, the Magi, Cornelius), in what language? The risen Jesus speaks to Paul "in the Hebrew language" (Acts 26:14). This belongs to [Discussion 001](./discussions/001-how-god-speaks.md).
+- **Acts.** Paul's Greek-speaking churches would put long stretches of Acts in Greek. That's the rule's biggest cost, and we'll look at it when we get there.
+
+**For live action** (§15), real, speakable languages mean native speakers can check the lines, coach the actors and perform them.
+
+*Earlier versions:* v2.1 chose "language follows point of view" (approach C), and v2.2 chose the modern pronunciation of each ancient language. Both are replaced by the rule and tiers above.
 
 **The Bible itself uses language to drive the plot:**
 
@@ -498,28 +511,28 @@ Reading 1 keeps the languages ancient but speakable. It also means native speake
 2. a **literal back-translation**, so you can see what it really says;
 3. notes on the choices I made;
 4. a confidence level:
-   - **High:** Biblical Hebrew, Koine Greek and Latin, all of which are well documented.
-   - **Medium:** Aramaic. First-century Galilean Aramaic has to be reconstructed from the Dead Sea Scrolls, inscriptions and later Aramaic translations of Scripture (the Targums). Scholars disagree on vocabulary and especially pronunciation.
-   - **Low:** Egyptian, Akkadian and Old Persian, whose pronunciation is largely reconstructed. Philistine is essentially unknown.
+   - **For a tier 1 reconstruction,** how sure we can be of both the words and the sound. Only high confidence qualifies (Latin, Biblical Hebrew, and perhaps Koine Greek, Aramaic and Akkadian).
+   - **For tiers 2 and 3,** the words are a translation into a living language, so native speakers can check them, and the confidence comes from them.
 
 Before production, a specialist checks everything. *The Passion of the Christ* used a Jesuit scholar, William Fulco, for its Aramaic and Latin. In the script, the spoken line is written in transliteration and the English goes in a subtitle note:
 
 ```fountain
-BOAZ
-(Hebrew)
-YHWH ʿimmākem.
-[[SUB: The LORD be with you.]] [[B: Ruth 2:4 — יְהוָה עִמָּכֶם]]
+PAUL
+(Greek)
+Ei exestin moi eipein ti pros se?
+[[SUB: May I say something to you?]] [[B: Acts 21:37 — Εἰ ἔξεστίν μοι εἰπεῖν τι πρὸς σέ;]]
 
-HARVESTERS
-Yǝḇārɛḵḵā YHWH.
-[[SUB: The LORD bless you.]] [[B: Ruth 2:4 — יְבָרֶכְךָ יְהוָה]]
+COMMANDER
+(Greek)
+Hellēnisti ginōskeis?
+[[SUB: You speak Greek?]] [[B: Acts 21:37 — Ἑλληνιστὶ γινώσκεις;]]
 ```
 
-Under the decision in §5.5, Boaz says the Name aloud here.
+Three verses later Paul turns to the crowd and speaks to them "in the Hebrew language" (21:40). From that line on, he speaks English.
 
 **More on languages and accents:**
 
-- **Keep the Aramaic the Gospels keep.** The Gospel writers preserved a handful of Jesus's words in the original Aramaic. These are moments the eyewitnesses remembered in his own voice: *Talitha koum* (Mark 5:41), *Ephphatha* (Mark 7:34), *Abba* (Mark 14:36) and *Eloi, Eloi, lema sabachthani* (Mark 15:34). Others include *Rabboni* (John 20:16), *Corban* (Mark 7:11), *Raca* (Matt 5:22) and *Maranatha* (1 Cor 16:22). We keep them in Aramaic, followed by a translation where it's needed, just as the Gospels themselves do.
+- **Keep the Aramaic the Gospels keep.** The Gospel writers preserved a handful of Jesus's words in the original Aramaic. These are moments the eyewitnesses remembered in his own voice: *Talitha koum* (Mark 5:41), *Ephphatha* (Mark 7:34), *Abba* (Mark 14:36) and *Eloi, Eloi, lema sabachthani* (Mark 15:34). Others include *Rabboni* (John 20:16), *Corban* (Mark 7:11), *Raca* (Matt 5:22) and *Maranatha* (1 Cor 16:22). We keep them in Aramaic, followed by a translation where it's needed, just as the Gospels themselves do. In Jesus's world English stands for Aramaic, so these few words are where the series lets us hear the language underneath the English.
 - **Accents are in the text.** Peter's Galilean accent gives him away in the high priest's courtyard (Matt 26:73). The men of Gilead kill Ephraimites who can't pronounce "shibboleth" (Judg 12:6). The voice cast will need an accent strategy that can carry both moments.
 
 ### 5.8 Emotion, insults, humor and crude language
@@ -1024,7 +1037,7 @@ Being short helps, because it means we'll actually finish it. But that's the sma
    - Boaz blesses Ruth in the name of the LORD, "under whose wings you have come to take refuge" (2:12). Later Ruth asks Boaz to spread his "wing" over her (3:9). It's the same Hebrew word, *kanaph*, here meaning the corner of his garment. Boaz becomes the answer to his own prayer.
 4. **It's about an outsider.** Ruth is a Moabite, from a nation Israel's law kept out of the assembly (Deut 23:3), whose god was Chemosh. She chooses Israel's God ("your God my God," 1:16) and becomes David's great-grandmother and an ancestor of Jesus. That's the Bible's own opening for your interest in how God works beyond one people's borders (Positions Register, item 23).
 5. **It treats lament as part of faith.** Naomi openly accuses God: "the Almighty has dealt very bitterly with me" (1:20–21). The book never rebukes her. That makes it a good first test of the honesty and intensity you want.
-6. **It's a live language test.** Ruth may speak with a Moabite accent in Bethlehem (§5.7), and the greeting in 2:4 puts God's name into everyday speech (§5.5).
+6. **It's a live language test.** Ruth speaks with a Moabite accent (§5.7), and the book's greetings, blessings and oaths test how we use God's name (§5.5).
 7. **It's small enough to make.** Few characters and few locations mean a manageable animatic.
 
 **The rest of the plan:**
@@ -1290,6 +1303,15 @@ All of these are real and widely used, and some are free.
 
 3D production starts after the pilot script is locked. This section is a sketch, so that the writing phase sets production up well.
 
+**Animation now, live action later (decided 2026-10-01).** You'd like this to become a live-action show or films. The 3D animated version is the placeholder: it should be visually appealing in its own right, and it should also be the blueprint for live action. That changes a few things:
+
+- **Every shot should be filmable.** The animation uses real-world cameras and lenses, realistic proportions and real locations, so its shots can be reshot with actors.
+- **Build each world once.** Environments built in a real-time engine such as Unreal can later serve as backgrounds on an LED stage (virtual production, as used on *The Mandalorian*), so the 3D work carries straight into a live-action shoot.
+- **The effects-heavy scenes get developed in animation first.** Creation, the plagues, the sea, Sinai, Elijah's fire, Ezekiel's visions, the Transfiguration and Revelation can be designed and timed in 3D. Live-action productions call this previsualization, and it's where effects budgets get planned.
+- **Color is designed for each episode.** A color script marks where the palette stays earthy and where it breaks into the bright, vibrant moments you're imagining.
+- **The languages are real and speakable** (§5.7), so the same lines work for voice actors now and for actors on camera later.
+- **Ruth needs almost no visual effects:** landscapes, set extensions and crowds. That makes it a good pilot for both versions.
+
 ### 15.1 What the writing hands to production
 
 Scene cards record locations, props, costumes, time of day and weather, so the asset lists come straight out of the scripts. Over the course of the series this becomes a production library. An asset built for one story, such as a Galilean fishing boat, a Judean threshing floor or a Roman soldier's kit, gets reused in dozens of others.
@@ -1315,7 +1337,7 @@ The text includes costume details too: tassels on the corners of garments (Num 1
 | Stylized realism (painterly look, grounded proportions) | Ages well; forgiving; distinctive; violence can be felt without gore | Needs strong art direction |
 | Cartoon | Cheapest | Reads as children's content and undercuts the gravity |
 
-**Recommendation:** stylized realism, with the final decision in Phase 6. Ethnicity and appearance follow the evidence. Israelites are Semitic, and Egyptians, Cushites (Moses's wife may have been one, Num 12:1), Philistines (of Aegean origin), Persians, Greeks and Romans each look distinct.
+**Recommendation (revised for live action):** realistic proportions, lighting and cameras, so the animation previews the live-action version shot for shot. The surface can stay slightly stylized, which ages better and avoids the uncanny valley. The final decision comes in Phase 6. Ethnicity and appearance follow the evidence. Israelites are Semitic, and Egyptians, Cushites (Moses's wife may have been one, Num 12:1), Philistines (of Aegean origin), Persians, Greeks and Romans each look distinct.
 
 ### 15.4 The bridge: storyboards and an animatic
 
@@ -1341,7 +1363,8 @@ A full animated series is a studio-scale project. The realistic path for a solo 
 
 1. Finish the pilot script and the animatic yourself.
 2. Produce a short proof of concept: a single scene, fully rendered.
-3. Use it to recruit collaborators and raise funding. *The Chosen* funded its first season largely through crowdfunding, and faith-based audiences have shown they'll back projects they believe in.
+3. Use it to recruit collaborators and raise funding.
+4. Later, use the finished animation and its previsualization to pitch the live-action version. *The Chosen* funded its first season largely through crowdfunding, and faith-based audiences have shown they'll back projects they believe in.
 
 Budget options belong in Phase 6, once we know the visual style.
 
@@ -1364,6 +1387,7 @@ narratives/bible/
 │   ├── HARMONY.md           ordering and chronology decisions
 │   └── DECISIONS.md         everything else we decide, dated
 ├── style/
+│   ├── STORYTELLING.md      your notes on how scenes should play            (exists)
 │   ├── LANGUAGE_GUIDE.md    §5, expanded
 │   ├── LEXICON.md           term-by-term rules
 │   └── VOICES.md            how each character and group speaks
@@ -1459,9 +1483,10 @@ The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./cano
 
 ### 19.2 Still open
 
-1. **Your reaction to the Ruth treatment,** especially the choices in [TREATMENT §7](./story/arcs/07-ruth/TREATMENT.md#7-choices-for-you).
-2. **FR-03's on-screen approach,** to confirm before the Gospels.
-3. **Deferred:**
+1. **Your next round of notes on the Ruth treatment,** including the choices in [TREATMENT §6](./story/arcs/07-ruth/TREATMENT.md#6-choices-for-you).
+2. **Confirm the language rule** (§5.7). The three tiers are yours; the rule that English always stands for Israel's own language is my recommendation.
+3. **FR-03's on-screen approach,** to confirm before the Gospels.
+4. **Deferred:**
    - Discussion 001, before Genesis.
    - The two sub-questions left over from Discussion 002, before the Gospels.
    - The remaining Positions, each before the arc that needs it.

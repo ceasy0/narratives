@@ -2,7 +2,7 @@
 
 > The decisions everything else rests on, recorded in your own words where possible. When a later document conflicts with this one, this one wins until we change it, and any change gets dated below.
 
-**Status:** v1.5, 2026-10-01. Recorded from your answers to the roadmap questions, to Discussion 002 and to the chronology.
+**Status:** v1.6, 2026-10-01. Recorded from your answers to the roadmap questions, to Discussion 002 and to the chronology.
 
 ---
 
@@ -41,16 +41,17 @@
 | Audience and rating | You; no rating | §1 above |
 | Intensity | A high ceiling for gore, pain, beauty and pleasure, so it can get there when the story calls for it. It isn't always intense. Nothing overly sexual. | ROADMAP principle 8 |
 | Dialogue register | Setting 2 (plain modern) as the baseline. More slang is fine where it makes sense. | ROADMAP §5.2 |
-| Languages | The characters we're following speak English. Other languages use the modern pronunciation of the ancient language where a living tradition exists: Coptic-style Egyptian, Neo-Aramaic, church Latin, Koine with Modern Greek pronunciation, and Farsi for Persian. Where none exists, as with Akkadian, the language is reconstructed. I translate your revisions to non-English lines. | ROADMAP §5.7 |
-| Names | "Jesus." "The LORD" by default. "Yahweh" wherever someone actually said it, applied fully for now, so Boaz says "Yahweh be with you" (Ruth 2:4). | ROADMAP §5.5 |
+| Languages | **Revised 2026-10-01** so that languages stay consistent across the whole series. English always stands for Israel's own language (Hebrew; in Jesus's time, Aramaic). Sister dialects Israelites could understand, such as Moabite, are English with their own accent. Every other language is spoken as itself, by your three tiers: (1) the original, reconstructed, only if that can be done with high confidence; (2) otherwise its descendant language; (3) otherwise the language of that region today. Nobody's language depends on whose episode it is. *The tiers are yours; the English rule is my recommendation, applied provisionally until you confirm it.* | ROADMAP §5.7 |
+| Names | "Jesus." **Revised 2026-10-01:** "Yahweh" sparingly, in oaths and where the Name itself is the point. Everywhere else, "God" or "the Lord." In your words: "don't completely get rid of its usage. But try to diminish it where you can." In Ruth the Name is heard twice, in the two oaths (1:17; 3:13). | ROADMAP §5.5 |
 | Tradition | Non-denominational | §2 above |
 | Depicting God | Open | [Discussion 001](../discussions/001-how-god-speaks.md) |
 | Invented dialogue for Jesus | "We will have to see as we go." No whole new teachings or sermons. You expect there will be added dialogue. | ROADMAP §4.2; [Discussion 002](../discussions/002-jesus-humanity.md) |
 | Pilot | Ruth | ROADMAP §11.4 |
 | Structure | Decide later. Mix it up however works best, as long as it can be put in chronological order. | ROADMAP §10.2 |
 | Reframing | Different interpretations and understandings. The structural tools (point of view, intercutting) may come later. | ROADMAP §10.5, §8.8 |
-| Output | Screenplays first | ROADMAP §13 |
+| Output | Screenplays first. Then a 3D animated version, visually appealing in its own right, as the placeholder for an eventual live-action show or films. | ROADMAP §1.1, §15 |
 | Format | Episodes, with the final format decided later | — |
+| Storytelling | Your notes on how scenes should play: no cards, no montages for passing time, real family dynamics, layered peoples, dialogue that sounds real | [`style/STORYTELLING.md`](../style/STORYTELLING.md) |
 | Scope | The Bible's window only. Other cultures and time periods may become separate projects later. | — |
 | Order of discussions | 002 (Jesus's humanity) first | [discussions/](../discussions/) |
 | Mary's other children | Your notes reject the idea that Mary remained a virgin after Jesus's birth (Positions Register, item 17) | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
@@ -107,3 +108,4 @@ These documents are summarized in the repository. At your request, the originals
 | 2026-10-01 | v1.3: conception view adopted provisionally; Boaz confirmed as Ruth's opposite; the Ruth pilot's format and opening; the Rahab condition |
 | 2026-10-01 | v1.4: Ruth checkpoint answers; the decision to settle the chronology first |
 | 2026-10-01 | v1.5: the chronology decided; Rahab settled as Boaz's ancestor; reporting problems as I find them |
+| 2026-10-01 | v1.6: one language rule for the series, with your three tiers; the Name used sparingly; live action as the eventual goal; your storytelling notes |

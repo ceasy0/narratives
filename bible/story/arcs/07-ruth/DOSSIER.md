@@ -60,7 +60,7 @@ This happens in the time of the judges, before Israel had kings.
 This translation is my own, made from the Hebrew (the Masoretic Text) and checked against the BSB, WEB, KJV, NRSV, ESV, NIV and JPS translations. It stays close to the Hebrew, sometimes at the cost of smoothness, because it's the base for every recorded line of dialogue (Tier B). The script will modernize the dialogue to setting 2.
 
 **Conventions:**
-- God's personal name, which most English Bibles print as "the LORD," is written **Yahweh**, following your decision.
+- God's personal name, which most English Bibles print as "the LORD," is written **Yahweh**, so you can see every place the text uses it. The dialogue uses it far more sparingly (ROADMAP §5.5).
 - "Shaddai" is left untranslated. It's usually rendered "the Almighty."
 - Square brackets mark words added for sense.
 
@@ -493,9 +493,9 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 
 - **FR-08: Boaz as Ruth's "relative opposite."** It stays unspoken unless it feels right to say. It's staged through mirroring: "worth" (2:1 and 3:11), the wing (2:12 and 3:9), *hesed* on both sides, and opposite circumstances with matching character. The marriage to Mahlon is loving on Ruth's side but unfinished: the barrier the water flows around ([FRAMINGS](../../../canon/FRAMINGS.md#fr-08--marriage-to-ones-relative-opposite)).
 - **Discussion 001: God working through people.** God never speaks in Ruth, so there's no God-voice to decide. The narrator's two direct statements can be carried by characters: Naomi hears the news "Yahweh has visited his people" (1:6), and the women say "Blessed be Yahweh…" (4:14). Providence shows up as "chance," harvest and human kindness ([Discussion 001](../../../discussions/001-how-god-speaks.md)).
-- **The Name used in full.** "Yahweh" is spoken about 16 times, in 1:8, 9, 13, 17, 21 (twice); 2:4 (twice), 12 (twice), 20; 3:10, 13; 4:11, 12, 14. Naomi also uses "Shaddai" (1:20, 21), the older name, which sets her voice apart.
+- **The Name, sparingly.** The text uses "Yahweh" about 16 times: in 1:8, 9, 13, 17, 21 (twice); 2:4 (twice), 12 (twice), 20; 3:10, 13; 4:11, 12, 14. Under the revised rule (ROADMAP §5.5), the episode keeps it in the two oaths, Ruth's (1:17) and Boaz's (3:13), and says "God" or "the Lord" elsewhere. Naomi's older name for God, *Shaddai* (1:20, 21), becomes "the Almighty."
 - **God among the nations (light version).** Ruth leaves "her gods" for Yahweh (1:15–16), and Orpah goes back to hers without condemnation. Moab is shown as foreign but sincere (§12).
-- **Language (approach C).** Ruth, Naomi and Boaz speak English. Moabites speaking among themselves could use reconstructed Moabite, which would have to be modeled closely on Biblical Hebrew, since Moabite has no living descendant. That's low confidence, so it should be kept to a few lines if used. Ruth's slight accent is a note for casting.
+- **Language.** Under the series rule (ROADMAP §5.7), English stands for Hebrew. Moabite was a sister dialect that Israelites understood without an interpreter, so Moabites speak English with a Moabite accent, and Ruth keeps hers throughout. No reconstructed language is needed in this episode.
 - **The intensity ceiling (principle 8).** The grief in Moab, the danger in the fields and the charge of the threshing floor can all play at full strength. Nothing is explicit.
 - **Modern words, ancient minds.** Naomi doesn't "process grief," and Ruth's loyalty is astonishing *because* it cuts against every family and ethnic obligation she has.
 
@@ -508,9 +508,9 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 - One episode.
 - The story starts at the earliest point and runs chronologically.
 - Boaz is Ruth's opposite, unspoken.
-- The Name is used in full.
+- The Name used sparingly: "Yahweh" in the two oaths (1:17; 3:13), "God" or "the Lord" elsewhere (revised).
 - Setting 2 register.
-- Approach C for language.
+- The series language rule (ROADMAP §5.7): Moabites speak English with a Moabite accent.
 
 **Your answers (2026-10-01):**
 

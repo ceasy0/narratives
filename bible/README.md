@@ -1,6 +1,6 @@
 # Bible Narratives
 
-A creative, faithful dramatization of the Bible that expresses your understanding of Christianity. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
+A creative, faithful dramatization of the Bible that expresses your understanding of Christianity. It gets written first as story and screenplay, then produced as a fully rendered 3D animated series, which is the placeholder for an eventual live-action version. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
 This directory currently holds planning documents. There are no scripts yet.
 
@@ -14,6 +14,7 @@ This directory currently holds planning documents. There are no scripts yet.
 | [`discussions/`](./discussions/) | The theological and philosophical conversations: 002 (Jesus's humanity) is decided, and 001 (how God speaks) is seeded. |
 | [`world/TIMELINE.md`](./world/TIMELINE.md) | The working chronology: fixed anchors, the major dating questions, every arc's dates, the kings and the prophets |
 | [`story/arcs/07-ruth/`](./story/arcs/07-ruth/README.md) | The Ruth pilot: the plan, the research dossier and the treatment |
+| [`style/STORYTELLING.md`](./style/STORYTELLING.md) | Your notes on how scenes should play, gathered from your feedback |
 | [`CLAUDE.md`](./CLAUDE.md) | The working rules Claude loads in every session, so nothing depends on memory. |
 
 ## The short version
@@ -30,7 +31,7 @@ This directory currently holds planning documents. There are no scripts yet.
 
 | | |
 |---|---|
-| Phase | 1: the Ruth pilot. The dossier is done, the chronology is decided, and the treatment is drafted. |
-| Next | Your reaction to the [treatment](./story/arcs/07-ruth/TREATMENT.md) (its §7 lists the main choices), then the beat sheet |
+| Phase | 1: the Ruth pilot. The dossier is done, the chronology is decided, and the treatment is on its second draft. |
+| Next | Your next round of notes on the [treatment](./story/arcs/07-ruth/TREATMENT.md), then a sample scene and the beat sheet |
 | Pilot | Ruth |
 | Formats | Markdown for docs · Fountain for screenplays |
