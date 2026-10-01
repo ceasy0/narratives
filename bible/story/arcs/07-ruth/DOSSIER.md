@@ -2,9 +2,9 @@
 
 > Everything we need to know before writing the Ruth pilot. It's also built to teach you the story.
 
-**Status:** v1, 2026-10-01. This is step 1 of the [pilot plan](./README.md). **Checkpoint:** read it, flag anything that doesn't sit right, and answer the decisions in §12.
+**Status:** v1.1, 2026-10-01. Step 1 of the [pilot plan](./README.md) is done: your checkpoint answers are in §12, and §5 now follows the decided chronology. The next step, the [treatment](./TREATMENT.md), is drafted.
 
-**How to read it:** start with §1, the retelling, then §2, the full translation. Everything after that is reference to dip into as needed. §5 answers your question about Rahab, and §12 lists what I need from you.
+**How to read it:** start with §1, the retelling, then §2, the full translation. Everything after that is reference to dip into as needed. §5 answers your question about Rahab, and §12 records your decisions.
 
 ---
 
@@ -274,56 +274,51 @@ Both readings are "the text." **Decided (2026-10-01): the read-aloud version, "y
 
 ## 5. When: chronology, and Rahab
 
-> **Update (2026-10-01):** at your request we're settling a whole-Bible chronology first, in [`world/TIMELINE.md`](../../../world/TIMELINE.md). Looked at across the whole Bible, the evidence favors the *early* Exodus date. Under that date, Rahab is Boaz's ancestor several generations back, not his mother, and Ruth falls around 1150–1140 BC ([TIMELINE §7](../../../world/TIMELINE.md#7-what-this-means-for-ruth)). The analysis below is kept for reference until you decide.
+**Decided (2026-10-01):** the series uses the text-first chronology in [`world/TIMELINE.md`](../../../world/TIMELINE.md), with the Exodus in 1446 BC and the fall of Jericho around 1406. Ruth's story runs from about 1152 to 1139 BC, "in the days of Eli," as Josephus puts it. **Rahab is Boaz's ancestor several generations back, not his mother.**
 
-The book gives only "in the days when the judges ruled" (1:1). You asked for Rahab as Boaz's mother only if it fits the chronology without a gap in the genealogy. Here's the result.
+The book itself gives only "in the days when the judges ruled" (1:1).
 
-### The anchors
+### The story's timeline
 
-- **Downstream: David.** The line runs Boaz → Obed → Jesse → David (4:17, 21–22). David became king at 30 (2 Sam 5:4). His reign is conventionally dated about 1010–970 BC, so he was born about 1040 BC.
-- **Upstream: Salmon and Rahab.** Salmon was the son of Nahshon, who led the tribe of Judah in the wilderness (Num 1:7; 2:3; 7:12) and whose sister married Aaron (Exod 6:23). That puts Salmon in exactly the generation that entered Canaan, which is why Matthew's "Salmon fathered Boaz by Rahab" (Matt 1:5) fits so naturally at that end of the line.
-- **The squeeze.** Between Rahab at Jericho and David's birth there are only four generations: Salmon→Boaz, Boaz→Obed, Obed→Jesse and Jesse→David.
+All dates are approximate. The ages are inferences (P4) built from the text's hints: Naomi is "too old to have a husband" (1:12), the marriages last "about ten years" (1:4), and Boaz is evidently older than Ruth (3:10). He calls her "my daughter" (2:8; 3:10–11).
 
-### It depends on when the Exodus happened (Positions Register, item 8)
-
-| | Early date | Late date |
+| When (BC) | What | Ages |
 |---|---|---|
-| Exodus | About 1446 BC, from 1 Kings 6:1's "480 years" | About the 1260s–1250s BC, in the reign of Ramesses II (Exod 1:11 names the city "Raamses") |
-| Fall of Jericho | About 1406 BC | About 1230–1210 BC |
-| Jericho to David's birth | About 365 years | About 170–190 years |
-| Average per generation (4 generations) | About 90 years, **impossible without a gap** | About 43–48 years: **old fathers, but possible** |
+| 1406 | Jericho falls. Rahab is spared and lives on in Israel (Josh 6:25), as the ancestress of Salmon's line (Matt 1:5). | — |
+| c. 1152 | Famine. Elimelech's family leaves for Moab. | Elimelech about 40, Naomi about 36, Mahlon about 17, Chilion about 15. Ruth, in Moab, about 14. Boaz about 33. |
+| c. 1151 | Elimelech dies (1:3). | |
+| c. 1149 | The sons marry Moabite women: Mahlon marries Ruth, and Chilion marries Orpah (1:4; 4:10). | Ruth about 17 |
+| c. 1144 | Eli becomes high priest at Shiloh (1 Sam 4:18). | |
+| c. 1140, winter | Mahlon and Chilion die (1:5). | |
+| c. 1140, spring | Naomi and Ruth arrive in Bethlehem at the start of the barley harvest (1:22). | Naomi about 48, Ruth about 26, Boaz about 45 |
+| c. 1140, early summer | The harvest ends. The threshing floor, the gate, the wedding (3–4). | |
+| c. 1139 | Obed is born (4:13–17). | |
+| c. 1100 | Jesse is born. | Obed about 40 |
+| 1040 | David is born, Jesse's youngest son (1 Sam 16:10–11). | Jesse about 60, "old in the days of Saul" (1 Sam 17:12) |
 
-**So Rahab can be Boaz's literal mother, with no gap, only under the late date.** The fathers' ages it requires are old, but there's textual support at the points that matter most. Boaz is evidently not young when he marries Ruth (3:10). Jesse is "old in the days of Saul," and David is his youngest son (1 Sam 17:12; 16:10–11). Obed is the one generation where the text says nothing.
+**The wider world.** Under this arrangement, Ruth falls during Gideon's forty years of "rest" (Judg 8:28). That's rest from enemies, not from weather: a drought can come in peacetime. The Midianite raids that stripped the land (Judg 6:3–6) came a generation earlier, so Bethlehem's older people remember them. Ehud's killing of Eglon, king of Moab (Judg 3), is about 180 years in the past: old history, but the kind a village keeps. The Philistines have been on the coast for about 25 years and haven't yet pressed inland.
 
-### Working timeline (late date, no gap)
+### How the genealogy works
 
-| When (BC, approx.) | What |
-|---|---|
-| 1230–1220 | Jericho falls. Rahab, a young woman, is spared (Josh 6:25) and marries Salmon of Judah. |
-| ~1205 | Boaz is born. |
-| ~1175 | Famine. Elimelech's family goes to Moab. (This was a time of drought across the region; see §7.1.) |
-| ~1165–1160 | Naomi and Ruth return. Boaz, in his early to mid forties, marries Ruth. Obed is born. |
-| ~1110 | Jesse is born, to Obed at about 50. |
-| ~1040 | David is born, to Jesse at about 70. |
-| ~1010 | David becomes king at 30. |
+- **Boaz → Obed → Jesse → David is direct,** as the story insists: "Obed, the father of Jesse, the father of David" (4:17).
+- **Salmon → Boaz is compressed.** About 220 years separate Rahab's rescue from Boaz's birth. Biblical genealogies often skip generations. Matthew does it in the same list: "Joram fathered Uzziah" (Matt 1:8) leaves out Ahaziah, Joash and Amaziah (compare 1 Chr 3:11–12). So "Salmon fathered Boaz by Rahab" (Matt 1:5) names the couple who founded Boaz's line, and Ruth 4:21 and 1 Chronicles 2:11 compress the same stretch.
+- **Earlier links hold without gaps** on the short stay in Egypt, given the long lives the text records for that era (Exod 6:16–20): Hezron goes down to Egypt with Jacob (Gen 46:12), and his great-grandson Nahshon leads Judah in the wilderness (Num 1:7).
 
-In this timeline, **Rahab could still be alive when Ruth arrives, at around 80.** Two foreign women who chose Israel's God would be living in the same small town, one at the end of her life and one at the start of her new one. That's an invention (P6), offered as an option in §12.
+### Rahab in the story
 
-### What this choice costs
+- **No cameo.** She's been dead for more than two centuries.
+- **A family memory.** Bethlehem knows that Boaz's line goes back to the woman of Jericho who hid Israel's spies. That's clan knowledge, the kind kept in genealogies like 4:18–22. The treatment has one gleaner say it in passing (P6). Boaz himself never mentions it.
+- **Why it matters.** A Canaanite woman who chose Israel's God stands at the root of Boaz's family, and a Moabite woman who chooses the same God marries into it. Matthew names both (Matt 1:5).
 
-- **It sets the series on the late Exodus date (Positions Register, item 8).** That's the date most historians and archaeologists favor. The evidence includes the city of "Raamses" in Exodus 1:11; the Merneptah Stele, an Egyptian victory monument from about 1208 BC that already names Israel as a people in Canaan; and the spread of new hill-country villages in the early Iron Age. Conservative scholars also defend it (Kitchen; Hoffmeier). But it requires reading three biblical numbers non-literally:
-  - 1 Kings 6:1's "480 years," often read as twelve generations of forty years;
-  - Jephthah's "300 years" (Judg 11:26), as rhetoric;
-  - the judges' own tenures, which add up to roughly 400 years and so must overlap. That's plausible, because many judges were regional leaders.
-- **Under the late date, Ruth's story falls around 1165–1160 BC.** That's the early Iron Age, as the Philistines are settling the coast and Egypt's hold on Canaan is collapsing.
-- **Other traditions disagree.**
-  - Josephus puts Ruth in the days of the high priest Eli (*Antiquities* 5.318), which is too late for Rahab to be Boaz's mother.
-  - The Talmud identifies Boaz with Ibzan, a judge from Bethlehem (Judg 12:8–10; *Bava Batra* 91a), and says Rahab married Joshua (*Megillah* 14b).
+### The road not taken
 
-  All of these are P3 traditions, and all are incompatible with our line.
-- **A minor point on the name.** Matthew spells her name *Rhachab*, while Hebrews and James spell it *Rhaab*. A few scholars have wondered whether Matthew means a different woman, but nearly all identify her with Rahab of Jericho.
+Under the late Exodus date (the 1260s), Rahab could have been Boaz's literal mother. Ruth would fall around 1165–1160, and Rahab might even have been alive when Ruth arrived, at about 80. But that model reads 1 Kings 6:1's "480 years" and Jephthah's "300 years" (Judg 11:26) non-literally and squeezes the Judges period into about 170 years (TIMELINE §3.1). Not adopted.
 
-**My recommendation:** make Rahab Boaz's mother and adopt the late date provisionally for the whole series. Because this sets the date for the Exodus and Conquest arcs too, it needs your confirmation (§12).
+### Other traditions (P3)
+
+- **Josephus** puts Ruth in the days of Eli (*Antiquities* 5.318). Our chronology agrees.
+- **The Talmud** identifies Boaz with Ibzan, a judge from Bethlehem with thirty sons and thirty daughters (Judg 12:8–10; *Bava Batra* 91a). In our timeline Ibzan judges about forty years after Ruth's wedding, so the identification doesn't fit. The Talmud also says Rahab married Joshua (*Megillah* 14b). Neither is used.
+- **The name.** Matthew spells it *Rhachab*, while Hebrews and James spell it *Rhaab*. A few scholars have wondered whether Matthew means a different woman, but nearly all identify her with Rahab of Jericho.
 
 ---
 
@@ -350,7 +345,7 @@ In this timeline, **Rahab could still be alive when Ruth arrives, at around 80.*
 
 ### 7.1 Famine, and a world falling apart
 
-Under our chronology, the famine falls toward the end of the **Late Bronze Age collapse** (about 1200–1150 BC). In those decades:
+Under our chronology, the famine (around 1152 BC) falls at the tail end of the **Late Bronze Age collapse** (about 1200–1150 BC). In those decades:
 - the Hittite empire fell;
 - Mycenaean Greece's palaces burned;
 - Ugarit was destroyed;
@@ -438,7 +433,7 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 |---|---|---|
 | **Naomi** | "Pleasant." A widow who has lost her sons. Bitterly honest with God, using both names, Shaddai and Yahweh. Sardonic (1:11–13). In chapter 3 she becomes a planner and strategist. She ends with a child in her lap. Her arc runs full → empty → full. Some commentators (e.g., Campbell) note that she and Boaz use slightly old-fashioned Hebrew forms (2:8, 21; 3:3–4), possibly marking them as the older generation. | "Go. Return, each of you, to your mother's house" (1:8). She sends away the only people she has left, and blesses them as she does it. |
 | **Ruth** | Always "the Moabite." She takes initiative (2:2), mixes humility with boldness (2:10, 13), and makes the proposal herself (3:9). She never speaks of Moab or of Mahlon, and the meaning of her name is unknown. | Her first words on her own: the oath (1:16–17). |
-| **Boaz** | "A man of worth." Wealthy, older (3:10), protective, generous in secret, careful about law and reputation. He calls Ruth "my daughter" (2:8; 3:10, 11) and acts that same day (3:18). If Rahab is his mother, he's the son of a Canaanite convert. | "Yahweh be with you!" (2:4). He leads with a blessing. |
+| **Boaz** | "A man of worth." Wealthy, older (3:10), protective, generous in secret, careful about law and reputation. He calls Ruth "my daughter" (2:8; 3:10, 11) and acts that same day (3:18). His line goes back to Rahab of Jericho, several generations back (§5). | "Yahweh be with you!" (2:4). He leads with a blessing. |
 | **Orpah** | Weeps, kisses Naomi and goes home. The text never condemns her. | "No. We will return with you, to your people" (1:10), spoken together with Ruth. |
 | **Elimelech** | "My God is king." Has no lines. Leaves the land in a famine and dies abroad. | — |
 | **Mahlon** and **Chilion** | No lines. The names sound like "sickness" and "finishing." Die childless. Mahlon was Ruth's husband (4:10). | — |
@@ -447,7 +442,7 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 | **The elders and the people at the gate** | Blessing (4:11–12) | "We are witnesses" (4:11) |
 | **The women of Bethlehem** | The chorus. They open the story ("Is this Naomi?") and close it, naming the child (4:14–17). | "Is this Naomi?" (1:19) |
 | **Harvesters** | Young men (reapers) and young women (binders) | "Yahweh bless you!" (2:4) |
-| **Salmon and Rahab** | Named only in the genealogies (4:20–21; Matt 1:5). Rahab's own story is in Joshua 2 and 6. | — |
+| **Salmon and Rahab** | Named only in the genealogies (4:20–21; Matt 1:5). Rahab's own story is in Joshua 2 and 6. Under our chronology they're Boaz's distant ancestors (§5). | — |
 | **Obed** | The child. "Servant" or "worker." | — |
 
 ---
@@ -473,7 +468,7 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 - **No character knows about David.** Ruth, Naomi and Boaz never hint at it. The ending can let the audience see it.
 - **No one knows about Jesus** (Matt 1:5).
 - **Characters know customs, not books.** They talk about what's done, not about Deuteronomy as a written text.
-- **The town would know Boaz's mother.** If Rahab is his mother, everyone in Bethlehem knows he's the son of a Canaanite woman from Jericho. That's not hindsight; it's local knowledge.
+- **The town knows Boaz's lineage.** His family descends from Rahab, the Canaanite woman of Jericho. That's not hindsight; it's clan memory (§5).
 
 ---
 
@@ -490,7 +485,7 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 | **The deaths** | No cause is given. Some rabbinic readings treat them as punishment for leaving the land or for marrying Moabites (P3). | **No moralizing.** Illness, in keeping with the names. |
 | **Naomi's theology (1:20–21)** | She blames God openly, and the book never corrects her. The ending answers her by events, not by argument. | **Let her say it at full strength.** The women's blessing in 4:14–15 is the reply. |
 | **2:7, the obscure line** | "She has hardly sat down in the shelter" or "she hasn't rested in the field." | Either works. It establishes that she works relentlessly. |
-| **Boaz's age** | "Not young" (3:10). Tradition makes him very old (the Ibzan identification, P3). | **Early to mid forties,** per §5. Older than her by a generation, not ancient. |
+| **Boaz's age** | "Not young" (3:10). Tradition makes him very old (the Ibzan identification, P3). | **About 45,** to Ruth's 26 (§5). Older than her by a generation, not ancient. With Rahab no longer his mother, nothing pins his age; this follows the text's hints. |
 
 ---
 
@@ -509,6 +504,7 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 ## 12. Decisions for you
 
 **Decided:**
+- The chronology ([TIMELINE](../../../world/TIMELINE.md#8-decisions-for-you)).
 - One episode.
 - The story starts at the earliest point and runs chronologically.
 - Boaz is Ruth's opposite, unspoken.
@@ -520,8 +516,8 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 
 | # | Decision | Status |
 |---|---|---|
-| 1 | **Rahab as Boaz's mother** | **Waiting on the chronology** ([TIMELINE §8](../../../world/TIMELINE.md#8-decisions-for-you)). You said yes, "if we decide that it works in the chronology." Under the recommended early date it doesn't, so Rahab becomes Boaz's ancestor several generations back and a family memory. |
-| 2 | **Rahab on screen** | Only if the chronology allows. Under the early date it doesn't. |
+| 1 | **Rahab as Boaz's mother** | **Decided by the chronology: an ancestor, not his mother.** You said yes "if we decide that it works in the chronology." Under the early date you adopted, it doesn't, so Rahab is Boaz's ancestor several generations back and a family memory (§5). |
+| 2 | **Rahab on screen** | **No cameo.** She's remembered, not seen. |
 | 3 | **How early to start** | **Decided: my recommendation.** Open in Bethlehem during the famine, with a brief glimpse of Boaz as the one who stays. |
 | 4 | **The 4:5 reading** | **Decided: read aloud ("you acquire Ruth").** See §3. |
 | 5 | **Moab's religion on screen** | **Decided: sincere and textured.** |

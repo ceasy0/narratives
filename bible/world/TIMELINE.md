@@ -2,7 +2,7 @@
 
 > One timeline for every arc to fit into. It shows which dates are fixed, which depend on interpretation, and the model we'll use.
 
-**Status:** v1 draft, 2026-10-01. **Your decisions are needed in §8.** Once they're made, every arc's dossier uses these dates.
+**Status:** v1, 2026-10-01. **Decided:** you adopted my recommendation on all five forks (§8). Every arc's dossier uses these dates.
 
 ---
 
@@ -23,7 +23,7 @@
 
 ## 0. The short version
 
-**My recommended model, "text-first," puts the Bible's own numbers first.** It dates the Exodus to 1446 BC (1 Kings 6:1). It also counts Israel's 215 years in Egypt so that Paul's "430 years" runs from God's promise to Abraham to the giving of the Law (Gal 3:17).
+**The adopted model, "text-first," puts the Bible's own numbers first.** It dates the Exodus to 1446 BC (1 Kings 6:1). It also counts Israel's 215 years in Egypt so that Paul's "430 years" runs from God's promise to Abraham to the giving of the Law (Gal 3:17).
 
 | Era | Dates (text-first model) | How firm |
 |---|---|---|
@@ -40,7 +40,7 @@
 | Jesus | c. 5 BC – AD 33 | ± 2–3 years |
 | The early church | AD 33 – c. 95 | ± 2 years |
 
-**My recommendation has changed since the Ruth dossier.** There I suggested the late Exodus date, because it lets Rahab be Boaz's mother. Looking at the whole Bible, which is what you rightly asked for, the Bible's own numbers fit the early date much better (§3.1). Under the early date, Rahab is Boaz's ancestor several generations back rather than his mother. Matthew skips generations elsewhere in the same genealogy, so that reading is well within the text (§7).
+**This reversed my first recommendation.** The Ruth dossier suggested the late Exodus date, because it lets Rahab be Boaz's mother. Looking at the whole Bible, which is what you rightly asked for, the Bible's own numbers fit the early date much better (§3.1). Under the early date, Rahab is Boaz's ancestor several generations back rather than his mother. Matthew skips generations elsewhere in the same genealogy, so that reading is well within the text (§7).
 
 ---
 
@@ -97,7 +97,7 @@ Confidence varies a great deal by era, and the timeline should show that rather 
 
 **Where scholarship stands.** Many critical scholars doubt that a large-scale exodus and conquest happened at either date. Among scholars who accept the account's historicity, both dates have serious defenders. Kitchen and Hoffmeier argue for the late date; Wood and Merrill for the early.
 
-**My recommendation: the early date (1446).**
+**Decided (2026-10-01): the early date (1446).**
 - **Scripture is the spine (principle 1).** The early date takes the Bible's explicit numbers at face value, and the Judges period fits with moderate overlap rather than extreme compression.
 - **Its weaknesses have answers within the text.** Place names are demonstrably updated elsewhere (§9), and Judges itself describes a slow settlement.
 - **Its one cost is a gap in the genealogy (§7).** The Bible itself shows such gaps: Matthew 1:8 skips three kings.
@@ -113,7 +113,7 @@ Confidence varies a great deal by era, and the timeline should show that rather 
 
 **The Hebrew wording allows the short reading.** The KJV renders it "the sojourning of the children of Israel, who dwelt in Egypt, was 430 years": the whole sojourn of the people who ended up in Egypt.
 
-**My recommendation: the short stay.** It makes Paul's 430 years exact (Abraham's call in 1876, Sinai in 1446). It lets Moses's genealogy work without gaps. And it puts Joseph in a historically plausible setting, a Semitic official in a Delta ruled by Semitic kings. (Josephus also connected the Hyksos with Israel, *Against Apion* 1.73–105; that's P3.)
+**Decided (2026-10-01): the short stay.** It makes Paul's 430 years exact (Abraham's call in 1876, Sinai in 1446). It lets Moses's genealogy work without gaps. And it puts Joseph in a historically plausible setting, a Semitic official in a Delta ruled by Semitic kings. (Josephus also connected the Hyksos with Israel, *Against Apion* 1.73–105; that's P3.)
 
 ### 3.3 The judges: overlap
 
@@ -127,7 +127,7 @@ Confidence varies a great deal by era, and the timeline should show that rather 
 - **Some consequences of reading them literally:** Noah dies when Abraham is 58, and Shem outlives Abraham. Jewish tradition makes much of Shem and Eber being Abraham's contemporaries.
 - **Your opening scene (FR-01)** shows deep time and an existing human population before Adam and Eve. That can't coexist with reading the genealogies as a complete calendar going back to creation.
 
-**My recommendation:** leave Genesis 1–11 undated until the Genesis discussion (Positions Register items 4–7, FR-01, Discussion 001). The series calendar begins with Abraham.
+**Decided (2026-10-01):** leave Genesis 1–11 undated until the Genesis discussion (Positions Register items 4–7, FR-01, Discussion 001). The series calendar begins with Abraham.
 
 ### 3.5 Jesus
 
@@ -137,14 +137,14 @@ Confidence varies a great deal by era, and the timeline should show that rather 
 - **John mentions at least three Passovers** during the ministry (2:13; 6:4; 11:55).
 - **The crucifixion** happened on a Friday at Passover, while Pilate (AD 26–36) and Caiaphas (AD 18–36) held office. Astronomy gives two candidate dates: 7 April AD 30 or 3 April AD 33.
 
-**My recommendation:** born around 5 BC, ministry AD 29–33, crucified Friday, 3 April AD 33. This takes Luke 3:1 in its normal sense and fits John's three or more Passovers. The main alternative is AD 30, which needs Tiberius's years counted from an earlier co-regency, or a shorter ministry.
+**Decided (2026-10-01):** born around 5 BC, ministry AD 29–33, crucified Friday, 3 April AD 33. This takes Luke 3:1 in its normal sense and fits John's three or more Passovers. The main alternative is AD 30, which needs Tiberius's years counted from an earlier co-regency, or a shorter ministry.
 
 ### 3.6 Revelation
 
 - **Most scholars** date it to around AD 95, under the emperor Domitian, following Irenaeus (*Against Heresies* 5.30.3).
 - **A minority** date it before AD 70, under Nero. This view goes with the "preterist" reading, which takes Revelation as mainly about first-century events (Positions Register item 19).
 
-**My recommendation:** around AD 95, until Position 19 is decided.
+**Decided (2026-10-01):** around AD 95, until Position 19 is decided.
 
 ---
 
@@ -210,13 +210,13 @@ Dates are approximate (± 20–30 years). This is one reasonable arrangement tha
 |---|---|---|
 | c. 1380–1330 | Othniel (8 years of oppression, then 40 of peace) | Judg 3:8–11 |
 | c. 1350s–1330s | The Amarna letters: Canaanite city-kings write to Egypt complaining about "Habiru" raiders. Whether this has anything to do with Israel is debated. | Outside sources |
-| c. 1330–1230 | Ehud kills Eglon, king of Moab (18 years of oppression, then 80 of peace). Shamgar. | Judg 3:12–31 |
-| c. 1230–1170 | Deborah and Barak (20, then 40) | Judg 4–5 |
+| c. 1330–1230 | Ehud kills Eglon, king of Moab (18 years of oppression, then 80 of peace) | Judg 3:12–30 |
+| c. 1230–1170 | Deborah and Barak (20, then 40). Shamgar, whom the Song of Deborah places "in the days of Jael" (§9). | Judg 3:31; 4–5 |
 | c. 1208 | The Merneptah Stele names Israel in Canaan | Outside source |
 | c. 1175 | The Philistines settle the southern coast | Outside sources |
 | c. 1175–1130 | Gideon (7, then 40). The Midianites strip the land (Judg 6:3–6). | Judg 6–8 |
+| **c. 1152–1139** | **Ruth.** The famine sends Elimelech's family to Moab (c. 1152). About ten years later Naomi and Ruth return, and Boaz marries Ruth (c. 1140). Obed is born (c. 1139). This falls "in the days of Eli," as Josephus says. The story's internal timeline is in the [Ruth dossier §5](../story/arcs/07-ruth/DOSSIER.md#5-when-chronology-and-rahab). | Ruth; *Antiquities* 5.318 |
 | c. 1144–1104 | Eli is high priest for 40 years | 1 Sam 4:18 |
-| **c. 1150–1140** | **Ruth.** The famine and the years in Moab; Naomi and Ruth return; Boaz marries Ruth around 1140; Obed is born. This falls "in the days of Eli," as Josephus says. | Ruth; *Antiquities* 5.318 |
 | c. 1130–1100 | Abimelech, Tola, Jair | Judg 9–10 |
 | c. 1124–1106 | The Ammonites oppress Israel in the east while the Philistines begin in the west | Judg 10:7–8 |
 | c. 1106–1100 | Jephthah, who speaks of "300 years" | Judg 11:26 |
@@ -396,28 +396,30 @@ Job has no fixed date. Its setting feels patriarchal.
 
 ## 7. What this means for Ruth
 
-**Under the text-first model:**
-- **When.** Ruth falls around 1150–1140 BC, "in the days of Eli," as Josephus says. That's the early Iron Age, with the Philistines newly settled on the coast. The famine fits the regional drought (dossier §7.1).
+**Under the adopted model:**
+- **When.** Ruth falls around 1152–1139 BC, "in the days of Eli," as Josephus says. That's the early Iron Age, with the Philistines newly settled on the coast. The famine fits the regional drought (dossier §7.1).
 - **Rahab is Boaz's ancestor, not his mother.** She married Salmon around 1406, about 260 years before Ruth. Matthew's "Salmon fathered Boaz by Rahab" skips generations, as Matthew does elsewhere: Matthew 1:8 says "Joram fathered Uzziah," leaving out Ahaziah, Joash and Amaziah (compare 1 Chr 3:11–12). Ruth 4:21's list skips the same generations.
 - **The rest of the genealogy stays direct.** Boaz → Obed → Jesse → David matches what the story itself insists on: "Obed, the father of Jesse, the father of David" (4:17).
 - **There's no Rahab cameo.** But a family memory survives, and it's a strong thread: Boaz's family descends from the Canaanite woman of Jericho who hid Israel's spies. That could be part of why Boaz sees Ruth the Moabite differently. It's P5/P6, and it passes the addition test.
 - **Nothing in the dossier's world changes.** It's still the early Iron Age.
 
-**Under the late model instead:** Ruth falls around 1165–1160, Rahab is his mother, and she could make a cameo, as in dossier §5.
+**Not adopted:** under the late model, Ruth would fall around 1165–1160, Rahab would be his mother, and she could have made a cameo.
 
 ---
 
 ## 8. Decisions for you
 
-| # | Fork | Options | My recommendation |
-|---|---|---|---|
-| 1 | **The Exodus** (§3.1) | Early (1446 BC) or late (about the 1260s BC) | **Early.** The Bible's own numbers fit it best. |
-| 2 | **The stay in Egypt** (§3.2) | Short (215 years in Egypt) or long (430 years in Egypt) | **Short.** It makes Galatians 3:17 exact and Moses's genealogy work. |
-| 3 | **The crucifixion** (§3.5) | AD 33 or AD 30 | **AD 33** (born around 5 BC, ministry AD 29–33) |
-| 4 | **Genesis 1–11** (§3.4) | Leave undated until the Genesis discussion | **Leave it undated.** The calendar starts with Abraham. |
-| 5 | **Revelation** (§3.6) | Around AD 95, or before 70 | **Around AD 95,** until Position 19 is decided |
+**Decided 2026-10-01.** In your words: "Go with your recommendations for 1–5."
 
-Once these are settled, I'll update the Ruth dossier (§5 and §12) and the Positions Register, and go on to the Ruth treatment.
+| # | Fork | Decision |
+|---|---|---|
+| 1 | **The Exodus** (§3.1) | **Early: 1446 BC.** The Bible's own numbers fit it best. |
+| 2 | **The stay in Egypt** (§3.2) | **Short: 215 years in Egypt.** It makes Galatians 3:17 exact and Moses's genealogy work. |
+| 3 | **The crucifixion** (§3.5) | **AD 33.** Born around 5 BC; ministry AD 29–33. |
+| 4 | **Genesis 1–11** (§3.4) | **Undated** until the Genesis discussion. The calendar starts with Abraham. |
+| 5 | **Revelation** (§3.6) | **Around AD 95,** until Position 19 is decided |
+
+Still open, each before its own arc: which 18th-dynasty pharaoh (Exodus), the census of Quirinius (Luke 2:2), and the large numbers of Exodus 12:37 (Positions Register item 9).
 
 ---
 
@@ -431,4 +433,5 @@ Once these are settled, I'll update the Ruth dossier (§5 and §12) and the Posi
 | Gen 47:11; Exod 1:11 | "Rameses" / "Raamses" | The name comes from a much later pharaoh (§3.1) |
 | Gen 11:28 | "Ur of the Chaldeans" | The Chaldeans appear in the region around 1000 BC |
 | Gen 21:32; 26:1 | "Philistines" at Gerar | The Philistines of Samson's day arrived around 1175 BC. Genesis may mean earlier Aegean settlers, or use the later name. |
+| Judg 3:31; 5:6 | Shamgar strikes down 600 Philistines | Judges 5:6 makes Shamgar a contemporary of Jael, which our arrangement puts around 1230–1210. The main Philistine settlement came around 1175. That's within the model's margin of 20–30 years. It could also reflect earlier waves of Sea Peoples (around 1208) or the later name. A note for the Judges arc. |
 | Gen 12:16; 24:10 | Camels | Domesticated camels become common in the southern Levant around the 10th century BC (Sapir-Hen and Ben-Yosef, 2013). Earlier, limited use is debated. **For production,** show what the text says, but keep camels few and precious, which fits their being listed as wealth. |

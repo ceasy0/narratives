@@ -2,7 +2,7 @@
 
 > How we'll write the pilot, step by step: which files, what goes in each, and where you review.
 
-**Status:** Phase 1 is under way. Step 1 (the [dossier](./DOSSIER.md)) is done, and its checkpoint answers are recorded in [DOSSIER §12](./DOSSIER.md#12-decisions-for-you). **Paused at your request** while we settle a whole-Bible chronology ([`world/TIMELINE.md`](../../../world/TIMELINE.md)). Step 2, the treatment, starts once that's decided. For why Ruth is the pilot, see ROADMAP §11.4.
+**Status:** Phase 1 is under way. Step 1, the [dossier](./DOSSIER.md), is done, and the whole-Bible chronology is decided ([`world/TIMELINE.md`](../../../world/TIMELINE.md)). **Step 2, the [treatment](./TREATMENT.md), is drafted and waiting for your reaction.** For why Ruth is the pilot, see ROADMAP §11.4.
 
 ---
 
@@ -11,7 +11,7 @@
 | Step | File | Format | What's in it |
 |---|---|---|---|
 | 1 | [`DOSSIER.md`](./DOSSIER.md) ✓ | Markdown | Everything we need to know before writing. Built so that it also teaches you the story. |
-| 2 | `TREATMENT.md` | Markdown, in prose | The whole episode told as a short story (roughly 3–8 pages): what happens, how it's shaped, and what it means |
+| 2 | [`TREATMENT.md`](./TREATMENT.md) ✓ draft | Markdown, in prose | The whole episode told as a short story (roughly 3–8 pages): what happens, how it's shaped, and what it means |
 | 3 | `BEATS.md` | Markdown | The structure scene by scene: four acts, one for each of Ruth's four chapters |
 | 4 | `SCENES.md` | Markdown | One scene card per scene (template in ROADMAP §13.2) |
 | 5 | `scripts/ruth/ruth.fountain` | Fountain (`.fountain`) | The screenplay. It's plain text that renders to standard screenplay format, and every line carries a hidden `[[tag]]` saying where it came from. |
@@ -97,16 +97,14 @@ Then we lock the script.
 
 ## Decisions the pilot needs
 
-*Updated 2026-10-01. Decided: one episode, starting at the earliest point and running chronologically; Ruth's first marriage per FR-08, with Boaz confirmed as her opposite. Boaz's mother: Rahab, if the late Exodus date is accepted (DOSSIER §5). The rest are in [DOSSIER §12](./DOSSIER.md#12-decisions-for-you).*
+*Updated 2026-10-01. The details are in [DOSSIER §12](./DOSSIER.md#12-decisions-for-you). The treatment's own choices are in [TREATMENT §7](./TREATMENT.md#7-choices-for-you).*
 
-Each of these goes into the dossier with my default, so you can answer while you read. None of them blocks starting.
-
-| Decision | Options | My default | Needed by |
-|---|---|---|---|
-| Format | One episode in four acts, or four short episodes | One episode of about 35–45 minutes, with four acts matching the four chapters | Treatment |
-| Where the story opens | The famine in Bethlehem, the years in Moab, or the graves | The treatment will offer options | Treatment |
-| Boaz's mother | Rahab, literally (Matt 1:5), or a more distant ancestor | Rahab. A Canaanite outsider's son showing kindness to a Moabite outsider is a strong thread. The year stays vague, because Ruth 4:21's short genealogy makes the chronology tight. | Treatment |
-| Moab's religion on screen | Sincere and textured, dark, or barely shown | Sincere, following the text's restraint: Orpah goes back "to her people and to her gods" (1:15) and is never condemned | Treatment |
-| Ruth's first marriage | See FR-08 | Real and loving on her side, but unfinished | Treatment |
-| The threshing floor (3:1–14) | How charged, and how ambiguous | Keep the text's deliberate ambiguity. It can be intense, but not explicit (principle 8). | Scene cards |
-| Ruth's speech | Moabite was close to Hebrew | She speaks English (we're following her), with a slight accent noted for casting | Script |
+| Decision | Status | Needed by |
+|---|---|---|
+| Format | **Decided:** one episode of about 43 minutes, with a prologue and four acts, one for each chapter | Treatment |
+| Where the story opens | **Decided:** Bethlehem during the famine, with a glimpse of Boaz as the one who stays. The treatment offers three ways in. | Treatment |
+| Boaz's mother | **Decided by the chronology:** Rahab is his ancestor several generations back, remembered but not seen (DOSSIER §5) | Treatment |
+| Moab's religion on screen | **Decided:** sincere and textured | Treatment |
+| Ruth's first marriage | **Decided** (FR-08): real and loving on her side, but unfinished | Treatment |
+| The threshing floor (3:1–14) | **Default:** keep the text's charged ambiguity, resolved toward honor. It can be intense, but not explicit (principle 8). | Scene cards |
+| Ruth's speech | **Proposed in the treatment:** Moabite while she's in Moab, then English from her oath on, with a slight accent | Treatment checkpoint |

@@ -285,7 +285,7 @@ If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one
 - **In your water image, the first marriage is the barrier the water flows around.** It's the route that brings her to Naomi, to Bethlehem, to Israel's God and to Boaz, so nothing is wasted.
 - **Boaz and Ruth are staged as mirrors:** the shared word "worth," the wing, the field.
 
-**Status:** **Confirmed** 2026-10-01. Boaz is Ruth's opposite, and the theory stays unspoken "unless it feels right." Applied in the [Ruth dossier](../story/arcs/07-ruth/DOSSIER.md#11-framings-and-decisions-that-apply).
+**Status:** **Confirmed** 2026-10-01. Boaz is Ruth's opposite, and the theory stays unspoken "unless it feels right." Applied in the [Ruth dossier](../story/arcs/07-ruth/DOSSIER.md#11-framings-and-decisions-that-apply) and staged in the [treatment](../story/arcs/07-ruth/TREATMENT.md#5-threads).
 
 ---
 

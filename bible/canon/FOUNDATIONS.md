@@ -2,7 +2,7 @@
 
 > The decisions everything else rests on, recorded in your own words where possible. When a later document conflicts with this one, this one wins until we change it, and any change gets dated below.
 
-**Status:** v1.4, 2026-10-01. Recorded from your answers to the roadmap questions and to Discussion 002.
+**Status:** v1.5, 2026-10-01. Recorded from your answers to the roadmap questions, to Discussion 002 and to the chronology.
 
 ---
 
@@ -56,8 +56,8 @@
 | Mary's other children | Your notes reject the idea that Mary remained a virgin after Jesus's birth (Positions Register, item 17) | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
 | The conception | Mary conceived without sex, but one of her eggs was fertilized by Joseph, so both "vital opposites" were involved. On screen: the dialogue stays with the text, your view is held quietly (P5), and the village's rumor is staged. | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
 | Ruth's opposite | A working theory, not fact. **Confirmed:** Boaz. Unspoken unless it feels right. | [FRAMINGS FR-08](./FRAMINGS.md#fr-08--marriage-to-ones-relative-opposite) |
-| The Ruth pilot | One episode. It starts at the earliest point and runs chronologically, opening in Bethlehem during the famine. 4:5 uses the read-aloud version ("you acquire Ruth"). Moab's religion is sincere and textured. Naomi and Boaz are slightly more formal than Ruth. It ends with the naming of Obed. Rahab is Boaz's mother only if the chronology allows. | [Ruth dossier §12](../story/arcs/07-ruth/DOSSIER.md#12-decisions-for-you) |
-| Chronology first | Settle a whole-Bible working chronology before writing any arc. A draft with my recommendations is waiting for your decisions. | [`world/TIMELINE.md`](../world/TIMELINE.md#8-decisions-for-you) |
+| The Ruth pilot | One episode. It starts at the earliest point and runs chronologically, opening in Bethlehem during the famine. 4:5 uses the read-aloud version ("you acquire Ruth"). Moab's religion is sincere and textured. Naomi and Boaz are slightly more formal than Ruth. It ends with the naming of Obed. Rahab is Boaz's ancestor, not his mother, because the chronology doesn't allow it. | [Ruth dossier §12](../story/arcs/07-ruth/DOSSIER.md#12-decisions-for-you) |
+| Chronology | **Decided:** a whole-Bible working chronology comes before any arc. The text-first model, with my recommendation adopted on all five forks ("Go with your recommendations for 1–5"): the Exodus in 1446 BC; 215 years in Egypt; Jesus born around 5 BC and crucified on 3 April AD 33; Genesis 1–11 undated until the Genesis discussion; Revelation around AD 95. | [`world/TIMELINE.md`](../world/TIMELINE.md#8-decisions-for-you) |
 | Jesus's humanity | **Decided.** See the decision text in Discussion 002. | [Discussion 002](../discussions/002-jesus-humanity.md#decision) |
 | Your source documents | Keep only the summaries in the repository | §7 below |
 
@@ -94,6 +94,7 @@ These documents are summarized in the repository. At your request, the originals
 - **I learn from your edits.** After each of your passes, I write down the patterns I see in the style documents and ask about anything I can't interpret.
 - **I translate carefully.** Every non-English line comes with its original script, a transliteration, a literal back-translation and a confidence level. Reconstructed languages are always flagged.
 - **I write things down.** I don't remember previous sessions. What's in this folder is the project's memory.
+- **I report problems as I find them.** You've asked me to tell you about any problem with the story as I work, not only when you ask.
 - **I give real opinions.** You've said you prefer a back-and-forth with real opinions to neutral annotation. I'll react, take positions, and move the conversation forward, and I'll mark which parts are my own view.
 
 ## Change log
@@ -105,3 +106,4 @@ These documents are summarized in the repository. At your request, the originals
 | 2026-10-01 | v1.2: the reading of "modern equivalents" settled; your revised view of the conception; Ruth's opposite; Discussion 002 decided; summaries only |
 | 2026-10-01 | v1.3: conception view adopted provisionally; Boaz confirmed as Ruth's opposite; the Ruth pilot's format and opening; the Rahab condition |
 | 2026-10-01 | v1.4: Ruth checkpoint answers; the decision to settle the chronology first |
+| 2026-10-01 | v1.5: the chronology decided; Rahab settled as Boaz's ancestor; reporting problems as I find them |

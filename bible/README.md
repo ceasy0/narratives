@@ -13,7 +13,7 @@ This directory currently holds planning documents. There are no scripts yet.
 | [`canon/FRAMINGS.md`](./canon/FRAMINGS.md) | Your unconventional framings: what each says, which texts support it and which pull against it, and a first-pass fit grade. |
 | [`discussions/`](./discussions/) | The theological and philosophical conversations: 002 (Jesus's humanity) is decided, and 001 (how God speaks) is seeded. |
 | [`world/TIMELINE.md`](./world/TIMELINE.md) | The working chronology: fixed anchors, the major dating questions, every arc's dates, the kings and the prophets |
-| [`story/arcs/07-ruth/`](./story/arcs/07-ruth/README.md) | The Ruth pilot: files, steps, checkpoints and the decisions it needs |
+| [`story/arcs/07-ruth/`](./story/arcs/07-ruth/README.md) | The Ruth pilot: the plan, the research dossier and the treatment |
 | [`CLAUDE.md`](./CLAUDE.md) | The working rules Claude loads in every session, so nothing depends on memory. |
 
 ## The short version
@@ -30,7 +30,7 @@ This directory currently holds planning documents. There are no scripts yet.
 
 | | |
 |---|---|
-| Phase | 1: the Ruth pilot. The dossier is done. |
-| Next | The chronology decisions ([`world/TIMELINE.md`](./world/TIMELINE.md#8-decisions-for-you) §8), then the Ruth treatment |
+| Phase | 1: the Ruth pilot. The dossier is done, the chronology is decided, and the treatment is drafted. |
+| Next | Your reaction to the [treatment](./story/arcs/07-ruth/TREATMENT.md) (its §7 lists the main choices), then the beat sheet |
 | Pilot | Ruth |
 | Formats | Markdown for docs · Fountain for screenplays |

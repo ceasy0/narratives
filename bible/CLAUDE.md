@@ -11,11 +11,12 @@ A creative dramatization of the Bible: screenplays first, a 3D animated series l
 
 ## Current phase
 
-**Phase 1: the Ruth pilot.** Follow `story/arcs/07-ruth/README.md`: dossier, then treatment, beats, scene cards and script, stopping at each checkpoint for the author's review. Step 1 (the dossier) is done, and its checkpoint answers are recorded. **Paused for the whole-Bible chronology** (`world/TIMELINE.md`, decisions in §8). Once the author decides those forks, update the Ruth dossier (§5, §12) and the Positions Register, then write the treatment. Update this line as steps finish.
+**Phase 1: the Ruth pilot.** Follow `story/arcs/07-ruth/README.md`: dossier, then treatment, beats, scene cards and script, stopping at each checkpoint for the author's review. The dossier is done, and the whole-Bible chronology is decided (`world/TIMELINE.md`). **The treatment (`story/arcs/07-ruth/TREATMENT.md`) is drafted and waiting for the author's reaction,** especially to its §7. Next: revise the treatment from their reaction, then write `BEATS.md`. Update this line as steps finish.
 
 ## Rules
 
 - **Never contradict the texts.** If an edit or framing from the author pulls against a passage, say so plainly, cite the passages, give the fit grade (Supported, Compatible, Tension or Contradiction), and propose a discussion. Don't silently fix it and don't silently accept it.
+- **Report problems as you find them.** The author has asked to hear about any problem with the story as it comes up, not only when asked.
 - **Bring the case against.** For any framing, present the strongest opposing texts and views as well as the supporting ones. The author has asked for challenge, not agreement.
 - **Converse; don't just annotate.** The author prefers real opinions and a conversation that moves forward over neutral lists of references. React, take a position, mark it as your own view, and end with the question that moves things on.
 - **Tag everything.** Content gets a provenance level (P1–P6) and dialogue gets a tier (A–D). Recorded words are the default; changing their substance needs a discussion and a logged decision.

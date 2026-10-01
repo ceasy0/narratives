@@ -2,7 +2,7 @@
 
 > A detailed, faithful dramatization of the Bible. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-**Status:** v2.3, 2026-10-01. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done. It's paused while we settle a whole-Bible [working chronology](./world/TIMELINE.md), which has been pulled forward from Phase 3. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
+**Status:** v2.4, 2026-10-01. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done, and the [treatment](./story/arcs/07-ruth/TREATMENT.md) is drafted. The whole-Bible [working chronology](./world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
@@ -444,7 +444,7 @@ So your rule makes "Yahweh" common in Old Testament dialogue and nearly absent i
 
 ### 5.7 Languages and accents
 
-**Decided: we use the original languages, not only English.** How far to take that is still open (§19). There are four basic approaches:
+**Decided: we use the original languages, not only English.** How far to take that was settled below (approach C, reading 1). There are four basic approaches:
 
 | Approach | How it works | For | Against |
 |---|---|---|---|
@@ -515,7 +515,7 @@ Yǝḇārɛḵḵā YHWH.
 [[SUB: The LORD bless you.]] [[B: Ruth 2:4 — יְבָרֶכְךָ יְהוָה]]
 ```
 
-Whether Boaz says the Name aloud here is exactly the open question from §5.5.
+Under the decision in §5.5, Boaz says the Name aloud here.
 
 **More on languages and accents:**
 
@@ -704,13 +704,13 @@ Not everything has to be decided now; each entry has a "decide by" point. Here i
 | 1 | Canon & text | Which canon: 66 books, 73, or another? | Whether Tobit, Judith and Maccabees are part of the story or background | **Decided:** start with the widely shared canon, then the study track (§9.5) |
 | 2 | Canon & text | Where the Hebrew (Masoretic) text differs from the Greek Septuagint or the Dead Sea Scrolls, which do we follow? | Goliath's height, the patriarchs' ages, some entire paragraphs (§9) | A default in Phase 0, then case by case |
 | 3 | Canon & text | Disputed passages (Mark 16:9–20; John 7:53–8:11) | Whether the scene of the woman caught in adultery is included | Before the Gospels |
-| 4 | Origins | How to read Genesis 1: literal days, day-age, framework, cosmic temple, or something else | What we see on screen during creation | Before Genesis |
+| 4 | Origins | How to read Genesis 1: literal days, day-age, framework, cosmic temple, or something else | What we see on screen during creation | Before Genesis. Until then the genealogies of Genesis 1–11 stay undated ([TIMELINE §3.4](./world/TIMELINE.md#34-primeval-history-genesis-111), decided 2026-10-01). |
 | 5 | Origins | Were Adam and Eve historical individuals? | Whether Eden is a place we can put a camera in | Before Genesis |
 | 6 | Origins | Who are the "sons of God" and the Nephilim (Gen 6:1–4): angels, descendants of Seth, or kings? | Whether giants and fallen angels appear on screen | Before Genesis |
 | 7 | Origins | Was the flood global or regional? | The scale of every flood shot | Before Genesis |
-| 8 | History | When was the Exodus (about 1446 or about 1260 BC), and who was Pharaoh? | Egyptian costume, architecture and names | **Being decided now** in [TIMELINE §3.1](./world/TIMELINE.md#31-when-was-the-exodus). I recommend the early date. |
+| 8 | History | When was the Exodus (about 1446 or about 1260 BC), and who was Pharaoh? | Egyptian costume, architecture and names | **Decided** 2026-10-01: the early date, 1446 BC, with 215 years in Egypt ([TIMELINE §3.1–3.2](./world/TIMELINE.md#31-when-was-the-exodus)). Which 18th-dynasty pharaoh: before the Exodus. |
 | 9 | History | Large numbers such as "600,000 men" (Exod 12:37): literal, or a different sense of the Hebrew *elef*? | The crowd size in every wilderness shot | Before the Exodus |
-| 10 | History | Gospel chronology: the year of Jesus's birth, the length of his ministry, and the year (AD 30 or 33) and day of the crucifixion | Characters' ages, seasons and festival timing | **Being decided now** in [TIMELINE §3.5](./world/TIMELINE.md#35-jesus). I recommend AD 33. |
+| 10 | History | Gospel chronology: the year of Jesus's birth, the length of his ministry, and the year (AD 30 or 33) and day of the crucifixion | Characters' ages, seasons and festival timing | **Decided** 2026-10-01: born around 5 BC, ministry AD 29–33, crucified Friday 3 April AD 33 ([TIMELINE §3.5](./world/TIMELINE.md#35-jesus)). How to stage Luke's census (Luke 2:2): before the Gospels. |
 | 11 | History | Gospel harmony: for example, was the Temple cleared once or twice (John 2 versus the other three Gospels)? | Episode order | Before the Gospels |
 | 12 | The divine | Can God the Father be shown? Many traditions say no, and the Reformed tradition extends this to every person of the Trinity (Westminster Larger Catechism, Q109). | Light, voice, fire and cloud, or nothing visible at all | [Discussion 001](./discussions/001-how-god-speaks.md); before Genesis |
 | 13 | The divine | Is Jesus's divinity visible on screen beyond what the text shows (such as the Transfiguration)? | A glow, or nothing | [Discussion 002](./discussions/002-jesus-humanity.md); before the Gospels |
@@ -719,7 +719,7 @@ Not everything has to be decided now; each entry has a "decide by" point. Here i
 | 16 | The divine | Are the satan in Job, the serpent in Eden and the Satan of the Gospels the same figure? | Continuity of design and voice | Before Genesis |
 | 17 | Denominational | Are Jesus's "brothers and sisters" (Mark 6:3) Mary's younger children, Joseph's children from an earlier marriage, or cousins? | Their ages, and whether they appear in every Nazareth scene | **Leaning:** Mary's younger children (your study notes); confirm before the Gospels |
 | 18 | Denominational | Peter's role (Matt 16:18) and the words at the Last Supper | The tone and staging of two of the most important scenes | Before the Gospels |
-| 19 | Denominational | How to read Revelation: as future events, as first-century events, as the sweep of church history, or as symbolic vision | What we actually show in Revelation | Before Revelation |
+| 19 | Denominational | How to read Revelation: as future events, as first-century events, as the sweep of church history, or as symbolic vision | What we actually show in Revelation | Before Revelation. Dated around AD 95 until then ([TIMELINE §3.6](./world/TIMELINE.md#36-revelation)). |
 | 20 | Depiction | Levels of violence and sexual content | Everything from Genesis 19 to the cross | **Decided:** a high ceiling, with no explicit sexual content (principle 8) |
 | 21 | The divine | How does God speak: through creation, through people, through prophets, as a voice? How do we show each? | Every scene in which "God said" | [Discussion 001](./discussions/001-how-god-speaks.md); before Genesis |
 | 22 | The divine | How far does Jesus's humanity go: limits, struggle, error, sin? | Every scene with Jesus in it | **Decided** 2026-10-01 ([Discussion 002](./discussions/002-jesus-humanity.md#decision)) |
@@ -933,17 +933,17 @@ The Bible summarizes itself in other places that could serve as frames too: Step
 
 ### 10.3 Draft arc map
 
-Dates are approximate, and the early ones are contested.
+Dates follow the decided [working chronology](./world/TIMELINE.md). They're approximate, and the early ones depend on the model we chose.
 
 | # | Arc | Books | Approximate era | Heart of it | Main challenge |
 |---|---|---|---|---|---|
 | 1 | Beginnings | Gen 1–11 | Primeval | Creation, the fall, Cain, the flood, Babel | The most interpretively contested material in the Bible |
-| 2 | The Promise | Gen 12–36 | ~2000–1800 BC | Abraham, Isaac, Jacob | God appears and speaks often; long spans of time |
-| 3 | Joseph | Gen 37–50 | ~1900–1800 BC | Betrayal, slavery, power, reconciliation | Designing Egypt; the Genesis 38 intercut (§10.5) |
-| 4 | Exodus | Exod 1–18 | 15th or 13th century BC | Moses, the plagues, Passover, the sea | Spectacle; depicting God; Pharaoh's heart |
-| 5 | Sinai and the Wilderness | Exod 19–40, Leviticus, Numbers, Deuteronomy | 40 years | Covenant, the golden calf, the tabernacle, rebellion, Moses's death | Mostly law, so it needs a strategy for dramatizing law |
-| 6 | Conquest | Joshua | — | Jericho, Achan, Gibeon, dividing the land | *Herem* and violence |
-| 7 | Judges and Ruth | Judges, Ruth | ~1350–1050 BC | Deborah, Gideon, Samson, collapse, and Ruth as a light in the dark | Judges 19–21; shifts in tone |
+| 2 | The Promise | Gen 12–36 | 1876 – c. 1690 BC | Abraham, Isaac, Jacob | God appears and speaks often; long spans of time |
+| 3 | Joseph | Gen 37–50 | c. 1683–1590 BC | Betrayal, slavery, power, reconciliation | Designing Egypt; the Genesis 38 intercut (§10.5) |
+| 4 | Exodus | Exod 1–18 | c. 1550–1446 BC | Moses, the plagues, Passover, the sea | Spectacle; depicting God; Pharaoh's heart |
+| 5 | Sinai and the Wilderness | Exod 19–40, Leviticus, Numbers, Deuteronomy | 1446–1406 BC | Covenant, the golden calf, the tabernacle, rebellion, Moses's death | Mostly law, so it needs a strategy for dramatizing law |
+| 6 | Conquest | Joshua | 1406 – c. 1380 BC | Jericho, Achan, Gibeon, dividing the land | *Herem* and violence |
+| 7 | Judges and Ruth | Judges, Ruth | c. 1380–1050 BC | Deborah, Gideon, Samson, collapse, and Ruth as a light in the dark | Judges 19–21; shifts in tone |
 | 8 | Samuel and Saul | 1 Samuel | ~1100–1010 BC | Hannah, Samuel, Saul, David and Goliath, Saul's fall | A tragic king |
 | 9 | David | 2 Samuel, 1 Chronicles, Psalms | ~1010–970 BC | King, sinner and father; Bathsheba; Absalom | Weaving in the Psalms; honesty about David |
 | 10 | Solomon | 1 Kings 1–11, 2 Chronicles 1–9, Proverbs, Ecclesiastes, Song of Songs | ~970–931 BC | Wisdom, the Temple, the drift | Turning wisdom books into drama |
@@ -952,8 +952,8 @@ Dates are approximate, and the early ones are contested.
 | 13 | Exile | Daniel, Ezekiel, Lamentations | 605–539 BC | Babylon, the furnace, the lions, Ezekiel's visions | Putting apocalyptic visions on screen |
 | 14 | Return | Ezra, Nehemiah, Esther, Haggai, Zechariah, Malachi | 539 – ~430 BC | Rebuilding Jerusalem; Esther in Persia | Esther never mentions God |
 | 15 | Between the Testaments (optional bridge) | 1–2 Maccabees, Josephus | ~430–4 BC | The Greeks, the Maccabees, Hanukkah, the arrival of Rome, Herod | Outside the 66-book canon |
-| 16 | The Gospels | Matthew, Mark, Luke, John | ~6/4 BC – AD 30/33 | Birth, ministry, the Passion, the resurrection | Dense Tier A dialogue; harmony; depicting Jesus |
-| 17 | The Church | Acts and the letters | AD 30s–60s | Pentecost, Stephen, Paul, Peter, Rome | Weaving the letters into the story |
+| 16 | The Gospels | Matthew, Mark, Luke, John | c. 6 BC – AD 33 | Birth, ministry, the Passion, the resurrection | Dense Tier A dialogue; harmony; depicting Jesus |
+| 17 | The Church | Acts and the letters | AD 33 – 60s | Pentecost, Stephen, Paul, Peter, Rome | Weaving the letters into the story |
 | 18 | Revelation | Revelation, plus the fall of Jerusalem in AD 70 and the apostles' fates (as P3) | To about AD 95 | John on Patmos | The most symbolic book in the Bible |
 
 Job has no fixed date. It could stand alone between arcs, or sit in the patriarchal era, where many readers place its setting.
@@ -1395,7 +1395,7 @@ narratives/bible/
 | **0. Foundations** | Make the decisions everything else depends on | **Done 2026-10-01:** FOUNDATIONS, FRAMINGS, the language and Name decisions, and Discussion 002. For now the principles, language rules and Positions Register stay in this roadmap. LEXICON and VOICES get built from the Ruth work rather than in advance. | You'd be comfortable handing the style documents to another writer |
 | **1. Pilot: Ruth** | Prove the method end to end | Research dossier, treatment, scene cards, tagged draft script, your rewrite, audit | There's a locked Ruth script you're proud of |
 | **2. Calibration** | Learn from the pilot | Revised style documents; lexicon v1; the Mark 2 Jesus-voice exercise; optionally the script checker | The rules match how you actually write |
-| **3. Architecture** | Plan the whole series | ARCHITECTURE.md (the arc list, the through-line, the framing decision); TIMELINE.md; an overview of each era | You can see the whole series on one page |
+| **3. Architecture** | Plan the whole series | ARCHITECTURE.md (the arc list, the through-line, the framing decision); TIMELINE.md (**done early**, 2026-10-01); an overview of each era | You can see the whole series on one page |
 | **4. First long arc: Joseph** | Scale up the method | Everything from dossier to locked scripts | The Joseph scripts are locked |
 | **5. The rest of the series** | Write the series | One arc at a time | Ongoing |
 | **6. Pre-production** | Build the bridge to the screen | Visual style tests, storyboards, a Ruth animatic, a production budget | There's a watchable Ruth animatic |
@@ -1454,13 +1454,14 @@ The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./cano
 | 10 | Reframing | Different interpretations and understandings, checked with the fit check (§8.8) |
 | 11 | Output | Screenplays first |
 | 12 | Format | Episodes for now; the final format gets decided later |
+| 13 | Chronology | The text-first model, with all five forks as recommended ([TIMELINE §8](./world/TIMELINE.md#8-decisions-for-you)) |
+| 14 | Rahab | Boaz's ancestor several generations back, not his mother ([Ruth dossier §5](./story/arcs/07-ruth/DOSSIER.md#5-when-chronology-and-rahab)) |
 
 ### 19.2 Still open
 
-1. **The chronology forks** ([TIMELINE §8](./world/TIMELINE.md#8-decisions-for-you)): the Exodus date, the length of the stay in Egypt, the crucifixion year, Genesis 1–11 left undated, and Revelation's date. These come first.
-2. **Rahab:** Boaz's mother, or an ancestor several generations back? This follows from the Exodus date.
-3. **FR-03's on-screen approach,** to confirm before the Gospels.
-4. **Deferred:**
+1. **Your reaction to the Ruth treatment,** especially the choices in [TREATMENT §7](./story/arcs/07-ruth/TREATMENT.md#7-choices-for-you).
+2. **FR-03's on-screen approach,** to confirm before the Gospels.
+3. **Deferred:**
    - Discussion 001, before Genesis.
    - The two sub-questions left over from Discussion 002, before the Gospels.
    - The remaining Positions, each before the arc that needs it.
