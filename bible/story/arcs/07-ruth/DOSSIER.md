@@ -231,7 +231,7 @@ This translation is my own, made from the Hebrew (the Masoretic Text) and checke
 - **Read aloud ("you acquire Ruth"),** the version most translations follow. Boaz tells the nearer relative that buying the field obliges him to marry Ruth and produce an heir for Mahlon. The relative refuses, because the land would eventually pass to that heir and he'd have spent his money on someone else's inheritance (4:6).
 - **Written ("I acquire Ruth").** Boaz announces that *he* is marrying Ruth to raise up Mahlon's name. The relative suddenly realizes that any son of Boaz and Ruth would claim the land he's about to pay for, so he withdraws. This version makes Boaz a strategist who wins in public with a single line.
 
-Both readings are "the text." I recommend the written version for the drama, but it's your call (§12).
+Both readings are "the text." **Decided (2026-10-01): the read-aloud version, "you acquire Ruth,"** which is your reading and most translations'. The difference turns out to be smaller than it first looks. In both versions, the relative withdraws because an heir would claim the land, and Boaz marries Ruth. What changes is Boaz's tactic in one line: in the read-aloud version he reveals the condition, while in the written version he announces his own intention. Verse 4:10 doesn't decide between them (Boaz says "I have acquired" *after* the refusal in either case), but the read-aloud version is well supported and is how the verse has been read aloud for centuries.
 
 ---
 
@@ -273,6 +273,8 @@ Both readings are "the text." I recommend the written version for the drama, but
 ---
 
 ## 5. When: chronology, and Rahab
+
+> **Update (2026-10-01):** at your request we're settling a whole-Bible chronology first, in [`world/TIMELINE.md`](../../../world/TIMELINE.md). Looked at across the whole Bible, the evidence favors the *early* Exodus date. Under that date, Rahab is Boaz's ancestor several generations back, not his mother, and Ruth falls around 1150–1140 BC ([TIMELINE §7](../../../world/TIMELINE.md#7-what-this-means-for-ruth)). The analysis below is kept for reference until you decide.
 
 The book gives only "in the days when the judges ruled" (1:1). You asked for Rahab as Boaz's mother only if it fits the chronology without a gap in the genealogy. Here's the result.
 
@@ -483,7 +485,7 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 | **Naomi's motives (3:1–4)** | Pure love ("rest for you"), or securing her own future, or both. Either way she sends Ruth into real danger. | **Both.** She's sincere and calculating, and afraid. |
 | **Why does Boaz wait seven weeks?** | His age (3:10); she's foreign; a closer redeemer exists; he assumed she'd want a younger man. | **His age and the nearer redeemer.** He assumes he isn't what she'd want (3:10 is his relief). |
 | **Naomi's land (4:3)** | Why are the women destitute if Naomi has land? Possibly it was sold or left behind when the family went to Moab, and what's being "sold" is the right to redeem it. | **Land the family left behind,** now worked or held by others. Naomi is "selling" her claim. |
-| **Why does the relative refuse (4:6)?** | It depends on 4:5 (§3). | **The written version ("I acquire")** for the drama, if you agree. |
+| **Why does the relative refuse (4:6)?** | It depends on 4:5 (§3). | **Decided: the read-aloud version.** Marrying Ruth means fathering an heir for Mahlon who would inherit the field, so the relative would be paying for someone else's land and diluting his own estate. |
 | **Orpah** | Obedient, sensible, not condemned. Ruth goes beyond duty, but Orpah isn't the villain. | **Sympathetic.** She does exactly what Naomi asked. |
 | **The deaths** | No cause is given. Some rabbinic readings treat them as punishment for leaving the land or for marrying Moabites (P3). | **No moralizing.** Illness, in keeping with the names. |
 | **Naomi's theology (1:20–21)** | She blames God openly, and the book never corrects her. The ending answers her by events, not by argument. | **Let her say it at full strength.** The women's blessing in 4:14–15 is the reply. |
@@ -506,7 +508,7 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 
 ## 12. Decisions for you
 
-**Already decided:**
+**Decided:**
 - One episode.
 - The story starts at the earliest point and runs chronologically.
 - Boaz is Ruth's opposite, unspoken.
@@ -514,17 +516,17 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 - Setting 2 register.
 - Approach C for language.
 
-**Needed from you:**
+**Your answers (2026-10-01):**
 
-| # | Decision | Options | My recommendation |
-|---|---|---|---|
-| 1 | **Rahab as Boaz's mother** | Yes, adopting the late Exodus date for the whole series (§5); or no, keeping her as a more distant ancestor | **Yes, with the late date, provisionally.** This affects the Exodus and Conquest arcs, so it needs your sign-off. |
-| 2 | **Rahab on screen?** | Not shown, only referenced; or a brief appearance as an old woman of about 80 in Bethlehem | **A brief appearance.** One wordless or near-wordless moment where she sees Ruth would carry a lot. It's a P6 invention, and it passes the addition test, but only just: it must stay small. |
-| 3 | **How early to start** | At 1:1, with the famine in Bethlehem and the family deciding to leave; or with a brief earlier glimpse of Boaz in Bethlehem first. As kin (2:1), he stays through the famine while Elimelech leaves. | **Open in Bethlehem during the famine, with Boaz glimpsed briefly as the one who stays.** It sets up the contrast and plants him before chapter 2. |
-| 4 | **The 4:5 reading** | Read aloud ("you acquire Ruth") or written ("I acquire Ruth") | **Written.** Boaz wins in public with one line. |
-| 5 | **Moab's religion on screen** | Sincere and textured; dark; or barely shown | **Sincere and textured, never demonized.** We follow the text's restraint. |
-| 6 | **The older generation's voice** | Should Naomi and Boaz sound slightly more formal and old-fashioned than Ruth, as the Hebrew may suggest (§8)? | **Yes, lightly.** It's a texture, not period-drama English. |
-| 7 | **The ending** | End on the naming of Obed (4:17); or carry on through the genealogy to a glimpse of David | **End with the genealogy as a final image,** not narration: Naomi with the child, then a brief look forward to a shepherd boy in the same fields. It's a P6 bridge to the David arc. |
+| # | Decision | Status |
+|---|---|---|
+| 1 | **Rahab as Boaz's mother** | **Waiting on the chronology** ([TIMELINE §8](../../../world/TIMELINE.md#8-decisions-for-you)). You said yes, "if we decide that it works in the chronology." Under the recommended early date it doesn't, so Rahab becomes Boaz's ancestor several generations back and a family memory. |
+| 2 | **Rahab on screen** | Only if the chronology allows. Under the early date it doesn't. |
+| 3 | **How early to start** | **Decided: my recommendation.** Open in Bethlehem during the famine, with a brief glimpse of Boaz as the one who stays. |
+| 4 | **The 4:5 reading** | **Decided: read aloud ("you acquire Ruth").** See §3. |
+| 5 | **Moab's religion on screen** | **Decided: sincere and textured.** |
+| 6 | **The older generation's voice** | **Decided (provisionally): yes.** Naomi and Boaz sound slightly more formal than Ruth, done lightly. |
+| 7 | **The ending** | **Decided for now: end with the naming of Obed (4:17).** An option for later: a closing shot moving in on the newborn, cut with brief glimpses of the future, before going to black. |
 
 ---
 

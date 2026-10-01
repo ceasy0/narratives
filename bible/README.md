@@ -12,6 +12,7 @@ This directory currently holds planning documents. There are no scripts yet.
 | [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md) | Your stance and every decision so far, in your own words where possible. It overrides everything else. |
 | [`canon/FRAMINGS.md`](./canon/FRAMINGS.md) | Your unconventional framings: what each says, which texts support it and which pull against it, and a first-pass fit grade. |
 | [`discussions/`](./discussions/) | The theological and philosophical conversations: 002 (Jesus's humanity) is decided, and 001 (how God speaks) is seeded. |
+| [`world/TIMELINE.md`](./world/TIMELINE.md) | The working chronology: fixed anchors, the major dating questions, every arc's dates, the kings and the prophets |
 | [`story/arcs/07-ruth/`](./story/arcs/07-ruth/README.md) | The Ruth pilot: files, steps, checkpoints and the decisions it needs |
 | [`CLAUDE.md`](./CLAUDE.md) | The working rules Claude loads in every session, so nothing depends on memory. |
 
@@ -30,6 +31,6 @@ This directory currently holds planning documents. There are no scripts yet.
 | | |
 |---|---|
 | Phase | 1: the Ruth pilot. The dossier is done. |
-| Next | Your review of the [Ruth dossier](./story/arcs/07-ruth/DOSSIER.md) (checkpoint 1), then the treatment |
+| Next | The chronology decisions ([`world/TIMELINE.md`](./world/TIMELINE.md#8-decisions-for-you) §8), then the Ruth treatment |
 | Pilot | Ruth |
 | Formats | Markdown for docs · Fountain for screenplays |

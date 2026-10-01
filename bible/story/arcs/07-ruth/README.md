@@ -2,7 +2,7 @@
 
 > How we'll write the pilot, step by step: which files, what goes in each, and where you review.
 
-**Status:** Phase 1 is under way. **Step 1 (the [dossier](./DOSSIER.md)) is done** and waiting at its checkpoint; the decisions are in [DOSSIER §12](./DOSSIER.md#12-decisions-for-you). For why Ruth is the pilot, see ROADMAP §11.4.
+**Status:** Phase 1 is under way. Step 1 (the [dossier](./DOSSIER.md)) is done, and its checkpoint answers are recorded in [DOSSIER §12](./DOSSIER.md#12-decisions-for-you). **Paused at your request** while we settle a whole-Bible chronology ([`world/TIMELINE.md`](../../../world/TIMELINE.md)). Step 2, the treatment, starts once that's decided. For why Ruth is the pilot, see ROADMAP §11.4.
 
 ---
 

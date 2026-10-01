@@ -2,7 +2,7 @@
 
 > A detailed, faithful dramatization of the Bible. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-**Status:** v2.2, 2026-10-01. Planning is complete, and Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
+**Status:** v2.3, 2026-10-01. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done. It's paused while we settle a whole-Bible [working chronology](./world/TIMELINE.md), which has been pulled forward from Phase 3. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
@@ -708,9 +708,9 @@ Not everything has to be decided now; each entry has a "decide by" point. Here i
 | 5 | Origins | Were Adam and Eve historical individuals? | Whether Eden is a place we can put a camera in | Before Genesis |
 | 6 | Origins | Who are the "sons of God" and the Nephilim (Gen 6:1–4): angels, descendants of Seth, or kings? | Whether giants and fallen angels appear on screen | Before Genesis |
 | 7 | Origins | Was the flood global or regional? | The scale of every flood shot | Before Genesis |
-| 8 | History | When was the Exodus (about 1446 or about 1260 BC), and who was Pharaoh? | Egyptian costume, architecture and names | **Now needed for Ruth.** Rahab as Boaz's mother works only with the late date ([DOSSIER §5](./story/arcs/07-ruth/DOSSIER.md#5-when-chronology-and-rahab)). |
+| 8 | History | When was the Exodus (about 1446 or about 1260 BC), and who was Pharaoh? | Egyptian costume, architecture and names | **Being decided now** in [TIMELINE §3.1](./world/TIMELINE.md#31-when-was-the-exodus). I recommend the early date. |
 | 9 | History | Large numbers such as "600,000 men" (Exod 12:37): literal, or a different sense of the Hebrew *elef*? | The crowd size in every wilderness shot | Before the Exodus |
-| 10 | History | Gospel chronology: the year of Jesus's birth, the length of his ministry, and the year (AD 30 or 33) and day of the crucifixion | Characters' ages, seasons and festival timing | Before the Gospels |
+| 10 | History | Gospel chronology: the year of Jesus's birth, the length of his ministry, and the year (AD 30 or 33) and day of the crucifixion | Characters' ages, seasons and festival timing | **Being decided now** in [TIMELINE §3.5](./world/TIMELINE.md#35-jesus). I recommend AD 33. |
 | 11 | History | Gospel harmony: for example, was the Temple cleared once or twice (John 2 versus the other three Gospels)? | Episode order | Before the Gospels |
 | 12 | The divine | Can God the Father be shown? Many traditions say no, and the Reformed tradition extends this to every person of the Trinity (Westminster Larger Catechism, Q109). | Light, voice, fire and cloud, or nothing visible at all | [Discussion 001](./discussions/001-how-god-speaks.md); before Genesis |
 | 13 | The divine | Is Jesus's divinity visible on screen beyond what the text shows (such as the Transfiguration)? | A glow, or nothing | [Discussion 002](./discussions/002-jesus-humanity.md); before the Gospels |
@@ -1368,7 +1368,7 @@ narratives/bible/
 │   ├── LEXICON.md           term-by-term rules
 │   └── VOICES.md            how each character and group speaks
 ├── world/                   the series bible
-│   ├── TIMELINE.md
+│   ├── TIMELINE.md          the working chronology                            (exists)
 │   ├── eras/                one file per era
 │   ├── places/
 │   └── culture/             food, clothing, housing, law, worship, economy, warfare
@@ -1457,12 +1457,13 @@ The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./cano
 
 ### 19.2 Still open
 
-1. **The Ruth pilot's decisions:** format, the opening, Boaz's mother, how Moab's religion is shown, Ruth's first marriage and the threshing floor. Each comes with a default in the [pilot plan](./story/arcs/07-ruth/README.md#decisions-the-pilot-needs), and you can answer them while reading the dossier.
-2. **Two on-screen approaches to confirm:** FR-03 (the conception) before the Gospels, and FR-08 (Boaz as Ruth's opposite, unspoken) before the Ruth treatment.
-3. **Deferred:**
-   - Discussion 001 (how God speaks), before Genesis.
+1. **The chronology forks** ([TIMELINE §8](./world/TIMELINE.md#8-decisions-for-you)): the Exodus date, the length of the stay in Egypt, the crucifixion year, Genesis 1–11 left undated, and Revelation's date. These come first.
+2. **Rahab:** Boaz's mother, or an ancestor several generations back? This follows from the Exodus date.
+3. **FR-03's on-screen approach,** to confirm before the Gospels.
+4. **Deferred:**
+   - Discussion 001, before Genesis.
    - The two sub-questions left over from Discussion 002, before the Gospels.
-   - Positions 2–11, 14, 16, 18 and 19, each before the arc that needs it.
+   - The remaining Positions, each before the arc that needs it.
 
 ---
 

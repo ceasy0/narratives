@@ -11,7 +11,7 @@ A creative dramatization of the Bible: screenplays first, a 3D animated series l
 
 ## Current phase
 
-**Phase 1: the Ruth pilot.** Follow `story/arcs/07-ruth/README.md`: dossier, then treatment, beats, scene cards and script, stopping at each checkpoint for the author's review. **Step 1 (the dossier) is done and waiting at its checkpoint.** Next: the treatment, once the author has answered DOSSIER §12. Update this line as steps finish.
+**Phase 1: the Ruth pilot.** Follow `story/arcs/07-ruth/README.md`: dossier, then treatment, beats, scene cards and script, stopping at each checkpoint for the author's review. Step 1 (the dossier) is done, and its checkpoint answers are recorded. **Paused for the whole-Bible chronology** (`world/TIMELINE.md`, decisions in §8). Once the author decides those forks, update the Ruth dossier (§5, §12) and the Positions Register, then write the treatment. Update this line as steps finish.
 
 ## Rules
 
