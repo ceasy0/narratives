@@ -2,7 +2,7 @@
 
 > The decisions everything else rests on, recorded in your own words where possible. When a later document conflicts with this one, this one wins until we change it, and any change gets dated below.
 
-**Status:** v1, 2026-10-01. Recorded from your answers to the roadmap v1 questions.
+**Status:** v1.1, 2026-10-01. Recorded from your answers to the roadmap v1 and v2 questions.
 
 ---
 
@@ -41,8 +41,8 @@
 | Audience and rating | You; no rating | §1 above |
 | Intensity | A high ceiling for gore, pain, beauty and pleasure, so it can get there when the story calls for it. It isn't always intense. Nothing overly sexual. | ROADMAP principle 8 |
 | Dialogue register | Setting 2 (plain modern) as the baseline. More slang is fine where it makes sense. | ROADMAP §5.2 |
-| Languages | Use the original languages, not only English. I translate your revisions to non-English lines. The exact approach is still open. | ROADMAP §5.7 |
-| Names | "Jesus." "The LORD" by default, "Yahweh" where someone actually said it. How fully to apply that in Old Testament dialogue is still open. | ROADMAP §5.5 |
+| Languages | The characters we're following speak English. Other languages use "modern equivalents where possible." (Which of two readings that means is a question in ROADMAP §19.2.) I translate your revisions to non-English lines. | ROADMAP §5.7 |
+| Names | "Jesus." "The LORD" by default. "Yahweh" wherever someone actually said it, applied fully for now, so Boaz says "Yahweh be with you" (Ruth 2:4). | ROADMAP §5.5 |
 | Tradition | Non-denominational | §2 above |
 | Depicting God | Open | [Discussion 001](../discussions/001-how-god-speaks.md) |
 | Invented dialogue for Jesus | "We will have to see as we go." No whole new teachings or sermons. You expect there will be added dialogue. | ROADMAP §4.2; [Discussion 002](../discussions/002-jesus-humanity.md) |
@@ -51,6 +51,9 @@
 | Reframing | Different interpretations and understandings. The structural tools (point of view, intercutting) may come later. | ROADMAP §10.5, §8.8 |
 | Output | Screenplays first | ROADMAP §13 |
 | Format | Episodes, with the final format decided later | — |
+| Scope | The Bible's window only. Other cultures and time periods may become separate projects later. | — |
+| Order of discussions | 002 (Jesus's humanity) first | [discussions/](../discussions/) |
+| Mary's other children | Your notes reject the idea that Mary remained a virgin after Jesus's birth (Positions Register, item 17) | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
 
 ## 5. Your vision of Jesus
 
@@ -58,22 +61,38 @@
 
 > The character I see Jesus as is kind and compassionate obviously, but also tough as nails when he needs to be. His humanity, with all of its emotions, fears, and dreams, is one of the most important things I want to showcase with this project. I believe that it is the fact that Jesus has hardships and is human and fallible, yet still able to be introspective about his mistakes and try to be a good man, is what makes his story so powerful and relatable. To me the whole reason there is a Jesus is so that God could meet us where we are — as a fallible creature, and tell us that even though we make mistakes and mess up and go through hell, it will be ok. I feel like Jesus would understand that all the evil anyone does is because of the pain they go through. So in my eyes Jesus is the one who understands most that he is in no way different from anyone else, which is exactly what makes him different.
 
+**Round 1 of Discussion 002 (2026-10-01), in your words:**
+
+> I agree that Jesus did not sin, but do not agree that he never appeared to sin. … To me the mind of Jesus has the correct "pattern" or "blueprints" but lacks the resources to fully build the structure. It is his mind that never sins and he always knows the right path. He just needs to walk it. … Jesus' story is one of falling and getting back up repeatedly. … The story of Jesus is learning how to overcome the pain they bring you, so you can help them. … Jesus understands he's no different from anyone or anything. But he's also aware enough to know what that means. … I think that Jesus can understand how both are true at the same time.
+
 ## 6. How God speaks
 
 *In your words. Status: open; see [Discussion 001](../discussions/001-how-god-speaks.md).*
 
 > In my belief God speaks to us through the world (through the people we meet, nature, etc.). … For things like the beginning of Genesis (if we call the dialogue actual dialogue instead of just a placeholder/metaphor for what God did) then it makes sense for it to be a "voice from nowhere." … God would consistently be speaking through the prophets; and where it says God said it could be one of the prophets speaking. I know they do distinguish between what the prophets say and what God says … but just because they distinguish the two doesn't mean they are always different (for example, the way the listener perceives what is said may have something to do with it; they say God spoke or this prophet spoke depending on the experience of receiving it).
 
-## 7. How I work with you
+## 7. What you've shared
+
+These documents are summarized in the repository. The originals aren't stored here.
+
+| Document | What it is | Where it's used |
+|---|---|---|
+| *Study* | Your notes on the messianic prophecies, the genealogies, Matthew 1:18–25, and Matthew 5 (the Beatitudes, salt and light, divorce) | [FRAMINGS](./FRAMINGS.md), FR-03 to FR-09 and FR-12 to FR-13 |
+| *Scene Descriptions* | Your draft of the Genesis opening, from static to the Nile delta | [FRAMINGS FR-01](./FRAMINGS.md#fr-01--the-opening-creation-as-cosmic-and-biological-history) |
+| *Consciousness and AI* | Conversations on panpsychism, unity, contrast, Yin and Yang and the Trinity, Christ as an integrating bloodline, and the staged comings | [FRAMINGS](./FRAMINGS.md), FR-02, FR-10 and FR-11; Discussion 002 |
+
+## 8. How I work with you
 
 - **I flag dissonance.** When a framing or edit pulls against a text, I say so plainly, cite the passages and give a fit grade. I don't silently fix it and I don't silently accept it.
 - **I bring the case against.** For every framing, I give the strongest texts and arguments on the other side, as well as the ones for it.
 - **I learn from your edits.** After each of your passes, I write down the patterns I see in the style documents and ask about anything I can't interpret.
 - **I translate carefully.** Every non-English line comes with its original script, a transliteration, a literal back-translation and a confidence level. Reconstructed languages are always flagged.
 - **I write things down.** I don't remember previous sessions. What's in this folder is the project's memory.
+- **I give real opinions.** You've said you prefer a back-and-forth with real opinions to neutral annotation. I'll react, take positions, and move the conversation forward, and I'll mark which parts are my own view.
 
 ## Change log
 
 | Date | Change |
 |---|---|
 | 2026-10-01 | First version, from your answers to the roadmap v1 questions |
+| 2026-10-01 | v1.1: languages, the Name used fully, scope, discussion order, Mary's other children, round 1 of Discussion 002, and the documents you've shared |

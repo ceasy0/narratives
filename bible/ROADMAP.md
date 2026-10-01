@@ -2,7 +2,7 @@
 
 > A detailed, faithful dramatization of the Bible. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-**Status:** v2, 2026-10-01. Still planning only. Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
+**Status:** v2.1, 2026-10-01. Still planning only. v2.1 records your language and Name decisions and adds the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
@@ -427,7 +427,7 @@ This changes from era to era. It's a small detail that makes each era sound diff
 
 So your rule makes "Yahweh" common in Old Testament dialogue and nearly absent in the New Testament era, apart from the high priest on the Day of Atonement. That gives the two eras an audible difference, which I like.
 
-**Still open (§19):** do we apply the rule fully, so that Boaz really says "Yahweh be with you"? Or do we keep "the LORD" as the default and save "Yahweh" for chosen moments? The pilot needs the answer.
+**Decided (v2.1):** apply the rule fully for now. Boaz says "Yahweh be with you" in Ruth 2:4, and Old Testament characters use the Name wherever they would have.
 
 ### 5.6 Names
 
@@ -454,6 +454,20 @@ So your rule makes "Yahweh" common in Old Testament dialogue and nearly absent i
 | **D. Transition** | A scene opens in the original language and then dissolves into English | Signals authenticity once and then gets out of the way | It's a device, and it feels gimmicky if overused |
 
 **Recommendation:** C as the backbone, keeping A's preserved words, with D used sparingly. This keeps your core idea (people sounding like people) and still puts real ancient language on screen where it does dramatic work.
+
+**Decided (v2.1): C.** The characters we're following speak English, and other languages use "modern equivalents where possible." That phrase has two possible readings (§19.2):
+
+| Language | Reading 1: modern pronunciation of the ancient language (recommended) | Reading 2: the modern descendant language |
+|---|---|---|
+| Egyptian | Coptic-based pronunciation. Coptic is Egyptian's last stage, the only one written with vowels, and still used in the Coptic Church's liturgy. | Coptic itself. (Egyptian Arabic would be wrong: Arabic arrived in the 7th century AD.) |
+| Aramaic | Neo-Aramaic speakers, especially Western Neo-Aramaic from Maaloula in Syria, the closest living relative of the dialect Jesus spoke | The same |
+| Greek | Koine with Modern Greek pronunciation, which is closer to how Koine sounded than the classroom pronunciation | Modern Greek |
+| Latin | Church (ecclesiastical) pronunciation, which is still in use | Italian |
+| Persian | Modern Persian (Farsi). Old Persian survives only in royal inscriptions. | Farsi |
+| Akkadian (Assyria, Babylon) | No living descendant, so it must be reconstructed, or replaced with Aramaic, which did replace Akkadian as the empire's common language (Dan 2:4) | None |
+| Philistine | Unknown. A decision is needed. | None |
+
+Reading 1 keeps the languages ancient but speakable. It also means native speakers can check the lines and voice them, which raises the confidence of the translations.
 
 **The Bible itself uses language to drive the plot:**
 
@@ -703,7 +717,7 @@ Not everything has to be decided now; each entry has a "decide by" point. Here i
 | 14 | The divine | Is the Angel of the LORD a created angel, or an appearance of the Son before his incarnation? | Casting and design from Genesis through Judges | Before Genesis |
 | 15 | The divine | How much did Jesus know, and when? (Luke 2:52; Mark 13:32; Phil 2:7) | How he reacts to surprises, questions and news | [Discussion 002](./discussions/002-jesus-humanity.md); before the Gospels |
 | 16 | The divine | Are the satan in Job, the serpent in Eden and the Satan of the Gospels the same figure? | Continuity of design and voice | Before Genesis |
-| 17 | Denominational | Are Jesus's "brothers and sisters" (Mark 6:3) Mary's younger children, Joseph's children from an earlier marriage, or cousins? | Their ages, and whether they appear in every Nazareth scene | Before the Gospels |
+| 17 | Denominational | Are Jesus's "brothers and sisters" (Mark 6:3) Mary's younger children, Joseph's children from an earlier marriage, or cousins? | Their ages, and whether they appear in every Nazareth scene | **Leaning:** Mary's younger children (your study notes); confirm before the Gospels |
 | 18 | Denominational | Peter's role (Matt 16:18) and the words at the Last Supper | The tone and staging of two of the most important scenes | Before the Gospels |
 | 19 | Denominational | How to read Revelation: as future events, as first-century events, as the sweep of church history, or as symbolic vision | What we actually show in Revelation | Before Revelation |
 | 20 | Depiction | Levels of violence and sexual content | Everything from Genesis 19 to the cross | **Decided:** a high ceiling, with no explicit sexual content (principle 8) |
@@ -711,7 +725,7 @@ Not everything has to be decided now; each entry has a "decide by" point. Here i
 | 22 | The divine | How far does Jesus's humanity go: limits, struggle, error, sin? | Every scene with Jesus in it | [Discussion 002](./discussions/002-jesus-humanity.md); before the Gospels |
 | 23 | The divine | God among the nations: how do the Bible's outsiders (Melchizedek, Jethro, Ruth, the Magi, Cornelius) and other peoples' gods fit together? | How other cultures and their worship look on screen | A light version before Ruth; a full version before the Exodus |
 | 24 | Canon & text | Which material from beyond the canon, if any, gets used? | Added scenes, names, backstory | Case by case, after the study track (§9.5) |
-| 25 | Framings | Your unconventional framings, one entry each, with its fit grade (§8.8) | Depends on the framing | As you raise them |
+| 25 | Framings | Your unconventional framings, one entry each, with its fit grade (§8.8) | Depends on the framing | **Kept in [`canon/FRAMINGS.md`](./canon/FRAMINGS.md)** (14 entries so far) |
 
 ### 8.3 Depicting God, the Spirit, angels and Satan
 
@@ -1344,6 +1358,7 @@ narratives/bible/
 ├── CLAUDE.md                project rules loaded into every Claude session    (exists)
 ├── canon/                   the project's constitution
 │   ├── FOUNDATIONS.md       your stance and the decisions so far              (exists)
+│   ├── FRAMINGS.md          your framings, each with its fit grade            (exists)
 │   ├── PRINCIPLES.md        accuracy contract, provenance, addition test
 │   ├── POSITIONS.md         interpretive and theological register
 │   ├── HARMONY.md           ordering and chronology decisions
@@ -1442,13 +1457,12 @@ The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./cano
 
 ### 19.2 Still open
 
-1. **Languages (§5.7).** Which approach? A (English, with original words kept), B (original languages throughout, with subtitles), C (language follows point of view), or D (transitions)? — *Recommendation: C as the backbone, with A's preserved words and D used sparingly.*
-2. **God's name in Old Testament dialogue (§5.5).** People spoke it freely before the exile. Do we apply your rule fully, so that Boaz really says "Yahweh be with you" in Ruth 2:4? Or do we keep "the LORD" as the default and save "Yahweh" for chosen moments?
-3. **Your framings.** Could you list the unconventional framings you already have in mind, even one line each? I won't start working on them. Seeing them early lets me map each one to the arcs it touches, spot where they interact, and order the discussions so nothing we write early gets contradicted later.
-4. **"And eventually, human history."** You described the project's aim as an expression of Christianity "and, eventually, human history." Does that mean continuing beyond the Bible, into church history or world history? Or framing human history through the biblical story? Or something else? It could affect the series architecture.
-5. **Which discussion first?** 002 (Jesus's humanity) touches the heart of what you want the project to say. 001 (how God speaks) shapes the most scenes. Neither blocks Ruth.
-6. **When to start the study track (§9.5).** Shall I begin with the briefs on the deuterocanon and the Ethiopian canon once planning is done, or wait until a specific arc needs them?
-7. **Deferred:** Positions 2–11, 14 and 16–19 in §8.2 can wait until we reach the arcs that need them.
+1. **"Modern equivalents" (§5.7).** Does it mean the modern pronunciation of the ancient language, such as Coptic-style Egyptian or church Latin (my recommendation)? Or the modern descendant language itself, such as Italian for the Romans?
+2. **Discussion 002, round 2.** Edit or confirm the draft decision, and answer the open question about the cross ([Discussion 002](./discussions/002-jesus-humanity.md#conversation-notes)).
+3. **FR-03 (Mary and Joseph).** This is the one framing so far graded Contradiction. Which part is it you doubt? Would the "the village's version against the true one" approach work ([FRAMINGS](./canon/FRAMINGS.md#fr-03--mary-and-joseph-the-conception))?
+4. **FR-08 (marriage) before Ruth.** Under your "relative opposite" framing, how should Ruth's first marriage, to Mahlon, be framed?
+5. **Your source documents.** Should the full texts of your notes and scene draft be stored in the repository? Right now only summaries are, so future sessions can't see the originals.
+6. **Deferred:** Positions 2–11, 14, 16, 18 and 19 in §8.2 can wait until we reach the arcs that need them.
 
 ---
 

@@ -6,7 +6,8 @@ A creative dramatization of the Bible: screenplays first, a 3D animated series l
 
 1. `canon/FOUNDATIONS.md`: the author's stance and every decision so far. It wins over other docs.
 2. `ROADMAP.md`: §3 (principles), §4 (provenance), §5 (language), §8.8 (the fit check), §19 (open questions).
-3. `discussions/README.md`: which theological questions are open, and what each one blocks.
+3. `canon/FRAMINGS.md`: the author's unconventional framings, each with its fit grade and status.
+4. `discussions/README.md`: which theological questions are open, and what each one blocks.
 
 ## Current phase
 
@@ -16,6 +17,7 @@ A creative dramatization of the Bible: screenplays first, a 3D animated series l
 
 - **Never contradict the texts.** If an edit or framing from the author pulls against a passage, say so plainly, cite the passages, give the fit grade (Supported, Compatible, Tension or Contradiction), and propose a discussion. Don't silently fix it and don't silently accept it.
 - **Bring the case against.** For any framing, present the strongest opposing texts and views as well as the supporting ones. The author has asked for challenge, not agreement.
+- **Converse; don't just annotate.** The author prefers real opinions and a conversation that moves forward over neutral lists of references. React, take a position, mark it as your own view, and end with the question that moves things on.
 - **Tag everything.** Content gets a provenance level (P1–P6) and dialogue gets a tier (A–D). Recorded words are the default; changing their substance needs a discussion and a logged decision.
 - **Modern words, ancient minds.** Setting 2 (plain modern) is the baseline register. No therapy-speak, no idiom before its origin, no knowledge a character couldn't have had.
 - **No theology for its own sake.** Never add dialogue or scenes just to get more theology in. Additions must grow from context, evidence, or the spirit of the story.

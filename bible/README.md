@@ -10,7 +10,8 @@ This directory currently holds planning documents. There are no scripts yet.
 |---|---|
 | [`ROADMAP.md`](./ROADMAP.md) | The plan: principles, the provenance system, language rules, the fit check for framings, story architecture, the pilot, the writing pipeline and the road to 3D. **Start with §0 and §19.** |
 | [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md) | Your stance and every decision so far, in your own words where possible. It overrides everything else. |
-| [`discussions/`](./discussions/) | The theological and philosophical conversations: 001 (how God speaks) and 002 (Jesus's humanity) are seeded. |
+| [`canon/FRAMINGS.md`](./canon/FRAMINGS.md) | Your unconventional framings: what each says, which texts support it and which pull against it, and a first-pass fit grade. |
+| [`discussions/`](./discussions/) | The theological and philosophical conversations: 002 (Jesus's humanity) is under way, and 001 (how God speaks) is seeded. |
 | [`CLAUDE.md`](./CLAUDE.md) | The working rules Claude loads in every session, so nothing depends on memory. |
 
 ## The short version
@@ -28,6 +29,6 @@ This directory currently holds planning documents. There are no scripts yet.
 | | |
 |---|---|
 | Phase | Pre-0 (planning) |
-| Next | The open questions in ROADMAP §19.2: the language approach, God's name in Old Testament dialogue, your list of framings |
+| Next | Round 2 of Discussion 002, then FR-08 (needed before Ruth). See ROADMAP §19.2. |
 | Pilot | Ruth |
 | Formats | Markdown for docs · Fountain for screenplays |

@@ -1,8 +1,8 @@
 # 002 — Jesus's humanity: limits, struggle, and the question of sin
 
-**Status:** Seeded, 2026-10-01
+**Status:** Discussing (round 1 done, 2026-10-01). A draft decision is waiting for your edits; see [Conversation notes](#conversation-notes).
 **Needed before:** The Gospels, and the Mark 2 Jesus-voice exercise. It doesn't block Ruth.
-**Fit grade of your view:** Supported for most of it. The word "fallible" ranges from Supported to **Contradiction**, depending on what it means; see below.
+**Fit grade of your view, after round 1:** **Supported.** You've placed Jesus's falls in his capacity, not his will, and that resolves the conflict with the text flagged below. The open question that remains is the cross.
 
 ---
 
@@ -87,8 +87,74 @@ That's one option. The point of this discussion is to find yours.
 
 ## Conversation notes
 
-*(To be added.)*
+### Round 1 — 2026-10-01
+
+**Your positions:**
+
+- **Moral and other mistakes.** At every moment there's a "field" of choices, from the worst to the best, with the rest in between. In a technical sense every mistake is moral, because morals are "what you do." But in the sense that matters here, Jesus doesn't fail morally, "due to his mind being in the correct pattern."
+- **He never sinned, but he could appear to.** Jesus never sinned and never deliberately did evil, but he could appear to. Sin depends on context: killing in strictly necessary self-defense isn't murder. Laws were given when Israel was able to follow them.
+- **Christology.** His mind has the correct pattern, or blueprint, but lacks the resources to fully build the structure. His mind never sins and always knows the right path; he just has to walk it. (Background: your *Consciousness and AI* conversations.)
+- **His story is one of falling and getting back up, repeatedly.**
+- **The cross** was the tool used to kill him, because certain people were jealous of who he was.
+- **Pain and anger.** He sees the evil people do as coming from their pain, but he still gets angry or upset when evil causes him pain. "The story of Jesus is learning how to overcome the pain they bring you, so you can help them."
+- **Both at once.** He understands that he's no different from anyone or anything, and he's aware enough to know what that means. Both are true at once.
+- **His dream** is to fulfill and complete the kingdom of heaven.
+
+**Where it lands against the texts (my reading):**
+
+1. **"Fallible" now clearly means limited in capacity, not will. That's Supported.** The strongest texts are in Hebrews, which says Jesus was without sin (4:15) and yet "learned obedience through what he suffered" and was "made perfect," meaning made complete (5:8–9; 2:10). That's close to "correct blueprint, resources built over time." Jesus says the same thing in Gethsemane: "the spirit indeed is willing, but the flesh is weak" (Mark 14:38). He says it about his disciples, but in the middle of his own struggle.
+2. **One point to sharpen.** "Whoever knows the right thing to do and fails to do it, for him it is sin" (James 4:17). If Jesus always knows the right path, any gap between path and action has to be *couldn't*, never *wouldn't*. Your field model already handles this. The field is the set of choices actually open to him at that moment, given his real body, knowledge and strength. He always picks the best one in his field. The Greek word for sin, *hamartia*, literally means "missing the mark," and he never misses it. The field itself is smaller than the blueprint, and it grows (Luke 2:52). He falls when the field is smaller than the moment demands.
+3. **"Appeared to sin" is very strongly Supported, and may be your best point.** To the law-keepers around him, Jesus constantly looks like a sinner:
+   - He heals on the Sabbath (Mark 3:1–6; John 5:16–18), and they say "this man is not from God, for he does not keep the Sabbath" (John 9:16), and "we know that this man is a sinner" (John 9:24).
+   - His disciples pick grain on the Sabbath and skip the ritual hand-washing (Mark 2:23–28; 7:1–5).
+   - He touches lepers and the dead.
+   - He's called "a glutton and a drunkard, a friend of tax collectors and sinners" (Matt 11:19), and said to have a demon (John 8:48).
+   - He's charged with blasphemy (Mark 2:7; 14:64), executed between criminals and "numbered with the transgressors" (Luke 22:37), and dies by the death the law calls cursed (Deut 21:23; Gal 3:13).
+
+   On screen, the audience can share that suspicion before the story shows why it's wrong.
+4. **Context-dependent sin is Supported.** The commandment is *lo tirtsach* (Exod 20:13). The verb is the one used for murder and manslaughter (Num 35), not for killing in war, which is why most modern translations say "You shall not murder" rather than the KJV's "kill." The Torah itself excuses killing a burglar at night (Exod 22:2). Jesus also says Moses allowed divorce "because of your hardness of heart" (Mark 10:5), a law fitted to its circumstances. That example runs the other way from yours, though: the law came down to what people could bear, rather than being given once they were able.
+5. **Falling and getting back up is Supported, where a fall means body, emotion or outcome.** That revises my earlier point about craft. His will doesn't fall, but the man does, and once literally: "he fell on the ground and prayed" (Mark 14:35). The story can show both. Christian devotion has shown this for centuries: the traditional Stations of the Cross have Jesus fall three times on the road to Golgotha and get up each time. That's a tradition (P3), inferred from Simon of Cyrene being made to carry the cross (Mark 15:21).
+6. **The cross.** I meant: does his death *accomplish* anything, or is it only something done to him?
+   - Your answer is half of what the text says. Pilate "knew that it was out of envy that they had delivered him up" (Mark 15:10; Matt 27:18).
+   - The other half is that Jesus walks into it on purpose. He predicts it (Mark 8:31) and "set his face to go to Jerusalem" (Luke 9:51). He says "no one takes it from me, but I lay it down of my own accord" (John 10:18). He gives it meaning: "my blood of the covenant, poured out for many" (Mark 14:24) and "a ransom for many" (Mark 10:45).
+   - Acts 2:23 holds both halves in one sentence: "delivered up according to the definite plan and foreknowledge of God, you crucified and killed by the hands of lawless men."
+   - **Your own answer to Q4 is already a meaning:** overcoming the pain people cause you, in order to help them. The cross is where that happens most completely: "Father, forgive them, for they know not what they do" (Luke 23:34).
+   - **Named theories close to yours:** René Girard on envy and the scapegoat; Abelard's moral influence; Irenaeus's recapitulation, which is close to your idea of integration.
+   - **It has the shape of the Joseph story.** Joseph's brothers "were jealous of him" (Gen 37:11). They sell him for silver; Judas sells Jesus for silver. Joseph goes down into the pit and rises, then saves the very people who betrayed him: "you meant evil against me, but God meant it for good" (Gen 50:20; also 45:5). This matters for the project, because Joseph is the first long arc, and it can carry your Christology in advance.
+   - **Your opening scene has this shape too.** The dark face tries to kill the white face, and at that moment the image reverses into connection.
+7. **Both at once is Supported, and John 13:3–5 is the scene for it.** "Jesus, *knowing that the Father had given all things into his hands*, and that he had come from God and was going back to God, rose from supper… and began to wash the disciples' feet." He takes the lowest place *because* he knows what he is. He also washes Judas's feet, which is your Q4 answer put into action.
+8. **His dream is Supported, and the texts give it in his own words:**
+   - "How often would I have gathered your children together as a hen gathers her brood" (Luke 13:34).
+   - "That they may all be one" (John 17:21).
+   - "I came to cast fire on the earth, and would that it were already kindled! … how great is my distress until it is accomplished!" (Luke 12:49–50).
+   - "I have earnestly desired to eat this Passover with you… until it is fulfilled in the kingdom of God" (Luke 22:15–16).
+
+**Candidate scenes for "falling and getting back up" (your Q2):**
+
+| Scene | What it could show | Fit |
+|---|---|---|
+| Twelve years old in the Temple (Luke 2:41–52) | He's right about his "Father's house," but his parents search for three days "in great distress." He goes home, is "submissive to them," and "increased in wisdom." | Compatible. The best candidate for reflecting on a misstep that isn't a sin. |
+| The Syrophoenician woman (Mark 7:24–30) | His first answer is harsh, she answers back, and he grants her request "for this statement" | Tension. Readers disagree whether he's testing her or genuinely moved. |
+| Cana (John 2:1–11) | "My hour has not yet come," and then he acts anyway at his mother's urging | Compatible |
+| Rejected at Nazareth (Mark 6:1–6) | "He could do no mighty work there… and he marveled because of their unbelief." He regroups and sends out the Twelve (6:7). | Supported. A failure that isn't a sin, followed by getting back up. |
+| The healing in two stages (Mark 8:22–26) | The first touch leaves the man seeing "people like trees, walking," and a second touch completes it | Compatible |
+| The healed leper talks (Mark 1:40–45) | His compassion has a cost: "Jesus could no longer openly enter a town" | Supported |
+| Lazarus (John 11) | He waits two days. Both sisters say "if you had been here…," and he weeps. | Compatible. The text says the delay was purposeful, but it looks like a failure to them. |
+| Choosing Judas, washing his feet, "Friend" (John 6:70; 13:5, 26; Matt 26:50) | Living out "overcoming the pain they bring you" | Supported |
+| Gethsemane (Mark 14:32–42) | He falls to the ground and prays three times; "the spirit is willing, but the flesh is weak" | Supported |
+| Carrying the cross (Mark 15:21) | He can't carry it, so Simon is made to. The three falls come from tradition. | Supported, plus P3 |
+| From "Why have you forsaken me?" to "Into your hands" (Mark 15:34; Luke 23:46) | The lowest point and the getting up, within hours | Supported |
+
+**A draft decision for you to edit:**
+
+> On screen, Jesus never wills wrong. In every moment he chooses the best path open to him. What's open to him is limited by a real human body, real exhaustion, grief and fear, incomplete knowledge, and other people's choices, and it grows over his life (Luke 2:52; Heb 5:8–9). He falls (physically, emotionally, and in outcomes) and gets back up, again and again. To the law-keepers around him, he often looks like a sinner, and the story lets the audience share that suspicion before showing why it's wrong. He holds two truths at once: he is no different from anyone, and he knows what he is. More than anything, he is moved by the hope of gathering everyone in (Luke 13:34; John 17:21).
+
+**Still open:**
+
+- **The cross.** In your framework, does it accomplish anything beyond being what jealous people did to him? What does "Father, forgive them" do?
+- **The scenes.** Which of the candidate scenes become real falls on screen?
+- **Two passages from your study notes.** 2 Sam 7:14b ("when he commits iniquity") and Isa 7:15–16 (the child who comes to "know to refuse the evil and choose the good"). Are they part of your picture of the Messiah, and if so, how? (See [FRAMINGS FR-12](../canon/FRAMINGS.md#fr-12--the-messianic-prophecies).)
 
 ## Decision
 
-*(To be added.)*
+*(Pending your edits to the draft decision above.)*
