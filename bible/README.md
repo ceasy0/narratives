@@ -11,7 +11,8 @@ This directory currently holds planning documents. There are no scripts yet.
 | [`ROADMAP.md`](./ROADMAP.md) | The plan: principles, the provenance system, language rules, the fit check for framings, story architecture, the pilot, the writing pipeline and the road to 3D. **Start with §0 and §19.** |
 | [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md) | Your stance and every decision so far, in your own words where possible. It overrides everything else. |
 | [`canon/FRAMINGS.md`](./canon/FRAMINGS.md) | Your unconventional framings: what each says, which texts support it and which pull against it, and a first-pass fit grade. |
-| [`discussions/`](./discussions/) | The theological and philosophical conversations: 002 (Jesus's humanity) is under way, and 001 (how God speaks) is seeded. |
+| [`discussions/`](./discussions/) | The theological and philosophical conversations: 002 (Jesus's humanity) is decided, and 001 (how God speaks) is seeded. |
+| [`story/arcs/07-ruth/`](./story/arcs/07-ruth/README.md) | The Ruth pilot: files, steps, checkpoints and the decisions it needs |
 | [`CLAUDE.md`](./CLAUDE.md) | The working rules Claude loads in every session, so nothing depends on memory. |
 
 ## The short version
@@ -28,7 +29,7 @@ This directory currently holds planning documents. There are no scripts yet.
 
 | | |
 |---|---|
-| Phase | Pre-0 (planning) |
-| Next | Round 2 of Discussion 002, then FR-08 (needed before Ruth). See ROADMAP §19.2. |
+| Phase | Planning complete; Phase 1 (Ruth) starts on your go |
+| Next | The Ruth pilot: dossier first ([plan](./story/arcs/07-ruth/README.md)) |
 | Pilot | Ruth |
 | Formats | Markdown for docs · Fountain for screenplays |

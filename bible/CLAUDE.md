@@ -11,7 +11,7 @@ A creative dramatization of the Bible: screenplays first, a 3D animated series l
 
 ## Current phase
 
-**Planning (Pre-0).** Only create or update `.md` planning files. Don't start research dossiers, treatments, scene cards or scripts until the author says so. Update this line when the phase changes.
+**Planning complete. Phase 1 (the Ruth pilot) starts when the author says go.** Follow `story/arcs/07-ruth/README.md`: dossier, then treatment, beats, scene cards and script, stopping at each checkpoint for the author's review. Update this line when the phase changes.
 
 ## Rules
 

@@ -2,7 +2,7 @@
 
 > A detailed, faithful dramatization of the Bible. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-**Status:** v2.1, 2026-10-01. Still planning only. v2.1 records your language and Name decisions and adds the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
+**Status:** v2.2, 2026-10-01. Planning is complete, and the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)) starts when you say go. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
@@ -455,7 +455,7 @@ So your rule makes "Yahweh" common in Old Testament dialogue and nearly absent i
 
 **Recommendation:** C as the backbone, keeping A's preserved words, with D used sparingly. This keeps your core idea (people sounding like people) and still puts real ancient language on screen where it does dramatic work.
 
-**Decided (v2.1): C.** The characters we're following speak English, and other languages use "modern equivalents where possible." That phrase has two possible readings (§19.2):
+**Decided (v2.1): C.** The characters we're following speak English, and other languages use "modern equivalents where possible." **v2.2: Reading 1, the modern pronunciation of the ancient language.** The two readings were:
 
 | Language | Reading 1: modern pronunciation of the ancient language (recommended) | Reading 2: the modern descendant language |
 |---|---|---|
@@ -722,7 +722,7 @@ Not everything has to be decided now; each entry has a "decide by" point. Here i
 | 19 | Denominational | How to read Revelation: as future events, as first-century events, as the sweep of church history, or as symbolic vision | What we actually show in Revelation | Before Revelation |
 | 20 | Depiction | Levels of violence and sexual content | Everything from Genesis 19 to the cross | **Decided:** a high ceiling, with no explicit sexual content (principle 8) |
 | 21 | The divine | How does God speak: through creation, through people, through prophets, as a voice? How do we show each? | Every scene in which "God said" | [Discussion 001](./discussions/001-how-god-speaks.md); before Genesis |
-| 22 | The divine | How far does Jesus's humanity go: limits, struggle, error, sin? | Every scene with Jesus in it | [Discussion 002](./discussions/002-jesus-humanity.md); before the Gospels |
+| 22 | The divine | How far does Jesus's humanity go: limits, struggle, error, sin? | Every scene with Jesus in it | **Decided** 2026-10-01 ([Discussion 002](./discussions/002-jesus-humanity.md#decision)) |
 | 23 | The divine | God among the nations: how do the Bible's outsiders (Melchizedek, Jethro, Ruth, the Magi, Cornelius) and other peoples' gods fit together? | How other cultures and their worship look on screen | A light version before Ruth; a full version before the Exodus |
 | 24 | Canon & text | Which material from beyond the canon, if any, gets used? | Added scenes, names, backstory | Case by case, after the study track (§9.5) |
 | 25 | Framings | Your unconventional framings, one entry each, with its fit grade (§8.8) | Depends on the framing | **Kept in [`canon/FRAMINGS.md`](./canon/FRAMINGS.md)** (14 entries so far) |
@@ -1392,7 +1392,7 @@ narratives/bible/
 
 | Phase | Goal | Deliverables | Done when |
 |---|---|---|---|
-| **0. Foundations** | Make the decisions everything else depends on | ~~Your answers to the v1 questions~~ (done: FOUNDATIONS); the language approach and the Name decision (§19); PRINCIPLES, LANGUAGE_GUIDE, LEXICON v0 and POSITIONS; the folder scaffold | You'd be comfortable handing the style documents to another writer |
+| **0. Foundations** | Make the decisions everything else depends on | **Done 2026-10-01:** FOUNDATIONS, FRAMINGS, the language and Name decisions, and Discussion 002. For now the principles, language rules and Positions Register stay in this roadmap. LEXICON and VOICES get built from the Ruth work rather than in advance. | You'd be comfortable handing the style documents to another writer |
 | **1. Pilot: Ruth** | Prove the method end to end | Research dossier, treatment, scene cards, tagged draft script, your rewrite, audit | There's a locked Ruth script you're proud of |
 | **2. Calibration** | Learn from the pilot | Revised style documents; lexicon v1; the Mark 2 Jesus-voice exercise; optionally the script checker | The rules match how you actually write |
 | **3. Architecture** | Plan the whole series | ARCHITECTURE.md (the arc list, the through-line, the framing decision); TIMELINE.md; an overview of each era | You can see the whole series on one page |
@@ -1457,12 +1457,12 @@ The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./cano
 
 ### 19.2 Still open
 
-1. **"Modern equivalents" (§5.7).** Does it mean the modern pronunciation of the ancient language, such as Coptic-style Egyptian or church Latin (my recommendation)? Or the modern descendant language itself, such as Italian for the Romans?
-2. **Discussion 002, round 2.** Edit or confirm the draft decision, and answer the open question about the cross ([Discussion 002](./discussions/002-jesus-humanity.md#conversation-notes)).
-3. **FR-03 (Mary and Joseph).** This is the one framing so far graded Contradiction. Which part is it you doubt? Would the "the village's version against the true one" approach work ([FRAMINGS](./canon/FRAMINGS.md#fr-03--mary-and-joseph-the-conception))?
-4. **FR-08 (marriage) before Ruth.** Under your "relative opposite" framing, how should Ruth's first marriage, to Mahlon, be framed?
-5. **Your source documents.** Should the full texts of your notes and scene draft be stored in the repository? Right now only summaries are, so future sessions can't see the originals.
-6. **Deferred:** Positions 2–11, 14, 16, 18 and 19 in §8.2 can wait until we reach the arcs that need them.
+1. **The Ruth pilot's decisions:** format, the opening, Boaz's mother, how Moab's religion is shown, Ruth's first marriage and the threshing floor. Each comes with a default in the [pilot plan](./story/arcs/07-ruth/README.md#decisions-the-pilot-needs), and you can answer them while reading the dossier.
+2. **Two on-screen approaches to confirm:** FR-03 (the conception) before the Gospels, and FR-08 (Boaz as Ruth's opposite, unspoken) before the Ruth treatment.
+3. **Deferred:**
+   - Discussion 001 (how God speaks), before Genesis.
+   - The two sub-questions left over from Discussion 002, before the Gospels.
+   - Positions 2–11, 14, 16, 18 and 19, each before the arc that needs it.
 
 ---
 

@@ -1,8 +1,8 @@
 # 002 — Jesus's humanity: limits, struggle, and the question of sin
 
-**Status:** Discussing (round 1 done, 2026-10-01). A draft decision is waiting for your edits; see [Conversation notes](#conversation-notes).
+**Status:** **Decided** 2026-10-01, with two sub-questions deferred to the Gospels arc. See [Decision](#decision).
 **Needed before:** The Gospels, and the Mark 2 Jesus-voice exercise. It doesn't block Ruth.
-**Fit grade of your view, after round 1:** **Supported.** You've placed Jesus's falls in his capacity, not his will, and that resolves the conflict with the text flagged below. The open question that remains is the cross.
+**Fit grade of your view:** **Supported.** You've placed Jesus's falls in his capacity, not his will, and that resolves the conflict with the text flagged below.
 
 ---
 
@@ -155,6 +155,45 @@ That's one option. The point of this discussion is to find yours.
 - **The scenes.** Which of the candidate scenes become real falls on screen?
 - **Two passages from your study notes.** 2 Sam 7:14b ("when he commits iniquity") and Isa 7:15–16 (the child who comes to "know to refuse the evil and choose the good"). Are they part of your picture of the Messiah, and if so, how? (See [FRAMINGS FR-12](../canon/FRAMINGS.md#fr-12--the-messianic-prophecies).)
 
+### Round 2 — 2026-10-01
+
+**Your positions:**
+
+- **The draft decision** is good. You're still unsure whether the audience should share the suspicion at first.
+- **The cross** "certainly did accomplish other things," though you're unsure exactly what. It was "the accomplishment of something after certain events that needed to occur… a necessary part of Christ's story."
+- **The scenes** get decided as the story is written. You're also using this project to understand the Bible's stories better.
+- **The two passages** (2 Sam 7:14b and Isa 7:15–16) are part of your picture. Jesus never willfully commits iniquity; he only appears to. "Especially as a child, what doesn't seem like iniquity to him may seem like it to others. That is why he must learn/know to refuse the evil and choose the good."
+
+**My responses:**
+
+- **"Necessary" is the Gospels' own word, so this is Supported as you've stated it.** "The Son of Man *must* suffer" (Mark 8:31). "Was it not *necessary* that the Christ should suffer these things and enter into his glory?" (Luke 24:26). Both use the Greek *dei*, "it is necessary." What the cross accomplishes beyond that stays open, and we'll explore it as we write.
+- **Isaiah 7:15–16 as learning discernment: Supported.** Alongside Luke 2:52, there's Hebrews 5:14, a few verses after "he learned obedience" (5:8): the mature "have their powers of discernment trained by constant practice to distinguish good from evil." The twelve-year-old in the Temple (Luke 2:41–52) is the natural scene for it.
+- **2 Samuel 7:14b read as "appears to commit iniquity": Tension.** The Hebrew says "when he does wrong," and the promise was first fulfilled in Solomon. Hebrews 1:5 applies only the first half of the verse to Jesus. Your reading works as typology, but not as a plain statement about Jesus.
+
+**Should the audience share the suspicion?**
+
+*For:*
+- **It's how it originally landed.** He really was scandalous: "they took offense at him" (Mark 6:3). Jesus himself says "blessed is the one who is not offended by me" (Matt 11:6). Modern audiences know he's the hero, so nothing he does can look wrong unless we work at it.
+- **It makes his opponents understandable rather than cartoonish.** That's both accurate and important (ROADMAP §8.7).
+- **It turns the audience's own judgment into part of the story.** That's the logic of "let him who is without sin cast the first stone."
+
+*Against:*
+- **It means standing outside Jesus.** Your core goal is his inner humanity, but a scene built on suspicion has to keep the camera with the suspicious people, not with him.
+- **Some viewers may come away thinking he really did sin.**
+- **Overused, it becomes a trick,** and audiences who know the story won't fall for it twice.
+
+*My recommendation:* decide scene by scene, following the structure of the text itself. The Gospels already use this technique where they want it:
+- Simon the Pharisee thinks, "If this man were a prophet, he would have known what sort of woman this is who is touching him, for she is a sinner," and Jesus answers the unspoken thought (Luke 7:39–40).
+- John 9 is built as an investigation, running from "we know that this man is a sinner" (9:24) to "one thing I do know: though I was blind, now I see" (9:25).
+
+Where the text puts the suspicion first, so do we, from the observer's point of view. Everywhere else, we stay close to Jesus. That way we keep both the scandal and his inner life.
+
 ## Decision
 
-*(Pending your edits to the draft decision above.)*
+**Decided 2026-10-01.** We adopt the draft decision, with one change: whether the audience shares the suspicion is decided scene by scene, following the text's own structure.
+
+> On screen, Jesus never wills wrong. In every moment he chooses the best path open to him. What's open to him is limited by a real human body, real exhaustion, grief and fear, incomplete knowledge, and other people's choices, and it grows over his life (Luke 2:52; Heb 5:8–9). Like any child, he has to learn to "refuse the evil and choose the good" (Isa 7:15–16), and what seems innocent to him may look like wrongdoing to others. He falls (physically, emotionally, and in outcomes) and gets back up, again and again. To the law-keepers around him he often looks like a sinner. Where the Gospel itself presents that suspicion first, the audience shares it before the answer comes. Elsewhere we stay close to him. He holds two truths at once: he is no different from anyone, and he knows what he is. His death is a necessary part of his story (Mark 8:31; Luke 24:26). More than anything, he is moved by the hope of gathering everyone in (Luke 13:34; John 17:21).
+
+**Deferred to the Gospels arc:**
+- What the cross accomplishes, beyond being necessary.
+- Which candidate scenes become real falls on screen.

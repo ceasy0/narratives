@@ -2,7 +2,7 @@
 
 > The decisions everything else rests on, recorded in your own words where possible. When a later document conflicts with this one, this one wins until we change it, and any change gets dated below.
 
-**Status:** v1.1, 2026-10-01. Recorded from your answers to the roadmap v1 and v2 questions.
+**Status:** v1.2, 2026-10-01. Recorded from your answers to the roadmap questions and to Discussion 002.
 
 ---
 
@@ -41,7 +41,7 @@
 | Audience and rating | You; no rating | §1 above |
 | Intensity | A high ceiling for gore, pain, beauty and pleasure, so it can get there when the story calls for it. It isn't always intense. Nothing overly sexual. | ROADMAP principle 8 |
 | Dialogue register | Setting 2 (plain modern) as the baseline. More slang is fine where it makes sense. | ROADMAP §5.2 |
-| Languages | The characters we're following speak English. Other languages use "modern equivalents where possible." (Which of two readings that means is a question in ROADMAP §19.2.) I translate your revisions to non-English lines. | ROADMAP §5.7 |
+| Languages | The characters we're following speak English. Other languages use the modern pronunciation of the ancient language where a living tradition exists: Coptic-style Egyptian, Neo-Aramaic, church Latin, Koine with Modern Greek pronunciation, and Farsi for Persian. Where none exists, as with Akkadian, the language is reconstructed. I translate your revisions to non-English lines. | ROADMAP §5.7 |
 | Names | "Jesus." "The LORD" by default. "Yahweh" wherever someone actually said it, applied fully for now, so Boaz says "Yahweh be with you" (Ruth 2:4). | ROADMAP §5.5 |
 | Tradition | Non-denominational | §2 above |
 | Depicting God | Open | [Discussion 001](../discussions/001-how-god-speaks.md) |
@@ -54,6 +54,10 @@
 | Scope | The Bible's window only. Other cultures and time periods may become separate projects later. | — |
 | Order of discussions | 002 (Jesus's humanity) first | [discussions/](../discussions/) |
 | Mary's other children | Your notes reject the idea that Mary remained a virgin after Jesus's birth (Positions Register, item 17) | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
+| The conception | Mary conceived without sex, but one of her eggs was fertilized by Joseph, so both "vital opposites" were involved. On screen: the dialogue stays with the text, your view is held quietly (P5), and the village's rumor is staged. | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
+| Ruth's opposite | A working theory, not fact. My reading is that Boaz is the likely opposite. The theory stays unspoken on screen. | [FRAMINGS FR-08](./FRAMINGS.md#fr-08--marriage-to-ones-relative-opposite) |
+| Jesus's humanity | **Decided.** See the decision text in Discussion 002. | [Discussion 002](../discussions/002-jesus-humanity.md#decision) |
+| Your source documents | Keep only the summaries in the repository | §7 below |
 
 ## 5. Your vision of Jesus
 
@@ -73,7 +77,7 @@
 
 ## 7. What you've shared
 
-These documents are summarized in the repository. The originals aren't stored here.
+These documents are summarized in the repository. At your request, the originals aren't stored here.
 
 | Document | What it is | Where it's used |
 |---|---|---|
@@ -96,3 +100,4 @@ These documents are summarized in the repository. The originals aren't stored he
 |---|---|
 | 2026-10-01 | First version, from your answers to the roadmap v1 questions |
 | 2026-10-01 | v1.1: languages, the Name used fully, scope, discussion order, Mary's other children, round 1 of Discussion 002, and the documents you've shared |
+| 2026-10-01 | v1.2: the reading of "modern equivalents" settled; your revised view of the conception; Ruth's opposite; Discussion 002 decided; summaries only |

@@ -2,7 +2,7 @@
 
 > Your unconventional framings of ideas and passages: what each one says, which texts support it and which pull against it, a first-pass fit grade, and what it would change on screen. These grades are starting points for discussion, not verdicts.
 
-**Status:** v1, 2026-10-01. Built from three things you shared: your study notes, your draft of the Genesis opening scene, and your conversations about consciousness and Christology.
+**Status:** v1.1, 2026-10-01. FR-03 has been revised and FR-08 now includes the Ruth reading. Built from three things you shared: your study notes, your draft of the Genesis opening scene, and your conversations about consciousness and Christology.
 **Fit grades** (defined in ROADMAP §8.8):
 - **Supported:** the text points this way.
 - **Compatible:** the text is silent or open, and the framing fills a gap without strain.
@@ -17,12 +17,12 @@
 |---|---|---|---|---|
 | [FR-01](#fr-01--the-opening-creation-as-cosmic-and-biological-history) | The opening: creation shown as cosmic and biological history | 1 | Compatible under a non-chronological reading of Genesis 1; Tension on the malicious darkness | Genesis |
 | [FR-02](#fr-02--god-yin-and-yang-as-the-trinity) | God, Yin and Yang as the Trinity | All depictions of God | Tension | Genesis |
-| [FR-03](#fr-03--mary-and-joseph-the-conception) | Mary and Joseph conceived Jesus together; "virgin" means maiden | 16 | **Contradiction as stated.** A fitting version is offered below. | The Gospels; foundational, so better early |
+| [FR-03](#fr-03--mary-and-joseph-the-conception) | A virgin conception, with Joseph's line joined by the Spirit; the village's version shown as rumor (revised) | 16 | **Tension** (the original version was Contradiction) | Confirm the on-screen approach before the Gospels |
 | [FR-04](#fr-04--the-spirit-as-the-true-law) | The Spirit as the true Law; written laws as ideals fitted to circumstances | 5, 16 | Supported as a principle | The Gospels |
 | [FR-05](#fr-05--no-different-which-makes-him-different) | "No different from anyone, which is what makes him different" | 16 | Supported in the both-at-once form | [Discussion 002](../discussions/002-jesus-humanity.md) |
 | [FR-06](#fr-06--the-beatitudes-through-water-and-the-tao) | The Beatitudes read through water and the Tao | 16 | Compatible as an interpretive layer | The Gospels |
 | [FR-07](#fr-07--salt-and-light-every-part-necessary) | Salt and light: every part is necessary | 16 | Compatible if the warning stays | The Gospels |
-| [FR-08](#fr-08--marriage-to-ones-relative-opposite) | Marriage to one's "relative opposite" | **7 (Ruth)**, 2, 9, 16 | Supported (a corresponding partner); Tension ("only one") | **Ruth, the pilot** |
+| [FR-08](#fr-08--marriage-to-ones-relative-opposite) | Marriage to one's "relative opposite" (a working theory) | **7 (Ruth)**, 2, 9, 16 | Supported (a corresponding partner); Tension ("only one"). In Ruth, Boaz is the likely opposite. | Confirm the approach before the Ruth treatment |
 | [FR-09](#fr-09--children-as-the-parents-next-life-hell-as-a-long-mindset) | Children as the parents' next life; hell as a long mindset | 16, 18 | Ranges from Supported to Contradiction depending on the reading | The Gospels |
 | [FR-10](#fr-10--christ-as-a-bloodline-the-rainbow-widening-comings) | Christ as a bloodline; the rainbow; comings in widening stages | 16, 18 | Compatible (the text is silent on children); Tension overall | The Gospels |
 | [FR-11](#fr-11--christ-as-integration-the-kingdom-as-christ) | Christ as integration; the kingdom *is* Christ | 16 | Supported | [Discussion 002](../discussions/002-jesus-humanity.md) |
@@ -122,48 +122,46 @@
 
 ## FR-03 — Mary and Joseph: the conception
 
-**Source:** your study notes on Matthew 1:18–25. **Arc:** 16.
+**Source:** your study notes on Matthew 1:18–25, revised 2026-10-01. **Arc:** 16.
 
-**Your framing:**
-- Mary and Joseph conceived Jesus together before their legal marriage.
-- "Through the Holy Spirit" means they followed the Spirit within them rather than the written law.
-- Joseph planned a quiet divorce because they had conceived before marriage, a fault they shared. The angel told him it wasn't wrong.
-- "Virgin" comes from the Greek *parthenos*, which originally meant "young woman" or "maiden."
-- Mary is a virgin in spirit, and she was not a virgin in body after Jesus was born.
+**Your framing (revised 2026-10-01):**
+- Mary conceived Jesus without sex, so she remained a virgin.
+- But the child still came from both "vital opposites": one of Mary's eggs was fertilized by Joseph.
+- Mary had other children afterward.
+- The "village's version," that they conceived before marriage, is how the community saw it, and that approach works for you "especially if supported."
+
+*(Your original framing, that they conceived together through sex before marriage, was graded Contradiction. The revision replaces it.)*
 
 **What fits:**
-- **The Hebrew of Isaiah 7:14** is *'almah*, "young woman." You're right about that, and Isaiah's sign also had a near-term meaning for King Ahaz (7:15–16).
-- ***Parthenos* had a wider range than strictly "virgin."** The Septuagint calls Dinah *parthenos* even after Shechem raped her (Gen 34:3).
-- **Virginity as a spiritual image is biblical.** Paul presents the church to Christ "as a pure virgin" (2 Cor 11:2).
-- **Mary having other children** fits Matt 1:25 ("until") and Mark 6:3. Your view matches the Protestant reading (Positions Register, item 17).
-- **Spirit over letter is a biblical principle** (FR-04).
-- **A betrothed couple together wasn't unthinkable.** A passage in the Mishnah (Ketubot 1:5) assumes that in Judea a betrothed couple might be alone together.
+- **Virginity is kept,** so Isaiah 7:14 and Matthew 1:23 fit, and so does Mary's "I do not know a man" (Luke 1:34).
+- **The texts never describe how the conception happened,** only who brought it about: "from the Holy Spirit" (Matt 1:18, 20), and "the Holy Spirit will come upon you" (Luke 1:35).
+- **The strongest case for your view.** The New Testament insists Jesus is descended from David "according to the flesh" (Rom 1:3; also 2 Tim 2:8; Acts 2:30, "of the fruit of his loins"; Acts 13:23). That echoes 2 Samuel 7:12's promise, which is in your notes, of an heir "who shall come from your body." Matthew traces that descent through Joseph. If Jesus had no biological link to Joseph, his descent from David has to come some other way. The traditional answers are:
+  - Mary was also of David's line. This is never stated outright. Luke 1:27 is grammatically ambiguous about whether "of the house of David" describes Joseph or Mary.
+  - Joseph's legal adoption of Jesus was enough.
+- **In your own framework, this version has a striking shape.** The Spirit, as the whole, joins the two opposites, man and woman. That mirrors your Trinity (FR-02), where the Spirit is the bond that unites the two.
+- **Mary's other children** fit Matthew 1:25 ("until") and Mark 6:3 (Positions Register, item 17).
 
-**What pulls against it (why it's graded Contradiction):**
+**What pulls against it:**
+- **Luke 3:23:** Jesus was "the son, *as was supposed*, of Joseph." In your version he really is Joseph's son biologically, so the supposition would be true, and Luke's qualifier becomes hard to explain. This is the strongest text against it.
+- **Matthew 1:16** still breaks the genealogy's "X fathered Y" pattern at Joseph ("of whom," meaning Mary, "was born Jesus"). It reads like a deliberate statement that Joseph didn't father him.
+- **Matthew 1:19–20.** Joseph doesn't know where the child came from, and the angel's explanation is "from the Holy Spirit," not "yours." That's compatible with your version only if Joseph never learns his part.
+- **No ancient tradition I know of holds this exact view.** The early Jewish-Christian Ebionites held that Jesus was Joseph's son by ordinary means, which was your original version (Irenaeus, *Against Heresies* 1.26.2), and the wider church rejected them.
+- **It's still a miracle.** In that world there was no way to conceive without some sexual contact, so your version is itself a miracle: the Spirit carrying Joseph's line into Mary. That's fine. It just means the question isn't whether there was a miracle but which one.
 
-The Gospels don't depend on the word *parthenos*. They narrate the conception directly:
+**First-pass grade:** **Tension**, up from Contradiction.
 
-- **Luke 1:34–35.** Mary asks, "How will this be, since I do not know a man?" The angel answers with the Holy Spirit and the power of the Most High, "therefore" the child will be called the Son of God. This passage is in your own study notes.
-- **Matthew 1:18–20.** The child is "from the Holy Spirit," and the angel gives that as the *reason* Joseph shouldn't be afraid to take her as his wife.
-- **Matthew 1:16.** The genealogy runs "X fathered Y" for some forty generations, then breaks the pattern at Joseph: "Joseph the husband of Mary, *of whom* was born Jesus." In Greek, "of whom" is feminine. It means of Mary.
-- **Luke 3:23.** Jesus was "the son, *as was supposed*, of Joseph."
+**On screen (proposed):**
+- **Dialogue and narration stay with the text: "from the Holy Spirit."** No line states how it happened, and Mary never "knew a man."
+- **Your view lives where the text is silent, as P5.** For example, Jesus can visibly resemble Joseph. Nothing in the text rules that out, and it quietly holds your belief without asserting it. It also feeds the village's suspicion, which helps the drama.
+- **The village's version:** in Nazareth's eyes, they conceived before marriage. The support for it:
+  - Mark 6:3 calls Jesus "the son of Mary," which is unusual for a man whose father was known.
+  - Matthew's parallel changes that to "the carpenter's son" (Matt 13:55), possibly because Mark's wording sounded like an insult.
+  - His opponents say, "We were not born of sexual immorality" (John 8:41).
+  - By the late 2nd century, a pagan critic named Celsus was repeating a story that Jesus was illegitimate (reported by Origen, *Against Celsus* 1.28, 1.32).
 
-Two further points:
+  These are hints, not proof, but they're enough to stage it.
 
-- **Joseph's reaction doesn't fit a father.** A man whose own child it was wouldn't quietly divorce the mother; he'd marry her quickly. "Unwilling to put her to shame" assumes the shame was hers.
-- **The direction of Jesus's teaching.** In the passage you cite, Matthew 5:17–48, moving from the letter of the law to its spirit makes sexual ethics *stricter* (5:27–32), not looser.
-
-**First-pass grade:** Contradiction as stated.
-
-**A version that fits and keeps what you care about:** in Nazareth's eyes, Mary and Joseph would have looked exactly like your version: a couple who conceived before marriage. There are hints the rumor followed Jesus. Mark 6:3 calls him "the son of Mary" rather than Joseph's son, and his opponents say, "We were not born of sexual immorality" (John 8:41).
-
-So your version can live in the story as what everyone believed: the shame Mary and Joseph carried and the law they seemed to break. Meanwhile the text's account stays what actually happened. That's your own expressionless-face parable: the village sees one face, and the audience is shown another.
-
-Joseph becomes the man who follows the Spirit over the letter of the law. The law gave him grounds to expose her (Deut 22:23–24). He chose mercy instead, then went further and married her, scandal and all.
-
-**Questions:**
-- What is it you doubt: the virginal conception itself, the later doctrine that Mary remained a virgin, or what the story implies about the law?
-- Would the "the village's version against the true one" approach serve what you want to say?
+**Status:** your revised view is recorded. The on-screen approach is proposed and needs confirming before the Gospels arc.
 
 ---
 
@@ -257,6 +255,31 @@ Joseph becomes the man who follows the Spirit over the letter of the law. The la
 
 **First-pass grade:** Supported (the idea of a corresponding partner); Tension (the claim that there is only one).
 
+### Ruth: who is her opposite? (2026-10-01)
+
+*Your theory is a working theory, and it's recorded as one. You asked me to consider it, so this is my reading.*
+
+If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one of the stories where the theory fits best:
+
+1. **The text pairs them in its own words.** Boaz is introduced as *ish gibbor hayil*, "a man of worth" (2:1). He later calls Ruth *eshet hayil*, "a woman of worth" (3:11). It's the same word, and Ruth is the only individual woman the Hebrew Bible calls that. In Hebrew Bibles, Ruth comes right after Proverbs, which ends with its poem about the *eshet hayil*.
+2. **They mirror each other's kindness.** Both are defined by *hesed*, loyal kindness (2:20; 3:10). The "wings" Boaz blesses her under (2:12) become the "wing" of his own garment that she asks him to spread over her (3:9).
+3. **They're opposite in every circumstance and alike in character.** Older and younger (3:10), rich and destitute, landowner and gleaner, Israelite and Moabite, insider and foreigner. That's your "two sides of one coin" almost exactly.
+4. **"Chance."** She "happened" to come to his field (2:3). The Hebrew is literally "her chance chanced upon" it. In your framework, that's water finding its way.
+5. **Fruitfulness.** Ten years in Moab produce no child (1:4–5). With Boaz, "the LORD gave her conception" (4:13), one of only two places where the narrator says God acted. That line leads to David and to Jesus.
+6. **Mahlon is almost absent.** He has no lines and no character, and his name sounds like "sickness." The final genealogy skips him: "Boaz fathered Obed" (4:21; Matt 1:5).
+
+**What pulls against this reading:**
+- Boaz marries Ruth explicitly "to perpetuate the name of the dead," meaning Mahlon's, "in his inheritance" (4:10). The text frames the second marriage as serving the first.
+- The text honors the first marriage. Naomi blesses both daughters-in-law for the kindness they showed "the dead" (1:8), and Boaz praises everything Ruth has done "since the death of your husband" (2:11).
+
+**How it could play on screen (my suggestion):**
+- **The theory stays unspoken (P5).** No character states it.
+- **The marriage to Mahlon is real and loving on Ruth's side,** since her loyalty to his family drives the whole story. But it's unfinished: he's ill, and there's no child.
+- **In your water image, the first marriage is the barrier the water flows around.** It's the route that brings her to Naomi, to Bethlehem, to Israel's God and to Boaz, so nothing is wasted.
+- **Boaz and Ruth are staged as mirrors:** the shared word "worth," the wing, the field.
+
+**Status:** your theory is recorded as a working theory, with my reading above. Confirm the on-screen approach before the Ruth treatment.
+
 ---
 
 ## FR-09 — Children as the parents' next life; hell as a long mindset
@@ -333,6 +356,8 @@ Joseph becomes the man who follows the Spirit over the letter of the law. The la
 **Two details that bear on Discussion 002:**
 - **2 Samuel 7:14.** You included the whole verse: "When he commits iniquity, I will discipline him." Hebrews 1:5 quotes the first half about Jesus and stops before this line. The original applied it to Solomon and David's line.
 - **Isaiah 7:15–16.** The child must come to know how "to refuse the evil and choose the good." That's a picture of the Messiah developing over time, which fits your "pattern first, resources later."
+
+**Your reading (2026-10-01):** both passages are part of your picture of the Messiah. He never willfully commits iniquity; he only appears to. As a child he has to learn to refuse evil and choose good. Isaiah 7:15–16, read that way, is Supported. 2 Samuel 7:14b, read as "appears to commit iniquity," is Tension: it works as typology, but not as a plain statement about Jesus ([Discussion 002](../discussions/002-jesus-humanity.md#decision)).
 
 Jewish tradition reads most of these passages as being about kings of their own time or a future human king. That's worth knowing when we fill in the Positions Register.
 
