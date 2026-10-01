@@ -2,7 +2,7 @@
 
 > A detailed, faithful dramatization of the Bible. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-**Status:** v2.2, 2026-10-01. Planning is complete, and the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)) starts when you say go. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
+**Status:** v2.2, 2026-10-01. Planning is complete, and Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
@@ -708,7 +708,7 @@ Not everything has to be decided now; each entry has a "decide by" point. Here i
 | 5 | Origins | Were Adam and Eve historical individuals? | Whether Eden is a place we can put a camera in | Before Genesis |
 | 6 | Origins | Who are the "sons of God" and the Nephilim (Gen 6:1–4): angels, descendants of Seth, or kings? | Whether giants and fallen angels appear on screen | Before Genesis |
 | 7 | Origins | Was the flood global or regional? | The scale of every flood shot | Before Genesis |
-| 8 | History | When was the Exodus (about 1446 or about 1260 BC), and who was Pharaoh? | Egyptian costume, architecture and names | Before the Exodus |
+| 8 | History | When was the Exodus (about 1446 or about 1260 BC), and who was Pharaoh? | Egyptian costume, architecture and names | **Now needed for Ruth.** Rahab as Boaz's mother works only with the late date ([DOSSIER §5](./story/arcs/07-ruth/DOSSIER.md#5-when-chronology-and-rahab)). |
 | 9 | History | Large numbers such as "600,000 men" (Exod 12:37): literal, or a different sense of the Hebrew *elef*? | The crowd size in every wilderness shot | Before the Exodus |
 | 10 | History | Gospel chronology: the year of Jesus's birth, the length of his ministry, and the year (AD 30 or 33) and day of the crucifixion | Characters' ages, seasons and festival timing | Before the Gospels |
 | 11 | History | Gospel harmony: for example, was the Temple cleared once or twice (John 2 versus the other three Gospels)? | Episode order | Before the Gospels |

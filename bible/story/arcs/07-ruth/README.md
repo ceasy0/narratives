@@ -2,7 +2,7 @@
 
 > How we'll write the pilot, step by step: which files, what goes in each, and where you review.
 
-**Status:** ready to start once you say go. This is Phase 1 (ROADMAP §17). For why Ruth is the pilot, see ROADMAP §11.4.
+**Status:** Phase 1 is under way. **Step 1 (the [dossier](./DOSSIER.md)) is done** and waiting at its checkpoint; the decisions are in [DOSSIER §12](./DOSSIER.md#12-decisions-for-you). For why Ruth is the pilot, see ROADMAP §11.4.
 
 ---
 
@@ -10,14 +10,14 @@
 
 | Step | File | Format | What's in it |
 |---|---|---|---|
-| 1 | `DOSSIER.md` | Markdown | Everything we need to know before writing. Built so that it also teaches you the story. |
+| 1 | [`DOSSIER.md`](./DOSSIER.md) ✓ | Markdown | Everything we need to know before writing. Built so that it also teaches you the story. |
 | 2 | `TREATMENT.md` | Markdown, in prose | The whole episode told as a short story (roughly 3–8 pages): what happens, how it's shaped, and what it means |
 | 3 | `BEATS.md` | Markdown | The structure scene by scene: four acts, one for each of Ruth's four chapters |
 | 4 | `SCENES.md` | Markdown | One scene card per scene (template in ROADMAP §13.2) |
 | 5 | `scripts/ruth/ruth.fountain` | Fountain (`.fountain`) | The screenplay. It's plain text that renders to standard screenplay format, and every line carries a hidden `[[tag]]` saying where it came from. |
 | Alongside | `style/VOICES.md`, `style/LEXICON.md` | Markdown | How each character speaks, and the rules for words and idioms. These start with Ruth and grow throughout the series. |
 
-None of these files exist yet. They get created one at a time, in order. You can read the Markdown files on GitHub or in any editor. For the `.fountain` script, use a screenplay app such as Highland, Beat or Slugline, or the free command-line tool `afterwriting`, which makes a PDF.
+The files get created one at a time, in order. You can read the Markdown files on GitHub or in any editor. For the `.fountain` script, use a screenplay app such as Highland, Beat or Slugline, or the free command-line tool `afterwriting`, which makes a PDF.
 
 ---
 
@@ -96,6 +96,8 @@ Then we lock the script.
 ---
 
 ## Decisions the pilot needs
+
+*Updated 2026-10-01. Decided: one episode, starting at the earliest point and running chronologically; Ruth's first marriage per FR-08, with Boaz confirmed as her opposite. Boaz's mother: Rahab, if the late Exodus date is accepted (DOSSIER §5). The rest are in [DOSSIER §12](./DOSSIER.md#12-decisions-for-you).*
 
 Each of these goes into the dossier with my default, so you can answer while you read. None of them blocks starting.
 

@@ -194,6 +194,8 @@ Where the text puts the suspicion first, so do we, from the observer's point of 
 
 > On screen, Jesus never wills wrong. In every moment he chooses the best path open to him. What's open to him is limited by a real human body, real exhaustion, grief and fear, incomplete knowledge, and other people's choices, and it grows over his life (Luke 2:52; Heb 5:8–9). Like any child, he has to learn to "refuse the evil and choose the good" (Isa 7:15–16), and what seems innocent to him may look like wrongdoing to others. He falls (physically, emotionally, and in outcomes) and gets back up, again and again. To the law-keepers around him he often looks like a sinner. Where the Gospel itself presents that suspicion first, the audience shares it before the answer comes. Elsewhere we stay close to him. He holds two truths at once: he is no different from anyone, and he knows what he is. His death is a necessary part of his story (Mark 8:31; Luke 24:26). More than anything, he is moved by the hope of gathering everyone in (Luke 13:34; John 17:21).
 
+**Follow-up (2026-10-01):** you agree the audience should share the suspicion, still decided scene by scene. So the default leans toward sharing it wherever the scene allows.
+
 **Deferred to the Gospels arc:**
 - What the cross accomplishes, beyond being necessary.
 - Which candidate scenes become real falls on screen.

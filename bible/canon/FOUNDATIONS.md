@@ -2,7 +2,7 @@
 
 > The decisions everything else rests on, recorded in your own words where possible. When a later document conflicts with this one, this one wins until we change it, and any change gets dated below.
 
-**Status:** v1.2, 2026-10-01. Recorded from your answers to the roadmap questions and to Discussion 002.
+**Status:** v1.3, 2026-10-01. Recorded from your answers to the roadmap questions and to Discussion 002.
 
 ---
 
@@ -55,7 +55,8 @@
 | Order of discussions | 002 (Jesus's humanity) first | [discussions/](../discussions/) |
 | Mary's other children | Your notes reject the idea that Mary remained a virgin after Jesus's birth (Positions Register, item 17) | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
 | The conception | Mary conceived without sex, but one of her eggs was fertilized by Joseph, so both "vital opposites" were involved. On screen: the dialogue stays with the text, your view is held quietly (P5), and the village's rumor is staged. | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
-| Ruth's opposite | A working theory, not fact. My reading is that Boaz is the likely opposite. The theory stays unspoken on screen. | [FRAMINGS FR-08](./FRAMINGS.md#fr-08--marriage-to-ones-relative-opposite) |
+| Ruth's opposite | A working theory, not fact. **Confirmed:** Boaz. Unspoken unless it feels right. | [FRAMINGS FR-08](./FRAMINGS.md#fr-08--marriage-to-ones-relative-opposite) |
+| The Ruth pilot | One episode. It starts at the earliest point and runs chronologically. Rahab is Boaz's mother only if the chronology works without a genealogical gap; it works under the late Exodus date, which is awaiting your confirmation. | [Ruth dossier §5](../story/arcs/07-ruth/DOSSIER.md#5-when-chronology-and-rahab) |
 | Jesus's humanity | **Decided.** See the decision text in Discussion 002. | [Discussion 002](../discussions/002-jesus-humanity.md#decision) |
 | Your source documents | Keep only the summaries in the repository | §7 below |
 
@@ -101,3 +102,4 @@ These documents are summarized in the repository. At your request, the originals
 | 2026-10-01 | First version, from your answers to the roadmap v1 questions |
 | 2026-10-01 | v1.1: languages, the Name used fully, scope, discussion order, Mary's other children, round 1 of Discussion 002, and the documents you've shared |
 | 2026-10-01 | v1.2: the reading of "modern equivalents" settled; your revised view of the conception; Ruth's opposite; Discussion 002 decided; summaries only |
+| 2026-10-01 | v1.3: conception view adopted provisionally; Boaz confirmed as Ruth's opposite; the Ruth pilot's format and opening; the Rahab condition |

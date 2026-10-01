@@ -29,7 +29,7 @@ This directory currently holds planning documents. There are no scripts yet.
 
 | | |
 |---|---|
-| Phase | Planning complete; Phase 1 (Ruth) starts on your go |
-| Next | The Ruth pilot: dossier first ([plan](./story/arcs/07-ruth/README.md)) |
+| Phase | 1: the Ruth pilot. The dossier is done. |
+| Next | Your review of the [Ruth dossier](./story/arcs/07-ruth/DOSSIER.md) (checkpoint 1), then the treatment |
 | Pilot | Ruth |
 | Formats | Markdown for docs · Fountain for screenplays |

@@ -17,12 +17,12 @@
 |---|---|---|---|---|
 | [FR-01](#fr-01--the-opening-creation-as-cosmic-and-biological-history) | The opening: creation shown as cosmic and biological history | 1 | Compatible under a non-chronological reading of Genesis 1; Tension on the malicious darkness | Genesis |
 | [FR-02](#fr-02--god-yin-and-yang-as-the-trinity) | God, Yin and Yang as the Trinity | All depictions of God | Tension | Genesis |
-| [FR-03](#fr-03--mary-and-joseph-the-conception) | A virgin conception, with Joseph's line joined by the Spirit; the village's version shown as rumor (revised) | 16 | **Tension** (the original version was Contradiction) | Confirm the on-screen approach before the Gospels |
+| [FR-03](#fr-03--mary-and-joseph-the-conception) | A virgin conception, with Joseph's line joined by the Spirit; the village's version shown as rumor (revised) | 16 | **Tension**; adopted provisionally (the original version was Contradiction) | Confirm the on-screen approach before the Gospels |
 | [FR-04](#fr-04--the-spirit-as-the-true-law) | The Spirit as the true Law; written laws as ideals fitted to circumstances | 5, 16 | Supported as a principle | The Gospels |
 | [FR-05](#fr-05--no-different-which-makes-him-different) | "No different from anyone, which is what makes him different" | 16 | Supported in the both-at-once form | [Discussion 002](../discussions/002-jesus-humanity.md) |
 | [FR-06](#fr-06--the-beatitudes-through-water-and-the-tao) | The Beatitudes read through water and the Tao | 16 | Compatible as an interpretive layer | The Gospels |
 | [FR-07](#fr-07--salt-and-light-every-part-necessary) | Salt and light: every part is necessary | 16 | Compatible if the warning stays | The Gospels |
-| [FR-08](#fr-08--marriage-to-ones-relative-opposite) | Marriage to one's "relative opposite" (a working theory) | **7 (Ruth)**, 2, 9, 16 | Supported (a corresponding partner); Tension ("only one"). In Ruth, Boaz is the likely opposite. | Confirm the approach before the Ruth treatment |
+| [FR-08](#fr-08--marriage-to-ones-relative-opposite) | Marriage to one's "relative opposite" (a working theory) | **7 (Ruth)**, 2, 9, 16 | Supported (a corresponding partner); Tension ("only one"). **Confirmed for Ruth:** Boaz, unspoken. | Done for Ruth |
 | [FR-09](#fr-09--children-as-the-parents-next-life-hell-as-a-long-mindset) | Children as the parents' next life; hell as a long mindset | 16, 18 | Ranges from Supported to Contradiction depending on the reading | The Gospels |
 | [FR-10](#fr-10--christ-as-a-bloodline-the-rainbow-widening-comings) | Christ as a bloodline; the rainbow; comings in widening stages | 16, 18 | Compatible (the text is silent on children); Tension overall | The Gospels |
 | [FR-11](#fr-11--christ-as-integration-the-kingdom-as-christ) | Christ as integration; the kingdom *is* Christ | 16 | Supported | [Discussion 002](../discussions/002-jesus-humanity.md) |
@@ -161,7 +161,14 @@
 
   These are hints, not proof, but they're enough to stage it.
 
-**Status:** your revised view is recorded. The on-screen approach is proposed and needs confirming before the Gospels arc.
+**Your follow-up (2026-10-01):** you'd expect some reason or conflict that made sex between Mary and Joseph impossible, with the Holy Spirit carrying Joseph's seed into Mary. You're fine with this for now and will raise any problems later.
+
+**The text already supplies the reason.** No invention is needed:
+- They were betrothed and hadn't yet "come together" (Matt 1:18). Betrothed couples didn't live together until the wedding.
+- Right after the annunciation, Mary goes "with haste" to Elizabeth in the hill country of Judah and stays about three months (Luke 1:39, 56), days away from Nazareth.
+- When she comes back, the pregnancy is discovered (Matt 1:18), and Joseph has "no union with her" until the birth (Matt 1:25).
+
+**Status:** your view is adopted provisionally (P5 where the text is silent). The on-screen approach as proposed: the dialogue stays with the text, the resemblance is held quietly, and the village's rumor is staged. Confirm before the Gospels arc.
 
 ---
 
@@ -278,7 +285,7 @@ If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one
 - **In your water image, the first marriage is the barrier the water flows around.** It's the route that brings her to Naomi, to Bethlehem, to Israel's God and to Boaz, so nothing is wasted.
 - **Boaz and Ruth are staged as mirrors:** the shared word "worth," the wing, the field.
 
-**Status:** your theory is recorded as a working theory, with my reading above. Confirm the on-screen approach before the Ruth treatment.
+**Status:** **Confirmed** 2026-10-01. Boaz is Ruth's opposite, and the theory stays unspoken "unless it feels right." Applied in the [Ruth dossier](../story/arcs/07-ruth/DOSSIER.md#11-framings-and-decisions-that-apply).
 
 ---
 
