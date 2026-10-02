@@ -2,7 +2,7 @@
 
 > A detailed, faithful dramatization of the Bible. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-**Status:** v2.6, 2026-10-02. *Adonai* is the series' working title. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done, the [treatment](./story/arcs/07-ruth/TREATMENT.md) is on its third draft, and its first [sample scene](./scripts/ruth/sample-the-road.fountain) is written. v2.6 records your confirmation of the language rule (§5.7), the working title, and two new discussions: [005](./discussions/005-beyond-the-text.md) on traditions and rumored events, and [006](./discussions/006-2d-or-3d.md) on 2D versus 3D (§15). v2.5 added one language rule for the whole series (§5.7), uses God's name more sparingly (§5.5), and plans for live action, with the 3D animation as its placeholder (§1.1, §15). The whole-Bible [working chronology](./world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
+**Status:** v2.7, 2026-10-02. *Adonai* is the series' working title. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done, the [treatment](./story/arcs/07-ruth/TREATMENT.md) is at v4, and the [beat sheet](./story/arcs/07-ruth/BEATS.md) and a complete [first-draft script](./scripts/ruth/ruth.fountain) are written. v2.7 adds the first `VOICES` and `LEXICON` (§16), a low-cost hybrid production plan from [Discussion 006](./discussions/006-2d-or-3d.md) (§15.5), and corrects two out-of-date rows in §19.1. v2.6 records your confirmation of the language rule (§5.7), the working title, and two new discussions: [005](./discussions/005-beyond-the-text.md) on traditions and rumored events, and [006](./discussions/006-2d-or-3d.md) on 2D versus 3D (§15). v2.5 added one language rule for the whole series (§5.7), uses God's name more sparingly (§5.5), and plans for live action, with the 3D animation as its placeholder (§1.1, §15). The whole-Bible [working chronology](./world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
@@ -412,7 +412,7 @@ This changes from era to era. It's a small detail that makes each era sound diff
 | From Moses through the monarchy | The personal name YHWH is spoken freely, in oaths, blessings and names (Eli-*jah*, *Jeho*-shaphat). |
 | Second Temple and New Testament era | People avoid saying the Name out of reverence and use substitutes instead: "Heaven" (possibly why Matthew says "kingdom of heaven"), *Adonai* ("my Lord") and "the Holy One." At Jesus's trial, the high priest says "the Blessed One" and Jesus says "the Power" (Mark 14:61–62). |
 
-**Your decision:** "the LORD" by default, and "Yahweh" where someone would actually have said the Name.
+**Your first decision (since revised; see below):** "the LORD" by default, and "Yahweh" where someone would actually have said the Name.
 
 **A correction to one assumption.** You guessed that most people wouldn't have spoken the Name. That's true of Jesus's time, but not of the Old Testament period:
 
@@ -1351,8 +1351,8 @@ Before any 3D work, the pilot becomes an **animatic**: storyboards timed to scra
 - **Blender:** free, and covers the complete 3D pipeline (modeling, rigging, animation and rendering).
 - **Unreal Engine:** real-time rendering and fast iteration; free for small creators.
 - **Motion capture:** anything from capture suits (such as Rokoko) to markerless capture from phone or video, plus stock animation libraries (such as Mixamo) for background characters.
-- **AI tools:** these are changing fast. For now they're most useful for exploring concepts, previsualization and developing a look. Keeping characters consistent over long sequences and precise control remain the hard parts. In 2026, AI video costs roughly $0.03–$0.75 per generated second, about the same whether the look is 2D or 3D, while AI that only *looks* 3D gives you no sets or cameras to carry into live action. [Discussion 006](./discussions/006-2d-or-3d.md) has the figures and a suggested hybrid. We'll reassess when we reach Phase 6.
-- **Local versus cloud:** writing and research work fine in cloud sessions like this one. Anything that drives Blender or renders needs Claude Code running on your own machine. [`../../primordia/SETUP_GUIDE.md`](../../primordia/SETUP_GUIDE.md) already covers that setup.
+- **AI tools:** these are changing fast. For now they're most useful for exploring concepts, previsualization and developing a look. Keeping characters consistent over long sequences and precise control remain the hard parts. In 2026, AI video costs roughly $0.03–$0.75 per generated second, about the same whether the look is 2D or 3D, while AI that only *looks* 3D gives you no sets or cameras to carry into live action. [Discussion 006](./discussions/006-2d-or-3d.md) has the figures. **The hybrid we're discussing** (006, round 1): 3D built in Blender by AI on your own computer, for structure, consistency and reuse; then AI restyling guided by the 3D renders, for the painterly surface. Prompt-only generation is for throwaway concept images. We'll reassess when we reach Phase 6.
+- **Local versus cloud:** writing and research work fine in cloud sessions like this one. Anything that drives Blender or renders needs Claude Code running on your own machine. [`../../primordia/SETUP_GUIDE.md`](../../primordia/SETUP_GUIDE.md) already covers that setup. Reference scenes for recruiting collaborators (the Genesis opening, a Ruth scene, the crucifixion as an animatic) are planned in 006 and don't need to wait for Phase 6.
 
 ### 15.6 Sound
 
@@ -1392,8 +1392,8 @@ narratives/bible/
 ├── style/
 │   ├── STORYTELLING.md      your notes on how scenes should play            (exists)
 │   ├── LANGUAGE_GUIDE.md    §5, expanded
-│   ├── LEXICON.md           term-by-term rules
-│   └── VOICES.md            how each character and group speaks
+│   ├── LEXICON.md           term-by-term rules                               (exists)
+│   └── VOICES.md            how each character and group speaks             (exists)
 ├── world/                   the series bible
 │   ├── TIMELINE.md          the working chronology                            (exists)
 │   ├── eras/                one file per era
@@ -1403,9 +1403,9 @@ narratives/bible/
 ├── story/
 │   ├── ARCHITECTURE.md      structure of the whole series
 │   └── arcs/
-│       └── 07-ruth/         dossier, treatment, beats, scene cards
+│       └── 07-ruth/         dossier, treatment, beat sheet                     (exists)
 ├── scripts/                 Fountain screenplays
-│   └── ruth/                the sample road scene                              (exists)
+│   └── ruth/                the first-draft Ruth script                         (exists)
 ├── discussions/             theology, philosophy and production conversations (exists)
 ├── study/                   briefs on texts beyond the canon (§9.5)
 ├── research/                reference notes and source excerpts
@@ -1474,8 +1474,8 @@ The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./cano
 | 3 | Audience | You. There's no rating; the intensity ceiling is high (principle 8). |
 | 4 | Depicting God | Open: [Discussion 001](./discussions/001-how-god-speaks.md) |
 | 5 | Tradition | Non-denominational. Truth over matching any one framework. |
-| 6 | Names | "Jesus"; "the LORD" by default, "Yahweh" where someone actually said it (§5.5) |
-| 7 | Invented dialogue for Jesus | Case by case, with no new sermons or teachings. His humanity is central. "Fallible" is open: [Discussion 002](./discussions/002-jesus-humanity.md). |
+| 6 | Names | "Jesus." "God" or "the Lord" by default; "Yahweh" only in oaths and where the Name itself is the point (revised 2026-10-01, §5.5) |
+| 7 | Invented dialogue for Jesus | Case by case, with no new sermons or teachings. His humanity is central. What "fallible" means is decided: limited in capacity, never in will ([Discussion 002](./discussions/002-jesus-humanity.md#decision)). |
 | 8 | Pilot | Ruth (§11.4) |
 | 9 | Structure | Decide later, as long as it can be arranged chronologically |
 | 10 | Reframing | Different interpretations and understandings, checked with the fit check (§8.8) |
@@ -1488,11 +1488,12 @@ The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./cano
 
 ### 19.2 Still open
 
-1. **Your notes on the Ruth [sample scene](./scripts/ruth/sample-the-road.fountain)** and your picks from the treatment's expansion list ([TREATMENT §8](./story/arcs/07-ruth/TREATMENT.md#8-room-to-expand)).
-2. **[Discussion 005](./discussions/005-beyond-the-text.md):** traditions and rumored events, starting with Jesus in the East.
-3. **[Discussion 006](./discussions/006-2d-or-3d.md):** 2D or 3D, and AI's role. Not needed until Phase 6.
-4. **FR-03's on-screen approach,** to confirm before the Gospels.
-5. **Deferred:**
+1. **Your pass on the Ruth [script](./scripts/ruth/ruth.fountain),** and the four new choices in the treatment ([TREATMENT §6](./story/arcs/07-ruth/TREATMENT.md#6-choices-for-you), 12–15).
+2. **[Discussion 005](./discussions/005-beyond-the-text.md):** traditions and rumored events. Round 1 proposes "recognition, not derivation" for an Eastern traveler meeting Jesus.
+3. **[Discussion 006](./discussions/006-2d-or-3d.md):** the hybrid production plan and the reference scenes. Not needed until Phase 6, but a one-frame test could happen any time you work locally.
+4. **[Discussion 002](./discussions/002-jesus-humanity.md), round 3:** the two guardrails for your reading of 2 Sam 7:14b.
+5. **FR-03's on-screen approach,** to confirm before the Gospels.
+6. **Deferred:**
    - The David connection at the end of Ruth, until more of the story exists ([TREATMENT §7](./story/arcs/07-ruth/TREATMENT.md#for-later-arcs)).
    - Discussion 001, before Genesis.
    - The two sub-questions left over from Discussion 002, before the Gospels.

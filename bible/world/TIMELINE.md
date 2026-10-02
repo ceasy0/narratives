@@ -215,7 +215,7 @@ Dates are approximate (± 20–30 years). This is one reasonable arrangement tha
 | c. 1208 | The Merneptah Stele names Israel in Canaan | Outside source |
 | c. 1175 | The Philistines settle the southern coast | Outside sources |
 | c. 1175–1130 | Gideon (7, then 40). The Midianites strip the land (Judg 6:3–6). | Judg 6–8 |
-| **c. 1152–1139** | **Ruth.** The famine sends Elimelech's family to Moab (c. 1152). About ten years later Naomi and Ruth return, and Boaz marries Ruth (c. 1140). Obed is born (c. 1139). This falls "in the days of Eli," as Josephus says. The story's internal timeline is in the [Ruth dossier §5](../story/arcs/07-ruth/DOSSIER.md#5-when-chronology-and-rahab). | Ruth; *Antiquities* 5.318 |
+| **c. 1152–1139** | **Ruth.** The famine sends Elimelech's family to Moab (c. 1152). About twelve years later, after ten years of marriage for the sons (1:4), Naomi and Ruth return, and Boaz marries Ruth (c. 1140). Obed is born (c. 1139). This falls "in the days of Eli," as Josephus says. The story's internal timeline is in the [Ruth dossier §5](../story/arcs/07-ruth/DOSSIER.md#5-when-chronology-and-rahab). | Ruth; *Antiquities* 5.318 |
 | c. 1144–1104 | Eli is high priest for 40 years | 1 Sam 4:18 |
 | c. 1130–1100 | Abimelech, Tola, Jair | Judg 9–10 |
 | c. 1124–1106 | The Ammonites oppress Israel in the east while the Philistines begin in the west | Judg 10:7–8 |

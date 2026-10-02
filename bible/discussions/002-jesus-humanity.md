@@ -1,6 +1,6 @@
 # 002 — Jesus's humanity: limits, struggle, and the question of sin
 
-**Status:** **Decided** 2026-10-01, with two sub-questions deferred to the Gospels arc. See [Decision](#decision).
+**Status:** **Decided** 2026-10-01, with two sub-questions deferred to the Gospels arc. See [Decision](#decision). Round 3 (2026-10-02) takes up your reading of 2 Sam 7:14b; it refines the decision rather than changing it.
 **Needed before:** The Gospels, and the Mark 2 Jesus-voice exercise. It doesn't block Ruth.
 **Fit grade of your view:** **Supported.** You've placed Jesus's falls in his capacity, not his will, and that resolves the conflict with the text flagged below.
 
@@ -187,6 +187,36 @@ That's one option. The point of this discussion is to find yours.
 - John 9 is built as an investigation, running from "we know that this man is a sinner" (9:24) to "one thing I do know: though I was blind, now I see" (9:25).
 
 Where the text puts the suspicion first, so do we, from the observer's point of view. Everywhere else, we stay close to Jesus. That way we keep both the scandal and his inner life.
+
+### Round 3 — 2026-10-02: 2 Samuel 7:14b
+
+**Your reading, in your words:**
+
+> Jesus never commits sin under his human limits of knowledge and understanding. But because, as a human, his knowledge is limited, he is sometimes (especially in his early years) unaware of certain consequences of his actions. It is him choosing an action of unforeseen negative consequences, even though to him it was the best path forward, that is defined as him doing wrong. This specific verse describes how God will bring him punishment due to these actions. This punishment is not cruel, it's natural, because what you put into the world is what you inevitably get back.
+
+**Where it lands (my reading):**
+
+1. **As a picture of Jesus, it's Compatible, and it has a scene: the Temple at twelve (Luke 2:41–52).** He stays behind in his "Father's house." To him it's plainly right ("Did you not know that I must be in my Father's house?"). He doesn't foresee three days of his parents searching "in great distress." His mother names it as a wrong done to them: "Son, why have you treated us so?" (2:48). And a consequence follows that is human, mild and natural: "he went down with them... and was submissive to them," and "increased in wisdom" (2:51–52). That's your whole idea in five verses: a choice that was right in his eyes, unforeseen harm, someone calling it wrong, a natural consequence, growth. It fits the decision we already made: his field of choices is limited by incomplete knowledge (Luke 2:52; Heb 5:8).
+
+2. **"Natural, not cruel" has strong roots.** "Whatever one sows, that will he also reap" (Gal 6:7). "Whoever digs a pit will fall into it" (Prov 26:27). "They sow the wind, and they shall reap the whirlwind" (Hos 8:7). Scholars call this the act-consequence connection: in Proverbs especially, a deed carries its result inside it, and God's part is to bring it to completion rather than to impose a penalty from outside (Klaus Koch made the case in 1955).
+
+3. **The case against, as I'm bound to give it, has three parts.**
+   - **The word is moral.** *Be'ha'avoto*, "when he commits iniquity," comes from the root of *'avon*, the Bible's ordinary word for guilt. Even where the Torah talks about wrongs done unknowingly, it still treats them as sins that need atonement: "though he did not know it... he shall bear his iniquity" (Lev 5:17; also Lev 4; Num 15:27–29). And Hebrews goes out of its way to say Jesus needed no offering for himself, unlike every other high priest, who offers "for himself and for the unintentional sins of the people" (Heb 9:7; 7:27). So if 14b's "iniquity" includes even unknowing wrongs, the New Testament says it doesn't apply to him.
+   - **The Bible itself stops short of applying 14b to the ideal son.** Hebrews quotes 2 Sam 7:14a about Jesus and stops before the iniquity clause (Heb 1:5). The Chronicler, retelling the same promise, leaves 14b out entirely (1 Chr 17:13). Psalm 89 retells it about David's *sons*, plural: "If his children forsake my law... I will punish their transgression with the rod" (Ps 89:30–32). The first fulfillment is Solomon, whose wrongs were real (1 Kgs 11).
+   - **Jesus himself resists the strict version of "what you put in comes back."** Asked whose sin caused a man's blindness, he says neither (John 9:2–3). Asked whether the Galileans Pilate killed were worse sinners, he says no (Luke 13:1–5). And his own death is the great exception: he put good into the world and got a cross. "He committed no sin... He himself bore our sins in his body on the tree... by his wounds you have been healed" (1 Pet 2:22–24; Isa 53:5–9).
+
+4. **So the reading works with two guardrails.** I'd grade it **Compatible as typology** (it was Tension when read as "appears to commit iniquity"), if:
+   - **it's never called sin or iniquity,** even unknowing. On screen, other people may call what he did wrong, as Mary does. He doesn't, and the story doesn't;
+   - **it stays with the small things,** like a boy's choices with consequences he didn't see. His suffering as a whole, above all the Passion, is never the return of his own deeds. There the texts say the opposite: it's for others.
+
+5. **A second bridge you might like more.** The verse's punishment is "the rod of men" and "the stripes (*nig'ei*) of the sons of men." *Nig'ei* comes from the root *n-g-'*, "to strike." Isaiah 53 uses the same root for the servant: "stricken (*nagua'*), smitten by God" (53:4) and "stricken (*nega'*) for the transgression of my people" (53:8). In the Passion, the son of David really does take the rod and the blows of men: soldiers strike his head with a reed (Mark 15:19), and he's flogged (Mark 15:15). Micah has the same image: "with a rod they strike the judge of Israel on the cheek" (Mic 5:1). Read this way, 14b is fulfilled in Jesus, but the iniquity is ours, laid on him (Isa 53:6; 2 Cor 5:21). That's a very old Christian way of reading the Old Testament, and it lets the whole verse be about him without making him guilty of anything.
+
+6. **One connection to Discussion 005.** "What you put into the world is what you inevitably get back" is very close to the Eastern idea of karma. The Bible has its own version, sowing and reaping, but it never lets the principle stand alone: it's always held together with grace ("He does not deal with us according to our sins," Ps 103:10) and with the cross, where the pattern breaks. That might be the most interesting place where your interest in the East and your picture of Jesus meet.
+
+**Questions:**
+- Do the two guardrails work for you?
+- Does the Isaiah 53 bridge appeal to you as a second layer of the same verse, or do you want 14b to stay about his growing up?
+- Would you like the Temple at twelve to become the series' first on-screen example of your reading, when we reach the Gospels?
 
 ## Decision
 

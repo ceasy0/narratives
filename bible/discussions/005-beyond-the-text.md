@@ -1,6 +1,6 @@
 # 005 — Beyond the text: traditions, legends and rumored events
 
-**Status:** Seeded 2026-10-02
+**Status:** Discussing. Seeded 2026-10-02; round 1 the same day.
 **Needed before:** each arc an item would appear in. The question of Jesus in the East needs settling before the Gospels.
 **Fit grade:** it varies by item; see the tables. The usual story of Jesus studying in the East is graded **Contradiction**.
 
@@ -146,7 +146,50 @@ My grades, for you to react to. "Arc" is where the item would come up.
 
 ## Conversation notes
 
-*None yet.*
+### Round 1 — 2026-10-02
+
+**Your position, in your words:**
+
+> What entices me about this is Jesus potentially learning some of the things that make him who he is from Taoist, Buddhist, and Hindu principles and ideas. Him going to the East doesn't have to be a part of the story, but I do still wonder if there was any potential for someone from the East who would be familiar with Eastern principles to travel and meet Jesus and teach him. But I do get that that particular story is probably false.
+
+**Could someone from the East have met him? Yes, possibly.** The roads really were open, and there's harder evidence than I'd expected:
+
+| Who | Evidence | What it shows |
+|---|---|---|
+| **Indian ascetics** | Around 20 BC, an Indian embassy reached Augustus. One of its members, a holy man, burned himself alive in Athens; his tomb read "Zarmanochegas, an Indian from Bargosa, who made himself immortal according to the custom of his country" (Strabo, *Geography* 15.1.73; Cassius Dio 54.9). Strabo's source, Nicolaus of Damascus, saw the embassy pass through Antioch. Nicolaus was Herod the Great's court historian. | An Indian ascetic passed through Syria about fifteen years before Jesus was born, and Herod's own courtier met him. His name may contain *śramaṇa*, the word for wandering monks such as the Buddha's followers, though scholars debate what he was. |
+| **Buddhism in the West** | The emperor Ashoka's Rock Edict XIII (3rd century BC) says he sent his teaching to five Greek kings by name, including Ptolemy of Egypt and Antiochus of Syria. | Buddhists were at least trying to reach the Mediterranean, 250 years before Jesus. Whether anyone listened, we don't know. |
+| **Indians in Alexandria** | Dio Chrysostom, speaking to the Alexandrians around AD 70–100, lists "Bactrians, Scythians, Persians, and a few Indians" among his audience (*Oration* 32.40). | Indians lived in, or visited, the Mediterranean's greatest city, which had a huge Jewish population. |
+| **Trade** | The *Periplus of the Erythraean Sea* (mid-1st century AD) is a merchant's guide to sailing to India. Pliny complains about the money Rome loses to India (*Natural History* 6.101). | Ships went to India and back every year in Jesus's lifetime. |
+| **Persians** | The Magi (Matt 2:1). Babylon's large Jewish community. Pilgrims at every festival from "Parthians, Medes, Elamites and residents of Mesopotamia" (Acts 2:9). | The East already came to Jerusalem every year. |
+| **The Chinese** | Silk reached Rome, but through middlemen. The one Chinese envoy known to have set out for Rome, Gan Ying in AD 97, turned back at the Persian Gulf. | A Taoist teacher in Galilee is the least likely of all. Taoist ideas didn't travel west in this period that we know of. |
+
+So, sorted into the bins: **a meeting with an Indian or Persian traveler is bin 2,** possible but thin. A Taoist teacher is bin 3 as history, though the ideas themselves can still be present in the series another way (below).
+
+**The harder question is the one you named first: learning "the things that make him who he is."** This is where I'd push back, and where the texts push back.
+- **His hometown says he didn't get it from anywhere they knew of:** "Where did this man get these things?" (Mark 6:2). His opponents say he never studied (John 7:15).
+- **He says where it comes from:** "My teaching is not mine, but his who sent me" (John 7:16). "I speak just as the Father taught me" (John 8:28). "No one knows the Father except the Son" (Matt 11:27).
+- **The Gospels make the mystery of his wisdom part of the story.** A teacher who explains it takes the mystery away.
+
+**But there's a real opening in your own theology.** You believe God speaks through the world, through the people we meet (FOUNDATIONS §6). If the Father teaches him through a person he meets, that's not borrowing; it's the Father's teaching by your own definition. And Jesus is fully human: he "increased in wisdom" (Luke 2:52), and wisdom is learned from somewhere.
+
+**The case against even that:** John insists his knowledge of the Father is first-hand, "what I have seen with my Father" (John 8:38; also 1:18; 3:11). A meeting can sharpen how he says things. It can't be where he learned who the Father is.
+
+**What I'd suggest: recognition, not derivation.** This is how the Gospels themselves stage Jesus meeting outsiders. He marvels at a Roman centurion's faith: "not even in Israel have I found such faith" (Matt 8:10). He's moved by the Syrophoenician woman's answer (Mark 7:29). He tells a scribe "you are not far from the kingdom of God" (Mark 12:34). Greeks come to the festival saying "we wish to see Jesus" (John 12:20–21). In each case Jesus *recognizes* truth in someone from outside. He doesn't take his teaching from them.
+
+So the scene I could imagine, if it ever earns a place (P6, bin 2):
+- **When:** the hidden years, at a Passover in Jerusalem or in Sepphoris, so he never leaves home for years (Mark 6:3).
+- **Who:** an Indian traveler, a merchant's companion or an ascetic like the one Nicolaus saw, who talks about letting go of desire, or about not harming any living thing.
+- **What happens:** the young Jesus listens and recognizes something. Maybe he answers from his own Scriptures, and the two of them find they've been circling the same center from opposite sides. That's your FR-14 and your view of religions as seekers of one center, staged in a single conversation. Neither converts the other. The traveler goes home.
+- **What it must not do:** become the source of the Sermon on the Mount, or take him away for years, or be staged as if it were in the text.
+
+**Taoism, separately.** You don't need a traveler for it. Your framing FR-06 already reads the Beatitudes through water and the Tao Te Ching ("the highest good is like water"), and graded Compatible as an interpretive layer. The sermon happens beside the Sea of Galilee, so water is already in the frame. That's where Taoist resonance can live: in the imagery and the delivery, for the audience who knows the Tao Te Ching to hear, with every word still Tier A.
+
+**And one link to Discussion 002.** Your reading of 2 Sam 7:14b, "what you put into the world is what you inevitably get back," is very close to karma. The Bible's version is sowing and reaping (Gal 6:7), always held together with grace. That may be the deepest place where the East and your picture of Jesus meet: not in a teacher, but in a question both traditions ask.
+
+**Questions:**
+1. Does "recognition, not derivation" give you what you were after, or does it lose the part that excited you?
+2. Would you want the traveler scene on the list of candidates for the hidden years, or is FR-06's imagery enough?
+3. The two-question test and three bins: still right after this round?
 
 ## Decision
 

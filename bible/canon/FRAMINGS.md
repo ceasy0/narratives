@@ -366,6 +366,8 @@ If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one
 
 **Your reading (2026-10-01):** both passages are part of your picture of the Messiah. He never willfully commits iniquity; he only appears to. As a child he has to learn to refuse evil and choose good. Isaiah 7:15–16, read that way, is Supported. 2 Samuel 7:14b, read as "appears to commit iniquity," is Tension: it works as typology, but not as a plain statement about Jesus ([Discussion 002](../discussions/002-jesus-humanity.md#decision)).
 
+**Your reading, round 3 (2026-10-02):** the "iniquity" is a choice that was right in his eyes but had consequences he couldn't foresee, and the discipline is the natural result, not a cruelty. My grade: **Compatible as typology,** with two guardrails: it's never called sin, and it never covers the Passion, which the texts say was for others. The Temple at twelve (Luke 2:41–52) is its scene. Isaiah 53 offers a second bridge through the same word for "stripes" ([Discussion 002, round 3](../discussions/002-jesus-humanity.md#round-3--2026-10-02-2-samuel-714b)).
+
 Jewish tradition reads most of these passages as being about kings of their own time or a future human king. That's worth knowing when we fill in the Positions Register.
 
 ---

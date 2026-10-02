@@ -93,7 +93,7 @@ This translation is my own, made from the Hebrew (the Masoretic Text) and checke
 - **1:6–22** The word "return" (*shuv*) runs through the chapter about a dozen times. In 1:22, Ruth the Moabite "returns" to a land she has never seen.
 - **1:8** "Mother's house" is unusual, since the normal phrase is "father's house." It appears in contexts of love and marriage (Gen 24:28; Song 3:4; 8:2). "Deal kindly" is the book's key word, *hesed*: loyal, generous kindness that goes beyond duty.
 - **1:9** "Rest" (*menuchah*) means security in a husband's household. Naomi takes it up again in 3:1.
-- **1:13** "Far more bitter for me than for you" can also be read "very bitter for me because of you." The Hebrew allows both.
+- **1:13** "Far more bitter for me than for you" can also be read "very bitter for me because of you" (KJV, ESV) or "too bitter for you to share" (CSB, NET). The comparative is the most likely: the Septuagint, Syriac and Targum read it that way, it's the ordinary use of *min* after an adjective (compare Gen 19:9), it fits her argument, and her "very bitter" at the well (1:20) is about herself alone. See TREATMENT §7.
 - **1:14** "Clung" (*davaq*) is the same verb used in Genesis 2:24, where a man "clings" to his wife.
 - **1:15** "Her gods" (*eloheha*) can be plural or a singular "her god." Moab's god was Chemosh (Num 21:29).
 - **1:16–17** Ruth swears an oath in Yahweh's name, using the self-curse formula ("may Yahweh do so to me, and more," as in 1 Sam 3:17). In the act of swearing, she has already taken Israel's God as her own.
@@ -286,7 +286,7 @@ All dates are approximate. The ages are inferences (P4) built from the text's hi
 |---|---|---|
 | 1406 | Jericho falls. Rahab is spared and lives on in Israel (Josh 6:25), as the ancestress of Salmon's line (Matt 1:5). | — |
 | c. 1152 | Famine. Elimelech's family leaves for Moab. | Elimelech about 40, Naomi about 36, Mahlon about 17, Chilion about 15. Ruth, in Moab, about 14. Boaz about 33. |
-| c. 1151 | Elimelech dies (1:3). | |
+| c. 1152, autumn | Elimelech dies (1:3), at the plowing after their first harvest in Moab. | |
 | c. 1150 | The sons marry Moabite women: Mahlon marries Ruth, and Chilion marries Orpah (1:4; 4:10). The marriages last about ten years (1:4). | Ruth about 16 |
 | c. 1144 | Eli becomes high priest at Shiloh (1 Sam 4:18). | |
 | c. 1140, winter | Mahlon and Chilion die (1:5). | |

@@ -2,7 +2,7 @@
 
 > The decisions everything else rests on, recorded in your own words where possible. When a later document conflicts with this one, this one wins until we change it, and any change gets dated below.
 
-**Status:** v1.7, 2026-10-02. Recorded from your answers to the roadmap questions, to Discussion 002, to the chronology and to your notes on the Ruth treatment.
+**Status:** v1.8, 2026-10-02. Recorded from your answers to the roadmap questions, to Discussion 002, to the chronology and to your notes on the Ruth treatment and sample scene.
 
 ---
 
@@ -52,13 +52,14 @@
 | Reframing | Different interpretations and understandings. The structural tools (point of view, intercutting) may come later. | ROADMAP §10.5, §8.8 |
 | Output | Screenplays first. Then a 3D animated version, visually appealing in its own right, as the placeholder for an eventual live-action show or films. | ROADMAP §1.1, §15 |
 | Format | Episodes, with the final format decided later | — |
-| Storytelling | Your notes on how scenes should play: no cards, no montages for passing time, real family dynamics, layered peoples, dialogue that sounds real. Links between episodes go only at the beginnings and ends of episodes or scenes. | [`style/STORYTELLING.md`](../style/STORYTELLING.md) |
+| Storytelling | Your notes on how scenes should play: no cards, no montages for passing time, real family dynamics, layered peoples, dialogue that sounds real. Links between episodes go only at the beginnings and ends of episodes or scenes. No tidy sentiment ("too neat... disney-movie ish"). Gaps can stay open for later exploration. The main character's arc must be visible at every stage. | [`style/STORYTELLING.md`](../style/STORYTELLING.md) |
+| Ambiguous text | Where the Hebrew or Greek can be read more than one way, the dialogue follows the most likely reading, with the alternatives in a note (2026-10-02). First case: Ruth 1:13. | [TREATMENT §7](../story/arcs/07-ruth/TREATMENT.md#from-your-notes) |
 | Scope | The Bible's window only. Other cultures and time periods may become separate projects later. | — |
 | Order of discussions | 002 (Jesus's humanity) first | [discussions/](../discussions/) |
 | Mary's other children | Your notes reject the idea that Mary remained a virgin after Jesus's birth (Positions Register, item 17) | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
 | The conception | Mary conceived without sex, but one of her eggs was fertilized by Joseph, so both "vital opposites" were involved. On screen: the dialogue stays with the text, your view is held quietly (P5), and the village's rumor is staged. | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
 | Ruth's opposite | A working theory, not fact. **Confirmed:** Boaz. Unspoken unless it feels right. | [FRAMINGS FR-08](./FRAMINGS.md#fr-08--marriage-to-ones-relative-opposite) |
-| The Ruth pilot | One episode. It starts at the earliest point and runs chronologically, opening in Bethlehem during the famine. 4:5 uses the read-aloud version ("you acquire Ruth"). Moab's religion is sincere and textured. Naomi and Boaz are slightly more formal than Ruth. It ends with the naming of Obed. Rahab is Boaz's ancestor, not his mother, because the chronology doesn't allow it. **The David connection is deferred** until more of the story exists. Your current idea: the camera closes on Obed's face, with flash-forwards to scenes from David's life and a voice-over. Any change it brings should be small and come only at the end of the episode. | [Ruth dossier §12](../story/arcs/07-ruth/DOSSIER.md#12-decisions-for-you) |
+| The Ruth pilot | One episode. It starts at the earliest point and runs chronologically, opening in Bethlehem during the famine. 4:5 uses the read-aloud version ("you acquire Ruth"). Moab's religion is sincere and textured. Naomi and Boaz are slightly more formal than Ruth. It ends with the naming of Obed. Rahab is Boaz's ancestor, not his mother, because the chronology doesn't allow it. **The David connection is deferred** until more of the story exists. Your current idea: the camera closes on Obed's face, with flash-forwards to scenes from David's life and a voice-over. Any change it brings should be small and come only at the end of the episode. **Round 3 (2026-10-02):** the friend names Obed; Boaz's hesitation from his side; Mr. So-and-so looks at his son; Naomi sings Obed a lullaby (the right kind of song, not the harvest song). Orpah and Chilion's marriage stays a gap to explore later. | [Ruth dossier §12](../story/arcs/07-ruth/DOSSIER.md#12-decisions-for-you); [TREATMENT §8](../story/arcs/07-ruth/TREATMENT.md#8-room-to-expand) |
 | Chronology | **Decided:** a whole-Bible working chronology comes before any arc. The text-first model, with my recommendation adopted on all five forks ("Go with your recommendations for 1–5"): the Exodus in 1446 BC; 215 years in Egypt; Jesus born around 5 BC and crucified on 3 April AD 33; Genesis 1–11 undated until the Genesis discussion; Revelation around AD 95. | [`world/TIMELINE.md`](../world/TIMELINE.md#8-decisions-for-you) |
 | Jesus's humanity | **Decided.** See the decision text in Discussion 002. | [Discussion 002](../discussions/002-jesus-humanity.md#decision) |
 | Your source documents | Keep only the summaries in the repository | §7 below |
@@ -111,3 +112,4 @@ These documents are summarized in the repository. At your request, the originals
 | 2026-10-01 | v1.5: the chronology decided; Rahab settled as Boaz's ancestor; reporting problems as I find them |
 | 2026-10-01 | v1.6: one language rule for the series, with your three tiers; the Name used sparingly; live action as the eventual goal; your storytelling notes |
 | 2026-10-02 | v1.7: the language rule confirmed; the working title *Adonai*; the David connection deferred; links between episodes only at their edges |
+| 2026-10-02 | v1.8: the most-likely-reading rule for ambiguous text; your expansion picks for Ruth; storytelling notes from round 3 |

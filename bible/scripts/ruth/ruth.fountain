@@ -1,0 +1,1992 @@
+Title: RUTH
+Credit: First draft
+Source: The book of Ruth · Treatment v4 · Beat sheet v1
+Draft date: 2 October 2026
+Notes: Series working title: Adonai
+
+/*
+HOW TO READ THIS
+
+This is plain-text screenplay format (Fountain). Open it in Highland, Beat or Slugline to see it laid out as a screenplay, or render it to PDF with afterwriting. A page runs about a minute on screen.
+
+Anything in [[double brackets]] is a working note. Notes don't appear in a rendered script. They say where each line or moment comes from:
+
+  A, B, C, D   dialogue tiers: locked, recorded, implied, invented (ROADMAP §4.2)
+  P1–P6        content levels: Scripture, history, tradition, inference, your conviction, invention (ROADMAP §4.1)
+  ·n           the item's number in the treatment's additions register (TREATMENT §3)
+  "your wording"   a line you wrote or rewrote in your notes on the treatment or the sample scene
+
+Act labels are for reading only. Nothing appears on screen but the one caption the treatment calls for ("Ten years later").
+
+Accents: Ruth, Orpah and every Moabite speak English with a Moabite accent. Naomi, Boaz and every Israelite speak with Bethlehem's (ROADMAP §5.7).
+
+Names: other people say "Ruth" from the start, so the audience knows her name. Naomi never says it until Act Three (3:1). "Yahweh" is heard twice, in the two oaths (1:17; 3:13). Everywhere else it's "God" or "the Lord," and Shaddai is "the Almighty" (ROADMAP §5.5).
+
+The tier mix for the whole script is at the end.
+*/
+
+> PROLOGUE: THE HOUSE OF BREAD <
+
+[[Ruth 1:1–2]]
+
+FADE IN:
+
+EXT. THRESHING FLOOR — RIDGE EAST OF BETHLEHEM — DAWN
+
+[[P1: 1:1, "there was a famine in the land." P2: dossier §6–7.]]
+
+A circle of packed earth on the ridge, worn smooth by generations of oxen. This time of year it should be heaped with grain.
+
+It's bare.
+
+The wind comes up off the desert, hot and dry. It lifts a skin of dust and old chaff off the floor, carries it a little way, and lets it fall.
+
+EXT. BOAZ'S TERRACES — DAWN
+
+Stone terraces step down the hillside below the town. The barley on them stands stunted and white in cracked ground.
+
+BOAZ (33) walks the rows: a landowner's clothes, a laborer's hands. He snaps off a head of barley, rubs it between his palms, and blows.
+
+Husk. Nothing else.
+
+He looks at his empty palm for a long moment.
+
+BOAZ'S WIFE (about 30) comes down the terrace steps with a water jar on her hip. [[P6·1]]
+
+She holds it out. He drinks one mouthful and hands it back. She drinks one mouthful, and stoppers it.
+
+That's the whole conversation. [[P6·1. Remember the jar: it comes back in Act Two.]]
+
+EXT. BETHLEHEM — ELIMELECH'S COURTYARD — MORNING
+
+[[P1: 1:1–2]]
+
+A small stone house around a courtyard. A DONKEY stands being loaded, and not liking it.
+
+ELIMELECH (40) cinches a strap. NAOMI (36) packs what's left of a household into baskets: a lamp, a grinding stone, folded cloth. When a hand reaches in to help, she slaps it away.
+
+MAHLON (17), thin, ties down a rope. He coughs and swallows it.
+
+CHILION (15) lifts the lid of the bread bin. Peers in. Holds the pose. A long, theatrical moment.
+
+CHILION
+(announcing it to the courtyard)
+House of bread.
+[[D. P6·2. Bethlehem means "house of bread" (ROADMAP §5.6).]]
+
+MAHLON
+(not looking up from the rope)
+Every day. You say it every single day.
+[[D]]
+
+CHILION
+Because every day it's still true.
+[[D]]
+
+MAHLON
+It wasn't funny the first time.
+[[D]]
+
+He coughs, which spoils it. Chilion grins.
+
+ELIMELECH
+Enough. Both of you.
+(beat)
+Mahlon, the rope. Chilion, it's empty. Stop opening it.
+[[D. Your wording.]]
+
+Chilion drops the lid. Naomi flicks him with a cloth on her way past, all business.
+
+Then her back is to them, and she's laughing. [[P6·2. Naomi full. Hold on to this laugh, warm and private: she doesn't laugh like this again until the naming in Act Four.]]
+
+EXT. BETHLEHEM — STREET — MORNING
+
+The donkey goes up the street with the family behind it. NEIGHBORS watch from doorways: some sorry, some not. One man shakes his head and goes inside. [[P1: 1:1, "went to sojourn in the country of Moab"]]
+
+At the corner, NAOMI'S FRIEND (about 36) steps out and catches Naomi's arm. She presses a twist of dried figs into Naomi's hands. [[P6·3]]
+
+Naomi looks down at them. In this year, figs are a fortune.
+
+NAOMI'S FRIEND
+Moab, Naomi?
+[[D]]
+
+NAOMI
+There's bread in Moab.
+[[D]]
+
+NAOMI'S FRIEND
+There's Chemosh in Moab.
+[[D. Chemosh, Moab's god: Num 21:29.]]
+
+NAOMI
+Then Chemosh can feed us until it rains here.
+[[D]]
+
+They hold each other a moment too long.
+
+NAOMI'S FRIEND
+Come back.
+[[D. P6·3. Her arc runs "Come back," "Naomi?", the naming (27, 58).]]
+
+Naomi doesn't promise. She goes.
+
+EXT. BETHLEHEM — THE GATE — MORNING
+
+[[P4·4. The right of redemption: Lev 25:25–27.]]
+
+The town gate: a passage through the wall, with stone benches along it in the shade. Two ELDERS sit there. One of them is THE OLD ELDER (70s), thin as a stick.
+
+Elimelech stands before them with THE NEIGHBOR (50s), a careful man. Scraps of silver go onto a hand balance and are weighed. [[P2: silver by weight; there are no coins yet.]]
+
+NAOMI
+That field's worth five times that.
+[[D]]
+
+The neighbor lets out a single small chuckle.
+
+THE NEIGHBOR
+Right now...
+[[D. Your wording.]]
+
+His hand waves at everything around them: the dust, the dead terraces beyond the gate, the empty benches.
+
+THE NEIGHBOR (CONT'D)
+...a field's worth what somebody will pay.
+[[D. Your wording.]]
+
+Elimelech takes the silver.
+
+THE OLD ELDER
+(a voice like a dry branch)
+Witness it. The use of Elimelech's field goes to this man. When Elimelech's family can, they buy it back. Or a kinsman buys it back for them.
+[[D. P4·4. Lev 25:25–27. He'll be on this bench again in Act Four (P6·52).]]
+
+ELIMELECH
+When we come back.
+[[D]]
+
+The old elder looks at him, and says nothing.
+
+EXT. ROAD EAST OF BETHLEHEM — BELOW BOAZ'S TERRACES — LATER
+
+The family on the road east, past the dead terraces.
+
+Boaz comes down to meet them with a sack half full on his shoulder: last year's barley, from his own store. His wife walks behind him. [[P6·5]]
+
+BOAZ
+God be with you, Elimelech.
+[[D. Your wording. His first words in the story are a blessing, as they are in the text (2:4).]]
+
+Elimelech looks at the sack and shakes his head. He knows how little is left in Boaz's storeroom.
+
+Boaz holds it out anyway. Naomi takes it.
+
+NAOMI
+Thank you, Boaz.
+[[D. The audience learns his name here, so "his name is Boaz" (2:19) lands.]]
+
+The two men stand there a moment: the one who's staying, and the one who's going.
+
+ELIMELECH
+You think I'm wrong.
+[[D]]
+
+BOAZ
+I think you have two sons.
+[[D. P6·5. No judgment either way, and a hint, for later, that Boaz has none (P4·42).]]
+
+Chilion eyes the sack.
+
+CHILION
+Is that barley?
+[[D]]
+
+Mahlon elbows him.
+
+EXT. RIDGE EAST OF BETHLEHEM — CONTINUOUS
+
+The land falls away east into desert: bare hills, then the great trench of the Salt Sea, and beyond it, standing blue, the mountains of Moab, with a grey veil of rain hanging over them. [[P6·6. The first of three views across the rift. P2: Moab's mountains are visible from here (dossier §6).]]
+
+Naomi looks back once at Bethlehem.
+
+Then the four of them walk toward the rain until they're too small to see.
+
+FADE TO BLACK.
+
+> ACT ONE: FULL AND EMPTY <
+
+[[Ruth 1:3–22]]
+
+FADE IN:
+
+EXT. MOABITE VILLAGE — THRESHING FLOOR — DAY
+
+[[P4·7. A village on the northern plateau.]]
+
+Green. It has rained here. Barley stands thick on the slopes around a cluster of flat-roofed houses.
+
+On the village floor, oxen drag a threshing sledge in slow circles over cut grain. MEN work the heap with forks.
+
+Up the road comes Elimelech's family: four dusty strangers and a donkey.
+
+The men stop working, one by one.
+
+MOABITE MAN
+(loud enough to carry)
+Israelites.
+[[D. P6·8]]
+
+Another man spits.
+
+An OLD MOABITE sitting at the edge of the floor doesn't get up.
+
+OLD MOABITE
+Their grandfathers came over the river and stabbed our king in his own upstairs room, and locked the door on him.
+[[D. P6·8, on P1: Judg 3:15–25. About 180 years ago.]]
+
+OLD MOABITE (CONT'D)
+Then they held the fords and cut down ten thousand of ours.
+[[D. P6·8, on P1: Judg 3:28–29.]]
+
+Mahlon steps forward.
+
+Without looking at him, Elimelech puts a hand flat on his son's chest, and keeps it there. [[P6·48]]
+
+ELIMELECH
+None of us were there.
+(beat)
+We've come to work.
+[[D. P6·48. Your note: Elimelech as a protective father. Israel has its own old grudge against Moab (Deut 23:4), and he doesn't say it.]]
+
+RUTH'S FATHER (40s), broad and sunburned, the man who owns the floor, looks the four of them over: the donkey's thin load, the boys' arms, the cough. [[P6·9]]
+
+RUTH'S FATHER
+You work my fields, you take half a share of what you cut.
+[[D. P6·9]]
+
+RUTH'S FATHER (CONT'D)
+There's a house at the edge of the village. Some of it still has a roof.
+[[D]]
+
+NAOMI
+Half a share? We had our own—
+[[D]]
+
+ELIMELECH
+Yes.
+[[D. He says it before she's finished. His family eats this winter; that's the only sum he's doing.]]
+
+Naomi looks at him. He doesn't look back.
+
+Ruth's father nods. He isn't cruel. He's a man who knows a bargain when one walks up his road.
+
+RUTH'S FATHER
+(over his shoulder)
+Ruth! Orpah! Water for the men.
+[[D. Her name, said early, by her own family.]]
+
+At the edge of the floor, two girls with water jars have been watching the whole thing: RUTH (14) and her cousin ORPAH (14), who lives in the same house. [[P6·9]]
+
+They come with the water. Orpah looks the Israelite boys over on the way.
+
+ORPAH
+(low, to Ruth)
+The tall one's handsome. If somebody fed him.
+[[D]]
+
+Ruth isn't looking at the boys. She's watching their parents: Elimelech's hand, still flat on his son's chest. Naomi's face.
+
+INT. RUTH'S FATHER'S HOUSE — EVENING
+
+[[P6·10. Your notes: Ruth's own point of view, and Moab's religion shown as sincere.]]
+
+One room, a hearth, a ladder to the sleeping loft. In a niche in the wall stands a small STONE FIGURE OF CHEMOSH. [[P1: Num 21:29; Judg 11:24. P2: household shrines.]]
+
+RUTH'S MOTHER (38) pours a thread of oil before it and speaks to it plainly, the way you'd speak to an elder you trust.
+
+RUTH'S MOTHER
+Keep the rain coming. Keep the fever away from the children. And keep the Israelites honest.
+[[D. P6·10]]
+
+Supper on the floor: bread, lentils. Ruth's father, Ruth's mother, RUTH'S BROTHER (17), Orpah, Ruth.
+
+RUTH'S BROTHER
+You've let Israelites onto our land.
+[[D]]
+
+RUTH'S FATHER
+I've let cheap hands onto our land.
+[[D]]
+
+RUTH'S MOTHER
+They won't sacrifice to Chemosh. Their god doesn't even have a face.
+[[D]]
+
+RUTH
+Then how do they pray to him?
+[[D]]
+
+RUTH'S MOTHER
+Badly. Look how hungry they are.
+[[D]]
+
+Everyone laughs, except Ruth.
+
+INT. THE RUIN — NIGHT
+
+[[P6·49]]
+
+The half-collapsed house at the edge of the village, a week later. New beams lie across it now, with branches and packed mud over them. Fresh plaster on the walls, with the prints of boys' hands still in it.
+
+The boys asleep. Elimelech lies awake. Naomi beside him, awake too.
+
+NAOMI
+Half a share. In Bethlehem you'd have laughed at him.
+[[D]]
+
+ELIMELECH
+In Bethlehem there's nothing to have half of.
+[[D]]
+
+She has no answer to that.
+
+ELIMELECH (CONT'D)
+Two harvests. We put away what we can, we go home, and we buy the field back.
+[[D. P6·49. Lev 25:26–27: the seller may buy it back when he has the means.]]
+
+NAOMI
+Two.
+[[D]]
+
+ELIMELECH
+Two.
+[[D]]
+
+He says it like a man holding a door shut.
+
+EXT. MOABITE VILLAGE — THRESHING FLOOR — DAY
+
+[[P6·50. The end of the harvest.]]
+
+The floor is heaped with grain.
+
+Ruth's father measures out the Israelites' share himself, with a wooden measure, into Elimelech's sack. Scoop. Shake. Pour. Scoop.
+
+Elimelech watches it go in. Something in his face goes still.
+
+Each measure is shaken down and leveled short of the rim. [[P1: false measures, Deut 25:13–15; Amos 8:5; Mic 6:10–11.]]
+
+Mahlon sees his father see it.
+
+The men on the floor go quiet. They want to know what the foreigner will do.
+
+Elimelech takes the scoop out of Ruth's father's hand. He fills the measure to the brim, levels it with the flat of his hand, and holds it out.
+
+ELIMELECH
+A full measure. That was the bargain.
+[[D. P6·50. Your note: what he goes through to protect his family.]]
+
+Ruth's father looks at the measure. At his men, watching. At a stranger with nothing, who isn't going to back down.
+
+Then he laughs, once.
+
+RUTH'S FATHER
+Israelites.
+[[D]]
+
+He lets it stand. He pours the full measure into the sack himself.
+
+At the edge of the floor, Ruth has watched the whole thing. She has never seen anyone face her father down.
+
+EXT. THE RUIN — BEHIND THE HOUSE — LATER
+
+Elimelech, alone. His hands are shaking.
+
+Naomi comes around the corner. She takes his hands in hers. Neither of them says anything. [[P6·50]]
+
+EXT. MOABITE VILLAGE — LANE BELOW THE ROOFTOPS — DAY
+
+[[P6·11. That summer. Moabite mourning: Isa 15:2–3; Jer 48:37–38.]]
+
+Wailing from the rooftops. ORPAH'S GRANDFATHER is dead, and the village mourns him the way Moab mourns: heads shaved, beards cut off, and blades drawn across forearms.
+
+Ruth stands beside Orpah at the bier. There's a fresh cut on her own arm.
+
+At the edge of the crowd, the Israelite family watches. The boys have never seen anything like it.
+
+CHILION
+(whispering)
+Why are they cutting themselves?
+[[D]]
+
+NAOMI
+It's how they grieve here.
+[[D]]
+
+MAHLON
+Should we—
+[[D]]
+
+NAOMI
+No. We don't cut ourselves for the dead. We belong to the Lord.
+[[D. P6·11. That's all the explanation she gives, and it's the one Deuteronomy gives (14:1–2; Lev 19:28).]]
+
+Later, as the crowd breaks up, Ruth passes Mahlon in the lane. He can't stop looking at her arm.
+
+MAHLON
+Doesn't that hurt?
+[[D. P6·11. Their first exchange.]]
+
+RUTH
+It's supposed to.
+[[D]]
+
+She walks on.
+
+EXT. RUTH'S FATHER'S FIELD — DAY
+
+[[P4·12. Autumn: the first rains open the plowing season.]]
+
+Grey sky. The first rains have turned the earth dark. Elimelech walks behind an ox and a wooden plow. He's sweating, and it's cold.
+
+At the next furrow, Mahlon stops.
+
+MAHLON
+You're sweating.
+[[D. P6·51]]
+
+ELIMELECH
+I'm working.
+[[D. P6·51. He hides the fever for three days, because a field that isn't sown is a share that isn't paid.]]
+
+He keeps plowing.
+
+EXT. EDGE OF THE VILLAGE — A NEW GRAVE — DAY
+
+[[P1: 1:3, "Elimelech, Naomi's husband, died." P4·12: the cause is ours; the text gives none and we add no moral.]]
+
+Wet earth heaped over a fresh grave. Naomi, Mahlon, Chilion.
+
+Nobody else. [[P4·12. Mourning rites were for kin and community, and he wasn't theirs.]]
+
+Naomi tears the neck of her dress and sits down in the dirt. [[P1: tearing clothes in mourning, Gen 37:34; 2 Sam 13:31.]]
+
+Chilion tries to say something light. It's what he does.
+
+CHILION
+At least he doesn't have to—
+[[D]]
+
+He can't finish it. Mahlon puts an arm around him and holds on.
+
+EXT. EDGE OF THE VILLAGE — THE GRAVE — LATER
+
+The boys have gone in. Naomi sits by the grave alone.
+
+NAOMI
+You said two.
+[[D. P6·51.]]
+
+EXT. EDGE OF THE VILLAGE — THE GRAVE — DUSK
+
+Footsteps on the path. Naomi looks up.
+
+Ruth, with a loaf wrapped in a cloth. She sets it down beside Naomi without a word, and sits down in the dirt next to her. [[P6·13. Comforters brought bread to mourners: Jer 16:7; Ezek 24:17. A Moabite brings bread to Israelites, the reverse of Deut 23:4.]]
+
+EXT. THE RUIN — COURTYARD — NIGHT
+
+[[P6·14]]
+
+Naomi on her knees in the courtyard, praying under her breath. There's nothing in front of her: no figure, no niche. Just the wall, and the dark.
+
+Ruth, on her way home, stops at the gate and watches.
+
+RUTH
+Who are you talking to?
+[[D]]
+
+NAOMI
+God.
+[[D]]
+
+Ruth looks around the empty courtyard.
+
+RUTH
+Where is he?
+[[D. Israel worships without images (Exod 20:4).]]
+
+Naomi takes a long time to answer.
+
+NAOMI
+Everywhere, they say.
+[[D]]
+
+Her hand sweeps out across the ground and up toward the sky, taking in all of it.
+
+A breath. She's holding back tears.
+
+NAOMI (CONT'D)
+But tonight I couldn't tell you.
+[[D. Your wording.]]
+
+Ruth doesn't go. She stays at the gate.
+
+INT. RUTH'S FATHER'S HOUSE — DAY
+
+[[P6·15. A straight cut to two years later. No caption: Ruth is visibly older.]]
+
+Naomi sits across from Ruth's father, the head of a household now. MAHLON (19) and CHILION (17) stand behind her, broad from three harvests of other men's fields.
+
+Up through the hatch to the roof, out of sight, RUTH (16) and ORPAH (16) lie flat on their stomachs, listening.
+
+RUTH'S FATHER
+Your sons have nothing.
+[[D]]
+
+NAOMI
+My sons have worked your fields for three harvests at half what they're worth. You know what they're worth. You've been counting it.
+[[D]]
+
+RUTH'S FATHER
+And your god? Who will my girls pray to?
+[[D]]
+
+NAOMI
+Whoever they like. Same as now.
+[[D. P6·15. Keeps Ruth's later choice her own.]]
+
+RUTH'S FATHER
+Thirty shekels' weight of silver. Each.
+[[D. P2: a bride-price, Gen 34:12; Exod 22:16–17.]]
+
+Naomi laughs at him.
+
+NAOMI
+For a princess, maybe. In Egypt.
+[[D]]
+
+On the roof, Orpah has to put her hand over her mouth.
+
+They settle somewhere in between. Both of them leave the room thinking they've won.
+
+On the roof, Orpah squeezes Ruth's hand.
+
+EXT. MOABITE VILLAGE — THRESHING FLOOR — NIGHT
+
+[[P1: 1:4. The text never condemns these marriages, and neither do we.]]
+
+A double wedding: drums, torches, a feast spread on the threshing floor, Moabite songs. Mahlon beside Ruth. Chilion beside Orpah.
+
+And in the middle of the dancing, Naomi dances. [[Naomi full, for the last time in Moab. P6·57 answers it in Act Four.]]
+
+FADE TO BLACK.
+
+FADE IN:
+
+SUPER: Ten years later.
+
+[[Your rule: a long jump gets a caption. 1:4, "they lived there about ten years."]]
+
+INT. MAHLON AND RUTH'S HOUSE — NIGHT
+
+[[P4·16]]
+
+Dark. MAHLON (29) coughs in his sleep: the long winter cough he's had every winter for ten years.
+
+RUTH (26) kneels before a niche in the wall. In it stands a clay goddess, a household figure as long as a hand, the kind every house in the village has. [[P2: household figurines are common finds across the region. Not the one her mother gives her later, which is small and worn smooth.]]
+
+Ruth prays without a sound, lips moving, both hands pressed flat to her belly. For a child. With her whole heart.
+
+In the doorway, NAOMI (46) watches. She doesn't interrupt. After a while she goes back to her own bed. [[P4·16. There has been no child in either house.]]
+
+INT. MAHLON AND RUTH'S HOUSE — MORNING
+
+[[P4·16. Ten years of closeness in one morning.]]
+
+The bread oven in the courtyard. Ruth and Naomi bake together the way people do after ten years: without talking, each handing the other the next thing before she asks for it.
+
+Ruth sings under her breath: a Bethlehem harvest song Naomi taught her long ago.
+
+RUTH
+(singing, under her breath)
+A month for the barley, a month for the wheat, a month for the threshing...
+[[D. Placeholder words, modeled on the Gezer calendar, the oldest list of Israel's farming year (P2, 10th century BC). The score writes the song.]]
+
+NAOMI
+(not looking up)
+Measuring.
+[[D]]
+
+Ruth stops. Naomi sings the line properly, without looking up.
+
+NAOMI (CONT'D)
+(singing)
+...a month for the harvest and measuring...
+[[D]]
+
+Through the wall from next door: CHILION and ORPAH, arguing, loudly. Then laughing, louder. [[Your choice: Orpah and Chilion stay a gap to explore later (TREATMENT §8).]]
+
+Ruth and Naomi look at each other. Ruth smiles.
+
+INT. MAHLON AND RUTH'S HOUSE — DAY
+
+[[P6·17. A fever comes through the village (dossier §8: "Chilion" sounds like "sickness").]]
+
+Mahlon in bed, sweating, eyes open. Ruth wringing out a cloth.
+
+Through the wall: a woman's cry. Orpah's. It doesn't stop. [[P1: 1:5. Chilion first, fast.]]
+
+Naomi is on her feet and out the door.
+
+Mahlon heard it too. Ruth puts the cloth on his forehead, and her hand stays there.
+
+INT. MAHLON AND RUTH'S HOUSE — DAY
+
+[[P6·53. Four days later. Your note: something real between them before he dies, and not the song.]]
+
+Mahlon, grey, propped against the wall. Ruth holds a cup to his mouth, because he can't hold it himself. Some of the water runs into his beard. She wipes it away with her thumb.
+
+He's looking at the wall. The one Chilion and Orpah used to argue through.
+
+It's quiet now.
+
+MAHLON
+He'd have a joke for this.
+[[D. P6·53]]
+
+RUTH
+It wouldn't be funny.
+[[D]]
+
+He almost laughs. It turns into the cough, and the cough takes a long time. She holds him through it.
+
+INT. MAHLON AND RUTH'S HOUSE — NIGHT
+
+[[P6·54]]
+
+One lamp. Naomi sits up with Mahlon, a wet cloth in her hand. Ruth has fallen asleep sitting against the wall.
+
+Naomi hums under her breath. A slow, plain tune: the one she sang to both her boys when they were small.
+
+Nobody hears it but him. [[P6·54. The lullaby, planted once and never pointed at. It comes back on the roof at the end.]]
+
+EXT. EDGE OF THE VILLAGE — THREE GRAVES — DAY
+
+[[P1: 1:5. P6·18: now they're kin, so Moab mourns them properly. Jer 48:37.]]
+
+Two new graves beside Elimelech's. This time the whole village has come.
+
+Wailing from the rooftops. RUTH'S MOTHER (50) draws a blade across her own forearm, then takes Ruth's arm. Ruth lets her. [[P6·18]]
+
+Beside them, Orpah cuts her own arms for Chilion.
+
+Naomi tears her clothes and sits in the dust between the three graves.
+
+LATER. The crowd thins. Naomi takes Ruth's arm, tears a strip from the hem of her own ruined dress, and binds the cuts. [[P6·18]]
+
+[[P1: 1:5, "the woman was left without her two sons and her husband." From here the text stops using her name: she's just "the woman."]]
+
+EXT. MOABITE MARKET — DAY
+
+[[C·19]]
+
+A market on the plateau: wool, salt, pots, a few sheep. Naomi with a basket, thinner, older than her years.
+
+Behind her, a man is haggling in a Judean accent, Bethlehem's sounds in every word. She turns.
+
+A TRADER (40s), with a donkey loaded with oil jars.
+
+NAOMI
+Where are you from?
+[[D]]
+
+TRADER
+Judah. The hills by Bethlehem.
+[[D]]
+
+NAOMI
+How is it there?
+[[D]]
+
+TRADER
+The rain came back. God has visited his people.
+[[C·19. The narrator's line (1:6), put in his mouth.]]
+
+He slaps the side of a jar.
+
+TRADER (CONT'D)
+There's bread in Bethlehem.
+[[C·19. 1:6, "to give them bread."]]
+
+NAOMI
+Do you know—
+[[D]]
+
+She stops. Whoever she was going to ask about, she doesn't. She isn't ready to hear who's dead.
+
+She goes home, and starts to pack. [[P1: 1:6]]
+
+EXT. MOABITE VILLAGE — RUTH'S PARENTS' HOUSE — BEFORE DAWN
+
+[[P6·20. Ruth's parents are alive: 2:11.]]
+
+Grey light on the plateau. Wet grass. Somewhere a dog starts barking, thinks better of it, and stops.
+
+Ruth stands in the doorway of her parents' house with a bundle on her back. Her forearms are bound in strips of dark cloth over cuts that haven't healed. [[P6·18]]
+
+Ruth's mother sets her lamp on the step and goes straight for the strap of the bundle.
+
+RUTH'S MOTHER
+You never could tie a knot.
+[[D]]
+
+She unties it and ties it again, harder.
+
+Inside the house, RUTH'S FATHER (50s) sits by the cold hearth with his back to the door.
+
+RUTH'S MOTHER
+When will you be back?
+[[D]]
+
+Ruth doesn't answer.
+
+Her mother's hands stop on the strap. Then they finish the knot anyway.
+
+RUTH'S MOTHER
+Their god took your husband. He took everything that woman had. And you'll follow her to him?
+[[D]]
+
+RUTH
+They're my family.
+[[D]]
+
+Her mother looks at her for a long moment. Then she goes inside, past the father, who doesn't move, and comes back with something closed in her fist.
+
+Her own little clay goddess, the length of a thumb, worn smooth from a lifetime of handling. [[P6·20. P2: household figurines are common finds across the region. Not the household figure from the fever year.]]
+
+She presses it into Ruth's hand and folds Ruth's fingers over it.
+
+RUTH'S MOTHER
+Then take her. Somebody should look after you.
+[[D]]
+
+Ruth looks past her mother, into the house.
+
+RUTH
+Father.
+[[D]]
+
+He doesn't turn. But his hand, resting on his knee, closes into a fist and stays that way. [[P6: Moab layered, not all good or all bad.]]
+
+Down the lane, two shapes wait in the half-dark with bundles on their backs: NAOMI (48) and ORPAH (26). Orpah lifts a hand.
+
+Ruth kisses her mother, tucks the goddess into her sash, and goes.
+
+Her mother stands in the doorway with the lamp and watches the three of them past the last house, the way Boaz once watched Elimelech's family go. [[P6·20]]
+
+EXT. PLATEAU ROAD — MORNING
+
+[[P1: 1:7, "they went on the way to return to the land of Judah"]]
+
+The plateau rolls west, green after the winter rains, with red poppies in the wild barley. Three women on the road, Naomi a few steps ahead.
+
+Orpah walks backward in front of Ruth, talking. She's never been able to stand a silence.
+
+ORPAH
+Is it far?
+[[D]]
+
+NAOMI
+Far enough.
+[[D]]
+
+ORPAH
+Is there a well?
+[[D]]
+
+NAOMI
+By the gate.
+[[D. P1: 2 Sam 23:15, "the well of Bethlehem that is by the gate." The well David's men will fight their way to.]]
+
+ORPAH
+(to Ruth, delighted)
+By the gate. We'll know everybody's business in a week.
+[[D]]
+
+Ruth smiles. But she's watching Naomi.
+
+ORPAH
+Will they like us?
+[[D]]
+
+Naomi doesn't answer.
+
+Ruth hears what that means. Orpah doesn't, or decides not to, and turns around to walk forward again.
+
+Naomi's lips are moving. No sound. She's saying something to herself, over and over, the way you rehearse a thing you don't want to say. [[P6·21]]
+
+Ruth sees it.
+
+EXT. EDGE OF THE PLATEAU — CONTINUOUS
+
+The road tops a last rise, and the world falls away.
+
+Below them is the rift: a thousand meters of broken slope, then the Jordan, a green thread through brown country. To the south lies the Salt Sea, flat and pale. And across all of it, blue in the haze, the hills of Judah. [[P2: dossier §6. P6·21: the second of three views across the rift.]]
+
+Naomi stops. The other two stop behind her.
+
+For a while she just looks. Somewhere over there is Bethlehem.
+
+She sets down her bundle and turns to them. She opens her mouth, and nothing comes.
+
+Her face does it first. The arithmetic: three mouths, no field, no man, and a town that won't want two Moabite widows. Then the pain of it. Then a tiredness that goes all the way down. Then, slowly, something that settles. [[Your note: calculation, pain, exhaustion, acceptance.]]
+
+NAOMI
+Go back.
+[[B: 1:8]]
+
+ORPAH
+(a small, confused laugh)
+What?
+[[D]]
+
+NAOMI
+Both of you. Go home to your mothers.
+[[B: 1:8. "Her mother's house": Ruth's is the house we just left.]]
+
+Her voice cracks. She pushes through it.
+
+NAOMI (CONT'D)
+May God be as good to you as you've been to the dead. And to me.
+[[B: 1:8]]
+
+NAOMI (CONT'D)
+May he give each of you a husband you deserve.
+[[B: 1:9, your wording. In Hebrew the "rest" she wishes them is the security of a husband's house, which your line says plainly.]]
+
+She kisses Orpah. She kisses Ruth. [[P1: 1:9]]
+
+That's what breaks them. Orpah cries out loud, and then Ruth does. [[P1: 1:9, "they lifted up their voices and wept"]]
+
+ORPAH
+No, no. We're coming with you.
+
+RUTH ^
+We're coming with you.
+[[B: 1:10, your wording. Dual dialogue: Orpah first, Ruth over her, not in unison.]]
+
+NAOMI
+Go back, my daughters. Why would you come with me?
+[[B: 1:11]]
+
+A laugh that isn't one. Her hand goes flat against her own stomach.
+
+NAOMI (CONT'D)
+Am I going to have more sons for you to marry?
+[[B: 1:11, "sons in my womb." The gesture carries the image.]]
+
+Nobody laughs.
+
+NAOMI (CONT'D)
+Go home. I'm too old for a husband. And even if I said there was hope, even if I had a husband tonight, and had sons... would you wait for them to grow up? Stay alone all those years?
+[[B: 1:12–13]]
+
+She shakes her head.
+
+NAOMI (CONT'D)
+No. This is far more bitter for me than for you.
+[[B: 1:13. Of the three ways the Hebrew can be read, the most likely: the oldest translations, the grammar (Gen 19:9) and her own "very bitter" at the well (1:20) all point this way (TREATMENT §7).]]
+
+NAOMI (CONT'D)
+(quieter)
+The Lord's hand has turned against me.
+[[B: 1:13]]
+
+They cry again, all three of them. [[P1: 1:14]]
+
+Orpah wipes her face with both hands. She looks at Naomi for a long time. Then she steps in and kisses her. Not a protest this time. A goodbye. [[P1: 1:14]]
+
+ORPAH
+(into Naomi's shoulder)
+Mother.
+[[D]]
+
+Naomi holds her tight, then lets her go.
+
+Ruth hasn't moved. Her hand has closed on Naomi's sleeve, and it stays closed. [[P1: 1:14, "Ruth clung to her." The verb is the one in Gen 2:24.]]
+
+Orpah turns to her.
+
+ORPAH
+Ruth. Come with me.
+[[D]]
+
+Ruth shakes her head.
+
+With her free hand she takes the clay goddess from her sash and presses it into Orpah's palm.
+
+RUTH
+Give her back to my mother.
+[[D. P6·22]]
+
+Orpah looks down at it, and understands. She takes Ruth's face in both hands and rests her forehead against Ruth's. Then she picks up her bundle and goes.
+
+Down the road, alone, back toward the village, with the goddess in her fist. A little way off she turns and looks back. [[P6·22. She did what Naomi asked. The film never blames her.]]
+
+Naomi watches her go: the bundle on her back, her people's village ahead of her, the goddess in her fist.
+
+Then Naomi looks down at Ruth's hand on her sleeve. She puts her own hand over it, and gently, one finger at a time, starts to work it loose.
+
+NAOMI
+You know you should go back.
+[[B: 1:15, your wording. The verse's "to her people and her gods" isn't said: we've just watched it. Ruth answers it in the next verse (TREATMENT §7).]]
+
+NAOMI (CONT'D)
+Go after her.
+[[B: 1:15]]
+
+Ruth looks back down the road. Orpah, getting smaller. Past her, the smudge of smoke over the village. Her mother's house is in there somewhere.
+
+Then the wind comes.
+
+It comes up out of the desert behind them, out of the east, hot and dry. It flattens the grass toward the edge. It pulls Ruth's shawl forward and leans on her back like a hand, toward the land across the rift. [[P5·23. Deniable: she can read it as a sign, and the audience can read it as weather. Hot east winds are typical of spring.]]
+
+Ruth doesn't look up at the sky. For a moment she doesn't look at anything. Something in her face goes still.
+
+She turns back to Naomi. Her hand is still on Naomi's sleeve. Naomi never got it loose.
+
+RUTH
+Don't ask me to leave you, or to turn back.
+[[B: 1:16, your wording]]
+
+Naomi starts to answer...
+
+RUTH (CONT'D)
+Where you go, I'll go. Where you stay, I'll stay. Your people will be my people, and your God my God.
+[[B: 1:16]]
+
+RUTH (CONT'D)
+Where you die, I'll die, and that's where I'll be buried.
+[[B: 1:17]]
+
+A beat. Then, steady, every word meant:
+
+RUTH (CONT'D)
+May Yahweh do that to me, and worse, if anything but death comes between us.
+[[B: 1:17. The first time she says the Name, and she says it in an oath (ROADMAP §5.5).]]
+
+Naomi looks at her for a long time. We watch her take it in: the girl who brought bread to a grave nobody else came to, the girl at her oven for ten years, the girl who won't let go.
+
+Then Naomi nods. Once. Small and direct, and accepting. [[P6·24, your note]]
+
+She says nothing more. [[P1: 1:18]]
+
+She bends for her bundle. Ruth gets there first, swings it up onto her shoulder beside her own, and Naomi lets her.
+
+They start down.
+
+EXT. EDGE OF THE PLATEAU — CONTINUOUS — WIDE
+
+Two small figures going down into the rift.
+
+Far behind them on the road east, a third figure has stopped to watch them go. After a while she turns and walks home.
+
+EXT. JORDAN FORDS OPPOSITE JERICHO — DAY
+
+[[P4·25. Spring is flood season: "the Jordan overflows all its banks throughout the time of harvest" (Josh 3:15).]]
+
+The floor of the rift. Heat. Tamarisk and reeds. The river is high with spring: brown, fast, waist-deep at the ford.
+
+They haven't spoken since the edge.
+
+Ruth wades in first with both bundles on her head, feeling for the footing with her feet. On the far bank she sets them down, and comes back for Naomi.
+
+Halfway across, Naomi slips. The current takes her legs out from under her.
+
+Ruth's arm is around her before she goes under, and it holds.
+
+They come up the far bank soaked and gasping, and sit down in the mud. Above them stands a long, ruined mound: Jericho, its walls a broken heap. [[P1: Josh 6:26; nobody rebuilds it until 1 Kgs 16:34. Rahab's city; nobody says so.]]
+
+Naomi looks at Ruth's arm, still around her. She doesn't say anything.
+
+She doesn't push it away, either.
+
+EXT. ROAD INTO THE HILLS OF JUDAH — DAWN
+
+[[P4·26]]
+
+The last morning. The road climbs through terraced hills. By the roadside stands a weathered pillar of stone, taller than a man. [[P1: Gen 35:19–20, the pillar over Rachel's grave on the way to Bethlehem.]]
+
+Ruth doesn't know what it is. Naomi touches it as she passes, the way you'd touch a grandmother's hand.
+
+EXT. BOAZ'S TERRACES — MORNING
+
+The same terraces we saw dead in the prologue.
+
+The barley stands gold, terrace after terrace, heavy and ripe. Nobody's cutting it yet. [[P1: 1:22]]
+
+Ruth can't know whose they are. We do.
+
+EXT. BETHLEHEM — THE WELL BY THE GATE — DAY
+
+[[P1: 1:19. P6·27. The well by the gate: 2 Sam 23:15.]]
+
+Women at the well with their jars, in the shade of the town wall.
+
+Two travelers come up the road: an older woman, a younger one with an accent nobody here has heard yet and cloth bound around her arms.
+
+One of the women at the well straightens up, and stares. NAOMI'S FRIEND (48), twelve years older.
+
+NAOMI'S FRIEND
+Naomi?
+[[B: 1:19, your wording]]
+
+The other women look up. It goes around the well like wind through barley.
+
+WOMEN AT THE WELL
+(overlapping)
+Naomi? It's Naomi. Elimelech's Naomi...
+[[B: 1:19, "the whole town was stirred because of them"]]
+
+The friend comes toward her with her arms out.
+
+Naomi stops her. Not with her hands. With her voice.
+
+NAOMI
+Don't call me that.
+[[B: 1:20, your wording]]
+
+NAOMI (CONT'D)
+Don't call me sweet. Call me Mara, because the Almighty has made my life very bitter.
+[[B: 1:20, your wording. "Sweet" glosses Naomi; "bitter" glosses Mara.]]
+
+NAOMI (CONT'D)
+I went away full, and the Lord has brought me back empty.
+[[B: 1:21]]
+
+Beside her, Ruth hears it. Empty. The camera finds her face.
+
+NAOMI (CONT'D)
+Why call me Naomi, when the Lord has testified against me, and the Almighty has brought this on me?
+[[B: 1:21, your wording]]
+
+Silence at the well.
+
+Nobody introduces the foreigner. The women look at her the way the town will look at her for weeks: the accent, the cuts on her arms. The Moabite.
+
+EXT. NAOMI'S HOUSE — DAY
+
+[[P6·28]]
+
+The house Naomi left twelve years ago. The roof has fallen in. Thistles fill the courtyard. A lizard on the warm stones.
+
+Naomi walks into the middle of it and sits down. Just sits.
+
+Ruth sets down the bundles. Looks at the fallen beams. Then she pushes her sleeves up over the bound cuts and starts clearing stones, the way Elimelech once cleared a ruin in Moab. [[P6·28. Naomi empty: the bottom of her arc, at the middle of the episode.]]
+
+EXT. BOAZ'S TERRACES — EVENING
+
+[[P1: 1:22, "they came to Bethlehem at the beginning of the barley harvest"]]
+
+Evening light on ripe barley, terrace after terrace, all the way down the hill.
+
+FADE TO BLACK.
+
+> ACT TWO: THE FIELD <
+
+[[Ruth 2]]
+
+FADE IN:
+
+EXT. NAOMI'S HOUSE — DAWN
+
+The ruin, with the sky for a roof. Some of the stones are stacked against the wall now.
+
+Ruth is already up, retying the cloth on her arms. Naomi lies on her mat with her face to the wall.
+
+RUTH
+Let me go out to the fields and glean behind anyone who'll let me.
+[[B: 2:2]]
+
+A long pause.
+
+NAOMI
+Go, my daughter.
+[[B: 2:2. It's all she has in her.]]
+
+EXT. BARLEY FIELDS BELOW BETHLEHEM — MORNING
+
+[[P1: 2:3. P2: gleaning, Lev 19:9–10; Deut 24:19.]]
+
+The whole valley at work. REAPERS, young men, cut the barley in handfuls with sickles. YOUNG WOMEN bind the sheaves behind them. And behind them come the GLEANERS, bent double, picking up what falls: widows, orphans, the poorest people in town.
+
+Ruth walks the field edges, looking for a place. One field. Then another.
+
+At a boundary stone she stops, for no reason we can see. [[P1: 2:3, "she happened to come to the part of the field belonging to Boaz." The camera holds a beat longer than it needs to (TREATMENT §5).]]
+
+A young FOREMAN (about 25) is walking the line with a stick.
+
+RUTH
+Can I glean here? Among the sheaves, behind the reapers?
+[[B: 2:7. We watch her ask, so the foreman doesn't need to report it later.]]
+
+FOREMAN
+Behind the reapers, like everyone else. The sheaves are the master's business.
+[[D. P4·29]]
+
+She nods, and goes to the back of the line.
+
+EXT. BOAZ'S FIELD — MORNING
+
+[[P6·30]]
+
+The work is brutal. Sun. Dust. Stubble that cuts through sandals.
+
+The other gleaners don't make room for her. When she bends for a stalk, someone else's hand is already there.
+
+A YOUNG REAPER flicks a stalk at her head. She doesn't react.
+
+Later, a BIG REAPER walking past knocks her basket over with his foot. The young men laugh.
+
+Ruth kneels and picks up every grain. Every single one.
+
+Two gleaners work near her: a YOUNG GLEANER (20s), sharp-tongued, and an OLD GLEANER (60s), who never stops working.
+
+YOUNG GLEANER
+(loud enough)
+A Moabite, gleaning in Bethlehem. Let her glean in Moab.
+[[D. P6·31]]
+
+OLD GLEANER
+(without looking up)
+You're in Boaz's field. He's a man of worth.
+[[D. P6·31. Carries the narrator's "a man of worth" (2:1), so "a woman of worth" (3:11) echoes it.]]
+
+OLD GLEANER (CONT'D)
+And his own family comes from Rahab.
+[[D. P6·31. Matt 1:5; Josh 6:25. TIMELINE §7.]]
+
+YOUNG GLEANER
+Rahab the prostitute?
+[[D. Josh 2:1]]
+
+OLD GLEANER
+Rahab of Jericho. And you're eating her family's barley, so mind your mouth.
+[[D]]
+
+Ruth keeps her head down. She's heard all of it.
+
+EXT. BOAZ'S FIELD — LATER
+
+[[P1: 2:4, "And look, Boaz came from Bethlehem." The camera holds a beat.]]
+
+A man comes down the path from town: BOAZ (45). There's grey in his beard now, and nobody walks behind him.
+
+BOAZ
+(calling out to the field)
+The Lord be with you!
+[[B: 2:4]]
+
+REAPERS
+(calling back)
+The Lord bless you!
+[[B: 2:4]]
+
+He looks out over his field, and sees her at once: a stranger at the back of the gleaners.
+
+BOAZ
+(to the foreman)
+Whose girl is that?
+[[B: 2:5]]
+
+FOREMAN
+(careful, a little defensive)
+She's the Moabite girl, the one who came back with Naomi from Moab.
+[[B: 2:6, your wording]]
+
+FOREMAN (CONT'D)
+She's been on her feet since morning. Hardly sat down in the shelter.
+[[B: 2:7, your wording]]
+
+Boaz looks at her for a long moment. Naomi. Moab.
+
+EXT. BOAZ'S FIELD — CONTINUOUS
+
+Boaz walks out through the stubble to Ruth. The gleaners near her go very still.
+
+BOAZ
+Don't go and glean in anyone else's field. Don't leave this one. Stay close to my young women.
+[[B: 2:8]]
+
+BOAZ (CONT'D)
+Keep your eyes on the field they're reaping, and follow them. I've told the young men not to touch you.
+[[B: 2:9]]
+
+He glances at the big reaper. The big reaper finds something interesting to look at in the barley.
+
+BOAZ (CONT'D)
+When you're thirsty, go to the jars and drink what the young men have drawn.
+[[B: 2:9]]
+
+Ruth goes down on her face in the stubble, forehead to the ground. [[P1: 2:10]]
+
+RUTH
+Why would you notice me? I'm a foreigner.
+[[B: 2:10. In Hebrew, "notice" (hikkir) and "foreigner" (nokhriyah) come from the same root and sound alike. An option that keeps some of the play: "Why would you know me? I'm a stranger."]]
+
+BOAZ
+I've heard what you've done for your mother-in-law since your husband died.
+[[B: 2:11, your wording]]
+
+BOAZ (CONT'D)
+How you left your father and your mother and the land you were born in, and came to a people you didn't know.
+[[B: 2:11. The words echo God's call to Abraham (Gen 12:1). Nobody says so.]]
+
+BOAZ (CONT'D)
+May the Lord repay you for it. May you be paid in full by the Lord, the God of Israel, under whose wings you've come to take shelter.
+[[B: 2:12. He has no idea he's describing what he'll do himself.]]
+
+RUTH
+You comfort me. You speak to my heart, and I'm not even one of your servants.
+[[B: 2:13, your wording]]
+
+EXT. BOAZ'S FIELD — THE SHELTER — MIDDAY
+
+[[P1: 2:14]]
+
+A shade of branches on poles at the edge of the field. The workers eat: bread, a bowl of sour wine for dipping, roasted grain in a pan over a small fire.
+
+Ruth sits apart, at the end of the reapers.
+
+BOAZ
+Come over here. Have some bread, and dip it in the wine.
+[[B: 2:14]]
+
+She comes. The reapers shift to make room, because he's watching. She dips her bread.
+
+Boaz takes a handful of roasted grain from the pan and holds it out to her himself, in front of everyone. [[P1: 2:14]]
+
+She eats until she's full. [[P1: 2:14. The first full meal in the story.]]
+
+Then she folds what's left into her shawl.
+
+When she goes back to work, Boaz speaks to his young men, quietly.
+
+BOAZ
+Let her glean even among the sheaves, and don't shame her.
+[[B: 2:15. P4·29: what she asked the foreman for.]]
+
+BOAZ (CONT'D)
+Pull some stalks out of the bundles and leave them for her to pick up. Don't scold her.
+[[B: 2:16]]
+
+He looks at the big reaper.
+
+BOAZ (CONT'D)
+You.
+[[D. P6·32]]
+
+The big reaper's face falls.
+
+EXT. BOAZ'S FIELD — AFTERNOON
+
+The big reaper, sullen, pulls stalks out of a sheaf and drops them in Ruth's path, one at a time.
+
+She looks at the stalks. At him. He doesn't look back.
+
+She picks them up. [[P6·32. Paid off within one day.]]
+
+EXT. EDGE OF BOAZ'S FIELD — EVENING
+
+[[P1: 2:17]]
+
+Ruth beats out her gleanings with a stick on a flat rock. The barley comes loose and runs into a pile.
+
+It's a big pile. It fills her shawl and then some: a load that bends her back. [[P1: 2:17, about an ephah, around thirty pounds. An absurd amount for one day.]]
+
+EXT. BETHLEHEM — STREET — DUSK
+
+She carries it home through town. People turn to watch her go by: the Moabite, with a sack of barley the size of a child on her back.
+
+EXT. NAOMI'S HOUSE — DUSK
+
+[[P1: 2:18–22]]
+
+The courtyard is half cleared: stones stacked, thistles gone. Still no roof.
+
+Naomi sits where she's sat all day. She looks up at the sound of the gate.
+
+Ruth lets the load down onto the ground. It lands heavily.
+
+Naomi looks at it.
+
+Then she gets to her feet. [[Naomi: the first time she's stood up for anything since the well.]]
+
+NAOMI
+Where did you glean today? Where did you work?
+[[B: 2:19]]
+
+She opens the sack. Puts her hand into the grain, all the way to the wrist.
+
+NAOMI (CONT'D)
+Blessed is the man who noticed you!
+[[B: 2:19]]
+
+Ruth unties her shawl and holds out what she saved from lunch. Naomi takes the roasted grain, and eats. [[P1: 2:18]]
+
+RUTH
+The man I worked with today... his name is Boaz.
+[[B: 2:19]]
+
+Something wakes up in Naomi's face.
+
+NAOMI
+Boaz.
+[[D]]
+
+NAOMI (CONT'D)
+He gave us his own barley, the day we left.
+[[D. P6·33]]
+
+NAOMI (CONT'D)
+The Lord bless him! He hasn't stopped being kind, to the living or the dead!
+[[B: 2:20. Whose kindness, the Lord's or Boaz's? The Hebrew leaves it open, and so does her delivery.]]
+
+NAOMI (CONT'D)
+That man is family.
+[[B: 2:20, your wording]]
+
+RUTH
+(looking up)
+Family?
+[[D. P6·34]]
+
+NAOMI
+One of our redeemers.
+[[B: 2:20]]
+
+Ruth doesn't know the word. Naomi sees that, and explains it the way you would to a foreigner.
+
+NAOMI (CONT'D)
+When a family loses something, its land, or a man's freedom, the family has the right to buy it back. Whoever buys it back is the redeemer.
+[[D. P6·34. Lev 25:25, 47–49.]]
+
+Ruth takes that in. Then she warms up.
+
+RUTH
+He even told me to stay close to his young men until they've finished the whole harvest.
+[[B: 2:21, your wording]]
+
+NAOMI
+(drily)
+His young women, my daughter.
+[[B: 2:22, your wording]]
+
+NAOMI (CONT'D)
+Better that you go out with his women, so no one bothers you in somebody else's field.
+[[B: 2:22, your wording]]
+
+It's the first joke Naomi's made since Moab. Ruth almost smiles.
+
+EXT. BOAZ'S FIELD — THE SHELTER — MIDDAY
+
+[[P6·55. Your pick: Boaz's hesitation, from his side. Some weeks later: the wheat harvest (2:23).]]
+
+This time we stay with Boaz.
+
+At the midday meal he takes up a handful of roasted grain from the pan and starts across the field toward Ruth with it.
+
+Halfway there, he stops.
+
+One of the young reapers has said something that makes her laugh, and the young men around her are laughing too: young, quick, loud.
+
+Boaz looks at them. Then at the grain in his hand.
+
+He turns back, and holds it out to the foreman.
+
+BOAZ
+Take her this.
+[[D. P6·55]]
+
+FOREMAN
+You could take it yourself.
+[[D]]
+
+Boaz looks at the young men again.
+
+BOAZ
+Take it.
+[[D. Pays off at the floor: "you haven't gone after the young men" (3:10).]]
+
+INT. BOAZ'S HOUSE — NIGHT
+
+[[P6·55]]
+
+A good house, and too quiet. Boaz eats alone by one lamp.
+
+In the corner stands a water jar: the one his wife carried down the terraces in the famine. It's dry. Nobody has moved it.
+
+EXT. BOAZ'S FIELD — DAY
+
+[[P6·35. The last day of the harvest. 2:23: she stayed close to his young women until the barley and wheat harvests were done.]]
+
+The last of the wheat. Ruth binds sheaves among Boaz's young women now.
+
+Toward the end of the day, the young women start a harvest song. Ruth knows it, and sings it with them: the song Naomi taught her in Moab. She gets every word right.
+
+YOUNG WOMEN
+(singing)
+...a month for the harvest and measuring...
+[[D. The harvest song (P6·16; P6·35).]]
+
+The young women look at her differently after that. The one binding beside her, a YOUNG WOMAN (17), keeps glancing over.
+
+YOUNG WOMAN
+Where did you learn that?
+[[D]]
+
+RUTH
+Moab.
+[[D]]
+
+The young woman laughs, surprised. Then, lower, with a look across the field:
+
+YOUNG WOMAN
+He's been alone since the famine took his wife.
+[[D. P6·35. P6·1.]]
+
+Ruth follows her look. Boaz, at the edge of the field, watching her.
+
+When she looks up, he looks away. [[P6·35. Kind, correct and at a distance, for seven weeks.]]
+
+The cuts on Ruth's arms have healed pale.
+
+INT. NAOMI'S HOUSE — NIGHT
+
+[[Naomi: refilling.]]
+
+The house has a roof again: new beams, branches, packed mud. Along the wall, jars full of grain. A pot on the fire, and Naomi at it, cooking.
+
+Ruth has fallen asleep by the lamp, worn out.
+
+Naomi watches her for a long time.
+
+Then her eyes go to the little flask of oil on the shelf. [[P4·36. She makes up her mind. The oil is for 3:3.]]
+
+FADE TO BLACK.
+
+> ACT THREE: THE THRESHING FLOOR <
+
+[[Ruth 3]]
+
+FADE IN:
+
+INT. NAOMI'S HOUSE — DAY
+
+[[P1: 3:1]]
+
+Naomi sits down across from Ruth. Deliberately, the way she once sat down across from Ruth's father.
+
+NAOMI
+Ruth.
+[[B: 3:1, your wording. The first time Naomi says her name. In the Hebrew she never does (TREATMENT §7).]]
+
+Ruth looks up. Twelve years, and Naomi has never once called her by her name.
+
+NAOMI (CONT'D)
+Isn't it time I found you a place to rest, where things will go well for you?
+[[B: 3:1, your wording. She wished them husbands on the road (1:9); now she goes and finds one.]]
+
+NAOMI (CONT'D)
+Boaz is family. You've been with his young women all harvest.
+[[B: 3:2]]
+
+NAOMI (CONT'D)
+Tonight he's winnowing barley on the threshing floor.
+[[B: 3:2]]
+
+NAOMI (CONT'D)
+So wash. Put on oil. Put on your cloak, and go down to the floor.
+[[B: 3:3]]
+
+NAOMI (CONT'D)
+Don't let him see you until he's finished eating and drinking. When he lies down, notice where.
+[[B: 3:3–4]]
+
+NAOMI (CONT'D)
+Then go in, uncover his feet, and lie down. He'll tell you what to do.
+[[B: 3:4]]
+
+Ruth looks at her for a long time.
+
+RUTH
+I'll do everything you say.
+[[B: 3:5]]
+
+INT. NAOMI'S HOUSE — EVENING
+
+[[P4·36. 2 Sam 12:20: washing and oil end mourning.]]
+
+Water in a basin. Ruth washes.
+
+She takes off the widow's clothes she's worn since Moab, and folds them. [[P1: widow's garments, Gen 38:14, 19.]]
+
+She rubs oil into her arms, over the pale scars.
+
+Naomi combs out Ruth's hair. Her hands are shaking. [[P4·36. She knows what she's sending Ruth into: a threshing floor at night, men and wine (Hos 9:1), and a name that can't be won back once it's lost. If she's wrong about Boaz, she's ruined her.]]
+
+Ruth reaches up and puts her hand over Naomi's.
+
+Naomi's hands go still. She finishes the braid.
+
+EXT. THRESHING FLOOR — RIDGE EAST OF BETHLEHEM — SUNSET
+
+[[P1: 3:2, 7]]
+
+The floor from the first shot of the prologue. Now it's heaped with grain.
+
+Men toss forkfuls into the evening breeze off the sea. The chaff streams away gold, and the grain falls back heavy. [[P2: winnowing uses the steady evening wind from the west. The hot desert wind is "not to winnow" (Jer 4:11).]]
+
+Boaz eats and drinks with his workers by firelight. He laughs at something. His heart is content. [[P1: 3:7]]
+
+When the work's done, the men lie down to sleep around the floor in their cloaks, to guard the grain. Boaz lies down at the far end of the grain heap. [[P1: 3:7. P2: owners slept by the harvest to guard it.]]
+
+EXT. BELOW THE THRESHING FLOOR — NIGHT
+
+[[P6·37]]
+
+Ruth waits in the dark among the rocks below the floor, wrapped in her cloak. Moonlight. Snoring.
+
+A WORKER gets up and walks a few paces toward where she's hiding.
+
+She stops breathing.
+
+He relieves himself against a rock, and goes back to his cloak.
+
+She waits longer.
+
+Then she goes up. Barefoot. Quiet. Past the sleeping men, to the far end of the grain heap.
+
+She kneels at his feet. She lifts the edge of his cloak off them, and folds it back.
+
+She lies down. [[P1: 3:7, "she came softly, uncovered his feet, and lay down"]]
+
+EXT. THRESHING FLOOR — MIDNIGHT
+
+[[P1: 3:8]]
+
+Cold. Boaz shivers in his sleep and reaches down for the cloak that isn't covering his feet.
+
+He jerks up and twists around. There's a shape at his feet. A woman.
+
+BOAZ
+(a whisper)
+Who are you?
+[[B: 3:9]]
+
+RUTH
+I'm Ruth, your servant.
+[[B: 3:9]]
+
+RUTH (CONT'D)
+Spread your wing over your servant. You're a redeemer.
+[[B: 3:9. "Wing" (kanaf) is the corner of a cloak, and the word Boaz used in the field (2:12). Spreading it is the marriage gesture (Ezek 16:8).]]
+
+Naomi told her he'd tell her what to do. Instead, she's telling him. And she's tied her own marriage to the rescue of Naomi's family. [[P1: 3:4, 9]]
+
+They're very close. The dark, the cold, her breath, the scent of the oil. [[Principle 8: at full strength, and nothing explicit.]]
+
+A long moment.
+
+BOAZ
+The Lord bless you, my daughter.
+[[B: 3:10]]
+
+BOAZ (CONT'D)
+This kindness is even greater than the first. You haven't gone after the young men, poor or rich.
+[[B: 3:10. Pays off P6·55.]]
+
+BOAZ (CONT'D)
+Now don't be afraid. I'll do everything you ask. The whole town knows you're a woman of worth.
+[[B: 3:11. "Worth": the old gleaner's word for him (P5·38).]]
+
+His hand goes to the corner of his cloak, the wing, and stops there. [[P6·39]]
+
+BOAZ (CONT'D)
+It's true that I'm a redeemer. But there's one closer than I am.
+[[B: 3:12]]
+
+BOAZ (CONT'D)
+Stay here tonight. In the morning, if he'll redeem you, good. Let him. And if he won't...
+[[B: 3:13]]
+
+He looks at her.
+
+BOAZ (CONT'D)
+...then as Yahweh lives, I'll redeem you myself.
+[[B: 3:13. The Name in an oath: the second and last time in the episode (ROADMAP §5.5).]]
+
+BOAZ (CONT'D)
+Lie down until morning.
+[[B: 3:13]]
+
+EXT. THRESHING FLOOR — NIGHT
+
+[[P6·39]]
+
+They lie awake the rest of the night, an arm's length apart, under the stars, in the wind.
+
+His cloak stays where it is. Until the morning settles who has the right, it isn't his to spread.
+
+EXT. THRESHING FLOOR — BEFORE DAWN
+
+[[P1: 3:14, "before one could recognize another"]]
+
+Grey. Too dark to see a face.
+
+Boaz gets up. Low:
+
+BOAZ
+No one can know a woman came to the floor.
+[[B: 3:14]]
+
+BOAZ (CONT'D)
+Hold out your shawl.
+[[B: 3:15]]
+
+She does. He pours barley into it, measure after measure, six of them, until it's heavy. He ties it, and lifts it onto her back. [[P1: 3:15]]
+
+Then he goes up toward the town. [[P1: 3:15]]
+
+INT. NAOMI'S HOUSE — DAWN
+
+[[P1: 3:16]]
+
+Naomi at the door. She hasn't slept.
+
+NAOMI
+How did it go, my daughter?
+[[B: 3:16. Literally "Who are you, my daughter?", echoing Boaz's question at midnight.]]
+
+Ruth sets down the barley and tells her everything. [[P1: 3:16. We don't hear it again: we were there.]]
+
+RUTH
+He gave me these six measures of barley. He said I shouldn't come back to you empty.
+[[B: 3:17. Your rule: relayed in her own words. We never heard Boaz say it on the floor. As in the text, it reaches us first in Ruth's mouth.]]
+
+Empty. Naomi's own word, from the day she came home.
+
+Naomi has to sit down.
+
+NAOMI
+Wait, my daughter, until you see how it plays out.
+[[B: 3:18, your wording]]
+
+NAOMI (CONT'D)
+The man won't rest until he's settled it.
+[[B: 3:18, your wording]]
+
+> ACT FOUR: THE GATE <
+
+[[Ruth 4]]
+
+FADE IN:
+
+EXT. BETHLEHEM — THE GATE — MORNING
+
+[[P1: 4:1]]
+
+The gate from the prologue. Boaz comes up through it and sits down on the elders' bench, where Elimelech sold the use of his field twelve years ago.
+
+Already on the bench: THE OLD ELDER (80s), the same dry stick of a man, older still. [[P6·52]]
+
+Along the street comes a solid, careful man in his fifties: MR. SO-AND-SO. His SON (12) walks at his elbow, to learn how business is done at the gate. [[P1: 4:1, "and look, the redeemer was passing by." P6·56.]]
+
+Boaz calls out to him by name. A DONKEY tethered by the gate brays right over it, long and loud, and the name is lost. [[P6·40. The text never names him (4:1). He's credited as "Mr. So-and-so."]]
+
+BOAZ
+Come over here and sit down.
+[[B: 4:1]]
+
+The man comes over and sits. His son stands behind him.
+
+Boaz looks along the gate and picks out ten of the elders.
+
+BOAZ (CONT'D)
+Sit down here.
+[[B: 4:2]]
+
+They sit. A crowd gathers, the way it does at the gate.
+
+BOAZ (CONT'D)
+Naomi, who's come back from Moab, is selling the piece of land that belonged to our brother Elimelech.
+[[B: 4:3]]
+
+BOAZ (CONT'D)
+I thought I should tell you. Buy it, in front of the people sitting here and the elders of my people.
+[[B: 4:4]]
+
+BOAZ (CONT'D)
+If you'll redeem it, redeem it. If you won't, tell me, so I know. There's nobody before you to redeem it, and I'm next.
+[[B: 4:4]]
+
+The man brightens. Land is land.
+
+MR. SO-AND-SO
+I'll redeem it.
+[[B: 4:4]]
+
+BOAZ
+On the day you buy the field from Naomi, you also acquire Ruth the Moabite, the dead man's wife, to keep the dead man's name alive on his land.
+[[B: 4:5. The read-aloud version, "you acquire" (dossier §3).]]
+
+"Moabite" lands on the crowd like a stone. A murmur goes along the benches.
+
+The man's face does the arithmetic: the price, a field that will pass to a son who counts as Mahlon's, two more mouths.
+
+MR. SO-AND-SO
+Then I can't redeem it.
+[[B: 4:6]]
+
+His eyes go to the boy at his elbow, and stay there. [[P6·56. Your pick: prudence, not villainy.]]
+
+MR. SO-AND-SO (CONT'D)
+I'd be ruining my own inheritance.
+[[B: 4:6]]
+
+MR. SO-AND-SO (CONT'D)
+(to Boaz)
+You take my right. I can't do it.
+[[B: 4:6]]
+
+He reaches down and pulls off his sandal. [[P1: 4:7–8]]
+
+HIS SON
+(low)
+Why your sandal?
+[[D. P6·41]]
+
+MR. SO-AND-SO
+(low, not unkindly)
+Land is yours where your foot walks. I'm giving him my walking.
+[[D. P6·41. Deut 11:24; Josh 1:3. The text stops to explain the custom too (4:7).]]
+
+He holds it out to Boaz.
+
+MR. SO-AND-SO (CONT'D)
+Buy it yourself.
+[[B: 4:8]]
+
+Boaz takes the sandal.
+
+He stands, and speaks to the elders and all the people. [[P1: 4:9]]
+
+BOAZ
+You are witnesses today.
+[[B: 4:9]]
+
+BOAZ (CONT'D)
+I've bought from Naomi everything that belonged to Elimelech, and everything that belonged to Chilion and Mahlon.
+[[B: 4:9]]
+
+BOAZ (CONT'D)
+And I've acquired Ruth the Moabite, Mahlon's wife, as my wife, to keep the dead man's name alive on his land, so that his name isn't cut off from his family, or from the gate of his town.
+[[B: 4:10]]
+
+He has no son of his own, and he's just agreed that his first son will carry another man's name. That's the price the nearer redeemer wouldn't pay. [[P4·42. Deut 25:6. The genealogy still counts Obed as Boaz's son (4:21).]]
+
+BOAZ (CONT'D)
+You are witnesses today.
+[[B: 4:10]]
+
+The old elder gets to his feet first.
+
+THE OLD ELDER
+We are witnesses.
+[[B: 4:11. P6·52. He spoke the formula when the field was sold.]]
+
+ALL AT THE GATE
+We are witnesses!
+[[B: 4:11]]
+
+THE OLD ELDER
+May the Lord make the woman who's coming into your house like Rachel and Leah, the two who built the house of Israel.
+[[B: 4:11. Rachel, whose pillar Ruth passed on the road.]]
+
+AN ELDER
+May you do worthily in Ephrathah, and make a name in Bethlehem.
+[[B: 4:11]]
+
+ANOTHER ELDER
+And may your house be like the house of Perez, whom Tamar bore to Judah, through the children the Lord gives you by this young woman.
+[[B: 4:12. Tamar: another woman who took a risk to keep a dead man's name alive (Gen 38).]]
+
+The old elder looks at Boaz, and at the sandal in his hand, and nods slowly, like a man crossing off an old account. [[P6·52. Elimelech's field has come home the second way the formula allowed: bought back by a kinsman. His plan, carried out by someone else.]]
+
+INT. NAOMI'S HOUSE — SAME MORNING
+
+[[P6·43]]
+
+Ruth can't sit still. She's up, she's down, she's at the door again.
+
+Naomi grinds grain on the quern without looking up. Too hard.
+
+A shadow fills the doorway.
+
+Boaz, with a sandal in his hand.
+
+He doesn't say anything. He looks at Naomi. Then at Ruth.
+
+Naomi stops grinding.
+
+EXT. BETHLEHEM — NIGHT
+
+[[P1: 4:13. The wedding.]]
+
+Music: drums, lyres, pipes. Torches, a feast, all of Bethlehem.
+
+At the center of it, Boaz spreads the corner of his cloak over Ruth. [[P6·44. The wing: 2:12; 3:9; Ezek 16:8.]]
+
+At the edge of the dancing, Naomi watches.
+
+Her old friend comes and takes both her hands, and pulls.
+
+For a moment Naomi resists. Then she goes. She dances, the way she danced at her sons' weddings in Moab. [[P6·57. Naomi full again.]]
+
+Later: a closed door, and the lamp behind it going out.
+
+[[From here on nobody calls her "the Moabite," and neither does the text (4:13).]]
+
+INT. BOAZ'S HOUSE — DAY
+
+[[P1: 4:13, "the Lord gave her conception." Some months later.]]
+
+Ruth by the doorway, spinning wool. The water jar in the corner is full. [[P2: spinning. In the Hebrew Bible the book of Ruth comes right after Proverbs, which ends with the "woman of worth" who "puts her hands to the distaff" (Prov 31:10, 19). Nobody says so.]]
+
+Naomi crosses the room and puts her hand on Ruth's belly. She keeps it there.
+
+We see Naomi's face.
+
+INT. BOAZ'S HOUSE — NIGHT
+
+[[P6·45. A year after Ruth arrived: the start of the next barley harvest.]]
+
+The birthing stones. Lamps. MIDWIVES, and the WOMEN OF BETHLEHEM crowded in, Naomi's friend among them. [[P1: birthing stones, Exod 1:16.]]
+
+Ruth on the stones, in labor. Naomi behind her, gripping both her hands.
+
+It's long, and it's dangerous. Ruth screams. [[Rachel died giving birth on the road outside this town (Gen 35:16–19). We don't look away.]]
+
+MIDWIFE
+Now. Push now.
+[[D]]
+
+Outside, Boaz stands against the wall by the door. He hasn't moved for hours.
+
+Then a cry. A baby's cry.
+
+Boaz closes his eyes.
+
+INT. BOAZ'S HOUSE — CONTINUOUS
+
+[[P1: 4:14–15]]
+
+The baby on Ruth's chest, wet and furious. Ruth is laughing and crying at once.
+
+The women turn to Naomi.
+
+NAOMI'S FRIEND
+Blessed be the Lord, who hasn't left you without a redeemer today!
+[[B: 4:14]]
+
+A WOMAN
+May his name be famous in Israel.
+[[B: 4:14]]
+
+ANOTHER WOMAN
+He'll bring your life back. He'll take care of you when you're old.
+[[B: 4:15]]
+
+NAOMI'S FRIEND
+Because your daughter-in-law who loves you, who's better to you than seven sons, has given birth to him.
+[[B: 4:15]]
+
+Better than seven sons. Ruth hears it the way she heard "empty" at the well.
+
+Naomi looks at Ruth for a long moment. And this time she sees her. [[P6·46]]
+
+Ruth holds out the baby. Naomi takes him, and lays him in her lap. [[P1: 4:16. From then on she's the one who carries him and cares for him.]]
+
+Naomi's friend looks right at her, and says the name on purpose.
+
+NAOMI'S FRIEND
+A son has been born to Naomi!
+[[B: 4:17. P6·58.]]
+
+The name she refused at the well. This time she doesn't refuse it.
+
+Naomi laughs. Really laughs, for the first time since her sons died. The women laugh with her. [[P6·58. An old woman laughing over a late child echoes Sarah (Gen 21:6). Nobody says so.]]
+
+NAOMI'S FRIEND
+Obed.
+[[B: 4:17, "and they named him Obed." P6·58: your pick, the friend names him.]]
+
+WOMEN OF BETHLEHEM
+(taking it up)
+Obed. Obed!
+[[B: 4:17]]
+
+EXT. NAOMI'S HOUSE — ROOF — DUSK
+
+[[P6·47]]
+
+The roof Ruth put back on the ruin.
+
+Naomi sits on it with Obed in her arms. She looks east, across the rift, to where the mountains of Moab are turning blue. Her husband and her sons are buried over there.
+
+She sings to the baby, softly: the lullaby she hummed at Mahlon's bedside. This time, with the words. [[P6·54. The words come with the score.]]
+
+Below her, the barley is ripening on Boaz's terraces.
+
+The wind comes up off the desert.
+
+The camera comes down from the mountains to the child in her arms, and rests on Obed's face. [[P6·47. The seam for your flash-forward, if you choose it (TREATMENT §7).]]
+
+FADE TO BLACK.
+
+> THE END <
+
+/*
+TIER MIX
+
+Counted by speech, 214 in all:
+
+  A      0          God never speaks in Ruth.
+  B    102 (48%)    Every line the text records, in its order. 20 of them are in your wording from your notes.
+  C      2 (1%)     The trader's news (1:6): the narrator's line, put in the mouth of the man Naomi heard it from.
+  D    110 (51%)    Invented, 5 of them in your wording. Almost all of it is in the prologue and the Moab years, where the text has no dialogue at all.
+
+By act:
+
+                 Speeches    B     C     D
+  Prologue          20       0     0    20
+  Act One           94      23     2    69
+  Act Two           46      28     0    18
+  Act Three         24      24     0     0
+  Act Four          30      27     0     3
+
+The invention sits where your notes asked for it: Elimelech's family, Ruth's family and the Moab years. From the moment Naomi turns to face her daughters-in-law on the road, the script is mostly the book's own words. Acts Three and Four are almost entirely recorded speech.
+
+LENGTH
+
+37 pages, so about 40 to 45 minutes on screen. A page runs about a minute, and pages heavy with silent action, like this one's, run a little longer.
+
+  Prologue        pages 2–4      3 pages
+  Act One         pages 5–21    17 pages   (Moab 10, the road 6, the return 2)
+  Act Two         pages 22–28    7 pages
+  Act Three       pages 29–32    4 pages
+  Act Four        pages 33–38    6 pages
+
+Additions on screen: every item in the treatment's register (TREATMENT §3), 1–58.
+*/

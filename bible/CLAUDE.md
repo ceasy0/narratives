@@ -8,11 +8,11 @@
 2. `ROADMAP.md`: §3 (principles), §4 (provenance), §5 (language), §8.8 (the fit check), §19 (open questions).
 3. `canon/FRAMINGS.md`: the author's unconventional framings, each with its fit grade and status.
 4. `discussions/README.md`: which discussions are open, and what each one blocks.
-5. `style/STORYTELLING.md`: the author's notes on how scenes should play. Apply them to every draft.
+5. `style/STORYTELLING.md`: the author's notes on how scenes should play. Apply them to every draft, along with `style/VOICES.md` (how each character speaks) and `style/LEXICON.md` (the word list).
 
 ## Current phase
 
-**Phase 1: the Ruth pilot.** Follow `story/arcs/07-ruth/README.md`: dossier, then treatment, beats, scene cards and script, stopping at each checkpoint for the author's review. The dossier is done, and the whole-Bible chronology is decided (`world/TIMELINE.md`). **The treatment (`story/arcs/07-ruth/TREATMENT.md`) is at v3,** with two rounds of the author's notes applied. The first sample scene, the parting on the road, is at `scripts/ruth/sample-the-road.fountain`. Next: the author's notes on the sample scene and their picks from TREATMENT §8 (expansions), then `BEATS.md`. The David connection at the end of the episode is deferred by the author's choice; any change it brings goes only at the very end. Update this line as steps finish.
+**Phase 1: the Ruth pilot.** Follow `story/arcs/07-ruth/README.md`: dossier, then treatment, beats, scene cards and script, stopping at each checkpoint for the author's review. The dossier is done, and the whole-Bible chronology is decided (`world/TIMELINE.md`). **The treatment (`story/arcs/07-ruth/TREATMENT.md`) is at v4,** with three rounds of the author's notes applied. The beat sheet (`BEATS.md`) and the complete first-draft script (`scripts/ruth/ruth.fountain`, 37 pages, every line tagged) are written; scene cards are folded into the beat sheet for the pilot. `style/VOICES.md` and `style/LEXICON.md` have started. Next: the author's pass on the script, then learning from their edits, the audit (ROADMAP §13.4) and the lock. The David connection at the end of the episode is deferred by the author's choice; any change it brings goes only at the very end. Update this line as steps finish.
 
 ## Rules
 
@@ -25,6 +25,7 @@
 - **No theology for its own sake.** Never add dialogue or scenes just to get more theology in. Additions must grow from context, evidence, or the spirit of the story.
 - **Material from beyond the canon** comes in only after discussion. Label it P3.
 - **Learn from the author's edits.** After each of their passes, compare it with the draft, record recurring patterns in the `style/` docs, and ask about any change you can't interpret.
+- **Ambiguous text: use the most likely reading.** Where the Hebrew or Greek can be read more than one way, the dialogue follows the most likely reading, with the reasons and the alternatives in a note (the author's instruction, 2026-10-02).
 - **One language rule** (confirmed by the author). English always stands for Israel's own language; sister dialects are accents; every other language follows the author's three tiers (ROADMAP §5.7). Use "Yahweh" only in oaths and where the Name itself is the point (§5.5).
 - **Non-English lines** always come with the original script, a transliteration, a literal back-translation and a confidence level. Flag reconstructed languages, especially first-century Galilean Aramaic, for specialist review.
 - **Write decisions down.** Decisions go in `canon/FOUNDATIONS.md` or the Positions Register, dated. Long conversations go in `discussions/`. Nothing important should live only in chat, because the next session won't see it.

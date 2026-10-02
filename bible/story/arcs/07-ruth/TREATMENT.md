@@ -2,33 +2,26 @@
 
 > The whole episode told as a short story: what happens, how it's shaped, and what it means.
 
-**Status:** v3, 2026-10-02. Your second round of notes is applied: line changes in every act, and Elimelech's fight to protect his family in Moab. I also checked the whole treatment for errors and for anything that could cause trouble in later arcs; see §7. The road scene now exists as a [sample script](../../../scripts/ruth/sample-the-road.fountain). **Checkpoint:** your notes on the sample scene, and which of the expansions in §8 you want.
+**Status:** v4, 2026-10-02. Your third round of notes is applied: three line changes, four of the expansions in §8, a moment between Mahlon and Ruth before he dies, and two things you asked me to make sure of, that Naomi's arc from full to empty to full is clearly visible and that the long first act doesn't make the episode feel slow and then rushed ([BEATS §2–3](./BEATS.md#2-naomi-full-empty-full)). The full check for errors found seven more things to fix (§7). The [beat sheet](./BEATS.md) and a complete [first-draft script](../../../scripts/ruth/ruth.fountain) now exist. **Checkpoint:** your pass on the script.
 
-**How to read it:** §2 is the story, and it reads straight through. A tag like **[P6·1]** marks an addition: its source level (ROADMAP §4.1), then its number in the register in §3, which says why it's there and what it rests on. New additions take the next free number, so numbers stay the same from draft to draft. Events without a tag are in the text. Background without a tag comes from the [dossier](./DOSSIER.md). The quoted dialogue is a first pass: recorded lines keep the text's meaning and order, and the script refines all of it.
+**How to read it:** §2 is the story, and it reads straight through. A tag like **[P6·1]** marks an addition: its source level (ROADMAP §4.1), then its number in the register in §3, which says why it's there and what it rests on. New additions take the next free number, so numbers stay the same from draft to draft. Events without a tag are in the text. Background without a tag comes from the [dossier](./DOSSIER.md). The quoted dialogue follows the script, which is now the place where the wording lives.
 
 ---
 
-## What changed in v3
+## What changed in v4
 
 | Your note | What I did |
 |---|---|
-| Prologue lines | Elimelech no longer says "It was empty yesterday." The neighbor chuckles, waves a hand at the dead fields, and says "Right now, a field's worth what somebody will pay." Boaz says "God be with you, Elimelech." |
-| Elimelech as a protective, determined father | Four new beats in Moab. He answers the old grudge for his family and holds Mahlon back (48). He puts a roof on the ruin and makes a plan: two harvests, then home to buy back the field (49). He faces down Ruth's father over a short measure, with Ruth watching (50). He works through the fever so the field gets sown, and Naomi, alone at his grave, says "You said two" (51). His plan comes true in Act Four, without him. |
-| Naomi's "Everywhere, they say" | Her hand sweeps across the ground and up to the sky. Then, holding back tears: "But tonight I couldn't tell you." |
-| Mahlon asking for the song | Cut. The song is still planted at the oven and still pays off in Act Two. |
-| Naomi's blessing (1:9) | "May he give each of you the rest you deserve." One flag: the text's "in a husband's house" (§7). |
-| "No... to your people" (1:10) | "To your people" is gone. Orpah gets there first and Ruth talks over her, so they don't speak in unison. |
-| 1:13, 1:15, 1:16 | "No." on its own; "Orpah has gone back to her people and her gods. Go after her"; "Don't ask me to leave you, or to turn back." |
-| "Is this Naomi?" | Now just "Naomi?" |
-| The Mara speech | Your wording, word for word |
-| The foreman (2:7) | Your wording. Nothing is lost, because we've already watched Ruth ask him. |
-| 2:11, 2:13, 2:21, 2:22 | "What you've done"; "You comfort me... You speak to my heart"; Ruth's report in her own words; "his women," "no one" |
-| "That man is family" (2:20) | Your line, plus one beat: Ruth asks "Family?" and Naomi says "One of our redeemers." The word has to be introduced somewhere, because Ruth says it at the threshing floor and Act Four turns on it (§7). |
-| "Ruth" at 3:1 | Done. It's the first time Naomi says her name. In the Hebrew she never does, so it lands as a turn (§7). |
-| 3:18 | "Wait, my daughter, until you see how it plays out. The man won't rest until he's settled it." |
-| Act Four check | Two small additions. The old elder who witnessed the field sale witnesses its redemption (52). The last shot comes to rest on Obed's face, so your flash-forward idea can be added there later without changing anything else. |
-| Check for errors | Five fixes and four notes for later arcs, in §7. One fix affects the story: the weddings now come two years after Elimelech's death, not three, so the years add up. |
-| Expansions | Eight places the story could gain depth, in §8, each with my recommendation |
+| 1:9, "a husband you deserve" | Done, word for word. It's closer to the text than my version was: in Hebrew, the "rest" Naomi wishes them *is* the security of a husband's house. |
+| 1:13, the most likely reading | "No. This is far more bitter for me than for you" stays. Of the three ways the Hebrew can be read, this one has the best support: the oldest translations, the grammar, the logic of her argument, and her own words at the well (§7). |
+| 1:15, "You know you should go back. Go after her." | Done. "Her people and her gods" now isn't said but seen: Orpah walks back toward her village with the little goddess in her fist, and Naomi is watching her when she speaks (§7). |
+| Expansions 2, 3, 4 and 6 | Naomi's friend names Obed (58). Boaz's hesitation, from his side, in one scene in the field and one image at home (55). Mr. So-and-so's son stands beside him at the gate; his father looks at him, and it's the son who asks about the sandal (56). Naomi sings to Obed (54). |
+| The right kind of song | Not the harvest song: that's a work song, sung in a field. Naomi sings Obed a lullaby, the one she sang to her own sons. It's planted once, very quietly: she hums it at Mahlon's bedside on his last night (54). On the roof she sings it with the words. |
+| Expansions 1, 5, 7 and 8 | Left out. The gaps around Orpah and Chilion stay open for you to explore later (§8). |
+| Mahlon and Ruth before he dies | No song. On his last day she holds the cup for him, because he can't. He looks at the quiet wall that Chilion and Orpah used to argue through: "He'd have a joke for this." Ruth: "It wouldn't be funny." He almost laughs, and it turns into the cough (53). |
+| Naomi's arc, clearly shown | A table in [BEATS §2](./BEATS.md#2-naomi-full-empty-full) lists every marker from full to empty and back, with page numbers. Two new ones mark the return: she dances at the second wedding as she did at the first (57), and when the women say her name at the birth, she laughs for the first time since her sons died (58). |
+| Act One's length and the pacing | Measured on the script, not guessed ([BEATS §3](./BEATS.md#3-pacing)). The episode is a V: down to Naomi's lowest point at the well and the ruin, a little past the middle, and back up. The oath sits at the center. The first part moves fast through twelve years; the rest slows into one harvest, one night and one morning, so it starts fast and settles rather than dragging and then rushing. The slowdown starts inside Act One, at the edge of the plateau, so Act Two doesn't arrive as a change of gear. |
+| Check for errors | Seven fixes and two notes for later arcs (§7). One correction is to my own estimate: the script runs 37 pages, about 40 to 45 minutes, not 58. |
 
 ---
 
@@ -50,19 +43,19 @@
 
 **Logline.** A widow who has lost everything comes home with the one thing she doesn't count: a foreign daughter-in-law who won't leave her. Through one harvest, one night and one morning at the town gate, the house of bread fills again.
 
-**Shape.** One episode of about 58 minutes: a prologue and four acts, one act for each chapter. It started at about 43 minutes. Your notes have opened up the prologue and Moab, and that's where the growth is (§7, "Length").
+**Shape.** One episode: a prologue and four acts, one act for each chapter. The first-draft script runs 37 pages, about 40 to 45 minutes on screen. My earlier estimate of 58 minutes was too generous; the script is the better measure, and the animatic will be the real one (§7, "Length").
 
-| Part | Passage | Where | Whose eyes | Length |
+| Part | Passage | Where | Whose eyes | Script pages |
 |---|---|---|---|---|
-| Prologue: The House of Bread | 1:1–2 | Bethlehem | Naomi's family | About 5 min |
-| Act One: Full and Empty | 1:3–22 | Moab, the road, Bethlehem | Elimelech, Naomi and Ruth | About 23 min |
-| Act Two: The Field | 2 | Boaz's field, Naomi's house | Ruth | About 12 min |
-| Act Three: The Threshing Floor | 3 | Naomi's house, the floor at night | Ruth | About 9 min |
-| Act Four: The Gate | 4 | The gate, Naomi's house | Boaz, then Naomi | About 9 min |
+| Prologue: The House of Bread | 1:1–2 | Bethlehem | Naomi's family | 3 |
+| Act One: Full and Empty | 1:3–22 | Moab, the road, Bethlehem | Elimelech, Naomi and Ruth | 17 (Moab 10, the road 6, the return 2) |
+| Act Two: The Field | 2 | Boaz's field, Naomi's house | Ruth, and once Boaz | 7 |
+| Act Three: The Threshing Floor | 3 | Naomi's house, the floor at night | Ruth | 4 |
+| Act Four: The Gate | 4 | The gate, Naomi's house | Boaz, then Naomi | 5 |
 
 **When.** About 1152–1139 BC, in the days of Eli ([dossier §5](./DOSSIER.md#5-when-chronology-and-rahab)). At the return, Naomi is about 48, Ruth about 26 and Boaz about 45.
 
-**The spine.** Naomi goes from full to empty to full. The women of Bethlehem frame her story, from "Naomi?" to "A son has been born to Naomi!" Ruth's loyalty drives it, and Boaz answers it.
+**The spine.** Naomi goes from full to empty to full, and the episode is shaped like her arc: down to the well and the ruin, a little past the middle, then back up ([BEATS §2](./BEATS.md#2-naomi-full-empty-full) lists every marker). The women of Bethlehem frame her story, from "Naomi?" to "A son has been born to Naomi!" Ruth's loyalty drives it, and Boaz answers it.
 
 **Voices.** Naomi and Boaz sound a little more formal than Ruth. Ruth is plain and direct, with few words.
 
@@ -72,7 +65,7 @@
 
 **The ending.** The naming of Obed, a last image facing Moab that comes to rest on Obed's face, and a fade to black.
 
-**Expected tier mix.** No Tier A, since God doesn't speak. About half the lines are recorded (Tier B). Most of the rest are invented (Tier D), concentrated in the prologue and the Moab years, which your notes asked to open up. The [sample scene](../../../scripts/ruth/sample-the-road.fountain) reports its exact counts, and the full script will too.
+**Tier mix** (counted in the script). 214 speeches: no Tier A, since God doesn't speak; 48% recorded (B); 1% implied (C); 51% invented (D). The invention is concentrated in the prologue and the Moab years, which your notes asked to open up. Act Three is entirely recorded speech, and Act Four almost entirely.
 
 ---
 
@@ -80,11 +73,11 @@
 
 ### Prologue — The House of Bread
 
-*Ruth 1:1–2 · about 5 minutes*
+*Ruth 1:1–2 · 3 pages*
 
 Fade in from black.
 
-Dawn on the ridge east of Bethlehem. A threshing floor, a circle of packed earth worn smooth by generations of oxen, lies bare in what should be the middle of harvest. The wind comes up off the desert, finds nothing to winnow, lifts a skin of dust and old chaff, and drops it again.
+Dawn on the ridge east of Bethlehem. A threshing floor, a circle of packed earth worn smooth by generations of oxen, lies bare in what should be the middle of harvest. The wind comes up off the desert, hot and dry, lifts a skin of dust and old chaff off the bare floor, and drops it again.
 
 On the terraces below, the barley stands stunted and white in cracked ground. A man walks the rows: **Boaz**, in his early thirties, a landowner with work-hardened hands. He rubs a head of barley between his palms and blows. Nothing but husk. His **wife** comes down the terrace with a water jar, and they share one mouthful each. **[P6·1]**
 
@@ -118,7 +111,7 @@ At the town gate, two elders sit as witnesses while Elimelech sells the use of h
 
 The neighbor lets out a single small chuckle. "Right now," he says, and his hand waves at everything around them, the dust, the dead terraces, the empty gate, "a field's worth what somebody will pay."
 
-Elimelech takes the silver. One of the elders, an old man with a voice like a dry branch, speaks the formula for the witnesses: the field goes back to its family when they return, or when a kinsman buys it back. "Until we come back," Elimelech says.
+Elimelech takes the silver. One of the elders, an old man with a voice like a dry branch, speaks the formula for the witnesses: the family can buy the field back when they're able, or a kinsman can buy it back for them (Lev 25:25–27). "When we come back," Elimelech says.
 
 On the road east, they pass the dead terraces. Boaz comes down to meet them with a half-full sack of barley on his shoulder, last year's, from his own store, and his wife walks behind him. **[P6·5]**
 
@@ -142,7 +135,7 @@ Fade to black.
 
 ### Act One — Full and Empty
 
-*Ruth 1:3–22 · about 23 minutes*
+*Ruth 1:3–22 · 17 pages*
 
 **The village.** The plateau is green, because it has rained here. Elimelech's family comes up the road into a Moabite village on the northern plateau, four dusty strangers and a donkey. **[P4·7]** The men on the threshing floor stop working. One of them says it loud enough to carry: "Israelites." Another spits. An old man reminds everyone what Israel's grandfathers did to Moab: their king Eglon, stabbed in his own upstairs room by an Israelite, and ten thousand Moabites killed at the fords of the Jordan (Judg 3:15–30). **[P6·8]**
 
@@ -246,11 +239,21 @@ The double wedding has drums, a feast and Moabite songs, and Naomi dances. The t
 
 Fade to black. *Ten years later.*
 
-**The fever year.** Night. Mahlon coughs in the dark, as he has every winter for ten years. Ruth kneels before a little clay goddess her mother gave her and prays for a child, quietly, with her whole heart. **[P4·16]** There has been no child in either house. Naomi watches from the doorway and doesn't interrupt; she has her own prayers.
+**The fever year.** Night. Mahlon coughs in the dark, as he has every winter for ten years. Ruth kneels before the clay goddess in the niche of their wall, the kind every house in the village has, and prays for a child, quietly, with her whole heart. **[P4·16]** There has been no child in either house. Naomi watches from the doorway and doesn't interrupt; she has her own prayers.
 
 In the morning the two women bake together the way people do after ten years: without talking, each handing the other the next thing before she asks for it. Ruth sings under her breath, a Bethlehem harvest song Naomi taught her long ago. Naomi corrects one word, and then sings the line properly herself. Next door, Chilion and Orpah are arguing loudly, then laughing louder.
 
 That week a fever comes through the village. It takes Chilion first, fast. Mahlon lasts four more days. **[P6·17]**
+
+On the last of them, Ruth holds the cup for him, because he can't hold it himself. Some of the water runs into his beard, and she wipes it with her thumb. He's looking at the wall Chilion and Orpah used to argue through. It's quiet now. **[P6·53]**
+
+"He'd have a joke for this," Mahlon says.
+
+"It wouldn't be funny," says Ruth.
+
+He almost laughs, and it turns into the cough. She holds him through it.
+
+That night Naomi sits up with him and hums, under her breath, the tune she used to sing to both her boys when they were small. Nobody remarks on it. **[P6·54]** He dies before morning.
 
 **Kin.** Mahlon and Chilion are family now, so Moab mourns them properly. At the graves, Ruth's mother cuts her own arms and then Ruth's, and Ruth lets her. **[P6·18]** Orpah does the same for Chilion. Naomi tears her clothes and sits in the dust between three graves. Afterward she takes Ruth's arm, tears a strip from her own ruined dress, and binds the cuts.
 
@@ -272,7 +275,7 @@ Ruth doesn't answer, and her mother understands.
 
 "They're my family."
 
-Her mother doesn't argue. She presses the little clay goddess into Ruth's hands. "Then take her. Somebody should look after you." Ruth's father stays inside the house.
+Her mother doesn't argue. She goes inside and comes back with her own little clay goddess, worn smooth from a lifetime of handling, and presses it into Ruth's hands. "Then take her. Somebody should look after you." Ruth's father stays inside the house, with his back to the door.
 
 Three women leave the village with everything they own on their backs: Naomi, Ruth and Orpah. Ruth's mother watches from the last house, the way Boaz once watched Elimelech's family go.
 
@@ -280,7 +283,7 @@ Three women leave the village with everything they own on their backs: Naomi, Ru
 
 Naomi stops. She has rehearsed this all night, and it still won't come out (1:8–9). She struggles to get the words out, and her eyes fill. A great deal passes over her face before she manages it: the calculation of a woman who can't feed three, pain, exhaustion, and finally acceptance. She's a determined woman, and this is the hardest thing she's ever had to be determined about.
 
-"Go back. Both of you. Go home to your mothers." Her voice breaks, and she pushes through it. "May God be as good to you as you've been to the dead, and to me. May he give each of you the rest you deserve."
+"Go back. Both of you. Go home to your mothers." Her voice breaks, and she pushes through it. "May God be as good to you as you've been to the dead, and to me. May he give each of you a husband you deserve."
 
 She kisses them, and they cry out loud. "No," Orpah says, and Ruth is right behind her, the two of them talking over each other: "We're coming with you" (1:10).
 
@@ -292,7 +295,7 @@ They weep again. Orpah kisses Naomi, a real goodbye. Ruth presses the clay godde
 
 Ruth hasn't moved. She has hold of Naomi and won't let go. The Hebrew word for it is the one Genesis uses for a husband clinging to his wife (1:14; Gen 2:24).
 
-"Orpah has gone back to her people and her gods," Naomi says. "Go after her" (1:15).
+Naomi watches Orpah go, the bundle on her back and the goddess in her fist, back toward her village. "You know you should go back," she says. "Go after her" (1:15).
 
 Ruth looks back down the road, toward the village and her mother's house. Then the wind comes up off the desert behind them, the same east wind that blew across Bethlehem's empty threshing floor, and it pushes at her back, toward the land across the rift. **[P5·23]** She turns to Naomi (1:16–17).
 
@@ -320,7 +323,7 @@ Out on the terraces, the evening light falls on ripe barley. It's the beginning 
 
 ### Act Two — The Field
 
-*Ruth 2 · about 12 minutes*
+*Ruth 2 · 7 pages*
 
 Next morning (2:2):
 
@@ -378,13 +381,21 @@ Ruth warms up. "He even told me to stay close to his young men until they've fin
 
 "His young women, my daughter," Naomi says drily. "Better that you go out with his women, so no one bothers you in somebody else's field."
 
-**The last day of the harvest.** A cut to seven weeks later (2:23). **[P6·35]** The wheat is nearly in. Ruth works among Boaz's young women now, and when they start a harvest song, she sings along: it's the song Naomi taught her in Moab. They look at her differently after that. The girl binding sheaves beside her mentions that Boaz has been alone since the famine took his wife. The cuts on Ruth's arms have healed pale. At the meal, Boaz is kind, correct and at a distance, as he has been for seven weeks. He watches her across the field and looks away when she looks up. He never comes closer than that.
+**Boaz's side.** A cut to some weeks into the harvest, and this time we stay with Boaz. **[P6·55]** At the midday meal he takes up a handful of roasted grain and starts across the field toward Ruth with it. Halfway there he stops. One of the young reapers has said something that makes her laugh, and the young men around her are laughing too. Boaz looks at them: young, quick, loud. He turns to his foreman and holds out the grain. "Take her this."
+
+"You could take it yourself."
+
+Boaz looks at the young men again. "Take it."
+
+That night he eats alone in his house. In the corner stands the water jar his wife carried down the terraces in the famine, dry.
+
+**The last day of the harvest.** A cut to the end of the seven weeks (2:23). **[P6·35]** The wheat is nearly in. Ruth works among Boaz's young women now, and when they start a harvest song, she sings along: it's the song Naomi taught her in Moab. They look at her differently after that. The girl binding sheaves beside her mentions that Boaz has been alone since the famine took his wife. The cuts on Ruth's arms have healed pale. At the meal, Boaz is kind, correct and at a distance, as he has been for seven weeks. He watches her across the field and looks away when she looks up. He never comes closer than that.
 
 At home, the house has a roof now and the jars are full. Naomi is cooking again. She notices what Boaz hasn't done. That night she watches Ruth asleep by the lamp, and makes up her mind.
 
 ### Act Three — The Threshing Floor
 
-*Ruth 3 · about 9 minutes*
+*Ruth 3 · 4 pages*
 
 "Ruth," Naomi says, "isn't it time I found you a place to rest, where things will go well for you?" (3:1) It's the first time Naomi has called her by her name, and Ruth notices. It's also the "rest" she wished for her daughters-in-law on the road (1:9).
 
@@ -396,7 +407,7 @@ Naomi's hands shake as she combs Ruth's hair. **[P4·36]** She knows what she's 
 
 The washing and the oil end Ruth's mourning (2 Sam 12:20). Ruth takes off the widow's clothes she has worn since Moab and rubs oil into her arms, over the healed cuts.
 
-At sunset, the threshing floor from the prologue is heaped with grain. Men toss forkfuls into the evening wind, and the chaff streams away gold while the grain falls. Boaz eats and drinks with his workers, laughing, and his heart is content (3:7). When the work is done, the men sleep around the floor, and Boaz lies down at the far end of the grain pile.
+At sunset, the threshing floor from the prologue is heaped with grain. Men toss forkfuls into the evening breeze off the sea, and the chaff streams away gold while the grain falls. (Winnowing needs that steady west wind. The hot desert wind is the one Jeremiah calls "not to winnow" (Jer 4:11).) Boaz eats and drinks with his workers, laughing, and his heart is content (3:7). When the work is done, the men sleep around the floor, and Boaz lies down at the far end of the grain pile.
 
 Ruth waits in the dark below the floor. A worker gets up and walks a few paces toward where she's hiding, relieves himself, and goes back to sleep. She waits longer. **[P6·37]**
 
@@ -430,19 +441,19 @@ Naomi has been awake all night. "How did it go, my daughter?" (3:16) The Hebrew 
 
 ### Act Four — The Gate
 
-*Ruth 4 · about 9 minutes*
+*Ruth 4 · 5 pages*
 
 Boaz goes up to the gate and sits down on the elders' bench, where Elimelech once sold the use of his field. One of the elders already there is the old man with the dry-branch voice, who spoke the formula that day. **[P6·52]** "And look" (4:1): the nearer redeemer comes walking by, right on cue. Boaz calls him by name, and a donkey brays right over it. **[P6·40]** The man who won't keep a dead man's name alive doesn't get his own name kept, either.
 
 Boaz seats ten elders and lays it out (4:3–4). Naomi, back from Moab, is selling the piece of land that belonged to our brother Elimelech. You have the first right. Redeem it if you will, and if not, say so, because I'm next in line.
 
-The man brightens. Land is land. "I'll redeem it."
+The man has his son with him, a boy of about twelve, standing at his elbow to learn how business is done at the gate. **[P6·56]** The man brightens. Land is land. "I'll redeem it."
 
 "On the day you buy the field from Naomi," Boaz says, "you also acquire Ruth the Moabite, the dead man's wife, to keep the dead man's name alive on his land" (4:5).
 
-*Moabite* lands on the crowd like a stone. The man's face does the arithmetic: the price, a field that will pass to a son who counts as Mahlon's, and two more mouths to feed. "Then I can't redeem it. I'd be ruining my own inheritance. You take my right. I can't do it" (4:6).
+*Moabite* lands on the crowd like a stone. The man's face does the arithmetic: the price, a field that will pass to a son who counts as Mahlon's, and two more mouths to feed. "Then I can't redeem it." On *my own inheritance* his eyes go to the boy at his elbow, and stay there. "I'd be ruining my own inheritance. You take my right. I can't do it" (4:6). It isn't villainy. It's a father doing a sum, and the answer is standing next to him.
 
-He pulls off his sandal and hands it to Boaz (4:7–8). A boy in the crowd asks his father why. The land is yours where your foot walks, the father tells him, so he's handing over his walking. **[P6·41]** The text stops to explain the custom too.
+He pulls off his sandal and hands it to Boaz (4:7–8). His son, low: "Why your sandal?" Land is yours where your foot walks, his father tells him, not unkindly, so he's handing over his walking. **[P6·41]** The text stops to explain the custom too.
 
 Boaz stands and speaks to everyone (4:9–10). He has bought from Naomi everything that belonged to Elimelech, Chilion and Mahlon. And he has acquired Ruth the Moabite, Mahlon's widow, as his wife, to keep the dead man's name alive, so that it isn't cut off from his family or from the gate of his town. "You are witnesses today."
 
@@ -454,9 +465,9 @@ Elimelech's field has come back to his family, the second way the formula allowe
 
 At the house, Ruth can't sit still. Naomi grinds grain without looking up, too hard. Then a shadow fills the doorway: Boaz, with a sandal in his hand. He doesn't need to say anything. He looks at Naomi, then at Ruth. **[P6·43]**
 
-**The wedding** (4:13). There's music in Bethlehem and a feast, and at the center of it Boaz spreads the corner of his cloak over Ruth. It's the wing she asked for on the threshing floor, and the shelter he once asked the Lord to give her (2:12; 3:9; Ezek 16:8). **[P6·44]** Later, behind a closed door, a lamp goes out. From here on, nobody calls her "the Moabite." In the text, too, she's simply Ruth from now on (4:13).
+**The wedding** (4:13). There's music in Bethlehem and a feast, and at the center of it Boaz spreads the corner of his cloak over Ruth. It's the wing she asked for on the threshing floor, and the shelter he once asked the Lord to give her (2:12; 3:9; Ezek 16:8). **[P6·44]** Naomi watches the dancing from the edge, until her old friend takes both her hands and pulls her in. For a moment she resists. Then she dances, the way she danced at the weddings in Moab. **[P6·57]** Later, behind a closed door, a lamp goes out. From here on, nobody calls her "the Moabite." In the text, too, she's simply Ruth from now on (4:13).
 
-**The Lord gives her a child** (4:13). After ten childless years, Ruth is pregnant within months. We see Naomi's hand on Ruth's belly, and Naomi's face.
+**The Lord gives her a child** (4:13). After ten childless years, Ruth is pregnant within months. She's at her spinning in Boaz's house, and the jar in the corner is full. We see Naomi's hand on Ruth's belly, and Naomi's face.
 
 **The birth** comes a year after Ruth arrived, at the start of the next barley harvest. **[P6·45]** Ruth is on the birthing stones (Exod 1:16), with the midwives and the women of Bethlehem around her and Naomi gripping her hands. It's long and it's dangerous: Rachel died giving birth on the road outside this town. We don't look away. Boaz waits outside the door. Then there's a cry.
 
@@ -466,9 +477,9 @@ The women turn to Naomi, the same women who said her name at the well (4:14–15
 
 *Better than seven sons.* Ruth hears it the way she heard *empty.* Naomi looks at her for a long moment, and this time she sees her. **[P6·46]**
 
-Naomi takes the boy, lays him in her lap, and becomes his nurse (4:16). The neighbor women name him: "A son has been born to Naomi!" They call him Obed (4:17).
+Naomi takes the boy and lays him in her lap, and from then on she's the one who carries him and cares for him (4:16). Her old friend is the first to say it, and she says the name on purpose, looking right at her: "A son has been born to Naomi!" The name she refused at the well. This time Naomi doesn't refuse it. She laughs, really laughs, for the first time since her sons died, and the women laugh with her. Then the friend names the boy: "Obed." The women take it up (4:17). **[P6·58]**
 
-**The last image.** **[P6·47]** Dusk on the roof. Naomi holds Obed and looks east across the rift, to where the mountains of Moab are turning blue and her husband and sons are buried. Below her, the barley is ripening on Boaz's terraces. The wind comes up off the desert. The camera comes down from the mountains to the child in her arms and rests on Obed's face.
+**The last image.** **[P6·47]** Dusk on the roof of Naomi's house, the roof Ruth put back. Naomi holds Obed and looks east across the rift, to where the mountains of Moab are turning blue and her husband and sons are buried. She sings to him: the lullaby she hummed at Mahlon's bedside, and this time with the words. **[P6·54]** Below her, the barley is ripening on Boaz's terraces. The wind comes up off the desert. The camera comes down from the mountains to the child in her arms and rests on Obed's face.
 
 Fade to black.
 
@@ -476,9 +487,9 @@ Fade to black.
 
 ## 3. Additions register
 
-Every item passes all five parts of the addition test (ROADMAP §4.3): it's **consistent** with the text and our decisions, **plausible**, **purposeful**, **subordinate** and **recognizable**. The table records the reasoning behind the two that most often fail, purpose and plausibility. Items marked **your call** are in §6. Items 48–52 are new in v3 and sit in the table for their act.
+Every item passes all five parts of the addition test (ROADMAP §4.3): it's **consistent** with the text and our decisions, **plausible**, **purposeful**, **subordinate** and **recognizable**. The table records the reasoning behind the two that most often fail, purpose and plausibility. Items marked **your call** are in §6. Items 48–52 were new in v3 and 53–58 are new in v4; each sits in the table for its act.
 
-**The Moab years are the biggest block of invention,** at about fifteen minutes (items 7–20 and 48–51). That's what your notes asked for, and it stays subordinate as long as everything in it builds toward the oath on the road and the losses behind it. It does: Elimelech's stand over the measure is part of what Ruth sees in this family (§5).
+**The Moab years are the biggest block of invention,** at about ten pages of script (items 7–20 and 48–54). That's what your notes asked for, and it stays subordinate as long as everything in it builds toward the oath on the road and the losses behind it. It does: Elimelech's stand over the measure is part of what Ruth sees in this family (§5).
 
 ### Prologue
 
@@ -508,13 +519,15 @@ Every item passes all five parts of the addition test (ROADMAP §4.3): it's **co
 | 13 | Ruth brings the mourners' bread | P6, on P1 | The start of the bond that ends in the oath. A Moabite brings bread to Israelites, the reverse of the old grievance in Deut 23:4. | Comforters brought bread to mourners (Jer 16:7; Ezek 24:17; Hos 9:4). |
 | 14 | "Who are you talking to?" | P6, Tier D | Ruth's curiosity about a God with no face, and Naomi's honest, wavering faith. It prepares "your God my God" without a word of theology. | Israel's worship without images (Exod 20:4) |
 | 15 | The bargain and the weddings | P6, Tier D | Elimelech dies before the marriages (1:3–4), so Naomi arranges them. It shows the strategist she'll be in Act Three. Her "whoever they like" keeps Ruth's later choice of God her own. | 1:15 assumes Orpah still had her gods. |
-| 16 | Ruth's prayer for a child; the song at the oven | P4 | "The Lord gave her conception" (4:13) implies the empty years. The baking scene shows ten years of closeness in a single morning and plants the song. | 1:4–5; 4:13 |
+| 16 | Ruth's prayer for a child before the household goddess; the song at the oven | P4 | "The Lord gave her conception" (4:13) implies the empty years, and prayers to her own gods that went unanswered are one of Ruth's reasons on the road (§5). The baking scene shows ten years of closeness in a single morning and plants the song. | 1:4–5; 4:13. Household figurines are common finds across the region. |
 | 17 | The fever takes both brothers | P6 | His name sounds like "sickness" (dossier §8). | 1:5 gives no cause and no timing. |
+| 53 | Mahlon's last day: the cup, and "He'd have a joke for this" | P6, Tier D | Your note: a real moment between him and his wife before he dies, without the song. It's small on purpose. Their first exchange was about pain ("It's supposed to"), and their last is about his brother. The quiet wall carries the grief for Chilion without a line about it. | — |
+| 54 | Naomi's lullaby: hummed at Mahlon's bedside, sung to Obed on the roof | P6 | Your pick (expansion 6), with the right kind of song: a lullaby, not the harvest song. The tune that went into the grave with her sons comes back for the child "born to Naomi." It's the whole arc, full to empty to full, in one tune, and it's never pointed at. | Lullabies are universal; the tune and words get written with the score. |
 | 18 | Mourning as kin: Ruth's cuts, and Naomi binding them | P6 | Now that the brothers are family, Moab mourns them with its own rites. The scars mark "the Moabite" in Bethlehem and fade as the label does. | "On all the hands are gashes" (Jer 48:37). **Your call.** |
 | 19 | The trader's news | Tier C | The text says she heard (1:6), so somebody said it, and the narrator's line becomes his. | — |
-| 20 | Ruth and her mother; the clay goddess | P6, Tier D | Your note: more of Ruth's own life. Ruth's parents are alive (2:11), so leaving them costs her. | 2:11 |
+| 20 | Ruth and her mother; the mother's own clay goddess | P6, Tier D | Your note: more of Ruth's own life. Ruth's parents are alive (2:11), so leaving them costs her. The mother gives Ruth the figure she has prayed to all her life, which is a bigger gift than a household one. | 2:11 |
 | 21 | The parting at the edge of the plateau | P6 | The second view across the rift: Naomi makes her argument with home in sight. Those who know will think of Moses looking over the same land from Moab (Deut 34:1–4). Nobody says so. | The text says only "on the road" (1:7). |
-| 22 | Ruth sends the goddess back with Orpah | P6 | Turns 1:15's "back to her people and her gods" into something we see. It's an act of love toward her mother, not a rejection of her. | **Your call.** |
+| 22 | Ruth sends the goddess back with Orpah | P6 | Turns 1:15's "back to her people and her gods" into something we see. With your wording of 1:15, it's now the only place "her gods" appears, so it carries a recorded part of the verse (§7). It's an act of love toward her mother, not a rejection of her. | **Your call.** |
 | 23 | The east wind at Ruth's back | P5 | Your note that something must tell Ruth this is the path, and your view that God speaks through the world (Discussion 001). It's deniable: she can read it as a sign, and the audience can read it as weather (§5). | Hot east winds off the desert are typical of spring, when the barley harvest begins. **Your call.** |
 | 24 | Naomi's nod | P6 | Your note. The text says only that she stopped arguing (1:18). | — |
 | 25 | Crossing the Jordan at Jericho | P4 | Ruth enters the land the way Israel did, past the city of Boaz's ancestress, and the crossing shows what she does for Naomi without a word. | One of the two main routes between the plateau and Bethlehem (dossier §6) |
@@ -532,6 +545,7 @@ Every item passes all five parts of the addition test (ROADMAP §4.3): it's **co
 | 32 | The harasser has to drop stalks for her | P6 | Humor, paid off within one day | 2:15–16 |
 | 33 | "He gave us his own barley, the day we left" | P6, Tier D | Connects 2:20 to the prologue, for an audience that might not remember | 2:20 |
 | 34 | "Family?" and Naomi explains "redeemer" | P6, Tier D | The audience needs the word, and Ruth, a foreigner, genuinely doesn't know it (ROADMAP §7.2). Ruth's question gives the second half of 2:20 its own beat. | Lev 25:25, 47–49 |
+| 55 | Boaz's side: the grain he sends with the foreman; the dry jar in his empty house | P6, Tier D | Your pick (expansion 3). His words at the floor imply he expected her to want a younger man (3:10), and this shows it from his side before she proves him wrong. The jar is his wife's, from the prologue. | 3:10 |
 | 35 | The last day of the harvest: the song, "alone since the famine," Boaz's distance | P6, P4 | Replaces the old montage with one cut. Shows what seven weeks changed, pays off the song, says why Boaz is unmarried, and answers why he waits: his age, and the nearer redeemer (dossier §10). | 2:23; 3:10, 12 |
 
 ### Act Three
@@ -549,29 +563,36 @@ Every item passes all five parts of the addition test (ROADMAP §4.3): it's **co
 |---|---|---|---|---|
 | 52 | The old elder from the sale witnesses the redemption | P6 | The man who spoke the formula twelve years ago sees it fulfilled, and says "We are witnesses" first. It closes Elimelech's thread without a word about him. | 4:2, 9–11; the sale (4) |
 | 40 | A donkey brays over Mr. So-and-so's name | P6 | The film's version of the narrator's joke: the man is never named (4:1; ROADMAP §5.8). He's credited as "Mr. So-and-so." | **Your call.** |
-| 41 | A boy asks about the sandal | P6, Tier D | The text explains the custom (4:7), so a character may too. | The sole of the foot and the right to land: Deut 11:24; Josh 1:3; Ps 60:8 |
+| 56 | Mr. So-and-so's son at his elbow, and the look | P6 | Your pick (expansion 4). One look makes his refusal a father's prudence, not villainy, and "my own inheritance" (4:6) gets a face. | 4:6 |
+| 41 | His son asks about the sandal | P6, Tier D | The text explains the custom (4:7), so a character may too. Giving the question to his own son means the boy watches his father hand over his right, for the boy's sake. | The sole of the foot and the right to land: Deut 11:24; Josh 1:3; Ps 60:8 |
 | 42 | Boaz's cost: his first son will carry Mahlon's name | P4 | Shows what Boaz pays that the nearer redeemer wouldn't | Deut 25:6; Ruth 4:5, 10. The genealogy still counts Obed as Boaz's son (4:21). |
 | 43 | Boaz at the door with the sandal | P6 | Brings the gate's outcome home to the two women it's about, without words | "Wait" (3:18) |
 | 44 | The wing at the wedding | P6 | Pays off 2:12 and 3:9 | Ezek 16:8 |
 | 45 | The birth, a year after the return | P6 | The year comes full circle at the barley harvest, and childbirth's danger plays at the intensity the ceiling allows. | An early-summer wedding gives a spring birth. Birthing stones: Exod 1:16. Rachel: Gen 35:16–19. |
+| 57 | Naomi dances at the second wedding | P6 | Your note on Naomi's arc. She danced at her sons' weddings in Moab, her last full moment before the long emptying. Dancing again, pulled in by the friend who said "Come back," is a marker anyone can read. | — |
 | 46 | Naomi finally sees Ruth | P6 | The answer to "empty" (1:21) comes through the women's "better than seven sons." | 4:15 |
+| 58 | The friend names Obed; Naomi accepts her name, and laughs | P6, on P1 | Your pick (expansion 2), and your note on Naomi's arc. The friend's own arc runs from "Come back" to "Naomi?" to naming the child. The women never called her Mara, and this time she doesn't refuse her name. A late child and an old woman's laughter also echo Sarah (Gen 21:6); nobody says so. | 4:17 says "the neighbor women" named him. |
 | 47 | The last image, facing Moab, coming to rest on Obed's face | P6 | Closes the three views across the rift and holds grief and fullness together. Ending on Obed leaves a clean seam for your flash-forward idea, if you decide on it (§7). | — |
 
 ---
 
 ## 4. Threads
 
+**Naomi's arc and the pacing** are tracked marker by marker, with page numbers, in [BEATS §2–3](./BEATS.md#2-naomi-full-empty-full). The threads below are the ones that tie scenes together.
+
 - **Empty and full.** The bare floor and the dead field; "I went away full" (1:21); the ephah of barley (2:17); "don't go back empty" (3:17); "better than seven sons" (4:15); the house rebuilt.
 - **Bread.** The empty bread bin; Boaz's barley on the road; Ruth's loaf for the mourners; "there's bread in Bethlehem"; the meal in the field; the six measures.
-- **Elimelech's plan.** "Until we come back" at the gate; "Two harvests... and we buy the field back" under the new roof; the full measure; "You said two" at his grave; the field bought back by a kinsman at the same gate, with the same old elder as witness.
-- **Houses rebuilt.** Elimelech roofs a ruin in Moab for his family. Ruth clears his ruined house in Bethlehem for his widow. By the end of the harvest it has a roof again.
+- **Elimelech's plan.** "When we come back" at the gate; "Two harvests... and we buy the field back" under the new roof; the full measure; "You said two" at his grave; the field bought back by a kinsman at the same gate, with the same old elder as witness.
+- **Houses rebuilt.** Elimelech roofs a ruin in Moab for his family. Ruth clears his ruined house in Bethlehem for his widow. By the end of the harvest it has a roof again, and the last image is Naomi on that roof.
+- **The jar.** Boaz and his wife share one mouthful each from a water jar in the famine. In the harvest weeks it stands dry in the corner of his empty house. After the wedding it's full. Nobody remarks on it.
 - **Threshing floors.** Boaz's bare floor in the prologue; Ruth's father's floor, where Elimelech won't be cheated; Boaz's floor heaped with grain on the night that decides everything.
-- **The song.** Naomi teaches it in Moab and corrects Ruth's one wrong word at the oven. Ruth sings it in Boaz's field, and Bethlehem's young women recognize it as their own.
+- **The harvest song.** Naomi teaches it in Moab and corrects Ruth's one wrong word at the oven. Ruth sings it in Boaz's field, and Bethlehem's young women recognize it as their own. It's Ruth's song: it says she belongs.
+- **The lullaby.** Naomi's own song, for her own children. She hums it at Mahlon's bedside on his last night, and nobody remarks on it. She sings it to Obed on the roof, with the words. It's Naomi's song: it says she's full again.
 - **Three views across the rift.** Bethlehem toward Moab (the prologue), Moab toward Judah (the parting), Bethlehem toward Moab again (the last image).
 - **Boaz's places.** The field, the floor and the gate are each seen empty or ordinary first, then full or decisive.
 - **The mirrors (FR-08, never spoken).** The one who stayed and the one who came. Opposite in age, wealth, people and standing, and alike in kindness. Both widowed. "Worth" (2:1, through the gleaner; 3:11). The wing (2:12; 3:9; the wedding).
 - **Names.** Bethlehem, Naomi and Mara, Mr. So-and-so, "the dead man's name" (4:5, 10), Obed. Naomi says "Ruth" once, when she starts working for Ruth's future (3:1). And "the Moabite," which drops away after the gate, as it does in the text.
-- **The chorus.** Naomi's friend says goodbye in the prologue, says her name at the well, and is among the women at the birth.
+- **The chorus.** Naomi's friend says "Come back" in the prologue, says "Naomi?" at the well, pulls her into the dancing at the wedding, and names the child.
 
 ---
 
@@ -580,7 +601,7 @@ Every item passes all five parts of the addition test (ROADMAP §4.3): it's **co
 - **He never speaks, and he works no visible miracle.** There's no Tier A in this episode.
 - **The narrator's two statements that God acted** (1:6; 4:13) are carried by people: the trader's "God has visited his people," and the women's "Blessed be the Lord" (4:14).
 - **"Chance" (2:3) and "And look" (2:4; 4:1)** are shot the same way: ordinary moments that the camera holds a beat longer than it needs to.
-- **Blessings come true through the people who speak them.** Naomi wishes her daughters-in-law "rest" (1:9) and then finds it for Ruth (3:1). Boaz prays for the Lord's "wings" over Ruth (2:12) and becomes the answer (3:9; the wedding).
+- **Blessings come true through the people who speak them.** Naomi wishes her daughters-in-law husbands who deserve them (1:9), and then goes and finds one for Ruth (3:1). Boaz prays for the Lord's "wings" over Ruth (2:12) and becomes the answer (3:9; the wedding).
 - **Naomi's lament stands at full strength.** The answer comes through events, not argument.
 - **What tells Ruth to go.** The text never says, and her oath is the only explanation she gives. So the act builds her reasons in the way the book works, through people and the world rather than a voice or a dream:
   - a family that stood by each other in a village that didn't want them, which she saw the day Elimelech refused the short measure;
@@ -589,7 +610,7 @@ Every item passes all five parts of the addition test (ROADMAP §4.3): it's **co
   - the song she learned at Naomi's oven;
   - her own prayers that went unanswered.
 
-  Then, at the moment she has to choose, the east wind comes up behind her and pushes toward the land. It's the same wind that blew over Bethlehem's empty floor, and it will winnow Boaz's grain in Act Three. In Hebrew the word for wind, *ruach*, is also the word for spirit. Nobody remarks on it. It fits your view that God speaks through the world (Discussion 001), and it's deniable, the way the book's "chance" is.
+  Then, at the moment she has to choose, the east wind comes up behind her and pushes toward the land. It's the same desert wind that blew across Bethlehem's empty floor in the prologue, and it comes up again in the last image. It isn't the wind that winnows Boaz's grain: that's the evening breeze off the sea, and Jeremiah says the desert wind is "not to winnow" (Jer 4:11). So the desert wind belongs to the hard places of the story, and to the push it gives Ruth. In Hebrew the word for wind, *ruach*, is also the word for spirit. Nobody remarks on it. It fits your view that God speaks through the world (Discussion 001), and it's deniable, the way the book's "chance" is.
 
 ---
 
@@ -608,6 +629,10 @@ My defaults are in bold. You didn't change items 1–7 in your notes, so their d
 9. **"You said two"** (51): **yes.** The alternative is Naomi silent at the grave.
 10. **The old elder at the gate** (52): **yes.**
 11. **The David connection:** deferred, as you asked. The ending is built so your idea can be added later as a change at the very end and nothing else (§7).
+12. **Where the lullaby is planted** (54): **hummed once at Mahlon's bedside,** under the coughing, with nobody remarking on it. If that feels like the same neatness you cut, the alternative is no plant at all: Naomi sings Obed a tune we've never heard, and the scene still works, because a lullaby explains itself. We'd lose the echo from her sons to her grandson.
+13. **The sandal question goes to Mr. So-and-so's own son** (41, 56): **yes.** The alternative keeps it with a boy in the crowd and leaves the son silent.
+14. **Naomi dances at the second wedding** (57): **yes.**
+15. **Naomi's friend.** She's in four scenes now, so she'll need a name for the cast list, even if nobody says it on screen. The script calls her NAOMI'S FRIEND for now. **Your call;** I can suggest names from the period if you'd like.
 
 ---
 
@@ -619,20 +644,29 @@ No contradictions with the text. This section has three parts: the things your n
 
 | Issue | What the text does | What the treatment does |
 |---|---|---|
-| **Naomi's blessing (1:9)** | "May the Lord grant that you find rest, each of you in the house of her husband." | Your line: "May he give each of you the rest you deserve." It keeps the rest and the blessing but drops the husband. The next speech brings marriage straight back ("Am I going to have more sons for you to marry?"), so the scene works. The cost comes in Act Three: when Naomi offers Ruth "a place to rest" (3:1), the audience has to remember that rest meant a husband's house. If you want it back, two words after a beat would do it: "...the rest you deserve. A husband. A home." The sample script uses your line and carries this as a note. |
-| **"Redeemer" (2:20)** | "The man is close family to us. He's one of our redeemers." | "That man is family" keeps the first half. The second half is the one the plot hangs on: Ruth says "You're a redeemer" at the threshing floor (3:9), and the whole gate scene turns on the right to redeem. So the word gets its own beat (34). If you'd rather introduce it some other way, it still has to land before Act Three. |
-| **Naomi says "Ruth" (3:1)** | In the Hebrew, Naomi never calls Ruth by name. She's "my daughter" every time (2:2, 22; 3:1, 16, 18). The only voices that say "Ruth" are Ruth's own, at the threshing floor (3:9), and Boaz's, at the gate (4:5, 10). | Not a contradiction. With your change, it's the one time Naomi does it, when she starts working for Ruth's future, and the treatment plays it as a turn. I've kept her from saying the name anywhere earlier, including in the sample script. |
-| **"Today" (3:18)** | "He won't rest until he has settled the matter today." | Dropped, as you asked. Act Four starts that same morning, so nothing is lost. |
+| **1:13, the most likely reading** | *ki mar-li me'od mikkem.* The little word *mikkem* can be read three ways: "more bitter for me **than for you**" (comparative), "very bitter for me **because of you**" (causal), or "too bitter **for you** to share" (excess). | **The comparative is the most likely, and it stays.** Four reasons. (1) The oldest translations take it that way: the Greek Septuagint, the Syriac and the Aramaic Targum. (2) The grammar: an adjective followed by *min* is Hebrew's ordinary way of saying "more than," as in Genesis 19:9, "we'll treat you worse than them." (3) Her argument: she's telling them they have a future and she doesn't, so her lot is worse than theirs and they shouldn't tie themselves to it. (4) Her own words at the well: "the Almighty has made my life very bitter" (1:20) uses the same two words, *bitter* and *very*, about her alone. Most modern translations agree: NRSV, NIV, NJPS ("my lot is far more bitter than yours"), NASB and NLT. The causal reading is the KJV's ("it grieveth me much for your sakes") and the ESV's. The excess reading is the CSB's and the NET's. Neither is wrong, but neither is the best fit. |
+| **1:15, "You know you should go back. Go after her."** | "Look, your sister-in-law has gone back to her people and to her gods. Go back after your sister-in-law." | Your line keeps the verse's command and makes it personal: Naomi appeals to what Ruth already knows. The part it drops, **"her people and her gods,"** is the part Ruth answers word for word in the next verse: "your people will be my people, and your God my God." So it can't simply vanish, and it doesn't: the goddess carries it. Orpah walks back toward her village with Ruth's mother's goddess in her fist, and Naomi is watching her go when she speaks. The audience sees "her people and her gods" a few seconds before Ruth answers it. I think that's faithful, and it fits your rule about not saying what we can see. If the goddess thread were ever cut, the words would have to come back. |
+| **1:9, "a husband you deserve"** | "May the Lord grant that you find rest, each of you in the house of her husband." | Done, word for word. It's closer to the text than my version: the Hebrew "rest" (*menuchah*) means the security of a husband's house, and your line says that plainly. The only loss is the echo of the word "rest" with 3:1 ("a place to rest"), but the echo of meaning is stronger: she wishes them husbands on the road, and in Act Three she goes and finds one. |
+| **"Redeemer" (2:20)** | "The man is close family to us. He's one of our redeemers." | Resolved in v3: "That man is family," then Ruth's "Family?" and Naomi's "One of our redeemers" (34). |
+| **Naomi says "Ruth" (3:1)** | In the Hebrew, Naomi never calls Ruth by name. | Resolved in v3: it's the one time she does, played as a turn. The script keeps her from saying it anywhere earlier. |
 
 ### Errors I found and fixed
 
+**In this round (v4):**
+
 | Error | Fix |
 |---|---|
-| **The years didn't add up.** The weddings came "three years later" and then "ten years later," which makes thirteen years in Moab. Everything else (the friend and Boaz "twelve years older," Ruth from 14 to 26) assumes twelve. | The weddings now come **two years** after Elimelech's death, when Ruth is about 16. The marriages last ten years, which is the text's "about ten years" (1:4). The dossier's timeline is updated to match. |
-| **Eglon's distance.** The register said Ehud's killing of Eglon was "about 160 years earlier"; the dossier says about 180. | Corrected to about 180 (8). |
-| **A dangling setup.** With "redeemer" cut from 2:20, the next paragraph still said "Ruth doesn't know the word." | Repaired by Ruth's "Family?" (34). |
-| **The song's last trace.** With Mahlon's request cut, Act Two still called it "the one she sang to Mahlon," and §5 still listed "a husband who wanted Bethlehem's song." | Both removed. |
-| **Episode length** in the pilot plan still said 43 minutes. | Updated to about 58. |
+| **Two goddesses, one gift.** The fever year had Ruth praying before "a little clay goddess her mother gave her," and then on the morning she leaves, her mother gives her the goddess as if for the first time. | The goddess Ruth prays to is now the household one in the niche of their wall. The one her mother gives her is her mother's own, worn smooth from a lifetime of handling. The script makes them look different, so the audience won't confuse them. |
+| **The sale formula didn't match the law.** The elder said the field "goes back to its family when they return." Leviticus gives no such condition: the seller buys it back when he can, or a kinsman buys it back for him, or it returns at the Jubilee (Lev 25:25–28). | The formula now says the family can buy it back when they're able, or a kinsman can buy it back for them, which is exactly Elimelech's plan and exactly what Boaz does. The Jubilee isn't mentioned, because nobody knows whether it was kept in this period. |
+| **"Nurse" (4:16).** "Became his nurse" suggests breastfeeding. The Hebrew *omenet* means a guardian or carer: the same word is used for the nurse who carried Mephibosheth (2 Sam 4:4) and, in the masculine, for Moses carrying Israel "as a nurse carries a nursing child" (Num 11:12). | "From then on she's the one who carries him and cares for him." |
+| **"About ten years later"** in the series chronology (TIMELINE, the Ruth row). They leave in 1152 and return in 1140. | Now "about twelve years later," with the ten years of marriage named separately. |
+| **The wrong wind for winnowing.** The treatment said the desert wind at Ruth's back "will winnow Boaz's grain in Act Three." Winnowing uses the steady evening breeze off the sea. The hot east wind is the one Jeremiah calls "not to winnow or cleanse" (Jer 4:11). | The floor in Act Three is winnowed in the sea breeze. The desert wind keeps its place in the prologue, at the edge and in the last image (§5). |
+| **A rooster in Moab.** The sample scene opened with a rooster crowing. Chickens were rare in the region this early: they only become common centuries later. | A dog barks instead. |
+| **Two out-of-date rows in the roadmap's list of decisions** (§19.1): the Name ("Yahweh where someone actually said it," which was revised to oaths only) and "fallible" (still listed as open, though Discussion 002 is decided). | Both brought up to date. |
+
+**My own length estimate.** The treatment said about 58 minutes. The script runs 37 pages, about 40 to 45 minutes (§1; [BEATS §3](./BEATS.md#3-pacing)).
+
+**In v3:** the thirteen-year timeline (the weddings now come two years after Elimelech's death); Eglon's distance (about 180 years, not 160); the dangling "Ruth doesn't know the word" (repaired by "Family?"); the harvest song's last traces of Mahlon's cut request; and the pilot plan's old length.
 
 ### Checked and fine
 
@@ -641,6 +675,7 @@ No contradictions with the text. This section has three parts: the things your n
 | Mourning for a foreigner | The text doesn't describe any mourning in Moab. | Rites were for kin and community, so the village stays away from Elimelech's burial but mourns Mahlon and Chilion, who have married in. |
 | **Where in Moab** | Ruth says only "the country of Moab" (1:1). Jephthah later claims Israel held the towns along the Arnon for 300 years (Judg 11:26), but Eglon had ruled as far as Jericho (Judg 3:13), and the Mesha Stele shows Moabites and Gadites living side by side north of the Arnon. | **Compatible.** The northern plateau was mixed and disputed land (dossier §6). A Moabite village there is plausible, and its suspicion of Israelites has a reason close to home. |
 | Barley on the floor after the wheat harvest | Ruth gleans through the wheat harvest (2:23), but then Boaz is winnowing barley (3:2). | Threshing and winnowing went on through the summer, after the reaping, so the last of the barley can still be on the floor. |
+| The Jordan in spring | The crossing at Jericho happens at the start of the barley harvest. | That's flood season: "the Jordan overflows all its banks throughout the time of harvest" (Josh 3:15). So the crossing is genuinely dangerous, which is why Ruth goes first and comes back for Naomi (25). |
 | Boaz's marriage | The text never says whether he had a wife. | Widowed in the famine years (1) |
 | How Naomi has land to sell | 4:3 assumes she has a claim but never explains it. | Elimelech sold the use of the field before leaving (4). |
 | The men's dialogue | Elimelech, Mahlon and Chilion have no lines in the text. | Your notes asked for family dynamics and for Elimelech's protectiveness, so they talk like a family. All of it is Tier D. |
@@ -650,7 +685,7 @@ No contradictions with the text. This section has three parts: the things your n
 | Naomi's name | The pun on Naomi and Mara is lost without Hebrew. | Your version handles it: "Don't call me that. Don't call me sweet" glosses Naomi, and "because the Almighty has made my life very bitter" glosses Mara. |
 | A famine in Gideon's "rest" | Our chronology puts the famine inside Gideon's forty years of rest (Judg 8:28). | That's rest from enemies, not from weather (dossier §5). |
 | Shamgar and the Philistines | Our arrangement has Shamgar fighting Philistines a few decades before their main settlement. | Not a problem for Ruth. It's flagged in [TIMELINE §9](../../../world/TIMELINE.md#9-updated-names-and-period-flags) for the Judges arc. |
-| **Length** | — | About 58 minutes, up from 43. That's still one episode, but it's near the top of what one episode can carry. If later notes add much more, the natural split is two episodes, breaking after the oath on the road: Naomi's story in Moab, then Ruth's in Bethlehem. I'd rather trim than split, but it's your call when we get there. |
+| **Length** | — | 37 pages of script, about 40 to 45 minutes: comfortably one episode, with room to let the later acts breathe if the animatic asks for it. The first half (the prologue and Act One) is 57% of the pages, because your notes opened up Moab. [BEATS §3](./BEATS.md#3-pacing) explains why that shouldn't feel slow-then-rushed, and lists the first cuts if Moab drags. |
 
 ### For later arcs
 
@@ -661,27 +696,33 @@ No contradictions with the text. This section has three parts: the things your n
 | **David and Moab** | David later leaves his parents with the king of Moab for safety (1 Sam 22:3–4), and later still conquers Moab and executes two of every three captives (2 Sam 8:2). | Nothing to change in Ruth. Worth knowing if you choose flash-forwards: Ruth's great-grandson both shelters with Moab and crushes it. |
 | **Ezra and Nehemiah** | After the exile, Ezra and Nehemiah dissolve marriages to foreign women, Moabites included, reading Deuteronomy 23:3 aloud (Ezra 9–10; Neh 13:1–3, 23–27). | The Bible holds Ruth and Nehemiah side by side without resolving them, and the series should too. Ruth's episode makes no general statement about foreign marriage, so it won't contradict the later arc. |
 | **The Moabite accent** | Moabites appear again: Eglon (Judg 3), Mesha (2 Kgs 3), and the Moabite women of Solomon's court (1 Kgs 11:1). | The accent needs designing once and keeping across the series. It shouldn't be a real modern accent, which would carry the same modern associations we avoided by not using Arabic. Added to ROADMAP §5.7. |
+| **Rachel's tomb** | We put Rachel's pillar on the road near Bethlehem, following Genesis (35:19–20; 48:7). But Saul passes "Rachel's tomb in the territory of Benjamin" north of Jerusalem (1 Sam 10:2), Jeremiah hears Rachel weeping "in Ramah" (Jer 31:15), and Matthew applies that verse to Bethlehem's children (Matt 2:18). | Nothing to change in Ruth. The Samuel arc will have to stage 1 Sam 10:2 without contradicting this one, for example by treating Saul's landmark as a second memorial or a border marker. A decision for the Samuel arc. |
+| **Naomi's friend's name** | She now has four scenes (§6, choice 15). | The script uses NAOMI'S FRIEND until you choose. |
 
 ---
 
 ## 8. Room to expand
 
-You asked where Ruth could gain depth and color. Here are the places I see, in the order I'd recommend them. Each would add about a minute or less.
+Your answers, 2026-10-02:
 
-1. **Orpah's homecoming.** A short scene after the parting: Orpah gives the clay goddess back to Ruth's mother, and the two women understand each other without saying much. It gives Orpah her own ending, closes the goddess thread, and shows Moab's side of the loss. *Rests on* 1:14–15. **I'd add it.**
-2. **Naomi's friend names Obed.** The text says "the neighbor women" named him (4:17). Make the friend from the prologue the one who says it first. Her arc runs from "Come back" to "Naomi?" to naming the child. It costs nothing but a choice of who speaks. **I'd add it.**
-3. **Boaz's hesitation, from his side.** One scene in the harvest weeks: Boaz watches the young men joke with Ruth and decides she'll want one of them. It's what his words at the floor imply: "you haven't gone after the young men" (3:10). It explains why the older man waits for her to move. **I'd add it.**
-4. **Mr. So-and-so's reason.** At the gate, his son stands beside him, and when he says "I'd be ruining my own inheritance," he looks at the boy. One look makes his refusal prudence, not villainy. **I'd add it.**
-5. **The danger in the field.** Ruth's harassment could go one step further, a real threat that Boaz's order then ends. The text implies it (2:9, 22). It would raise the stakes of Act Two but darken it. **Your call;** I lean toward keeping it where it is.
-6. **The song at the end.** Naomi sings the Bethlehem song to Obed on the roof, bringing it home. It's moving, but it may be too neat, the same reason you cut Mahlon's request. **I'd leave it out** unless you like it.
-7. **Ruth's first festival.** They arrive at the beginning of the barley harvest, the season of Passover and the first sheaf (Lev 23:10–11). Ruth could see her first one. But observance in the Judges period is uncertain: 2 Kings 23:22 says no Passover like Josiah's had been kept "since the days of the judges." **I'd leave it out.**
-8. **Orpah and Chilion's marriage.** A little more of them, so Orpah's grief and her choice weigh more. Right now they're one line of arguing and laughing through a wall. **Optional;** a single short scene would do it.
+| # | Expansion | Your answer | Where it went |
+|---|---|---|---|
+| 1 | Orpah's homecoming | No | — |
+| 2 | Naomi's friend names Obed | **Yes** | Act Four, the naming (58) |
+| 3 | Boaz's hesitation, from his side | **Yes** | Act Two, "Boaz's side" (55) |
+| 4 | Mr. So-and-so looks at his son | **Yes** | Act Four, the gate (56, 41) |
+| 5 | More danger in the field | No | — |
+| 6 | Naomi sings to Obed | **Yes, if it's the right kind of song** | A lullaby, not the harvest song (54) |
+| 7 | Ruth's first festival | No | — |
+| 8 | Orpah and Chilion's marriage | Not now | — |
+
+**On 8, in your words:** "I like the gaps because they allow me the room to explore things like Orpah and Chilion's marriage later down the road if the story calls for it or if I want to." So the script keeps them where they were, one line of arguing and laughing through a wall, and adds nothing that would close the gap. The quiet wall on Mahlon's last day (53) leans on that line without explaining it.
 
 ---
 
 ## 9. What's next
 
-1. **Your notes on the [sample scene](../../../scripts/ruth/sample-the-road.fountain),** the parting on the road, written as a script. It's the test of whether the dialogue sounds real on the page.
-2. **Your picks from §8,** and anything else in the treatment.
-3. **I revise** the treatment once more if needed, and learn from your edits to the scene.
-4. **The beat sheet** (`BEATS.md`), then the scene cards and the full script. `style/VOICES.md` and `style/LEXICON.md` start alongside the script. Your storytelling notes so far are in [`style/STORYTELLING.md`](../../../style/STORYTELLING.md).
+1. **Your pass on the [script](../../../scripts/ruth/ruth.fountain).** Rewrite whatever you want, probably a lot of the dialogue. A PDF is the easiest way to read it. The [beat sheet](./BEATS.md) is the map.
+2. **Your answers on the new choices** in §6 (12–15), especially where the lullaby is planted.
+3. **I learn from your edits:** I compare your version with mine, write the patterns into [`style/`](../../../style/STORYTELLING.md), and ask about anything I can't read.
+4. **The audit** (ROADMAP §13.4), then the lock.
