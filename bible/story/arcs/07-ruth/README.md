@@ -2,7 +2,7 @@
 
 > How we'll write the pilot, step by step: which files, what goes in each, and where you review.
 
-**Status:** Phase 1 is under way. Step 1, the [dossier](./DOSSIER.md), is done, and the whole-Bible chronology is decided ([`world/TIMELINE.md`](../../../world/TIMELINE.md)). **Step 2, the [treatment](./TREATMENT.md), is on its second draft,** with your first round of notes applied, and is waiting for your next round. For why Ruth is the pilot, see ROADMAP §11.4.
+**Status:** Phase 1 is under way. Step 1, the [dossier](./DOSSIER.md), is done, and the whole-Bible chronology is decided ([`world/TIMELINE.md`](../../../world/TIMELINE.md)). **Step 2, the [treatment](./TREATMENT.md), is on its third draft,** with two rounds of your notes applied. A [sample scene](../../../scripts/ruth/sample-the-road.fountain), the parting on the road, is written as a script to test the dialogue, and is waiting for your notes. For why Ruth is the pilot, see ROADMAP §11.4.
 
 ---
 
@@ -11,9 +11,10 @@
 | Step | File | Format | What's in it |
 |---|---|---|---|
 | 1 | [`DOSSIER.md`](./DOSSIER.md) ✓ | Markdown | Everything we need to know before writing. Built so that it also teaches you the story. |
-| 2 | [`TREATMENT.md`](./TREATMENT.md) ✓ v2 | Markdown, in prose | The whole episode told as a short story (roughly 3–8 pages): what happens, how it's shaped, and what it means |
+| 2 | [`TREATMENT.md`](./TREATMENT.md) ✓ v3 | Markdown, in prose | The whole episode told as a short story (roughly 3–8 pages): what happens, how it's shaped, and what it means |
 | 3 | `BEATS.md` | Markdown | The structure scene by scene: four acts, one for each of Ruth's four chapters |
 | 4 | `SCENES.md` | Markdown | One scene card per scene (template in ROADMAP §13.2) |
+| Test | [`scripts/ruth/sample-the-road.fountain`](../../../scripts/ruth/sample-the-road.fountain) ✓ | Fountain | One scene written as a script before the beat sheet, to test how the dialogue sounds |
 | 5 | `scripts/ruth/ruth.fountain` | Fountain (`.fountain`) | The screenplay. It's plain text that renders to standard screenplay format, and every line carries a hidden `[[tag]]` saying where it came from. |
 | Alongside | `style/VOICES.md`, `style/LEXICON.md` | Markdown | How each character speaks, and the rules for words and idioms. These start with Ruth and grow throughout the series. |
 
@@ -97,14 +98,15 @@ Then we lock the script.
 
 ## Decisions the pilot needs
 
-*Updated 2026-10-01. The details are in [DOSSIER §12](./DOSSIER.md#12-decisions-for-you). The treatment's own choices are in [TREATMENT §6](./TREATMENT.md#6-choices-for-you).*
+*Updated 2026-10-02. The details are in [DOSSIER §12](./DOSSIER.md#12-decisions-for-you). The treatment's own choices are in [TREATMENT §6](./TREATMENT.md#6-choices-for-you).*
 
 | Decision | Status | Needed by |
 |---|---|---|
-| Format | **Decided:** one episode of about 43 minutes, with a prologue and four acts, one for each chapter | Treatment |
+| Format | **Decided:** one episode, with a prologue and four acts, one for each chapter. Planned at about 43 minutes; your notes have taken it to about 58 (TREATMENT §7). | Treatment |
 | Where the story opens | **Decided:** Bethlehem during the famine, with a glimpse of Boaz as the one who stays. The treatment offers three ways in. | Treatment |
 | Boaz's mother | **Decided by the chronology:** Rahab is his ancestor several generations back, remembered but not seen (DOSSIER §5) | Treatment |
 | Moab's religion on screen | **Decided:** sincere and textured | Treatment |
 | Ruth's first marriage | **Decided** (FR-08): real and loving on her side, but unfinished | Treatment |
 | The threshing floor (3:1–14) | **Default:** keep the text's charged ambiguity, resolved toward honor. It can be intense, but not explicit (principle 8). | Scene cards |
-| Ruth's speech | **Decided by the series rule** (ROADMAP §5.7): English with a Moabite accent, all the way through | Treatment |
+| Ruth's speech | **Decided by the series rule** (ROADMAP §5.7), which you confirmed 2026-10-02: English with a Moabite accent, all the way through | Treatment |
+| The David connection | **Deferred** until more of the story exists. The last shot rests on Obed's face so a flash-forward can be added later ([TREATMENT §7](./TREATMENT.md#for-later-arcs)). | Before lock, or later |

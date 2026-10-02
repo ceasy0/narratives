@@ -1,6 +1,6 @@
 # Discussions
 
-The theological and philosophical conversations the story depends on. Each discussion gets its own file and goes through these stages:
+The theological, philosophical and production conversations the story depends on. Each discussion gets its own file and goes through these stages:
 
 1. **Seeded.** I lay out the question, your view so far, the texts that support it and the texts that pull against it, the possible ways to show it on screen, and the questions for our conversation.
 2. **Discussed.** We talk it through. The key points get added to the file.
@@ -16,8 +16,9 @@ A discussion must be decided before any arc that depends on it is written, but i
 | [002](./002-jesus-humanity.md) | Jesus's humanity: limits, struggle, and the question of sin | Your answer on Jesus's dialogue | The Gospels (and the Mark 2 exercise) | **Decided** 2026-10-01. Two sub-questions are deferred to the Gospels: what the cross accomplishes, and which scenes become falls. |
 | 003 | God's name in Old Testament dialogue: how fully to use "Yahweh" | Your answer on names | Ruth (2:4) | **Decided** 2026-10-01 to use it fully, then **revised** the same day: use it sparingly, in oaths and where the Name itself is the point (ROADMAP §5.5) |
 | 004 | God among the nations: the Bible's outsiders (Melchizedek, Jethro, Balaam, Ruth, Naaman, the Magi, Cornelius, Paul in Athens) alongside its exclusive claims (the first commandment, Elijah against Baal, John 14:6, Acts 4:12) | Your stance on other religions | A light version before Ruth; a full version before the Exodus | **Light version applied to Ruth** 2026-10-01: Moab's religion is shown as sincere and textured, and Orpah isn't condemned. The full version is queued for before the Exodus. |
-| 005 | Texts beyond the canon | Your canon answer | Ongoing (the study track, ROADMAP §9.5) | Queued |
-| 006+ | Your framings | You | Depends on the framing | **14 entries, each with a fit grade, in [`canon/FRAMINGS.md`](../canon/FRAMINGS.md).** Proposed order: FR-08 (before Ruth), FR-03 with FR-13, FR-01 with FR-02, then the rest. Each gets its own discussion file when we take it up. |
+| [005](./005-beyond-the-text.md) | Beyond the text: traditions, legends and rumored events, including the story that Jesus studied in the East. Widened from "Texts beyond the canon." | Your canon answer; your question about Jesus in the East | Each arc an item appears in; Jesus in the East before the Gospels | **Seeded** 2026-10-02 |
+| [006](./006-2d-or-3d.md) | 2D or 3D, and what AI changes | Your question about 2D animation and AI costs | Phase 6, pre-production | **Seeded** 2026-10-02 |
+| 007+ | Your framings | You | Depends on the framing | **14 entries, each with a fit grade, in [`canon/FRAMINGS.md`](../canon/FRAMINGS.md).** Proposed order: FR-08 (before Ruth), FR-03 with FR-13, FR-01 with FR-02, then the rest. Each gets its own discussion file when we take it up. |
 
 ## Template
 

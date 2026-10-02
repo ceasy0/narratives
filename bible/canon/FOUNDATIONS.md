@@ -2,7 +2,7 @@
 
 > The decisions everything else rests on, recorded in your own words where possible. When a later document conflicts with this one, this one wins until we change it, and any change gets dated below.
 
-**Status:** v1.6, 2026-10-01. Recorded from your answers to the roadmap questions, to Discussion 002 and to the chronology.
+**Status:** v1.7, 2026-10-02. Recorded from your answers to the roadmap questions, to Discussion 002, to the chronology and to your notes on the Ruth treatment.
 
 ---
 
@@ -36,12 +36,13 @@
 
 | Topic | Decision | Where it's explained |
 |---|---|---|
+| Title | **Working title: *Adonai*** (2026-10-02). It's Hebrew for "my Lord," the word Jewish readers say aloud in place of the Name, so it's also what the series' "the Lord" stands for. | ROADMAP §0 |
 | Canon | Start with the books most widely accepted as canon. Later, study the Ethiopian canon, the Apocrypha and other texts in order to learn about them, and adopt material only after discussion. | ROADMAP §9.1, §9.5 |
 | "Missing from the Bible" | Anything else outside the Bible we could potentially use | ROADMAP §4.1, §9.5 |
 | Audience and rating | You; no rating | §1 above |
 | Intensity | A high ceiling for gore, pain, beauty and pleasure, so it can get there when the story calls for it. It isn't always intense. Nothing overly sexual. | ROADMAP principle 8 |
 | Dialogue register | Setting 2 (plain modern) as the baseline. More slang is fine where it makes sense. | ROADMAP §5.2 |
-| Languages | **Revised 2026-10-01** so that languages stay consistent across the whole series. English always stands for Israel's own language (Hebrew; in Jesus's time, Aramaic). Sister dialects Israelites could understand, such as Moabite, are English with their own accent. Every other language is spoken as itself, by your three tiers: (1) the original, reconstructed, only if that can be done with high confidence; (2) otherwise its descendant language; (3) otherwise the language of that region today. Nobody's language depends on whose episode it is. *The tiers are yours; the English rule is my recommendation, applied provisionally until you confirm it.* | ROADMAP §5.7 |
+| Languages | **Revised 2026-10-01** so that languages stay consistent across the whole series. English always stands for Israel's own language (Hebrew; in Jesus's time, Aramaic). Sister dialects Israelites could understand, such as Moabite, are English with their own accent. Every other language is spoken as itself, by your three tiers: (1) the original, reconstructed, only if that can be done with high confidence; (2) otherwise its descendant language; (3) otherwise the language of that region today. Nobody's language depends on whose episode it is. **Confirmed 2026-10-02:** "I think the language rule works. It makes the most sense because the language wouldn't have been that different anyway." | ROADMAP §5.7 |
 | Names | "Jesus." **Revised 2026-10-01:** "Yahweh" sparingly, in oaths and where the Name itself is the point. Everywhere else, "God" or "the Lord." In your words: "don't completely get rid of its usage. But try to diminish it where you can." In Ruth the Name is heard twice, in the two oaths (1:17; 3:13). | ROADMAP §5.5 |
 | Tradition | Non-denominational | §2 above |
 | Depicting God | Open | [Discussion 001](../discussions/001-how-god-speaks.md) |
@@ -51,13 +52,13 @@
 | Reframing | Different interpretations and understandings. The structural tools (point of view, intercutting) may come later. | ROADMAP §10.5, §8.8 |
 | Output | Screenplays first. Then a 3D animated version, visually appealing in its own right, as the placeholder for an eventual live-action show or films. | ROADMAP §1.1, §15 |
 | Format | Episodes, with the final format decided later | — |
-| Storytelling | Your notes on how scenes should play: no cards, no montages for passing time, real family dynamics, layered peoples, dialogue that sounds real | [`style/STORYTELLING.md`](../style/STORYTELLING.md) |
+| Storytelling | Your notes on how scenes should play: no cards, no montages for passing time, real family dynamics, layered peoples, dialogue that sounds real. Links between episodes go only at the beginnings and ends of episodes or scenes. | [`style/STORYTELLING.md`](../style/STORYTELLING.md) |
 | Scope | The Bible's window only. Other cultures and time periods may become separate projects later. | — |
 | Order of discussions | 002 (Jesus's humanity) first | [discussions/](../discussions/) |
 | Mary's other children | Your notes reject the idea that Mary remained a virgin after Jesus's birth (Positions Register, item 17) | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
 | The conception | Mary conceived without sex, but one of her eggs was fertilized by Joseph, so both "vital opposites" were involved. On screen: the dialogue stays with the text, your view is held quietly (P5), and the village's rumor is staged. | [FRAMINGS FR-03](./FRAMINGS.md#fr-03--mary-and-joseph-the-conception) |
 | Ruth's opposite | A working theory, not fact. **Confirmed:** Boaz. Unspoken unless it feels right. | [FRAMINGS FR-08](./FRAMINGS.md#fr-08--marriage-to-ones-relative-opposite) |
-| The Ruth pilot | One episode. It starts at the earliest point and runs chronologically, opening in Bethlehem during the famine. 4:5 uses the read-aloud version ("you acquire Ruth"). Moab's religion is sincere and textured. Naomi and Boaz are slightly more formal than Ruth. It ends with the naming of Obed. Rahab is Boaz's ancestor, not his mother, because the chronology doesn't allow it. | [Ruth dossier §12](../story/arcs/07-ruth/DOSSIER.md#12-decisions-for-you) |
+| The Ruth pilot | One episode. It starts at the earliest point and runs chronologically, opening in Bethlehem during the famine. 4:5 uses the read-aloud version ("you acquire Ruth"). Moab's religion is sincere and textured. Naomi and Boaz are slightly more formal than Ruth. It ends with the naming of Obed. Rahab is Boaz's ancestor, not his mother, because the chronology doesn't allow it. **The David connection is deferred** until more of the story exists. Your current idea: the camera closes on Obed's face, with flash-forwards to scenes from David's life and a voice-over. Any change it brings should be small and come only at the end of the episode. | [Ruth dossier §12](../story/arcs/07-ruth/DOSSIER.md#12-decisions-for-you) |
 | Chronology | **Decided:** a whole-Bible working chronology comes before any arc. The text-first model, with my recommendation adopted on all five forks ("Go with your recommendations for 1–5"): the Exodus in 1446 BC; 215 years in Egypt; Jesus born around 5 BC and crucified on 3 April AD 33; Genesis 1–11 undated until the Genesis discussion; Revelation around AD 95. | [`world/TIMELINE.md`](../world/TIMELINE.md#8-decisions-for-you) |
 | Jesus's humanity | **Decided.** See the decision text in Discussion 002. | [Discussion 002](../discussions/002-jesus-humanity.md#decision) |
 | Your source documents | Keep only the summaries in the repository | §7 below |
@@ -109,3 +110,4 @@ These documents are summarized in the repository. At your request, the originals
 | 2026-10-01 | v1.4: Ruth checkpoint answers; the decision to settle the chronology first |
 | 2026-10-01 | v1.5: the chronology decided; Rahab settled as Boaz's ancestor; reporting problems as I find them |
 | 2026-10-01 | v1.6: one language rule for the series, with your three tiers; the Name used sparingly; live action as the eventual goal; your storytelling notes |
+| 2026-10-02 | v1.7: the language rule confirmed; the working title *Adonai*; the David connection deferred; links between episodes only at their edges |

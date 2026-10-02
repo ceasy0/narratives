@@ -1,8 +1,8 @@
-# Bible Narratives: Roadmap
+# Adonai: Roadmap
 
 > A detailed, faithful dramatization of the Bible. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-**Status:** v2.5, 2026-10-01. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done, and the [treatment](./story/arcs/07-ruth/TREATMENT.md) is on its second draft. v2.5 adds one language rule for the whole series (§5.7), uses God's name more sparingly (§5.5), and plans for live action, with the 3D animation as its placeholder (§1.1, §15). The whole-Bible [working chronology](./world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
+**Status:** v2.6, 2026-10-02. *Adonai* is the series' working title. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done, the [treatment](./story/arcs/07-ruth/TREATMENT.md) is on its third draft, and its first [sample scene](./scripts/ruth/sample-the-road.fountain) is written. v2.6 records your confirmation of the language rule (§5.7), the working title, and two new discussions: [005](./discussions/005-beyond-the-text.md) on traditions and rumored events, and [006](./discussions/006-2d-or-3d.md) on 2D versus 3D (§15). v2.5 added one language rule for the whole series (§5.7), uses God's name more sparingly (§5.5), and plans for live action, with the 3D animation as its placeholder (§1.1, §15). The whole-Bible [working chronology](./world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
@@ -50,6 +50,8 @@ Read §0 for the short version and §19 for what's decided and what's still open
 ---
 
 ## 0. The short version
+
+**Working title:** *Adonai*, Hebrew for "my Lord." It's the word Jewish readers say aloud in place of God's name, so it's also what the series' "the Lord" stands for (§5.5). Two things to check before it's public: at least one short film already uses the name (on SAT-7 KIDS), and some observant Jews say *Adonai* only in prayer and Scripture reading, using *HaShem* ("the Name") otherwise.
 
 **What we're making.** A dramatization of the whole biblical narrative, one arc at a time. It stays faithful to the text and uses modern dialogue. The text comes first: research, then treatments, then screenplays. 3D animation comes later, once the stories are written and locked, and it's the placeholder for what you eventually want: a live-action series or films.
 
@@ -442,7 +444,7 @@ This changes from era to era. It's a small detail that makes each era sound diff
 
 ### 5.7 Languages and accents
 
-**Decided (v2.5, 2026-10-01): one fixed rule for the whole series.** Earlier versions let language follow point of view: whoever we were following spoke English. That breaks once the episodes are put together, because the same language would sound like English in one episode and like itself in another. So English now always stands for the same thing.
+**Decided (v2.5, 2026-10-01), and confirmed by you on 2026-10-02: one fixed rule for the whole series.** Earlier versions let language follow point of view: whoever we were following spoke English. That breaks once the episodes are put together, because the same language would sound like English in one episode and like itself in another. So English now always stands for the same thing.
 
 1. **English is Israel's own language.** It renders the everyday speech of Abraham's family and the people of Israel: Hebrew through the Old Testament period, then Aramaic, which replaced Hebrew as the everyday language of Jews after the exile.
 2. **Sister dialects that Israelites could understand are English with an accent.** Moabite, Ammonite, Edomite and Phoenician were close relatives of Hebrew, and the Bible never shows anyone needing an interpreter for them: Ruth talks with Boaz, Ehud with Eglon (Judg 3:19–20), Solomon's men with Hiram's (1 Kgs 5). They're English with their own accents, the same way regional accents inside Israel are (Judg 12:6; Matt 26:73).
@@ -534,6 +536,7 @@ Three verses later Paul turns to the crowd and speaks to them "in the Hebrew lan
 
 - **Keep the Aramaic the Gospels keep.** The Gospel writers preserved a handful of Jesus's words in the original Aramaic. These are moments the eyewitnesses remembered in his own voice: *Talitha koum* (Mark 5:41), *Ephphatha* (Mark 7:34), *Abba* (Mark 14:36) and *Eloi, Eloi, lema sabachthani* (Mark 15:34). Others include *Rabboni* (John 20:16), *Corban* (Mark 7:11), *Raca* (Matt 5:22) and *Maranatha* (1 Cor 16:22). We keep them in Aramaic, followed by a translation where it's needed, just as the Gospels themselves do. In Jesus's world English stands for Aramaic, so these few words are where the series lets us hear the language underneath the English.
 - **Accents are in the text.** Peter's Galilean accent gives him away in the high priest's courtyard (Matt 26:73). The men of Gilead kill Ephraimites who can't pronounce "shibboleth" (Judg 12:6). The voice cast will need an accent strategy that can carry both moments.
+- **Design each accent once.** Moabites appear across the series: Ruth, Eglon (Judg 3), Mesha (2 Kgs 3), Solomon's Moabite wives (1 Kgs 11:1). The Moabite accent should be designed once, with a dialect coach, and kept. It shouldn't be a real modern accent: that would bring in the same modern associations that rule 2 keeps out by not using Arabic. The same goes for Edomite, Ammonite and Phoenician.
 
 ### 5.8 Emotion, insults, humor and crude language
 
@@ -1337,7 +1340,7 @@ The text includes costume details too: tassels on the corners of garments (Num 1
 | Stylized realism (painterly look, grounded proportions) | Ages well; forgiving; distinctive; violence can be felt without gore | Needs strong art direction |
 | Cartoon | Cheapest | Reads as children's content and undercuts the gravity |
 
-**Recommendation (revised for live action):** realistic proportions, lighting and cameras, so the animation previews the live-action version shot for shot. The surface can stay slightly stylized, which ages better and avoids the uncanny valley. The final decision comes in Phase 6. Ethnicity and appearance follow the evidence. Israelites are Semitic, and Egyptians, Cushites (Moses's wife may have been one, Num 12:1), Philistines (of Aegean origin), Persians, Greeks and Romans each look distinct.
+**Recommendation (revised for live action):** realistic proportions, lighting and cameras, so the animation previews the live-action version shot for shot. The surface can stay slightly stylized, which ages better and avoids the uncanny valley. The final decision comes in Phase 6. **2D versus 3D** is open in [Discussion 006](./discussions/006-2d-or-3d.md). My recommendation there: a 3D pipeline with a painterly surface, because only 3D carries over to live action, with the Bible's visions free to break into a drawn or painted style. Ethnicity and appearance follow the evidence. Israelites are Semitic, and Egyptians, Cushites (Moses's wife may have been one, Num 12:1), Philistines (of Aegean origin), Persians, Greeks and Romans each look distinct.
 
 ### 15.4 The bridge: storyboards and an animatic
 
@@ -1348,7 +1351,7 @@ Before any 3D work, the pilot becomes an **animatic**: storyboards timed to scra
 - **Blender:** free, and covers the complete 3D pipeline (modeling, rigging, animation and rendering).
 - **Unreal Engine:** real-time rendering and fast iteration; free for small creators.
 - **Motion capture:** anything from capture suits (such as Rokoko) to markerless capture from phone or video, plus stock animation libraries (such as Mixamo) for background characters.
-- **AI tools:** these are changing fast. For now they're most useful for exploring concepts, previsualization and developing a look. Keeping characters consistent over long sequences and precise control remain the hard parts. We'll reassess when we reach Phase 6.
+- **AI tools:** these are changing fast. For now they're most useful for exploring concepts, previsualization and developing a look. Keeping characters consistent over long sequences and precise control remain the hard parts. In 2026, AI video costs roughly $0.03–$0.75 per generated second, about the same whether the look is 2D or 3D, while AI that only *looks* 3D gives you no sets or cameras to carry into live action. [Discussion 006](./discussions/006-2d-or-3d.md) has the figures and a suggested hybrid. We'll reassess when we reach Phase 6.
 - **Local versus cloud:** writing and research work fine in cloud sessions like this one. Anything that drives Blender or renders needs Claude Code running on your own machine. [`../../primordia/SETUP_GUIDE.md`](../../primordia/SETUP_GUIDE.md) already covers that setup.
 
 ### 15.6 Sound
@@ -1402,8 +1405,8 @@ narratives/bible/
 │   └── arcs/
 │       └── 07-ruth/         dossier, treatment, beats, scene cards
 ├── scripts/                 Fountain screenplays
-│   └── ruth/
-├── discussions/             theology and philosophy conversations             (exists)
+│   └── ruth/                the sample road scene                              (exists)
+├── discussions/             theology, philosophy and production conversations (exists)
 ├── study/                   briefs on texts beyond the canon (§9.5)
 ├── research/                reference notes and source excerpts
 ├── tools/                   the script checker (later)
@@ -1480,13 +1483,17 @@ The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./cano
 | 12 | Format | Episodes for now; the final format gets decided later |
 | 13 | Chronology | The text-first model, with all five forks as recommended ([TIMELINE §8](./world/TIMELINE.md#8-decisions-for-you)) |
 | 14 | Rahab | Boaz's ancestor several generations back, not his mother ([Ruth dossier §5](./story/arcs/07-ruth/DOSSIER.md#5-when-chronology-and-rahab)) |
+| 15 | The language rule | Confirmed 2026-10-02: English always stands for Israel's own language, sister dialects are accents, and everything else follows your three tiers (§5.7) |
+| 16 | Title | Working title: *Adonai* (§0) |
 
 ### 19.2 Still open
 
-1. **Your next round of notes on the Ruth treatment,** including the choices in [TREATMENT §6](./story/arcs/07-ruth/TREATMENT.md#6-choices-for-you).
-2. **Confirm the language rule** (§5.7). The three tiers are yours; the rule that English always stands for Israel's own language is my recommendation.
-3. **FR-03's on-screen approach,** to confirm before the Gospels.
-4. **Deferred:**
+1. **Your notes on the Ruth [sample scene](./scripts/ruth/sample-the-road.fountain)** and your picks from the treatment's expansion list ([TREATMENT §8](./story/arcs/07-ruth/TREATMENT.md#8-room-to-expand)).
+2. **[Discussion 005](./discussions/005-beyond-the-text.md):** traditions and rumored events, starting with Jesus in the East.
+3. **[Discussion 006](./discussions/006-2d-or-3d.md):** 2D or 3D, and AI's role. Not needed until Phase 6.
+4. **FR-03's on-screen approach,** to confirm before the Gospels.
+5. **Deferred:**
+   - The David connection at the end of Ruth, until more of the story exists ([TREATMENT §7](./story/arcs/07-ruth/TREATMENT.md#for-later-arcs)).
    - Discussion 001, before Genesis.
    - The two sub-questions left over from Discussion 002, before the Gospels.
    - The remaining Positions, each before the arc that needs it.

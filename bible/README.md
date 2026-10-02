@@ -1,8 +1,8 @@
-# Bible Narratives
+# Adonai
 
-A creative, faithful dramatization of the Bible that expresses your understanding of Christianity. It gets written first as story and screenplay, then produced as a fully rendered 3D animated series, which is the placeholder for an eventual live-action version. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
+*Working title.* A creative, faithful dramatization of the Bible that expresses your understanding of Christianity. It gets written first as story and screenplay, then produced as a fully rendered 3D animated series, which is the placeholder for an eventual live-action version. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-This directory currently holds planning documents. There are no scripts yet.
+This directory holds the planning documents, the Ruth pilot's research and treatment, and one sample scene in script form.
 
 ## Documents
 
@@ -11,9 +11,10 @@ This directory currently holds planning documents. There are no scripts yet.
 | [`ROADMAP.md`](./ROADMAP.md) | The plan: principles, the provenance system, language rules, the fit check for framings, story architecture, the pilot, the writing pipeline and the road to 3D. **Start with §0 and §19.** |
 | [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md) | Your stance and every decision so far, in your own words where possible. It overrides everything else. |
 | [`canon/FRAMINGS.md`](./canon/FRAMINGS.md) | Your unconventional framings: what each says, which texts support it and which pull against it, and a first-pass fit grade. |
-| [`discussions/`](./discussions/) | The theological and philosophical conversations: 002 (Jesus's humanity) is decided, and 001 (how God speaks) is seeded. |
+| [`discussions/`](./discussions/) | The theological, philosophical and production conversations: 002 (Jesus's humanity) is decided; 001 (how God speaks), 005 (traditions and rumored events) and 006 (2D or 3D) are seeded. |
 | [`world/TIMELINE.md`](./world/TIMELINE.md) | The working chronology: fixed anchors, the major dating questions, every arc's dates, the kings and the prophets |
 | [`story/arcs/07-ruth/`](./story/arcs/07-ruth/README.md) | The Ruth pilot: the plan, the research dossier and the treatment |
+| [`scripts/ruth/`](./scripts/ruth/sample-the-road.fountain) | The first sample scene in script form: the parting on the road |
 | [`style/STORYTELLING.md`](./style/STORYTELLING.md) | Your notes on how scenes should play, gathered from your feedback |
 | [`CLAUDE.md`](./CLAUDE.md) | The working rules Claude loads in every session, so nothing depends on memory. |
 
@@ -31,7 +32,7 @@ This directory currently holds planning documents. There are no scripts yet.
 
 | | |
 |---|---|
-| Phase | 1: the Ruth pilot. The dossier is done, the chronology is decided, and the treatment is on its second draft. |
-| Next | Your next round of notes on the [treatment](./story/arcs/07-ruth/TREATMENT.md), then a sample scene and the beat sheet |
+| Phase | 1: the Ruth pilot. The dossier is done, the chronology is decided, the treatment is on its third draft, and the first sample scene is written. |
+| Next | Your notes on the [sample scene](./scripts/ruth/sample-the-road.fountain) and the treatment's [expansion list](./story/arcs/07-ruth/TREATMENT.md#8-room-to-expand), then the beat sheet |
 | Pilot | Ruth |
 | Formats | Markdown for docs · Fountain for screenplays |

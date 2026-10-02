@@ -287,7 +287,7 @@ All dates are approximate. The ages are inferences (P4) built from the text's hi
 | 1406 | Jericho falls. Rahab is spared and lives on in Israel (Josh 6:25), as the ancestress of Salmon's line (Matt 1:5). | — |
 | c. 1152 | Famine. Elimelech's family leaves for Moab. | Elimelech about 40, Naomi about 36, Mahlon about 17, Chilion about 15. Ruth, in Moab, about 14. Boaz about 33. |
 | c. 1151 | Elimelech dies (1:3). | |
-| c. 1149 | The sons marry Moabite women: Mahlon marries Ruth, and Chilion marries Orpah (1:4; 4:10). | Ruth about 17 |
+| c. 1150 | The sons marry Moabite women: Mahlon marries Ruth, and Chilion marries Orpah (1:4; 4:10). The marriages last about ten years (1:4). | Ruth about 16 |
 | c. 1144 | Eli becomes high priest at Shiloh (1 Sam 4:18). | |
 | c. 1140, winter | Mahlon and Chilion die (1:5). | |
 | c. 1140, spring | Naomi and Ruth arrive in Bethlehem at the start of the barley harvest (1:22). | Naomi about 48, Ruth about 26, Boaz about 45 |
