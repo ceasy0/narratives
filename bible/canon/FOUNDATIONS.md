@@ -2,7 +2,7 @@
 
 > The decisions everything else rests on, recorded in your own words where possible. When a later document conflicts with this one, this one wins until we change it, and any change gets dated below.
 
-**Status:** v1.8, 2026-10-02. Recorded from your answers to the roadmap questions, to Discussion 002, to the chronology and to your notes on the Ruth treatment and sample scene.
+**Status:** v1.9, 2026-10-03. Recorded from your answers to the roadmap questions, to Discussion 002, to the chronology and to your notes on the Ruth treatment and sample scene.
 
 ---
 
@@ -62,6 +62,8 @@
 | The Ruth pilot | One episode. It starts at the earliest point and runs chronologically, opening in Bethlehem during the famine. 4:5 uses the read-aloud version ("you acquire Ruth"). Moab's religion is sincere and textured. Naomi and Boaz are slightly more formal than Ruth. It ends with the naming of Obed. Rahab is Boaz's ancestor, not his mother, because the chronology doesn't allow it. **The David connection is deferred** until more of the story exists. Your current idea: the camera closes on Obed's face, with flash-forwards to scenes from David's life and a voice-over. Any change it brings should be small and come only at the end of the episode. **Round 3 (2026-10-02):** the friend names Obed; Boaz's hesitation from his side; Mr. So-and-so looks at his son; Naomi sings Obed a lullaby (the right kind of song, not the harvest song). Orpah and Chilion's marriage stays a gap to explore later. | [Ruth dossier §12](../story/arcs/07-ruth/DOSSIER.md#12-decisions-for-you); [TREATMENT §8](../story/arcs/07-ruth/TREATMENT.md#8-room-to-expand) |
 | Chronology | **Decided:** a whole-Bible working chronology comes before any arc. The text-first model, with my recommendation adopted on all five forks ("Go with your recommendations for 1–5"): the Exodus in 1446 BC; 215 years in Egypt; Jesus born around 5 BC and crucified on 3 April AD 33; Genesis 1–11 undated until the Genesis discussion; Revelation around AD 95. | [`world/TIMELINE.md`](../world/TIMELINE.md#8-decisions-for-you) |
 | Jesus's humanity | **Decided.** See the decision text in Discussion 002. | [Discussion 002](../discussions/002-jesus-humanity.md#decision) |
+| Order of writing | **Decided 2026-10-03:** Ruth is parked as a first draft. The writing now goes "from front to end, for all the books," so the broader story is laid out first: "so I can know whether to change it based on things I don't see yet." | [README](../README.md#status) |
+| The Opening | **Decided 2026-10-03:** Genesis 1:1–2:7, as part of an episode. It starts with a face emerging from black and white static and ends on the face of an early human looking at the Nile delta. No longer than five minutes, "if even that"; it "should feel very fast." The Garden of Eden follows it. It's visualized right after its script is done. | [Arc 1](../story/arcs/01-beginnings/README.md) |
 | Your source documents | Keep only the summaries in the repository | §7 below |
 
 ## 5. Your vision of Jesus
@@ -113,3 +115,4 @@ These documents are summarized in the repository. At your request, the originals
 | 2026-10-01 | v1.6: one language rule for the series, with your three tiers; the Name used sparingly; live action as the eventual goal; your storytelling notes |
 | 2026-10-02 | v1.7: the language rule confirmed; the working title *Adonai*; the David connection deferred; links between episodes only at their edges |
 | 2026-10-02 | v1.8: the most-likely-reading rule for ambiguous text; your expansion picks for Ruth; storytelling notes from round 3 |
+| 2026-10-03 | v1.9: Ruth parked; writing front to end; the Opening's scope, length and ending |

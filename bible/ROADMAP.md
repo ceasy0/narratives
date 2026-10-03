@@ -1430,6 +1430,8 @@ narratives/bible/
 
 Phase 6 can start once the pilot is locked and can run alongside Phases 3–5.
 
+**Changed 2026-10-03.** You parked Ruth as a first draft and chose to write from the front of the Bible to the end, so that the broader story is laid out before any part is revised. The order of Phases 2–5 gives way to that: the work starts at Genesis 1 ([arc 1](./story/arcs/01-beginnings/README.md)), and the Opening is visualized as soon as its script is settled, ahead of Phase 6.
+
 **Two tracks run continuously beside every phase:**
 
 | Track | What it is | Gate |
@@ -1487,6 +1489,8 @@ The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./cano
 | 16 | Title | Working title: *Adonai* (§0) |
 
 ### 19.2 Still open
+
+**The current list is in the [README](./README.md#what-i-need-from-you)** (from 2026-10-03). The list below is the older one and is kept for the record.
 
 1. **Your pass on the Ruth [script](./scripts/ruth/ruth.fountain),** and the four new choices in the treatment ([TREATMENT §6](./story/arcs/07-ruth/TREATMENT.md#6-choices-for-you), 12–15).
 2. **[Discussion 005](./discussions/005-beyond-the-text.md):** traditions and rumored events. Round 1 proposes "recognition, not derivation" for an Eastern traveler meeting Jesus.

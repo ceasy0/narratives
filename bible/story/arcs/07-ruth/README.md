@@ -2,7 +2,7 @@
 
 > How we'll write the pilot, step by step: which files, what goes in each, and where you review.
 
-**Status:** Phase 1 is under way. The [dossier](./DOSSIER.md) is done, and the whole-Bible chronology is decided ([`world/TIMELINE.md`](../../../world/TIMELINE.md)). The [treatment](./TREATMENT.md) is at v4, with three rounds of your notes applied. The [beat sheet](./BEATS.md) and a complete **first-draft script** ([`scripts/ruth/ruth.fountain`](../../../scripts/ruth/ruth.fountain)) are written. **Next: your pass on the script.** For why Ruth is the pilot, see ROADMAP §11.4.
+**Status: parked, 2026-10-03.** You've said Ruth is good for what it is, that your remaining changes are small, and that expansions can be discussed later, once more of the broader story is laid out. The work has moved to [Genesis](../01-beginnings/README.md). What follows is where Ruth stood when it was parked. The [dossier](./DOSSIER.md) is done, and the whole-Bible chronology is decided ([`world/TIMELINE.md`](../../../world/TIMELINE.md)). The [treatment](./TREATMENT.md) is at v4, with three rounds of your notes applied. The [beat sheet](./BEATS.md) and a complete **first-draft script** ([`scripts/ruth/ruth.fountain`](../../../scripts/ruth/ruth.fountain)) are written. **Next: your pass on the script.** For why Ruth is the pilot, see ROADMAP §11.4.
 
 ---
 

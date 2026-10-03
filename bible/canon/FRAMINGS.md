@@ -45,6 +45,8 @@
 
 **Source:** your draft of the Genesis 1:1–2:3 scene. **Arc:** 1.
 
+**Update, 2026-10-03:** the scope is now Genesis 1:1–2:7, and the sequence is being written. The [Opening's dossier](../story/arcs/01-beginnings/opening/DOSSIER.md) carries this entry forward, adds a new Tension (death before Eden), and turns the three questions below into choices for you.
+
 **Your framing, beat by beat:**
 
 1. TV static flows like a fluid, and an expressionless face emerges from it.
