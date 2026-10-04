@@ -1,17 +1,26 @@
 # Beginnings — Arc Plan
 
-> Arc 1 covers Genesis 1–11. This file plans its first part, **the Opening** (Genesis 1:1–2:7), and will grow as the arc does.
+> Arc 1 covers Genesis 1–11. This file plans its first episode, **the Opening** (Genesis 1:1–2:7) and **the Garden** (2:8–3:24), and will grow as the arc does.
 
-**Status:** started 2026-10-03. The Opening has a [dossier](./opening/DOSSIER.md) and a [treatment v1](./opening/TREATMENT.md), both built from your *Scene Descriptions* draft. **Next: your answers to the eight choices below,** then the script, then the visualization.
+**Status:** started 2026-10-03. The Opening has a [dossier v2](./opening/DOSSIER.md) and a [treatment v2](./opening/TREATMENT.md), rewritten the same day from your answers to the eight choices and your reading of Genesis 1. **Next: your notes on treatment v2 and six open items,** then the script, then the visualization. The Garden waits on [Discussion 008](../../../discussions/008-adam-eve-and-the-garden.md).
 
 ---
 
-## The parts of the arc
+## Episode 1
+
+About an hour (your decision, 2026-10-03).
+
+| Part | Text | Length | Status |
+|---|---|---|---|
+| **The Opening** | Gen 1:1–2:7 | 4:50 | Treatment v2 |
+| **The Garden** | Gen 2:8–3:24 | About 55 minutes | Not started. Needs [Discussion 008](../../../discussions/008-adam-eve-and-the-garden.md) (Positions 5 and 16, and where Eden is). |
+
+**A problem to settle early.** Fifty-five minutes for 42 verses with about a dozen recorded speeches would be the most invented hour in the series. What fills it is question 8 of Discussion 008.
+
+## The rest of the arc
 
 | Part | Text | Status |
 |---|---|---|
-| **The Opening** | Gen 1:1–2:7 | Treatment v1. Part of an episode, not a whole one. No longer than five minutes. |
-| The Garden | Gen 2:8–3:24 | Not started. Follows the Opening directly. Needs Positions 5 and 16. |
 | Cain and Abel; the generations | Gen 4–5 | Not started |
 | The flood | Gen 6–9 | Not started. Needs Positions 6 and 7. |
 | The nations and Babel | Gen 10–11 | Not started |
@@ -20,28 +29,30 @@
 
 | Step | File | What's in it |
 |---|---|---|
-| 1 | [`opening/DOSSIER.md`](./opening/DOSSIER.md) ✓ | How the text maps onto your sequence, what fits, what pulls against it, the science, and what the prototype video shows |
-| 2 | [`opening/TREATMENT.md`](./opening/TREATMENT.md) ✓ v1 | The sequence in eleven beats, timed to 4:35, with every change from your draft marked |
+| 1 | [`opening/DOSSIER.md`](./opening/DOSSIER.md) ✓ v2 | Your reading of Genesis 1 verse by verse and how it fits, what pulls against it, the science (with the two dates checked), the prototype, and your eight answers |
+| 2 | [`opening/TREATMENT.md`](./opening/TREATMENT.md) ✓ v2 | The sequence in fourteen beats, timed to 4:50, with what's yours and what's mine marked |
 | 3 | `scripts/beginnings/opening.fountain` | The script: shot by shot, with timings and tags. Written after your notes on the treatment. |
 | 4 | `production/opening/` | The visualization, straight after the script is settled (your instruction, 2026-10-03) |
 
 There's no separate beat sheet. For a five-minute sequence with no dialogue, the treatment's beat table does that job.
 
-## Choices the Opening needs from you
+## What the Opening still needs from you
 
-Each has my recommended default. The reasoning is in [DOSSIER §7](./opening/DOSSIER.md#7-choices-for-you). The numbers match the project [README](../../../README.md#what-i-need-from-you).
+The numbers match the project [README](../../../README.md#what-i-need-from-you).
 
-| # | Choice | My default | Blocks |
+| # | Item | My default | Blocks |
 |---|---|---|---|
-| 1 | **Is anything spoken?** Genesis 1 is mostly God speaking. | No words at all. Sound and picture carry it. | Script |
-| 2 | **Whose face is it?** | The human image, not God's. The face in the static and the face at the Nile are the same face. | Script |
-| 3 | **The taijitu:** the recognizable symbol, or a form that evokes it? | Evoked: the mirroring produces the shape, with no drawn symbol. | Script, visualization |
-| 4 | **Death before Eden.** The sequence shows predation, extinction and tribal killing before the Garden. | Keep it, and adopt on purpose the reading that Rom 5:12 speaks of human death. Graded Tension. | The Garden |
-| 5 | **Who is the person at the cliff?** | Unnamed here. The Garden scene decides whether this is the man of Gen 2:7. | The Garden |
-| 6 | **A standing exception to two of your rules:** no montages, and every shot filmable. | Yes, for this sequence and for visions only. | STORYTELLING |
-| 7 | **The delta's date:** keep "just out of Africa," or keep the view of the delta as a fan? | Follows from choice 5 ([DOSSIER §5](./opening/DOSSIER.md#5-the-science)). | Visualization |
-| 8 | **The ending:** the cliff in real time as the seventh day, then one breath before the black. | Yes. | Script |
+| 1 | Notes on treatment v2, including my eleven suggestions | Keep them | Script |
+| 2 | Genesis 1:11–13 | Matter growing into threads and buds before the stars light | Script |
+| 3 | Your reading of 1:20–2:3; the flying things of 1:20 | Sea, land, people, rest; wings over the shore | Script |
+| 4 | The breath, now that the person at the cliff isn't Adam | Drawn in at the cliff, let out by Adam in the Garden | Script; the Garden |
+| 5 | The flicker's safety limit | The alternation breaks into smaller patches as it speeds up | Script; visualization |
+| 6 | Is the malice really in God? ([Discussion 007](../../../discussions/007-the-faces-of-god.md), question 1) | It's how the whole looks to a part that's cut off | The script's lock |
+
+## Decided for the Opening
+
+Your answers of 2026-10-03, in full in the [dossier §7](./opening/DOSSIER.md#7-your-choices-decided): nothing is spoken; the face is God's; the taijitu is evoked and not drawn; death before Eden is kept, with the reading named; the person at the cliff is an ancestor of Adam; the two storytelling rules have an exception here and in visions; the cliff is set when humans left Africa, about 55,000 years ago; the ending plays in real time with one breath.
 
 ## The visualization
 
-Planned in [DOSSIER §6](./opening/DOSSIER.md#6-the-visualization). In short: beats 1–5 (static to the star) are built in code, which I can do on your machine. Beats 6–11 (Earth, life, humans) need either AI video, a 3D build, or painted storyboard frames, and that choice depends on your computer and budget. What I need to know is in the project [README](../../../README.md#what-i-need-from-you), items 9–12.
+Planned in [DOSSIER §6](./opening/DOSSIER.md#6-the-visualization). In short: beats 1–8 (static to the star, 2:22 of the 4:50) are built in code, which I can do on your machine. Beats 9–14 (the Earth, life, people) need AI video, a 3D build, or painted storyboard frames, and that choice depends on your computer and budget. The sound has to be designed with the picture from the start. What I need to know is in the project [README](../../../README.md#what-i-need-from-you), items 23–27.

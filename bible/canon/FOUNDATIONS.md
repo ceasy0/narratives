@@ -2,7 +2,7 @@
 
 > The decisions everything else rests on, recorded in your own words where possible. When a later document conflicts with this one, this one wins until we change it, and any change gets dated below.
 
-**Status:** v1.9, 2026-10-03. Recorded from your answers to the roadmap questions, to Discussion 002, to the chronology and to your notes on the Ruth treatment and sample scene.
+**Status:** v2.0, 2026-10-03. Recorded from your answers to the roadmap questions, to Discussion 002, to the chronology, to your notes on the Ruth treatment and sample scene, and to the Opening's eight choices and Discussion 001.
 
 ---
 
@@ -45,14 +45,14 @@
 | Languages | **Revised 2026-10-01** so that languages stay consistent across the whole series. English always stands for Israel's own language (Hebrew; in Jesus's time, Aramaic). Sister dialects Israelites could understand, such as Moabite, are English with their own accent. Every other language is spoken as itself, by your three tiers: (1) the original, reconstructed, only if that can be done with high confidence; (2) otherwise its descendant language; (3) otherwise the language of that region today. Nobody's language depends on whose episode it is. **Confirmed 2026-10-02:** "I think the language rule works. It makes the most sense because the language wouldn't have been that different anyway." | ROADMAP §5.7 |
 | Names | "Jesus." **Revised 2026-10-01:** "Yahweh" sparingly, in oaths and where the Name itself is the point. Everywhere else, "God" or "the Lord." In your words: "don't completely get rid of its usage. But try to diminish it where you can." In Ruth the Name is heard twice, in the two oaths (1:17; 3:13). | ROADMAP §5.5 |
 | Tradition | Non-denominational | §2 above |
-| Depicting God | Open | [Discussion 001](../discussions/001-how-god-speaks.md) |
+| Depicting God | Under discussion. "God is seen through faces," through community, and through the bloodline of Christ (2026-10-03). | [Discussion 001](../discussions/001-how-god-speaks.md); [Discussion 007](../discussions/007-the-faces-of-god.md) |
 | Invented dialogue for Jesus | "We will have to see as we go." No whole new teachings or sermons. You expect there will be added dialogue. | ROADMAP §4.2; [Discussion 002](../discussions/002-jesus-humanity.md) |
 | Pilot | Ruth | ROADMAP §11.4 |
 | Structure | Decide later. Mix it up however works best, as long as it can be put in chronological order. | ROADMAP §10.2 |
 | Reframing | Different interpretations and understandings. The structural tools (point of view, intercutting) may come later. | ROADMAP §10.5, §8.8 |
 | Output | Screenplays first. Then a 3D animated version, visually appealing in its own right, as the placeholder for an eventual live-action show or films. | ROADMAP §1.1, §15 |
 | Format | Episodes, with the final format decided later | — |
-| Storytelling | Your notes on how scenes should play: no cards, no montages for passing time, real family dynamics, layered peoples, dialogue that sounds real. Links between episodes go only at the beginnings and ends of episodes or scenes. No tidy sentiment ("too neat... disney-movie ish"). Gaps can stay open for later exploration. The main character's arc must be visible at every stage. | [`style/STORYTELLING.md`](../style/STORYTELLING.md) |
+| Storytelling | Your notes on how scenes should play: no cards, no montages for passing time, real family dynamics, layered peoples, dialogue that sounds real. Links between episodes go only at the beginnings and ends of episodes or scenes. No tidy sentiment ("too neat... disney-movie ish"). Gaps can stay open for later exploration. The main character's arc must be visible at every stage. **2026-10-03:** the Opening and visions are an exception to "no montages" and "every shot filmable." | [`style/STORYTELLING.md`](../style/STORYTELLING.md) |
 | Ambiguous text | Where the Hebrew or Greek can be read more than one way, the dialogue follows the most likely reading, with the alternatives in a note (2026-10-02). First case: Ruth 1:13. | [TREATMENT §7](../story/arcs/07-ruth/TREATMENT.md#from-your-notes) |
 | Scope | The Bible's window only. Other cultures and time periods may become separate projects later. | — |
 | Order of discussions | 002 (Jesus's humanity) first | [discussions/](../discussions/) |
@@ -63,7 +63,18 @@
 | Chronology | **Decided:** a whole-Bible working chronology comes before any arc. The text-first model, with my recommendation adopted on all five forks ("Go with your recommendations for 1–5"): the Exodus in 1446 BC; 215 years in Egypt; Jesus born around 5 BC and crucified on 3 April AD 33; Genesis 1–11 undated until the Genesis discussion; Revelation around AD 95. | [`world/TIMELINE.md`](../world/TIMELINE.md#8-decisions-for-you) |
 | Jesus's humanity | **Decided.** See the decision text in Discussion 002. | [Discussion 002](../discussions/002-jesus-humanity.md#decision) |
 | Order of writing | **Decided 2026-10-03:** Ruth is parked as a first draft. The writing now goes "from front to end, for all the books," so the broader story is laid out first: "so I can know whether to change it based on things I don't see yet." | [README](../README.md#status) |
-| The Opening | **Decided 2026-10-03:** Genesis 1:1–2:7, as part of an episode. It starts with a face emerging from black and white static and ends on the face of an early human looking at the Nile delta. No longer than five minutes, "if even that"; it "should feel very fast." The Garden of Eden follows it. It's visualized right after its script is done. | [Arc 1](../story/arcs/01-beginnings/README.md) |
+| The Opening | **Decided 2026-10-03:** Genesis 1:1–2:7, as part of an episode. It starts with a face emerging from black and white static and ends on the face of an early human looking at the Nile delta. A little under five minutes; it "should feel very fast." The Garden of Eden follows it. It's visualized right after its script is done. | [Arc 1](../story/arcs/01-beginnings/README.md) |
+| Episode length | **Decided 2026-10-03:** each episode aims for about an hour. | — |
+| Episode 1 | **Decided 2026-10-03:** the Opening is its introduction, and it continues through the Garden of Eden to Genesis 3:24. | [Arc 1](../story/arcs/01-beginnings/README.md) |
+| The Opening: nothing spoken | **Decided 2026-10-03.** No words at all. The sound and the picture are "very lush and colorful" and psychedelic: "not only the variation in sensations/perceptions, but also the inter-connectedness of each." Genesis 1's speech is "a placeholder for God's actions or God's thoughts," so it's shown as what happens. *Logged under principle 4,* since the chapter's recorded speech goes unspoken. | [Treatment §1](../story/arcs/01-beginnings/opening/TREATMENT.md#1-how-it-plays); [Discussion 001](../discussions/001-how-god-speaks.md#round-1--2026-10-03) |
+| The Opening: faces | **Decided 2026-10-03.** "Throughout, faces are always seen (the primordial face and faces, the proton, the photon, the cell, the animals, and the early humans; each a kind of face)." The face is "a sort of stability in a sea of change": clear and understandable while the rest of the screen changes and moves through time. The surround becomes "more and more still and orderly" until, with the animals and early humans, "the world makes normal sense." When the surround is a sea of particles, they're what the focused thing is. | [FR-16](./FRAMINGS.md#fr-16--the-faces) |
+| The Opening: whose face | **Your answer 2026-10-03: God's.** The first face and the human face at the end are "similar enough to recognize," and "it's all 4 faces and both interactions that represent the totality of God." *Under discussion:* malice as part of God is Contradiction as stated, and there's a version that fits. | [Discussion 007](../discussions/007-the-faces-of-god.md) |
+| The Opening: no taijitu | **Decided 2026-10-03:** evoked, not drawn. The ground changes from black to white and the face from white to black, and the alternation speeds up until the ground is a sea of elementary particles and the face is one of them. | [Treatment, beats 3–4](../story/arcs/01-beginnings/opening/TREATMENT.md#3-the-beats) |
+| Death before the Garden | **Decided 2026-10-03:** kept. The reading adopted on purpose: bodies died before the Garden, human ones included, and what comes through Adam is spiritual death. Graded Tension (1 Cor 15:21–22). | [Dossier §4.1](../story/arcs/01-beginnings/opening/DOSSIER.md#4-what-pulls-against-it) |
+| The person at the cliff | **Decided 2026-10-03, for now:** nobody in particular, "just an ancestor of Adam." Your working idea that Adam is the first of a new species is under discussion. | [Discussion 008](../discussions/008-adam-eve-and-the-garden.md) |
+| The cliff's date | **Decided 2026-10-03:** the date humans left Africa, after checking both dates: about 55,000 years ago. The delta is shown as it was then. A long gap to Adam and Eve is fine. | [Dossier §5](../story/arcs/01-beginnings/opening/DOSSIER.md#5-the-science) |
+| The Opening's ending | **Decided 2026-10-03:** the cliff plays in real time, and the face takes one breath. | [Treatment, beat 14](../story/arcs/01-beginnings/opening/TREATMENT.md#3-the-beats) |
+| The primordial through the series | **Decided 2026-10-03:** the Opening's psychedelic look comes down as it goes, but "shouldn't completely go away." It stays "in glimpses all the way through past Abraham's and Moses' lives, and further," and is "referenced, connected with, and hinted to throughout the entire series (with a fulfilling conclusion)." | [STORYTELLING](../style/STORYTELLING.md#the-opening-visions-and-the-primordial) |
 | Your source documents | Keep only the summaries in the repository | §7 below |
 
 ## 5. Your vision of Jesus
@@ -82,6 +93,12 @@
 
 > In my belief God speaks to us through the world (through the people we meet, nature, etc.). … For things like the beginning of Genesis (if we call the dialogue actual dialogue instead of just a placeholder/metaphor for what God did) then it makes sense for it to be a "voice from nowhere." … God would consistently be speaking through the prophets; and where it says God said it could be one of the prophets speaking. I know they do distinguish between what the prophets say and what God says … but just because they distinguish the two doesn't mean they are always different (for example, the way the listener perceives what is said may have something to do with it; they say God spoke or this prophet spoke depending on the experience of receiving it).
 
+**Round 1 of Discussion 001 (2026-10-03), in your words:**
+
+> The speech is more like a placeholder for God's actions or God's thoughts (in the same way the heavens and earth is a placeholder for fundamental duality). … An alone encounter with God happens when your mind is completely clear (which is when the Holy Spirit within is unblocked). An alone encounter is a deep part of yourself telling you something you didn't know. I see minds as layered, and at the top-most layer is God. … God speaks through people who do not know it. … To me, God is seen through faces. The interaction of a face - the way when you look at it, its familiar yet still something new. God is seen through community. … God is seen through the bloodline of Christ. … Because the world is separated, God deliberately puts a limit on himself. Because its on himself, its not real. Its just his own illusion. His own perception. Prophets are God a lot of the time. Christ is God all of the time. And Christ is the blueprint to build the full capacity of God.
+
+*Settled in round 1:* Genesis 1's speech isn't literal; God speaks through people who don't know it; true and false prophets are told apart by their fruit, in layers, and the audience isn't told in advance; your perception idea works in both directions. *Still open:* how an encounter alone is staged, Moses, the four visions, and the wording of "prophets are God" and "illusion."
+
 ## 7. What you've shared
 
 These documents are summarized in the repository. At your request, the originals aren't stored here.
@@ -91,6 +108,7 @@ These documents are summarized in the repository. At your request, the originals
 | *Study* | Your notes on the messianic prophecies, the genealogies, Matthew 1:18–25, and Matthew 5 (the Beatitudes, salt and light, divorce) | [FRAMINGS](./FRAMINGS.md), FR-03 to FR-09 and FR-12 to FR-13 |
 | *Scene Descriptions* | Your draft of the Genesis opening, from static to the Nile delta | [FRAMINGS FR-01](./FRAMINGS.md#fr-01--the-opening-creation-as-cosmic-and-biological-history) |
 | *Consciousness and AI* | Conversations on panpsychism, unity, contrast, Yin and Yang and the Trinity, Christ as an integrating bloodline, and the staged comings | [FRAMINGS](./FRAMINGS.md), FR-02, FR-10 and FR-11; Discussion 002 |
+| Your notes of 2026-10-03 | Answers to the Opening's eight choices, your reading of Genesis 1:1–19, a note on the primordial through the series, and answers to Discussion 001 | §4, §6 and §9 above; [FRAMINGS](./FRAMINGS.md), FR-15 to FR-17; Discussions 001, 007 and 008 |
 
 ## 8. How I work with you
 
@@ -101,6 +119,18 @@ These documents are summarized in the repository. At your request, the originals
 - **I write things down.** I don't remember previous sessions. What's in this folder is the project's memory.
 - **I report problems as I find them.** You've asked me to tell you about any problem with the story as I work, not only when you ask.
 - **I give real opinions.** You've said you prefer a back-and-forth with real opinions to neutral annotation. I'll react, take positions, and move the conversation forward, and I'll mark which parts are my own view.
+
+## 9. How you read Genesis 1
+
+*In your words, 2026-10-03. Status: the reading is shown in the Opening and never narrated. Its fit check is [FR-15](./FRAMINGS.md#fr-15--genesis-1-read-in-order-as-the-history-of-matter); the part about God and duality is under discussion in [007](../discussions/007-the-faces-of-god.md).*
+
+> Genesis 1:1 says 'In the beginning God created the heavens and the earth.' I truly believe that, if they knew about the terms and what they represented, the writer of Genesis would have instead wrote 'God created Yin and Yang' because what they were meaning to say is that in the beginning and before anything else, God created fundamental duality. But they didn't know these terms. They knew heavens and earth (which to me seem to mean the spiritual/mental nature and physical nature of the world). … Any duality we can come up with is one that we've seen or experienced, not the fundamental duality… We cannot know or name the fundamental duality, we can only know it through the dualities that it makes… Because duality is fundamental (along with God, making the Trinity in my view. The Trinity exists because God creates fundamental duality, and fundamental duality creates God, constantly.), everything that exists has an opposite.
+
+> I believe the term 'light' is being used here to mean more than it actually means. Going with my panpsychist view, the first separation must've been an experiential one. So I modeled the most basic experiences and feelings - that of connection (light side with dark middle) and that of separation (dark side with light middle).
+
+> The waters represent the two fundamental substances - the two fundamental forces. I think the elementary particles represent the vault. The vault to me is just 'space' for things to happen within. This 'space' only exists with the relationships of the particles within it… the vault was only created through the interaction between both separated waters.
+
+Verse by verse: 1:1 is the heading; 1:2 is the static and the face; 1:3 is the static forced away and the face turning white; everything before the elementary particle is 1:1–5; 1:6–8 is the particles; 1:9–10 is actual matter, solids and fluids; 1:11–13 is unsettled; 1:14–19 is the stars.
 
 ## Change log
 
@@ -116,3 +146,4 @@ These documents are summarized in the repository. At your request, the originals
 | 2026-10-02 | v1.7: the language rule confirmed; the working title *Adonai*; the David connection deferred; links between episodes only at their edges |
 | 2026-10-02 | v1.8: the most-likely-reading rule for ambiguous text; your expansion picks for Ruth; storytelling notes from round 3 |
 | 2026-10-03 | v1.9: Ruth parked; writing front to end; the Opening's scope, length and ending |
+| 2026-10-03 | v2.0: your answers to the Opening's eight choices; hour-long episodes, with Episode 1 running to Genesis 3:24; round 1 of Discussion 001; your reading of Genesis 1 (§9); the primordial kept in glimpses through the series |

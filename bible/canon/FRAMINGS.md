@@ -2,7 +2,7 @@
 
 > Your unconventional framings of ideas and passages: what each one says, which texts support it and which pull against it, a first-pass fit grade, and what it would change on screen. These grades are starting points for discussion, not verdicts.
 
-**Status:** v1.1, 2026-10-01. FR-03 has been revised and FR-08 now includes the Ruth reading. Built from three things you shared: your study notes, your draft of the Genesis opening scene, and your conversations about consciousness and Christology.
+**Status:** v1.2, 2026-10-03. FR-01 and FR-02 are updated from your notes on the Opening, and FR-15 to FR-17 are new. Earlier: FR-03 revised, and FR-08 given its Ruth reading (v1.1, 2026-10-01). Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes of 2026-10-03.
 **Fit grades** (defined in ROADMAP §8.8):
 - **Supported:** the text points this way.
 - **Compatible:** the text is silent or open, and the framing fills a gap without strain.
@@ -15,8 +15,8 @@
 
 | ID | Framing | Arcs | First-pass grade | Discuss before |
 |---|---|---|---|---|
-| [FR-01](#fr-01--the-opening-creation-as-cosmic-and-biological-history) | The opening: creation shown as cosmic and biological history | 1 | Compatible under a non-chronological reading of Genesis 1; Tension on the malicious darkness | Genesis |
-| [FR-02](#fr-02--god-yin-and-yang-as-the-trinity) | God, Yin and Yang as the Trinity | All depictions of God | Tension | Genesis |
+| [FR-01](#fr-01--the-opening-creation-as-cosmic-and-biological-history) | The opening: creation shown as cosmic and biological history | 1 | Compatible, shown and never narrated; Tension on the malicious darkness and on death before Eden. **Being written** (treatment v2). | [Discussion 007](../discussions/007-the-faces-of-god.md) before the script locks |
+| [FR-02](#fr-02--god-yin-and-yang-as-the-trinity) | God and fundamental duality as the Trinity, each creating the other | All depictions of God | Tension; "duality creates God" is Contradiction as stated | [Discussion 007](../discussions/007-the-faces-of-god.md) |
 | [FR-03](#fr-03--mary-and-joseph-the-conception) | A virgin conception, with Joseph's line joined by the Spirit; the village's version shown as rumor (revised) | 16 | **Tension**; adopted provisionally (the original version was Contradiction) | Confirm the on-screen approach before the Gospels |
 | [FR-04](#fr-04--the-spirit-as-the-true-law) | The Spirit as the true Law; written laws as ideals fitted to circumstances | 5, 16 | Supported as a principle | The Gospels |
 | [FR-05](#fr-05--no-different-which-makes-him-different) | "No different from anyone, which is what makes him different" | 16 | Supported in the both-at-once form | [Discussion 002](../discussions/002-jesus-humanity.md) |
@@ -29,13 +29,16 @@
 | [FR-12](#fr-12--the-messianic-prophecies) | The messianic prophecies | 2–16 | Supported (traditional reading) | — |
 | [FR-13](#fr-13--matthews-genealogy-as-jesuss-paternal-line) | Matthew's genealogy as Jesus's paternal line | 16 | Tension (tied to FR-03) | With FR-03 |
 | [FR-14](#fr-14--the-six-religions-as-mirrors) | The six religions as mirrors of each other | Mostly beyond the Bible's window | — | Discussion 004 |
+| [FR-15](#fr-15--genesis-1-read-in-order-as-the-history-of-matter) | Genesis 1 read in order, as the history of matter | 1 | Compatible as shown; Tension as a claim about what the writer meant | Two small questions in the README |
+| [FR-16](#fr-16--the-faces) | The faces: God is seen through faces, and all four of the first faces are God | 1, and every depiction of God | Supported (faces; both interactions); Contradiction as stated on malice in God, with a fitting version in your own words | [Discussion 007](../discussions/007-the-faces-of-god.md) |
+| [FR-17](#fr-17--layered-minds-with-god-at-the-top) | Layered minds with God at the top; separation as God's own limit on himself; prophets as God | 2 onward | Ranges from Supported to Contradiction as stated ("prophets are God") | [Discussion 001](../discussions/001-how-god-speaks.md), round 2 |
 
-**Proposed order of discussion:**
+**Order of discussion:**
 
-1. Discussion 002 (in progress), together with FR-05 and FR-11.
-2. FR-08, because the Ruth pilot needs it.
-3. FR-03 and FR-13.
-4. FR-01 and FR-02, alongside Discussion 001.
+1. ~~Discussion 002, together with FR-05 and FR-11.~~ Decided.
+2. ~~FR-08, because the Ruth pilot needs it.~~ Confirmed for Ruth.
+3. **Now:** FR-01, FR-02 and FR-16 in [Discussion 007](../discussions/007-the-faces-of-god.md); FR-17 in [Discussion 001](../discussions/001-how-god-speaks.md); and Adam and Eve in [Discussion 008](../discussions/008-adam-eve-and-the-garden.md).
+4. FR-03 and FR-13.
 5. FR-04, FR-06, FR-07 and FR-09.
 6. FR-10 and FR-14.
 
@@ -46,6 +49,16 @@
 **Source:** your draft of the Genesis 1:1–2:3 scene. **Arc:** 1.
 
 **Update, 2026-10-03:** the scope is now Genesis 1:1–2:7, and the sequence is being written. The [Opening's dossier](../story/arcs/01-beginnings/opening/DOSSIER.md) carries this entry forward, adds a new Tension (death before Eden), and turns the three questions below into choices for you.
+
+**Second update, 2026-10-03:** you've answered all three questions and the other five choices, and [treatment v2](../story/arcs/01-beginnings/opening/TREATMENT.md) is written from them. What changed in the framing itself:
+
+- **Beats 2–4 below are replaced.** The static is whipped behind the face in a blink, as 1:3. There's no taijitu and no spin: the ground changes from black to white and the face from white to black, faster and faster, until the ground is a sea of particles and the face is one of them.
+- **Nothing is spoken.** The sound and picture are lush, colorful and psychedelic, and tied to each other.
+- **There's always a face.** The focus of each beat is "a kind of face," steady in a sea of change, and the surround settles until the world makes normal sense ([FR-16](#fr-16--the-faces)).
+- **The days are read in order** ([FR-15](#fr-15--genesis-1-read-in-order-as-the-history-of-matter)), so "a non-chronological reading" in the grade below no longer applies.
+- **The face is God's** ([Discussion 007](../discussions/007-the-faces-of-god.md)).
+- **The person at the cliff is an ancestor of Adam,** about 55,000 years ago ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md)).
+- **The opening's look stays in glimpses** through the whole series, with a conclusion that fulfils it.
 
 **Your framing, beat by beat:**
 
@@ -93,12 +106,12 @@
 
 **About the tool list in the draft:** it came from an earlier AI session. Tools change monthly, so we'll choose them in Phase 6 (ROADMAP §15.5). The abstract opening is a strong candidate for procedural animation.
 
-**First-pass grade:** Compatible under a non-chronological reading of Genesis 1, especially with John 1 as the frame. Tension on the malicious darkness.
+**First-pass grade:** Compatible under a non-chronological reading of Genesis 1, especially with John 1 as the frame. Tension on the malicious darkness. *(2026-10-03: now Compatible as a reading that's shown and never narrated, with the days in order; Tension on the malicious darkness and on death before Eden.)*
 
-**Questions:**
-- Is God's speech heard over this sequence?
-- Whose face is it?
-- Is the taijitu shown as the recognizable symbol, or as an image that evokes it?
+**Questions, answered 2026-10-03:**
+- Is God's speech heard over this sequence? **No. Nothing is spoken.**
+- Whose face is it? **God's.**
+- Is the taijitu shown as the recognizable symbol, or as an image that evokes it? **Evoked.**
 
 ---
 
@@ -119,6 +132,16 @@
 - "God is light, and in him is no darkness at all" (1 John 1:5).
 
 **First-pass grade:** Tension. It shapes the imagery of the opening and Discussion 001.
+
+**Update, 2026-10-03.** You've restated it, and the new statement is wider:
+
+> In the beginning and before anything else, God created fundamental duality... We cannot know or name the fundamental duality, we can only know it through the dualities that it makes... Because duality is fundamental (along with God, making the Trinity in my view. The Trinity exists because God creates fundamental duality, and fundamental duality creates God, constantly.), everything that exists has an opposite.
+
+- **Genesis 1:1 as "God created fundamental duality":** Compatible. "The heavens and the earth" does name everything as a pair, and Augustine and Philo read heaven as the spiritual creation and earth as the material ([dossier §2](../story/arcs/01-beginnings/opening/DOSSIER.md#2-your-reading-of-genesis-1-and-how-it-fits)).
+- **"Fundamental duality creates God":** Contradiction as stated (Isa 43:10; Ps 90:2; John 1:3; Col 1:17; Acts 17:25). The version that fits puts the two-in-one inside God, uncreated, with the created duality as its image.
+- **A new risk:** if the dark half of the first faces is the Father and the light half the Son, the picture says the Father wounds from malice and the Son heals, which the texts close off (John 5:19; 14:9).
+
+All three are worked through in [Discussion 007](../discussions/007-the-faces-of-god.md), claim D and question 2.
 
 ---
 
@@ -396,3 +419,85 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 - **The Magi** (Matt 2:1) were most likely Persian priests: foreign seekers who follow a star to Christ.
 - **The Exile and Return arcs** fall in what Karl Jaspers called the Axial Age. Buddha, Confucius, Laozi and the early Greek philosophers were alive then, so the series could glimpse that wider world.
+
+---
+
+## FR-15 — Genesis 1 read in order, as the history of matter
+
+**Source:** your notes of 2026-10-03. **Arc:** 1.
+
+**Your framing:** the words of Genesis 1 are placeholders for things their writer had no names for, the way "the heavens and the earth" stands for fundamental duality. Read that way, the days are in order:
+
+- **1:1** is a heading: God creates fundamental duality.
+- **1:2** is the static with a face in it.
+- **1:3–5** is the first separation, which is one of experience: separation and connection, alternating. "Light" means more than light.
+- **1:6–8:** the waters are the two fundamental substances or forces, and the vault is the elementary particles, the space things happen in.
+- **1:9–10:** the kinds of actual matter, solids and fluids.
+- **1:11–13:** you're unsure: proto-life before the stars, or matter itself growing into many forms.
+- **1:14–19:** the stars.
+
+**What fits:**
+- The light of day one comes before the sun of day four, so the chapter itself signals that its "light" isn't sunlight.
+- Augustine read the days as something other than ordinary days for that reason, and read "heaven and earth" as spirit and matter.
+- In 1:11 the earth is the subject of the verb: "let the earth sprout." That favors your second reading of the verse.
+- The words go from placeholder to plain name as the days go on, which is your come-down: the surround settles until the world makes normal sense.
+
+**What pulls against it:**
+- The chapter defines its own terms: Day, Night, Sky, Earth, Seas (1:5, 8, 10). Its first hearers pictured a firm sky with water above it (Job 37:18; Gen 7:11).
+- Physics counts four forces, not two. Proto-life before the stars has nothing behind it: life's elements are made inside stars.
+- The flying things of 1:20 come before the land animals, and nothing flies in the sequence.
+- Any reading pinned to current science moves when the science does.
+
+**First-pass grade:** Compatible as a reading that's shown and never narrated. Tension if it's asserted as what the writer meant. The detail, verse by verse, is in the [Opening's dossier §2](../story/arcs/01-beginnings/opening/DOSSIER.md#2-your-reading-of-genesis-1-and-how-it-fits).
+
+**Still needed from you:** your reading of 1:20–2:3, and a yes or no on my suggestion for 1:11–13 (the gas growing into threads and buds before the stars light).
+
+---
+
+## FR-16 — The faces
+
+**Source:** your notes of 2026-10-03. **Arcs:** 1, and every depiction of God.
+
+**Your framing:**
+- The first face is God's, and the human face at the end of the Opening is alike enough to recognize.
+- "It's all 4 faces and both interactions that represent the totality of God."
+- Through the Opening there's always a face: the first faces, the proton, the photon, the cell, the animals, the early humans, "each a kind of face." The face is what's stable and clear in a sea of change.
+- God is seen through faces, through community, and through the bloodline of Christ.
+
+**What fits:**
+- Genesis 1:2–2:6 gives a face (*penei*) to the deep, the waters, the vault, the earth and the ground, and then God breathes into a human one.
+- "The light of the knowledge of the glory of God in the face of Jesus Christ" (2 Cor 4:6), said of Genesis 1:3.
+- God's shining face is peace and his hidden face is terror (Num 6:25–26; Ps 104:29–30).
+- "I wound and I heal" (Deut 32:39).
+- "I have seen your face, which is like seeing the face of God" (Gen 33:10). "They will see his face" (Rev 22:4).
+
+**What pulls against it:**
+- "You saw no form" (Deut 4:15–16); "no one has ever seen God" (John 1:18).
+- Malice as part of God (1 John 1:5; James 1:13; Lam 3:33).
+- Fear in God (1 John 4:18), outside the Son's passion.
+
+**First-pass grade:** Supported for faces and for both interactions. Supported for the face as God's if it's God's image (Gen 1:26; Col 1:15). Contradiction as stated on malice in God; Tension if the malice is how the whole looks to a part that's cut off, which is what you've said separation is. All of it is in [Discussion 007](../discussions/007-the-faces-of-god.md).
+
+---
+
+## FR-17 — Layered minds, with God at the top
+
+**Source:** your answers to Discussion 001, 2026-10-03. **Arcs:** 2 onward.
+
+**Your framing:**
+- Minds are layered, and the topmost layer is God.
+- God speaks to someone alone when the mind is completely clear, "which is when the Holy Spirit within is unblocked." It's "a deep part of yourself telling you something you didn't know."
+- Good community helps keep the Spirit unblocked.
+- Because the world is separated, God puts a limit on himself, and since it's on himself, "it's not real. It's just his own illusion."
+- "Prophets are God a lot of the time. Christ is God all of the time. And Christ is the blueprint to build the full capacity of God."
+
+**First-pass grades,** with the texts in [Discussion 001, round 1](../discussions/001-how-god-speaks.md#round-1--2026-10-03):
+
+| Claim | Grade |
+|---|---|
+| God speaks in stillness, from within | Supported (1 Kgs 19:12; Rom 8:16; Prov 20:27) |
+| It's a deep part of *yourself* | Tension (Jer 23:16; Ezek 13:2–3). It holds if the top layer is God and isn't the self. |
+| God limits himself | Compatible (Phil 2:6–8) |
+| The separation isn't real | Tension (Isa 59:2 against Ps 139:7–12). It holds as "real as experience, never real as fact." |
+| Prophets are God | Contradiction as stated (Acts 14:15; Rev 22:9). Supported as "the prophet takes part in God, and God is the one speaking" (Exod 7:1; John 10:34–35; 2 Pet 1:4). |
+| Christ is God all of the time, and the blueprint | Supported (Col 2:9; Rom 8:29; Eph 4:13) |

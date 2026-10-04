@@ -1,152 +1,203 @@
 # The Opening — Dossier
 
-> Genesis 1:1–2:7 as one fast sequence, from static to a human face above the Nile delta. What the text says, how your draft maps onto it, where it fits and where it pulls, the science, and what the prototype shows.
+> Genesis 1:1–2:7 as one fast sequence, from static to a human face above the Nile delta. What the text says, how your reading maps onto it, where it fits and where it pulls, the science, and what the prototype shows.
 
-**Status:** v1, 2026-10-03. Built from your *Scene Descriptions* draft, [FR-01](../../../../canon/FRAMINGS.md#fr-01--the-opening-creation-as-cosmic-and-biological-history), [FR-02](../../../../canon/FRAMINGS.md#fr-02--god-yin-and-yang-as-the-trinity), [Discussion 001](../../../../discussions/001-how-god-speaks.md) and the prototype in `Biblical Story Concept`.
+**Status:** v2, 2026-10-03. Updated with your answers to the eight choices, your verse-by-verse reading of Genesis 1, and the two dates you asked me to check. Built from your *Scene Descriptions* draft, [FR-01](../../../../canon/FRAMINGS.md#fr-01--the-opening-creation-as-cosmic-and-biological-history), [FR-02](../../../../canon/FRAMINGS.md#fr-02--god-yin-and-yang-as-the-trinity), [FR-15](../../../../canon/FRAMINGS.md#fr-15--genesis-1-read-in-order-as-the-history-of-matter), [FR-16](../../../../canon/FRAMINGS.md#fr-16--the-faces), [Discussion 001](../../../../discussions/001-how-god-speaks.md) and the prototype in `Biblical Story Concept`.
 
-**Your brief (2026-10-03):** it starts with a face emerging from a sea of black and white static and ends on the face of an early human looking at the Nile delta. No longer than five minutes, "if even that." It should feel very fast, following evolution from a single-celled organism to humans just coming out of Africa. The Garden of Eden follows it.
+**Your brief (2026-10-03):** it starts with a face emerging from a sea of black and white static and ends on the face of an early human looking at the Nile delta. A little under five minutes. It should feel very fast, following evolution from a single-celled organism to humans just coming out of Africa. It's the introduction to Episode 1, which runs about an hour and continues through the Garden of Eden to Genesis 3:24.
 
 ---
 
-## 1. What changed in the scope
+## 1. The scope
 
-Your draft covered Genesis 1:1–2:3. The sequence now runs to **2:7**, which adds three things, and all three help:
+The sequence runs from 1:1 to **2:7**. The last three passages each give it something:
 
 | Verses | What they say | What it gives the sequence |
 |---|---|---|
-| 2:1–3 | God finishes and rests on the seventh day | A place to stop. See §3. |
-| 2:5–6 | No cultivated plants yet, "for the LORD God had not caused it to rain on the land, and there was no man to work the ground," and a "mist" or "stream" (*'ed*) rose and watered the whole face of the ground | A land watered by a rising river rather than rain, before anyone farms. That's the Nile valley before agriculture, closely. |
-| 2:7 | God forms the man from "dust from the ground" and breathes into his nostrils the breath of life | The last shot. See §3. |
+| 2:1–3 | God finishes and rests on the seventh day | A place to stop: the cliff, in real time |
+| 2:5–6 | No cultivated plants yet, "for the LORD God had not caused it to rain on the land, and there was no man to work the ground," and a "mist" or "stream" (*'ed*) rose and watered "the whole face of the ground" | A land watered by a rising river and not by rain, before anyone farms |
+| 2:7 | God forms the man from "dust from the ground" and breathes into his nostrils the breath of life | The whole sequence is the forming. The breath is the last thing in it. |
 
-## 2. How the text maps onto your sequence
+## 2. Your reading of Genesis 1, and how it fits
 
-Genesis 1 isn't narrated over the picture (choice 1), so the order of the days doesn't have to match the order of the shots. The sequence answers the chapter's content, not its sequence.
+v1 of this dossier said the shots couldn't follow the order of the days. Your reading says they can. Nothing is narrated, so the reading is shown and never stated. The fit column is my first-pass grade for each step.
 
-| Text | In the sequence | Beat |
-|---|---|---|
-| 1:1–2: "formless and void," darkness over the **face** of the deep, the Spirit hovering over the **face** of the waters | The static, flowing like water, and a face in it | 1–2 |
-| 1:3–5: light; God **separates** light from darkness; "evening and morning" | The strike that never lands, the mirroring, and the turning of dark and light | 3–4 |
-| 1:6–8: waters separated from waters | The sea of particles | 5 |
-| 1:14–18: lights in the heavens | The star | 5 |
-| 1:9–10: seas gathered, dry land | The Earth cooling as the photon arrives | 6 |
-| 1:20–22: "let the waters swarm with swarms of living creatures" | The cell, its generations, the first animals | 7 |
-| 1:24–25: creatures of the land | Onto land; the small creature under the giants | 8 |
-| 1:11–12: plants and trees bearing seed | The tree | 9 |
-| 1:26–28: humankind, "male and female"; "be fruitful and multiply and fill the earth" | The tribe and its generations moving north | 10 |
-| 2:1–3: God rests | The cliff. Everything stops. | 11 |
-| 2:5–6: the rising water, no one to work the ground | The delta below, with mist over it | 11 |
-| 2:7: dust, and the breath of life | The face; one breath | 11 |
+| Text | Your reading | On screen | Fit |
+|---|---|---|---|
+| **1:1** "God created the heavens and the earth" | A heading for what follows. God creates fundamental duality: the heavens and the earth stand for the spiritual or mental nature of the world and its physical nature. | Nothing by itself. It's what the whole sequence shows. | **Compatible.** See below. |
+| **1:2** formless and void; darkness over the face of the deep; the Spirit over the face of the waters | The static, and the face emerging from it | Beat 1 | **Supported.** "Face" twice in the Hebrew; static is neither dark nor light, which is "formless" exactly. |
+| **1:3** "Let there be light" | The static is forced away behind the face in the blink of an eye. The face turns white and opens its eyes. "Light" means more than light: the first separation is one of experience. | Beat 2 | **Supported as an image.** The light of day one comes three days before the sun (1:14–18), so the text itself says it isn't sunlight. Paul reads the verse as light in a face (2 Cor 4:6). |
+| **1:4–5** light separated from darkness; evening and morning | The two basic experiences: separation (a light face in the dark) and connection (a dark face in the light). They alternate, faster and faster, until the ground is a sea of particles and the face is one of them. | Beats 3–4 | **Supported** for the structure. **Tension** on the malice ([Discussion 007](../../../../discussions/007-the-faces-of-god.md)). |
+| **1:6–8** the vault between the waters | The waters are the two fundamental substances or forces. The vault is the elementary particles: the space for things to happen in, which exists only through the relationships of the particles within it. It's made through the interaction of the two separated waters. | Beat 5 | **Compatible.** See below. |
+| **1:9–10** waters gathered; dry land | The kinds of actual matter, above the elementary particles: solids and fluids | Beat 6: the proton, the atom, the gas | **Compatible** |
+| **1:11–13** the earth sprouts plants | You're unsure: proto-life before the stars, or the land itself growing into many forms | Beat 7, on the second reading: my suggestion ([treatment §5](./TREATMENT.md#5-whats-mine-and-three-problems)) | **Compatible.** "Let the earth sprout": the earth is the subject of the verb. |
+| **1:14–19** lights in the vault | The stars form | Beat 8 | **Supported.** And it's consistent inside your reading: the vault of day two is space, and the lights are set in it. |
+| **1:15** "to give light upon the earth" | *(mine)* | Beat 9: the photon's crossing | Supported |
+| **1:20–23** the waters swarm; flying things | *(not yet given; my default)* Life in the sea | Beat 10 | Supported for the sea. **The flying things are missing:** see below. |
+| **1:24–25** creatures of the land | *(my default)* | Beat 11 | Supported |
+| **1:26–28** humankind, male and female; fill the earth and subdue it | *(my default)* | Beat 13 | Supported |
+| **2:1–3** rest | *(my default, confirmed by your answer 8)* | Beat 14: the cliff in real time | Supported |
+| **2:5–6** the rising water; no one to work the ground | *(my default)* | Beat 14: the delta | Supported |
+| **2:7** dust, and the breath of life | The dust is the whole sequence. The breath is the last thing in it. | Beats 12 and 14 | Supported; but see [treatment §5, problem 2](./TREATMENT.md#5-whats-mine-and-three-problems) |
+
+**On 1:1.** There's more behind your reading than you may know.
+
+- **For it.** "The heavens and the earth" is a merism: Hebrew names a whole by its two ends, and it has no single word for "universe." So the Bible's first sentence does name everything as a pair. Reading 1:1 as a heading over the chapter is a standard view. And reading "heaven" as the spiritual creation and "earth" as the material one is Augustine's reading (*Confessions* XII), and Philo's before him. The Nicene Creed glosses the verse the same way: "maker of heaven and earth, of all things visible and invisible."
+- **Against it.** A merism means "everything." It doesn't mean "twoness as such." And the second half of your sentence, that fundamental duality in turn creates God, pulls hard against several texts. That belongs to [Discussion 007](../../../../discussions/007-the-faces-of-god.md).
+
+**On 1:6–8.** Three things to know.
+
+- **The text names the vault.** "God called the vault Sky" (1:8). Its first hearers pictured something firm with water above it (Job 37:18, "hard as a cast metal mirror"; Gen 7:11, "the windows of the heavens"). Your reading takes the word as reaching for something its writer had no name for, the same move you make with "heavens and earth."
+- **Who makes it.** 1:7 says "God made the vault and separated the waters." Your "created through the interaction between both separated waters" has to mean that this is how God made it.
+- **The physics.** Physics counts four fundamental forces, not two, so "two fundamental forces" is your claim (P5) and not a finding. But physics does have a twoness at the bottom: every kind of particle has an opposite, and in the first instants the universe was a sea of such pairs appearing and vanishing. That's what beat 5 shows. "Space is nothing but the relations between things" is a serious position, held by Leibniz against Newton and by some physicists now. It isn't settled.
+
+**The flying things of 1:20.** On your reading the days are in order, so "let birds fly above the earth across the face of the vault" comes before the land animals of 1:24. Nothing flies in the sequence. The Hebrew word, *'oph*, covers every flying creature, insects included (Lev 11:20–23). One small fix: when our creature hauls out onto the shore in beat 11, the air over the shallows is already alive with wings. The science allows it loosely. One genetic estimate puts flying insects around 400 million years ago, before any backboned animal walked; the oldest winged fossils are later, about 325 million. I'm low-to-medium confident, and it's your call.
+
+**What reading it in order costs.** Tying each day to a stage of physical history is called concordism, and it has three standing objections:
+
+1. The chapter defines its own words: Day, Night, Sky, Earth, Seas (1:5, 8, 10).
+2. Science moves, and a reading pinned to it moves too.
+3. Your reading is symbolic for days one to three and literal for days five and six.
+
+My answer to the third is your own design. The surround starts abstract and settles until the world makes ordinary sense. The words do the same: they start as placeholders and end as plain names. So the shift isn't an inconsistency; it's the come-down. **My grade for the whole reading (FR-15): Compatible as something shown and never narrated. Tension if it's asserted as what the writer meant to say.** The series only needs the first.
 
 ## 3. What fits
 
-*From FR-01, with what the new scope adds. The last four are new.*
+*New in v2 are the first five.*
 
-- **"Face" twice in 1:2** (*penei*). Your opening image is close to a literal picture of the Hebrew.
+- **Genesis gives a face to everything.** *Penei*, "face of," appears five times between 1:2 and 2:6: the face of the deep and of the waters (1:2), the face of the vault (1:20), the face of all the earth (1:29), and the whole face of the ground (2:6). Then God breathes into a human one (2:7). Your rule that every beat has a face, "each a kind of face," is the Hebrew's own habit.
+- **Light in a face.** "God, who said, 'Let light shine out of darkness,' has shone in our hearts to give the light of the knowledge of the glory of God in the face of Jesus Christ" (2 Cor 4:6). Paul joins Genesis 1:3 to a face. Your beat 2, the face turning white with its eyes opening, is that verse.
+- **The two experiences are the face shown and the face hidden.** "The LORD make his face to shine upon you... and give you peace" (Num 6:25–26). "When you hide your face, they are dismayed; when you take away their breath, they die and return to their dust. When you send forth your Spirit, they are created, and you renew the face of the ground" (Ps 104:29–30). The word for "dismayed" there means terrified. That's a creation psalm, and it has your connection and separation, the breath, the dust and the face in two verses.
+- **Both interactions are God's.** "I kill and I make alive; I wound and I heal" (Deut 32:39; also Job 5:18; Hos 6:1; 1 Sam 2:6). The large face that hurts and the large face that heals have a text.
+- **A mirror, then a face.** "Now we see in a mirror dimly, but then face to face" (1 Cor 13:12), and the Bible's last chapter says "they will see his face" (Rev 22:4). A series that opens on a face in static has its ending waiting for it.
 - **Separation is the chapter's own verb** (*badal*, five times). Your separation-and-connection pair is its structure.
-- **John 1:5 is your strike beat.** "The light shines in the darkness, and the darkness has not overcome it." In your draft the malicious face goes for the white one and, at that instant, the image mirrors. The attack never lands. I don't know a closer staging of that verse.
-- **"Evening and morning."** The refrain that closes each day (1:5, 8, 13, 19, 23, 31) is dark and light taking turns. A turning figure of dark and light is that refrain as a picture.
-- **Dust.** *Adam* is formed from the *adamah*, the ground (2:7), and "you are dust" (3:19). Your sequence shows it step by step: matter forged in a star, a body decaying into soil, a tree growing out of that soil, and then people. Nothing in the draft needed changing for this; the carcass-to-tree passage already is 2:7.
-- **Rest.** The sequence never stops moving for four minutes. If the cliff is the first moment that plays in real time, with no cut and no acceleration, the stillness itself is the seventh day. Your draft's final black can't do that job alone, because black is also just the end of a scene.
-- **The breath.** *Ruach* means wind, breath and spirit. If the static's hiss sounds like wind over water at the start (1:2), and the last sound is one human breath (2:7), the sequence begins and ends on the same word.
-- **"In the east."** The next verse, 2:8, says God planted a garden "in Eden, in the east," and put the man there. From the Nile delta, east is toward the Tigris and the Euphrates (2:14). FR-01 worried that the Nile ending and the two Mesopotamian rivers pulled apart. Read this way they don't: the man is formed in one place and set down in another, which is what 2:8 and 2:15 say. *This is my suggestion (P5 if you adopt it), and it belongs to the Garden scene.*
+- **John 1:5.** "The light shines in the darkness, and the darkness has not overcome it." In v2 the blow lands, but the small face is never destroyed: every wound is followed by a healing.
+- **"Evening and morning."** The refrain that closes each day is dark and light taking turns. Your alternation is that refrain as a picture.
+- **Dust.** *Adam* is formed from the *adamah*, the ground (2:7), and "you are dust" (3:19). Matter forged in a star, a body going into the soil, a tree out of the soil, and then people.
+- **Rest.** The sequence never stops moving for four and a half minutes. The cliff is the first thing that plays in real time, and the stillness itself is the seventh day.
+- **The breath.** *Ruach* means wind, breath and spirit. The static's hiss is wind over water (1:2), and the last sound is one human breath (2:7).
+- **"In the east."** 2:8 says God planted a garden "in Eden, in the east," and put the man there. From the Nile, east is toward the Tigris and Euphrates (2:14). With the person at the cliff now an ancestor of Adam, the journey east is made by the generations in between ([Discussion 008](../../../../discussions/008-adam-eve-and-the-garden.md)).
 
 ## 4. What pulls against it
 
-**1. Death before Eden. Fit grade: Tension. This is the one to decide on purpose.**
+**1. Death before Eden. Fit grade: Tension, adopted on purpose.**
 
-The sequence shows hundreds of millions of years of predation, a mass extinction, and tribes killing each other, all before the Garden. Against that:
+You answered: "So it has to be read as human death before the Garden, and not spiritual death? That sounds right to me." I put this badly in v1, so here it is plainly. The sequence shows animals dying for hundreds of millions of years and people dying for tens of thousands, all before Adam. For that to stand beside Rom 5:12 and 1 Cor 15:21, the death that comes through Adam can't be the first death of a body.
 
-- "Sin came into the world through one man, and death through sin" (Rom 5:12); "as by a man came death" (1 Cor 15:21).
-- God calls the finished creation "very good" (Gen 1:31).
-- In 1:29–30 every creature is given plants for food.
+**The reading we're adopting: bodies died before the Garden, human ones included. What comes through Adam is spiritual death: being cut off from God and from the tree of life.** If that's what you meant, we agree. If you meant something else, tell me.
 
 For it:
 
-- Rom 5:12 goes on: "and so death spread to all *men*." Many readers who accept an old Earth take Paul to mean human death, or spiritual death.
+- "In the day that you eat of it you shall surely die" (Gen 2:17), and Adam lives 930 years (5:5). Whatever died that day, it wasn't his body.
+- He's barred from the tree of life "lest he... live forever" (3:22–24). So he was mortal by nature, "you are dust" (3:19), and unending life was something offered and then lost.
+- Rom 5:12 says death spread "to all men." Paul isn't talking about animals. And Eph 2:1 calls living people "dead in your trespasses."
 - Psalm 104:21 praises God for giving lions their prey, inside a creation psalm.
-- "Subdue" the earth (1:28, *kabash*) is a hard word. It assumes something that resists.
 
-It works only under the reading that the death Adam brings is human, spiritual or both. That's a real and widely held reading, but we'd be adopting it deliberately. It also shapes the Garden: the man comes into Eden *from* a violent world, and Eden becomes a shelter from it, not the whole world.
+Against it:
 
-**2. The malicious darkness. Tension** (from FR-01). In Genesis 1 the darkness isn't evil; God names it Night. Your draft is the John 1 reading. One thing in your draft softens this more than I first saw: the malice appears only *after* the face is cut off from the static. Separation comes first, and terror and malice both come out of it. That makes evil a result of separation, not a second eternal power, which sits better with "God is light, and in him is no darkness at all" (1 John 1:5).
+- **1 Cor 15:21–22 is about the resurrection of the body,** so the death it answers is the body's: "as by a man came death, by a man has come also the resurrection of the dead." This is the strongest text against a purely spiritual reading. It holds this way: through Adam, death became humanity's fixed end, because the tree of life was lost. The verse doesn't say no body had died before. John Walton argues this in *The Lost World of Adam and Eve*.
+- God calls the finished creation "very good" (Gen 1:31), and 1:29–30 gives every creature plants for food.
 
-**3. If the face is God's.** A terrified God pulls hard against Isa 40:28 and Ps 121:4, and a malicious half of God against 1 John 1:5. I'd grade that Contradiction on the terror. If the face is the human image, none of this arises (choice 2).
+It suits your framework better than I'd seen. The death Adam brings is separation, and separation is your word for the first thing that happens, in the first minute. That raises a question for the Garden: if separation is already there in beat 2, what does the Fall add? ([Discussion 008](../../../../discussions/008-adam-eve-and-the-garden.md), question 5.)
 
-**4. The taijitu as a symbol.** FR-02 (Father as Yin, Son as Yang) is graded Tension and hasn't been discussed. A literal taijitu in the first minute commits the series to it visually before that discussion. An evoked form doesn't (choice 3).
+**2. The face is God's, and all four faces are God.** Your answer to choice 2. I'd graded a terrified God as Contradiction. On a closer look it divides into parts with different grades, and one of them has a version that fits, in your own words. It's the main business of [Discussion 007](../../../../discussions/007-the-faces-of-god.md). In short:
 
-**5. No words.** Genesis 1 is mostly speech. Silence is a strong choice and I think the right one, but it's a choice about [Discussion 001](../../../../discussions/001-how-god-speaks.md), question 1.
+- Both interactions as God's acts: **Supported** (Deut 32:39).
+- The face as God's: **Supported if the face is God's image,** which Gen 1:26 says is human and Col 1:15 says is Christ. **Tension** with Deut 4:15–16 and John 1:18 otherwise.
+- Terror in God: it has one home in the texts, the Son in Gethsemane and on the cross (Mark 14:33–34; 15:34).
+- Malice in God: **Contradiction as stated** (1 John 1:5; James 1:13; Lam 3:33). It fits if the malice is how the whole looks to a part that's been cut off, which is what you said about separation in Discussion 001: "his own illusion. His own perception."
+
+Nothing in treatment v2 commits the picture to the contradicted version. All four faces are one face, and the malice appears only after the cut.
+
+**3. Reading the days in order.** See §2: Compatible as shown, Tension as a claim about the writer's meaning.
+
+**4. No words.** Genesis 1 is mostly speech: ten times "God said," and in 1:28–30 God speaks to the people he's made. You've decided that the speech stands for what God did or thought, and that nothing is spoken. The recorded words are the default (principle 4), so this is logged as a decision in [FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far). Ps 33:6, 9 and Heb 11:3 read the chapter's speech the same way.
+
+**5. A first man with ancestors.** Paul calls Adam "the first man" (1 Cor 15:45, 47). If the person at the cliff is Adam's ancestor, "first" can't be a head-count. It needn't be: the same verse calls Christ "the second man," and he wasn't the second human being. Graded Tension, and taken up in [Discussion 008](../../../../discussions/008-adam-eve-and-the-garden.md).
 
 ## 5. The science
 
-*What I'd change, and how sure I am. None of it costs you a beat.*
+**The two dates you asked me to check.**
 
-| Your draft | The issue | The fix | Confidence |
-|---|---|---|---|
-| The electron joins, then we're inside a star | Atoms formed about 380,000 years after the Big Bang, long before stars. Inside a star the electron is stripped off again, and fusion is bare protons. | Keep your order and show both: the electron joins, the fog of the early universe clears and light runs free, the gas falls together into a star, the electron is torn away, and the proton fuses. | High |
-| The photon flies to the early, fiery Earth and into a bacterium | Nothing lived on the molten Earth. The first cells came several hundred million years later, in oceans. | The Earth is seen glowing from far off and cools as the photon closes in. It enters an ocean. | High |
-| An alphaproteobacterium uses the photon | Some do use light, so it holds. The star has to be the Sun, though, not an early star. | The proton is ancient; the star it ends up in is ours. | High |
-| The archaeon swallows it | Right, and the host was probably an Asgard archaeon. It happened roughly 1.5–2 billion years ago. | No change. | High on the event, medium on the date |
-| *Pikaia*, *Haikouichthys* | *Haikouichthys* is the older of the two (about 518 against 508 million years). | Show it first. | High |
-| Lizard-like, then rodent-like | Our ancestors were never lizards; they were lizard-shaped. Early mammals were shrew-like. | Design only. | High |
-| The meteor, then a dead animal, a tree, humans | The impact was in Mexico. Where our own ancestors were living then is uncertain. | Don't name the place. It's license, and reasonable. | Medium |
-| Jungle | East Africa was mostly savanna and woodland. | Forest at the start, opening into grassland, then a green Sahara along the river. | High |
-| "Just coming out of Africa," at the Nile delta | The main dispersal out of Africa was roughly 60,000–70,000 years ago. **The delta as we know it is much younger:** it took its present fan shape about 7,000–8,000 years ago, after the seas rose. During the ice age the coast lay farther out and the river cut a deeper valley. | Two honest options. Keep the dispersal date and show the delta as it was then, a braided river plain running to a farther sea. Or bring the arrival forward to about 8,000–6,000 BC, when the fan existed and nobody yet farmed there, which is also what 2:5 describes. **I lean to the second if the cliff figure is the man of 2:7, and the first if he isn't.** | Medium. Worth checking before the visualization. |
-| A cliff over the delta | The delta itself is flat. | The Mokattam escarpment east of today's Cairo stands above the point where the valley opens into the delta. That's the cliff. | High |
+| Question | What I found | Confidence |
+|---|---|---|
+| **When did the delta form?** | The delta we know began building about 7,500 years ago, when the rise of the sea after the ice age slowed down. Before that the same ground was an older river plain. So v1's figure holds. | High |
+| **When did humans leave Africa?** | Everyone alive outside Africa descends from a movement about 50,000–60,000 years ago. Two lines of evidence: the genetic split between Egyptians and non-Africans is put at about 55,000 years, and the mixing with Neanderthals that all non-Africans carry is dated to about 50,000–43,000 years ago, so they'd left by then. Earlier groups did leave (fossils in Israel at about 180,000 and 100,000 years), but they left few or no descendants. v1 said 60,000–70,000; the newer work pulls it later. | Medium-high on the range |
+| **Which way out?** | Two routes are argued: down the Nile and across Sinai, or over the mouth of the Red Sea into Arabia. The genomes of living Egyptians and Ethiopians favor the Nile. | Medium |
+
+**Decided, as you asked: the date humans left.** The cliff is set **about 55,000 years ago.** The gap from there to Adam and Eve is long, which you've said is fine.
+
+**What the delta looked like then.** A wide, sandy plain crossed by braided channels that ran with the seasons, partly green. The sea stood tens of metres lower, so the coast lay well beyond today's. The valley still opened where it opens now, at today's Cairo, so the Mokattam escarpment still works as the cliff, and "opens like a hand into many channels" is still true. It was paler and less lush than the delta we know. (Medium confidence.)
+
+**The rest.**
+
+| In the sequence | The science | Confidence |
+|---|---|---|
+| A sea of grains appearing and vanishing in pairs (beat 5) | In the first instants, particles and their opposites came out of radiation in pairs and went back into it, and nothing could be seen through it | High |
+| Three lock into a proton, two above and one below (beat 6) | A proton is two "up" quarks and one "down." Nothing built of parts is known to last longer. | High |
+| The electron joins and the glare clears (beat 6) | The first atoms formed about 380,000 years in, and the universe turned transparent | High |
+| The gas grows into threads and knots before the stars light (beat 7) | The cosmic web. In fact the web and the first stars grow together, and nearly every element past helium is made later, inside stars. | High |
+| Later stars from earlier ones; the Sun (beat 8) | Right. The proton is ancient; the star it ends in is ours. | High |
+| One photon from the core to a cell (beats 8–9) | License. A photon made in the Sun's core is absorbed and re-emitted for tens of thousands of years before anything escapes. | High |
+| The Earth cools as the photon arrives (beat 9) | Nothing lived on the molten Earth; the first cells came several hundred million years later, in oceans | High |
+| A light-using bacterium, swallowed by a larger cell (beat 10) | Some alphaproteobacteria use light. The host was probably an Asgard archaeon, roughly 1.5–2 billion years ago. | High on the event, medium on the date |
+| The first eyes (beat 10) | *Haikouichthys,* about 518 million years old, had a head with eyes. *Pikaia* is about 10 million years younger. | High |
+| Lizard-shaped, then shrew-like (beat 11) | Our ancestors were never lizards; they were lizard-shaped. Early mammals were shrew-like. | High |
+| The impact, then a dead animal and a tree (beats 11–12) | The impact was in Mexico. Where our own ancestors were is uncertain, so the place isn't named. | Medium |
+| Forest, woodland, grassland, the river (beat 13) | East Africa was mostly savanna and woodland | High |
+| The people in beat 13 | Fully modern humans. Our species is at least 300,000 years old, so the band at the cliff has 250,000 years of *Homo sapiens* behind it. This matters for Adam ([Discussion 008](../../../../discussions/008-adam-eve-and-the-garden.md)). | High |
+| Color from black-and-white flicker (beat 4) | Real. They're called Fechner colors, and a spinning black-and-white disc shows them. | High |
+
+**Sources for the dates:** [Stanley on the Nile delta's late Quaternary history](https://ancientportsantiques.com/wp-content/uploads/Documents/PLACES/Egypt-Libya/NileDelta/NileDelta-Stanley1990.pdf); [Pennington and others on the Holocene delta](https://eprints.soton.ac.uk/411413/1/Pennington_Fluvial_Evolution_Holocene_Nile_Delta_QSR.pdf); [Pagani and others, 2015, on the route out of Africa](https://stephanschiffels.de/pubs/Pagani2015-ww.html); [the Max Planck summary of the 2024 Neanderthal-mixing dates](https://www.mpg.de/23832006/1205-evan-new-timeline-for-neandertal-gene-flow-event-150495-x); [the earliest modern human genomes, 2024](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11839475/); [the Nile valley 75,000–15,000 years ago](https://books.openedition.org/mnhn/6572).
 
 ## 6. The visualization
 
 ### What the prototype shows
 
-I couldn't play the videos (the machine has no video tools installed), so I read the render script's timeline and looked at the frames it saved at nine points. It's an 80-second piece that ends at the hydrogen atom.
+It's at `H:\Current\Projects\Agentic\Biblical Story Concept`. I still can't play the videos (the machine has no video tools installed), so I've read the render script's timeline and looked at the saved frames. It's an 80-second black-and-white piece that ends at the hydrogen atom.
 
 | | |
 |---|---|
-| **Worth keeping** | The overall order. The static closing in around the face. The pull-back from the split to the turning figure in a sea of static. |
-| **Pacing** | It takes 80 seconds to reach the atom. In a five-minute sequence that stretch gets about 60. |
-| **The face** | It's drawn as a white outline on top of the static, so you can see it in a still frame. Your draft says it "can only be seen because the static is moving." That's a real effect, and code does it well: the static inside the face drifts a different way from the static outside, and a paused frame shows nothing at all. |
+| **Worth keeping** | The overall order. The static closing in around the face. |
+| **Changed by your notes** | The taijitu, the pull-back and the spin all go. The ground and the face trade black and white instead. |
+| **The face** | It's drawn as a white outline on top of the static, so you can see it in a still frame. Your draft says it "can only be seen because the static is moving." Code does that well: the static inside the face drifts a different way from the static outside, and a paused frame shows nothing. |
+| **The static wrap** | In the prototype the static shrinks away over several seconds. You want it whipped behind the face in a blink, with the sound doing the build. |
 | **The expressions** | Cartoon faces. They read as symbols, where your draft wants terror and malice. |
-| **The taijitu** | A flat, literal symbol (choice 3). |
+| **Color** | There isn't any. You want it lush and colorful from the particles on. |
 | **The particle scenes** | A star field appears behind the particle, which puts stars before atoms. The atom is a ring orbit. |
+
+### What your notes add to the build
+
+- **Sound is half of it,** and it has to be designed with the picture, not laid over it afterwards (rule 2). The storyboard should be timed to a rough soundtrack from the start.
+- **The flicker has a safety limit:** no more than three full-frame flashes a second ([treatment §5](./TREATMENT.md#5-whats-mine-and-three-problems)).
+- **The first half got longer.** The abstract beats, 1 to 8, now run 2:22, about half the sequence. That's the half I can build in code.
 
 ### How I'd build it
 
 | Beats | Method | Who builds it |
 |---|---|---|
-| 1–5: static, faces, the turning figure, particles, the star | Code. No characters, exact control, free. | I can, on your machine. |
-| 6: the photon's flight | Code or 3D | I can |
-| 7–9: cells, animals, the impact, the carcass and the tree | AI video from painted key frames, or a 3D build | Depends on your tools and budget |
-| 10–11: the tribe, the cliff, the face | The hardest part: people. AI video, or painted storyboard frames timed to sound. | Depends on your tools and budget |
+| 1–8: static, faces, the alternation, particles, the web, the star | Code. No characters, exact control, free. | I can, on your machine. |
+| 9: the photon's flight | Code or 3D | I can |
+| 10–12: cells, animals, the impact, the dead animal and the tree | AI video from painted key frames, or a 3D build | Depends on your tools and budget |
+| 13–14: the band, the cliff, the face | The hardest part: people. AI video, or painted storyboard frames timed to sound. | Depends on your tools and budget |
 
 **The order I'd work in,** once the script is settled:
 
-1. **A timed storyboard of the whole sequence:** one still frame per shot, cut to the timings, so you can watch the full 4:35 and judge the pace before anything expensive is made.
-2. **Beats 1–5 in code,** properly.
-3. **Beats 6–11,** by whichever route you choose.
+1. **A timed storyboard of the whole sequence,** with a rough soundtrack: one still frame per shot, cut to the timings, so you can watch all 4:50 and judge the pace before anything expensive is made.
+2. **Beats 1–8 in code,** properly.
+3. **Beats 9–14,** by whichever route you choose.
 
-## 7. Choices for you
+## 7. Your choices, decided
 
-*The numbers match the project [README](../../../../README.md#what-i-need-from-you).*
+*Answered 2026-10-03.*
 
-**1. Is anything spoken?**
-*My view: nothing.* A narrated Genesis 1 would put "let there be lights in the heavens" (day 4) after the plants (day 3) while the picture shows the reverse, and the mismatch would be all anyone noticed. Silence also suits your own belief that God speaks through the world (FOUNDATIONS §6): here the world is the speech. The middle option is a single line, "Let there be light," at the moment the fog clears. It's tempting, but one line raises "whose voice?" and nothing after it answers.
-
-**2. Whose face is it?**
-*My view: the human image.* "Let us make man in our image" (1:26) as a shape present from the first frame, and filled in at the last. The face in the static and the face at the cliff should be recognizably the same face. If you mean it as God's face, we need to talk before the script, because of §4.3.
-
-**3. The taijitu: drawn, or evoked?**
-*My view: evoked.* The mirroring makes the shape by itself: a light face held in dark, a dark face held in light, turning. Anyone who knows the symbol will see it. A clean drawn taijitu in the first minute of a Bible series announces a position the project hasn't discussed yet (FR-02), and people will react to the symbol instead of the scene.
-
-**4. Death before Eden** (§4.1). Keep it, with the reading named? Or soften the sequence?
-*My view: keep it.* It's honest, and it gives the Garden something to be a shelter from.
-
-**5. Who is the person at the cliff?** A man or a woman? The man of 2:7, or an ancestor of his, or left open?
-*My view: leave it open in this sequence.* The Garden scene is where it gets decided (Position 5).
-
-**6. A standing exception to two rules** in [`STORYTELLING.md`](../../../../style/STORYTELLING.md): "no montages for passing time," and "write every shot as something a camera and real actors could do." This sequence breaks both by design.
-*My view: record an exception for this sequence and for visions,* and keep both rules everywhere else.
-
-**7. The delta's date** (§5). Keep "just out of Africa" and show an older, different river mouth, or keep the fan-shaped delta and bring the arrival forward?
-*My view: it follows from choice 5.*
-
-**8. The ending.** The cliff in real time as the seventh day, then one breath before the black (§3).
-*My view: yes.*
+| # | Choice | Your answer |
+|---|---|---|
+| 1 | Is anything spoken? | **Nothing.** The sound and the picture are lush, colorful and psychedelic, and tied to each other. Faces are always seen, each a point of stability in a sea of change, and the surround settles until the world makes normal sense. "So, in a sense, the world speaks." |
+| 2 | Whose face is it? | **God's.** The first face and the human face at the end are alike enough to recognize. "It's all 4 faces and both interactions that represent the totality of God." → [Discussion 007](../../../../discussions/007-the-faces-of-god.md) |
+| 3 | The taijitu | **Evoked.** No symbol: the ground changes from black to white and the face from white to black, faster and faster, until the ground is a sea of particles. The principles of the taijitu are still followed. |
+| 4 | Death before Eden | **Kept.** Bodies died before the Garden; what Adam brings is spiritual death (§4.1). |
+| 5 | Who is at the cliff? | **Nobody in particular: an ancestor of Adam,** for now. You'd like information on Adam, Eve and the Garden. → [Discussion 008](../../../../discussions/008-adam-eve-and-the-garden.md) |
+| 6 | The exception to two rules | **Yes,** for this sequence and for visions. Recorded in [STORYTELLING](../../../../style/STORYTELLING.md). |
+| 7 | The delta's date | **The date humans left,** after checking both: about 55,000 years ago (§5). A long gap to Adam and Eve is fine. |
+| 8 | The ending | **Yes:** real time, and one breath. |

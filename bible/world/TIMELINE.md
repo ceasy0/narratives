@@ -129,6 +129,11 @@ Confidence varies a great deal by era, and the timeline should show that rather 
 
 **Decided (2026-10-01):** leave Genesis 1–11 undated until the Genesis discussion (Positions Register items 4–7, FR-01, Discussion 001). The series calendar begins with Abraham.
 
+**Added 2026-10-03.** Two things from the Opening:
+
+- **The Opening's last shot is set about 55,000 years ago,** when the ancestors of everyone outside Africa left it. You chose that date over the view of the delta as a fan, which only formed about 7,500 years ago ([Opening dossier §5](../story/arcs/01-beginnings/opening/DOSSIER.md#5-the-science)).
+- **Adam and Eve come long after that.** The person at the cliff is an ancestor of Adam, and you've said a long gap is fine. Their own date is still open ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md)). My suggestion there is the dawn of farming, which is also roughly where the genealogies put Adam: about 3900 BC in the Hebrew text and about 5300 BC in the Greek.
+
 ### 3.5 Jesus
 
 - **His birth** came before Herod died. Most scholars date Herod's death to 4 BC; a minority, to 1 BC. Herod killed boys "two years old and under" (Matt 2:16), which suggests a birth around 6–5 BC.
