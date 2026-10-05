@@ -2,7 +2,7 @@
 
 > How you want scenes to play, learned from your notes. Every treatment, scene card and script starts from this file.
 
-**Status:** started 2026-10-01 from your first round of notes on the Ruth treatment, updated 2026-10-02 from your second and third, and 2026-10-03 from your notes on the Opening. It grows with each round. When a note is specific to one story, it stays in that story's files; when it's a pattern, it goes here.
+**Status:** started 2026-10-01 from your first round of notes on the Ruth treatment, updated 2026-10-02 from your second and third, 2026-10-03 from your notes on the Opening, and 2026-10-05 from your notes on the Opening's treatment v2. It grows with each round. When a note is specific to one story, it stays in that story's files; when it's a pattern, it goes here.
 
 ---
 
@@ -12,6 +12,7 @@
 - **No montages for passing time.** Cut straight to the later moment and let the change show. For a long jump, fade to black and caption it: *Ten years later.* *Exception (2026-10-03): the Opening and visions.*
 - **It's headed for live action.** The 3D animation is the placeholder, so write every shot as something a camera and real actors could do (ROADMAP §15). Expect moments of bright, vibrant color and some scenes that need advanced effects. *Exception (2026-10-03): the Opening and visions.*
 - **Episodes run about an hour** (2026-10-03).
+- **A journey keeps moving, and keeps its direction.** When people are traveling, life happens on the move: they fight, bury their dead and carry their newborns without stopping, and they cross the frame the same way every time. Stopping is an event. (The band in the Opening always walks right to left, and stops only at the cliff, 2026-10-05.)
 - **A slower start is fine; a lurch isn't.** An episode can open more slowly, but the change of pace has to be smooth, and the end mustn't feel rushed. The way to do it: let story time slow down gradually while screen time holds steady, and start the slowdown before the act break, not at it. (Ruth: twelve years in Moab move fast, and the parting on the road slows into real time before Act Two begins. See BEATS §3.)
 - **Make the main character's arc visible at every stage.** Mark each step with something we see or hear: a laugh, a dance, a name refused and then accepted, a song. Echoes work best when nobody points at them. (Naomi's laugh, dance and lullaby.)
 - **Links between episodes live at the edges.** Anything that ties one episode to another, such as a flash-forward or a callback, goes only at the beginning or end of an episode or scene, as a small change. Each episode stays whole on its own. (Your note on the David connection at the end of Ruth.)
@@ -24,9 +25,15 @@
 - **Psychedelic means connected.** In your words: "not only the variation in sensations/perceptions, but also the inter-connectedness of each sensation/perception." Sound and picture are designed as one thing. Both are lush and colorful.
 - **Sound carries, picture strikes.** A sudden image should feel "sudden, surprising, and powerful." It's "the audio that carries the audience through the scene smoothly by building tension."
 - **Always a face.** There's always one thing in focus, and it's "a kind of face": clear, understandable and steady, "a sort of stability in a sea of change."
+- **Every appearance has a sound.** When something new comes into view, even as quietly as a face in static, the sound gives it a presence of its own. Ideally that sound is made from the sound of the sea around it, the way the face is made from the static. (The face in the static, 2026-10-05.)
+- **Expressions run to the climax.** A face doesn't hold one expression through a scene; it builds as the scene builds. Separation climbs (fear to terror; malice to an insane, laughing ego), and connection settles (upset and compassion to peace, then sleep). (2026-10-05.)
+- **Organic, never a grid.** When the frame divides, it divides the way nature does: ink in water, frost on glass, mud cracking. It never looks like a screen split into screens. Regular patterns are also a seizure risk, so this is a safety rule too. (2026-10-05.)
 - **The sea is what the face is.** When the surround is a sea of particles, they're the same kind of thing as the one in focus, and they change when it does.
 - **It comes down.** The surround grows "more and more still and orderly" until the world "makes normal sense." The earliest, most abstract stages are where the imagery runs freest.
-- **It never fully goes.** The fantastical look stays "in glimpses all the way through past Abraham's and Moses' lives, and further." It stands for the primordial, so it's "referenced, connected with, and hinted to throughout the entire series (with a fulfilling conclusion)." Where those glimpses might fall is proposed in the [Opening's treatment §6](../story/arcs/01-beginnings/opening/TREATMENT.md#6-glimpses).
+- **It never fully goes.** The fantastical look stays "in glimpses all the way through past Abraham's and Moses' lives, and further." It stands for the primordial, so it's "referenced, connected with, and hinted to throughout the entire series (with a fulfilling conclusion)."
+- **Glimpses come naturally.** Don't plan them in advance. In your words (2026-10-05): "I should be able to tell you, at the very least, when a glimpse-type moment should occur." The places where the texts come close are noted in the [Opening's treatment §6](../story/arcs/01-beginnings/opening/TREATMENT.md#6-glimpses), as notes only.
+- **The face recurs.** The first face comes back, recognizable without being identical: at the cliff, in Adam, and toward the end in Jesus. It can be a man's or a woman's. (2026-10-05.)
+- **Real faces.** Expressions are real and human-looking, never cartoon symbols, even in the most abstract scenes. (2026-10-05.)
 - **Words can be placeholders.** You read "the heavens and the earth," "light," "the waters" and God's speech in Genesis 1 as reaching for things their writer had no names for. On screen that reading is shown and never stated.
 
 ## People
@@ -74,3 +81,4 @@
 | 2026-10-02 | 2 | Your notes on the Ruth treatment v2: line changes in every act, and Elimelech as a protective father |
 | 2026-10-02 | 3 | Your notes on the sample scene and treatment v3: 1:9, 1:13 and 1:15; four expansions; the deathbed song; Naomi's arc; pacing |
 | 2026-10-03 | 4 | Your notes on the Opening: nothing spoken, the faces, the come-down, the primordial through the series; the exception to two rules; hour-long episodes |
+| 2026-10-05 | 5 | Your notes on the Opening's treatment v2: a sound for every appearance, expressions that run to the climax, organic division, the journey that keeps moving, glimpses left to come naturally, the recurring face, real expressions |

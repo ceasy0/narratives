@@ -2,7 +2,7 @@
 
 > Your unconventional framings of ideas and passages: what each one says, which texts support it and which pull against it, a first-pass fit grade, and what it would change on screen. These grades are starting points for discussion, not verdicts.
 
-**Status:** v1.2, 2026-10-03. FR-01 and FR-02 are updated from your notes on the Opening, and FR-15 to FR-17 are new. Earlier: FR-03 revised, and FR-08 given its Ruth reading (v1.1, 2026-10-01). Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes of 2026-10-03.
+**Status:** v1.3, 2026-10-05. FR-01, FR-02, FR-10, FR-15, FR-16 and FR-17 are updated from your notes on the Opening's treatment v2 and your answers to Discussions 001 and 007. FR-18 (Genesis 2:4–7 as a recap) is new. v1.2 (2026-10-03) updated FR-01 and FR-02 and added FR-15 to FR-17. Earlier: FR-03 revised, and FR-08 given its Ruth reading (v1.1, 2026-10-01). Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes of 2026-10-03.
 **Fit grades** (defined in ROADMAP §8.8):
 - **Supported:** the text points this way.
 - **Compatible:** the text is silent or open, and the framing fills a gap without strain.
@@ -15,8 +15,8 @@
 
 | ID | Framing | Arcs | First-pass grade | Discuss before |
 |---|---|---|---|---|
-| [FR-01](#fr-01--the-opening-creation-as-cosmic-and-biological-history) | The opening: creation shown as cosmic and biological history | 1 | Compatible, shown and never narrated; Tension on the malicious darkness and on death before Eden. **Being written** (treatment v2). | [Discussion 007](../discussions/007-the-faces-of-god.md) before the script locks |
-| [FR-02](#fr-02--god-yin-and-yang-as-the-trinity) | God and fundamental duality as the Trinity, each creating the other | All depictions of God | Tension; "duality creates God" is Contradiction as stated | [Discussion 007](../discussions/007-the-faces-of-god.md) |
+| [FR-01](#fr-01--the-opening-creation-as-cosmic-and-biological-history) | The opening: creation shown as cosmic and biological history | 1 | Compatible, shown and never narrated; Tension on death before Eden. The malice is settled ([007](../discussions/007-the-faces-of-god.md)). **Treatment v3.** | Done for the first pass |
+| [FR-02](#fr-02--god-yin-and-yang-as-the-trinity) | God and fundamental duality as the Trinity | All depictions of God | Tension. **2026-10-05:** "God does not need the duality in order to be"; God creates it. The faces don't depict the persons. | Left here for now, by your choice |
 | [FR-03](#fr-03--mary-and-joseph-the-conception) | A virgin conception, with Joseph's line joined by the Spirit; the village's version shown as rumor (revised) | 16 | **Tension**; adopted provisionally (the original version was Contradiction) | Confirm the on-screen approach before the Gospels |
 | [FR-04](#fr-04--the-spirit-as-the-true-law) | The Spirit as the true Law; written laws as ideals fitted to circumstances | 5, 16 | Supported as a principle | The Gospels |
 | [FR-05](#fr-05--no-different-which-makes-him-different) | "No different from anyone, which is what makes him different" | 16 | Supported in the both-at-once form | [Discussion 002](../discussions/002-jesus-humanity.md) |
@@ -24,23 +24,25 @@
 | [FR-07](#fr-07--salt-and-light-every-part-necessary) | Salt and light: every part is necessary | 16 | Compatible if the warning stays | The Gospels |
 | [FR-08](#fr-08--marriage-to-ones-relative-opposite) | Marriage to one's "relative opposite" (a working theory) | **7 (Ruth)**, 2, 9, 16 | Supported (a corresponding partner); Tension ("only one"). **Confirmed for Ruth:** Boaz, unspoken. | Done for Ruth |
 | [FR-09](#fr-09--children-as-the-parents-next-life-hell-as-a-long-mindset) | Children as the parents' next life; hell as a long mindset | 16, 18 | Ranges from Supported to Contradiction depending on the reading | The Gospels |
-| [FR-10](#fr-10--christ-as-a-bloodline-the-rainbow-widening-comings) | Christ as a bloodline; the rainbow; comings in widening stages | 16, 18 | Compatible (the text is silent on children); Tension overall | The Gospels |
+| [FR-10](#fr-10--christ-as-a-bloodline-the-rainbow-widening-comings) | Christ as a bloodline; the rainbow; comings in widening stages; **the resurrection "through his children"** (2026-10-05) | 16, 18 | Compatible (the text is silent on children); Tension overall. The resurrection as "also spiritual": Supported if *also*, Contradiction if *instead of the body*. | The Gospels |
 | [FR-11](#fr-11--christ-as-integration-the-kingdom-as-christ) | Christ as integration; the kingdom *is* Christ | 16 | Supported | [Discussion 002](../discussions/002-jesus-humanity.md) |
 | [FR-12](#fr-12--the-messianic-prophecies) | The messianic prophecies | 2–16 | Supported (traditional reading) | — |
 | [FR-13](#fr-13--matthews-genealogy-as-jesuss-paternal-line) | Matthew's genealogy as Jesus's paternal line | 16 | Tension (tied to FR-03) | With FR-03 |
 | [FR-14](#fr-14--the-six-religions-as-mirrors) | The six religions as mirrors of each other | Mostly beyond the Bible's window | — | Discussion 004 |
-| [FR-15](#fr-15--genesis-1-read-in-order-as-the-history-of-matter) | Genesis 1 read in order, as the history of matter | 1 | Compatible as shown; Tension as a claim about what the writer meant | Two small questions in the README |
-| [FR-16](#fr-16--the-faces) | The faces: God is seen through faces, and all four of the first faces are God | 1, and every depiction of God | Supported (faces; both interactions); Contradiction as stated on malice in God, with a fitting version in your own words | [Discussion 007](../discussions/007-the-faces-of-god.md) |
-| [FR-17](#fr-17--layered-minds-with-god-at-the-top) | Layered minds with God at the top; separation as God's own limit on himself; prophets as God | 2 onward | Ranges from Supported to Contradiction as stated ("prophets are God") | [Discussion 001](../discussions/001-how-god-speaks.md), round 2 |
+| [FR-15](#fr-15--genesis-1-read-in-order-as-the-history-of-matter) | Genesis 1 read in order, as the history of matter | 1 | Compatible as shown; Tension as a claim about what the writer meant | Done: 1:11–13 and 1:20–2:3 confirmed 2026-10-05 |
+| [FR-16](#fr-16--the-faces) | The faces: God is seen through faces, and all four of the first faces are God | 1, and every depiction of God | Supported. **Decided 2026-10-05:** the malice isn't in God but in how a separated part with an ego perceives him. | Done ([007](../discussions/007-the-faces-of-god.md)) |
+| [FR-17](#fr-17--layered-minds-with-god-at-the-top) | Layered minds with God at the top; separation as God's own limit on himself; prophets taking part in God | 2 onward | Supported to Tension. **Restated 2026-10-05** in the forms that fit. | Done for Genesis ([001](../discussions/001-how-god-speaks.md)) |
+| [FR-18](#fr-18--genesis-247-as-a-recap) | Genesis 2:4–7 as a recap of 1:1–2:3, not a later event | 1 | Supported for 2:4–6; Compatible for 2:7 as both recap and hinge | Bears on [Discussion 008](../discussions/008-adam-eve-and-the-garden.md), question 1 |
 
 **Order of discussion:**
 
 1. ~~Discussion 002, together with FR-05 and FR-11.~~ Decided.
 2. ~~FR-08, because the Ruth pilot needs it.~~ Confirmed for Ruth.
-3. **Now:** FR-01, FR-02 and FR-16 in [Discussion 007](../discussions/007-the-faces-of-god.md); FR-17 in [Discussion 001](../discussions/001-how-god-speaks.md); and Adam and Eve in [Discussion 008](../discussions/008-adam-eve-and-the-garden.md).
-4. FR-03 and FR-13.
-5. FR-04, FR-06, FR-07 and FR-09.
-6. FR-10 and FR-14.
+3. ~~FR-01, FR-02 and FR-16 in Discussion 007; FR-17 in Discussion 001.~~ Decided 2026-10-05.
+4. **Now:** Adam and Eve in [Discussion 008](../discussions/008-adam-eve-and-the-garden.md), with FR-18.
+5. FR-03 and FR-13.
+6. FR-04, FR-06, FR-07 and FR-09.
+7. FR-10 (now including the resurrection) and FR-14.
 
 ---
 
@@ -59,6 +61,8 @@
 - **The face is God's** ([Discussion 007](../discussions/007-the-faces-of-god.md)).
 - **The person at the cliff is an ancestor of Adam,** about 55,000 years ago ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md)).
 - **The opening's look stays in glimpses** through the whole series, with a conclusion that fulfils it.
+
+**Third update, 2026-10-05:** [treatment v3](../story/arcs/01-beginnings/opening/TREATMENT.md) applies your notes on v2. The face in the static gets a sound, and turns white as the static is whipped away. The four faces climb (fear to terror, malice to an insane, laughing ego) and settle (upset and compassion to peace and sleep). Flying things are added. The impact is the one that killed the dinosaurs, seen from about 3,000 km. The band always walks left, through fights, burials and births. The Nile is greener. The malice is settled: it isn't in God ([Discussion 007](../discussions/007-the-faces-of-god.md)). The grade is now **Compatible, shown and never narrated, with Tension only on death before Eden.**
 
 **Your framing, beat by beat:**
 
@@ -142,6 +146,14 @@
 - **A new risk:** if the dark half of the first faces is the Father and the light half the Son, the picture says the Father wounds from malice and the Son heals, which the texts close off (John 5:19; 14:9).
 
 All three are worked through in [Discussion 007](../discussions/007-the-faces-of-god.md), claim D and question 2.
+
+**Update, 2026-10-05.** Your answers:
+
+> God does not need the duality in order to be, but I don't see a point in arguing this because its just going to go in circles. I agree fully with the view that God creates duality and so on, so we can just leave it at that and move on for now.
+
+> The dark half is not meant to represent the Father, nor the light half the Son. It just represents the fundamental experiences or emotions.
+
+So "duality creates God" gives way to its fitting version, and the third risk is closed: the faces aren't persons. "The Father is Yin, the Son is Yang" stays in the register at its first-pass grade, Tension, and it's left there, by your choice.
 
 ---
 
@@ -363,6 +375,16 @@ If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one
 
 **Question:** does any of this appear on screen within the Bible's window? For example, does Jesus have a wife or children in the Gospels? Or is it only an undercurrent?
 
+**Update, 2026-10-05: the resurrection.** In your notes on the Opening, about death before Eden:
+
+> We can discuss this at some point, but I think the resurrection of Christ was also spiritual. Because Christ is a bloodline, he was resurrected through his children. Let me know if this removes the problem.
+
+- **"Also spiritual," the body raised and more: Supported.** A "spiritual body" (1 Cor 15:44); "made alive in the spirit" (1 Pet 3:18). Living on through offspring has its own texts: "he shall see his offspring; he shall prolong his days" (Isa 53:10), said of the servant after his death; the grain of wheat that dies and "bears much fruit" (John 12:24); "I and the children God has given me" (Heb 2:13). In those texts the children are his people. Whether they're also his descendants is this entry's Tension.
+- **Spiritual instead of bodily: Contradiction.** "A spirit does not have flesh and bones as you see that I have" (Luke 24:39); he eats in front of them (24:42–43); the empty tomb (Mark 16:6); "put your finger here" (John 20:27); "his flesh did not see corruption" (Acts 2:31); "raised on the third day" (1 Cor 15:4); Christ "the firstfruits, then... those who belong to Christ" (1 Cor 15:23).
+- **Does it remove the problem with death before Eden?** Only in the version that contradicts the texts. It doesn't need to. The reading adopted for the Opening already carries 1 Cor 15:21: mortal bodies, the tree of life lost through Adam, and given back through Christ (Rev 22:2). ([Opening dossier §4.1](../story/arcs/01-beginnings/opening/DOSSIER.md#4-what-pulls-against-it).)
+
+**Question for when we take this up:** is it "also" or "instead"? Not urgent. It's needed before the Gospels.
+
 ---
 
 ## FR-11 — Christ as integration; the kingdom as Christ
@@ -450,7 +472,7 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 **First-pass grade:** Compatible as a reading that's shown and never narrated. Tension if it's asserted as what the writer meant. The detail, verse by verse, is in the [Opening's dossier §2](../story/arcs/01-beginnings/opening/DOSSIER.md#2-your-reading-of-genesis-1-and-how-it-fits).
 
-**Still needed from you:** your reading of 1:20–2:3, and a yes or no on my suggestion for 1:11–13 (the gas growing into threads and buds before the stars light).
+**Answered 2026-10-05:** yes to 1:11–13 as the gas growing into threads and buds before the stars light; yes to my defaults for 1:20–2:3 (sea, land, people, rest), with flying things added. Nothing in the sequence is now out of the chapter's order. The reading continues past 2:3 in [FR-18](#fr-18--genesis-247-as-a-recap).
 
 ---
 
@@ -478,6 +500,8 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 **First-pass grade:** Supported for faces and for both interactions. Supported for the face as God's if it's God's image (Gen 1:26; Col 1:15). Contradiction as stated on malice in God; Tension if the malice is how the whole looks to a part that's cut off, which is what you've said separation is. All of it is in [Discussion 007](../discussions/007-the-faces-of-god.md).
 
+**Decided 2026-10-05.** "The malice is not in God. When one is separated and has an ego, they perceive a part of God as malicious." **Supported in that form** (Ps 18:26; 50:21). The halves are the fundamental experiences, not persons. The face recurs through the series, recognizable without being identical, and can be a man's or a woman's. On screen the faces climb (terror; a mad, laughing ego) and settle (peace; sleep).
+
 ---
 
 ## FR-17 — Layered minds, with God at the top
@@ -501,3 +525,34 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 | The separation isn't real | Tension (Isa 59:2 against Ps 139:7–12). It holds as "real as experience, never real as fact." |
 | Prophets are God | Contradiction as stated (Acts 14:15; Rev 22:9). Supported as "the prophet takes part in God, and God is the one speaking" (Exod 7:1; John 10:34–35; 2 Pet 1:4). |
 | Christ is God all of the time, and the blueprint | Supported (Col 2:9; Rom 8:29; Eph 4:13) |
+
+**Restated 2026-10-05,** in your words: "what you said is what I mean" (the prophet takes part in God, and God is the one speaking), and "the separation is real as experience and never real as objective fact." Both are now in the forms that fit. Your yes to staging an encounter alone (the world goes quiet, the held note returns, the words come in the hearer's own voice) settles the "deep part of yourself" claim in its workable form: the top layer is God and not the self. Recorded in [Discussion 001](../discussions/001-how-god-speaks.md#decision).
+
+---
+
+## FR-18 — Genesis 2:4–7 as a recap
+
+**Source:** your notes of 2026-10-05. **Arc:** 1.
+
+**Your framing:**
+
+> I truly think its possible that Genesis 2:4-7 is really just a recap or summary of Genesis 1:1-2:3 rather than a line of events afterwards.
+
+**What fits:**
+
+- **Genesis 5:1–2 does the same thing** at the head of the next section: "When God created man, he made him in the likeness of God. Male and female he created them." It recaps 1:26–28 with the same Hebrew "in the day" (*beyom*) as 2:4. New sections of Genesis often open by going back over what came before (6:9–10; 11:10; 25:19).
+- **"In the day"** (2:4): all of creation in one day, the language of a summary.
+- **2:5–6 is background,** a string of "when" clauses, with nothing happening until 2:7.
+- **The missing plants of 2:5** are what needs rain and a farmer: wild growth and grain (3:18), not the plants of 1:11–12 (Futato, 1998; Cassuto).
+- **2:7 describes every human being.** "A living creature" is the animals' phrase in 1:20–24, and "the breath of life" belongs to all flesh in 7:22; "we are dust" (Ps 103:14).
+
+**What pulls against it:**
+
+- **"These are the generations of"** introduces what came *from* the one named everywhere else in Genesis, so 2:4 opens a sequel. (5:1 shows a sequel can start with a recap.)
+- **2:7 is chained to 2:8:** "and there he put the man whom he had formed."
+- **2:19 puts the animals after the man,** unless it's read "had formed" (NIV, ESV).
+- **Many scholars read 2:4b–25 as a second, separate creation story** with its own order.
+
+**First-pass grade:** Supported for 2:4–6 as a recap. Compatible for 2:7 as both: the recap of 1:27 and the hinge into the Garden. The Opening already shows it this way, and the breath across the cut is that hinge. The full case is in the [Opening dossier §2](../story/arcs/01-beginnings/opening/DOSSIER.md#on-247).
+
+**What it changes:** nothing in the Opening. In the Garden it favors Adam being "new in what happens to him," not new in body ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md), question 1), and it raises a question about 2:19 (question 10).

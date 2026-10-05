@@ -1,8 +1,8 @@
 # 007 — The faces of God: the first face, duality and the Trinity
 
-**Status:** Seeded, 2026-10-03
+**Status:** **Decided for the Opening, 2026-10-05.** Seeded 2026-10-03; your answers to all five questions on 2026-10-05.
 **Needed before:** the Opening's script is locked (question 1); the Garden (questions 2–3); every later depiction of God
-**Fit grade:** it divides into four claims, graded separately below. Two are Supported. Two are Contradiction as you stated them, and each has a version that fits.
+**Fit grade:** it divides into four claims, graded separately below. Two are Supported. Two were Contradiction as first stated, and your answers of 2026-10-05 take the fitting version of both.
 **Framings:** [FR-01](../canon/FRAMINGS.md#fr-01--the-opening-creation-as-cosmic-and-biological-history), [FR-02](../canon/FRAMINGS.md#fr-02--god-yin-and-yang-as-the-trinity), [FR-16](../canon/FRAMINGS.md#fr-16--the-faces). **Positions:** 12.
 
 ---
@@ -129,8 +129,65 @@ The picture already supports this reading, in two ways. The malice appears only 
 
 ## Conversation notes
 
-*(To be added.)*
+### Round 1 — 2026-10-05
+
+Your answers, in your words, with my response to each.
+
+**1. The malice.**
+
+> The malice is not in God. When one is separated and has an ego, they perceive a part of God as malicious. So yes, the maliciousness is just God's own perception.
+
+*Settled.* Reading C stands: the dark face is the whole as a separated part sees it. "God's own perception" I read with your Discussion 001 answer, "real as experience and never real as objective fact": the limit is God's, and the malice is only ever seen from inside it.
+
+Your word "ego" adds something the picture can use. "You thought that I was one like yourself" (Ps 50:21). An ego looking at God sees an ego. And because all four faces are one face, the mad, laughing face in beat 3 is the small face's own face, enlarged. The picture says your reading without any help. **Grade: Supported in this form** (Ps 18:25–26; 50:21; and 1 John 1:5 kept).
+
+**2. Who the faces are.**
+
+> The dark half is not meant to represent the Father, nor the light half the Son. It just represents the fundamental experiences or emotions.
+
+*Settled.* The halves are the two most basic experiences, separation and connection, and not persons. The Marcion reading is closed. FR-02 (the Father as Yin, the Son as Yang) stays in the register as it is; the faces don't depict it.
+
+And a new note on how the faces play:
+
+> The faces themselves need to increase intensity as their respective scenes reach their climax. The scared face should turn terrified, the malicious face turns egomaniacal or insane, with a wide evil-looking laughing face. The other side seems like it should decrease in intensity; both the compassionate and upset face should turn into more peaceful or sleeping faces.
+
+*Done in treatment v3, beats 3–4.* The texts were already there:
+
+- **The laugh.** "He who sits in the heavens laughs; the Lord holds them in derision" (Ps 2:4), said of rulers who set themselves against him. Wisdom to those who refused her: "I also will laugh at your calamity; I will mock when terror strikes you" (Prov 1:26). Laughter and terror in one verse, heard by people who have cut themselves off.
+- **The sleep.** "In peace I will both lie down and sleep" (Ps 4:8). "He gives to his beloved sleep" (Ps 127:2). And the Garden's turning point is a sleep: the "deep sleep" in which the woman is made (Gen 2:21).
+- **One shape.** Separation climbs and connection settles. That's evening and morning as a rhythm and not only as a switch.
+
+One choice is left about sound: do we hear the laugh? Nothing is spoken in the Opening, and the first human voices are meant to come with the band. My default is that the laugh is carried by the static's hiss in pulses, with no voice. It's in [treatment §5](../story/arcs/01-beginnings/opening/TREATMENT.md#5-whats-mine-and-the-open-problems).
+
+**3. "Duality creates God."**
+
+> God does not need the duality in order to be, but I don't see a point in arguing this because its just going to go in circles. I agree fully with the view that God creates duality and so on, so we can just leave it at that and move on for now.
+
+*Settled, and left there.* God doesn't need the duality in order to be; God creates it. That's the fitting version of claim D. I won't reopen it.
+
+**4 and 5. Does the face recur, and whose is it?**
+
+> Yes that would be amazing if the face can be recognizable throughout (but not sure how that'd work for a live-action version. Also unsure if a live-action version would work and hoping that AI gets good enough to create realistic movie scenes when I need them). And the face could work on both men and women.
+
+*Settled.* The face recurs through the series: at the cliff, in Adam, and toward the end in Jesus, recognizable without being identical. It can be a man's or a woman's.
+
+*How it could work in live action (mine).* Three tools, used together:
+
+- **Casting by resemblance.** Families are cast this way all the time. The eyes carry most of it.
+- **Digital face-blending at the key moments only.** Feature films already use AI to change actors' faces convincingly; *Here* (2024) made its leads decades younger that way. The face doesn't need to be identical in every scene, only at the moments where we're meant to know it, which are the glimpses.
+- **In animation it's easy.** One base face, and every bearer is a variation of it. That base face is the thing to design first. It should sit between male and female, so it can lean either way.
+
+Whether live action happens at all can stay open. Nothing in the writing depends on it, and the 3D work serves either outcome.
 
 ## Decision
 
-*(To be added.)*
+**Decided 2026-10-05, for the Opening and for every depiction of God that follows.**
+
+1. **The face is God's,** and it recurs through the series: at the cliff, in Adam and toward the end in Jesus, recognizable without being identical. It can be a man's or a woman's (Gen 1:26–27; 5:3). *My reading, which your answers fit but you haven't said in so many words:* it's God's image, God as he can be seen (claim A; Col 1:15), and not a picture of the Father.
+2. **Both interactions are God's acts:** the wounding and the healing (Deut 32:39).
+3. **The malice isn't in God.** A separated part with an ego perceives part of God as malicious; the separation is real as experience and never real as objective fact (Ps 18:26; 50:21; 1 John 1:5).
+4. **The halves aren't persons.** The dark and the light are the two fundamental experiences, separation and connection, and not the Father and the Son.
+5. **God creates duality, and doesn't need it in order to be.**
+6. **On screen:** all four faces are one face. Separation climbs to terror and mad laughter; connection settles into peace and sleep (treatment v3, beats 3–4).
+
+FR-02's "the Father is Yin, the Son is Yang" stays in the register at its first-pass grade (Tension). The faces don't depict it.

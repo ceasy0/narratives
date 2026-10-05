@@ -1,8 +1,8 @@
 # 001 — How God speaks, and how we show it
 
-**Status:** Discussing. Seeded 2026-10-01; round 1 on 2026-10-03 (your answers to all seven questions, below).
+**Status:** **Decided for Genesis, 2026-10-05.** Seeded 2026-10-01; round 1 on 2026-10-03; round 2 on 2026-10-05. Moses and the visions are deferred to their own books.
 **Needed before:** Genesis and the Exodus. It doesn't block Ruth, where God never speaks.
-**Fit grade of your view:** Supported for much of it; Tension in a few specific places; one sentence in round 1 is Contradiction as stated (see [round 1](#round-1--2026-10-03)).
+**Fit grade of your view:** Supported for much of it; Tension in a few specific places. The one sentence that was Contradiction as stated ("prophets are God") has been restated in a form that fits ([round 2](#round-2--2026-10-05)).
 
 ---
 
@@ -174,6 +174,42 @@ The difference between the two lists is one word. The texts say prophets *share 
 4. **The visions.** Is the Opening's world what Isaiah, Ezekiel and Daniel see?
 5. **The Garden.** God walks and talks there. That's [Discussion 008](./008-adam-eve-and-the-garden.md), question 7.
 
+### Round 2 — 2026-10-05
+
+**1. An encounter alone.** My proposal: the world goes quiet, the Opening's held note returns, and the words come in the hearer's own voice, steadier than their own, and able to say what they don't want to hear.
+
+> This seems to fit really well as far as I can see right now.
+
+*Settled, provisionally.* It gets its first real test with Abraham (Gen 12:1; 22:1–2), and we'll adjust it there if it needs adjusting. The held note is the link: it's the sound of the Opening, coming back into one person.
+
+**2. "Prophets are God."**
+
+> Yes, what you said is what I mean and I understand how saying 'the Prophets are God' can cause issues.
+
+*Settled.* When a prophet speaks God's word, God is the one speaking. The prophet takes part in God and doesn't become him.
+
+**3. "Illusion."**
+
+> The separation is real as experience and never real as objective fact. This is how I see it.
+
+*Settled.* It also settles the malice in [Discussion 007](./007-the-faces-of-god.md#round-1--2026-10-05).
+
+**4. The visions.** Are Isaiah's, Ezekiel's and Daniel's visions where the Opening's world comes back at full strength?
+
+> Possibly, Im unsure as of now
+
+*Deferred* to the prophets. You've also said the glimpses of the Opening will come naturally and that you'll say where they should fall, so this one waits for you.
+
 ## Decision
 
-*(To be added. Four points are settled in round 1, above.)*
+**Decided for Genesis, 2026-10-05.**
+
+1. **Genesis 1's "God said" isn't literal speech.** It stands for God's acts and thoughts, and nothing is spoken in the Opening.
+2. **God speaks through people, including people who don't know it.**
+3. **True and false prophets are told apart by their fruit,** in layers; the audience isn't told in advance and finds out the way the characters do.
+4. **Perception works in both directions:** a prophet's words can be experienced as God speaking, and God's speech as a voice coming through a person.
+5. **When a prophet speaks God's word, God is the one speaking.** The prophet takes part in God and doesn't become him.
+6. **The separation is real as experience and never real as objective fact.**
+7. **An encounter alone:** the world goes quiet, the Opening's held note returns, and the words come in the hearer's own voice, steadier than their own, able to say what they don't want to hear, and able to be argued with. Provisional until Abraham.
+
+**Deferred:** how Moses is set apart (before the Exodus), and how the great visions are shown (before Isaiah, Ezekiel and Daniel).

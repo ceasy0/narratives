@@ -1,6 +1,6 @@
 # 008 — Adam, Eve and the Garden
 
-**Status:** Seeded, 2026-10-03, with the information you asked for
+**Status:** Seeded, 2026-10-03, with the information you asked for. Question 9 answered and notes added 2026-10-05; waiting on questions 1–8 and 10.
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), which is the rest of Episode 1
 **Positions:** 5 (Adam and Eve), 16 (the serpent), and where Eden is
 **Fit grade of your working idea** (Adam as the first of a new species): Tension with the texts, and it conflicts with your own Opening. A nearby version fits both. See "Your idea" below.
@@ -159,11 +159,19 @@ Episode 1 is about an hour. The Opening takes five minutes, which leaves about f
 6. **The serpent** (Position 16). An animal, as the text says? Satan, as Revelation says? Something else in your framework?
 7. **How God is present in the Garden.** He speaks, walks, calls, asks and sews. Your Discussion 001 answer was that God speaks to someone alone when the mind is clear. Is the Garden that state, and is the "sound in the wind" of 3:8 what's left of it afterward?
 8. **The hour.** What do you see filling it? Is any of it outside the Garden?
-9. **The breath.** Does the breath drawn at the cliff get let out by Adam ([treatment §5, problem 2](../story/arcs/01-beginnings/opening/TREATMENT.md#5-whats-mine-and-three-problems))?
+9. ~~**The breath.**~~ *Answered 2026-10-05:* yes, the breath drawn at the cliff is let out by Adam in the Garden's first shot.
+10. **The animals of 2:19.** If 2:4–7 is the recap and the Garden's events start at 2:8, are the animals God forms "out of the ground" and brings to the man made then, in the garden, or does 2:19 mean "had formed," as the NIV and ESV take it?
 
 ## Conversation notes
 
-*(To be added.)*
+### 2026-10-05
+
+No answers yet to questions 1–8. Three things from your notes on the Opening bear on them.
+
+- **The breath (question 9) is answered.** It crosses the cut: the ancestor at the cliff draws it in, and Adam lets it out in the Garden's first shot.
+- **Your reading of Genesis 2:4–7 as a recap** ([dossier, On 2:4–7](../story/arcs/01-beginnings/opening/DOSSIER.md#on-247); [FR-18](../canon/FRAMINGS.md#fr-18--genesis-247-as-a-recap)) points one way on question 1. If 2:7, the man formed from dust and given breath, describes humankind (the *nephesh chayyah* of 2:7 is the animals' phrase from 1:20–24, and "we are dust" is said of everyone in Ps 103:14), then Adam isn't new in body. What's new is what happens to him from 2:8 on: he's taken, placed, given work, given a command, and walked with. That's the "new in what happens to him" answer, reached from the text's own structure rather than from the science. It also raises question 10.
+- **Your word "ego" may answer question 5.** You said in Discussion 007 that a separated part "with an ego" perceives part of God as malicious. If separation is there from the Opening's second beat, then perhaps what the Fall adds is the ego: "you will be like God, knowing good and evil" (3:5) is a part claiming to be the whole. Afterward God's coming sounds frightening to them: "I heard the sound of you in the garden, and I was afraid... and I hid" (3:10). That's the Opening's dark face, seen by two people for the first time. *My guess at your meaning, for you to confirm or push against.*
+- **The people outside (question 3) have a face now.** The burial in beat 13 is a child's, after Taramsa Hill in the Nile valley, about 55,000 years ago. People grieved and buried children long before Adam. Whatever the Garden adds, it isn't love or loss.
 
 ## Decision
 
