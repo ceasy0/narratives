@@ -5,16 +5,39 @@
 ## Read first
 
 1. `canon/FOUNDATIONS.md`: the author's stance and every decision so far. It wins over other docs.
-2. `ROADMAP.md`: §3 (principles), §4 (provenance), §5 (language), §8.8 (the fit check), §19 (open questions).
+2. `canon/POSITIONS.md`: the Positions Register, every interpretive choice the story depends on.
 3. `canon/FRAMINGS.md`: the author's unconventional framings, each with its fit grade and status.
 4. `discussions/README.md`: which discussions are open, and what each one blocks.
 5. `style/STORYTELLING.md`: the author's notes on how scenes should play. Apply them to every draft, along with `style/VOICES.md` (how each character speaks) and `style/LEXICON.md` (the word list).
+6. `ROADMAP.md` is the founding document: §3 (principles), §4 (provenance), §5 (language), §8.8 (the fit check). Where it conflicts with the files above, they win.
 
-## Current phase
+## Where things live
 
-**Front to end, starting with the Opening (2026-10-03).** The author has parked Ruth as a first draft and wants the broader story laid out before changing it. The writing goes from the front of the Bible to the end, book by book. **The first pass is treatments and beats only (the author's decision, 2026-10-05); scripts come after it.** Episodes aim for about an hour. Episode 1 is the Opening (Genesis 1:1–2:7, a little under five minutes) followed by the Garden (to 3:24). The Opening is very fast, wordless, lush and psychedelic, from a face in static to an early human's face above the Nile delta about 55,000 years ago. **Where it stands:** the Opening's dossier and treatment are at v3 (2026-10-05), with all of the author's notes applied; for a wordless sequence the treatment is the beat sheet, so the Opening is done for the first pass. Its script (`scripts/beginnings/opening.fountain`) and visualization wait for the end of the pass unless the author makes it the exception (README item 10). Discussions `007` (the faces of God) and `001` (how God speaks, for Genesis) are decided. **Next:** the author's answers to `008` (Adam, Eve and the Garden; README items 1–9), then the Garden's treatment and beats, then Genesis 4–11 (README items 17–20). The author's opening rules (always a face; the sea is what the face is; it comes down; glimpses come naturally and the author flags them; faces run to the climax; organic, never a grid) are in `style/STORYTELLING.md`. The author's prototype lives outside the repo at `H:\Current\Projects\Agentic\Biblical Story Concept` (rough, black and white; a guide only). **Sessions may run in the cloud,** where the author's computer (the prototype, Blender, FL Studio) can't be reached; rendering and sound need a local session. The author has allowed installing video tools and anything else needed there (2026-10-05). **Keep `README.md`'s "What I need from you" list current: it is the one place the author tracks every open question.** Commit and push after every round of edits (the author's instruction, 2026-10-03). When working locally, git on the author's drive needs `-c safe.directory=H:/Current/Projects/Agentic/Personal` on each command unless the author has added the exception. Update this paragraph as steps finish.
+| Thing | Canonical home | Everything else |
+|---|---|---|
+| A conversation and its outcome | `discussions/NNN-*.md` | links to it |
+| A decision | one line in `canon/FOUNDATIONS.md` §4, dated, with a link | links to it |
+| An interpretive position | `canon/POSITIONS.md` | links to it |
+| A framing and its fit grade | `canon/FRAMINGS.md` | links to it |
+| The open questions for the author | `README.md`, "What I need from you" | nowhere else |
+| A storytelling rule | `style/STORYTELLING.md` | treatments cite it |
+| An arc's research, treatment, beats | `story/arcs/NN-*/` | — |
+| A project review | `REVIEW.md` (2026-10-07) | — |
 
-**Ruth (parked).** Follow `story/arcs/07-ruth/README.md`: dossier, then treatment, beats, scene cards and script, stopping at each checkpoint for the author's review. The dossier is done, and the whole-Bible chronology is decided (`world/TIMELINE.md`). **The treatment (`story/arcs/07-ruth/TREATMENT.md`) is at v4,** with three rounds of the author's notes applied. The beat sheet (`BEATS.md`) and the complete first-draft script (`scripts/ruth/ruth.fountain`, 37 pages, every line tagged) are written; scene cards are folded into the beat sheet for the pilot. `style/VOICES.md` and `style/LEXICON.md` have started. Next: the author's pass on the script, then learning from their edits, the audit (ROADMAP §13.4) and the lock. The David connection at the end of the episode is deferred by the author's choice; any change it brings goes only at the very end. Update this line as steps finish.
+Record a decision once, in its home, and link from the rest. Don't paste it into a second file.
+
+## Current phase (2026-10-07)
+
+- **Writing front to end, treatments and beats first,** from Genesis 1 (the author's decisions of 2026-10-03 and 2026-10-05). Ruth is parked as a first draft.
+- **The Opening (Gen 1:1–2:7) is the exception** (the author, 2026-10-07): its script (`scripts/beginnings/opening.fountain`) and visualization go ahead now. Treatment v3.1 is the beat sheet. The next deliverables for it: the script, then a timed storyboard with a rough soundtrack (dossier §6).
+- **The Garden (Gen 2:8–3:24)** is the rest of Episode 1. Discussion `008` is in round 2 and `009` (God in the Garden) is seeded; both block the Garden's treatment. The author's answers are the next step.
+- **Proposed, not decided** (`REVIEW.md` §2.1): write `story/ARCHITECTURE.md`, the whole Bible as episodes in one line each, before the Garden's treatment.
+- **Sessions run on the author's computer when they can** (the RTX 2060 Super desktop, 32 GB RAM, Blender 5.0, FL Studio 2024 and 2025 installed; no Python or ffmpeg yet). Cloud sessions can't reach the prototype at `H:\Current\Projects\Agentic\Biblical Story Concept`, Blender or FL Studio. The author has allowed installing video tools and anything else needed (2026-10-05).
+- **Keep `README.md`'s "What I need from you" list current.** It is the one place the author tracks every open question.
+- **Commit and push after every round of edits** (the author's instruction, 2026-10-03). Git works on the author's drive without extra flags.
+- **Ruth (parked):** `story/arcs/07-ruth/README.md`. Treatment v4, beat sheet, and a 37-page first-draft script with every line tagged. Next, whenever the author returns to it: their pass on the script, then the audit and the lock. The David connection at the end is deferred.
+
+Update this section as steps finish.
 
 ## Rules
 
@@ -30,5 +53,6 @@
 - **Ambiguous text: use the most likely reading.** Where the Hebrew or Greek can be read more than one way, the dialogue follows the most likely reading, with the reasons and the alternatives in a note (the author's instruction, 2026-10-02).
 - **One language rule** (confirmed by the author). English always stands for Israel's own language; sister dialects are accents; every other language follows the author's three tiers (ROADMAP §5.7). Use "Yahweh" only in oaths and where the Name itself is the point (§5.5).
 - **Non-English lines** always come with the original script, a transliteration, a literal back-translation and a confidence level. Flag reconstructed languages, especially first-century Galilean Aramaic, for specialist review.
-- **Write decisions down.** Decisions go in `canon/FOUNDATIONS.md` or the Positions Register, dated. Long conversations go in `discussions/`. Nothing important should live only in chat, because the next session won't see it.
+- **Write decisions down.** Decisions go in `canon/FOUNDATIONS.md` or `canon/POSITIONS.md`, dated. Long conversations go in `discussions/`. Nothing important should live only in chat, because the next session won't see it.
 - **Check citations.** Verify verse references, and flag anything stated with less than full confidence.
+- **Say "kind," not "species,"** of Adam and Eve (the author, 2026-10-07): the change in them isn't bodily.

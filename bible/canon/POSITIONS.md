@@ -1,0 +1,47 @@
+# Positions Register
+
+> Every interpretive and theological choice the story depends on, with its key texts, why it matters on screen, and when it has to be decided. Moved here from ROADMAP §8.2 on 2026-10-07, as the roadmap always intended (§16). Decisions are dated; the reasoning lives in the linked discussion.
+
+**Status:** v1, 2026-10-07. Positions 5, 12, 16 and 21 updated from Discussions 007, 008 and 009.
+
+**How an entry works.** Each position holds the question and its key texts, the main views, what each view means for the story, and your position with the date you decided it. Not everything has to be decided now; each has a "decide by" point, and a discussion must be decided before any arc that depends on it is written.
+
+| # | Area | Question | Why it matters on screen | Decide by |
+|---|---|---|---|---|
+| 1 | Canon & text | Which canon: 66 books, 73, or another? | Whether Tobit, Judith and Maccabees are part of the story or background | **Decided:** start with the widely shared canon, then the study track (§9.5) |
+| 2 | Canon & text | Where the Hebrew (Masoretic) text differs from the Greek Septuagint or the Dead Sea Scrolls, which do we follow? | Goliath's height, the patriarchs' ages, some entire paragraphs (§9) | A default in Phase 0, then case by case |
+| 3 | Canon & text | Disputed passages (Mark 16:9–20; John 7:53–8:11) | Whether the scene of the woman caught in adultery is included | Before the Gospels |
+| 4 | Origins | How to read Genesis 1: literal days, day-age, framework, cosmic temple, or something else | What we see on screen during creation | **Your reading, 2026-10-03:** the days in order, as the history of matter, with the chapter's words as placeholders. Shown in the Opening and never narrated ([FR-15](./FRAMINGS.md#fr-15--genesis-1-read-in-order-as-the-history-of-matter)). The genealogies of Genesis 1–11 stay undated ([TIMELINE §3.4](../world/TIMELINE.md#34-primeval-history-genesis-111)). |
+| 5 | Origins | Were Adam and Eve historical individuals? | Whether Eden is a place we can put a camera in | [Discussion 008](../discussions/008-adam-eve-and-the-garden.md), in round 2. **Decided 2026-10-07:** real people; Adam is of the line at the Opening's cliff and new in what happens to him; the people outside aren't seen in the Garden. The place (the Ur and Uruk country) is checked and recommended; Eve and what the Fall adds are open. |
+| 6 | Origins | Who are the "sons of God" and the Nephilim (Gen 6:1–4): angels, descendants of Seth, or kings? | Whether giants and fallen angels appear on screen | Before Genesis |
+| 7 | Origins | Was the flood global or regional? | The scale of every flood shot | Before Genesis |
+| 8 | History | When was the Exodus (about 1446 or about 1260 BC), and who was Pharaoh? | Egyptian costume, architecture and names | **Decided** 2026-10-01: the early date, 1446 BC, with 215 years in Egypt ([TIMELINE §3.1–3.2](../world/TIMELINE.md#31-when-was-the-exodus)). Which 18th-dynasty pharaoh: before the Exodus. |
+| 9 | History | Large numbers such as "600,000 men" (Exod 12:37): literal, or a different sense of the Hebrew *elef*? | The crowd size in every wilderness shot | Before the Exodus |
+| 10 | History | Gospel chronology: the year of Jesus's birth, the length of his ministry, and the year (AD 30 or 33) and day of the crucifixion | Characters' ages, seasons and festival timing | **Decided** 2026-10-01: born around 5 BC, ministry AD 29–33, crucified Friday 3 April AD 33 ([TIMELINE §3.5](../world/TIMELINE.md#35-jesus)). How to stage Luke's census (Luke 2:2): before the Gospels. |
+| 11 | History | Gospel harmony: for example, was the Temple cleared once or twice (John 2 versus the other three Gospels)? | Episode order | Before the Gospels |
+| 12 | The divine | Can God the Father be shown? Many traditions say no, and the Reformed tradition extends this to every person of the Trinity (Westminster Larger Catechism, Q109). | Light, voice, fire and cloud, or nothing visible at all | [Discussion 007](../discussions/007-the-faces-of-god.md), **decided 2026-10-05:** the Opening's first face is God's and recurs through the series; the malice is a separated part's perception, not God's; the dark and light halves aren't persons. **Confirmed 2026-10-07:** the face is God's image, God as he can be seen, and not a picture of the Father. |
+| 13 | The divine | Is Jesus's divinity visible on screen beyond what the text shows (such as the Transfiguration)? | A glow, or nothing | [Discussion 002](../discussions/002-jesus-humanity.md); before the Gospels |
+| 14 | The divine | Is the Angel of the LORD a created angel, or an appearance of the Son before his incarnation? | Casting and design from Genesis through Judges | Before Genesis |
+| 15 | The divine | How much did Jesus know, and when? (Luke 2:52; Mark 13:32; Phil 2:7) | How he reacts to surprises, questions and news | [Discussion 002](../discussions/002-jesus-humanity.md); before the Gospels |
+| 16 | The divine | Are the satan in Job, the serpent in Eden and the Satan of the Gospels the same figure? | Continuity of design and voice | **Decided for the Garden 2026-10-07:** the serpent is an animal that in that moment embodies the role of Satan ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07)). The larger claim, that the devil is what evil actions are, is [FR-19](./FRAMINGS.md#fr-19--the-devil-as-what-evil-actions-are): before Job. |
+| 17 | Denominational | Are Jesus's "brothers and sisters" (Mark 6:3) Mary's younger children, Joseph's children from an earlier marriage, or cousins? | Their ages, and whether they appear in every Nazareth scene | **Leaning:** Mary's younger children (your study notes); confirm before the Gospels |
+| 18 | Denominational | Peter's role (Matt 16:18) and the words at the Last Supper | The tone and staging of two of the most important scenes | Before the Gospels |
+| 19 | Denominational | How to read Revelation: as future events, as first-century events, as the sweep of church history, or as symbolic vision | What we actually show in Revelation | Before Revelation. Dated around AD 95 until then ([TIMELINE §3.6](../world/TIMELINE.md#36-revelation)). |
+| 20 | Depiction | Levels of violence and sexual content | Everything from Genesis 19 to the cross | **Decided:** a high ceiling, with no explicit sexual content (principle 8) |
+| 21 | The divine | How does God speak: through creation, through people, through prophets, as a voice? How do we show each? | Every scene in which "God said" | [Discussion 001](../discussions/001-how-god-speaks.md), **decided for Genesis 2026-10-05.** How God is present in the Garden (walks, calls, asks, sews) is [Discussion 009](../discussions/009-god-in-the-garden.md), seeded 2026-10-07. Genesis 1's speech isn't literal; God speaks through people who don't know it; true and false prophets are told apart by their fruit; an encounter alone brings back the Opening's held note, with the words in the hearer's own voice; the prophet takes part in God, and God is the one speaking. Deferred: Moses, the visions. |
+| 22 | The divine | How far does Jesus's humanity go: limits, struggle, error, sin? | Every scene with Jesus in it | **Decided** 2026-10-01 ([Discussion 002](../discussions/002-jesus-humanity.md#decision)) |
+| 23 | The divine | God among the nations: how do the Bible's outsiders (Melchizedek, Jethro, Ruth, the Magi, Cornelius) and other peoples' gods fit together? | How other cultures and their worship look on screen | A light version before Ruth; a full version before the Exodus |
+| 24 | Canon & text | Which material from beyond the canon, if any, gets used? | Added scenes, names, backstory | Case by case, after the study track (§9.5) |
+| 25 | Framings | Your unconventional framings, one entry each, with its fit grade (§8.8) | Depends on the framing | **Kept in [`FRAMINGS.md`](./FRAMINGS.md)** (19 entries so far) |
+
+## Open questions the stories will raise on their own
+
+Each has consequences for staging, and gets an entry when its arc comes:
+
+- Suffering and evil (Job)
+- Providence and free will: "you meant evil against me, but God meant it for good" (Gen 50:20), and Pharaoh's hardened heart
+- God's hiddenness: Esther never mentions God at all
+- God "relenting" (Exod 32:14; Jonah 3:10): how does the scene play?
+- Justice and mercy (Jonah 4)
+- Prayer and God's sovereignty: Hezekiah is granted fifteen more years (2 Kings 20)
+- Doubt and faith (Thomas, John the Baptist)

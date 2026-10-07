@@ -1,0 +1,8 @@
+# Keep every text file LF in the repository and in the working copy,
+# so Windows checkouts stop reporting line-ending changes.
+* text=auto eol=lf
+*.mp4 binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.webp binary

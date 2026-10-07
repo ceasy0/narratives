@@ -34,6 +34,9 @@
 - **Glimpses come naturally.** Don't plan them in advance. In your words (2026-10-05): "I should be able to tell you, at the very least, when a glimpse-type moment should occur." The places where the texts come close are noted in the [Opening's treatment §6](../story/arcs/01-beginnings/opening/TREATMENT.md#6-glimpses), as notes only.
 - **The face recurs.** The first face comes back, recognizable without being identical: at the cliff, in Adam, and toward the end in Jesus. It can be a man's or a woman's. (2026-10-05.)
 - **Real faces.** Expressions are real and human-looking, never cartoon symbols, even in the most abstract scenes. (2026-10-05.)
+- **The four-face rule.** When the first faces appear: two frowns, two smiles, two raised brows, two lowered. The large faces smile and the small faces frown; raised brows go to fear and compassion, lowered brows to malice and upset. No two faces share both features. The rule is the starting state; the climb keeps the brows and opens the mouths, and the settling side converges. (Your drawing, 2026-10-07.)
+- **The seer and the seen form together.** When a face opens its eyes, what it sees is already there, in the same frame. The second face forms in the instant the first opens its eyes and mouth, and both sides of a turn-over form at once. (2026-10-07.)
+- **The strike has a sound to match.** When the picture strikes (the static whipped away at 1:3), the sound is the most powerful thing in the sequence: a hit with real weight, and a layered, atmospheric tail that trails after it. Built from the sound of the sea it comes out of, so it still obeys the rule above. (2026-10-07.)
 - **Words can be placeholders.** You read "the heavens and the earth," "light," "the waters" and God's speech in Genesis 1 as reaching for things their writer had no names for. On screen that reading is shown and never stated.
 
 ## People
@@ -82,3 +85,4 @@
 | 2026-10-02 | 3 | Your notes on the sample scene and treatment v3: 1:9, 1:13 and 1:15; four expansions; the deathbed song; Naomi's arc; pacing |
 | 2026-10-03 | 4 | Your notes on the Opening: nothing spoken, the faces, the come-down, the primordial through the series; the exception to two rules; hour-long episodes |
 | 2026-10-05 | 5 | Your notes on the Opening's treatment v2: a sound for every appearance, expressions that run to the climax, organic division, the journey that keeps moving, glimpses left to come naturally, the recurring face, real expressions |
+| 2026-10-07 | 6 | Your notes on the Opening's treatment v3: the release's sound, the faces forming in sync, the four-face rule |

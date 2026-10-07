@@ -2,7 +2,7 @@
 
 > Genesis 1:1–2:7 as one fast sequence, from static to a human face above the Nile delta. What the text says, how your reading maps onto it, where it fits and where it pulls, the science, and what the prototype shows.
 
-**Status:** v3, 2026-10-05. Updated with your notes on treatment v2: your reading of Genesis 2:4–7 as a recap (§2), the resurrection (§4.1), the malice (§4.2), and the science behind the new material: the impact at a distance, the ferns, early burials, and a wetter Nile (§5). v2 (2026-10-03) added your answers to the eight choices, your verse-by-verse reading of Genesis 1, and the two dates you asked me to check. Built from your *Scene Descriptions* draft, [FR-01](../../../../canon/FRAMINGS.md#fr-01--the-opening-creation-as-cosmic-and-biological-history), [FR-02](../../../../canon/FRAMINGS.md#fr-02--god-yin-and-yang-as-the-trinity), [FR-15](../../../../canon/FRAMINGS.md#fr-15--genesis-1-read-in-order-as-the-history-of-matter), [FR-16](../../../../canon/FRAMINGS.md#fr-16--the-faces), [Discussion 001](../../../../discussions/001-how-god-speaks.md) and the prototype in `Biblical Story Concept`.
+**Status:** v3.1, 2026-10-07. §6 updated now that a session has run on your computer: the machine, the installed tools and the prototype are checked rather than reported; the two wind-particle videos you linked are described as references; your note on the release's sound is recorded with my proposal. The Opening is the exception to the first pass, so the build is live. v3 (2026-10-05) was updated with your notes on treatment v2: your reading of Genesis 2:4–7 as a recap (§2), the resurrection (§4.1), the malice (§4.2), and the science behind the new material: the impact at a distance, the ferns, early burials, and a wetter Nile (§5). v2 (2026-10-03) added your answers to the eight choices, your verse-by-verse reading of Genesis 1, and the two dates you asked me to check. Built from your *Scene Descriptions* draft, [FR-01](../../../../canon/FRAMINGS.md#fr-01--the-opening-creation-as-cosmic-and-biological-history), [FR-02](../../../../canon/FRAMINGS.md#fr-02--god-yin-and-yang-as-the-trinity), [FR-15](../../../../canon/FRAMINGS.md#fr-15--genesis-1-read-in-order-as-the-history-of-matter), [FR-16](../../../../canon/FRAMINGS.md#fr-16--the-faces), [Discussion 001](../../../../discussions/001-how-god-speaks.md) and the prototype in `Biblical Story Concept`.
 
 **Your brief (2026-10-03):** it starts with a face emerging from a sea of black and white static and ends on the face of an early human looking at the Nile delta. A little under five minutes. It should feel very fast, following evolution from a single-celled organism to humans just coming out of Africa. It's the introduction to Episode 1, which runs about an hour and continues through the Garden of Eden to Genesis 3:24.
 
@@ -202,23 +202,44 @@ All four faces are one face, and the malice appears only after the cut. In v3 th
 
 ## 6. The visualization
 
-**When:** after the first pass, by your decision that the pass is treatments and beats only (2026-10-05), unless you'd like the Opening to be the exception.
+**When:** now. The Opening is the exception to the first pass (your decision, 2026-10-07). The order: the script, then a timed storyboard with a rough soundtrack, then beats 1–8 in code, then 9–14.
 
-### What you've told me (2026-10-05)
+### Your machine, checked (2026-10-07)
+
+This session ran on your computer, so these are seen rather than reported.
 
 | | |
 |---|---|
-| **Graphics card** | An RTX 2060 Super on one computer and, you think, an RTX 4060 on the other. Both have 8 GB of video memory. The 4060 is the newer and faster one for rendering and for AI tools. |
-| **Installing tools** | Allowed: video tools and whatever else I need. |
-| **Blender** | Should be installed already. |
-| **The faces** | Real, human-looking expressions, not the prototype's cartoon symbols. |
-| **Sound** | You have FL Studio, and I can use it. We'll work on it when we're ready. |
+| **This computer** | A desktop: Intel i7-9700K (8 cores), 32 GB RAM, **NVIDIA GeForce RTX 2060 Super** with 8 GB of video memory. Enough for beats 1–8 in code, for depth estimation from a filmed face, and for Blender; slow for AI video restyling. |
+| **The RTX 4060 machine** | Not this one. If it's a separate computer it's the better render box (README item 16). |
+| **Blender** | 5.0.1, installed. |
+| **FL Studio** | 2024 (24.2) and 2025 (25.2) both installed. Edition unknown (README item 13). |
+| **Epic Games Launcher** | Installed, so Unreal Engine and MetaHuman are a short install away for beats 13–14. |
+| **Python, ffmpeg** | Not installed. The `python` command is only the Store's placeholder. Both are needed for the build; I'll install them with winget under your permission of 2026-10-05 (README item 17). |
+| **The faces** | Real, human-looking expressions, not the prototype's cartoon symbols (2026-10-05). |
+| **Installing tools** | Allowed: video tools and whatever else I need (2026-10-05). |
 
-**One catch.** This session runs in the cloud, not on your computer, so from here I can't see the prototype, Blender or FL Studio, or install anything on your machine. Everything that renders or plays happens in a session of Claude Code on your own computer. The setup is in your Primordia guide.
+**Cloud sessions can't do any of this.** A session in the cloud can't reach the prototype, Blender or FL Studio, or install anything here. Rendering and sound happen in a session on this machine.
+
+### Reference: the two wind videos (2026-10-07)
+
+You linked two posts by Codetaur on X (5 and 4 October 2026) as references for the early scenes. I could see them but not download them (X needs a login), so here's what they are, for the record:
+
+| | What it shows | What it's a reference for |
+|---|---|---|
+| [The first](https://x.com/codetaur/status/2107332604039188530) | WebGL particles carried by a wind field: a five-day timelapse of hourly 10-metre winds over California, from WindBorne's weather model. Fine bright streaks over a dark map, bunching into currents, curling into eddies along the coast, in violet and green. | **Beat 1:** the static beginning to flow "like a current, with eddies," and the face standing out of it because the static inside it moves differently. The prototype's stage 2 already uses this technique (a vector flow field tugging the static), so it's on hand. |
+| [The second](https://x.com/codetaur/status/2106854640629510520) | The same particle layer on a globe, with the parameters pushed up: wind over North America as dense flowing particles, colored cold to hot by speed, and hurricane-sized eddies spinning in the Atlantic and Pacific. | **Beats 4–7:** the sea of grains gaining distance and organization, the organic fronts and patches of beat 4 (the eddies are exactly "ink in water"), and the gas drawing together along threads in beat 7. Also the color rule: color carrying one variable, so that every color has a pitch. |
+
+The technique in both is particle advection in a vector field on the GPU, which runs easily on the 2060 Super, in a browser or in code. If you can save the videos into a `reference/` folder, I'll keep them out of git and refer to them by name (README item 18).
+
+### The release's sound (2026-10-07)
+
+Your note on beat 2: the sound at the release "needs to be incredibly powerful, whatever it is"; your first thought is a distorted, techno-weight bass with a very layered, atmospheric mid-high end that trails after the main hit. My proposal is in the [treatment, beat 2](./TREATMENT.md#2-light-028036): keep it the breath let go, but at the size of the universe. A distorted sub-bass impact as the body; the tail made from the static itself, pitched and smeared, passing the ears and shutting behind the head in surround as the picture shows it; then a true silence; then the held note rising out of the tail's last resonance as the eyes open. Built in code from the hiss, so it obeys rule 4, and mixed at film loudness so the hit has twenty decibels over the hiss and still has headroom. Distortion is the one thing that turns noise into weight, which is why your instinct toward techno bass is right: the techniques are the same.
+
 
 ### What the prototype shows
 
-It's at `H:\Current\Projects\Agentic\Biblical Story Concept`. I still can't play the videos, so I've read the render script's timeline and looked at the saved frames. It's an 80-second black-and-white piece that ends at the hydrogen atom.
+It's at `H:\Current\Projects\Agentic\Biblical Story Concept`, confirmed on 2026-10-07 from this machine: four rendered videos (the full narrative and three staged demos), the render scripts, the web visualizer, and the saved frames. I can't play the videos until ffmpeg is installed, so what follows is from the render script's timeline and the frames. It's an 80-second black-and-white piece that ends at the hydrogen atom.
 
 | | |
 |---|---|

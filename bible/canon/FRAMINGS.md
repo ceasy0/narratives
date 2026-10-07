@@ -2,7 +2,7 @@
 
 > Your unconventional framings of ideas and passages: what each one says, which texts support it and which pull against it, a first-pass fit grade, and what it would change on screen. These grades are starting points for discussion, not verdicts.
 
-**Status:** v1.3, 2026-10-05. FR-01, FR-02, FR-10, FR-15, FR-16 and FR-17 are updated from your notes on the Opening's treatment v2 and your answers to Discussions 001 and 007. FR-18 (Genesis 2:4–7 as a recap) is new. v1.2 (2026-10-03) updated FR-01 and FR-02 and added FR-15 to FR-17. Earlier: FR-03 revised, and FR-08 given its Ruth reading (v1.1, 2026-10-01). Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes of 2026-10-03.
+**Status:** v1.4, 2026-10-07. FR-10's resurrection sub-question is decided (in addition to the body); FR-16 gains the four-face rule; FR-19 (the devil as what evil actions are) is new. v1.3 (2026-10-05): FR-01, FR-02, FR-10, FR-15, FR-16 and FR-17 are updated from your notes on the Opening's treatment v2 and your answers to Discussions 001 and 007. FR-18 (Genesis 2:4–7 as a recap) is new. v1.2 (2026-10-03) updated FR-01 and FR-02 and added FR-15 to FR-17. Earlier: FR-03 revised, and FR-08 given its Ruth reading (v1.1, 2026-10-01). Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes of 2026-10-03.
 **Fit grades** (defined in ROADMAP §8.8):
 - **Supported:** the text points this way.
 - **Compatible:** the text is silent or open, and the framing fills a gap without strain.
@@ -24,7 +24,7 @@
 | [FR-07](#fr-07--salt-and-light-every-part-necessary) | Salt and light: every part is necessary | 16 | Compatible if the warning stays | The Gospels |
 | [FR-08](#fr-08--marriage-to-ones-relative-opposite) | Marriage to one's "relative opposite" (a working theory) | **7 (Ruth)**, 2, 9, 16 | Supported (a corresponding partner); Tension ("only one"). **Confirmed for Ruth:** Boaz, unspoken. | Done for Ruth |
 | [FR-09](#fr-09--children-as-the-parents-next-life-hell-as-a-long-mindset) | Children as the parents' next life; hell as a long mindset | 16, 18 | Ranges from Supported to Contradiction depending on the reading | The Gospels |
-| [FR-10](#fr-10--christ-as-a-bloodline-the-rainbow-widening-comings) | Christ as a bloodline; the rainbow; comings in widening stages; **the resurrection "through his children"** (2026-10-05) | 16, 18 | Compatible (the text is silent on children); Tension overall. The resurrection as "also spiritual": Supported if *also*, Contradiction if *instead of the body*. | The Gospels |
+| [FR-10](#fr-10--christ-as-a-bloodline-the-rainbow-widening-comings) | Christ as a bloodline; the rainbow; comings in widening stages; the resurrection "through his children" | 16, 18 | Compatible (the text is silent on children); Tension overall. **The resurrection decided 2026-10-07:** in addition to the body, "because his children are his body": Supported. | The Gospels (the bloodline) |
 | [FR-11](#fr-11--christ-as-integration-the-kingdom-as-christ) | Christ as integration; the kingdom *is* Christ | 16 | Supported | [Discussion 002](../discussions/002-jesus-humanity.md) |
 | [FR-12](#fr-12--the-messianic-prophecies) | The messianic prophecies | 2–16 | Supported (traditional reading) | — |
 | [FR-13](#fr-13--matthews-genealogy-as-jesuss-paternal-line) | Matthew's genealogy as Jesus's paternal line | 16 | Tension (tied to FR-03) | With FR-03 |
@@ -32,7 +32,8 @@
 | [FR-15](#fr-15--genesis-1-read-in-order-as-the-history-of-matter) | Genesis 1 read in order, as the history of matter | 1 | Compatible as shown; Tension as a claim about what the writer meant | Done: 1:11–13 and 1:20–2:3 confirmed 2026-10-05 |
 | [FR-16](#fr-16--the-faces) | The faces: God is seen through faces, and all four of the first faces are God | 1, and every depiction of God | Supported. **Decided 2026-10-05:** the malice isn't in God but in how a separated part with an ego perceives him. | Done ([007](../discussions/007-the-faces-of-god.md)) |
 | [FR-17](#fr-17--layered-minds-with-god-at-the-top) | Layered minds with God at the top; separation as God's own limit on himself; prophets taking part in God | 2 onward | Supported to Tension. **Restated 2026-10-05** in the forms that fit. | Done for Genesis ([001](../discussions/001-how-god-speaks.md)) |
-| [FR-18](#fr-18--genesis-247-as-a-recap) | Genesis 2:4–7 as a recap of 1:1–2:3, not a later event | 1 | Supported for 2:4–6; Compatible for 2:7 as both recap and hinge | Bears on [Discussion 008](../discussions/008-adam-eve-and-the-garden.md), question 1 |
+| [FR-18](#fr-18--genesis-247-as-a-recap) | Genesis 2:4–7 as a recap of 1:1–2:3, not a later event | 1 | Supported for 2:4–6; Compatible for 2:7 as both recap and hinge. **Applied 2026-10-07:** Adam is new in what happens to him. | Done |
+| [FR-19](#fr-19--the-devil-as-what-evil-actions-are) | The devil as what evil actions are; the serpent embodying the role | 1, Job, 16 | Supported for the serpent embodying the role; Tension for the larger claim, with a fitting form | Before Job |
 
 **Order of discussion:**
 
@@ -42,7 +43,7 @@
 4. **Now:** Adam and Eve in [Discussion 008](../discussions/008-adam-eve-and-the-garden.md), with FR-18.
 5. FR-03 and FR-13.
 6. FR-04, FR-06, FR-07 and FR-09.
-7. FR-10 (now including the resurrection) and FR-14.
+7. FR-10 (the bloodline; the resurrection is decided), FR-14 and FR-19.
 
 ---
 
@@ -383,7 +384,7 @@ If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one
 - **Spiritual instead of bodily: Contradiction.** "A spirit does not have flesh and bones as you see that I have" (Luke 24:39); he eats in front of them (24:42–43); the empty tomb (Mark 16:6); "put your finger here" (John 20:27); "his flesh did not see corruption" (Acts 2:31); "raised on the third day" (1 Cor 15:4); Christ "the firstfruits, then... those who belong to Christ" (1 Cor 15:23).
 - **Does it remove the problem with death before Eden?** Only in the version that contradicts the texts. It doesn't need to. The reading adopted for the Opening already carries 1 Cor 15:21: mortal bodies, the tree of life lost through Adam, and given back through Christ (Rev 22:2). ([Opening dossier §4.1](../story/arcs/01-beginnings/opening/DOSSIER.md#4-what-pulls-against-it).)
 
-**Question for when we take this up:** is it "also" or "instead"? Not urgent. It's needed before the Gospels.
+**Decided 2026-10-07.** Your answer: "In addition to the body, because his children are his body in my view." That works, and it has a text you may not have been reaching for: Paul's own name for Christ's people is his body. "You are the body of Christ and individually members of it" (1 Cor 12:27); the church "is his body, the fullness of him who fills all in all" (Eph 1:23); "he is the head of the body, the church" (Col 1:18). Add Heb 2:13, "I and the children God has given me," and Isa 53:10, "he shall see his offspring." So: the body raised on the third day (Luke 24:39; 1 Cor 15:4), *and* he lives on in his children, who are his body. **Supported.** Whether those children are also his descendants is still this entry's Tension, for the Gospels. The resurrection sub-question is closed.
 
 ---
 
@@ -502,6 +503,8 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 **Decided 2026-10-05.** "The malice is not in God. When one is separated and has an ego, they perceive a part of God as malicious." **Supported in that form** (Ps 18:26; 50:21). The halves are the fundamental experiences, not persons. The face recurs through the series, recognizable without being identical, and can be a man's or a woman's. On screen the faces climb (terror; a mad, laughing ego) and settle (peace; sleep).
 
+**Added 2026-10-07.** You confirmed the reading that the face is God's image, God as he can be seen, and not a picture of the Father (Col 1:15; John 12:41). And your four-face rule, from your drawing: two frowns, two smiles, two raised brows, two lowered. The large faces smile and the small faces frown; raised brows go to fear and compassion, lowered brows to malice and upset. My reading, in the [treatment §5](../story/arcs/01-beginnings/opening/TREATMENT.md#5-whats-mine-and-the-open-problems): the whole smiles on both sides and only its brows change, while the part frowns on both sides, which is this entry's decision drawn as a face. The faces also form in sync: the second face in the instant the first opens its eyes.
+
 ---
 
 ## FR-17 — Layered minds, with God at the top
@@ -556,3 +559,33 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 **First-pass grade:** Supported for 2:4–6 as a recap. Compatible for 2:7 as both: the recap of 1:27 and the hinge into the Garden. The Opening already shows it this way, and the breath across the cut is that hinge. The full case is in the [Opening dossier §2](../story/arcs/01-beginnings/opening/DOSSIER.md#on-247).
 
 **What it changes:** nothing in the Opening. In the Garden it favors Adam being "new in what happens to him," not new in body ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md), question 1), and it raises a question about 2:19 (question 10).
+
+---
+
+## FR-19 — The devil as what evil actions are
+
+**Source:** your answer on the serpent, 2026-10-07 ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07)). **Arcs:** 1 (the Garden), Job, 16 (the Gospels), and anywhere Satan is named.
+
+**Your framing:**
+
+> The serpent can be described as embodying the role of Satan or the Devil. I'm unsure if the serpent is the devil himself, because to me the devil is what evil actions are. So, if nothing else, in that moment the serpent embodied an evil role.
+
+**Two claims, graded separately.**
+
+**A. The serpent embodies the role.** Genesis never names Satan in the Garden; the serpent is "more crafty than any other beast of the field that the LORD God had made" (3:1), an animal, and it's cursed "above all livestock" (3:14). Revelation makes the identification: "that ancient serpent, who is called the devil and Satan" (12:9; 20:2). "Embodies the role" holds both ends of the text without strain. **Supported.** Decided for the Garden as Position 16.
+
+**B. The devil is what evil actions are.** This is near a very old Christian position, Augustine's *privatio boni*: evil is no substance but a lack, a corruption of the good, with no being of its own (*Confessions* VII; *City of God* XII). It's also close to James: "each person is tempted when he is lured and enticed by his own desire" (James 1:14).
+
+*What pulls against it.* The texts treat Satan as someone, with a voice and a will:
+
+- He comes among the sons of God and answers God's questions (Job 1:6–12; 2:1–7).
+- He stands at the right hand of the high priest "to accuse him" (Zech 3:1–2).
+- He speaks three temptations to Jesus and is answered three times (Matt 4:1–11; Luke 4:1–13).
+- "Satan demanded to have you, that he might sift you like wheat" (Luke 22:31). "Satan entered into Judas" (Luke 22:3; John 13:27).
+- "Your adversary the devil prowls around like a roaring lion" (1 Pet 5:8). "The devil has sinned from the beginning" (1 John 3:8).
+
+**Grade: Tension.** *The form that fits:* the devil has no being of his own; what he is, is the role, and the role is real wherever it's played: in a serpent, in an accuser at the heavenly court, in a tempter in the wilderness, in a friend. Jesus calls Peter "Satan" for one sentence (Mark 8:33). In your framework it's the dark mirror of Discussion 001: God speaks through people who don't know it, and so does this. On screen that means Satan is never a designed character who walks on; he's whoever is playing the role in that scene, and the audience learns to recognize the role the way it learns to recognize the held note. Where the text gives him a voice (Job, the wilderness), the voice has to come from something or someone, and that's the decision to make before Job.
+
+**What it changes on screen:** nothing in the Garden beyond a real snake and a voice ([008](../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07) proposes the Opening's hiss under it). The design question is Job's and the Gospels'.
+
+**Question for when we take this up:** does the fitting form (the role, real wherever it's played) say what you mean? And in Job and the wilderness, who or what plays it?

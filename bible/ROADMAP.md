@@ -2,7 +2,7 @@
 
 > A detailed, faithful dramatization of the Bible. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-**Status:** v2.8, 2026-10-05. v2.8 records that the first pass from Genesis to Revelation is treatments and beats only (§17), your computer and sound tools (§15.5–15.6), and the Positions decided in Discussions 001 and 007 (§8.2). v2.7, 2026-10-02. *Adonai* is the series' working title. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done, the [treatment](./story/arcs/07-ruth/TREATMENT.md) is at v4, and the [beat sheet](./story/arcs/07-ruth/BEATS.md) and a complete [first-draft script](./scripts/ruth/ruth.fountain) are written. v2.7 adds the first `VOICES` and `LEXICON` (§16), a low-cost hybrid production plan from [Discussion 006](./discussions/006-2d-or-3d.md) (§15.5), and corrects two out-of-date rows in §19.1. v2.6 records your confirmation of the language rule (§5.7), the working title, and two new discussions: [005](./discussions/005-beyond-the-text.md) on traditions and rumored events, and [006](./discussions/006-2d-or-3d.md) on 2D versus 3D (§15). v2.5 added one language rule for the whole series (§5.7), uses God's name more sparingly (§5.5), and plans for live action, with the 3D animation as its placeholder (§1.1, §15). The whole-Bible [working chronology](./world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
+**Status:** v2.9, 2026-10-07. The Positions Register has moved to [`canon/POSITIONS.md`](./canon/POSITIONS.md); §8.2 is a pointer. From here on this roadmap is the founding document and the live state lives in `CLAUDE.md`, `README.md` and `canon/`. v2.8, 2026-10-05. v2.8 records that the first pass from Genesis to Revelation is treatments and beats only (§17), your computer and sound tools (§15.5–15.6), and the Positions decided in Discussions 001 and 007 (§8.2). v2.7, 2026-10-02. *Adonai* is the series' working title. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done, the [treatment](./story/arcs/07-ruth/TREATMENT.md) is at v4, and the [beat sheet](./story/arcs/07-ruth/BEATS.md) and a complete [first-draft script](./scripts/ruth/ruth.fountain) are written. v2.7 adds the first `VOICES` and `LEXICON` (§16), a low-cost hybrid production plan from [Discussion 006](./discussions/006-2d-or-3d.md) (§15.5), and corrects two out-of-date rows in §19.1. v2.6 records your confirmation of the language rule (§5.7), the working title, and two new discussions: [005](./discussions/005-beyond-the-text.md) on traditions and rumored events, and [006](./discussions/006-2d-or-3d.md) on 2D versus 3D (§15). v2.5 added one language rule for the whole series (§5.7), uses God's name more sparingly (§5.5), and plans for live action, with the 3D animation as its placeholder (§1.1, §15). The whole-Bible [working chronology](./world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
@@ -706,42 +706,7 @@ The stories will raise philosophical questions on their own, and each one has co
 
 ### 8.2 The Positions Register
 
-The Positions Register is a single file, `canon/POSITIONS.md`, that records every interpretive or theological choice the story depends on. Each entry holds:
-
-- the question and its key texts;
-- the main views;
-- what each view means for the story;
-- your position and the date you decided it.
-
-Not everything has to be decided now; each entry has a "decide by" point. Here is the initial list:
-
-| # | Area | Question | Why it matters on screen | Decide by |
-|---|---|---|---|---|
-| 1 | Canon & text | Which canon: 66 books, 73, or another? | Whether Tobit, Judith and Maccabees are part of the story or background | **Decided:** start with the widely shared canon, then the study track (§9.5) |
-| 2 | Canon & text | Where the Hebrew (Masoretic) text differs from the Greek Septuagint or the Dead Sea Scrolls, which do we follow? | Goliath's height, the patriarchs' ages, some entire paragraphs (§9) | A default in Phase 0, then case by case |
-| 3 | Canon & text | Disputed passages (Mark 16:9–20; John 7:53–8:11) | Whether the scene of the woman caught in adultery is included | Before the Gospels |
-| 4 | Origins | How to read Genesis 1: literal days, day-age, framework, cosmic temple, or something else | What we see on screen during creation | **Your reading, 2026-10-03:** the days in order, as the history of matter, with the chapter's words as placeholders. Shown in the Opening and never narrated ([FR-15](./canon/FRAMINGS.md#fr-15--genesis-1-read-in-order-as-the-history-of-matter)). The genealogies of Genesis 1–11 stay undated ([TIMELINE §3.4](./world/TIMELINE.md#34-primeval-history-genesis-111)). |
-| 5 | Origins | Were Adam and Eve historical individuals? | Whether Eden is a place we can put a camera in | [Discussion 008](./discussions/008-adam-eve-and-the-garden.md), seeded 2026-10-03; before the Garden. So far: people exist before Adam, and the person at the Opening's cliff is his ancestor. |
-| 6 | Origins | Who are the "sons of God" and the Nephilim (Gen 6:1–4): angels, descendants of Seth, or kings? | Whether giants and fallen angels appear on screen | Before Genesis |
-| 7 | Origins | Was the flood global or regional? | The scale of every flood shot | Before Genesis |
-| 8 | History | When was the Exodus (about 1446 or about 1260 BC), and who was Pharaoh? | Egyptian costume, architecture and names | **Decided** 2026-10-01: the early date, 1446 BC, with 215 years in Egypt ([TIMELINE §3.1–3.2](./world/TIMELINE.md#31-when-was-the-exodus)). Which 18th-dynasty pharaoh: before the Exodus. |
-| 9 | History | Large numbers such as "600,000 men" (Exod 12:37): literal, or a different sense of the Hebrew *elef*? | The crowd size in every wilderness shot | Before the Exodus |
-| 10 | History | Gospel chronology: the year of Jesus's birth, the length of his ministry, and the year (AD 30 or 33) and day of the crucifixion | Characters' ages, seasons and festival timing | **Decided** 2026-10-01: born around 5 BC, ministry AD 29–33, crucified Friday 3 April AD 33 ([TIMELINE §3.5](./world/TIMELINE.md#35-jesus)). How to stage Luke's census (Luke 2:2): before the Gospels. |
-| 11 | History | Gospel harmony: for example, was the Temple cleared once or twice (John 2 versus the other three Gospels)? | Episode order | Before the Gospels |
-| 12 | The divine | Can God the Father be shown? Many traditions say no, and the Reformed tradition extends this to every person of the Trinity (Westminster Larger Catechism, Q109). | Light, voice, fire and cloud, or nothing visible at all | [Discussion 007](./discussions/007-the-faces-of-god.md), **decided 2026-10-05:** the Opening's first face is God's and recurs through the series; the malice is a separated part's perception, not God's; the dark and light halves aren't persons. My reading, to confirm (README item 15): the face is God's image, and not a picture of the Father. |
-| 13 | The divine | Is Jesus's divinity visible on screen beyond what the text shows (such as the Transfiguration)? | A glow, or nothing | [Discussion 002](./discussions/002-jesus-humanity.md); before the Gospels |
-| 14 | The divine | Is the Angel of the LORD a created angel, or an appearance of the Son before his incarnation? | Casting and design from Genesis through Judges | Before Genesis |
-| 15 | The divine | How much did Jesus know, and when? (Luke 2:52; Mark 13:32; Phil 2:7) | How he reacts to surprises, questions and news | [Discussion 002](./discussions/002-jesus-humanity.md); before the Gospels |
-| 16 | The divine | Are the satan in Job, the serpent in Eden and the Satan of the Gospels the same figure? | Continuity of design and voice | [Discussion 008](./discussions/008-adam-eve-and-the-garden.md), question 6; before the Garden |
-| 17 | Denominational | Are Jesus's "brothers and sisters" (Mark 6:3) Mary's younger children, Joseph's children from an earlier marriage, or cousins? | Their ages, and whether they appear in every Nazareth scene | **Leaning:** Mary's younger children (your study notes); confirm before the Gospels |
-| 18 | Denominational | Peter's role (Matt 16:18) and the words at the Last Supper | The tone and staging of two of the most important scenes | Before the Gospels |
-| 19 | Denominational | How to read Revelation: as future events, as first-century events, as the sweep of church history, or as symbolic vision | What we actually show in Revelation | Before Revelation. Dated around AD 95 until then ([TIMELINE §3.6](./world/TIMELINE.md#36-revelation)). |
-| 20 | Depiction | Levels of violence and sexual content | Everything from Genesis 19 to the cross | **Decided:** a high ceiling, with no explicit sexual content (principle 8) |
-| 21 | The divine | How does God speak: through creation, through people, through prophets, as a voice? How do we show each? | Every scene in which "God said" | [Discussion 001](./discussions/001-how-god-speaks.md), **decided for Genesis 2026-10-05.** Genesis 1's speech isn't literal; God speaks through people who don't know it; true and false prophets are told apart by their fruit; an encounter alone brings back the Opening's held note, with the words in the hearer's own voice; the prophet takes part in God, and God is the one speaking. Deferred: Moses, the visions. |
-| 22 | The divine | How far does Jesus's humanity go: limits, struggle, error, sin? | Every scene with Jesus in it | **Decided** 2026-10-01 ([Discussion 002](./discussions/002-jesus-humanity.md#decision)) |
-| 23 | The divine | God among the nations: how do the Bible's outsiders (Melchizedek, Jethro, Ruth, the Magi, Cornelius) and other peoples' gods fit together? | How other cultures and their worship look on screen | A light version before Ruth; a full version before the Exodus |
-| 24 | Canon & text | Which material from beyond the canon, if any, gets used? | Added scenes, names, backstory | Case by case, after the study track (§9.5) |
-| 25 | Framings | Your unconventional framings, one entry each, with its fit grade (§8.8) | Depends on the framing | **Kept in [`canon/FRAMINGS.md`](./canon/FRAMINGS.md)** (18 entries so far) |
+**Moved to [`canon/POSITIONS.md`](./canon/POSITIONS.md) on 2026-10-07,** as §16 always planned. That file is now the register; this section is kept only as a pointer. Each entry there holds the question and its key texts, the main views, what each view means for the story, and your position with the date you decided it.
 
 ### 8.3 Depicting God, the Spirit, angels and Satan
 
@@ -1434,7 +1399,9 @@ Phase 6 can start once the pilot is locked and can run alongside Phases 3–5.
 
 **Changed 2026-10-03.** You parked Ruth as a first draft and chose to write from the front of the Bible to the end, so that the broader story is laid out before any part is revised. The order of Phases 2–5 gives way to that: the work starts at Genesis 1 ([arc 1](./story/arcs/01-beginnings/README.md)).
 
-**Changed 2026-10-05.** The first pass is treatments and beats only, for every book. Scripts come after it. On my reading that includes the Opening, so its script and visualization wait for the end of the pass, unless you make it the exception ([README](./README.md#what-i-need-from-you), item 10).
+**Changed 2026-10-05.** The first pass is treatments and beats only, for every book. Scripts come after it.
+
+**Changed 2026-10-07.** The Opening is the exception: its script and visualization go ahead during the first pass. And [`REVIEW.md`](./REVIEW.md) proposes bringing Phase 3's `ARCHITECTURE.md` forward, before the Garden's treatment, so the whole series is on one page early.
 
 **Two tracks run continuously beside every phase:**
 

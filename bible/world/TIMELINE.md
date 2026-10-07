@@ -134,6 +134,8 @@ Confidence varies a great deal by era, and the timeline should show that rather 
 - **The Opening's last shot is set about 55,000 years ago,** when the ancestors of everyone outside Africa left it. You chose that date over the view of the delta as a fan, which only formed about 7,500 years ago ([Opening dossier §5](../story/arcs/01-beginnings/opening/DOSSIER.md#5-the-science)).
 - **Adam and Eve come long after that.** The person at the cliff is an ancestor of Adam, and you've said a long gap is fine. Their own date is still open ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md)). My suggestion there is the dawn of farming, which is also roughly where the genealogies put Adam: about 3900 BC in the Hebrew text and about 5300 BC in the Greek.
 
+**Added 2026-10-07.** You've placed the Garden in the Ur and Uruk country, and the check supports it ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md#the-check-the-ur-and-uruk-country)). **Provisional date for Adam: the Ubaid period, about 5000–4000 BC,** when the lower plain was first settled and farmed by irrigation and the Gulf's shore stood near Ur and Eridu. Cain's city (Gen 4:17) would fall in the Uruk period, about 4000–3100 BC, when the first true cities rose. Both wait on your yes to the place, and on the Genesis 4–5 treatment.
+
 ### 3.5 Jesus
 
 - **His birth** came before Herod died. Most scholars date Herod's death to 4 BC; a minority, to 1 BC. Herod killed boys "two years old and under" (Matt 2:16), which suggests a birth around 6–5 BC.
