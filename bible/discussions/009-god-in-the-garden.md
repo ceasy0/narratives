@@ -1,10 +1,10 @@
 # 009 — God in the Garden
 
-**Status:** **Discussing, round 2.** Seeded 2026-10-07 at your request (Discussion 008, question 7); round 1 on 2026-10-08, with your answers to all six questions, your idea that God speaks through the animals, my response, and what cherubim and the sword are. Round 2 holds the four choices that unblock the Garden's treatment.
+**Status:** **Decided, 2026-10-08,** after two rounds. Seeded 2026-10-07 at your request (Discussion 008, question 7); round 1 on 2026-10-08 (your answers to all six questions, your idea that God speaks through the animals, my response, and what cherubim and the sword are); round 2 the same evening (the animals' two registers, the clothes, the sword, Eve, the walk to the centre). The Garden's treatment is unblocked.
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), the rest of Episode 1
 **Builds on:** [001](./001-how-god-speaks.md) (how God speaks: decided for Genesis) and [007](./007-the-faces-of-god.md) (the faces of God: decided)
 **Positions:** 12 (can God be shown), 21 (how God speaks)
-**Fit grade:** n/a until you choose; each option is graded below
+**Fit grade:** Supported for the decision as a whole (the grades are in round 2)
 
 ---
 
@@ -174,12 +174,51 @@ I'd choose B if the animals are conduits, and A if they aren't. Either way the c
 4. **Eve.** Does she wake of the new kind (my default), or does the change happen to her some other way?
 5. **"Before he sleeps."** I've read it as "before he speaks." Right?
 
+### Round 2 — 2026-10-08 (evening)
+
+Your answers to the five choices, in your words, with my response to each.
+
+**1. The animals, and the naming.**
+
+> I dont know if the naming should be shown (we can still show it without words if possible). I think the scene after Adam breathes out should be him silently walking through the garden, maybe towards the center with the trees; and then he goes into the deep sleep. The animals and world as the conduit for God sounds good, but I think there needs to be two versions of it: one that appears as Adam's voice in his mind, and one that appears as certain 'signs' or 'double meanings' in the world that Adam picks up on.
+
+*Settled: no speech from the animals, no wispy voices, and two registers.* That's a better rule than the one I proposed, because it's the rule the whole series already has, named. Discussion 001's device is the first register: the world goes quiet, the held note, the words in Adam's own voice. Your second register is 001's mode 1 (through creation) made specific: an animal does something, the river does something, a thing in the Garden means two things at once, and Adam reads it. The first is for the recorded words (the command, the questions, the sentences). The second is for everything the text leaves silent, which in the Garden is most of the hour, and it's what makes the hour "psychedelic" in your sense without a single talking beast. One consequence worth saying: the serpent is the *third* thing, a voice from outside, and now it's the only one, which is what 008 wanted. Grade for the two registers: **Supported** (Job 12:7–8, "ask the beasts, and they will teach you"; Ps 19:1–4, the heavens "declare" with no words; Num 22:28 as the one speaking animal, and it's the exception).
+
+*The naming, shown without words:* adopted, as 008 round 2 proposed. The names are never heard; the looking is the scene. This is where the audience learns the second register.
+
+*The walk, and the order of movement 1.* Your note gives the walk a destination, the centre with the trees, and that fixes something I'd left loose: the command (2:16–17) is *about* the trees, so it should come when he's standing at them. So movement 1 now runs: the breath let out; the walk through the Garden, in silence, the paths and the animals and the water; the centre, the two trees; the world goes quiet; the command, in his own voice. Then the naming (movement 2), then the sleep (movement 3). I've read your "and then he goes into the deep sleep" as skipping over the command and the naming rather than cutting them, since you answered "yes" to the command as the first words and "without words" to the naming. Tell me if you meant the sleep to come straight after the walk.
+
+**2. The clothes (3:21).** "I think the second option sounds better."
+
+*Decided: B, through the world.* No hands. One of the animals he named is dead, and the skins are on them. We see the animal, then the clothes, and the gap between them is the shock. It keeps your answer 1 whole (God is never seen), it makes the first death in the Garden one of the conduits, and it's the first time a face that carried God dies. The series will pull that thread again (the lamb, the goat on the Day of Atonement, and the end of it). **Grade: Supported** (3:21; the skins presuppose a death the text doesn't narrate, so what's added is only *which* animal, P6).
+
+**3. The sword (3:24).** "I think the opening world should come back there, and potentially use the Animals faces for the cherubim in the scene."
+
+*Decided: A and B together.* The way east goes dark; the Opening's world comes back at full strength for the first time since the cliff; fire turns over, dark to light to dark, as the ground did in beat 4; and the faces in it are the Garden's own animals, the ones that carried God through the hour, turned to guards. Ezekiel's four faces (human, lion, ox, eagle) are the kinds of face the Opening used and the Garden has: the man, the beast, the ox, the bird. **Grade: Supported** for the cherubim as composite guardians with animal faces (Ezek 1:10; 10:14; Rev 4:7) and for the fire that turns (3:24, *mithappeket*); Compatible for making them *these* animals (P6). It's the last thing the two of them see of the place, and it's the first glimpse you've asked for.
+
+**4. Eve.** "What do you mean 'wakes of the new kind'? Like she is the same kind as Adam? We can just call them both of one kind."
+
+*Yes, that's what I meant, and your wording is better.* They're both of one kind: whatever changed in Adam from 2:8 on is true of her from the moment she wakes. She isn't a step behind him and she doesn't catch up. The poem (2:23) is his recognizing it: "this one, at last." **Decided,** and "of one kind" is the phrase from now on.
+
+**5. "Before he sleeps."** "Yes, this sounds right."
+
+*Confirmed:* "before he speaks."
+
+### What this settles for the treatment
+
+The Garden's treatment is unblocked. Every choice it needs is now decided here or in 008. The shape, with your walk to the centre: six movements as before, with movement 1 ending at the two trees on the command. The look of the place is in the [Garden dossier](../story/arcs/01-beginnings/garden/DOSSIER.md), from your description of 2026-10-08 (the stone paths, the stepped centre, the trees in its open top).
+
 ## Decision
 
-*Partly decided 2026-10-08; the rest waits on round 2.*
+**Decided 2026-10-08, after two rounds.**
 
-- God is not seen in Episode 1: not the face, not the figure. He's present through the world (your answer 1).
-- The command (2:16–17) is the first thing spoken in the series, in Adam's own voice over the held note, after minutes of wordless looking (your answer 2).
-- The questions (3:9–13) and the sentences (3:14–19) come in their own voices; the serpent's sentence in both, out of step (your answers 3 and 4).
-- The animals as a conduit for God: adopted in principle; whether they speak is round 2.
-- Open: the clothes, the sword, Eve's waking, the naming's staging.
+- **God is not seen in Episode 1:** not the face, not the figure. He's present through the world (your answer 1, round 1).
+- **Two registers for God through the world** (round 2). The first is Discussion 001's device: the world goes quiet, the held note returns, and the words come in the hearer's own voice; it carries every recorded speech. The second is signs and double meanings in the world, which Adam reads: an animal's act, the river, a thing in the Garden meaning two things at once; it carries the silent hours. Nothing in the world speaks. The serpent, a voice from outside with the hiss under it, is the only exception, and it's the counterfeit of both registers.
+- **The command (2:16–17)** is the first thing spoken in the series, in Adam's own voice over the held note, at the two trees, after minutes of silent walking (your answers, rounds 1 and 2).
+- **The naming (2:19–20)** is shown and wordless: the names are never heard; the looking is the scene (round 2).
+- **The questions (3:9–13) and the sentences (3:14–19)** come in their own voices; the serpent's sentence in both, out of step (round 1).
+- **The clothes (3:21):** through the world. One of the named animals is dead, and the skins are on them; no hands are seen (round 2).
+- **The sword (3:24):** the Opening's world at full strength, fire turning over, and the cherubim's faces are the Garden's own animals (round 2).
+- **Eve is of one kind with Adam** from the moment she wakes (round 2). We say "of one kind."
+- **"Before he speaks,"** not "before he sleeps" (round 2).
+- The wispy voices and the ethereal form are out.

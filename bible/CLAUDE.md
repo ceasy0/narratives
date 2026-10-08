@@ -27,16 +27,16 @@
 
 Record a decision once, in its home, and link from the rest. Don't paste it into a second file.
 
-## Current phase (2026-10-08)
+## Current phase (2026-10-08, evening)
 
-- **The map exists:** `story/ARCHITECTURE.md` (v1, 2026-10-08), the whole Bible as 203 hours in 18 arcs, built from the author's draft. Its density and merges (§2, §10), the chronological placements (§3) and the new hard-passage positions (§11) are the author's to confirm. Treat it as the guide for the first pass and keep it current: when an arc is treated, its lines in the map get corrected.
-- **Writing front to end, treatments and beats first,** from Genesis 1 (the author's decisions of 2026-10-03 and 2026-10-05). Ruth is parked as a first draft.
-- **The Opening (Gen 1:1–2:7) is the exception** (the author, 2026-10-07): its script (`scripts/beginnings/opening.fountain`) and visualization go ahead now. Treatment v3.1 is the beat sheet. The next deliverables for it: the script, then a timed storyboard with a rough soundtrack (dossier §6). The build answers of 2026-10-08 are in the dossier §6: FL Studio 2025 with plugins (read the folders in the next local session), the author's own face to film, budget as we go, Python and ffmpeg may be installed.
-- **The Garden (Gen 2:8–3:24)** is the rest of Episode 1. Discussion `008` is decided for the Garden (2026-10-08). `009` is in round 2 with four choices (the animals' speech, the clothes, the sword, Eve's waking); the author's answers unblock the Garden's treatment, which is the next writing deliverable.
-- **Sessions run on the author's computer when they can** (the RTX 2060 Super desktop, 32 GB RAM, Blender 5.0, FL Studio 2024 and 2025 installed; no Python or ffmpeg yet). Cloud sessions can't reach the prototype at `H:\Current\Projects\Agentic\Biblical Story Concept`, Blender or FL Studio. The author has allowed installing video tools and anything else needed (2026-10-05).
+- **The map:** `story/ARCHITECTURE.md` v1.1, 205 hours in 18 arcs. Arc 1 is *Genesis*, eight hours with the author's names (In the Beginning; Cain and Abel; The Days of Noah; The Ark; The Flood; The Table of Nations; The Tower of Babel; The Scattering). Every hour after it is numbered two higher than in v1. Open: Season 3's name and hour 8's shape (§11). Keep the map current: when an arc is treated, its lines get corrected.
+- **Writing front to end, treatments and beats first,** from Genesis 1 (the author's decisions of 2026-10-03 and 2026-10-05). Ruth is parked as a first draft, with a storyboard.
+- **The Opening (Gen 1:1–2:7) is the exception** (the author, 2026-10-07): script v1 (`scripts/beginnings/opening.fountain`) and animatic v1 (`production/opening/`, rendered in code with a generated soundtrack) exist as of 2026-10-08. Its timings are the treatment's table; change the table, re-render. What's placeholder (the face, the creatures, the people, the sound) and what replaces each is in `production/opening/README.md`. Next for it: the author's notes on the animatic, then the face shoot at a local session, then beats 1–8 with the filmed face.
+- **The Garden (Gen 2:8–3:24)** is the rest of Episode 1. Discussions `008` and `009` are decided (2026-10-08). The Garden's dossier (`story/arcs/01-beginnings/garden/DOSSIER.md`) gathers the decisions and the look. **The Garden's treatment is the next writing deliverable.** The rule for it: no invented speech between Adam and Eve that the Opening's grammar could carry instead; God through the world in two registers; nothing in the world speaks but the serpent.
+- **Sessions run on the author's computer when they can** (the RTX 2060 Super desktop, 32 GB RAM, Blender 5.0, FL Studio 2024 and 2025 installed; no Python or ffmpeg yet). Cloud sessions can't reach the prototype at `H:\Current\Projects\Agentic\Biblical Story Concept`, Blender or FL Studio. The author has allowed installing video tools and anything else needed (2026-10-05). The animatic needs only Python, numpy, Pillow and ffmpeg.
 - **Keep `README.md`'s "What I need from you" list current.** It is the one place the author tracks every open question.
 - **Commit and push after every round of edits** (the author's instruction, 2026-10-03). Git works on the author's drive without extra flags.
-- **Ruth (parked):** `story/arcs/07-ruth/README.md`. Treatment v4, beat sheet, and a 37-page first-draft script with every line tagged. Next, whenever the author returns to it: their pass on the script, then the audit and the lock. The David connection at the end is deferred.
+- **Ruth (parked):** `story/arcs/07-ruth/README.md`. Treatment v4, beat sheet, storyboard (sixteen frames, drawn in code), and a 37-page first-draft script with every line tagged. Next, whenever the author returns to it: their pass on the script, then the audit and the lock. The David connection at the end is deferred.
 
 Update this section as steps finish.
 
@@ -56,4 +56,4 @@ Update this section as steps finish.
 - **Non-English lines** always come with the original script, a transliteration, a literal back-translation and a confidence level. Flag reconstructed languages, especially first-century Galilean Aramaic, for specialist review.
 - **Write decisions down.** Decisions go in `canon/FOUNDATIONS.md` or `canon/POSITIONS.md`, dated. Long conversations go in `discussions/`. Nothing important should live only in chat, because the next session won't see it.
 - **Check citations.** Verify verse references, and flag anything stated with less than full confidence.
-- **Say "kind," not "species,"** of Adam and Eve (the author, 2026-10-07): the change in them isn't bodily.
+- **Say "kind," not "species,"** of Adam and Eve (the author, 2026-10-07): the change in them isn't bodily. They are "of one kind" (the author, 2026-10-08).

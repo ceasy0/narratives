@@ -40,6 +40,14 @@
 - **The strike has a sound to match.** When the picture strikes (the static whipped away at 1:3), the sound is the most powerful thing in the sequence: a hit with real weight, and a layered, atmospheric tail that trails after it. Built from the sound of the sea it comes out of, so it still obeys the rule above. (2026-10-07.)
 - **Words can be placeholders.** You read "the heavens and the earth," "light," "the waters" and God's speech in Genesis 1 as reaching for things their writer had no names for. On screen that reading is shown and never stated.
 
+## How God is present
+
+*From Discussions 001 and 009. These apply from the Garden on.*
+
+- **Two registers, and nothing in the world speaks.** When God's words are recorded, the world goes quiet, the Opening's held note returns, and the words come in the hearer's own voice, steadier than their own. When the text is silent, God is present as signs and double meanings in the world that the character reads: an animal's act, the river, a thing that means two things at once. No animal speaks, no voice comes from above, and nothing is explained. The one voice from outside a person is the serpent's, with the hiss under it, and it's the exception that teaches the rule. (Your rule, 2026-10-08; [Discussion 009](../discussions/009-god-in-the-garden.md#decision).)
+- **The world carries the cost.** Where God acts with hands in the text (the clothes of skin), the act is shown through the world and its cost is shown: the animal that died is one we've met. (2026-10-08.)
+- **The first words are God's.** The first human voice in the series speaks God's words, in its own voice. (2026-10-08.)
+
 ## People
 
 - **Real family dynamics.** Keep the humor and warmth, and add the friction a modern eye recognizes: brothers who annoy each other, parents who tell them to settle down. (Ruth: Chilion's "House of bread," Mahlon's irritation, Elimelech's "Enough.")
@@ -88,3 +96,4 @@
 | 2026-10-05 | 5 | Your notes on the Opening's treatment v2: a sound for every appearance, expressions that run to the climax, organic division, the journey that keeps moving, glimpses left to come naturally, the recurring face, real expressions |
 | 2026-10-07 | 6 | Your notes on the Opening's treatment v3: the release's sound, the faces forming in sync, the four-face rule |
 | 2026-10-08 | 7 | Your notes with the series draft: the why comes earlier (the Sodom principle); the four-face rule to be checked on real faces |
+| 2026-10-08 | 8 | Your answers on the Garden: two registers for God through the world; the clothes through the world; the Opening's world at the gate; a silent walk to the centre before the first words; the Garden's look (stone paths, a stepped centre, color among stone and green) |

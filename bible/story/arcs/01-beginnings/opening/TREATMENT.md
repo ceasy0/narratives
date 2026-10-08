@@ -4,7 +4,7 @@
 
 **Status:** v3.1, 2026-10-07. Applies your three notes on v3: the sound of the release, the faces forming in sync, and the four-face rule (§4, §5). Your checks of 2026-10-07 confirmed the whisper, the laugh in the hiss, the impact and the *Triceratops*, the child's burial and the face as God's image. v3 (2026-10-05) was revised from your notes on v2. You kept all eleven of my suggestions ("do not strike any of them right now") and answered the five open items. New in v3: a sound for the face in the static, the face turning white as the static is whipped away, the four faces rising and falling in intensity, flying things, the impact placed at a safe distance, the band always walking left, the burial checked against the evidence, and a greener Nile. Everything tagged P5 is yours. Everything tagged P6 is my suggestion. What changed is in §4.
 
-**This treatment is the Opening's beat sheet, and the Opening is the exception to the first pass** (your decision, 2026-10-07). Its script (`scripts/beginnings/opening.fountain`) and visualization go ahead now; the order of the build is in the [dossier §6](./DOSSIER.md#6-the-visualization).
+**This treatment is the Opening's beat sheet, and the Opening is the exception to the first pass** (your decision, 2026-10-07). Its [script](../../../../scripts/beginnings/opening.fountain) (v1) and a first [animatic](../../../../production/opening/README.md) of all fourteen beats with sound exist as of 2026-10-08, cut to the table in §2; the order of the build is in the [dossier §6](./DOSSIER.md#6-the-visualization). Change a timing here, and the animatic re-renders to it.
 
 ---
 

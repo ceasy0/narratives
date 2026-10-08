@@ -202,7 +202,7 @@ All four faces are one face, and the malice appears only after the cut. In v3 th
 
 ## 6. The visualization
 
-**When:** now. The Opening is the exception to the first pass (your decision, 2026-10-07). The order: the script, then a timed storyboard with a rough soundtrack, then beats 1–8 in code, then 9–14.
+**When:** now. The Opening is the exception to the first pass (your decision, 2026-10-07). The order: the script, then a timed storyboard with a rough soundtrack, then beats 1–8 in code, then 9–14. **Done 2026-10-08, in a cloud session:** the [script](../../../../scripts/beginnings/opening.fountain) (v1) and a first animatic of the whole sequence with sound, rendered in code with a procedural face and silhouette creatures and people standing in for the real ones ([production README](../../../../production/opening/README.md)). The face shoot below is what replaces the placeholder face.
 
 ### Your machine, checked (2026-10-07)
 

@@ -370,9 +370,11 @@ The two small opens from this discussion go there: whether the change passes to 
 - **Adam** is of the line at the cliff and new in what happens to him; with him something major changes in humans (your answer 1, 2026-10-07). We say "kind," not "species."
 - **The place:** the lower plain between the rivers at the sea's edge, near where Eridu would stand, about 5000–4000 BC (2026-10-08). The Nile stops being the Gihon. "Cush" names more than one land in Genesis itself (10:7–10), as Havilah does (10:7, 29).
 - **The people outside** aren't seen in the Garden, for now (your answer 3).
-- **Eve:** option D. The deep sleep as the Garden's first glimpse of the Opening, one face becoming two; the poem and the text's words kept exactly (2026-10-08). Default, to confirm: she wakes of the new kind.
+- **Eve:** option D. The deep sleep as the Garden's first glimpse of the Opening, one face becoming two; the poem and the text's words kept exactly (2026-10-08). **Confirmed the same evening in [009, round 2](./009-god-in-the-garden.md#round-2--2026-10-08-evening):** she and Adam are "of one kind" from the moment she wakes; your phrase.
 - **What the Fall adds:** awareness and ego in one act. The eating is both a crime and a child's grab; the judgment plays as a stern yet loving father's (2026-10-08).
 - **The serpent** is an animal that in that moment embodies the role of Satan (your answer 6; Position 16, for the Garden). Its words come from outside, from the animal, with the hiss under them (2026-10-08). "The devil is what evil actions are" is FR-19, Tension, to decide before Job.
 - **The animals** were formed before the Garden; 2:19 is "had formed," and God brings them to the man to name (your answer 9). The naming's staging is in 009.
 - **The hour:** about an hour, in six movements, for now (2026-10-08). Cain is a fallback only if it runs thin.
-- **How God is present** is [009](./009-god-in-the-garden.md).
+- **How God is present** is [009](./009-god-in-the-garden.md), decided 2026-10-08: two registers, no speech from the world, the clothes through a dead conduit, the Opening's world at the gate with the animals' faces.
+- **The world outside** is wild, not hostile, before the Fall, and the animals carry the difference (my proposal above, confirmed by you 2026-10-08, README item 9). **The naming** is shown without words (confirmed the same day). **The walk** after the breath runs to the centre with the trees, where the command comes (009, round 2).
+- **The look of the Garden** is in its [dossier](../story/arcs/01-beginnings/garden/DOSSIER.md): your stone paths and stepped centre (2026-10-08).
