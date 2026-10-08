@@ -1,6 +1,6 @@
 """Build the Opening animatic end to end: frames (in parallel), the soundtrack, and the mux.
 
-    python build.py                       # 960x540, 24 fps, 4 processes -> ../opening-animatic-v1.mp4
+    python build.py                       # 960x540, 24 fps, 4 processes -> out/*-hq.mp4 (local) and ../opening-animatic-v1.mp4 (repo copy, 854x480)
     python build.py --w 1920 --h 1080     # full HD (about four times the render time)
     python build.py --audio-only          # regenerate the soundtrack and remux
 
@@ -41,10 +41,15 @@ def main():
     import sound
     mix = sound.build(os.path.join(work, "audio"), write_stems=not a.no_stems)
     print(f"audio done at {time.time() - t0:.0f} s", flush=True)
-    final = os.path.abspath(a.out)
+    # the full-quality file stays local (the static beats make it about 230 MB at 960x540);
+    # the repository copy is re-encoded small enough to commit (854x480, about 40 MB)
+    hq = os.path.join(work, "opening-animatic-v1-hq.mp4")
     subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-i", silent, "-i", mix, "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
-                           "-shortest", "-movflags", "+faststart", final])
-    print(f"wrote {final} ({os.path.getsize(final) / 1e6:.1f} MB) in {time.time() - t0:.0f} s")
+                           "-shortest", "-movflags", "+faststart", hq])
+    final = os.path.abspath(a.out)
+    subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-i", hq, "-vf", "scale=854:480", "-c:v", "libx264", "-preset", "slow",
+                           "-crf", "33", "-pix_fmt", "yuv420p", "-c:a", "copy", "-movflags", "+faststart", final])
+    print(f"wrote {hq} ({os.path.getsize(hq) / 1e6:.0f} MB, full quality, local) and {final} ({os.path.getsize(final) / 1e6:.0f} MB, the repository copy) in {time.time() - t0:.0f} s")
 
 
 if __name__ == "__main__":

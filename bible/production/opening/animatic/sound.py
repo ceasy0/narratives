@@ -512,7 +512,7 @@ def stem_world():
 
 
 def limiter(x, ceiling=0.97):
-    return np.tanh(x / ceiling * 1.2) * ceiling / np.tanh(1.2)
+    return np.tanh(x * 1.2 / ceiling) * ceiling
 
 
 def write_wav(path, x):

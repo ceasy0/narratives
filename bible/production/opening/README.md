@@ -2,7 +2,7 @@
 
 > The visualization of Genesis 1:1–2:7. As of 2026-10-08: a first animatic of the whole 4:50, rendered in code with a generated soundtrack, cut to [treatment v3.1](../../story/arcs/01-beginnings/opening/TREATMENT.md)'s timings and the [script](../../scripts/beginnings/opening.fountain)'s shots.
 
-**Watch:** [`opening-animatic-v1.mp4`](./opening-animatic-v1.mp4) (960×540, 24 fps, stereo). **Build it:** `python animatic/build.py` (needs Python 3.10+, numpy, Pillow, ffmpeg; about fifteen minutes on four cores at this size).
+**Watch:** [`opening-animatic-v1.mp4`](./opening-animatic-v1.mp4) (854×480, 24 fps, stereo, 42 MB: the repository copy, re-encoded small because the static beats don't compress). **Build it:** `python animatic/build.py` (needs Python 3.10+, numpy, Pillow, ffmpeg; about twenty minutes on four cores), which also writes the full-quality 960×540 file to `animatic/out/`, about 230 MB, kept out of git.
 
 ---
 
@@ -46,7 +46,7 @@ All in `animatic/`. Pure functions of time, so frames render in any order and in
 
 ## 4. Safety
 
-Beat 4's flicker and beat 11's falling sky are designed to the rules in [treatment §5](../../story/arcs/01-beginnings/opening/TREATMENT.md#5-whats-mine-and-the-open-problems): only the first three turns take the whole frame (never more than three a second), the spread is organic, and the grains turn out of step so the frame's brightness holds. A rough check on the rendered frames (mean luminance change per frame in beats 4 and 11) is printed by `python animatic/check_flicker.py`. **Before anyone watches it full screen, run the finished render through IRIS or PEAT**, as the treatment requires; this animatic has not had that check.
+Beat 4's flicker and beat 11's falling sky are designed to the rules in [treatment §5](../../story/arcs/01-beginnings/opening/TREATMENT.md#5-whats-mine-and-the-open-problems): only the first three turns take the whole frame (never more than three a second), the spread is organic, and the grains turn out of step so the frame's brightness holds. A rough check on the rendered frames (mean luminance change per frame in beats 2, 4 and 11) is printed by `python animatic/check_flicker.py <video>`; v1 passes it (worst second: three large changes in beat 4, at the whole-frame turns). **Before anyone watches it full screen, run the finished render through IRIS or PEAT**, as the treatment requires; this animatic has not had that check.
 
 ## 5. Next
 
