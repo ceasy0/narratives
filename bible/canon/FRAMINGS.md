@@ -40,7 +40,7 @@
 1. ~~Discussion 002, together with FR-05 and FR-11.~~ Decided.
 2. ~~FR-08, because the Ruth pilot needs it.~~ Confirmed for Ruth.
 3. ~~FR-01, FR-02 and FR-16 in Discussion 007; FR-17 in Discussion 001.~~ Decided 2026-10-05.
-4. **Now:** Adam and Eve in [Discussion 008](../discussions/008-adam-eve-and-the-garden.md), with FR-18.
+4. ~~Adam and Eve in [Discussion 008](../discussions/008-adam-eve-and-the-garden.md), with FR-18.~~ Decided for the Garden 2026-10-08. The staging of God's presence is [009](../discussions/009-god-in-the-garden.md), round 2.
 5. FR-03 and FR-13.
 6. FR-04, FR-06, FR-07 and FR-09.
 7. FR-10 (the bloodline; the resurrection is decided), FR-14 and FR-19.
@@ -586,6 +586,6 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 **Grade: Tension.** *The form that fits:* the devil has no being of his own; what he is, is the role, and the role is real wherever it's played: in a serpent, in an accuser at the heavenly court, in a tempter in the wilderness, in a friend. Jesus calls Peter "Satan" for one sentence (Mark 8:33). In your framework it's the dark mirror of Discussion 001: God speaks through people who don't know it, and so does this. On screen that means Satan is never a designed character who walks on; he's whoever is playing the role in that scene, and the audience learns to recognize the role the way it learns to recognize the held note. Where the text gives him a voice (Job, the wilderness), the voice has to come from something or someone, and that's the decision to make before Job.
 
-**What it changes on screen:** nothing in the Garden beyond a real snake and a voice ([008](../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07) proposes the Opening's hiss under it). The design question is Job's and the Gospels'.
+**What it changes on screen:** nothing in the Garden beyond a real snake and a voice. **Confirmed 2026-10-08:** the fitting form works for you, and the serpent's words come from outside, from the animal, with the Opening's hiss under them ([008, round 2](../discussions/008-adam-eve-and-the-garden.md#round-2--2026-10-08)). The design question is Job's and the Gospels'; the map lists where the role is played ([ARCHITECTURE §8](../story/ARCHITECTURE.md#8-the-threads)).
 
 **Question for when we take this up:** does the fitting form (the role, real wherever it's played) say what you mean? And in Job and the wilderness, who or what plays it?

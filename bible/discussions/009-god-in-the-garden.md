@@ -1,6 +1,6 @@
 # 009 — God in the Garden
 
-**Status:** Seeded, 2026-10-07, at your request (Discussion 008, question 7).
+**Status:** **Discussing, round 2.** Seeded 2026-10-07 at your request (Discussion 008, question 7); round 1 on 2026-10-08, with your answers to all six questions, your idea that God speaks through the animals, my response, and what cherubim and the sword are. Round 2 holds the four choices that unblock the Garden's treatment.
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), the rest of Episode 1
 **Builds on:** [001](./001-how-god-speaks.md) (how God speaks: decided for Genesis) and [007](./007-the-faces-of-god.md) (the faces of God: decided)
 **Positions:** 12 (can God be shown), 21 (how God speaks)
@@ -75,8 +75,111 @@ You've called this one of the hardest things in Episode 1 to figure out, and you
 
 ## Conversation notes
 
-*(None yet.)*
+### Round 1 — 2026-10-08
+
+Your answers, in your words, with my response to each. Your new idea comes first, because the answers lean on it.
+
+**The animals as a conduit.**
+
+> I'm thinking that we can incorporate some anthropomorphism into the animals and let them speak. I think that God in the Garden could speak through animals and maybe other aspects of the garden (still unsure if they should actually speak; maybe it could be more of wispy voices in the characters' mind that sound different from God speaking through the mind when alone), as opposed to the serpent and possibly other devious animals. So this first episode could still be very 'psychedelic' with dialogue with the animals, insinuations, double-meanings, etc. ... Otherwise, another idea is an ethereal form of God that both Adam and Eve see (I don't really like this, but we could make it work if we have to).
+
+*What's right in it.* It's the series' own rule applied to a place with no people in it: God speaks through the world (001, mode 1), and in the Garden the world is animals, wind, water and trees. The text comes close: the animals are "brought" (2:19) and they come; the beasts "will teach you" and the birds "will tell you" (Job 12:7–8); and there's exactly one animal in the Bible that speaks for God, Balaam's donkey (Num 22:28). It also makes the serpent legible: if the animals are where God comes through, the serpent is the counterfeit of a conduit, which is what 008 already made it (the inverse of the encounter alone). And it makes the naming (2:19–20) a meeting rather than a list.
+
+*What pulls against it, hard.* Three things.
+
+1. **Speaking animals read as fable the instant a mouth moves,** and your own rule is the one that bites: nothing "Disney-movie-ish." It would be the riskiest tonal choice in the series, in the first hour, before the audience trusts the show. In live action it's either a moving mouth or a voice-over, and both are fable.
+2. **The text gives speech to one animal, and marks it as strange.** "The serpent was more crafty than any other beast of the field" (3:1): its speaking is its signature. If every animal has a voice, "Did God really say?" is one voice among many; if no animal has, it's the first voice from outside a human head in the whole series, and 008's staging (the words from the animal, the hiss under them) depends on that.
+3. **Three devices in one hour.** 001 gave us one: the world goes quiet, the held note, the hearer's own voice. "Wispy voices in the mind that sound different from God alone" is a second, and the serpent's outside voice is a third. The Garden is where the audience learns the grammar; it should learn one rule and one exception.
+
+*Where I land (mine).* **Keep the conduit and drop the speech.** The animals carry God's presence the way option D has the Garden carry it: they come, they go still when he walks (3:8), they turn to where the sound is; and when God speaks to Adam, the world cues it. The held note is the thing that makes this work, because of the Opening's own rule (treatment §1, rule 2): the note belongs to whatever is in focus. So when an animal is the conduit, the note is on the animal, and the words come in Adam's own voice, as decided. The animal is the face of the moment; the voice is his. Nothing is spoken by anything that isn't a person until the serpent, and then one animal speaks, and the grammar breaks on purpose. That gives you "psychedelic" in your sense, perceptions tied together, without a single talking beast. The wispy voices I'd hold back entirely; if they ever have a place, it's not in Episode 1.
+
+The ethereal form both see: I'd rule it out with you. It's option B's problem (a body for God before Jesus) with E's (a convention the series exists to avoid).
+
+**1. Is God ever seen in Episode 1?**
+
+> Probably not. At least, probably only through the world if possible.
+
+*Settled, in that form:* neither the face nor the whole figure; God through the world. It leaves one problem, question 5 below.
+
+**2. The command, in Adam's own voice, as the first words of the series?**
+
+> Yes, but there should probably be a few minutes before he sleeps of Adam walking in the Garden looking at everything or something.
+
+*Settled, and your note is already movement 1.* I've read "before he sleeps" as "before he speaks" (tell me if you meant the sleep of 2:21). The breath let out, then minutes without a word: the walk, the river, the trees, the animals looking back, in the Opening's grammar brought down to a real place. Then the world goes quiet and the command comes. The first human voice in the series speaks God's words, which is 001's decision 5 at the start.
+
+**3. The questions (3:9–13), in their own voices, answered aloud?**
+
+> Yes, and see if the idea of the animals being a conduit for God works here.
+
+*Settled, and yes, it works here better than anywhere.* "Where are you?" comes while they hide; the Garden has gone still; the animals are all looking at the one place. He answers the air. The conduit is the whole Garden turned toward them, and the voice is his own.
+
+**4. The sentences (3:14–19).**
+
+> Own voices. Again, what God says might be possible through an animal. I'm just unsure about an animal actually speaking; it could work, but wispy voices could work too.
+
+*Settled: own voices,* out of step for the serpent's sentence, which both of them hear. The tone you set in 008 (a stern yet loving father) is what the steadier-than-their-own voice is for. For the serpent's sentence, the animal is in frame, and the words are in their two voices; the snake doesn't speak again.
+
+**5. The clothes (3:21): hands on screen?**
+
+> Unsure
+
+*This is the one place "only through the world" can't do the job on its own,* because the text's act is a craftsman's: he made and he clothed. Two ways, and I'd like your pick:
+
+- **A. Hands, once.** The one shot of God's body in the hour: a hide cut, two people dressed. My recommendation in the seeding, and still mine. It's the act of care after the fear, it's the first death in the Garden, and a pair of hands is the least a camera can show of someone and still show care.
+- **B. Through the world, with a cost.** No hands. One of the animals he named is dead, and the skins are on them: the clothing simply is, as the Garden's own answer. We see the animal, then the clothes, and the gap between them is the shock. It keeps your answer to question 1 whole, and it makes the first death one of the conduits.
+
+Both are Supported (3:21). B is harder and I think truer to your rule; A is kinder to the audience. If B, it's the first time one of the faces that carried God dies, which is a thread the series will pull again.
+
+**6. The sword.**
+
+> You are going to have to teach me what a cherubim is, its context here, and what a flaming sword has to do with it.
+
+The teaching is its own section below; the choice is in round 2.
+
+### What cherubim are, and what the sword has to do with them
+
+**The word.** *Keruvim* is the plural of *keruv*; "cherubim" is already plural, and "a cherub" is one. They are not the fat winged babies of Renaissance painting (those are *putti*, a different thing). The nearest relatives are the guardian creatures of the ancient Near East: the Akkadian *kuribu*, and the winged, human-headed bulls and lions (the *lamassu*) that stood at the gates of Assyrian palaces and temples to guard the threshold. A cherub is a gate-keeper and a throne-bearer, a composite creature, and where it is, a god's presence is.
+
+**Where they appear in the Bible, in order.**
+
+| Where | What they do |
+|---|---|
+| Gen 3:24 | Posted east of the Garden "to guard the way to the tree of life." Their first job is to keep people out of a sanctuary. |
+| Exod 25:18–22 | Two of gold, hammered out of the lid of the ark, wings spread over it, facing each other. God says: "There I will meet with you, and from between the two cherubim I will speak." |
+| Exod 26:1, 31 | Woven into the tabernacle's inner curtains and into the veil in front of the holy of holies. So the way into God's presence is guarded by cherubim, exactly as the way into Eden is. |
+| 1 Kgs 6:23–29 | Two of olive wood in Solomon's inner sanctuary, fifteen feet tall, wingtip to wingtip across the room, and more carved on every wall and door "with palm trees and open flowers": the Temple's holiest room is decorated as a garden with cherubim in it. |
+| 1 Sam 4:4; Ps 80:1; 99:1 | God is "enthroned on the cherubim." They are his seat. |
+| Ps 18:10 (2 Sam 22:11) | "He rode on a cherub and flew; he came swiftly on the wings of the wind." His mount. |
+| Ezek 1 and 10 | The four living creatures of Ezekiel's vision, each with four faces (a human, a lion, an ox, an eagle), four wings, and wheels full of eyes, with fire moving among them and a throne above them. Ezekiel 10:20 says plainly: "these were the cherubim." |
+| Ezek 28:13–16 | The king of Tyre is mocked as "an anointed guardian cherub" who was "in Eden, the garden of God," on "the holy mountain," and was cast out. A cherub in Eden again. |
+| Rev 4:6–8 | Four living creatures around the throne, six wings, full of eyes, the same four faces: the series ends with them where it began. |
+
+**The context in 3:24.** The Garden is the first sanctuary (above, "What the texts say"): the man's work is the Levites' two verbs, the entrance faces east, gold and onyx are in the land and on the priest. When the humans are put out, the furniture of the holy of holies is put at the door: cherubim, and fire. From here on, the way back to the tree of life runs through cherubim, which is what the veil says (Exod 26:31), what the Day of Atonement is (once a year one man goes past it, Lev 16), and what the torn veil at the cross means (Matt 27:51). The thread runs to "the tree of life" open again in Rev 22:2, 14. In the map it's the river-and-tree thread ([ARCHITECTURE §8](../story/ARCHITECTURE.md#8-the-threads)).
+
+**The sword.** The Hebrew is *lahat ha-herev ha-mithappeket*: "the flame of the sword turning itself," or "the flame of the whirling sword." Two things to notice. The grammar lists it beside the cherubim, not in their hands: "the cherubim, and the flame of the sword that turned every way." It can be a thing on its own. And *mithappeket* is a turning-over, which is why 008 noted it: the Opening's alternation, as a thing of fire. Readings: lightning, which the Bible calls God's sword elsewhere (Deut 32:41; Ezek 21:9–10, "a sword... polished to flash like lightning"); or a fire that moves of itself as a guardian, as the fire that moves among Ezekiel's cherubim does (Ezek 1:13) and the burning coals between them (Ezek 10:2, 6–7). What it has to do with the cherubim: both belong to the throne. Cherubim and fire together are what God's presence looks like from outside it. So 3:24 says: the Garden is God's house now, with its door shut, and the furniture of the holiest room stands at the door.
+
+**How it could play (mine, for round 2).**
+
+- **A. The Opening's world, at full strength, once.** The way east goes dark; something stands there with wings and faces; fire turns over, dark to light to dark, the way the ground did in beat 4. The first glimpse since the cliff, earned by the hour. My seeding's view.
+- **B. Through the world, with the animals' faces.** Ezekiel's four faces are the kinds of face the Opening used: the human, the beast, the ox, the bird. If the animals have carried God through the hour, the cherubim at the gate are the Garden's own animals turned to guards, their faces where the fire is, and that's the last thing the two of them see of the place. Mine (P6), and I'd keep it brief; it's the one that fits your answer 1.
+- **C. Nothing seen.** Fire on the horizon at night, and a way that can't be walked. The cheapest and the coldest.
+
+I'd choose B if the animals are conduits, and A if they aren't. Either way the cherubim are the text's strangeness and never angels with faces.
+
+### For round 2
+
+1. **The animals.** Conduits without speech, the held note on whichever is in focus (my recommendation), or the wispy voices? And the naming shown and wordless, as [008](./008-adam-eve-and-the-garden.md#round-2--2026-10-08) proposes?
+2. **The clothes.** A (hands, once) or B (through the world: one of the named animals is dead, and the skins are on them)?
+3. **The sword.** A, B or C above?
+4. **Eve.** Does she wake of the new kind (my default), or does the change happen to her some other way?
+5. **"Before he sleeps."** I've read it as "before he speaks." Right?
 
 ## Decision
 
-*(To be added.)*
+*Partly decided 2026-10-08; the rest waits on round 2.*
+
+- God is not seen in Episode 1: not the face, not the figure. He's present through the world (your answer 1).
+- The command (2:16–17) is the first thing spoken in the series, in Adam's own voice over the held note, after minutes of wordless looking (your answer 2).
+- The questions (3:9–13) and the sentences (3:14–19) come in their own voices; the serpent's sentence in both, out of step (your answers 3 and 4).
+- The animals as a conduit for God: adopted in principle; whether they speak is round 2.
+- Open: the clothes, the sword, Eve's waking, the naming's staging.

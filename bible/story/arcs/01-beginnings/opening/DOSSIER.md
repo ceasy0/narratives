@@ -211,13 +211,14 @@ This session ran on your computer, so these are seen rather than reported.
 | | |
 |---|---|
 | **This computer** | A desktop: Intel i7-9700K (8 cores), 32 GB RAM, **NVIDIA GeForce RTX 2060 Super** with 8 GB of video memory. Enough for beats 1–8 in code, for depth estimation from a filmed face, and for Blender; slow for AI video restyling. |
-| **The RTX 4060 machine** | Not this one. If it's a separate computer it's the better render box (README item 16). |
+| **The RTX 4060 machine** | A separate laptop (your answer, 2026-10-08: you're not certain it's a 4060, but it's better than the 2060 Super). A laptop can render, with heat and time as the limits; the desktop stays the build box and the laptop the second renderer. |
 | **Blender** | 5.0.1, installed. |
-| **FL Studio** | 2024 (24.2) and 2025 (25.2) both installed. Edition unknown (README item 13). |
+| **FL Studio** | 2024 (24.2) and 2025 (25.2) both installed. **You use 2025, with many plugins** (2026-10-08); the plugin folders are to be read in the next session on your computer, since a cloud session can't see them. The stems and cue sheet will be planned around what's there. |
 | **Epic Games Launcher** | Installed, so Unreal Engine and MetaHuman are a short install away for beats 13–14. |
-| **Python, ffmpeg** | Not installed. The `python` command is only the Store's placeholder. Both are needed for the build; I'll install them with winget under your permission of 2026-10-05 (README item 17). |
-| **The faces** | Real, human-looking expressions, not the prototype's cartoon symbols (2026-10-05). |
-| **Installing tools** | Allowed: video tools and whatever else I need (2026-10-05). |
+| **Python, ffmpeg** | Not installed. The `python` command is only the Store's placeholder. Both are needed for the build. **You've said to install them** (2026-10-08); it happens with winget at the start of the next local session. |
+| **The faces** | Real, human-looking expressions, not the prototype's cartoon symbols (2026-10-05). **The face to film is yours, for now** (2026-10-08), which also gives the four-face rule its test on a real face. The designed face for the series can come later. |
+| **Money** | Budget as we go (2026-10-08): I say what would help and what it costs, each time, and you decide. Nothing in beats 1–9 costs anything. |
+| **Installing tools** | Allowed: video tools and whatever else I need (2026-10-05, confirmed 2026-10-08). |
 
 **Cloud sessions can't do any of this.** A session in the cloud can't reach the prototype, Blender or FL Studio, or install anything here. Rendering and sound happen in a session on this machine.
 
@@ -230,7 +231,7 @@ You linked two posts by Codetaur on X (5 and 4 October 2026) as references for t
 | [The first](https://x.com/codetaur/status/2107332604039188530) | WebGL particles carried by a wind field: a five-day timelapse of hourly 10-metre winds over California, from WindBorne's weather model. Fine bright streaks over a dark map, bunching into currents, curling into eddies along the coast, in violet and green. | **Beat 1:** the static beginning to flow "like a current, with eddies," and the face standing out of it because the static inside it moves differently. The prototype's stage 2 already uses this technique (a vector flow field tugging the static), so it's on hand. |
 | [The second](https://x.com/codetaur/status/2106854640629510520) | The same particle layer on a globe, with the parameters pushed up: wind over North America as dense flowing particles, colored cold to hot by speed, and hurricane-sized eddies spinning in the Atlantic and Pacific. | **Beats 4–7:** the sea of grains gaining distance and organization, the organic fronts and patches of beat 4 (the eddies are exactly "ink in water"), and the gas drawing together along threads in beat 7. Also the color rule: color carrying one variable, so that every color has a pitch. |
 
-The technique in both is particle advection in a vector field on the GPU, which runs easily on the 2060 Super, in a browser or in code. If you can save the videos into a `reference/` folder, I'll keep them out of git and refer to them by name (README item 18).
+The technique in both is particle advection in a vector field on the GPU, which runs easily on the 2060 Super, in a browser or in code. **You've said (2026-10-08) the videos were only to show the patterns and designs the simulation makes,** so nothing needs saving; the descriptions above are the reference.
 
 ### The release's sound (2026-10-07)
 

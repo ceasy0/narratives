@@ -2,7 +2,7 @@
 
 > Arc 1 covers Genesis 1–11. This file plans its first episode, **the Opening** (Genesis 1:1–2:7) and **the Garden** (2:8–3:24), and will grow as the arc does.
 
-**Status:** started 2026-10-03. The Opening has a [dossier v3.1](./opening/DOSSIER.md) and a [treatment v3.1](./opening/TREATMENT.md), revised 2026-10-07 from your three notes on v3. **The Opening is the exception to the first pass** (your decision, 2026-10-07): its script and visualization go ahead now. **The Garden** waits on round 2 of [Discussion 008](../../../discussions/008-adam-eve-and-the-garden.md) and on [Discussion 009](../../../discussions/009-god-in-the-garden.md).
+**Status:** started 2026-10-03. The Opening has a [dossier v3.1](./opening/DOSSIER.md) and a [treatment v3.1](./opening/TREATMENT.md), revised 2026-10-07 from your three notes on v3. **The Opening is the exception to the first pass** (your decision, 2026-10-07): its script and visualization go ahead now. **The Garden:** [Discussion 008](../../../discussions/008-adam-eve-and-the-garden.md) is decided (2026-10-08); the treatment waits on round 2 of [Discussion 009](../../../discussions/009-god-in-the-garden.md), four choices. **The whole arc** is now mapped in six hours in [`story/ARCHITECTURE.md`](../../ARCHITECTURE.md#arc-1--beginnings-genesis-111).
 
 ---
 
@@ -13,19 +13,24 @@ About an hour (your decision, 2026-10-03).
 | Part | Text | Length | Status |
 |---|---|---|---|
 | **The Opening** | Gen 1:1–2:7 | 4:50 | Treatment v3.1. **Next: the script,** then a timed storyboard with a rough soundtrack ([dossier §6](./opening/DOSSIER.md#6-the-visualization)). |
-| **The Garden** | Gen 2:8–3:24 | About 55 minutes | Waits on [008](../../../discussions/008-adam-eve-and-the-garden.md) round 2 and [009](../../../discussions/009-god-in-the-garden.md). A first shape of the hour, six movements, is in [008, round 1](../../../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07). |
+| **The Garden** | Gen 2:8–3:24 | About 55 minutes | Waits on [009](../../../discussions/009-god-in-the-garden.md) round 2. The six movements ([008, round 1](../../../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07)) are the shape, "for now." |
 
-**Decided for the Garden so far (2026-10-07):** Adam is of the line at the cliff and new in what happens to him; the people outside aren't seen; the serpent is an animal that in that moment embodies the role of Satan; the animals were formed before the Garden and brought to the man to name; the hour stays about an hour, filled by the animals, Adam and Eve's life together, and foreshadowing. **Recommended, waiting on you:** the Garden on the lower plain between the rivers near where Eridu would stand, about 5000–4000 BC.
+**Decided for the Garden (2026-10-07 and 2026-10-08):** Adam is of the line at the cliff and new in what happens to him; the Garden is on the lower plain between the rivers near where Eridu would stand, about 5000–4000 BC; the people outside aren't seen; Eve is made in the deep sleep, shown as the first glimpse of the Opening; the Fall brings awareness and ego in one act, and the judgment plays as a stern yet loving father's; the serpent is an animal that in that moment embodies the role, and its words come from outside with the hiss under them; the animals were formed before the Garden and brought to the man to name; God is not seen, and is present through the world; the command is the first thing spoken in the series, in Adam's own voice, after minutes of looking; the hour is six movements. **Open in [009](../../../discussions/009-god-in-the-garden.md), round 2:** whether the animals that carry God speak (my view: no), the clothes, the sword, and Eve's waking. **Your two ideas of 2026-10-08,** the world outside and the naming without words, are answered in [008, round 2](../../../discussions/008-adam-eve-and-the-garden.md#round-2--2026-10-08).
 
 **A problem to settle early.** Fifty-five minutes for 42 verses with about a dozen recorded speeches would be the most invented hour in the series. The rule I'd set for it ([REVIEW §2.5](../../../REVIEW.md)): no invented speech between Adam and Eve that the Opening's grammar could carry instead. A fallback if it runs thin: let Episode 1 run to 4:16 (Cain).
 
 ## The rest of the arc
 
-| Part | Text | Status |
-|---|---|---|
-| Cain and Abel; the generations | Gen 4–5 | Not started |
-| The flood | Gen 6–9 | Not started. Needs Positions 6 and 7. |
-| The nations and Babel | Gen 10–11 | Not started |
+Six hours, as mapped in [ARCHITECTURE](../../ARCHITECTURE.md#arc-1--beginnings-genesis-111):
+
+| # | Episode | Text | Status |
+|---|---|---|---|
+| 1 | The Garden | Gen 1:1–3:24 | The Opening at treatment v3.1; the Garden waits on 009 |
+| 2 | Cain | Gen 4 | Not started |
+| 3 | The Days of Noah | Gen 5:1–6:8 | Not started. Needs Position 6. The why for the flood. |
+| 4 | The Ark | Gen 6:9–7:16 | Not started. Needs Position 7. |
+| 5 | The Flood | Gen 7:17–9:17 | Not started. Needs Position 7. |
+| 6 | Babel | Gen 9:18–11:26 | Not started. Could split into the tower and the scattering, as your draft had it. |
 
 ## The Opening: files
 

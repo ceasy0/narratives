@@ -1,6 +1,6 @@
 # 008 — Adam, Eve and the Garden
 
-**Status:** **Discussing, round 2.** Seeded 2026-10-03; round 1 on 2026-10-07, with your answers to all ten questions, the check on the Ur and Uruk country, and my responses. Partly decided (Adam, the people outside, the serpent, the animals, the hour); the place, Eve, the Fall and God's presence wait on round 2.
+**Status:** **Decided for the Garden, 2026-10-08,** after round 2. Seeded 2026-10-03; round 1 on 2026-10-07; round 2 on 2026-10-08 (the place, Eve, the Fall, the serpent, the hour, the naming, and a question about Cush). What's left (how the naming plays, and whether the change passes to Eve in the sleep) is carried into [009](./009-god-in-the-garden.md), round 2, since both turn on how God is present.
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), which is the rest of Episode 1
 **Positions:** 5 (Adam and Eve), 16 (the serpent), and where Eden is
 **Fit grade:** your first idea (Adam as the first of a new species) was Tension. Your answer of 2026-10-07 (of the line at the cliff, and new in what happens to him) is Supported. See round 1.
@@ -305,13 +305,74 @@ Where the texts themselves come close to the Opening in this hour, as notes only
 6. **Discussion 009,** its six questions.
 7. **The animals.** Which ones, and how long is the naming? The plain's own animals are listed above; the dossier will do them properly.
 
+### Round 2 — 2026-10-08
+
+Your answers, in your words, with my response to each.
+
+**Cush.** You asked first:
+
+> Would it be possible that they called two different lands the land of Cush if the Cushites had migrated? Would this framing solve the issue? The Cushites once lived in one place, then migrated to Nubia?
+
+*Yes, and Genesis gives you a cleaner version of it that needs no migration.* The Table of Nations already uses "Cush" for two regions. Cush's sons are Seba, Havilah, Sabtah, Raamah and Sabteca (10:7), names of Arabia and the Red Sea coast, and Cush is also the father of Nimrod, whose kingdom is "Babel, Erech, Accad and Calneh, in the land of Shinar" (10:8–10): Mesopotamia. And the text doubles a name on purpose in the same chapter: there are two Havilahs, a son of Cush (10:7) and a son of Joktan (10:29), and Havilah is the land the Pishon flows around (2:11). So "a name carried by more than one land" is the Table of Nations' own habit, and Gen 2:13's Cush can be the Mesopotamian one without strain. **Grade: Compatible, with a foothold in 10:7–10** (P1 for the two uses; P4 for Speiser's Kassite reading). The migration itself has no evidence either way: Nubia's Kush is in Egyptian records from about 2000 BC, the Kassites came into Babylonia from the Zagros around 1700 BC, and the likeness of the names may be chance. It never reaches the screen, because no river is named aloud in the series, so it costs nothing and settles the dossier's reader. I'd record it as "Cush names more than one land in Genesis itself," and leave the migration as your note.
+
+**1. The place.** "Yes, for now." *Decided:* the Garden is on the lower plain between the rivers, at the sea's edge as it then was, near where Eridu would stand, about 5000–4000 BC. The Nile stops being the Gihon; Josephus's reading stays a note. [TIMELINE §3.4](../world/TIMELINE.md#34-primeval-history-genesis-111) carries the date.
+
+**2. Eve.** "D, for now." *Decided:* the deep sleep is the Garden's first glimpse of the Opening, one face becoming two, with the poem and the narrator's words kept exactly. You didn't answer whether the change passes to her in the sleep. *My default, for you to confirm:* she wakes of the new kind, as he is, and the poem (2:23) is his recognizing it: "this one, at last." Nothing else would make "a helper opposite him" true.
+
+**3. The Fall.**
+
+> I think what you said about this was really good, yes. And the tone should be a bit of both I would say - like a stern yet loving father.
+
+*Decided:* awareness and ego arrive in one act, because the one who becomes aware is a part and not the whole. The eating is both a crime and a child's grab, and the judgment plays as a stern yet loving father's: the sentences are real and so are the clothes. That's the tone of 3:8–24, and it fits the text's own order (the questions before the sentences, and the care after them). It also settles something for [009](./009-god-in-the-garden.md): whatever carries God's voice in the sentences has to be able to carry sternness and love in the same breath.
+
+**4. The serpent.** "Yes that works." *Decided:* the fitting form of FR-19 (the role, real wherever it's played) stands for the Garden, and the serpent's words come from outside, from the animal, with the Opening's hiss under them. The larger claim still waits for Job.
+
+**5. The hour.** "They look good for now." *Decided for now:* the six movements. Cain stays a fallback that isn't needed unless the treatment runs thin (your README answer: "Don't worry about the fallback unless we need it").
+
+**6. Discussion 009.** Answered there; round 1 is [recorded](./009-god-in-the-garden.md#round-1--2026-10-08).
+
+**7. The naming.**
+
+> Maybe we dont show the naming, since its before what Adam says to Eve? Im unsure
+
+*I think you've found a real problem, and I'd solve it rather than cut the scene.* The problem: if Adam speaks the animals' names aloud, the first human words in the series are "lion" and "ox," and the text's own first human words, the poem about her (2:23), lose their place. And 009 proposes the command (2:16–17), heard in Adam's own voice, as the first words of all. Three voices before the poem would bury it.
+
+The text doesn't require speech. "Whatever the man called every living creature, that was its name" (2:19): the naming is an act of knowing, and a series that just spent five minutes showing creation without a word can show a man coming to know each animal without one. So my proposal: **show the naming, and keep it wordless.** He and each animal look at each other until he knows it; we never hear the names, or we hear only the breath of them under the held note; and the scene's end is the text's: "but for the man there was not found a helper opposite him" (2:20). The loneliness is earned by the looking, and the poem stays the first thing a human says. It also keeps your idea in 009 (the animals as conduits for God) in play: the naming is where the audience learns that the animals carry something. The length: a long day, ten minutes, as the six movements have it. Carried into 009, round 2.
+
+**Two more ideas from your notes of 2026-10-08.**
+
+*Why they stay.*
+
+> I'm thinking that in the first episode there should be context as to why Adam and Eve stay in the Garden. Maybe because the outside world is wild and hostile?
+
+*Half of this is in the text, and the other half the text keeps for later.* The Garden is where the water is: the land outside has "no bush of the field" and "no small plant," because there's no rain and no one to work the ground (2:5–6), and the river that waters the Garden is what makes it a garden at all (2:10). It's where the food is: "you may surely eat of every tree" (2:16). It's where God walks (3:8). And it's his charge: he's taken and put there "to work it and keep it" (2:15). So they stay the way anyone stays home: there's nothing to leave for, and the loneliness that matters is inside the Garden (2:18), not outside it. The outside as *wild*, meaning unworked, dry away from the rivers, with the plain's big animals on its edge (the lions and aurochs in the check), is **Compatible**, and worth showing once or twice from the Garden's edge, as a frontier.
+
+The outside as *hostile* before the Fall is where I'd stop, for two reasons. First, the hostile world is the text's own picture of what the sentence makes: thorns and thistles, sweat, pain, the ground that fights you (3:17–19). If it's already hostile in movement 1, the sentence has nothing to add, and the Garden becomes a refuge from God's own "very good" creation (1:31). Second, they're sent out "to work the ground from which he was taken" (3:23): the outside is where Adam came from, and the sending is exile into labor, not into death. **Grade: Tension if hostile before the Fall; Compatible if wild.**
+
+What I'd do with your instinct, which is right that the audience needs to feel the difference: let the animals carry it. Inside, the lion lies down, which is the prophets' own picture of Eden restored ("the wolf shall dwell with the lamb," Isa 11:6–9; 65:25) and the Sumerians' picture of Dilmun, "where the lion kills not." At the edge, seen once, the same kind of animal hunts. Then the first shot after 3:24 is the sentence lived: thorns, heat, and the lion closer than it was. The question "why do they stay?" never comes up, because the Garden is home, and the first time the outside is hostile is the first time they're in it. This also fits your idea in 009 that the animals are a conduit. Yours to confirm; it's P5 (yours) with P6 staging (mine).
+
+*Genesis 18.*
+
+> I find Genesis 18 very interesting. To me, it seems like the three visitors are meant to be who the Lord is speaking through to talk to Abraham (at least in that scene).
+
+*I think that's the text's own reading, and it closes a question we had open.* The chapter blurs it on purpose: "the LORD appeared to him" (18:1), then "three men" (18:2), then "he said" and "the LORD said" trading places (18:10, 13), then two of the three go on to Sodom as "the two angels" (19:1) while "Abraham still stood before the LORD" (18:22) with the one who stayed. So one of the three speaks as the LORD, and the chapter never says when Abraham knew. Your reading is Discussion 001's mode 6 and approach B exactly: God's word arrives through someone at the door, and is recognized as it happens. The turn is 18:13–15: the stranger knows that Sarah laughed inside the tent, which no stranger could. That's the moment, for Abraham and for the audience. **Grade: Supported** (Gen 18:1–22; Heb 13:2, "some have entertained angels unawares"; and Discussion 001's decision 5, "God is the one speaking").
+
+What it does for us: it's the lean for Position 14 (the angel of the LORD), which was open before Genesis 16. The same pattern runs through Hagar (16:7–13), Gideon (Judg 6:22) and Manoah (Judg 13:21–22): a visitor speaks, and the person realizes afterward whose words they were. If we adopt "God speaks through the visitor, and the visitor is recognized as it happens or after," Genesis 16, 18, 22 and 32, Joshua 5 and Judges 6 and 13 all play by one rule. The classical Christian reading (Justin, the Rublev icon) goes further and makes the three the Trinity, or the one the Son before his incarnation; that's Compatible and doesn't have to be chosen. And it tells us something about the Garden: God at Abraham's tent eats, which is as bodily as Genesis gets, and it's shown through three men. Your instinct in 009, God through the world, and your instinct here, God through the visitors, are the same rule: God is seen through what's there. One rule from Episode 1 to Episode 11 is worth having. Recorded under Position 14 as the lean; yours to confirm before Genesis 16.
+
+### For 009's round 2
+
+The two small opens from this discussion go there: whether the change passes to Eve in the sleep (my default: yes), and how the naming plays (my proposal: shown, wordless).
+
 ## Decision
 
-*Partly decided 2026-10-07; the rest waits on round 2.*
+**Decided for the Garden, 2026-10-08.**
 
-- **Adam** is of the line at the cliff and new in what happens to him; with him something major changes in humans (your answer 1).
+- **Adam** is of the line at the cliff and new in what happens to him; with him something major changes in humans (your answer 1, 2026-10-07). We say "kind," not "species."
+- **The place:** the lower plain between the rivers at the sea's edge, near where Eridu would stand, about 5000–4000 BC (2026-10-08). The Nile stops being the Gihon. "Cush" names more than one land in Genesis itself (10:7–10), as Havilah does (10:7, 29).
 - **The people outside** aren't seen in the Garden, for now (your answer 3).
-- **The serpent** is an animal that in that moment embodies the role of Satan (your answer 6; Position 16, for the Garden). "The devil is what evil actions are" is logged as FR-19, Tension, to decide before Job.
-- **The animals** were formed before the Garden; 2:19 is "had formed," and God brings them to the man to name (your answer 9).
-- **The hour** is about an hour, filled by the animals, Adam and Eve's life together, and foreshadowing (your answer 8).
-- **Open for round 2:** the place (my recommendation: the Ur and Eridu country), Eve, what the Fall adds, how God is present ([009](./009-god-in-the-garden.md)), and the hour's shape.
+- **Eve:** option D. The deep sleep as the Garden's first glimpse of the Opening, one face becoming two; the poem and the text's words kept exactly (2026-10-08). Default, to confirm: she wakes of the new kind.
+- **What the Fall adds:** awareness and ego in one act. The eating is both a crime and a child's grab; the judgment plays as a stern yet loving father's (2026-10-08).
+- **The serpent** is an animal that in that moment embodies the role of Satan (your answer 6; Position 16, for the Garden). Its words come from outside, from the animal, with the hiss under them (2026-10-08). "The devil is what evil actions are" is FR-19, Tension, to decide before Job.
+- **The animals** were formed before the Garden; 2:19 is "had formed," and God brings them to the man to name (your answer 9). The naming's staging is in 009.
+- **The hour:** about an hour, in six movements, for now (2026-10-08). Cain is a fallback only if it runs thin.
+- **How God is present** is [009](./009-god-in-the-garden.md).

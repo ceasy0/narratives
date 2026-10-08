@@ -24,7 +24,7 @@
 
 The reason you gave for writing front to end was "so I can know whether to change it based on things I don't see yet." A full first pass of treatments and beats for sixty-six books will take a long time to deliver that view: the Opening alone took three versions over three days for five minutes of screen. The thing that would give you the view in a few sessions is the one document the roadmap planned and never got: `story/ARCHITECTURE.md`, the series on one page. Every episode of the whole Bible in one line each, with its text, its era, its heart, and which discussions it depends on. Then the first pass runs in order with the map as its guide, and you can see the shape of the whole, where the Opening's glimpses would fall, where the bloodline threads run, and which arcs can be skipped or merged, before another hour is written.
 
-**My proposal:** make the map the next deliverable after this round's answers, then the Garden.
+**My proposal:** make the map the next deliverable after this round's answers, then the Garden. *Your answer, 2026-10-08: "Yes, map first." Written as [`story/ARCHITECTURE.md`](./story/ARCHITECTURE.md).*
 
 ### 2.2 Two depths for the first pass
 

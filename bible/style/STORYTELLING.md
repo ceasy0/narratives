@@ -15,6 +15,7 @@
 - **A journey keeps moving, and keeps its direction.** When people are traveling, life happens on the move: they fight, bury their dead and carry their newborns without stopping, and they cross the frame the same way every time. Stopping is an event. (The band in the Opening always walks right to left, and stops only at the cliff, 2026-10-05.)
 - **A slower start is fine; a lurch isn't.** An episode can open more slowly, but the change of pace has to be smooth, and the end mustn't feel rushed. The way to do it: let story time slow down gradually while screen time holds steady, and start the slowdown before the act break, not at it. (Ruth: twelve years in Moab move fast, and the parting on the road slows into real time before Act Two begins. See BEATS §3.)
 - **Make the main character's arc visible at every stage.** Mark each step with something we see or hear: a laugh, a dance, a name refused and then accepted, a song. Echoes work best when nobody points at them. (Naomi's laugh, dance and lullaby.)
+- **The why comes earlier.** When a later episode turns on something the audience has to understand (why Sodom burns, why the flood comes, why Moses is in the river), an earlier episode shows it as a scene in its own story, not as a lecture. The map marks these as "sets up." (Your Sodom example, 2026-10-08; [ARCHITECTURE §2](../story/ARCHITECTURE.md#2-the-rules-the-map-runs-on).)
 - **Links between episodes live at the edges.** Anything that ties one episode to another, such as a flash-forward or a callback, goes only at the beginning or end of an episode or scene, as a small change. Each episode stays whole on its own. (Your note on the David connection at the end of Ruth.)
 
 ## The Opening, visions, and the primordial
@@ -86,3 +87,4 @@
 | 2026-10-03 | 4 | Your notes on the Opening: nothing spoken, the faces, the come-down, the primordial through the series; the exception to two rules; hour-long episodes |
 | 2026-10-05 | 5 | Your notes on the Opening's treatment v2: a sound for every appearance, expressions that run to the climax, organic division, the journey that keeps moving, glimpses left to come naturally, the recurring face, real expressions |
 | 2026-10-07 | 6 | Your notes on the Opening's treatment v3: the release's sound, the faces forming in sync, the four-face rule |
+| 2026-10-08 | 7 | Your notes with the series draft: the why comes earlier (the Sodom principle); the four-face rule to be checked on real faces |

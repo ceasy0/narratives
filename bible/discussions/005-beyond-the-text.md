@@ -1,6 +1,6 @@
 # 005 — Beyond the text: traditions, legends and rumored events
 
-**Status:** Discussing. Seeded 2026-10-02; round 1 the same day.
+**Status:** **Decided, 2026-10-08,** after two rounds. Seeded 2026-10-02; round 1 the same day; your answers to round 1 on 2026-10-08. Items in bins 1 and 2 are still settled one by one, before the arc each would appear in.
 **Needed before:** each arc an item would appear in. The question of Jesus in the East needs settling before the Gospels.
 **Fit grade:** it varies by item; see the tables. The usual story of Jesus studying in the East is graded **Contradiction**.
 
@@ -191,6 +191,22 @@ So the scene I could imagine, if it ever earns a place (P6, bin 2):
 2. Would you want the traveler scene on the list of candidates for the hidden years, or is FR-06's imagery enough?
 3. The two-question test and three bins: still right after this round?
 
+### Round 2 — 2026-10-08
+
+Your answers, in your words.
+
+1. "Recognition, not derivation": *"That works well for me."*
+2. The traveler scene: *"FR-06 is enough."*
+3. The two-question test and three bins: *"Yes, so far."*
+
+Question 4 (whether a bin 3 story can appear as a rumor a character repeats) wasn't answered; the default stands: yes, the way FR-03 stages the village's version, and never as if it were the text.
+
 ## Decision
 
-*Not yet decided.*
+**Decided 2026-10-08.**
+
+1. **The two-question test and the three bins** are the rule for everything beyond the text: does the Bible rule it out or make it unlikely, and what's the evidence? Bin 1 is used freely (P3 or P4), bin 2 purposefully (P3 or P6) and never staged as Scripture, bin 3 not as fact.
+2. **Jesus in the East is out,** as a story (bin 3, Contradiction). No traveler scene in the hidden years; the Eastern resonance lives in FR-06's imagery and delivery, with every word Tier A.
+3. **Recognition, not derivation** is the rule whenever Jesus meets someone from outside Israel: he recognizes truth in them, as the Gospels stage it (Matt 8:10; Mark 7:29; 12:34), and never takes his teaching from them.
+4. **A bin 3 story may be repeated on screen as a rumor** (default), never as what happened.
+5. **Items in bins 1 and 2** are decided before their arcs. The ones the map already uses are marked in [ARCHITECTURE](../story/ARCHITECTURE.md): Abram in an idol-maker's house (optional), the Watchers (with Position 6), Isaiah's death, Jeremiah's, Joseph's death before the ministry, Sepphoris, the Magi as Persian priests, Peter's and Paul's deaths, the flight to Pella.

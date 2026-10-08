@@ -23,15 +23,16 @@
 | A storytelling rule | `style/STORYTELLING.md` | treatments cite it |
 | An arc's research, treatment, beats | `story/arcs/NN-*/` | — |
 | A project review | `REVIEW.md` (2026-10-07) | — |
+| The series as episodes | `story/ARCHITECTURE.md` | arc plans link to their section |
 
 Record a decision once, in its home, and link from the rest. Don't paste it into a second file.
 
-## Current phase (2026-10-07)
+## Current phase (2026-10-08)
 
+- **The map exists:** `story/ARCHITECTURE.md` (v1, 2026-10-08), the whole Bible as 203 hours in 18 arcs, built from the author's draft. Its density and merges (§2, §10), the chronological placements (§3) and the new hard-passage positions (§11) are the author's to confirm. Treat it as the guide for the first pass and keep it current: when an arc is treated, its lines in the map get corrected.
 - **Writing front to end, treatments and beats first,** from Genesis 1 (the author's decisions of 2026-10-03 and 2026-10-05). Ruth is parked as a first draft.
-- **The Opening (Gen 1:1–2:7) is the exception** (the author, 2026-10-07): its script (`scripts/beginnings/opening.fountain`) and visualization go ahead now. Treatment v3.1 is the beat sheet. The next deliverables for it: the script, then a timed storyboard with a rough soundtrack (dossier §6).
-- **The Garden (Gen 2:8–3:24)** is the rest of Episode 1. Discussion `008` is in round 2 and `009` (God in the Garden) is seeded; both block the Garden's treatment. The author's answers are the next step.
-- **Proposed, not decided** (`REVIEW.md` §2.1): write `story/ARCHITECTURE.md`, the whole Bible as episodes in one line each, before the Garden's treatment.
+- **The Opening (Gen 1:1–2:7) is the exception** (the author, 2026-10-07): its script (`scripts/beginnings/opening.fountain`) and visualization go ahead now. Treatment v3.1 is the beat sheet. The next deliverables for it: the script, then a timed storyboard with a rough soundtrack (dossier §6). The build answers of 2026-10-08 are in the dossier §6: FL Studio 2025 with plugins (read the folders in the next local session), the author's own face to film, budget as we go, Python and ffmpeg may be installed.
+- **The Garden (Gen 2:8–3:24)** is the rest of Episode 1. Discussion `008` is decided for the Garden (2026-10-08). `009` is in round 2 with four choices (the animals' speech, the clothes, the sword, Eve's waking); the author's answers unblock the Garden's treatment, which is the next writing deliverable.
 - **Sessions run on the author's computer when they can** (the RTX 2060 Super desktop, 32 GB RAM, Blender 5.0, FL Studio 2024 and 2025 installed; no Python or ffmpeg yet). Cloud sessions can't reach the prototype at `H:\Current\Projects\Agentic\Biblical Story Concept`, Blender or FL Studio. The author has allowed installing video tools and anything else needed (2026-10-05).
 - **Keep `README.md`'s "What I need from you" list current.** It is the one place the author tracks every open question.
 - **Commit and push after every round of edits** (the author's instruction, 2026-10-03). Git works on the author's drive without extra flags.

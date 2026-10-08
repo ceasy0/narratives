@@ -134,7 +134,9 @@ Confidence varies a great deal by era, and the timeline should show that rather 
 - **The Opening's last shot is set about 55,000 years ago,** when the ancestors of everyone outside Africa left it. You chose that date over the view of the delta as a fan, which only formed about 7,500 years ago ([Opening dossier §5](../story/arcs/01-beginnings/opening/DOSSIER.md#5-the-science)).
 - **Adam and Eve come long after that.** The person at the cliff is an ancestor of Adam, and you've said a long gap is fine. Their own date is still open ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md)). My suggestion there is the dawn of farming, which is also roughly where the genealogies put Adam: about 3900 BC in the Hebrew text and about 5300 BC in the Greek.
 
-**Added 2026-10-07.** You've placed the Garden in the Ur and Uruk country, and the check supports it ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md#the-check-the-ur-and-uruk-country)). **Provisional date for Adam: the Ubaid period, about 5000–4000 BC,** when the lower plain was first settled and farmed by irrigation and the Gulf's shore stood near Ur and Eridu. Cain's city (Gen 4:17) would fall in the Uruk period, about 4000–3100 BC, when the first true cities rose. Both wait on your yes to the place, and on the Genesis 4–5 treatment.
+**Added 2026-10-07.** You've placed the Garden in the Ur and Uruk country, and the check supports it ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md#the-check-the-ur-and-uruk-country)). **Provisional date for Adam: the Ubaid period, about 5000–4000 BC,** when the lower plain was first settled and farmed by irrigation and the Gulf's shore stood near Ur and Eridu. Cain's city (Gen 4:17) would fall in the Uruk period, about 4000–3100 BC, when the first true cities rose.
+
+**Decided 2026-10-08** ("Yes, for now"): the place is adopted, and the date above stands as provisional until Genesis 4–5 is treated. "Cush" in Gen 2:13 is read as the Mesopotamian Cush of Gen 10:8–10 ([008, round 2](../discussions/008-adam-eve-and-the-garden.md#round-2--2026-10-08)).
 
 ### 3.5 Jesus
 
@@ -212,6 +214,8 @@ These dates follow the text-first model. "c." means approximate, and dates "deri
 ### Arc 7 — Judges and Ruth
 
 Dates are approximate (± 20–30 years). This is one reasonable arrangement that allows for the overlaps.
+
+**Added 2026-10-08.** Judges 17–21 dates itself early: Micah's Levite is Moses's grandson (Judg 18:30), and Phinehas son of Eleazar is still high priest in the Benjamite war (20:28). So both stories fall within a generation of Joshua's death, before Othniel, and the series map places them there ([ARCHITECTURE §3](../story/ARCHITECTURE.md#3-where-the-map-departs-from-the-bibles-order)), your call. Ruth (c. 1140) falls between Gideon and Abimelech.
 
 | BC | Event | Reference |
 |---|---|---|
