@@ -77,7 +77,7 @@ def render_slice(args):
     n1 = int(round(t1 * fps))
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{w}x{h}",
            "-r", str(fps), "-i", "-", "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
-           "-pix_fmt", "yuv420p", path]
+           "-pix_fmt", "yuv420p", "-f", "mp4", path + ".tmp"]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     t_start = time.time()
     for n in range(n0, n1):
@@ -90,6 +90,7 @@ def render_slice(args):
             print(f"[{os.getpid()}] {t:7.2f}s  {done}/{n1 - n0} frames  {el / done * 1000:.0f} ms/frame", flush=True)
     p.stdin.close()
     p.wait()
+    os.replace(path + ".tmp", path)  # a finished part only ever exists complete, so a stopped render resumes
     return path
 
 
@@ -104,6 +105,7 @@ def main():
     ap.add_argument("--start", type=float, default=0.0)
     ap.add_argument("--end", type=float, default=DURATION)
     ap.add_argument("--procs", type=int, default=4)
+    ap.add_argument("--chunk", type=float, default=10.0)
     a = ap.parse_args()
 
     if a.preview is not None:
@@ -122,11 +124,19 @@ def main():
         tmpdir = a.video + ".parts"
         os.makedirs(tmpdir, exist_ok=True)
         n = a.procs
-        edges = np.linspace(a.start, a.end, n + 1)
-        jobs = [(a.w, a.h, a.fps, float(edges[i]), float(edges[i + 1]), os.path.join(tmpdir, f"part{i:02d}.mp4")) for i in range(n)]
+        # ten-second parts, so a stopped render picks up where it left off: finished parts are kept
+        # (delete the .parts folder after changing the code, or the old parts are reused)
+        edges = np.arange(a.start, a.end, a.chunk).tolist() + [a.end]
+        jobs = [(a.w, a.h, a.fps, float(edges[i]), float(edges[i + 1]),
+                 os.path.join(tmpdir, f"part{a.w}x{a.h}-{edges[i]:07.2f}.mp4")) for i in range(len(edges) - 1)]
+        parts = [j[-1] for j in jobs]
+        todo = [j for j in jobs if not os.path.exists(j[-1])]
+        print(f"{len(jobs) - len(todo)} of {len(jobs)} parts already rendered", flush=True)
         t0 = time.time()
         with Pool(n) as pool:
-            parts = pool.map(render_slice, jobs)
+            # the slow beats first, so the processes finish together
+            for _ in pool.imap_unordered(render_slice, todo[::-1]):
+                pass
         lst = os.path.join(tmpdir, "list.txt")
         with open(lst, "w") as f:
             for p in parts:
