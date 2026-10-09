@@ -146,6 +146,29 @@ None of this proves what the Garden looked like. It shows what gardens, and para
 
 **What I'd do.** A grey limestone, weathered, dry-laid (no mortar), worn smooth where feet go, green with moss where water runs. Darker grey at the waterline and in the channels, where it's wet; lighter at the summit, where it's dry and in the sun. Never cut square, never carved: placed. **Grade: Compatible.** P5.
 
+#### Your follow-up (2026-10-09): huge stones, and the ground itself
+
+> The harder part is going to be the size of the stones. Im imagining very large stones for paths (like 10-15 ft across, with cut divots length-wise every so often). Would it have been possible that the ground itself was grey limestone? Otherwise, we're going to have to discuss talented masonry (that is, smooth and precise, not detailed).
+
+**Yes, the ground can be the limestone, and it's the better answer.** Bare limestone bedrock naturally weathers into exactly what you describe. Geologists call it a *limestone pavement*: broad flat slabs (*clints*), often several metres across, split by straight fissures (*grikes*) where water has widened the rock's joints. The fissures run in parallel sets, so they look like grooves cut lengthwise "every so often," and ferns, mosses and small flowers grow in them. The Burren in Ireland and Malham in Yorkshire are the famous ones (search "limestone pavement Burren" for the look). Shallow dish-shaped basins also dissolve into the surface and hold rainwater. Slabs 10–15 ft (3–4.5 m) across are well within what these pavements produce.
+
+This solves three things at once:
+
+1. **Nobody has to have built it.** "The LORD God planted" (2:8). A pavement of living rock has no masons, and the paths are just where the rock lies bare between the beds.
+2. **The texts prefer uncut stone where God is met.** "If you make me an altar of stone, you shall not build it of hewn stones, for if you wield your tool on it you profane it" (Exod 20:25; also Deut 27:5–6). Solomon's temple was built so that "neither hammer nor axe nor any tool of iron was heard in the house" (1 Kgs 6:7). Precise masonry would pull against this. Natural rock agrees with it.
+3. **The color rule gets a home in the stone.** The grey slabs are lifeless, and the color grows in the cracks between them.
+
+**The terraces work the same way.** Limestone lies in beds, and where it erodes it often breaks into natural steps, one bed on another. The stepped centre can be a knoll of bedded rock that weathered into five broad ledges. It's natural, but more regular than nature usually is. That slight excess of order, rock that looks almost too well arranged, is the sign of the second register (God through the world), and the audience doesn't need it explained.
+
+**The catch is the geology of the place you chose.** The lower plain is river silt, many metres deep, with no rock at the surface. That's why the plain built in mud brick and Genesis says "they had brick for stone" (11:3). There is stone at the plain's western edge: Eridu sits beside a low sandstone ridge, and beyond it the desert plateau west of the Euphrates is limestone and sandstone, which is where the plain's later temples got what little stone they used. *Medium confidence on the exact formations; high that the alluvium has no surface rock.* There are two honest ways to handle it:
+
+- **A. The Garden is a stranger in the plain** (my recommendation). A rise of limestone standing out of the marsh, where none should be, near where Eridu would stand. The dossier already treats the stone as "the sign that it isn't the plain's own work," and the trees are strangers too. When the Garden is gone, the plain has only mud, and that is the point of Babel's brick.
+- **B. The Garden is at the plain's edge,** on the limestone where the desert plateau meets the marsh, with the river's channels cut around it. This is geologically ordinary, and it puts the frontier (008's "wild, not hostile") right at the Garden's edge. It loses some of the strangeness.
+
+**If you still want masonry:** it isn't impossible for the period. At Göbekli Tepe in Turkey, about 9500 BC, people quarried and shaped limestone pillars over five metres tall. But smooth, precise slabs 15 ft across would say "someone built this," and the question becomes who. I'd keep precision out of it and let the rock's size and flatness carry the awe.
+
+**Grade:** natural pavement, **Compatible**, close to Supported by Exod 20:25. A limestone island in the delta (A) is P5 and deliberately unnatural. Precise masonry would be **Tension** with "planted" and with Exod 20:25.
+
 ### 5.5 "Almost like a Greek feel"
 
 **For it.** I think what you're after is a mood: old stone in a grove, raking light, a place that is a sanctuary without being a building. That is honest to the text, which makes the Garden a sanctuary and gives it plane trees and cypress (Ezek 31:8).
@@ -179,6 +202,17 @@ The proposal, all P6 for you to change. ![The plan, from above and in section](.
 - **Day:** the blue thins out but stays in the shadows. Grey stone, deep green, and color only in what lives (the dossier's rule): flowers, fruit, birds, fish in the channels, the animals.
 - **Evening (3:8):** the wind of the day moving the trees; the light goes long and gold across the terraces; the shadows go deep blue. The sound in the wind is heard in that light.
 - **Outside:** flat, white, hot, without mist or shade.
+
+**Shadow is the main tool** (your note, 2026-10-09: "a natural, peaceful, and beautiful mood... correct use of shadows for these scenes will be what makes them"). Rules for the build:
+
+- **Most of the frame is in shade.** The sun lands in a few patches and shafts, and the eye goes to them. The Garden is lit the way a forest floor is lit.
+- **The shade is cool and full, never black.** Sky light fills the shadows with blue, and light bouncing off the pale stone and the water lifts them. Peaceful means you can see into every shadow.
+- **The canopy moves.** Leaf shadows drift on the stone in the wind, slowly. That movement is most of what makes a still shot feel alive, and in the evening (3:8) the wind gets stronger and the shadows move with it.
+- **The grikes hold the deepest dark.** The fissures in the limestone are the darkest lines in the frame, with green and color growing out of them.
+- **Low sun, long shadows.** Morning and evening carry the Garden. Noon is flat and is kept for outside.
+- **After the Fall, the shadows change meaning, not look.** They hide among the trees (3:8). The same shade that was rest becomes cover. Nothing about the light changes; what they do in it does.
+
+In Blender: a sun lamp at a low angle with a soft disc, a sky texture for the blue fill, volumetric mist, a leaf-shadow layer above the frame, and the bounce left on.
 
 ### The plants
 
