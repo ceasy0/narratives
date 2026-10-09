@@ -2,7 +2,7 @@
 
 > Research for README item 6: the shape, the layout and the light of the Garden of Eden, and what I think of your picture of it. Companion to the [Garden dossier](./DOSSIER.md), whose §2 ("The look") this extends. Nothing here is decided until you say so.
 
-**Status:** v0.2, 2026-10-09. v0.1 was written from your note below; v0.2 adds your two comments on it (the stones' size and the ground itself, §5.4; the mood and shadow, §6) and records what's decided: **grey limestone, and a natural, peaceful, beautiful mood carried by shadow** ([FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far)). Everything else here is still a proposal.
+**Status:** v0.3, 2026-10-09. v0.1 was written from your note below; v0.2 added your two comments on it (the stones' size and the ground itself, §5.4; the mood and shadow, §6); v0.3 adds your rule for the living things (§6). Decided: **grey limestone; a natural, peaceful, beautiful mood carried by shadow; plants and animals of the region or the wider region** ([FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far)). Everything else here is still a proposal.
 
 Your note of 2026-10-09:
 
@@ -39,7 +39,7 @@ Everything the Bible says about the Garden's form, gathered in one place. The te
 |---|---|---|
 | A garden *in* Eden, in the east | "The LORD God planted a garden in Eden, in the east" (2:8) | Eden is the larger region; the garden is a place within it. *Planted*, not built. |
 | *Gan*, a garden | 2:8 and throughout | From the root *g-n-n*, "to enclose, to shield." A *gan* is a protected plot: "a garden locked... a spring sealed" (Song 4:12). The word implies an edge, though the text never says what the edge is. |
-| Every tree, for sight and for food | "every tree that is pleasant to the sight and good for food" (2:9) | Beauty first, then food. The trees don't have to be the plain's own; this is planted, and planted with everything. |
+| Every tree, for sight and for food | "every tree that is pleasant to the sight and good for food" (2:9) | Beauty first, then food. **Your rule (2026-10-09):** the plants and animals are the region's own, or at least the wider region's (§6, "The plants and animals"). |
 | Two trees at the centre | "the tree of life in the midst of the garden, and the tree of the knowledge of good and evil" (2:9); "the tree that is in the midst of the garden" (3:3) | A centre, which is the thing a square or a mountain naturally has. |
 | One river, then four | "A river went out from Eden to water the garden, and from there it divided and became four heads" (2:10) | The water rises in Eden, waters the garden, and leaves it in four. "Heads" (*ra'shim*) can mean branches or mouths. |
 | Gold, bdellium, onyx | "the gold of that land is good; bdellium and onyx stone are there" (2:11–12) | The Garden's wealth is named as stone and resin: the same onyx (*shoham*) that's set on the high priest's shoulders (Exod 28:9). |
@@ -164,7 +164,7 @@ This solves three things at once:
 
 **The catch is the geology of the place you chose.** The lower plain is river silt, many metres deep, with no rock at the surface. That's why the plain built in mud brick and Genesis says "they had brick for stone" (11:3). There is stone at the plain's western edge: Eridu sits beside a low sandstone ridge, and beyond it the desert plateau west of the Euphrates is limestone and sandstone, which is where the plain's later temples got what little stone they used. *Medium confidence on the exact formations; high that the alluvium has no surface rock.* There are two honest ways to handle it:
 
-- **A. The Garden is a stranger in the plain** (my recommendation). A rise of limestone standing out of the marsh, where none should be, near where Eridu would stand. The dossier already treats the stone as "the sign that it isn't the plain's own work," and the trees are strangers too. When the Garden is gone, the plain has only mud, and that is the point of Babel's brick.
+- **A. The Garden is a stranger in the plain** (my recommendation). A rise of limestone standing out of the marsh, where none should be, near where Eridu would stand. The dossier already treats the stone as "the sign that it isn't the plain's own work," and its trees come from the wider region, the hills and the Levant, not the delta. When the Garden is gone, the plain has only mud, and that is the point of Babel's brick.
 - **B. The Garden is at the plain's edge,** on the limestone where the desert plateau meets the marsh, with the river's channels cut around it. This is geologically ordinary, and it puts the frontier (008's "wild, not hostile") right at the Garden's edge. It loses some of the strangeness.
 
 **If you still want masonry:** it isn't impossible for the period. At Göbekli Tepe in Turkey, about 9500 BC, people quarried and shaped limestone pillars over five metres tall. But smooth, precise slabs 15 ft across would say "someone built this," and the question becomes who. I'd keep precision out of it and let the rock's size and flatness carry the awe.
@@ -216,9 +216,17 @@ The proposal, all P6 for you to change. ![The plan, from above and in section](.
 
 In Blender: a sun lamp at a low angle with a soft disc, a sky texture for the blue fill, volumetric mist, a leaf-shadow layer above the frame, and the bounce left on.
 
-### The plants
+### The plants and animals
 
-From the texts: fig (3:7), cedar, cypress or fir, and plane (Ezek 31:8), palm and pomegranate (the temple's garden, 1 Kgs 6:29; 7:18), almond (the lampstand, Exod 25:33). From your note: bushes and dense undergrowth to break the light. Olive is my addition: the dove brings back its leaf in Genesis 8:11, and a viewer who has seen one in the Garden will notice. The plain's own plants (date palm, tamarisk, reeds) stay at the shore, so the Garden's are all strangers there.
+**Your rule (2026-10-09):** "the plant and animals should be of the region, or at least the plants and animals of the extended surrounding region." The region is the lower plain and its marshes; the wider region is the arc around it that its people knew: the Zagros and Taurus mountains, the Levant, the Arabian edge. Everything below is native there, as far as I can check. *Medium confidence on some ranges as they stood in 5000 BC, which differed from today's.*
+
+**This loses almost nothing from the texts.** The trees the Bible names in Eden are all of the wider region: the fig (3:7), and Ezekiel's cedar, *berosh* (cypress or juniper) and plane (31:8), which grow in the Levant and the Zagros. The Sumerian kings went to the same mountains for cedar (Gilgamesh's Cedar Forest). The one change is in how the Garden reads: not a garden of foreign things, but **the whole region in one place**, the hill trees and the marsh plants and the animals of the steppe together, where in the world they're days apart. That's still the sign that someone made it.
+
+**Trees.** Inside, from the hills and the Levant: plane (pale bark, over the channels), cedar and cypress (the tall quarter), oak (the Zagros oak), terebinth and wild pistachio, almond (the lampstand, Exod 25:33), pomegranate (1 Kgs 7:18), fig (3:7), olive (the dove's leaf, Gen 8:11), wild grape climbing them. At the water and the shore, the plain's own: date palm (the temple's palms, 1 Kgs 6:29), tamarisk, Euphrates poplar and willow (the "willows" of Babylon, Ps 137:2, are probably this poplar), reeds. Outside, after 3:18: Christ's-thorn jujube and camelthorn, the thorns and thistles.
+
+**Undergrowth and flowers** (where the color lives): oleander along the channels, myrtle, wild rose, caper on the stone, ferns and moss in the limestone's fissures; and the region's wild flowers, which are some of the world's best: wild tulips, irises, poppies, anemones, cyclamen, crown imperial lilies, crocus. Water lilies in the still water. Wild wheat and barley at the edges, which matter later: "by the sweat of your face you shall eat bread" (3:19).
+
+**Animals.** The plain's, from [008's check](../../../../discussions/008-adam-eve-and-the-garden.md#the-check-the-ur-and-uruk-country): lion, aurochs, onager, gazelle, wild boar, Mesopotamian fallow deer, and the marsh birds (pelican, flamingo, ibis, heron, kingfisher). The wider region's: leopard, cheetah, striped hyena, wolf, brown bear (the Zagros and Lebanon), wild goat and ibex, mouflon, ostrich, otter in the marsh, softshell turtle, the hoopoe. Fish in the channels: the rivers' barbels. The serpent should be one of the region's own snakes, not an exotic one; choosing which is for the treatment. Not in: peacocks, parrots, elephants, tigers, anything that says "paradise" from somewhere else.
 
 ### For the build
 
@@ -235,7 +243,7 @@ All of this is buildable in Blender: a terrain mesh, scattered vegetation (geome
 
 ## 8. What I need from you
 
-Decided so far (2026-10-09): grey limestone, and the mood carried by shadow. Three questions left, each one word:
+Decided so far (2026-10-09): grey limestone; the mood carried by shadow; plants and animals of the region or the wider region. Three questions left, each one word:
 
 1. **The plan** (§6): the square island with the stepped centre, four channels from a spring between the two trees, and one causeway east. Yes, no, or a change?
 2. **The stone's form** (§5.4): a natural limestone pavement, the ground itself (my recommendation), or precise masonry?
