@@ -84,13 +84,18 @@ def blip(f, dur, amp=0.3, shape=0.5, seed=0):
     return (np.sin(2 * np.pi * f * t) * 0.8 + np.sin(2 * np.pi * 2 * f * t) * 0.2) * env * amp
 
 
-def tone(f_curve, amp_curve, harmonics=((1, 1.0), (2, 0.35), (3, 0.15), (4, 0.06)), vib=0.004):
-    """A sustained tone whose pitch and level are curves over the whole duration."""
-    ph = np.cumsum(f_curve) / SR
-    vibr = 1 + vib * np.sin(2 * np.pi * 4.7 * T)
+def tone(f_curve, amp_curve, harmonics=((1, 1.0), (2, 0.35), (3, 0.15), (4, 0.06)), vib=0.004, vib_rate=4.7, seed=0):
+    """A sustained tone whose pitch and level are curves over the whole duration.
+
+    v3 fix: v1 and v2 multiplied the running phase by the vibrato, so the pitch swing grew with time
+    (by 1:40 the held A3 was swinging by more than a thousand hertz, four and a half times a second).
+    That was the "1980s alien" oscillation. Vibrato now modulates the frequency, and the phase is the
+    integral of it, so the swing stays as small as it's set."""
+    lfo = np.sin(2 * np.pi * vib_rate * T + seed) * 0.6 + np.sin(2 * np.pi * vib_rate * 0.37 * T + 2 * seed) * 0.4
+    ph = np.cumsum(f_curve.astype(np.float64) * (1 + vib * lfo)) / SR  # float64: float32 loses the phase by 1:00
     out = np.zeros(N, np.float32)
     for h, a in harmonics:
-        out += a * np.sin(2 * np.pi * h * ph * vibr)
+        out += a * np.sin(2 * np.pi * ((h * ph) % 1.0)).astype(np.float32)
     return out * amp_curve
 
 
@@ -101,33 +106,69 @@ def lowpass_env(x, cutoff_fn):
 # ------------------------------------------------------------------------- the stems
 
 def stem_hiss():
-    """Wind over open water, fading in from silence over the first nine seconds (it leads the picture,
-    which comes up from 2 s to 10 s); from 26 s it narrows and climbs, like a breath drawn in that
-    doesn't stop."""
-    x = noise(N, 1)
-    y = noise(N, 2)
+    """Beat 1, v3: the deep as a soundscape, not a hiss alone. Wind over open water (two noise bands
+    that gust independently, left and right), sand pouring (a fine crackle of grains that thickens as
+    the static starts to flow), and far under it a low swell like the sea heard through rock. It all
+    comes up out of silence from the first frame, a little ahead of the picture. From 0:26 it narrows
+    and climbs, like a breath drawn in that doesn't stop."""
+    out = np.zeros((N, 2), np.float32)
+    nb = int((B["light"] + 0.1) * SR)  # the hiss lives in beat 1; nothing of it after the release
+    TT = T[:nb]
 
-    def gain(t, f):
-        climb = sstep(26.0, 38.0, t)
-        centre = 700 * (2 ** (climb * 2.6))  # up to about 4.2 kHz
-        width = 2.2 - 1.6 * climb
-        g = logband(f, centre, width) * (f > 60)
-        # gusts
-        g *= 0.8 + 0.2 * np.sin(t * 0.35) * np.sin(t * 0.11 + 1)
-        return g
+    def wind(seed):
+        x = noise(nb, seed)
 
-    # the hiss lives in beats 1-2; after the release it's gone except where the laugh and the serpent's
-    # kin bring it back; here only beat 1 and the laugh pulses (stem_laugh) use it.
-    L = stft_filter(x, gain)
-    R = stft_filter(y, gain)
-    # the fade in: an equal-power-ish curve from silence at 0:00 to full at 0:09, a second ahead of the picture
-    level = env_curve([(0, 0.0), (2.0, 0.08), (5.0, 0.4), (9.0, 1.0), (26, 1.0), (37.9, 1.0 * db(10)), (38.0, 0.0), (DURATION, 0.0)])
-    out = np.stack([L, R], axis=1) * level[:, None] * 0.05
+        def gain(t, f):
+            climb = sstep(26.0, 38.0, t)
+            gust = 0.75 + 0.25 * np.sin(t * 0.31 + seed) * np.sin(t * 0.13 + 2 * seed)
+            centre = 650 * (1 + 0.25 * np.sin(t * 0.21 + seed)) * (2 ** (climb * 2.7))
+            width = 2.0 - 1.5 * climb
+            return logband(f, centre, width) * (f > 50) * gust
+
+        return stft_filter(x, gain)
+
+    L, R = wind(1), wind(2)
+    level = np.interp(TT, [0, 1.0, 4.0, 8.0, 26, 37.9, 38.0], [0.0, 0.05, 0.35, 1.0, 1.0, db(10), 0.0]).astype(np.float32)
+    out[:nb, 0] += L * level * 0.05
+    out[:nb, 1] += R * level * 0.05
+
+    # sand: single grains as tiny clicks, more of them as the current starts (0:12) and as it climbs
+    r = rng(31)
+    t = 0.5
+    sand = np.zeros((nb, 2), np.float32)
+    while t < B["light"]:
+        rate = 30 + 400 * sstep(10.0, 20.0, t) + 600 * sstep(26.0, 38.0, t)
+        n = int(r.uniform(0.0006, 0.002) * SR)
+        click = noise(n, int(t * 9973) % 100000) * np.exp(-np.arange(n) / (n * 0.3))
+        i0 = int(t * SR)
+        pan = r.uniform(-1, 1)
+        th = (pan + 1) * np.pi / 4
+        amp = r.uniform(0.2, 1.0) * float(np.interp(t, [0, 3, 10, 38], [0, 0.3, 1.0, 1.4]))
+        if i0 + n < nb:
+            sand[i0:i0 + n, 0] += click * np.cos(th) * amp
+            sand[i0:i0 + n, 1] += click * np.sin(th) * amp
+        t += r.exponential(1.0 / rate)
+    hp = lambda ts, f: (f / 2500) ** 2 / (1 + (f / 2500) ** 2) * logband(f, 6000, 1.5)
+    out[:nb, 0] += stft_filter(sand[:, 0], hp) * 0.05
+    out[:nb, 1] += stft_filter(sand[:, 1], hp) * 0.05
+
+    # the deep: a low swell, below where the ear finds pitch, rising with the climb
+    sub = noise(nb, 33)
+
+    def subg(ts, f):
+        swell = 0.6 + 0.4 * np.sin(2 * np.pi * ts / 9.0) ** 2
+        return logband(f, 45 * (2 ** (0.8 * sstep(26, 38, ts))), 0.7) * swell
+
+    sb = stft_filter(sub, subg)
+    lvl = np.interp(TT, [0, 2, 10, 26, 38, 38.05], [0, 0.2, 1.0, 1.0, 2.2, 0.0]).astype(np.float32)
+    out[:nb, 0] += sb * lvl * 0.10
+    out[:nb, 1] += sb * lvl * 0.10
     return out
 
 
 def stem_whisper():
-    """The same noise shaped like breath passing through an open mouth and throat: formants, no voice."""
+    """The same noise shaped like breath passing through an open mouth and throat: formants, no voice.
+    It sits where the face is (the centre), and from 0:26 it draws in with the climb."""
     x = noise(N, 3)
 
     def gain(t, f):
@@ -144,19 +185,50 @@ def stem_whisper():
 
 
 def stem_release():
-    """The release at 0:38: a distorted sub-bass hit with real weight, and a tail that is the static
-    itself, pitched and smeared, passing the ears and shutting behind the head. Then true silence."""
+    """The release at 0:38, v3: layered, the way a film hit is built, not one sine.
+
+    1. the in-breath's last second: the climb's noise reversed into the hit, so the hit is sucked in;
+    2. the body: a sub-bass drop from 55 to 28 Hz, distorted, two seconds long;
+    3. the punch: a mid thump and a transient, so it hits on small speakers too;
+    4. the blast: a wide noise burst swept from bright to dark;
+    5. the tail: the static itself, pitched and smeared, passing the ears and shutting behind the head;
+    6. the air: a long, dark reverb bloom under all of it, the size of a cathedral, dying away to
+       silence by about 0:44, out of which the held note rises when the eyes open.
+    The atmosphere (stem_atmos) adds a sustained shimmer that blooms from the hit and fades with it."""
     buf = np.zeros((N, 2), np.float32)
-    n = int(2.2 * SR)
+    t0 = B["light"]
+    # 1. the suck: noise swelling into the hit, reversed decay, bright
+    nr = int(1.2 * SR)
+    tr = np.arange(nr, dtype=np.float32) / SR
+    sw = stft_filter(noise(nr, 40), lambda ts, f: logband(f, 2500 + 5000 * ts / 1.2, 1.2))
+    sw *= (tr / 1.2) ** 3
+    place(buf, t0 - 1.2, sw, -0.4, 0.35)
+    place(buf, t0 - 1.2, sw[::-1][::-1] * 0.9, 0.4, 0.35)
+    # 2. the body
+    n = int(2.6 * SR)
     t = np.arange(n, dtype=np.float32) / SR
-    f = 62 * np.exp(-t / 0.45) + 26
-    ph = np.cumsum(f) / SR
-    body = np.sin(2 * np.pi * ph) * np.exp(-t / 0.9)
-    body = np.tanh(body * 4.0) * 0.95
-    click = noise(int(0.012 * SR), 4) * np.linspace(1, 0, int(0.012 * SR))
-    body[:len(click)] += click * 0.5
-    place(buf, B["light"], body, 0.0, 1.0)
-    # the tail: the hiss itself swept downward, widening, then shut
+    f = 55 * np.exp(-t / 0.6) + 28
+    ph = np.cumsum(f.astype(np.float64)) / SR
+    body = np.sin(2 * np.pi * (ph % 1.0)).astype(np.float32) * np.exp(-t / 1.1)
+    body = np.tanh(body * 5.0) * 0.9
+    body = stft_filter(body, lambda ts, fr: 1 / (1 + (fr / 180) ** 4))
+    place(buf, t0, body, 0.0, 1.0)
+    # 3. the punch
+    npun = int(0.35 * SR)
+    tp = np.arange(npun, dtype=np.float32) / SR
+    punch = np.sin(2 * np.pi * (140 * np.exp(-tp / 0.05) + 70) * tp) * np.exp(-tp / 0.08)
+    punch = np.tanh(punch * 3) * 0.8
+    click = noise(int(0.008 * SR), 4) * np.linspace(1, 0, int(0.008 * SR))
+    punch[:len(click)] += click * 0.6
+    place(buf, t0, punch, 0.0, 0.8)
+    # 4. the blast
+    nbl = int(1.6 * SR)
+    tb = np.arange(nbl, dtype=np.float32) / SR
+    for side, seed in ((-0.8, 41), (0.8, 42)):
+        bl = stft_filter(noise(nbl, seed), lambda ts, fr: logband(fr, 7000 * 2 ** (-ts * 4.0) + 150, 1.6))
+        bl *= np.exp(-tb / 0.35) * np.minimum(1, tb * 400)
+        place(buf, t0, bl, side, 0.55)
+    # 5. the tail: the static passing the ears, front to back
     nt = int(1.9 * SR)
     tail_src = noise(nt, 5)
     tt = np.arange(nt, dtype=np.float32) / SR
@@ -166,40 +238,180 @@ def stem_release():
         centre = 5000 * (2 ** (-k * 4.2))
         return logband(fr, centre, 0.9) * (1 - k) ** 1.5
 
-    tail = stft_filter(tail_src, gain)
-    tail *= np.exp(-tt / 0.7)
-    # stereo: the two ears get it a few ms apart and opposite in phase, so it passes and shuts
+    tail = stft_filter(tail_src, gain) * np.exp(-tt / 0.7)
     d = int(0.004 * SR)
-    L = tail
-    R = -np.concatenate([np.zeros(d, np.float32), tail[:-d]])
-    place(buf[:, :1].reshape(-1, 1) if False else buf, B["light"], L, -1.0, 0.9)
-    place(buf, B["light"], R, 1.0, 0.9)
-    return buf
+    place(buf, t0, tail, -1.0, 0.7)
+    place(buf, t0, -np.concatenate([np.zeros(d, np.float32), tail[:-d]]), 1.0, 0.7)
+    # 6. the air: its own long reverb, dark, so the hit blooms and dies away in six seconds
+    seg = buf[int((t0 - 1.3) * SR):int((t0 + 3.0) * SR)].copy()
+    ir = reverb_ir(6.5, rt_low=5.5, rt_high=1.6, seed=77, predelay=0.03)
+    wet = convolve(seg, ir)
+    i0 = int((t0 - 1.3) * SR)
+    m = min(len(wet), N - i0)
+    buf[i0:i0 + m] += wet[:m] * 0.22
+    # true silence after: nothing of the release lasts past 0:45.5 (the note rises out of the end of it)
+    fade = np.interp(T, [0, t0 + 5.0, t0 + 7.4, DURATION], [1, 1, 0, 0]).astype(np.float32)
+    return buf * fade[:, None]
 
 
 def stem_note():
-    """One held note that belongs to whatever we're watching, from the eyes opening to the cliff."""
-    # pitch by beat (Hz): faces A2, the grain up an octave, the proton a third voice, the atom higher,
-    # the photon very high and pure, then down with the world: cell E4, animal A3, people E3, the face A2.
+    """One held note that belongs to whatever we're watching, from the eyes opening to the cliff.
+
+    v3: a steady, warm, sustained tone, not an oscillation (see tone()). Three voices a few cents
+    apart give it a slow living shimmer and width instead of a wobble; the pitch glides between beats
+    over two or three seconds; a soft breath of air rides on its upper harmonics."""
+    # pitch by beat (Hz): faces A2, the grain up a fifth then an octave, the proton a third voice,
+    # the photon high and pure, then down with the world: cell E4, animal A3, people E3, the face A2.
     f = env_curve([
         (0, 110), (B["sep"], 110), (B["eve"], 110), (B["eve"] + 10, 165), (B["vault"], 220),
         (B["land"] + 3, 220), (B["earth"], 196), (B["lights"], 196), (B["lights"] + 12, 247), (B["cross"] - 1, 880),
-        (B["cross"], 880), (B["swarm"], 330), (B["landbeat"], 220), (B["dust"], 196), (B["fill"], 165),
-        (B["rest"], 110), (DURATION, 110)])
+        (B["cross"], 880), (B["swarm"] - 2, 880), (B["swarm"] + 1, 330), (B["landbeat"], 330), (B["landbeat"] + 3, 220),
+        (B["dust"], 220), (B["dust"] + 3, 196), (B["fill"], 196), (B["fill"] + 3, 165),
+        (B["rest"], 165), (B["rest"] + 3, 110), (DURATION, 110)])
     amp = env_curve([
-        (0, 0), (44.5, 0), (45.5, 0.12), (B["sep"] + 12, 0.16), (B["sep"] + 13, 0.10), (B["eve"], 0.10),
-        (B["vault"], 0.16), (B["cross"], 0.22), (B["cross"] + 6, 0.16), (B["swarm"], 0.14), (B["fill"], 0.10),
+        (0, 0), (B["light"] + 6.4, 0), (B["light"] + 8.5, 0.12), (B["sep"] + 12, 0.16), (B["sep"] + 13, 0.10), (B["eve"], 0.10),
+        (B["vault"], 0.15), (B["cross"], 0.20), (B["cross"] + 6, 0.16), (B["swarm"], 0.14), (B["fill"], 0.10),
         (B["rest"], 0.10), (B["rest"] + 17, 0.10), (B["rest"] + 22, 0.0), (DURATION, 0)])
-    # the timbre: purer for the photon, warmer for the faces and people
     purity = env_curve([(0, 0.3), (B["lights"] + 12, 0.3), (B["cross"], 1.0), (B["swarm"], 0.4), (DURATION, 0.3)])
-    base = tone(f, amp, harmonics=((1, 1.0),), vib=0.003)
-    warm = tone(f, amp, harmonics=((1, 0.0), (2, 0.35), (3, 0.18), (4, 0.08), (5, 0.04)), vib=0.003)
-    out = base + warm * (1 - purity)
+    warm_h = ((1, 0.0), (2, 0.32), (3, 0.16), (4, 0.07), (5, 0.035), (6, 0.015))
+    L = np.zeros(N, np.float32)
+    R = np.zeros(N, np.float32)
+    for k, (cents, pan) in enumerate(((0.0, 0.0), (-4.0, -0.6), (4.0, 0.6))):
+        fk = f * 2 ** (cents / 1200)
+        base = tone(fk, amp, harmonics=((1, 1.0),), vib=0.0015, vib_rate=0.23 + 0.05 * k, seed=k)
+        warm = tone(fk, amp, harmonics=warm_h, vib=0.0015, vib_rate=0.23 + 0.05 * k, seed=k)
+        v = (base + warm * (1 - purity)) * (0.6 if k == 0 else 0.45)
+        th = (pan + 1) * np.pi / 4
+        L += v * np.cos(th)
+        R += v * np.sin(th)
     # the proton: two more voices lock in at 106-109 s (a fifth and an octave), and stay through the atom
-    k = env_curve([(0, 0), (B["land"] + 2.5, 0), (B["land"] + 5, 1), (B["earth"] + 6, 1), (B["lights"] + 10, 0), (DURATION, 0)])
-    out += tone(f * 1.5, amp * 0.6 * k, harmonics=((1, 1.0), (2, 0.2)), vib=0.004)
-    out += tone(f * 2.0, amp * 0.4 * k, harmonics=((1, 1.0),), vib=0.005)
-    return np.stack([out, out], axis=1)
+    kp = env_curve([(0, 0), (B["land"] + 2.5, 0), (B["land"] + 5, 1), (B["earth"] + 6, 1), (B["lights"] + 10, 0), (DURATION, 0)])
+    v5 = tone(f * 1.5, amp * 0.5 * kp, harmonics=((1, 1.0), (2, 0.2)), vib=0.001, vib_rate=0.31, seed=5)
+    v8 = tone(f * 2.0, amp * 0.35 * kp, harmonics=((1, 1.0),), vib=0.001, vib_rate=0.27, seed=6)
+    L += v5 * 0.8 + v8 * 0.6
+    R += v5 * 0.6 + v8 * 0.8
+    # air: noise breathing on the 4th-6th harmonics, very quiet
+    air = noise(N, 61)
+
+    def ag(ts, fr):
+        i = min(int(ts * SR), N - 1)
+        return logband(fr, float(f[i]) * 5, 0.35) * 0.5
+
+    a_ = stft_filter(air, ag) * amp * 0.15 * (1 - purity * 0.5)
+    L += a_
+    R += a_
+    return np.stack([L, R], axis=1)
+
+
+def stem_atmos():
+    """v3, new: the atmosphere the author asked for ("much more atmospheric, like a soundscape").
+    Slow pads and textures around the held note, in its key, that change with each beat's color:
+
+    - the release's bloom: a high shimmer (octaves of A, slowly beating) that rises out of the hit and
+      fades into the silence before the eyes open;
+    - beat 3, the separation: a low, close cluster under the laugh (A, B flat, E flat: the tension of
+      a tritone), swelling with the climb; then at the turn-over an open fifth and octave, warm;
+    - beat 4: the two chords trading with the turns, then dissolving into a granular cloud of the note's
+      own partials as the grains take over;
+    - beats 5-8: the cosmos, a wide pad of fifths with a shimmer of high partials drifting across the
+      stereo field, slowly filtered open and shut; it thins as the glare clears and swells in the star;
+    - beat 9: nothing (the note alone, as the treatment says);
+    - from beat 10: a very low bed under the world sounds, darkening to almost nothing at the cliff."""
+    out = np.zeros((N, 2), np.float32)
+    A = 55.0
+
+    def pad(freqs, env, bright, seed, detune=6.0, width=0.8):
+        L = np.zeros(N, np.float32)
+        R = np.zeros(N, np.float32)
+        for j, fq in enumerate(freqs):
+            for k, c in enumerate((-detune, 0.0, detune)):
+                fc = env_curve([(0, fq), (DURATION, fq)]) * 2 ** (c / 1200)
+                h = ((1, 1.0), (2, 0.5 * bright), (3, 0.33 * bright), (4, 0.22 * bright), (5, 0.15 * bright), (6, 0.1 * bright))
+                v = tone(fc, env, harmonics=h, vib=0.002, vib_rate=0.11 + 0.03 * k + 0.02 * j, seed=seed + 3 * j + k)
+                pan = (k - 1) * width * (1 if j % 2 == 0 else -1)
+                th = (pan + 1) * np.pi / 4
+                L += v * np.cos(th)
+                R += v * np.sin(th)
+        return np.stack([L, R], 1) / (3 * len(freqs))
+
+    # the release's shimmer: A5, A6 and E7, beating, out of the hit and gone by 0:44
+    env = env_curve([(0, 0), (B["light"], 0), (B["light"] + 0.3, 0.5), (B["light"] + 2.5, 0.25), (B["light"] + 6.0, 0.0), (DURATION, 0)])
+    out += pad([A * 16, A * 32, A * 48], env, 0.1, 100, detune=9.0) * 0.5
+    # beat 3: separation
+    sep_env = env_curve([(0, 0), (B["light"] + 7.5, 0), (B["sep"], 0.3), (B["sep"] + 11, 1.0), (B["sep"] + 12.5, 1.0), (B["sep"] + 12.6, 0.0), (DURATION, 0)])
+    out += pad([A, A * 2 ** (1 / 12) * 2, A * 2 ** (6 / 12) * 2], sep_env, 0.9, 200, detune=10.0) * 0.6
+    con_env = env_curve([(0, 0), (B["sep"] + 12.5, 0), (B["sep"] + 12.8, 1.0), (B["eve"] - 1, 0.6), (B["eve"], 0.3), (B["eve"] + 8, 0.25), (B["eve"] + 14, 0), (DURATION, 0)])
+    out += pad([A, A * 1.5 * 2, A * 4], con_env, 0.6, 300) * 0.6
+    sep2 = env_curve([(0, 0), (B["eve"], 0), (B["eve"] + 0.2, 0.5), (B["eve"] + 8, 0.35), (B["eve"] + 14, 0), (DURATION, 0)])
+    out += pad([A, A * 2 ** (1 / 12) * 2, A * 2 ** (6 / 12) * 2], sep2, 0.9, 210, detune=10.0) * 0.4
+    # the cosmos
+    cos_env = env_curve([(0, 0), (B["eve"] + 9, 0), (B["vault"] + 2, 0.8), (B["land"] + 10, 0.6), (B["earth"], 0.7),
+                         (B["lights"] + 8, 0.9), (B["lights"] + 12, 1.1), (B["cross"] - 0.5, 0.6), (B["cross"], 0.0), (DURATION, 0)])
+    cosmos = pad([A * 2, A * 3, A * 4, A * 6], cos_env, 0.5, 400, detune=7.0, width=1.0)
+
+    def sweep(ts, fr):
+        cut = 600 * 2 ** (2.5 * (0.5 + 0.5 * np.sin(2 * np.pi * ts / 13.0)))
+        return 1 / (1 + (fr / cut) ** 2)
+
+    out[:, 0] += stft_filter(cosmos[:, 0], sweep) * 0.9
+    out[:, 1] += stft_filter(cosmos[:, 1], sweep) * 0.9
+    # the shimmer of high partials: short soft grains of the note's harmonics, drifting in stereo
+    r = rng(500)
+    t = B["eve"] + 8.0
+    while t < B["cross"] - 0.5:
+        dur = r.uniform(0.25, 1.2)
+        n = int(dur * SR)
+        tt = np.arange(n, dtype=np.float32) / SR
+        f0 = A * 2 ** r.integers(3, 6) * [1, 1.5, 2, 2.5, 3][r.integers(0, 5)]
+        g_ = np.sin(2 * np.pi * f0 * tt) * np.sin(np.pi * tt / dur) ** 2
+        k = float(np.interp(t, [B["eve"] + 8, B["vault"] + 2, B["land"] + 12, B["lights"], B["cross"] - 0.5], [0, 1.0, 0.5, 0.8, 0.0]))
+        place(out, t, g_, r.uniform(-1, 1), 0.012 * k)
+        t += r.exponential(0.06)
+    # the world's bed
+    w_env = env_curve([(0, 0), (B["swarm"], 0), (B["swarm"] + 3, 0.5), (B["fill"], 0.4), (B["rest"], 0.25), (B["rest"] + 20, 0.0), (DURATION, 0)])
+    out += pad([A, A * 1.5, A * 2], w_env, 0.3, 600) * 0.5
+    return out
+
+
+# ------------------------------------------------------------------------- space
+
+def reverb_ir(seconds, rt_low=4.0, rt_high=1.2, seed=0, predelay=0.02):
+    """A stereo impulse response made of noise that decays faster in the highs than in the lows, as a
+    big stone room or open air at night does. rt_*: seconds to fall 60 dB."""
+    n = int(seconds * SR)
+    t = np.arange(n, dtype=np.float32) / SR
+    out = np.zeros((n, 2), np.float32)
+    bands = ((60, 400, rt_low), (400, 2000, (rt_low + rt_high) / 2), (2000, 20000, rt_high))
+    for ch in range(2):
+        x = noise(n, seed + ch)
+        X = np.fft.rfft(x)
+        fr = np.fft.rfftfreq(n, 1 / SR)
+        y = np.zeros(n, np.float32)
+        for lo, hi, rt in bands:
+            Xb = np.where((fr >= lo) & (fr < hi), X, 0)
+            yb = np.fft.irfft(Xb, n).astype(np.float32)
+            y += yb * np.exp(-6.91 * t / rt)
+        # a soft attack, so the room blooms rather than clicks
+        y *= np.minimum(1.0, t / 0.08)
+        out[:, ch] = y
+    d = int(predelay * SR)
+    out = np.concatenate([np.zeros((d, 2), np.float32), out])[:n]
+    return out / np.sqrt((out ** 2).sum(0, keepdims=True) + 1e-9)
+
+
+def convolve(x, ir):
+    """Overlap-add FFT convolution, stereo in, stereo out (left with left, right with right)."""
+    n, m = len(x), len(ir)
+    blk = 1 << 18
+    nfft = 1 << int(np.ceil(np.log2(blk + m - 1)))
+    out = np.zeros((n + m - 1, 2), np.float32)
+    for ch in range(2):
+        H = np.fft.rfft(ir[:, ch], nfft)
+        for i in range(0, n, blk):
+            seg = x[i:i + blk, ch]
+            y = np.fft.irfft(np.fft.rfft(seg, nfft) * H, nfft)[:len(seg) + m - 1]
+            out[i:i + len(y), ch] += y.astype(np.float32)
+    return out
 
 
 def stem_laugh():
@@ -307,14 +519,15 @@ def stem_cosmos():
     buf[:, 1] += pad
     # ignitions: bright attacks at the stars' own times; bursts as low booms
     W = A.make_web_points(91)
-    for i in range(len(W["ignite"])):
+    stars = A.web_stars()  # the same stars, in the same places, as the picture (beat_lights)
+    for i in range(min(len(stars), len(W["ignite"]))):
         t0 = B["lights"] + float(W["ignite"][i])
         n = int(0.6 * SR)
         tt = np.arange(n, dtype=np.float32) / SR
         src = noise(n, 200 + i)
         x = stft_filter(src, lambda ts, f: logband(f, 6000 * np.exp(-ts * 2.5) + 800, 0.7))
         x = x * np.exp(-tt / 0.18)
-        pan = float(np.clip(W["pts"][i][0] / 2.0, -1, 1))
+        pan = float(np.clip(stars[i][0] / 1.78, -1, 1))
         place(buf, t0, x, pan, 0.35)
         place(buf, t0, blip(1320 * (1 + 0.3 * r.random()), 0.5, 0.12, 0.6), pan, 0.5)
         if W["burst"][i]:
@@ -528,15 +741,22 @@ def write_wav(path, x):
 
 
 STEMS = [("hiss", stem_hiss), ("whisper", stem_whisper), ("release", stem_release), ("note", stem_note),
-         ("laugh", stem_laugh), ("grains", stem_grains), ("cosmos", stem_cosmos), ("world", stem_world)]
+         ("atmos", stem_atmos), ("laugh", stem_laugh), ("grains", stem_grains), ("cosmos", stem_cosmos),
+         ("world", stem_world)]
 
 # mix levels: the release is the loudest thing in the sequence by a wide margin (treatment, beat 2)
-GAINS = dict(hiss=1.0, whisper=1.0, release=1.0, note=0.6, laugh=0.6, grains=0.3, cosmos=0.45, world=0.3)
+GAINS = dict(hiss=1.8, whisper=1.8, release=1.0, note=0.55, atmos=0.5, laugh=0.6, grains=0.3, cosmos=0.45, world=0.3)
+
+# v3: everything sits in one space. How much of each stem goes to the reverb; the release brings its
+# own (stem_release, layer 6). The space is vast through the abstract beats and closes in from beat 10,
+# when the world turns ordinary, to almost nothing at the cliff (open air, real time).
+SENDS = dict(hiss=0.35, whisper=0.5, release=0.0, note=0.55, atmos=0.7, laugh=0.6, grains=0.7, cosmos=0.6, world=0.15)
 
 
 def build(outdir, write_stems=True):
     os.makedirs(outdir, exist_ok=True)
     mix = np.zeros((N, 2), np.float32)
+    send = np.zeros((N, 2), np.float32)
     for name, fn in STEMS:
         s = fn() * GAINS[name]
         if s.shape[0] != N:
@@ -545,6 +765,14 @@ def build(outdir, write_stems=True):
         if write_stems:
             write_wav(os.path.join(outdir, f"stem-{name}.wav"), s)
         mix += s
+        send += s * SENDS[name]
+    space_amt = env_curve([(0, 1.0), (B["swarm"], 1.0), (B["swarm"] + 4, 0.45), (B["rest"], 0.25), (DURATION, 0.15)])
+    ir = reverb_ir(5.0, rt_low=4.5, rt_high=1.4, seed=99, predelay=0.035)
+    wet = convolve(send * space_amt[:, None], ir)[:N] * 0.35
+    print(f"stem {'space':8s} peak {np.abs(wet).max():.3f}", flush=True)
+    if write_stems:
+        write_wav(os.path.join(outdir, "stem-space.wav"), wet)
+    mix += wet
     # the release is the loudest thing by a wide margin: everything else sits well under it
     mix = limiter(mix)
     write_wav(os.path.join(outdir, "mix.wav"), mix)

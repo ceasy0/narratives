@@ -2,7 +2,7 @@
 luminance larger than a threshold, per second, in the two risky stretches (beat 4 and beat 11),
 and reports the worst second. This is not IRIS or PEAT and does not replace them (treatment §5).
 
-    python check_flicker.py ../opening-animatic-v2.mp4
+    python check_flicker.py ../opening-animatic-v3.mp4
 """
 import subprocess
 import sys

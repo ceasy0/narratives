@@ -1,6 +1,6 @@
 """Build the Opening animatic end to end: frames (in parallel), the soundtrack, and the mux.
 
-    python build.py                       # 960x540, 24 fps, 4 processes -> out/*-hq.mp4 (local) and ../opening-animatic-v2.mp4 (repo copy, 854x480)
+    python build.py                       # 960x540, 24 fps, 4 processes -> out/*-hq.mp4 (local) and ../opening-animatic-v3.mp4 (repo copy, 854x480)
     python build.py --w 1920 --h 1080     # full HD (about four times the render time)
     python build.py --audio-only          # regenerate the soundtrack and remux
 
@@ -25,7 +25,7 @@ def main():
     ap.add_argument("--h", type=int, default=540)
     ap.add_argument("--fps", type=int, default=24)
     ap.add_argument("--procs", type=int, default=4)
-    ap.add_argument("--out", default=os.path.join(HERE, "..", "opening-animatic-v2.mp4"))
+    ap.add_argument("--out", default=os.path.join(HERE, "..", "opening-animatic-v3.mp4"))
     ap.add_argument("--audio-only", action="store_true")
     ap.add_argument("--no-stems", action="store_true")
     a = ap.parse_args()
@@ -43,7 +43,7 @@ def main():
     print(f"audio done at {time.time() - t0:.0f} s", flush=True)
     # the full-quality file stays local (the static beats make it about 230 MB at 960x540);
     # the repository copy is re-encoded small enough to commit (854x480, about 40 MB)
-    hq = os.path.join(work, "opening-animatic-v2-hq.mp4")
+    hq = os.path.join(work, "opening-animatic-v3-hq.mp4")
     subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-i", silent, "-i", mix, "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
                            "-shortest", "-movflags", "+faststart", hq])
     final = os.path.abspath(a.out)

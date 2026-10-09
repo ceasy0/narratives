@@ -12,6 +12,7 @@ from PIL import Image, ImageDraw
 from common import (Grid, smoothstep, sstep, lerp, ease_in_out, disc, gauss, blur, hsv, gray, over,
                     over_img, add, rng, Static)
 import face as F
+import facemesh as FM
 from beats_abstract import B, Ctx, draw_cell, splat, SMALL
 
 # ------------------------------------------------------------------ a silhouette canvas (PIL)
@@ -909,28 +910,23 @@ def beat_rest(w: WCtx, t):
 
 
 def lit_face(w: WCtx, img, cx, cy, s, e, lit, t):
+    """The face at the cliff (v3): the same mesh face as the static's, lit by the early sun from the
+    left, skin-toned, with a warm rim; its edge falls into shadow."""
     g = w.g
-    f = w.c.face(cx, cy, s, e)
-    sh = F.shade(f, light=(-0.6, 0.5, 0.65), ambient=0.3, strength=1.3)
+    f = w.c.mface(cx, cy, s, e)
+    key = FM.lambert(f, (-0.6, 0.5, 0.65), wrap=0.3)
+    rim = FM.lambert(f, (0.85, 0.25, 0.2), wrap=0.0) ** 2
+    occ = FM.cavity(f)
     skin = np.array([0.62, 0.42, 0.28], np.float32)
-    col = skin * (0.35 + 0.75 * sh)[..., None]
-    # warm rim from the morning light on the left
-    col += gray(np.clip(1 - F.shade(f, light=(0.8, 0.3, 0.3), ambient=0.0, strength=1.3), 0, 1) ** 3 * f["mask"]) * np.array([0.5, 0.3, 0.15], np.float32) * 0.6
-    # the eyes: whites, iris, pupil
+    col = skin * (0.18 + 0.85 * key * (1 - 0.5 * occ))[..., None]
+    col += rim[..., None] * np.array([0.5, 0.3, 0.15], np.float32) * 0.5
     eyes = f["eyes"]
-    col = over(col, eyes, (0.85, 0.82, 0.78))
-    for sgn in (-1, 1):
-        ex, ey = cx + sgn * 0.31 * s, cy + 0.215 * s
-        iris = disc(g, ex, ey, 0.055 * s) * eyes
-        col = over(col, iris, (0.3, 0.18, 0.08))
-        col = over(col, disc(g, ex, ey, 0.026 * s) * eyes, (0.02, 0.02, 0.02))
-        col = add(col, disc(g, ex - 0.02 * s, ey + 0.02 * s, 0.01 * s) * eyes, (0.6, 0.6, 0.6))
+    col = over(col, eyes * (1 - f["iris"]), (0.78, 0.74, 0.70))
+    col = over(col, f["iris"], (0.22, 0.13, 0.06))
     col = over(col, f["mouth"], (0.15, 0.07, 0.05))
-    col = col - gray(f["brow"] * 0.25 + f["lids"] * 0.15) * f["mask"][..., None]
-    sil = (0.06, 0.05, 0.04)
-    dark = np.asarray(sil, np.float32)[None, None, :] * np.ones_like(col)
-    face_img = dark * (1 - lit) + col * lit
-    return over_img(img, f["mask"], face_img)
+    sil = np.asarray((0.06, 0.05, 0.04), np.float32)
+    face_img = sil[None, None, :] * (1 - lit) + col * lit
+    return over_img(img, f["edge"], face_img)
 
 
 def zoom_to(w: WCtx, img, cx, cy, zoom):
