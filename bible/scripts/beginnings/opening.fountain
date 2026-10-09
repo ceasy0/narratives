@@ -1,15 +1,17 @@
 Title: ADONAI
 Credit: Episode 1, "In the Beginning"
 Author: The Opening (Genesis 1:1–2:7)
-Draft date: 2026-10-08
-Notes: Shooting script, first draft, v1.1
+Draft date: 2026-10-09
+Notes: Shooting script, first draft, v1.2
 
 /*
 ABOUT THIS SCRIPT
 
-One unbroken sequence, 5:00, no words. Every shot is timed to treatment v3.2 and tagged. Timecodes are from the first frame. The animatic (production/opening/opening-animatic-v2.mp4) is cut to these exact timings.
+One unbroken sequence, 5:00, no words. Every shot is timed to treatment v3.3 and tagged. Timecodes are from the first frame. The animatic (production/opening/opening-animatic-v3.mp4) is cut to these exact timings.
 
 v1.1 (2026-10-08): ten seconds added at the front, the fade in from black (the author's note). Every timecode after 00:00 is ten seconds later than in v1; nothing else has changed.
+
+v1.2 (2026-10-09): the author's notes on animatic v2, as treatment v3.3. No time moved. The fade starts on frame 0; the static is sand pouring over a face that rises under it; the large face forms off to the side; the turn-overs are fronts of light; the faces break up into the grains; the first colors are sparks of light; beat 5 falls into a fractal.
 
 See bible/story/arcs/01-beginnings/opening/TREATMENT.md for every source and every decision behind each shot.
 */
@@ -24,19 +26,19 @@ FADE IN:
 
 EXT./INT. THE DEEP — NO TIME
 
-00:00. Black. Nothing on screen.
+00:00. Black. From this first frame the picture is already coming up, too slowly to see at first.
 
-SOUND: Out of silence, a hiss like wind over open water, very faint, rising. It is heard before anything is seen. [[P5: the first ten seconds fade in from black, picture and sound (2026-10-08). P6, confirmed the same day: the sound leads the picture slightly. P1: 1:2, "darkness was over the face of the deep."]]
+SOUND: Out of silence, a hiss like wind over open water, very faint, rising, with the dry crackle of pouring sand in it and a low swell under it. It is heard a little before anything is seen. [[P5: the first ten seconds fade in from black, picture and sound (2026-10-08), starting on frame 0, slowly (2026-10-09); the mix a soundscape (2026-10-09). P6, confirmed 2026-10-08: the sound leads the picture slightly. P1: 1:2, "darkness was over the face of the deep."]]
 
-00:02 to 00:10. The static comes up out of the black: the same grain, edge to edge, only brighter by the second. No shape in it. It does not flow yet.
+00:00 to 00:10. The static comes up out of the black: grain like fine sand, edge to edge, only brighter by the second. No shape in it. It does not flow yet.
 
 00:10. Black and white static fills the frame, edge to edge, at full strength. No shape in it.
 
 SOUND: The hiss is at its full level from 00:09: wide, and nothing else. [[P1: 1:2, the ruach over the face of the waters. P5.]]
 
-00:14. The static begins to flow: a current, with eddies in it, like wind over a map. The grain is unchanged. Only its motion changes.
+00:14. The static begins to flow: a current, with eddies in it, like wind over a map, or sand blown over a dune. The grain is unchanged. Only its motion changes.
 
-00:16. Where it flows, something is standing out of it: a human face, centre frame, eyes closed, expressionless. Nothing draws it. The static inside the face moves differently from the static around it. If the current stopped, the face would vanish. By 00:27 it is unmistakable. [[P1: "the face of the deep," "the face of the waters." P5: your image. Build note: the filmed face as a depth map drives the flow (dossier §6). The animatic adds a faint contrast cue inside the face because compression kills the motion cue; the final render tests the motion cue alone.]]
+00:16. Where it flows, something is rising under it: a human face, centre frame, eyes closed, expressionless, like a face pressed up under a sheet of pouring sand. Nothing draws it. The grains run around its brow, its nose, its lips and the hollows of its eyes, and catch the light on one side of each, so the features are there and not just the outline. If the sand stopped running, the face would sink back into it. By 00:27 it is unmistakable. [[P1: "the face of the deep," "the face of the waters." P5: your image; "like flowing sand overtop an extruding face," the eyes, nose and mouth seen (2026-10-09). Build note: the filmed face as a depth map is the relief the sand flows over (dossier §6).]]
 
 SOUND: Before the face can be seen, the hiss finds it. In the middle of the field a part of the noise moves differently: the same hiss, shaped like breath through an open mouth and throat. A whisper with no words in it, centred where the face is. Most people will feel it before they see the face. [[P5: the face needs a sound. P6: the whisper, made of the hiss itself, confirmed 2026-10-07.]]
 
@@ -46,9 +48,9 @@ SOUND: The whisper draws in, and the whole hiss draws in with it. It narrows and
 
 = BEAT 2. LIGHT (0:38–0:46). Gen 1:3–4.
 
-00:38:00. ONE FRAME: the whole field of static is thrown onto the face like a sheet in a gale, and every contour of the face shows through it.
+00:38:00. TWO FRAMES: the whole field of sand is pressed onto the face like a sheet in a gale, and every contour of the face shows through it.
 
-00:38:04 to 00:38:08 (four frames). The static is blasted away from us, into the picture: it contracts toward the head, whips around it and shuts behind it. It takes the dark with it. The face it leaves is white. [[P5: whipped behind the face in a blink, the face turned white as it goes (2026-10-05). P1: 1:3, "and there was light," the fastest fulfilment in the chapter.]]
+00:38:02 to 00:38:10. The sand is blasted away from us, into the picture: it streaks inward toward the head, whips around it and shuts behind it. It takes the dark with it. The face it leaves is white, lit as a real face is lit. [[P5: whipped behind the face in a blink, the face turned white as it goes (2026-10-05). P1: 1:3, "and there was light," the fastest fulfilment in the chapter.]]
 
 SOUND: At the top of the climb, everything lets go at once. A hit with real weight under it: a distorted sub-bass impact, the body of the blast. Then the tail: the static itself, pitched and smeared, passing the ears front to back and shutting behind the head as the picture shows it. The release is the loudest thing in the sequence by a wide margin, twenty decibels over the hiss. Then nothing: a true silence. [[P5: "needs to be incredibly powerful," techno-weight bass with a layered, atmospheric mid-high tail (2026-10-07). P6: the breath let go at the size of the universe, built from the hiss so it obeys rule 4.]]
 
@@ -60,7 +62,7 @@ SOUND: Out of the last resonance of the tail, one clear note, very quiet. It hol
 
 = BEAT 3. THE SEPARATION (0:46–1:08). Gen 1:4.
 
-00:46. Two faces, one frame. The second is far larger, black on black, seen only by its edges and creases, and it is the same face. Its brows are down and its mouth is a smile: malice. The small white face sees it: brows up, mouth open in a frown: fear. [[P5: the four-face rule (2026-10-07): the large faces smile, the small faces frown; raised brows for fear and compassion, lowered for malice and upset. No two faces share both features. Build note: the rule is the starting state; if it doesn't read on the filmed face, the face wins and the rule bends (your check, 2026-10-08).]]
+00:46. Two faces, one frame. The small white face has moved aside, to the left. The second is far larger, off to the right and turned toward it, not behind it: black on black, lit only by the small face's light, seen only by its edges and creases, and it is the same face. Its brows are down and its mouth is a smile: malice. The small white face sees it: brows up, mouth open in a frown: fear. [[P5: the four-face rule (2026-10-07): the large faces smile, the small faces frown; raised brows for fear and compassion, lowered for malice and upset. No two faces share both features. Build note: the rule is the starting state; if it doesn't read on the filmed face, the face wins and the rule bends (your check, 2026-10-08).]]
 
 00:46 to 00:57. Both climb, and nothing else moves. The large face's malice widens into glee and the glee into a wide, open-mouthed laugh: the face of something that believes it is everything, past all reason. The small face's fear becomes terror. The brows hold; the mouths open. [[P5: the faces gain intensity to the climax (2026-10-05). P1: Ps 50:21; Ps 18:26; Ps 2:4; Prov 1:26. Decided 2026-10-05: all four faces are one face; the laughing face is the small face's own, enlarged. The malice is not in God.]]
 
@@ -68,7 +70,7 @@ SOUND: From 00:52 the hiss comes back under the note in hard pulses, in the rhyt
 
 00:57 to 00:58:12. At the height of it the dark face comes for the white one, and reaches it.
 
-00:58:12. ONE FRAME. At the touch, everything turns over, both faces together. The ground is white. The small face is dark, brows down, mouth in a frown: upset, unsatisfied. The large face around it is white on white, brows up, mouth in a smile: compassion. It doesn't strike. It tends the small one. [[P5: both sides form in sync (2026-10-07); connection is a dark face held in light. P1: 1:4; Deut 32:39, "I wound and I heal."]]
+00:58:12. At the touch, everything turns over, both faces together: a front of light runs out from where they meet and crosses the frame in half a second, fast but not a cut. Behind it the ground is white. The small face is dark, brows down, mouth in a frown: upset, unsatisfied. The large face around it is white on white, brows up, mouth in a smile: compassion. It doesn't strike. It tends the small one. [[P5: both sides form in sync (2026-10-07); connection is a dark face held in light; the transition smoother (2026-10-09). P1: 1:4; Deut 32:39, "I wound and I heal."]]
 
 SOUND: The pulses stop dead on the turn. The note, low.
 
@@ -76,17 +78,17 @@ SOUND: The pulses stop dead on the turn. The note, low.
 
 = BEAT 4. EVENING AND MORNING (1:08–1:24). Gen 1:5.
 
-01:08. It turns back, whole frame: dark ground. The small face wakes white, already afraid; the large face is already laughing. 01:10: the blow lands and we see it; the turn: white ground, dark face, the hurt tended, both sinking toward sleep. 01:11:12: dark. 01:12:14: light. Each turn is quicker than the last and goes further: the laugh wider, the terror sharper, the peace sooner, the sleep deeper. [[P1: 1:5. P5. Safety: only the first three turns take the whole frame, never more than three a second (treatment §5, problem 1).]]
+01:08. It turns back, whole frame, as a front of dark: dark ground. The small face wakes white, already afraid; the large face is already laughing. 01:10: the blow lands and we see it; the turn: white ground, dark face, the hurt tended, both sinking toward sleep. 01:11:12: dark. 01:12:14: light. Each turn is quicker than the last and goes further: the laugh wider, the terror sharper, the peace sooner, the sleep deeper. [[P1: 1:5. P5. Safety: only the first three turns take the whole frame, never more than three a second (treatment §5, problem 1).]]
 
 SOUND: The note climbs a fifth. Each turn ticks. Each dark phase brings the laugh's pulses back, shorter each time.
 
-01:11 to 01:15. The change stops taking the whole frame. It spreads: the turn runs through the ground in uneven fronts, like ink in water or frost over glass, and leaves patches of every shape and size, each turning on its own beat. The patches crack into smaller ones, like mud drying. Never in lines. Never in a grid. [[P5: organic, "not like 4 screens" (2026-10-05). P6: the spreading, which keeps the flicker safe. Safety rule: the grains turn out of step so the frame's brightness holds steady; the render is checked with IRIS or PEAT before anyone watches it.]]
+01:11 to 01:15. The change stops taking the whole frame. It spreads: the turn runs through the ground in uneven fronts, like ink in water or frost over glass, and leaves patches of every shape and size, each turning on its own beat. The patches crack into smaller ones, like mud drying. Each patch keeps the faces in its own state, so the faces themselves break up into the patches; nothing is laid over them. Never in lines. Never in a grid. [[P5: organic, "not like 4 screens" (2026-10-05); the faces break up with the ground, not under it (2026-10-09). P6: the spreading, which keeps the flicker safe. Safety rule: the grains turn out of step so the frame's brightness holds steady; the render is checked with IRIS or PEAT before anyone watches it.]]
 
 SOUND: The ticks multiply into a granular shimmer, each grain on its own beat.
 
 01:13 to 01:17. The faces have turned so fast that every expression is on them at once. They blur into one grey.
 
-01:15 to 01:24. Black and white are the size of grains and the frame is a sea of them, shimmering, never flashing. Where two grains meet there is a flash of color: the first color in the sequence. More of it every second. [[P5: the ground becomes a sea of particles. P6: color born from black and white. P2: Fechner colors.]]
+01:15 to 01:24. Black and white are the size of grains and the frame is a sea of them, shimmering, never flashing. Where two grains meet, a spark of colored light flares and dies: the first color in the sequence. More of them every second, and a faint sheen like a soap film drifts over the whole sea. [[P5: the ground becomes a sea of particles; the first colors as flashes of light, the shimmer stronger (2026-10-09). P6: color born from black and white. P2: Fechner colors.]]
 
 SOUND: From 01:17, pitched grains inside the shimmer: the first color has the first pitches.
 
@@ -96,7 +98,7 @@ SOUND: From 01:17, pitched grains inside the shimmer: the first color has the fi
 
 01:24 to 01:28. The picture has been flat until now. It opens: the grains have distance between them, near ones and far ones, and we move in among them. There is room. [[P5: the vault as the space things happen in, made of the particles and what passes between them. P6: shown as the picture gaining depth, kept.]]
 
-01:28 to 01:44. The wildest part of the sequence. Grains appear in pairs and vanish in pairs, every flash a color. The sea is so thick with light that nothing can be seen through it for more than a moment. It folds, streams, gathers into patterns and loses them, always organic. Nothing holds still except our particle, centre frame, white, steady. It is restless: it darts and doubles back. It is alone. [[P2: pair creation and annihilation; the universe opaque. P5: the two waters as two fundamental things.]]
+01:28 to 01:44. The wildest part of the sequence. Grains appear in pairs and vanish in pairs, every flash a color. The sea is so thick with light that nothing can be seen through it for more than a moment. It folds, streams, gathers into patterns and loses them, always organic. Nothing holds still except our particle, centre frame, white, steady. It is restless: it darts and doubles back. It is alone. Behind the sea, far off, a boundary that never ends: the edge of a fractal, the Mandelbrot set's, which we fall toward and never reach; every fold opens into more folds. It fades as the land comes. [[P2: pair creation and annihilation; the universe opaque. P5: the two waters as two fundamental things; try fractal geometry (2026-10-09). P6: the fall into the Mandelbrot set's boundary.]]
 
 SOUND: Every flash is a blip whose pitch is its color and whose place is its place in the frame. Thousands of them. The note holds under all of it, an octave up. [[Rule 2, literally: the animatic's blips are the same events the picture draws.]]
 

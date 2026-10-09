@@ -1,10 +1,10 @@
 # The Opening — production
 
-> The visualization of Genesis 1:1–2:7. As of 2026-10-08: an animatic of the whole 5:00 (v2), rendered in code with a generated soundtrack, cut to [treatment v3.2](../../story/arcs/01-beginnings/opening/TREATMENT.md)'s timings and the [script](../../scripts/beginnings/opening.fountain)'s shots.
+> The visualization of Genesis 1:1–2:7. As of 2026-10-09: an animatic of the whole 5:00 (v3), rendered in code with a generated soundtrack, cut to [treatment v3.3](../../story/arcs/01-beginnings/opening/TREATMENT.md)'s timings and [script v1.2](../../scripts/beginnings/opening.fountain)'s shots. How far past this the finished film can go, and with which tools, is in [ASSESSMENT.md](./ASSESSMENT.md), with the brief for the sound in FL Studio.
 
-**v2 (2026-10-08, evening):** your note applied. Ten seconds are added at the front, and they are a fade in from black: the hiss rises out of silence from 0:00, the static comes up from about 0:02 and is at full strength by 0:10. Everything after that runs ten seconds later than in v1, and nothing else has changed. v1 (4:50, opening cold on static) is still in the folder as `opening-animatic-v1.mp4` until you say to remove it.
+**v3 (2026-10-09):** your notes on v2 applied. No timing moved. The face is now a real human face mesh with the four-face rule's expressions; the static is sand pouring over the face as it rises, so the eyes, nose and mouth read; the fade starts on frame 0; the release has six layers and its own space; the held note no longer wobbles (v2's vibrato grew the longer it held: a bug); the large face forms off to the side; the turn-overs are fronts of light; the faces break up into the grains; the first colors are sparks of light with a soap-film sheen; beat 5 falls into the Mandelbrot set's boundary; the gas grows into a cosmic web and the stars light at its knots. Everything sits in one reverb space. v2 (5:00, with the fade) and v1 (4:50) are still in the folder until you say to remove them, and in the git history either way.
 
-**Watch:** [`opening-animatic-v2.mp4`](./opening-animatic-v2.mp4) (5:00, 854×480, 24 fps, stereo, 44 MB: the repository copy, re-encoded small because the static beats don't compress). **Build it:** `py animatic/build.py` (needs Python 3.10+, numpy, Pillow, ffmpeg). On your desktop the full render takes well over an hour, not the twenty minutes the cloud machine took, and the fall into the star (2:17–2:30) is by far the slowest stretch; for anything but a full rebuild, render the changed seconds alone with `py animatic/render.py --video part.mp4 --start A --end B`. The build also writes the full-quality 960×540 file to `animatic/out/`, about 230 MB, kept out of git.
+**Watch:** [`opening-animatic-v3.mp4`](./opening-animatic-v3.mp4) (5:00, 854×480, 24 fps, stereo: the repository copy, re-encoded small because the grain beats don't compress). **Build it:** `py animatic/build.py` (needs Python 3.10+, numpy, Pillow, ffmpeg). v3 is slower than v2 (the face mesh, the sand and the web); on the cloud machine's four processes the full render took over an hour, so on your desktop expect longer. The render goes in ten-second parts kept in `animatic/out/video-silent.mp4.parts/`, so if it's stopped, running the build again picks up where it left off (delete that folder after changing the code). For anything but a full rebuild, render the changed seconds alone with `py animatic/render.py --video part.mp4 --start A --end B`. The build also writes the full-quality 960×540 file and the sound stems to `animatic/out/`, kept out of git.
 
 ---
 
@@ -12,24 +12,24 @@
 
 You asked for the full animation of the Opening (2026-10-08). This is the first complete pass of it: every one of the fourteen beats, in order, at the treatment's exact timings, with sound, so the whole sequence can be watched and judged for pace before anything expensive is made. That's the dossier's step 1 ("a timed storyboard of the whole sequence, with a rough soundtrack"), done as moving pictures rather than stills, with steps 2 and 3 started in the same code.
 
-It isn't the finished animation. Three things are placeholders by necessity, because v1 was made in a cloud session without the face shoot, Blender or FL Studio (v2 was re-rendered on your machine from the same code, so the placeholders are the same):
+It isn't the finished animation. Three things are placeholders by necessity, because it's made in code without the face shoot, Blender or FL Studio:
 
 | Placeholder | What it is now | What replaces it |
 |---|---|---|
-| **The face** (beats 1–4, 14) | A procedural depth-map face (`animatic/face.py`): a sculpted mask with the four-face rule's expressions as parameters. It reads as a mask, not a person. | The filmed face turned into depth maps (dossier §6, "Real expressions, cheaply"). `face_fields` is the one function to swap; everything downstream (the static flowing over the contours, the white and black faces, the lit face at the cliff) stays as it is. |
-| **The world** (beats 10–14) | Flat silhouettes and gradients: cells, the swimmer, the fish, the great creature, the shore, the night, the *Triceratops*, the tree, the band, the delta. Staging, direction and timing are real; the look isn't. | A Blender build, MetaHuman or AI video from painted key frames, by the route you choose and the budget (dossier §6, "How I'd build it"). |
-| **The sound** | Eight stems generated from the treatment's rules (`animatic/sound.py`): the hiss, the whisper, the release, the held note, the laugh, the grains, the cosmos, the world. Rough, and mixed by ear in numbers. | Your FL Studio arrangement. The stems are written as 48 kHz stereo WAVs into `animatic/out/audio/` when you build; take them in, keep what works, replace the rest. |
+| **The face** (beats 1–4, 14) | Since v3, a real human face: MediaPipe's canonical face mesh (`animatic/facemesh.py`, Apache 2.0), deformed for the four-face rule's expressions and lit in code. It reads as a human face, but it's anyone's face, and it has no skin. | Your face, scanned or filmed (README item 7; [ASSESSMENT §3](./ASSESSMENT.md#3-what-it-would-take-on-your-desktop)), in Blender. `FaceMesh.render` is the one function to swap. |
+| **The world** (beats 10–14) | Flat silhouettes and gradients: cells, the swimmer, the fish, the great creature, the shore, the night, the *Triceratops*, the tree, the band, the delta. The face at the cliff is the mesh. Staging, direction and timing are real; the look isn't. | Blender, as you planned for the beats after the sun, or AI video from painted key frames, beat by beat. |
+| **The sound** | Ten stems generated from the treatment's rules (`animatic/sound.py`): the hiss (wind, sand, swell), the whisper, the release (six layers), the held note, the atmospheres, the laugh, the grains, the cosmos, the world, and one shared reverb space. Better than v2, still synthesized. | Your FL Studio arrangement, from the brief in [ASSESSMENT §5](./ASSESSMENT.md#5-the-sound-in-fl-studio-a-brief). The stems are written as 48 kHz stereo WAVs into `animatic/out/audio/` when you build. |
 
 What's *not* placeholder: the timings, the staging, the direction of every movement (the band always left), the four-face rule, the alternation's safety design, the pair sea's tie between picture and sound, and the structure of the code, which is the structure of the build.
 
 ## 2. What to look at first
 
-0. **The fade (0:00–0:10), new in v2.** Is ten seconds right, or does the wait before the face (now at 0:16) feel dead? Does the hiss arrive far enough ahead of the grain? The picture's fade is `FADE_PICTURE` in `beats_abstract.py`, and the sound's is the first line of `stem_hiss` in `sound.py`.
-1. **The release at 0:38.** Four frames of picture, one hit of sound. Is it the strike you described?
-2. **Beat 3 (0:46–1:08).** The REVIEW's worry was that two arcs of expression in 22 seconds would flicker. On a mask it's readable; on a real face it may want five seconds from beat 5. The treatment's table is the only thing to change.
-3. **Beat 4's alternation (1:08–1:24).** Only the first three turns take the whole frame; then it spreads organically. Does the spread read as "ink in water," and is the first color visible?
-4. **Beat 13 (4:00–4:36).** Does one steady speed hold it together, or does it read as a montage? Each event (the cat, the clash, the newborn, the grave) happens on the move.
-5. **The face in the static (0:16–0:38).** The animatic adds a faint contrast cue inside the face because video compression kills the motion cue. Say whether you can see the face at all without being told, and whether that's too much or too little.
+1. **The sand over the face (0:00–0:38).** Can you see the eyes, nose and mouth without being told, and is the face human enough? The sand is `sand_field` in `beats_abstract.py`; the relief it flows over is `relief`.
+2. **The release (0:38).** Two frames of pressed sand, the streak inward, the white face; six layers of sound under it. Is it the strike now, and is it atmospheric enough?
+3. **The held note.** It should now be steady, a slight shimmer and no wobble. Say if any of it still sounds like the 1980s.
+4. **Beat 3 (0:46–1:08).** The large face off to the right, turned toward the small one; the front of light at the turn (0:58:12).
+5. **Beat 4 and 5 (1:08–1:44).** Do the faces break into the grains now, rather than sitting under them? Are the first colors flashes of light? Is the fractal behind the pair sea the right idea?
+6. **Pacing.** You found the leaf and the run before the newborn too quick (beats 12–13), and said it would be easier to judge once the animatic is fuller. Nothing moved in v3; the proposal is README item 2.
 
 ## 3. The code
 
@@ -37,11 +37,12 @@ All in `animatic/`. Pure functions of time, so frames render in any order and in
 
 | File | What it does |
 |---|---|
-| `common.py` | Grids in normalized coordinates, value noise, curl flow, Worley noise, the flowing static, shapes, blur, color, point splatting |
-| `face.py` | The procedural face: depth, masks and creases from expression parameters; the eight named expressions; the white, black, white-on-white and dark renderings |
-| `beats_abstract.py` | Beats 1–9: the deep, light, the separation, evening and morning, the vault, land and seas, the earth brings forth, lights, the crossing |
+| `common.py` | Grids in normalized coordinates, value noise, curl flow, Worley noise (and its third-nearest form, for the web's knots), the Mandelbrot glow, cosine palettes, shapes, blur, color, point splatting |
+| `facemesh.py` | **New in v3.** The face: MediaPipe's canonical mesh (`data/canonical_face_model.obj`, Apache 2.0) sampled as a dense point cloud with a head behind it, deformed for brows, eyes, mouth and jaw, splatted with a depth buffer; depth, normals, masks, eyes, irises and mouth out; lighting helpers |
+| `face.py` | v2's procedural face; v3 keeps its eight named expressions and a few helpers |
+| `beats_abstract.py` | Beats 1–9: the deep (sand over the face), light, the separation, evening and morning (fronts, grains, sparks), the vault (the pair sea and the fractal), land and seas, the earth brings forth (the cosmic web), lights (stars at the web's knots, the star's interior), the crossing |
 | `beats_world.py` | Beats 10–14: the waters swarm, the land, dust, fill the earth, rest. Silhouettes via Pillow. |
-| `sound.py` | The eight stems, the mix and the WAV writer. The pair sea's blips, the flips' ticks and the stars' ignitions come from the same event lists the picture uses. |
+| `sound.py` | The stems, the shared reverb space, the mix and the WAV writer. The pair sea's blips, the flips' ticks and the stars' ignitions come from the same event lists the picture uses. |
 | `render.py` | The frame loop: `--preview 10 30 45` writes PNGs at those seconds; `--video out.mp4 --procs 4` renders slices in parallel through ffmpeg and concatenates them |
 | `build.py` | Frames, soundtrack, mux: one command |
 
@@ -53,7 +54,9 @@ Beat 4's flicker and beat 11's falling sky are designed to the rules in [treatme
 
 ## 5. Next
 
-1. Your notes on the animatic (README, item 1).
-2. The face shoot, at a local session (item 7). Then `face_fields` takes the filmed depth maps, and beats 1–4 and 14 are the real face.
-3. Beats 1–8 properly: higher resolution, the particle sea and the web at full density, the sound built stem by stem in FL Studio.
-4. Beats 9–14 by the route you choose.
+The order, and why, is in [ASSESSMENT §6](./ASSESSMENT.md#6-what-id-do-next-in-order):
+
+1. Your pass on v3 (README, item 1), and your references as screen recordings if you'd like me to see them (x.com and YouTube refused this session).
+2. A session on your desktop: read the plugin folders, and start the sound in FL Studio from the brief.
+3. The face shoot (item 7), then your face in Blender.
+4. Beats 1–3 in Blender; beats 4, 5 and 7 as GPU shaders; the rest by the route you choose.

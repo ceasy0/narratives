@@ -11,17 +11,14 @@ from __future__ import annotations
 import numpy as np
 
 from common import (Grid, Static, ValueNoise, Noise3, curl_field, worley, smoothstep, sstep, lerp,
-                    ease_in_out, disc, gauss, blur, hsv, gray, over, over_img, add, rng, clamp01)
+                    ease_in_out, disc, gauss, blur, hsv, gray, over, over_img, add, rng, clamp01,
+                    mandelbrot_glow, cosine_palette, worley3)
 import face as F
+import facemesh as FM
 
 # beat boundaries (seconds)
 B = dict(deep=0.0, light=38.0, sep=46.0, eve=68.0, vault=84.0, land=104.0, earth=122.0,
          lights=132.0, cross=152.0, swarm=166.0, landbeat=198.0, dust=222.0, fill=240.0, rest=276.0, end=300.0)
-
-# The opening fade: the picture comes up out of black over the first ten seconds. The sound leads it
-# (sound.py brings the hiss up from 0:00), so the grain is first seen about two seconds after the
-# hiss is first heard.
-FADE_PICTURE = (2.0, 10.0)
 
 SMALL = 0.55   # half-height of the small face
 LARGE = 2.0    # half-height of the large face
@@ -42,6 +39,21 @@ class Ctx:
         self.protons = make_protons(77)
         self.web_pts = make_web_points(91)
         self._face_cache = {}
+        self._mesh = None
+        self._mface_cache = {}
+
+    def mface(self, cx, cy, s, e, yaw=0.0):
+        """The mesh face (facemesh.py), cached by quantized parameters."""
+        if self._mesh is None:
+            self._mesh = FM.FaceMesh()
+        k = (round(cx, 3), round(cy, 3), round(s, 3), round(yaw, 3)) + tuple(round(e[n], 3) for n in ("brow", "curve", "open", "eyes", "wide"))
+        f = self._mface_cache.get(k)
+        if f is None:
+            f = self._mesh.render(self.g, cx, cy, s, e, yaw=yaw)
+            if len(self._mface_cache) > 6:
+                self._mface_cache.clear()
+            self._mface_cache[k] = f
+        return f
 
     def face(self, cx, cy, s, e, key=None):
         """Cache faces by quantized parameters so repeated frames don't rebuild identical depth maps."""
@@ -56,6 +68,105 @@ class Ctx:
 
 
 # ----------------------------------------------------------------------------- beat 1: the deep
+#
+# v3 (the author's notes on v2, 2026-10-09): the static is sand. It flows over a face that rises out
+# of it from underneath, the way sand pours over a relief, and the face is seen by how the grains
+# catch the light on its contours: brow, eyes, nose, mouth. Nothing is outlined. The picture fades in
+# from the first frame, slowly.
+
+FADE = (0.0, 10.0)        # the fade from black starts on frame 0 (the author, 2026-10-09)
+FACE_POS = (0.0, -0.02)   # where the first face is, in beats 1-2
+FACE_S = 0.62             # its half-height
+
+
+def fade_in(t):
+    """Slow at first and slow at the end: barely there at 1 s, half at about 6 s, full at 10 s."""
+    x = min(max((t - FADE[0]) / (FADE[1] - FADE[0]), 0.0), 1.0)
+    return x * x * x * (x * (x * 6 - 15) + 10)
+
+
+def face_strength(t):
+    """How far the face has risen out of the sand, 0..1."""
+    return sstep(15.0, 30.0, t)
+
+
+def flow_amp(t):
+    return sstep(12.0, 20.0, t)
+
+
+def relief(c, t, e=None, rise=1.0):
+    """The face as a height field under the sand: (height, gradient x, gradient y, fields)."""
+    g = c.g
+    if e is None:
+        e = F.NEUTRAL_CLOSED
+    f = c.mface(FACE_POS[0], FACE_POS[1], FACE_S, e)
+    # the head lies under the sand: its silhouette is a slope, not an edge
+    soft = smoothstep(0.5, 1.0, blur(f["mask"], 0.22 * FACE_S * g.h))
+    d = f["depth"] * soft
+    # the features are what we need to read, so they stand higher than the dome of the head
+    detail = d - blur(d, 0.12 * FACE_S * g.h)
+    h = (0.45 * d + 2.2 * detail) * rise
+    h = h + 0.12 * rise * gauss(g, FACE_POS[0], FACE_POS[1] + 0.05, FACE_S * 0.9, FACE_S * 1.2)
+    gy, gx = np.gradient(h)
+    return h, gx / g.px * FACE_S * 0.12, -gy / g.px * FACE_S * 0.12, f
+
+
+def sand_field(c, t, h, gx, gy, amp, light=(-0.75, 0.55), grain_scale=0.6, sparkle=0.05):
+    """Grains flowing across the frame and over the relief h, lit by a raking light. 0..1 grey."""
+    g = c.g
+    # the current: two scales of eddies and a slow drift to the left
+    vx1, vy1 = curl_field(c.flow, g.x[::4, ::4], g.y[::4, ::4], scale=1.1, eps=0.02, t=0.025 * t)
+    vx2, vy2 = curl_field(c.vn2, g.x[::4, ::4], g.y[::4, ::4], scale=3.2, eps=0.01, t=-0.04 * t)
+    vx = up4(vx1 * 0.05 + vx2 * 0.015, g) - 0.06
+    vy = up4(vy1 * 0.05 + vy2 * 0.015, g)
+    # over the relief the grains are turned along its contours and slowed as they climb
+    gm = np.sqrt(gx * gx + gy * gy) + 1e-6
+    nx, ny = gx / gm, gy / gm
+    along = vx * nx + vy * ny
+    w = np.clip(gm * 1.5, 0, 0.85)
+    vx = vx - along * nx * w
+    vy = vy - along * ny * w
+    slow = 1.0 / (1.0 + 1.2 * h)
+    vx, vy = vx * slow * amp, vy * slow * amp
+    # sample the grain along its own motion (sand streaks) and lift it by the relief (parallax)
+    scale = g.h / 2 * grain_scale
+    par = 0.10 * h
+    acc = np.zeros(g.x.shape, np.float32)
+    for k, dt in enumerate((-0.02, 0.0, 0.02)):
+        gg = _shift_grid(g, -(g.x - FACE_POS[0]) * par + vx * dt * 6, -(g.y - FACE_POS[1]) * par + vy * dt * 6)
+        acc += c.static.render(gg, vx, vy, t, period=1.5, scale=scale, sparkle=0.0, seed_t=t)
+    s = acc / 3.0
+    # grains are hard: push the grey toward black and white, keep a little in between
+    s = np.clip((s - 0.5) * 2.2 + 0.5, 0, 1)
+    if sparkle > 0:
+        r = rng(int(t * 1000) + 11)
+        flip = r.random(s.shape, dtype=np.float32) < sparkle
+        s = np.where(flip, 1 - s, s)
+    # the light: the relief's normal against a low light from the upper left
+    lx, ly = light
+    lz = 0.45
+    nz = 1.0
+    n = np.sqrt(gx * gx + gy * gy + nz * nz)
+    lam = np.clip((-gx * lx - gy * ly + nz * lz) / (n * np.sqrt(lx * lx + ly * ly + lz * lz)), 0, 1)
+    flat = lz / np.sqrt(lx * lx + ly * ly + lz * lz)
+    shade = lam / flat  # 1 on flat sand, brighter facing the light, dark in the lee
+    # the hollows hold shadow (eye sockets, under the nose, the mouth line)
+    hb = blur(h, 5 * g.h / 540)
+    occ = np.clip((hb - h) * 14.0, 0, 0.85)
+    # on the face the sand lies thinner, so the light on the form shows through the grain more
+    on = np.clip(h * 3.0, 0, 1)
+    gc = 0.85 - 0.35 * on
+    v = (1 - gc + gc * s) * (0.12 + 0.88 * np.clip(shade, 0, 1.8)) * (1 - occ)
+    return np.clip(v, 0, 1.3)
+
+
+def _shift_grid(g, dx, dy):
+    gg = Grid.__new__(Grid)
+    gg.__dict__.update(g.__dict__)
+    gg.x = g.x + dx
+    gg.y = g.y + dy
+    return gg
+
 
 def up4(a, g):
     out = np.repeat(np.repeat(a, 4, axis=0), 4, axis=1)[:g.h, :g.w]
@@ -66,142 +177,208 @@ def up4(a, g):
     return blur(out, 3)
 
 
-def face_strength(t):
-    """How clearly the face stands out of the static, 0..1."""
-    return sstep(15.0, 27.0, t)
-
-
-def flow_amp(t):
-    return 0.30 * sstep(13.0, 20.0, t)
-
-
 def beat_deep(c: Ctx, t):
     g = c.g
     amp = flow_amp(t)
-    vx, vy = curl_field(c.flow, g.x[::4, ::4], g.y[::4, ::4], scale=1.3, eps=0.02, t=0.03 * t)
-    vx = up4(vx, g) * amp * 0.06
-    vy = up4(vy, g) * amp * 0.06
-    # the face: the static inside it flows differently (turned and slowed), nothing else marks it
     fs = face_strength(t)
     if fs > 0:
-        f = c.face(0.0, 0.0, SMALL, F.NEUTRAL_CLOSED)
-        inside = f["mask"] * fs
-        # inside the face the current runs along the contours of the depth, slowly
-        gy, gx = np.gradient(f["depth"])
-        gl = np.sqrt(gx * gx + gy * gy) + 1e-6
-        tx, ty = -gy / gl, -gx / gl  # tangent to the contour
-        vin_x = tx * amp * 0.035 + vx * 0.2
-        vin_y = ty * amp * 0.035 + vy * 0.2
-        vx = vx * (1 - inside) + vin_x * inside
-        vy = vy * (1 - inside) + vin_y * inside
-        sparkle = 0.10 * (1 - 0.6 * inside)
+        h, gx, gy, _ = relief(c, t, rise=ease_in_out(fs))
     else:
-        sparkle = 0.10
-    s = c.static.render(g, vx, vy, t, period=1.4, sparkle=0.0, seed_t=t)
-    r = rng(int(t * 1000) + 11)
-    flip = r.random(s.shape, dtype=np.float32) < sparkle
-    s = np.where(flip, 1 - s, s)
-    if fs > 0:
-        # a faint contrast cue inside the face so it survives video compression in the animatic.
-        # The final build should drop this once the motion cue alone is tested at full quality.
-        s = s * (1 - 0.30 * inside) + 0.5 * 0.30 * inside
+        h = gx = gy = np.zeros(g.x.shape, np.float32)
+    # before the flow, the static only shimmers in place
+    s = sand_field(c, t, h, gx, gy, max(amp, 0.04), sparkle=0.07 * (1 - 0.7 * amp))
     img = gray(s)
-    # the fade in from black
-    fade = sstep(FADE_PICTURE[0], FADE_PICTURE[1], t)
-    if fade < 1.0:
-        img = img * fade
+    f = fade_in(t)
+    if f < 1.0:
+        img = img * f
     return img
 
 
 # ----------------------------------------------------------------------------- beat 2: light
+#
+# v3: the release. For one frame the sand is pressed onto the face and shows every contour. Then it is
+# blown off it, away from us and into the picture: every grain streaks inward past the head and is
+# gone behind it, the dark going with it, and the face is left lit, white, in black.
+
+RELEASE = 0.42  # seconds, the blast, still about a blink
+
+
+def white_face(c, e, light=(-0.45, 0.5, 0.75), cx=None, cy=None, s=None, yaw=0.0, gain=1.0):
+    cx = FACE_POS[0] if cx is None else cx
+    cy = FACE_POS[1] if cy is None else cy
+    s = FACE_S if s is None else s
+    f = c.mface(cx, cy, s, e, yaw=yaw)
+    return FM.skin(f, light=light) * gain, f
+
 
 def beat_light(c: Ctx, t):
     g = c.g
     tl = t - B["light"]
-    img = g.blank(0.0)
-    f = c.face(0.0, 0.0, SMALL, F.NEUTRAL_CLOSED)
-    if tl < 0.21:
-        # the blast: four frames. 0: the static as a sheet over the face, every contour shown.
-        # 1-3: whipped outward and behind the head, taking the dark with it; the face left white.
-        k = tl / 0.21
-        sh = F.shade(f, light=(0.1, 0.4, 0.9), ambient=0.15, strength=1.6)
-        if k < 0.25:
-            vx = vy = 0.0
-            s = c.static.render(g, vx, vy, t, sparkle=0.0, seed_t=t)
-            sheet = s * (0.35 + 0.65 * sh) * f["mask"] + s * (1 - f["mask"])
-            return gray(sheet)
-        # the whip: the field is blasted away from us, into the picture. The texture contracts toward
-        # the head and the outer edge of the static comes in after it, shutting behind the head and
-        # taking the dark with it. The face left behind is white.
-        push = (k - 0.25) / 0.75
-        scale = g.h / 2
-        shrink = 1 - 0.7 * push
-        u = (g.x * shrink + g.aspect) * scale
-        v = (1 - g.y * shrink) * scale
-        s = c.static.sample(u, v)
-        d = np.sqrt((g.x / (SMALL * 0.78)) ** 2 + (g.y / SMALL) ** 2)
-        outer = 1.0 + (1 - push) ** 1.5 * 4.5
-        band = smoothstep(0.95, 1.05, d) * (1 - smoothstep(outer - 0.25, outer + 0.05, d))
-        white = F.white_face(f, g, modeling=0.25)
-        out = s * band + white * (0.3 + 0.7 * push)
-        return gray(np.clip(out, 0, 1))
+    if tl < 2.0 / 24:
+        # pressed on: the relief at full height and twice the light, every contour shown
+        h, gx, gy, _ = relief(c, t, rise=1.6)
+        s = sand_field(c, t, h, gx * 1.4, gy * 1.4, 0.0, sparkle=0.0)
+        return gray(s * 1.15)
+    if tl < RELEASE:
+        k = (tl - 2.0 / 24) / (RELEASE - 2.0 / 24)
+        # the sand rushes inward toward a point behind the head, streaking as it goes
+        cx, cy = FACE_POS
+        pull = k ** 1.6
+        acc = np.zeros(g.x.shape, np.float32)
+        for j in range(8):
+            z = 1.0 + (pull + 0.06 * j * (0.4 + k)) * 4.0
+            gg = _shift_grid(g, (g.x - cx) * (z - 1), (g.y - cy) * (z - 1))
+            acc += c.static.render(gg, 0.0, 0.0, B["light"], period=1.5, sparkle=0.0, seed_t=t)
+        s = np.clip((acc / 8 - 0.5) * 2.2 + 0.5, 0, 1)
+        # the field thins from the outside in: the dark goes with it
+        rr = np.sqrt(((g.x - cx) / 1.0) ** 2 + ((g.y - cy) / 0.8) ** 2)
+        keep = 1 - smoothstep(2.6 * (1 - pull) - 0.2, 2.6 * (1 - pull) + 0.25, rr)
+        s = s * keep * (1 - 0.6 * k)
+        w, f = white_face(c, F.NEUTRAL_CLOSED, gain=sstep(0.0, 0.6, k) * 1.25)
+        # a burst of light from the face as it's stripped
+        glow = gauss(g, cx, cy, 0.35 + 0.3 * k, 0.45 + 0.3 * k) * (1 - k) ** 2 * 0.5
+        img = gray(s * (1 - f["edge"] * sstep(0.1, 0.7, k)) + glow)
+        img = img + gray(w)
+        return np.clip(img, 0, 1)
     # black, silence, the white face alone, eyes closed; then the eyes open and the large face forms
-    k = sstep(6.5, 7.3, tl)  # 44.5 - 45.3
+    k = sstep(6.5, 7.3, tl)
     e = F.mix_expr(F.NEUTRAL_CLOSED, F.NEUTRAL_OPEN, k)
+    settle = sstep(RELEASE, RELEASE + 1.2, tl)
     if k > 0:
-        # the second face forms in the same instant, on both sides
-        big = c.face(0.0, 0.0, LARGE, F.MALICE)
-        img += gray(F.black_face(big, g, edge=0.16 * k))
-    f2 = c.face(0.0, 0.0, SMALL, e)
-    w = F.white_face(f2, g)
-    img = over_img(img, f2["mask"], gray(w))
-    return img
+        img = dark_scene(c, t, e, F.MALICE, form=k)
+    else:
+        w, f = white_face(c, e, gain=1.25 - 0.25 * settle)
+        img = gray(w)
+    # the last of the glow dies away
+    img += gray(gauss(g, FACE_POS[0], FACE_POS[1], 0.6, 0.7)) * 0.18 * (1 - settle)
+    return np.clip(img, 0, 1)
 
 
 # ----------------------------------------------------------------------------- beat 3: the separation
+#
+# v3: the large face is off to the side, turned toward the small one, not behind it (the author,
+# 2026-10-09). In the dark it is lit only by the white face, so we see the side of it that faces the
+# light. The turn-over is a front of light that runs out from where they touch, fast but not a cut.
+
+SMALL_S = 0.50
+BIG_S = 1.30
+BIG_POS = (1.02, 0.04)
+SMALL_TO = (-0.62, -0.02)
+SMALL_YAW = 0.32    # the small face looks toward the large one, screen right
+BIG_YAW = -0.55     # the large face turns toward screen left
+WHITE = 0.94        # the white ground
+
+
+def layout(t):
+    """Positions and sizes of the two faces at time t (beats 2-4)."""
+    k = ease_in_out(sstep(B["light"] + 6.3, B["light"] + 9.5, t))  # the small face makes room
+    sx = lerp(FACE_POS[0], SMALL_TO[0], k)
+    sy = lerp(FACE_POS[1], SMALL_TO[1], k)
+    ss = lerp(FACE_S, SMALL_S, k)
+    syaw = SMALL_YAW * k
+    ts = t - B["sep"]
+    reach = ease_in_out(sstep(10.6, 12.5, ts)) if t < B["sep"] + 12.5 else 0.0
+    bx = lerp(BIG_POS[0], 0.10, reach)
+    bs = BIG_S * (1 + 0.25 * reach)
+    return (sx, sy, ss, syaw), (bx, BIG_POS[1], bs, BIG_YAW * (1 - 0.3 * reach)), reach
+
+
+def big_dark_face(c, t, eb, form, pulse=0.0):
+    """Black on black, lit only from the small white face's side."""
+    g = c.g
+    (sx, sy, ss, syaw), (bx, by, bs, byaw), _ = layout(t)
+    f = c.mface(bx, by, bs * (1 + pulse), eb, yaw=byaw)
+    L = (sx - bx, (sy - by) * 0.6 + 0.15, 0.55)
+    lam = FM.lambert(f, L, wrap=0.0)
+    rim = lam ** 3.0
+    v = (0.22 * rim + 0.01) * f["edge"]
+    v = v * (1 - 0.8 * f["iris"]) * (1 - 0.9 * f["mouth"])
+    return gray(v * form)
+
+
+def small_white_face(c, t, es, gain=1.0):
+    (sx, sy, ss, syaw), (bx, by, bs, byaw), _ = layout(t)
+    f = c.mface(sx, sy, ss, es, yaw=syaw)
+    return FM.skin(f, light=(-0.35, 0.5, 0.8)) * 1.15 * gain, f
+
+
+def dark_scene(c, t, es, eb, form=1.0, pulse=0.0, tremor=0.0):
+    img = big_dark_face(c, t, eb, form, pulse)
+    w, f = small_white_face(c, t, es)
+    m = f["edge"]
+    return img * (1 - m[..., None]) + gray(w)
+
+
+def light_scene(c, t, es, eb, tend=0.0):
+    """White ground: the large face white on white, compassionate; the small face dark and upset."""
+    g = c.g
+    (sx, sy, ss, syaw), (bx, by, bs, byaw), _ = layout(t)
+    bx2 = lerp(bx, 0.55, tend)
+    fb = c.mface(bx2, by, bs, eb, yaw=byaw * (1 - 0.2 * tend))
+    lam = FM.lambert(fb, (-0.3, 0.6, 0.75), wrap=0.4)
+    occ = FM.cavity(fb)
+    vb = WHITE - (0.30 * (1 - lam) + 0.25 * occ + 0.12 * blur(fb["iris"], 2) + 0.1 * fb["eyes"] + 0.4 * fb["mouth"]) * fb["edge"]
+    fs = c.mface(sx, sy, ss, es, yaw=syaw)
+    # the dark face, lit from the white face beside it
+    L = (bx2 - sx, 0.2, 0.6)
+    lam_s = FM.lambert(fs, L, wrap=0.1)
+    vs = 0.04 + 0.30 * lam_s ** 2
+    vs = vs * (1 - 0.7 * fs["iris"]) * (1 - 0.8 * fs["mouth"])
+    m = fs["edge"]
+    v = vb * (1 - m) + vs * m
+    return gray(v)
+
+
+def front_mask(c, t, t0, origin, dur=0.5, warp=0.25):
+    """A front of light running out from origin, starting at t0, crossing the frame in dur seconds.
+    Returns (inside 0..1, rim 0..1)."""
+    g = c.g
+    k = (t - t0) / dur
+    if k <= 0:
+        z = np.zeros(g.x.shape, np.float32)
+        return z, z
+    rad = 4.0 * k ** 1.3
+    n = c.vn.fbm(g.x * 2.2 + t0, g.y * 2.2 - t0, 4) - 0.5
+    d = np.sqrt((g.x - origin[0]) ** 2 + (g.y - origin[1]) ** 2) + n * warp * (0.3 + rad)
+    soft = 0.05 + 0.12 * rad
+    inside = 1 - smoothstep(rad - soft, rad + soft, d)
+    rim = np.exp(-0.5 * ((d - rad) / (soft * 0.8)) ** 2) * (1 - sstep(0.7, 1.0, k))
+    return inside, rim
+
 
 def beat_sep(c: Ctx, t):
     g = c.g
     ts = t - B["sep"]
-    if ts < 12.5:
-        # the climb: fear to terror, malice to laughter. The dark face comes for the white one from 11 s.
-        k = ease_in_out(ts / 11.0)
-        es = F.mix_expr(F.FEAR, F.TERROR, k)
-        eb = F.mix_expr(F.MALICE, F.LAUGH, k)
-        # laughter: the large face pulses with the hiss from 6 s
-        pulse = 0.0
-        if ts > 6:
-            pulse = 0.02 * (sstep(6, 9, ts)) * max(0.0, np.sin(ts * 2 * np.pi * 4.5)) ** 2
-        reach = sstep(11.0, 12.5, ts)
-        sL = LARGE * (1 + pulse) * (1 - 0.55 * reach)
-        img = g.blank(0.0)
-        big = c.face(0.0, -0.05 * reach, sL, eb)
-        img += gray(F.black_face(big, g, edge=0.16 + 0.06 * k))
-        small = c.face(0.0, 0.0, SMALL, es)
-        w = F.white_face(small, g)
-        # terror: a tremor
-        img = over_img(img, small["mask"], gray(w))
-        return img
-    # the turn-over: ground white, the small face dark and upset, the large face white and compassionate
-    tt = ts - 12.5
-    k = ease_in_out(tt / 7.5)  # settle over 7.5 s
+    T_TURN = 12.5
+    climb = ease_in_out(ts / 11.0)
+    es_d = F.mix_expr(F.FEAR, F.TERROR, climb)
+    eb_d = F.mix_expr(F.MALICE, F.LAUGH, climb)
+    pulse = 0.0
+    if ts > 6:
+        pulse = 0.015 * sstep(6, 9, ts) * max(0.0, np.sin(ts * 2 * np.pi * 4.5)) ** 2
+    if ts < T_TURN:
+        return np.clip(dark_scene(c, t, es_d, eb_d, pulse=pulse), 0, 1)
+    tt = ts - T_TURN
+    k = ease_in_out(tt / 7.5)
     es = F.mix_expr(F.UPSET, F.PEACE, k)
     eb = F.mix_expr(F.COMPASSION, F.PEACE, k)
-    # eyes close at the end
     kz = sstep(7.0, 9.5, tt)
     es = F.mix_expr(es, F.SLEEP, kz)
     eb = F.mix_expr(eb, F.SLEEP, kz)
-    img = g.blank(1.0)
-    big = c.face(0.0, -0.03, LARGE * (1 - 0.1 * k), eb)
-    img = gray(F.white_on_white(big, g, edge=0.18))
-    small = c.face(0.0, 0.0, SMALL, es)
-    d = dark_face(small, g)
-    img = over_img(img, small["mask"], gray(d))
-    return img
+    tend = ease_in_out(sstep(0.5, 6.0, tt))
+    lit = light_scene(c, t, es, eb, tend)
+    if tt < 0.6:
+        # the turn-over: a front of light from where they touch
+        (sx, sy, _, _), _, _ = layout(B["sep"] + T_TURN - 0.01)
+        inside, rim = front_mask(c, t, B["sep"] + T_TURN, (sx + 0.35, sy), dur=0.5)
+        dark = dark_scene(c, t, es_d, eb_d)
+        img = dark * (1 - inside[..., None]) + lit * inside[..., None]
+        return np.clip(img + gray(rim) * 0.6 * np.array([1.0, 0.97, 0.9], np.float32), 0, 1)
+    return np.clip(lit, 0, 1)
 
 
 def dark_face(fields, g, edge=0.22):
-    """The small face gone dark on a white ground: black with faint grey in the creases."""
+    """The small face gone dark on a white ground (the old sculpted face; kept for beat 4's tail)."""
     sh = F.shade(fields, light=(0.3, 0.6, 0.75), ambient=0.0, strength=1.5)
     rim = np.clip(1 - sh, 0, 1) ** 2
     v = edge * np.maximum(fields["crease"], 0.9 * rim) * fields["mask"]
@@ -224,86 +401,111 @@ def flip_count(tau):
     return np.floor(n).astype(np.int64), n
 
 
+def warped_fbm(c, x, y, t, scale=1.5):
+    """Inigo Quilez's domain warping: fbm(p + fbm(p + fbm(p))). Simple sums of noise, folded back on
+    themselves, give the organic, ink-in-water structure the alternation spreads through."""
+    qx = c.vn.fbm(x * scale + 1.7, y * scale + 9.2, 4)
+    qy = c.vn.fbm(x * scale + 8.3, y * scale + 2.8, 4)
+    rx = c.vn2.fbm(x * scale + 4.0 * qx + 1.7 + 0.15 * t, y * scale + 4.0 * qy + 9.2, 4)
+    ry = c.vn2.fbm(x * scale + 4.0 * qx + 8.3, y * scale + 4.0 * qy + 2.8 - 0.12 * t, 4)
+    return c.vn.fbm(x * scale + 4.0 * rx, y * scale + 4.0 * ry, 4), rx, ry
+
+
+def grains(c, t, size_px=2.0, rate=(9.0, 15.0)):
+    """Every grain turning between dark and light on its own beat, too fast to follow; out of step,
+    so the frame as a whole never flashes. Returns 0..1 per pixel."""
+    g = c.g
+    gx = np.floor((g.x + g.aspect) * g.h / 2 / size_px).astype(np.int64)
+    gy = np.floor((1 - g.y) * g.h / 2 / size_px).astype(np.int64)
+    hsh = (gx * 73856093) ^ (gy * 19349663)
+    ph = (hsh % 1009) / 1009.0
+    rt = rate[0] + (rate[1] - rate[0]) * ((hsh // 1009) % 997) / 997.0
+    return (np.sin(2 * np.pi * (rt * t + ph)) > 0).astype(np.float32)
+
+
+def light_bloom(img_emit, g):
+    """Light, not paint: a sharp core and two soft halos."""
+    k = g.h / 540
+    return img_emit * 0.9 + blur(img_emit, 4 * k) * 1.4 + blur(img_emit, 16 * k) * 1.6
+
+
+def thin_film(c, g, t, amt):
+    """The colors of oil on water: hue running along a slowly flowing field. Used for the first color."""
+    n, rx, ry = warped_fbm(c, g.x[::2, ::2], g.y[::2, ::2], t, scale=1.1)
+    hue = (n * 2.2 + rx * 0.6 + t * 0.07) % 1.0
+    hue = np.repeat(np.repeat(hue, 2, 0), 2, 1)[:g.h, :g.w]
+    return hsv(hue, 0.9, 1.0) * amt
+
+
 def beat_eve(c: Ctx, t):
     g = c.g
     te = t - B["eve"]
-    # the ground: dark/light with the count of flips. First three flips take the whole frame.
     n_frame, n_cont = flip_count(te)
     n_frame = int(n_frame)
-    spread = sstep(3.2, 7.2, te)  # the change starts spreading at about the fourth turn
-    # organic per-pixel offset: fbm at a scale that keeps breaking smaller
-    scale = 1.5 * (2.0 ** (spread * 5.0))
-    off = c.vn.fbm(g.x * scale + 3.1, g.y * scale - 1.7, octaves=4)
-    off2 = c.vn2.fbm(g.x * scale * 2.3 + 9.1, g.y * scale * 2.3 + 4.7, octaves=3)
-    offset = (off - 0.5) * 1.6 * spread + (off2 - 0.5) * 0.6 * spread
-    tau_px = te - offset
-    npx, ncont_px = flip_count(tau_px)
-    # beyond the convergence the grains turn on their own beats, too fast to follow: the frame shimmers
-    grain = sstep(6.0, 8.5, te)
-    gseed = c.vn.sample(g.x * 220 + 7.0, g.y * 220 + 2.0)  # a per-grain phase
-    r = rng(int(te * 24) + 101)
-    fast = (r.random(g.x.shape, dtype=np.float32) < 0.5).astype(np.float32)
-    state = (npx % 2).astype(np.float32)
-    state = state * (1 - grain) + fast * grain
-    # whole-frame for the first turns
-    state = np.where(spread <= 0.0, float(n_frame % 2), state)
-    ground = state  # 0 = dark, 1 = light
-    # the first color: where two grains meet, a flash whose hue is the local phase
-    edges = np.abs(np.diff(ground, axis=1, prepend=ground[:, :1])) + np.abs(np.diff(ground, axis=0, prepend=ground[:1, :]))
-    edges = np.clip(edges, 0, 1)
-    color_amt = sstep(9.0, 15.5, te) * 0.9
-    hue = (gseed * 3.0 + te * 0.05) % 1.0
-    col = hsv(hue, 0.9, 1.0)
-    img = gray(ground)
-    img = img * (1 - (edges * color_amt)[..., None]) + col * (edges * color_amt)[..., None]
-
-    # the faces: they turn with the ground, quicker each time, then blur into one grey grain
-    blur_amt = sstep(5.0, 9.0, te)
-    shrink = sstep(9.0, 15.0, te)
-    face_s = SMALL * (1 - shrink) + 0.012 * shrink
-    if blur_amt < 1.0 or shrink < 1.0:
-        light_phase = n_frame % 2 == 1 if spread <= 0 else None
-        # in each dark phase the small face is white and afraid, the large laughs; in each light phase
-        # the small face is dark and upset, the large tends it. Progress within the phase:
-        frac = float(n_cont - np.floor(n_cont)) if np.isfinite(n_cont) else 0.5
-        if light_phase is None:
-            # once the ground has broken up, the faces hold every expression at once
-            es = F.mix_expr(F.mix_expr(F.TERROR, F.SLEEP, 0.5), F.NEUTRAL_CLOSED, 0.3)
-            eb = F.mix_expr(F.LAUGH, F.COMPASSION, 0.5)
-            dark_ground = 0.5
-        elif not light_phase:
-            es = F.mix_expr(F.FEAR, F.TERROR, frac)
-            eb = F.mix_expr(F.MALICE, F.LAUGH, frac)
-            dark_ground = 1.0
-        else:
-            es = F.mix_expr(F.UPSET, F.SLEEP, frac)
-            eb = F.mix_expr(F.COMPASSION, F.SLEEP, frac)
-            dark_ground = 0.0
-        if shrink < 0.99:
-            big = c.face(0.0, 0.0, LARGE * (1 - 0.85 * shrink), eb)
-            fade = (1 - blur_amt) * (1 - shrink)
-            if fade > 0.01:
-                if dark_ground >= 0.5:
-                    img = img + gray(F.black_face(big, g, edge=0.18)) * fade
-                else:
-                    img = img - gray(1 - F.white_on_white(big, g, edge=0.18)) * fade
-            small = c.face(0.0, 0.0, face_s, es)
-            if dark_ground >= 0.5:
-                sv = F.white_face(small, g) * (1 - blur_amt) + 0.5 * blur_amt
-            else:
-                sv = dark_face(small, g) * (1 - blur_amt) + 0.5 * blur_amt
-            svimg = gray(sv)
-            if blur_amt > 0:
-                svimg = blur(svimg, 1 + 18 * blur_amt * g.h / 540)
-                m = blur(small["mask"], 1 + 18 * blur_amt * g.h / 540)
-            else:
-                m = small["mask"]
-            img = over_img(img, np.clip(m, 0, 1), svimg)
-    # the one grain we stay on
-    if shrink > 0.3:
-        gm = disc(g, 0.0, 0.0, 0.012, soft=g.px * 2)
-        img = over(img, gm * sstep(0.3, 0.8, shrink), (0.55, 0.55, 0.55))
-    return np.clip(img, 0, 1)
+    # the first turns take the whole frame, each as a front of light or dark running out from the
+    # faces in a third of a second. Then the turn spreads through the ground organically.
+    spread = sstep(3.0, 7.0, te)
+    warp, rx, ry = warped_fbm(c, g.x, g.y, t * 0.3, scale=1.2 + 2.5 * spread)
+    offset = (warp - 0.5) * 2.4 * spread + (rx - 0.5) * 1.2 * spread
+    (sx, sy, _, _), _, _ = layout(t)
+    dist = np.sqrt((g.x - sx - 0.3) ** 2 + (g.y - sy) ** 2)
+    tau = te - offset - dist * 0.09 * (1 - spread)  # the front: a third of a second to cross the frame
+    npx, ncont_px = flip_count(tau)
+    # soft edges between the turns: a quick ramp, not a cut
+    frac = ncont_px - np.floor(ncont_px)
+    edge_w = 0.10
+    ramp = smoothstep(0.0, edge_w, frac)
+    # 1 = light ground (connection), 0 = dark ground (separation). Turn k goes to dark when k is even:
+    # the beat opens by turning back to dark. Each turn ramps from the last state in a fifth of a second.
+    cur_light = (npx % 2) == 1
+    state = np.where(cur_light, ramp, 1 - ramp).astype(np.float32)
+    # grains: past the convergence, each turns on its own beat
+    gr = sstep(6.0, 9.0, te)
+    if gr > 0:
+        state = state * (1 - gr) + grains(c, t, size_px=2.0 + 4.0 * (1 - gr)) * gr
+    # the scene in both states; each patch shows one or the other
+    climb = float(np.clip(te / 8.0, 0, 1))
+    es_d = F.mix_expr(F.FEAR, F.TERROR, 0.5 + 0.5 * climb)
+    eb_d = F.mix_expr(F.MALICE, F.LAUGH, 0.6 + 0.4 * climb)
+    es_l = F.mix_expr(F.UPSET, F.SLEEP, 0.4 + 0.6 * climb)
+    eb_l = F.mix_expr(F.COMPASSION, F.SLEEP, 0.4 + 0.6 * climb)
+    fade = 1 - sstep(8.5, 13.0, te)  # the faces dissolve into the grains
+    if fade > 0.01:
+        dark = dark_scene(c, t, es_d, eb_d)
+        lit = light_scene(c, t, es_l, eb_l, tend=0.6)
+        ground_d = np.zeros_like(dark)
+        ground_l = np.full_like(lit, WHITE)
+        dark = ground_d * (1 - fade) + dark * fade
+        lit = ground_l * (1 - fade) + lit * fade
+    else:
+        dark = g.blank(0.0)
+        lit = g.blank(WHITE)
+    st = state[..., None]
+    img = dark * (1 - st) + lit * st
+    # the first color: where dark meets light, a flash of colored light
+    color_amt = sstep(7.5, 12.0, te)
+    if color_amt > 0:
+        edges = np.abs(state - blur(state, 1.2 * g.h / 540))
+        edges = np.clip(edges * 3.0, 0, 1)
+        # only a few meetings flash at any moment, each for a frame or two: sparks, not paint
+        spark = grains(c, t * 0.37 + 11.0, size_px=3.0, rate=(2.0, 5.0)) * grains(c, t * 0.53 + 3.0, size_px=5.0, rate=(1.5, 4.0))
+        # flares: small places that brighten and die in about half a second, all over the frame
+        fl = c.n3.sample(g.x * 3.5, g.y * 3.5, t * 2.2, octaves=2)
+        spark = spark * np.clip((fl - 0.56) / 0.08, 0, 1)
+        film = thin_film(c, g, t, 1.0)
+        emit = film * (edges * spark)[..., None] * color_amt * 0.9
+        img = img * (1 - 0.25 * color_amt) + light_bloom(emit, g)
+        # the shimmer: a faint sheen of the same colors drifting across the grain
+        img = img + film * (0.06 * color_amt * state)[..., None]
+    # the one grain we stay on: where the small face was, drawn in, then centre frame
+    keep = sstep(10.0, 13.5, te)
+    if keep > 0:
+        gx_ = lerp(sx, 0.0, sstep(12.0, 15.5, te))
+        gy_ = lerp(sy, 0.0, sstep(12.0, 15.5, te))
+        gm = disc(g, gx_, gy_, 0.012, soft=g.px * 2)
+        img = img * (1 - (gm * keep)[..., None]) + np.array([0.6, 0.6, 0.6], np.float32) * (gm * keep)[..., None]
+        img = img + gray(gauss(g, gx_, gy_, 0.04, 0.04)) * 0.25 * keep
+    return np.clip(img, 0, 1.2)
 
 
 # ----------------------------------------------------------------------------- beat 5: the vault
@@ -419,21 +621,43 @@ def sea_layer(c: Ctx, t, cam_z, pair_gain=1.0, warp=0.9, glare=1.0):
     return out
 
 
+# The vault opens into a fractal (v3, the author's suggestion of 2026-10-09: "simple equations to
+# produce complex things"). Behind the pair sea is the Mandelbrot set's boundary, z -> z^2 + c, lit
+# by its own distance estimate, and we fall into it: depth that never runs out, patterns that gather
+# and lose themselves, never regular.
+
+MANDEL_C = -0.743643887037151 + 0.131825904205330j   # the seahorse valley, a classic deep-zoom point
+
+
+def mandel_layer(c, t, amount, zoom_t0=B["vault"], hh0=0.012, rate=0.45):
+    """The fractal as light, rendered at half resolution and bloomed. hh0: half-height at zoom_t0;
+    rate: doublings of zoom per second."""
+    g = c.g
+    if amount <= 0:
+        return np.zeros((g.h, g.w, 3), np.float32)
+    tz = t - zoom_t0
+    hh = hh0 * 2.0 ** (-rate * tz)
+    it = int(np.clip(150 + 45 * np.log2(hh0 / hh + 1), 150, 900))
+    w2, h2 = g.w // 2, g.h // 2
+    glow, nu = mandelbrot_glow(w2, h2, MANDEL_C, hh, it, rot=0.05 * tz)
+    col = cosine_palette(nu * 0.004 + t * 0.03, d=(0.0, 0.1, 0.2), c=(1.0, 1.0, 1.0)) * glow[..., None]
+    col = np.repeat(np.repeat(col, 2, 0), 2, 1)
+    out = np.zeros((g.h, g.w, 3), np.float32)
+    out[:col.shape[0], :col.shape[1]] = col[:g.h, :g.w]
+    out = blur(out, 1)
+    return light_bloom(out * 0.22, g) * amount
+
+
 def beat_vault(c: Ctx, t):
     g = c.g
     tv = t - B["vault"]
     cam_z = tv * 0.35
-    opening = sstep(0.0, 4.0, tv)  # the picture gains depth
-    img = sea_layer(c, t, cam_z, pair_gain=2.6, warp=0.9, glare=1.3)
-    # before the opening the grains are flat: fade from the beat-4 shimmer
+    opening = sstep(0.0, 4.5, tv)  # the picture gains depth
+    img = mandel_layer(c, t, sstep(0.5, 5.0, tv))
+    img = img + sea_layer(c, t, cam_z, pair_gain=2.0, warp=0.9, glare=1.1)
+    # before the opening the grains are flat: the beat-4 shimmer carries on and gives way
     if opening < 1:
-        r = rng(int(t * 24) + 55)
-        flat = (r.random(g.x.shape, dtype=np.float32) < 0.5).astype(np.float32)
-        gseed = c.vn.sample(g.x * 220 + 7.0, g.y * 220 + 2.0)
-        edges = np.abs(np.diff(flat, axis=1, prepend=flat[:, :1]))
-        col = hsv((gseed * 3.0 + t * 0.05) % 1.0, 0.9, 1.0)
-        flat_img = gray(flat) * 0.9 * (1 - edges[..., None]) + col * edges[..., None]
-        img = flat_img * (1 - opening) + img * opening
+        img = beat_eve(c, t) * (1 - opening) + img * opening
     # our particle: steady, bright, centre frame, restless
     px, py = our_particle_pos(c, t)
     img += gray(gauss(g, px, py, 0.035, 0.035)) * 1.4 + gray(gauss(g, px, py, 0.12, 0.12)) * 0.25
@@ -488,11 +712,13 @@ def proton_layer(c: Ctx, t, cam_z, lock, electron, gas, bright=1.0):
 
 
 def gas_layer(c: Ctx, t, amount, warm=0.0):
+    """The even gas of beat 6: the web's own fog before it draws in, so beat 7 grows out of it."""
     g = c.g
-    n = c.n3.sample(g.x * 1.2 + 1.0, g.y * 1.2, t * 0.08, octaves=4)
-    v = (0.10 + 0.14 * n) * amount
-    col = np.array([1.0, 0.95 - 0.1 * warm, 0.9 - 0.25 * warm], np.float32)
-    return gray(v) * col
+    if amount <= 0:
+        return g.blank(0.0)
+    hg = half_grid(c)
+    dens, knots = cosmic_web(c, hg.x, hg.y, t, 0.0, 0.0)
+    return up2(web_colour(dens, knots), g) * 1.2 * amount
 
 
 def beat_land(c: Ctx, t):
@@ -504,6 +730,7 @@ def beat_land(c: Ctx, t):
     electron = sstep(7.0, 10.0, tl)   # a smaller, quicker thing falls in
     clear = sstep(9.5, 16.0, tl)      # the glare clears; we can see a long way
     img = gas_layer(c, t, clear)
+    img = img + mandel_layer(c, t, 1.0 - sstep(2.0, 11.0, tl))
     img += sea_layer(c, t, cam_z, pair_gain=1.6 * (1 - thin), warp=0.9, glare=1.0 - clear)
     img += proton_layer(c, t, cam_z, lock, electron, clear, bright=1.0 - 0.5 * clear) * sstep(0.5, 3.0, tl)
     # ours: two others approach and the three lock, circling so fast they read as one body
@@ -538,16 +765,92 @@ def beat_land(c: Ctx, t):
 
 # ----------------------------------------------------------------------------- beat 7: the earth brings forth
 
-def web_field(c: Ctx, t, draw, knot):
-    """Threads from Worley edges, knots at the feature points."""
-    g = c.g
-    pts = c.web_pts["pts"]
+_WEB_FINE = rng(92).uniform([-3.0, -1.8], [3.0, 1.8], (220, 2)).astype(np.float32)
+
+
+def web_warp(c, x, y):
+    """The bend in the threads: the same domain warp everywhere, so the knots and stars stay on them."""
+    return (x + 0.45 * (c.vn.fbm(x * 0.8 + 3.3, y * 0.8 - 1.1, 4) - 0.5) + 0.08 * (c.vn.fbm(x * 4 + 1.3, y * 4, 2) - 0.5),
+            y + 0.45 * (c.vn2.fbm(x * 0.8 - 7.7, y * 0.8 + 4.4, 4) - 0.5) + 0.08 * (c.vn2.fbm(x * 4 - 2.1, y * 4, 2) - 0.5))
+
+
+def cosmic_web(c, x, y, t, draw, knot):
+    """The gas drawn into threads (v3): curved threads between knots, finer threads branching between
+    them like veins, all in a faint fog. Returns (density, knots) on the given coordinate arrays."""
     drift = 0.02 * (t - B["earth"])
-    f1, f2 = worley(pts + np.array([drift, -drift * 0.5], np.float32), g.x, g.y)
-    width = 0.22 * (1 - 0.8 * draw) + 0.02
-    threads = np.exp(-((f2 - f1) / width) ** 2)
-    knots = np.exp(-(f1 / (0.05 + 0.10 * knot)) ** 2)
-    return threads, knots
+    wx, wy = web_warp(c, x, y)
+    pts = c.web_pts["pts"] + np.array([drift, -drift * 0.5], np.float32)
+    f1, f2, f3 = worley3(pts, wx, wy)
+    width = 0.22 * (1 - 0.85 * draw) + 0.010
+    main = np.exp(-((f2 - f1) / width) ** 2)
+    # the threads thin out toward the middle of each span and thicken toward the knots
+    main = main * (0.35 + 0.65 * np.exp(-((f3 - f1) / 0.35) ** 2))
+    # the finer branches, at two and a half times the scale, fainter
+    g1, g2 = worley(_WEB_FINE * 0.6 + np.array([drift, 0.0], np.float32), wx * 1.0, wy * 1.0)
+    fine = np.exp(-((g2 - g1) / (width * 0.5)) ** 2) * sstep(0.2, 0.8, draw)
+    # matter is clumpy along the threads, not even
+    along = c.vn.fbm(wx * 6.0 + 2.0, wy * 6.0 - 5.0, 3)
+    fog = c.n3.sample(x * 1.2 + 1.0, y * 1.2, t * 0.08, octaves=4)
+    knots = np.exp(-((f3 - f1) / (0.02 + 0.04 * knot)) ** 2) * np.exp(-(f2 - f1) ** 2 / 0.002)
+    clump = np.clip((along - 0.35) * 2.2, 0, 1)
+    dens = (0.12 + 0.18 * fog) * (1 - 0.8 * draw) + draw * (0.22 * main * clump + 0.07 * fine * clump + 0.03 * fog)
+    dens = dens + 0.25 * knots * knot * draw
+    return dens, knots
+
+
+_STARS = None
+
+
+def web_stars():
+    """Where the stars light: the web's knots (where three threads meet), found once on a coarse grid
+    in the web's own coordinates, so the picture and the sound (sound.py) agree. Sorted by x."""
+    global _STARS
+    if _STARS is None:
+        g = Grid(480, 270)
+        c = Ctx.__new__(Ctx)
+        c.vn = ValueNoise(5, 256)
+        c.vn2 = ValueNoise(6, 256)
+        c.web_pts = make_web_points(91)
+        c.n3 = Noise3(3, 128)
+        drift = 0.02 * (B["lights"] - B["earth"])
+        wx, wy = web_warp(c, g.x, g.y)
+        pts = c.web_pts["pts"] + np.array([drift, -drift * 0.5], np.float32)
+        f1, f2, f3 = worley3(pts, wx, wy)
+        k = -(f3 - f1)
+        loc = np.ones_like(k, bool)
+        for dy in (-2, -1, 0, 1, 2):
+            for dx in (-2, -1, 0, 1, 2):
+                if dx or dy:
+                    loc &= k >= np.roll(np.roll(k, dy, 0), dx, 1)
+        loc &= k > -0.02
+        ys, xs = np.nonzero(loc[3:-3, 3:-3])
+        P = np.stack([g.x[ys + 3, xs + 3], g.y[ys + 3, xs + 3]], 1)
+        _STARS = P[np.argsort(P[:, 0])].astype(np.float32)
+    return _STARS
+
+
+def half_grid(c):
+    if getattr(c, "_hg", None) is None:
+        c._hg = Grid(c.g.w // 2, c.g.h // 2)
+    return c._hg
+
+
+def up2(a, g):
+    a = np.repeat(np.repeat(a, 2, 0), 2, 1)
+    out = np.zeros((g.h, g.w) + a.shape[2:], np.float32)
+    out[:min(g.h, a.shape[0]), :min(g.w, a.shape[1])] = a[:g.h, :g.w]
+    return blur(out, 1)
+
+
+def web_colour(dens, knots, warm=0.0):
+    """Gas glows warm where it's thin and white-blue where it gathers."""
+    lo = np.array([0.55, 0.35, 0.65], np.float32)
+    mid = np.array([1.0, 0.78, 0.55], np.float32)
+    hi = np.array([0.85, 0.92, 1.0], np.float32)
+    d = np.clip(dens * 2.2, 0, 1)[..., None]
+    col = lo * (1 - d) + mid * d
+    col = col * (1 - knots[..., None] * 0.6) + hi * knots[..., None] * 0.6
+    return col * dens[..., None]
 
 
 def beat_earth(c: Ctx, t):
@@ -555,12 +858,23 @@ def beat_earth(c: Ctx, t):
     te = t - B["earth"]
     draw = sstep(0.0, 8.0, te)
     knot = sstep(3.0, 10.0, te)
-    threads, knots = web_field(c, t, draw, knot)
-    n = c.n3.sample(g.x * 1.2 + 1.0, g.y * 1.2, t * 0.08, octaves=4)
-    even = 0.10 + 0.14 * n
-    dens = even * (1 - draw) + (0.03 + 0.26 * threads * (0.5 + 0.5 * n) + 0.3 * knots * knot) * draw
-    col = np.array([1.0, 0.93, 0.82], np.float32)
-    img = gray(dens) * col
+    hg = half_grid(c)
+    dens, knots = cosmic_web(c, hg.x, hg.y, t, draw, knot)
+    img = up2(web_colour(dens, knots), g)
+    img = img * 1.2 + light_bloom(img * 0.2, g) * 0.5
+    # ours, the atom, as we pull back from it into the gas
+    k = sstep(0.0, 6.0, te)
+    sc = 1.0 - 0.85 * k
+    amp = 1.0 - sstep(3.0, 7.0, te)
+    if amp > 0:
+        cols = [(1.0, 0.95, 0.85), (0.95, 0.6, 1.0), (0.6, 0.9, 1.0)]
+        for kk, (ox, oy) in enumerate([(0.0, -0.5), (-0.5, 0.45), (0.5, 0.45)]):
+            x_, y_ = ox * 0.11 * 0.45 * 1.4 * sc, oy * 0.11 * 0.45 * 1.4 * sc
+            img += gray(gauss(g, x_, y_, 0.03 * sc + 0.004, 0.03 * sc + 0.004)) * np.array(cols[kk], np.float32) * 1.3 * amp
+        a = t * 11.0
+        img += gray(gauss(g, np.cos(a) * 0.32 * sc, np.sin(a) * 0.32 * sc, 0.012, 0.012)) * np.array([0.7, 0.85, 1.0], np.float32) * 1.2 * amp
+        ring = np.abs(np.sqrt(g.x ** 2 + g.y ** 2) - 0.32 * sc)
+        img += gray(np.exp(-0.5 * (ring / 0.006) ** 2)) * 0.12 * amp
     # the last of the protons, far off
     cam_z = (B["land"] - B["vault"]) * 0.35 + (B["earth"] - B["land"]) * 0.18 + te * 0.1
     img += proton_layer(c, t, cam_z, 1.0, 1.0, 1.0, bright=0.4 * (1 - draw * 0.7))
@@ -569,90 +883,121 @@ def beat_earth(c: Ctx, t):
 
 # ----------------------------------------------------------------------------- beat 8: lights
 
-def star_sx(pts_i, c: Ctx):
-    return c.web_pts["pts"][pts_i]
+def star_sprite(img, g, x, y, amp, col, core=0.010, halo=0.07, spikes=0.0, zoom=1.0):
+    """A star: a hard core, a soft halo and, for the bright ones, four thin spikes. Drawn in a window."""
+    if amp <= 0.002:
+        return img
+    H, W = g.h, g.w
+    R = (halo * 3.2 + spikes * 0.4) * zoom
+    cx = (x / g.aspect + 1) * 0.5 * W
+    cy = (1 - y) * 0.5 * H
+    rp = int(R * H / 2) + 2
+    x0, x1 = max(int(cx) - rp, 0), min(int(cx) + rp + 1, W)
+    y0, y1 = max(int(cy) - rp, 0), min(int(cy) + rp + 1, H)
+    if x1 <= x0 or y1 <= y0:
+        return img
+    gx = g.x[y0:y1, x0:x1] - x
+    gy = g.y[y0:y1, x0:x1] - y
+    r2 = gx * gx + gy * gy
+    v = np.exp(-r2 / (2 * (core * zoom) ** 2)) * 1.6 + np.exp(-r2 / (2 * (halo * zoom) ** 2)) * 0.35
+    if spikes > 0:
+        sw = 0.0025 * zoom
+        L = spikes * zoom
+        v += (np.exp(-gy * gy / (2 * sw * sw)) * np.exp(-np.abs(gx) / (L * 0.35)) +
+              np.exp(-gx * gx / (2 * sw * sw)) * np.exp(-np.abs(gy) / (L * 0.35))) * 0.5
+    img[y0:y1, x0:x1] += v[..., None] * np.asarray(col, np.float32) * amp
+    return img
 
 
 def beat_lights(c: Ctx, t):
     g = c.g
     tl = t - B["lights"]
     W = c.web_pts
-    pts, ign, burst, burst_t = W["pts"], W["ignite"], W["burst"], W["burst_t"]
-    # which star we fall into: the one nearest the centre
-    target = int(np.argmin(pts[:, 0] ** 2 + pts[:, 1] ** 2))
+    stars = web_stars()
+    n = len(stars)
+    ign, burst, burst_t = W["ignite"][:n], W["burst"][:n], W["burst_t"][:n]
+    d_now = 0.02 * (t - B["earth"])
+    d_ref = 0.02 * (B["lights"] - B["earth"])
+    sp = stars + np.array([d_now - d_ref, -(d_now - d_ref) * 0.5], np.float32)
+    target = int(np.argmin(sp[:, 0] ** 2 + sp[:, 1] ** 2))
     fall = sstep(8.0, 12.0, tl)
     zoom = np.exp(fall * 6.0)
-    tx, ty = pts[target]
-    # camera zooms onto the target
-    cx = tx * fall
-    cy = ty * fall
+    tx, ty = sp[target]
+    cx, cy = tx * fall, ty * fall
     if fall < 1.0:
-        gz = Grid.__new__(Grid)
-        gz.__dict__.update(g.__dict__)
-        gz.x = (g.x) / zoom + cx
-        gz.y = (g.y) / zoom + cy
-        gz.px = g.px / zoom
-        # the web, drawn, with the knots lit one by one
-        drift = 0.02 * (t - B["earth"])
-        f1, f2 = worley(pts + np.array([drift, -drift * 0.5], np.float32), gz.x, gz.y)
-        threads = np.exp(-((f2 - f1) / 0.07) ** 2)
-        n = c.n3.sample(gz.x * 1.2 + 1.0, gz.y * 1.2, t * 0.08, octaves=3)
-        base = 0.03 + 0.26 * threads * (0.5 + 0.5 * n)
-        img = gray(base) * np.array([1.0, 0.93, 0.82], np.float32)
-        # ignitions
-        xs, ys, cols, inten = [], [], [], []
-        for i in range(len(pts)):
-            age = tl - ign[i]
+        hg = half_grid(c)
+        dens, knots = cosmic_web(c, hg.x / zoom + cx, hg.y / zoom + cy, t, 1.0, 1.0)
+        img = up2(web_colour(dens, knots), g) * 1.2
+        img = img + light_bloom(img * 0.2, g) * 0.5
+        # the stars: blue-white points coming on along the threads, first one, then all of them
+        for i in range(n):
+            age = tl - float(ign[i])
             if age < 0:
                 continue
-            x_, y_ = pts[i] + np.array([drift, -drift * 0.5])
-            amp = sstep(0.0, 0.6, age)
+            x_ = (sp[i, 0] - cx) * zoom
+            y_ = (sp[i, 1] - cy) * zoom
+            amp = sstep(0.0, 0.5, age) * (1.0 + 0.6 * np.exp(-age * 3.0))  # each one flares as it lights
             if burst[i] and age > burst_t[i]:
-                ba = age - burst_t[i]
-                ring = np.abs(np.sqrt((gz.x - x_) ** 2 + (gz.y - y_) ** 2) - ba * 0.25)
-                img += gray(np.exp(-0.5 * (ring / 0.02) ** 2)) * np.array([1.0, 0.7, 0.5], np.float32) * max(0.0, 1 - ba * 0.8)
-                amp = amp * max(0.0, 1 - ba * 2.0)
-                # what it throws off gathers and lights again, nearby
+                ba = age - float(burst_t[i])
+                # the burst: a shell thrown off, and the star gone; what it threw gathers and lights again
+                rr = np.sqrt((g.x - x_) ** 2 + (g.y - y_) ** 2)
+                shell = np.exp(-0.5 * ((rr - ba * 0.22 * zoom) / (0.015 * zoom + 0.01 * ba * zoom)) ** 2)
+                shell = shell * (0.6 + 0.4 * c.vn.sample(np.arctan2(g.y - y_, g.x - x_) * 8 + i, ba * 2.0))
+                img += shell[..., None] * np.array([1.0, 0.55, 0.45], np.float32) * max(0.0, 1 - ba * 0.6) * 0.8
+                img = star_sprite(img, g, x_, y_, np.exp(-ba * 5.0) * 4.0, (1.0, 0.95, 0.9), zoom=zoom)
+                amp = amp * max(0.0, 1 - ba * 3.0)
                 if ba > 1.2:
-                    img += gray(gauss(gz, x_ + 0.18, y_ - 0.1, 0.03, 0.03)) * np.array([0.8, 0.9, 1.0], np.float32) * sstep(1.2, 2.0, ba)
+                    img = star_sprite(img, g, x_ + 0.15 * zoom, y_ - 0.08 * zoom, sstep(1.2, 2.2, ba), (0.8, 0.9, 1.0), zoom=zoom)
             if i == target:
                 amp = max(amp, sstep(5.0, 7.0, tl))
-            img += gray(gauss(gz, x_, y_, 0.025, 0.025)) * np.array([0.85, 0.92, 1.0], np.float32) * amp * 1.5
-            img += gray(gauss(gz, x_, y_, 0.11, 0.11)) * np.array([0.6, 0.8, 1.0], np.float32) * amp * 0.5
+            big = 0.05 + 0.05 * ((i * 7) % 5) / 4
+            img = star_sprite(img, g, x_, y_, amp, (0.85, 0.92, 1.0), halo=big, spikes=0.10 if (i % 3 == 0) else 0.0, zoom=zoom)
         # the glare fills the frame as we fall in
         img += gray(gauss(g, 0, 0, 0.9, 0.9)) * np.array([1.0, 0.85, 0.6], np.float32) * fall ** 2 * 2.0
         return np.clip(img, 0, 1.2)
-    # inside the star
     ti = tl - 12.0
-    img = star_interior(c, t, ti)
-    return img
+    return star_interior(c, t, ti)
+
+
+def granulation(c, x, y, t):
+    """The inside of a star boiling: bright rising cells, darker lanes where the gas sinks, all moving."""
+    wx = x + 0.15 * (c.n3.sample(x * 2 + 1, y * 2, t * 0.9, octaves=3) - 0.5)
+    wy = y + 0.15 * (c.n3b.sample(x * 2 - 2, y * 2, t * 0.9, octaves=3) - 0.5)
+    f1, f2 = worley(_WEB_FINE[:90] * 0.8, wx, wy)
+    cell = np.clip((f2 - f1) / 0.25, 0, 1) ** 0.35
+    return cell
 
 
 def star_interior(c: Ctx, t, ti):
-    """Violent: the electron torn away, bare nuclei slamming past, ours hits another and holds, hits a
-    third, and a photon comes off. ti runs 0..8."""
+    """Violent: the electron torn away, bare nuclei slamming past in the glare, ours hits another and
+    holds, hits a third, and a photon comes off. ti runs 0..8."""
     g = c.g
-    glare = c.n3.sample(g.x * 2.0, g.y * 2.0, t * 1.5, octaves=3)
-    img = gray(0.35 + 0.5 * glare) * np.array([1.0, 0.72, 0.42], np.float32)
-    # nuclei streaking past
+    hg = half_grid(c)
+    zoomv = 1.0 + ti * 0.08
+    gr = granulation(c, hg.x / zoomv, hg.y / zoomv, t)
+    turb = c.n3.sample(hg.x * 2.0, hg.y * 2.0, t * 1.5, octaves=3)
+    heat = np.clip(0.55 + 0.35 * gr + 0.5 * (turb - 0.5), 0, 1.2)
+    col = np.stack([np.ones_like(heat) * 1.05, 0.30 + 0.62 * heat ** 1.5, 0.05 + 0.55 * heat ** 3], -1) * (0.55 + 0.5 * heat[..., None])
+    img = up2(col, g) * 0.9
+    # nuclei streaking past, each drawn along its own motion
     r = rng(1234)
-    n = 900
-    bx = r.uniform(-2.2, 2.2, n).astype(np.float32)
-    by = r.uniform(-1.3, 1.3, n).astype(np.float32)
-    vx = r.uniform(-2.5, 2.5, n).astype(np.float32)
-    vy = r.uniform(-2.0, 2.0, n).astype(np.float32)
-    ph = r.uniform(0, 2, n).astype(np.float32)
-    xs = ((bx + vx * (t * 1.0 + ph) + 2.2) % 4.4) - 2.2
-    ys = ((by + vy * (t * 1.0 + ph) + 1.3) % 2.6) - 1.3
-    cols = np.tile(np.array([[1.0, 0.95, 0.85]], np.float32), (n, 1))
-    img += splat(g, xs, ys, cols, np.ones(n, np.float32) * 0.9, radius_px=2.5 * g.h / 540, glow_px=8 * g.h / 540)
-    # ours at the centre, three quarks settled; an electron torn away at 0.5 s
-    for k, (ox, oy) in enumerate([(0.0, -0.035), (-0.035, 0.03), (0.035, 0.03)]):
+    nn = 700
+    bx = r.uniform(-2.2, 2.2, nn).astype(np.float32)
+    by = r.uniform(-1.3, 1.3, nn).astype(np.float32)
+    vx = r.uniform(-2.5, 2.5, nn).astype(np.float32)
+    vy = r.uniform(-2.0, 2.0, nn).astype(np.float32)
+    ph = r.uniform(0, 2, nn).astype(np.float32)
+    cols = np.tile(np.array([[1.0, 0.97, 0.9]], np.float32), (nn, 1))
+    for k in range(4):
+        tt = t - k * 0.008
+        xs = ((bx + vx * (tt + ph) + 2.2) % 4.4) - 2.2
+        ys = ((by + vy * (tt + ph) + 1.3) % 2.6) - 1.3
+        img += splat(g, xs, ys, cols, np.ones(nn, np.float32) * 0.35, radius_px=2.0 * g.h / 540, glow_px=6 * g.h / 540)
+    for (ox, oy) in [(0.0, -0.035), (-0.035, 0.03), (0.035, 0.03)]:
         img += gray(gauss(g, ox, oy, 0.03, 0.03)) * 1.6
     if 0.5 < ti < 2.5:
         k = (ti - 0.5) / 2.0
         img += gray(gauss(g, 0.3 + k * 2.0, 0.1 + k * 0.6, 0.012, 0.012)) * np.array([0.7, 0.85, 1.0], np.float32) * (1 - k)
-    # a second proton arrives at 2.5 s and holds; a third at 4.5 s; a photon comes off at 6 s
     for arrive, side in ((2.5, 1), (4.5, -1)):
         if ti > arrive - 1.2:
             k = sstep(arrive - 1.2, arrive, ti)
@@ -663,13 +1008,14 @@ def star_interior(c: Ctx, t, ti):
             if ti > arrive:
                 fl = np.exp(-(ti - arrive) * 3.0)
                 img += gray(gauss(g, 0, 0, 0.5, 0.5)) * fl * 1.2
+                rr = np.sqrt(g.x ** 2 + g.y ** 2)
+                ring = np.exp(-0.5 * ((rr - (ti - arrive) * 1.2) / 0.05) ** 2) * fl
+                img += gray(ring) * 0.5
     if ti > 6.0:
         k = ti - 6.0
-        # the photon: a white point leaving the centre, which the camera then follows
-        px = min(k * 1.6, 0.0 + 0.0) if k < 0.0 else k * 0.9
+        px = k * 0.9
         img += gray(gauss(g, px, px * 0.3, 0.014, 0.014)) * 2.0
         img += gray(gauss(g, px, px * 0.3, 0.06, 0.06)) * 0.5
-        # the glare slides away behind us
         img = img * (1 - sstep(0.4, 2.0, k)) ** 0.8
     return np.clip(img, 0, 1.2)
 
