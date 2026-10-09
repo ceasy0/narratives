@@ -153,6 +153,22 @@ def worley(points: np.ndarray, x, y):
     return np.sqrt(f1), np.sqrt(f2)
 
 
+def worley3(points: np.ndarray, x, y):
+    """Distances to the three nearest feature points. Where f3 - f1 is small, three cells meet: a knot."""
+    f1 = np.full(x.shape, 1e9, np.float32)
+    f2 = np.full(x.shape, 1e9, np.float32)
+    f3 = np.full(x.shape, 1e9, np.float32)
+    for px, py in points:
+        d = (x - px) ** 2 + (y - py) ** 2
+        c1 = d < f1
+        c2 = (~c1) & (d < f2)
+        c3 = (~c1) & (~c2) & (d < f3)
+        f3 = np.where(c1 | c2, f2, np.where(c3, d, f3))
+        f2 = np.where(c1, f1, np.where(c2, d, f2))
+        f1 = np.where(c1, d, f1)
+    return np.sqrt(f1), np.sqrt(f2), np.sqrt(f3)
+
+
 # ---------------------------------------------------------------- static
 
 class Static:
@@ -359,3 +375,45 @@ def points_layer(g: Grid, xs, ys, sizes, colors, intensities=None, soft=1.0):
         splat = np.exp(-d2 * 2.0) * it
         out[ya:yb, xa:xb] += splat[..., None] * np.asarray(col, np.float32)
     return out
+
+
+# ---------------------------------------------------------------- fractals
+
+def mandelbrot_glow(w: int, h: int, centre: complex, half_height: float, max_iter: int, rot: float = 0.0):
+    """The Mandelbrot set's boundary as light. z -> z^2 + c, nothing more; the glow is the distance
+    estimate |z| log|z| / |dz/dc|, so the thin filaments between the bulbs shine and the inside is dark.
+    Returns (glow 0..1, smooth iteration count) as h x w float32 arrays."""
+    ys = (1 - (np.arange(h) + 0.5) / h * 2) * half_height
+    xs = ((np.arange(w) + 0.5) / w * 2 - 1) * half_height * (w / h)
+    X, Y = np.meshgrid(xs, ys)
+    P = (X + 1j * Y) * np.exp(1j * rot)
+    C = (centre + P).ravel()
+    z = np.zeros_like(C)
+    dz = np.zeros_like(C)
+    alive = np.arange(C.size)
+    nu = np.full(C.size, np.nan)
+    de = np.zeros(C.size)
+    zc, dzc, cc = z, dz, C
+    for i in range(max_iter):
+        dzc = 2 * zc * dzc + 1
+        zc = zc * zc + cc
+        a2 = zc.real * zc.real + zc.imag * zc.imag
+        out = a2 > 1e8
+        if out.any():
+            idx = alive[out]
+            az = np.sqrt(a2[out])
+            nu[idx] = i + 1 - np.log2(np.log(az))
+            de[idx] = az * np.log(az) / (np.abs(dzc[out]) + 1e-300)
+            keep = ~out
+            alive, zc, dzc, cc = alive[keep], zc[keep], dzc[keep], cc[keep]
+            if alive.size == 0:
+                break
+    px = 2 * half_height / h
+    glow = np.where(np.isnan(nu), 0.0, np.exp(-de / (px * 1.5)) + 0.25 * np.exp(-de / (px * 12)))
+    return glow.reshape(h, w).astype(np.float32), np.nan_to_num(nu, nan=-1.0).reshape(h, w).astype(np.float32)
+
+
+def cosine_palette(t, a=(0.5, 0.5, 0.5), b=(0.5, 0.5, 0.5), c=(1.0, 1.0, 1.0), d=(0.0, 0.33, 0.67)):
+    """Inigo Quilez's palette: a + b cos(2 pi (c t + d)). One line, every hue in order."""
+    t = np.asarray(t, np.float32)[..., None]
+    return (np.array(a, np.float32) + np.array(b, np.float32) * np.cos(2 * np.pi * (np.array(c, np.float32) * t + np.array(d, np.float32)))).astype(np.float32)
