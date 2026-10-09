@@ -1,10 +1,10 @@
 # The Opening — Treatment
 
-> Genesis 1:1–2:7. One unbroken sequence, 4 minutes 50 seconds, no words. It opens Episode 1; the Garden (2:8–3:24) follows it.
+> Genesis 1:1–2:7. One unbroken sequence, 5 minutes, no words. It opens Episode 1; the Garden (2:8–3:24) follows it.
 
-**Status:** v3.1, 2026-10-07. Applies your three notes on v3: the sound of the release, the faces forming in sync, and the four-face rule (§4, §5). Your checks of 2026-10-07 confirmed the whisper, the laugh in the hiss, the impact and the *Triceratops*, the child's burial and the face as God's image. v3 (2026-10-05) was revised from your notes on v2. You kept all eleven of my suggestions ("do not strike any of them right now") and answered the five open items. New in v3: a sound for the face in the static, the face turning white as the static is whipped away, the four faces rising and falling in intensity, flying things, the impact placed at a safe distance, the band always walking left, the burial checked against the evidence, and a greener Nile. Everything tagged P5 is yours. Everything tagged P6 is my suggestion. What changed is in §4.
+**Status:** v3.2, 2026-10-08. Applies your note of 2026-10-08: beat 1 is ten seconds longer, and those ten seconds are a fade in from black, with the sound leading the picture slightly. The sequence now runs 5:00, and every time after 0:00 is ten seconds later than in v3.1 (§4). v3.1 (2026-10-07) applied your three notes on v3: the sound of the release, the faces forming in sync, and the four-face rule (§4, §5). Your checks of 2026-10-07 confirmed the whisper, the laugh in the hiss, the impact and the *Triceratops*, the child's burial and the face as God's image. v3 (2026-10-05) was revised from your notes on v2. You kept all eleven of my suggestions ("do not strike any of them right now") and answered the five open items. New in v3: a sound for the face in the static, the face turning white as the static is whipped away, the four faces rising and falling in intensity, flying things, the impact placed at a safe distance, the band always walking left, the burial checked against the evidence, and a greener Nile. Everything tagged P5 is yours. Everything tagged P6 is my suggestion. What changed is in §4.
 
-**This treatment is the Opening's beat sheet, and the Opening is the exception to the first pass** (your decision, 2026-10-07). Its [script](../../../../scripts/beginnings/opening.fountain) (v1) and a first [animatic](../../../../production/opening/README.md) of all fourteen beats with sound exist as of 2026-10-08, cut to the table in §2; the order of the build is in the [dossier §6](./DOSSIER.md#6-the-visualization). Change a timing here, and the animatic re-renders to it.
+**This treatment is the Opening's beat sheet, and the Opening is the exception to the first pass** (your decision, 2026-10-07). Its [script](../../../../scripts/beginnings/opening.fountain) (v1.1) and an [animatic](../../../../production/opening/README.md) (v2) of all fourteen beats with sound exist as of 2026-10-08, cut to the table in §2; the order of the build is in the [dossier §6](./DOSSIER.md#6-the-visualization). Change a timing here, and the animatic re-renders to it.
 
 ---
 
@@ -19,38 +19,40 @@ Six rules, from your notes. Every beat follows them.
 5. **It comes down.** The surround is wildest in the particle beats (4–8). From the photon's arrival at the Earth it slows and settles, beat by beat, until with the animals and the people the world makes ordinary sense. At the cliff it's completely still. The strangeness never quite goes. It comes back in glimpses through the whole series, where they come naturally (§6).
 6. **Separation and connection, at every size.** The two things that happen between the first faces, a hurting and a healing, are what happens in every beat after them: something is torn away, something is joined. Separation climbs to its climax; connection settles into rest. [[P5: yours for the faces, and yours (2026-10-05) for the climb and the settling. Using it to choose what every later beat shows is mine.]]
 
-**The sound, start to finish.** A hiss like wind over water. Inside it, where the face is, the hiss takes the shape of a breath. It gathers and climbs. It lets go all at once. Out of the silence comes one held note that belongs to whatever we're watching and doesn't stop for four minutes. Around that note the sound is as rich and changeable as the picture through beat 8. From beat 9 real sounds take over: water, wind, wings, feet, voices without words. The last sounds are wind over a river and one breath.
+**The sound, start to finish.** Out of silence, a hiss like wind over water, heard a moment before anything is seen. Inside it, where the face is, the hiss takes the shape of a breath. It gathers and climbs. It lets go all at once. Out of the silence comes one held note that belongs to whatever we're watching and doesn't stop for four minutes. Around that note the sound is as rich and changeable as the picture through beat 8. From beat 9 real sounds take over: water, wind, wings, feet, voices without words. The last sounds are wind over a river and one breath.
 
 ## 2. The shape
 
 | # | Beat | Text | The face | The sea around it | Runs | Length |
 |---|---|---|---|---|---|---|
-| 1 | The deep | 1:2 | A face in the static, eyes closed; a whisper in the hiss | Static | 0:00–0:28 | 28s |
-| 2 | Light | 1:3–4 | The face, stripped white; then its eyes open | Black | 0:28–0:36 | 8s |
-| 3 | The separation | 1:4 | Four faces: fear to terror against malice to mad laughter; then upset and compassion settling into sleep | Black, then white | 0:36–0:58 | 22s |
-| 4 | Evening and morning | 1:5 | The faces, every expression at once, blurring into one particle | Black and white, spreading into grains | 0:58–1:14 | 16s |
-| 5 | The vault | 1:6–8 | The particle | Elementary particles | 1:14–1:34 | 20s |
-| 6 | Land and seas | 1:9–10 | The proton, then the atom | Protons, then gas | 1:34–1:52 | 18s |
-| 7 | The earth brings forth | 1:11–13 | The atom | Gas growing into threads | 1:52–2:02 | 10s |
-| 8 | Lights | 1:14–19 | The proton again, inside a star | Bare nuclei | 2:02–2:22 | 20s |
-| 9 | The crossing | 1:15 | The photon | Black; then the Earth | 2:22–2:36 | 14s |
-| 10 | The waters swarm | 1:20–23 | The cell; then the first eyes | The sea; a great sea creature; wings above the surface | 2:36–3:08 | 32s |
-| 11 | The land | 1:24–25 | The animal | Shore and wings, ferns, night; the sky falling | 3:08–3:32 | 24s |
-| 12 | Dust | 2:7 | A dead animal's face; a tree; a leaf | Land, years running | 3:32–3:50 | 18s |
-| 13 | Fill the earth | 1:26–28 | One face, handed down, always walking left | Forest to a green river | 3:50–4:26 | 36s |
-| 14 | Rest | 2:1–7 | The first face again | The delta, green, and birds | 4:26–4:50 | 24s |
+| 1 | The deep | 1:2 | Black; then static; then a face in the static, eyes closed; a whisper in the hiss | Black, then static | 0:00–0:38 | 38s |
+| 2 | Light | 1:3–4 | The face, stripped white; then its eyes open | Black | 0:38–0:46 | 8s |
+| 3 | The separation | 1:4 | Four faces: fear to terror against malice to mad laughter; then upset and compassion settling into sleep | Black, then white | 0:46–1:08 | 22s |
+| 4 | Evening and morning | 1:5 | The faces, every expression at once, blurring into one particle | Black and white, spreading into grains | 1:08–1:24 | 16s |
+| 5 | The vault | 1:6–8 | The particle | Elementary particles | 1:24–1:44 | 20s |
+| 6 | Land and seas | 1:9–10 | The proton, then the atom | Protons, then gas | 1:44–2:02 | 18s |
+| 7 | The earth brings forth | 1:11–13 | The atom | Gas growing into threads | 2:02–2:12 | 10s |
+| 8 | Lights | 1:14–19 | The proton again, inside a star | Bare nuclei | 2:12–2:32 | 20s |
+| 9 | The crossing | 1:15 | The photon | Black; then the Earth | 2:32–2:46 | 14s |
+| 10 | The waters swarm | 1:20–23 | The cell; then the first eyes | The sea; a great sea creature; wings above the surface | 2:46–3:18 | 32s |
+| 11 | The land | 1:24–25 | The animal | Shore and wings, ferns, night; the sky falling | 3:18–3:42 | 24s |
+| 12 | Dust | 2:7 | A dead animal's face; a tree; a leaf | Land, years running | 3:42–4:00 | 18s |
+| 13 | Fill the earth | 1:26–28 | One face, handed down, always walking left | Forest to a green river | 4:00–4:36 | 36s |
+| 14 | Rest | 2:1–7 | The first face again | The delta, green, and birds | 4:36–5:00 | 24s |
+
+**Inside beat 1:** black at 0:00, with the hiss rising out of silence; the static comes up from about 0:02 and is at full strength by 0:10; it begins to flow at 0:14; the face starts to stand out at 0:16 and is unmistakable by 0:27; the whisper draws in and climbs from 0:26; the release is at 0:38.
 
 **Your reading puts the days in order,** from the first day to the seventh. With the wings added, nothing in Genesis 1 is now out of order ([dossier §2](./DOSSIER.md#2-your-reading-of-genesis-1-and-how-it-fits)). **And your reading of 2:4–7 as a recap** (2026-10-05) is how the Opening was already built: 2:4–7 isn't shown as something that happens afterward; it's shown inside the seventh day, at the cliff. My view of that reading is in the [dossier §2](./DOSSIER.md#on-247).
 
-**Pace.** Beat 1 is slow and beat 2 is instant. From there each beat covers more time in less screen until the leaf (two seconds of stillness) and the cliff (twenty-four, in real time). There are no cuts to black inside it. Each beat hands over through the thing we're already looking at. Beat 3 now carries two arcs of expression in 22 seconds, about 12 for the separation and 10 for the connection. That's tight but in keeping with "very fast." The storyboard will tell us whether it needs a few more seconds.
+**Pace.** Beat 1 is slow, and slower since v3.2: thirty-eight seconds, the first ten of them a fade. Beat 2 is instant. From there each beat covers more time in less screen until the leaf (two seconds of stillness) and the cliff (twenty-four, in real time). There are no cuts to black inside it. Each beat hands over through the thing we're already looking at. Beat 3 now carries two arcs of expression in 22 seconds, about 12 for the separation and 10 for the connection. That's tight but in keeping with "very fast." The storyboard will tell us whether it needs a few more seconds.
 
 **One thing is followed all the way through.** A face becomes a particle. The particle becomes a proton. The proton gives off a photon. The photon feeds a cell. The cell's line becomes an animal. The animal leaves a body. The body becomes a tree. The tree drops a leaf. People run over the leaf, and one of them has the face.
 
 ## 3. The beats
 
-### 1. The deep (0:00–0:28)
+### 1. The deep (0:00–0:38)
 
-Black and white static fills the frame. The sound is a hiss, closer to wind over open water than to a television. [[P1: 1:2, the Spirit, *ruach*, which also means wind and breath, hovering over the face of the waters.]]
+Black, and silence. Out of the silence a hiss comes up, very faint at first: closer to wind over open water than to a television. It's heard before anything is seen. A moment later the static comes up out of the black, the same grain from edge to edge, only brighter by the second, until by ten seconds it fills the frame at full strength. Nothing in it has a shape yet, and it doesn't flow. [[P5: yours (2026-10-08): beat 1 is ten seconds longer, and for the first ten seconds the picture and the sound fade in from black. P6, confirmed by you the same day: the sound leads the picture slightly, as the whisper later finds the face before the eye does. P1: 1:2, "darkness was over the face of the deep," and the Spirit, *ruach*, which also means wind and breath, hovering over the face of the waters.]]
 
 The static begins to flow. It moves across the frame like a current, with eddies in it. Where it flows, something stands out of it: a human face, expressionless, eyes closed. Nothing draws it. The static inside it moves differently from the static around it, and if the current stopped the face would vanish. [[P1: 1:2, "the face of the deep," "the face of the waters." P5: your image.]]
 
@@ -58,7 +60,7 @@ The sound finds the face before we do. In the middle of the hiss, part of it sta
 
 The sound starts to change. The whisper draws in, and the whole hiss draws in with it: it narrows and climbs, slowly, like a breath being drawn in that doesn't stop. The picture stays as it is and gives no warning. The sound gives all of it. [[P5: your note: the audio builds the tension and carries the audience; the picture is sudden. P6: the build as an in-drawn breath.]]
 
-### 2. Light (0:28–0:36)
+### 2. Light (0:38–0:46)
 
 At the top of the climb, everything goes at once. The whole field of static is blasted away from us, into the picture. It hits the face like a sheet thrown by a gale, shows every contour of it for a single frame, and is gone: whipped around the head and shut behind it. It takes the dark with it. The face it leaves behind is white. All of it takes less time than a blink. The sound lets go in the same instant, one enormous release, and then nothing. The release is the loudest thing in the sequence by a wide margin: a hit with real weight under it, and a layered, atmospheric tail in the mid and high range that trails after the hit and dies away. [[P5: yours (2026-10-07): the sound here "needs to be incredibly powerful"; your first thought is a distorted, techno-weight bass with a layered, atmospheric mid-high end trailing after the main hit. P6, my proposal, for you to push against: keep it the breath let go (suggestion 1), but a breath the size of the universe. The hit is a distorted sub-bass impact, the body of the blast. The tail is the static itself, pitched and smeared, passing the ears and shutting behind the head as the picture shows it, so the sound obeys rule 4 and moves front to back. Then a true silence. The held note rises out of the last resonance of the tail when the eyes open. Mixed at film loudness, so the hit can sit twenty decibels above the hiss and still have headroom. P5: yours, as 1:3; and yours (2026-10-05): the face turns white as the static is whipped behind it. P1: 1:2, darkness was *over* the face of the deep; 1:3, "Let there be light," and there was light: the fulfilment repeats the command word for word, the fastest in the chapter. P6: the release as the "said" of "God said": breath let out, with no word in it.]]
 
@@ -66,7 +68,7 @@ Black. Silence. The white face, alone, where the static was, its eyes still clos
 
 Its eyes open, and its mouth, a little. In the same instant, not after, the black around it gathers into the second face (beat 3). One clear note sounds, very quietly, and holds. [[P1: 1:4, "And God saw the light, that it was good. And God separated the light from the darkness": the seeing and the separating are one verse. 2 Cor 4:6, where Paul reads 1:3 as light in a face. P5: your image; and yours (2026-10-07): exactly when the white face opens its eyes and mouth, the black face forms; the two faces are perfectly synced, on both sides. P6: the eyes opening as the seeing, and the held note.]]
 
-### 3. The separation (0:36–0:58)
+### 3. The separation (0:46–1:08)
 
 The black around the face isn't empty. As the eyes open it gathers into a second face, far larger, black on black, seen only by its edges, and the two faces finish forming in the same frame. It's the same face. What it shows is malice: brows down, mouth in a smile. The white face sees it, and is afraid: brows up, mouth open in a frown. [[P5: yours (2026-10-07), the four-face rule: two frowns, two smiles, two raised brows, two lowered. The large faces smile and the small faces frown; raised brows belong to fear and compassion, lowered brows to malice and upset. No two faces share both features. My reading of it is in §5.]]
 
@@ -80,7 +82,7 @@ Both settle. The upset eases into peace, and the compassion into the same peace,
 
 Four faces, and two things that happen between them. The halves aren't persons. They're the two most basic experiences. No symbol is drawn. [[Choice 3, decided: evoked. Discussion 007, decided 2026-10-05: the dark half isn't the Father and the light half isn't the Son.]]
 
-### 4. Evening and morning (0:58–1:14)
+### 4. Evening and morning (1:08–1:24)
 
 It turns back. Dark ground. The small face wakes white, into the dark, already afraid, and the large face is already laughing. This time the blow lands and we see it. Over again: white ground, dark face, the hurt tended, and both faces sinking toward sleep. Dark. Light. Each turn is quicker than the last, and each goes further: the laugh wider and the terror sharper, the peace sooner and the sleep deeper. The note under it climbs. [[P1: 1:5, "there was evening and there was morning, the first day." P5: yours.]]
 
@@ -88,7 +90,7 @@ After the first few turns, the change stops taking the whole frame at once. It s
 
 The faces have turned over so fast that every expression is on them at once: the laugh and the sleep, the terror and the peace, too fast to tell apart. They blur into one grey. Where they were there's a single grain like all the others, and we stay on it. [[P5: yours: the face becomes one particle, and everything up to here is 1:1–5. P6: all four expressions in the one grey, as "the totality."]]
 
-### 5. The vault (1:14–1:34)
+### 5. The vault (1:24–1:44)
 
 Until now the picture has been flat. Now it opens. The grains have distance between them, near ones and far ones, and we move in among them for the first time. There is room. [[P5: your reading of 1:6–8: the vault is the space things happen in, and that space is nothing but the particles and what passes between them. P6, kept: showing it as the picture gaining depth.]]
 
@@ -96,23 +98,23 @@ This is the wildest part of the sequence. Nothing holds still except our particl
 
 Our particle is restless. It darts, doubles back, never settles. It's alone.
 
-### 6. Land and seas (1:34–1:52)
+### 6. Land and seas (1:44–2:02)
 
 It meets two others. The three lock together, circling so fast they read as one body, and for the first time something in this sea holds its shape: a proton. The three settle two above and one below. [[P5: your "trinity," and your reading of 1:9–10: actual matter, above the elementary particles. P2: a proton is three quarks, two "up" and one "down," and nothing built of parts is known to last longer. P6: letting the two and the one sit like eyes and a mouth. It's never drawn as a face.]]
 
 All through the sea the same thing happens at once. The surround is protons now. The flashes thin out, and the pairs stop coming. A smaller, quicker thing falls in around ours and stays: an atom. Everywhere the same pairing happens, and the glare that filled everything clears. For the first time we can see a long way. What we see is gas, even and faintly glowing, in every direction. [[P1: 1:9, "let the waters be gathered together into one place, and let the dry land appear." P2: the first atoms, about 380,000 years in, when the universe turned transparent. Your solids and fluids: the thing that holds, and the gas it sits in.]]
 
-### 7. The earth brings forth (1:52–2:02)
+### 7. The earth brings forth (2:02–2:12)
 
 The gas isn't quite even, and what's uneven grows. It draws together along threads. The threads branch and join like roots, like the veins of a leaf, and where they cross, knots swell like buds. Nothing is pushing it. The gas is doing this itself. [[P6, confirmed 2026-10-05: my answer to your question about 1:11–13. P1: 1:11–12, "let the earth sprout": the first time in the chapter that creation is told to bring something out of itself, "each according to its kind," with its seed in it. P2: the cosmic web growing out of small unevenness.]]
 
-### 8. Lights (2:02–2:22)
+### 8. Lights (2:12–2:32)
 
 The buds light. First one, then all along the threads, points of fierce blue-white coming on in the dark. Some burn out and burst, and what they throw off gathers and lights again. [[P1: 1:14–18. P5: your reading: this is when the stars form. P2: later stars are built from what earlier ones scatter.]]
 
 We fall into one of them. Inside, it's violent. The electron is torn away, and the sea around us is bare nuclei slamming past each other in the glare. Ours hits another and holds. It hits a third. From that last collision a photon comes off, and we go with it. [[P2: proton–proton fusion to deuterium, then helium-3 and a gamma ray. The proton is ancient; this star is the Sun.]]
 
-### 9. The crossing (2:22–2:36)
+### 9. The crossing (2:32–2:46)
 
 The photon fights its way out through the star and breaks the surface, and then there's nothing in its way at all. Black, and speed. For the first time since the release, it's quiet: the sound drops to the one held note.
 
@@ -120,7 +122,7 @@ Ahead, a point of dull red: a world still molten. As we close on it, it cools. C
 
 Down through cloud, through the surface of the sea, into green-lit water, and into a single cell. It takes the light in.
 
-### 10. The waters swarm (2:36–3:08)
+### 10. The waters swarm (2:46–3:18)
 
 The cell is the face now: round, steady, centre frame. The water around it runs through days and nights in a flicker. It divides. Again. Again. Generations go by in seconds, and each time we stay with one line of descent. [[Rule 5: from here the surround changes in time more than in form.]]
 
@@ -132,7 +134,7 @@ Fish. Behind it, something far bigger: armored, jawed, the length of a boat. Our
 
 It keeps to the shallows now, near the light. Seen from below, through the bright skin of the surface, small shadows flicker across the sky. They have wings. [[P1: 1:20, "let flying things fly above the earth across the face of the vault." P5: yours (2026-10-05): "if we can get flying animals add them." P6: seeing them first from underwater, so the flying things of day five arrive before the land animals of day six.]]
 
-### 11. The land (3:08–3:32)
+### 11. The land (3:18–3:42)
 
 Shallows, mud, air. Fins that push like legs. The creature hauls out onto a shore where nothing like it has walked. The air over the shallows is alive with wings, insects glinting in the sun: the first things that flew. The world around it has almost stopped shimmering. Plants hold their shapes, and the light is daylight. [[P2 with license: one genetic estimate puts winged insects about 400 million years ago, before any backboned animal walked; the oldest winged fossils are later, about 325 million. Low-to-medium confidence. I've kept them because your reading puts the flying things of 1:20 before the land animals of 1:24.]]
 
@@ -142,7 +144,7 @@ The small creature is picking beetles off the body of a great animal that has di
 
 Low in the south a glow comes up, where no dawn should be. It climbs, and the creature goes still. Minutes later the ground heaves under it. Then the sky starts to fall: one streak of fire, then dozens, then the whole sky streaming down, a meteor shower that doesn't stop, and the air grows hot. The held note is still there under a roar. The creature runs for a hole among the roots of a tree. We don't go with it. We stay. [[Your note (2026-10-05): the impact is the asteroid that killed the dinosaurs, and it has to be close enough to frighten the animal and far enough not to incinerate everything. P2: this is that distance. About 3,000 km from Chicxulub, the distance of the Hell Creek country in Montana and the Dakotas, where the best record of that day lies, the impact itself is below the horizon. What's seen is the plume climbing over it; then the earthquake, within minutes; then the debris thrown into space coming back down, for hours, heating the sky. The animals that came through those first hours were the ones underground or in water. It happened in the northern spring. Medium confidence on the sequence; dossier §5.]]
 
-### 12. Dust (3:32–3:50)
+### 12. Dust (3:42–4:00)
 
 We stay on the dead animal's face, and time runs. It's the last time the world moves faster than we can follow. The fire stops falling. The sky goes dark and stays dark: a long winter of soot and dust. Ash settles on the face. The flesh goes. The skull shows, and sinks into the ground. The sky clears. The first green to come back is ferns, everywhere, the same ferns the lizard-shaped creature ran through. Then the land greens differently, with flowering things and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19, "you are dust." P2: the impact winter, and the "fern spike": for thousands of years after the impact, ferns made up nearly all the plant life in western North America. P6: the ferns as a callback.]]
 
@@ -152,7 +154,7 @@ One leaf comes loose and falls into frame. It settles on the earth.
 
 Everything is still. Two seconds.
 
-### 13. Fill the earth (3:50–4:26)
+### 13. Fill the earth (4:00–4:36)
 
 Feet. A crowd of them, running, straight over the leaf, from right to left. People, shouting, wild. We go with them.
 
@@ -166,7 +168,7 @@ The forest thins to open woodland and then to grassland. They fight a big cat, a
 
 Dry country, and a river running north through it, high and wide and green on both banks: reeds and papyrus, trees along the water, hippos in the shallows, birds everywhere. They follow it. [[P2: about 55,000 years ago. The Nile valley is one of the two proposed ways out of Africa, and the genetics of living Egyptians favor it. Between about 56,000 and 44,000 years ago a stronger monsoon over Ethiopia made the Nile run higher. It was a wetter spell, and it may be what opened the way. P5: yours (2026-10-05): the Nile a bit more lush. P6: how much more; [dossier §5](./DOSSIER.md#5-the-science).]]
 
-### 14. Rest (4:26–4:50)
+### 14. Rest (4:36–5:00)
 
 They come up onto the edge of a cliff and stop. For the first time since the leaf, nobody is moving.
 
@@ -183,6 +185,15 @@ Closer: the eye, with the river in it. In the dark of the pupil, for an instant,
 Black, on the held breath. [[Decided 2026-10-05: the breath is let out in the Garden's first shot, by Adam. On your recap reading, this is the hinge: 2:7 closes the recap, and 2:8 opens the new story with "the man whom he had formed."]]
 
 ## 4. What changed
+
+### From v3.1 to v3.2 (2026-10-08)
+
+| v3.1 | v3.2 | Why |
+|---|---|---|
+| Opens cold on full static at 0:00 | Opens on black and silence; the hiss rises first, and the static fades up from about 0:02 to full strength at 0:10 | Your note: for the first ten seconds the scene and the audio fade in from black. The sound leading slightly is my suggestion, which you confirmed. |
+| Beat 1 runs 28 seconds; the sequence runs 4:50 | Beat 1 runs 38 seconds; the sequence runs 5:00 | Your note: the static scene extended by ten seconds. The added ten seconds are the fade. |
+| The release at 0:28; every later beat as timed in v3.1 | The release at 0:38; every time after 0:00 is ten seconds later; no beat after the first changes length | The ten seconds go in at the front |
+| "A little under five minutes" (your brief of 2026-10-03) | Five minutes exactly | A change to a recorded decision, logged in [FOUNDATIONS §4](../../../../canon/FOUNDATIONS.md#4-decisions-so-far) |
 
 ### From v3 to v3.1 (2026-10-07)
 
@@ -246,7 +257,7 @@ The finished render gets checked with a free analyzer, such as EA's open-source 
 
 **The four faces' rule (yours, 2026-10-07), and my reading of it.** Your drawing sets it: two frowns, two smiles, two raised brows, two lowered. Reading the drawing, the two large faces smile (malice with its brows down, compassion with its brows up) and the two small faces frown (fear with its brows up, upset with its brows down). No two faces share both features, and the four together use each feature exactly twice. What I think it says, which is more than it looks: the whole's mouth is a smile on both sides, and only its brows change; the part's mouth is a frown on both sides. That's Discussion 007's decision drawn as a face: the same smile, read as malice by a frightened part and as care by a tended one. I'd keep the rule exactly, as the starting state of each half. The climb (fear to terror, malice to laughter) keeps the brows and opens the mouths wider; the settling (upset and compassion to peace and sleep) lets both faces converge, as you decided, so the rule dissolves on purpose on the connection side. The faces are real and human-looking, never the drawing's marks (STORYTELLING, "Real faces"). **Your check (2026-10-08):** "Sounds good, but make sure the emotions translate well to real faces. Those were quick drawings." So the rule is the starting state on paper, and the test is the filmed face in the build (dossier §6): if malice with lowered brows and a smile doesn't read as malice on a real face, the face wins and the rule bends.
 
-**Problem 3: an hour. Still open, with a first shape.** The six movements are in [Discussion 008, round 1](../../../../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07). Episode 1 is this sequence plus the Garden, at about an hour. That leaves roughly fifty-five minutes for Genesis 2:8–3:24: 42 verses with about a dozen recorded speeches. It would be the most invented hour in the series, in its most argued-over chapter. It's question 8 of [Discussion 008](../../../../discussions/008-adam-eve-and-the-garden.md).
+**Problem 3: an hour. Decided for now (2026-10-08): six movements,** with Cain as a fallback only if the Garden's treatment runs thin ([Discussion 008, decision](../../../../discussions/008-adam-eve-and-the-garden.md#decision)). The six movements were first laid out in [Discussion 008, round 1](../../../../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07). Episode 1 is this sequence plus the Garden, at about an hour. That leaves roughly fifty-five minutes for Genesis 2:8–3:24: 42 verses with about a dozen recorded speeches. It would be the most invented hour in the series, in its most argued-over chapter. It's question 8 of [Discussion 008](../../../../discussions/008-adam-eve-and-the-garden.md).
 
 **One small choice: do we hear the laugh?** Rule 1 says nothing is spoken, and a laugh isn't speech, but it is a voice, and the first human voices are meant to come at beat 13. I've carried the laugh in the hiss: pulses in the rhythm of laughter, with no voice. The alternative was a real laugh, buried in the noise. **Decided 2026-10-07: the hiss, and no real laugh.**
 

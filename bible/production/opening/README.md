@@ -1,8 +1,10 @@
 # The Opening — production
 
-> The visualization of Genesis 1:1–2:7. As of 2026-10-08: a first animatic of the whole 4:50, rendered in code with a generated soundtrack, cut to [treatment v3.1](../../story/arcs/01-beginnings/opening/TREATMENT.md)'s timings and the [script](../../scripts/beginnings/opening.fountain)'s shots.
+> The visualization of Genesis 1:1–2:7. As of 2026-10-08: an animatic of the whole 5:00 (v2), rendered in code with a generated soundtrack, cut to [treatment v3.2](../../story/arcs/01-beginnings/opening/TREATMENT.md)'s timings and the [script](../../scripts/beginnings/opening.fountain)'s shots.
 
-**Watch:** [`opening-animatic-v1.mp4`](./opening-animatic-v1.mp4) (854×480, 24 fps, stereo, 42 MB: the repository copy, re-encoded small because the static beats don't compress). **Build it:** `python animatic/build.py` (needs Python 3.10+, numpy, Pillow, ffmpeg; about twenty minutes on four cores), which also writes the full-quality 960×540 file to `animatic/out/`, about 230 MB, kept out of git.
+**v2 (2026-10-08, evening):** your note applied. Ten seconds are added at the front, and they are a fade in from black: the hiss rises out of silence from 0:00, the static comes up from about 0:02 and is at full strength by 0:10. Everything after that runs ten seconds later than in v1, and nothing else has changed. v1 (4:50, opening cold on static) is still in the folder as `opening-animatic-v1.mp4` until you say to remove it.
+
+**Watch:** [`opening-animatic-v2.mp4`](./opening-animatic-v2.mp4) (5:00, 854×480, 24 fps, stereo, 44 MB: the repository copy, re-encoded small because the static beats don't compress). **Build it:** `py animatic/build.py` (needs Python 3.10+, numpy, Pillow, ffmpeg). On your desktop the full render takes well over an hour, not the twenty minutes the cloud machine took, and the fall into the star (2:17–2:30) is by far the slowest stretch; for anything but a full rebuild, render the changed seconds alone with `py animatic/render.py --video part.mp4 --start A --end B`. The build also writes the full-quality 960×540 file to `animatic/out/`, about 230 MB, kept out of git.
 
 ---
 
@@ -10,7 +12,7 @@
 
 You asked for the full animation of the Opening (2026-10-08). This is the first complete pass of it: every one of the fourteen beats, in order, at the treatment's exact timings, with sound, so the whole sequence can be watched and judged for pace before anything expensive is made. That's the dossier's step 1 ("a timed storyboard of the whole sequence, with a rough soundtrack"), done as moving pictures rather than stills, with steps 2 and 3 started in the same code.
 
-It isn't the finished animation. Three things are placeholders by necessity, because this session ran in the cloud without the face shoot, Blender or FL Studio:
+It isn't the finished animation. Three things are placeholders by necessity, because v1 was made in a cloud session without the face shoot, Blender or FL Studio (v2 was re-rendered on your machine from the same code, so the placeholders are the same):
 
 | Placeholder | What it is now | What replaces it |
 |---|---|---|
@@ -22,11 +24,12 @@ What's *not* placeholder: the timings, the staging, the direction of every movem
 
 ## 2. What to look at first
 
-1. **The release at 0:28.** Four frames of picture, one hit of sound. Is it the strike you described?
-2. **Beat 3 (0:36–0:58).** The REVIEW's worry was that two arcs of expression in 22 seconds would flicker. On a mask it's readable; on a real face it may want five seconds from beat 5. The treatment's table is the only thing to change.
-3. **Beat 4's alternation (0:58–1:14).** Only the first three turns take the whole frame; then it spreads organically. Does the spread read as "ink in water," and is the first color visible?
-4. **Beat 13 (3:50–4:26).** Does one steady speed hold it together, or does it read as a montage? Each event (the cat, the clash, the newborn, the grave) happens on the move.
-5. **The face in the static (0:06–0:28).** The animatic adds a faint contrast cue inside the face because video compression kills the motion cue. Say whether you can see the face at all without being told, and whether that's too much or too little.
+0. **The fade (0:00–0:10), new in v2.** Is ten seconds right, or does the wait before the face (now at 0:16) feel dead? Does the hiss arrive far enough ahead of the grain? The picture's fade is `FADE_PICTURE` in `beats_abstract.py`, and the sound's is the first line of `stem_hiss` in `sound.py`.
+1. **The release at 0:38.** Four frames of picture, one hit of sound. Is it the strike you described?
+2. **Beat 3 (0:46–1:08).** The REVIEW's worry was that two arcs of expression in 22 seconds would flicker. On a mask it's readable; on a real face it may want five seconds from beat 5. The treatment's table is the only thing to change.
+3. **Beat 4's alternation (1:08–1:24).** Only the first three turns take the whole frame; then it spreads organically. Does the spread read as "ink in water," and is the first color visible?
+4. **Beat 13 (4:00–4:36).** Does one steady speed hold it together, or does it read as a montage? Each event (the cat, the clash, the newborn, the grave) happens on the move.
+5. **The face in the static (0:16–0:38).** The animatic adds a faint contrast cue inside the face because video compression kills the motion cue. Say whether you can see the face at all without being told, and whether that's too much or too little.
 
 ## 3. The code
 
@@ -42,11 +45,11 @@ All in `animatic/`. Pure functions of time, so frames render in any order and in
 | `render.py` | The frame loop: `--preview 10 30 45` writes PNGs at those seconds; `--video out.mp4 --procs 4` renders slices in parallel through ffmpeg and concatenates them |
 | `build.py` | Frames, soundtrack, mux: one command |
 
-**To change a timing:** edit the beat boundaries `B` at the top of `beats_abstract.py` (they're the treatment's table) and the sub-timings inside the beat's function, then rebuild. **To preview a change:** `python render.py --preview 44 47.5 49 --out /tmp/p` and look at the PNGs.
+**To change a timing:** edit the beat boundaries `B` at the top of `beats_abstract.py` (they're the treatment's table) and the sub-timings inside the beat's function, then rebuild. **To preview a change:** `py render.py --preview 54 57.5 59 --out preview` and look at the PNGs. On this machine the command is `py`, not `python` (dossier §6).
 
 ## 4. Safety
 
-Beat 4's flicker and beat 11's falling sky are designed to the rules in [treatment §5](../../story/arcs/01-beginnings/opening/TREATMENT.md#5-whats-mine-and-the-open-problems): only the first three turns take the whole frame (never more than three a second), the spread is organic, and the grains turn out of step so the frame's brightness holds. A rough check on the rendered frames (mean luminance change per frame in beats 2, 4 and 11) is printed by `python animatic/check_flicker.py <video>`; v1 passes it (worst second: three large changes in beat 4, at the whole-frame turns). **Before anyone watches it full screen, run the finished render through IRIS or PEAT**, as the treatment requires; this animatic has not had that check.
+Beat 4's flicker and beat 11's falling sky are designed to the rules in [treatment §5](../../story/arcs/01-beginnings/opening/TREATMENT.md#5-whats-mine-and-the-open-problems): only the first three turns take the whole frame (never more than three a second), the spread is organic, and the grains turn out of step so the frame's brightness holds. A rough check on the rendered frames (mean luminance change per frame in beats 2, 4 and 11) is printed by `py animatic/check_flicker.py <video>`; v2 passes it, as v1 did (worst second: three large changes in beat 4, at the whole-frame turns; one in beat 11; two at the release). **Before anyone watches it full screen, run the finished render through IRIS or PEAT**, as the treatment requires; this animatic has not had that check.
 
 ## 5. Next
 

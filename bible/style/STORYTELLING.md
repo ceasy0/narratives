@@ -38,6 +38,7 @@
 - **The four-face rule.** When the first faces appear: two frowns, two smiles, two raised brows, two lowered. The large faces smile and the small faces frown; raised brows go to fear and compassion, lowered brows to malice and upset. No two faces share both features. The rule is the starting state; the climb keeps the brows and opens the mouths, and the settling side converges. (Your drawing, 2026-10-07.)
 - **The seer and the seen form together.** When a face opens its eyes, what it sees is already there, in the same frame. The second face forms in the instant the first opens its eyes and mouth, and both sides of a turn-over form at once. (2026-10-07.)
 - **The strike has a sound to match.** When the picture strikes (the static whipped away at 1:3), the sound is the most powerful thing in the sequence: a hit with real weight, and a layered, atmospheric tail that trails after it. Built from the sound of the sea it comes out of, so it still obeys the rule above. (2026-10-07.)
+- **It comes out of black, and the sound comes first.** The Opening fades in from black over its first ten seconds, picture and sound, and the sound leads the picture slightly: the hiss is heard before the grain is seen, as the whisper later finds the face before the eye does. (Your note, and your yes to the sound leading, 2026-10-08.)
 - **Words can be placeholders.** You read "the heavens and the earth," "light," "the waters" and God's speech in Genesis 1 as reaching for things their writer had no names for. On screen that reading is shown and never stated.
 
 ## How God is present
@@ -97,3 +98,4 @@
 | 2026-10-07 | 6 | Your notes on the Opening's treatment v3: the release's sound, the faces forming in sync, the four-face rule |
 | 2026-10-08 | 7 | Your notes with the series draft: the why comes earlier (the Sodom principle); the four-face rule to be checked on real faces |
 | 2026-10-08 | 8 | Your answers on the Garden: two registers for God through the world; the clothes through the world; the Opening's world at the gate; a silent walk to the centre before the first words; the Garden's look (stone paths, a stepped centre, color among stone and green) |
+| 2026-10-08 | 9 | Your note on the Opening's animatic: ten more seconds of static at the front, faded in from black, the sound leading the picture slightly |

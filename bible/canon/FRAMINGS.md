@@ -2,7 +2,7 @@
 
 > Your unconventional framings of ideas and passages: what each one says, which texts support it and which pull against it, a first-pass fit grade, and what it would change on screen. These grades are starting points for discussion, not verdicts.
 
-**Status:** v1.4, 2026-10-07. FR-10's resurrection sub-question is decided (in addition to the body); FR-16 gains the four-face rule; FR-19 (the devil as what evil actions are) is new. v1.3 (2026-10-05): FR-01, FR-02, FR-10, FR-15, FR-16 and FR-17 are updated from your notes on the Opening's treatment v2 and your answers to Discussions 001 and 007. FR-18 (Genesis 2:4–7 as a recap) is new. v1.2 (2026-10-03) updated FR-01 and FR-02 and added FR-15 to FR-17. Earlier: FR-03 revised, and FR-08 given its Ruth reading (v1.1, 2026-10-01). Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes of 2026-10-03.
+**Status:** v1.4, 2026-10-07 (two status lines brought up to date on 2026-10-08: Discussion 009 is decided, and the Opening's treatment is at v3.2; no grade changed). FR-10's resurrection sub-question is decided (in addition to the body); FR-16 gains the four-face rule; FR-19 (the devil as what evil actions are) is new. v1.3 (2026-10-05): FR-01, FR-02, FR-10, FR-15, FR-16 and FR-17 are updated from your notes on the Opening's treatment v2 and your answers to Discussions 001 and 007. FR-18 (Genesis 2:4–7 as a recap) is new. v1.2 (2026-10-03) updated FR-01 and FR-02 and added FR-15 to FR-17. Earlier: FR-03 revised, and FR-08 given its Ruth reading (v1.1, 2026-10-01). Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes of 2026-10-03.
 **Fit grades** (defined in ROADMAP §8.8):
 - **Supported:** the text points this way.
 - **Compatible:** the text is silent or open, and the framing fills a gap without strain.
@@ -15,7 +15,7 @@
 
 | ID | Framing | Arcs | First-pass grade | Discuss before |
 |---|---|---|---|---|
-| [FR-01](#fr-01--the-opening-creation-as-cosmic-and-biological-history) | The opening: creation shown as cosmic and biological history | 1 | Compatible, shown and never narrated; Tension on death before Eden. The malice is settled ([007](../discussions/007-the-faces-of-god.md)). **Treatment v3.** | Done for the first pass |
+| [FR-01](#fr-01--the-opening-creation-as-cosmic-and-biological-history) | The opening: creation shown as cosmic and biological history | 1 | Compatible, shown and never narrated; Tension on death before Eden. The malice is settled ([007](../discussions/007-the-faces-of-god.md)). **Treatment v3.2.** | Done for the first pass |
 | [FR-02](#fr-02--god-yin-and-yang-as-the-trinity) | God and fundamental duality as the Trinity | All depictions of God | Tension. **2026-10-05:** "God does not need the duality in order to be"; God creates it. The faces don't depict the persons. | Left here for now, by your choice |
 | [FR-03](#fr-03--mary-and-joseph-the-conception) | A virgin conception, with Joseph's line joined by the Spirit; the village's version shown as rumor (revised) | 16 | **Tension**; adopted provisionally (the original version was Contradiction) | Confirm the on-screen approach before the Gospels |
 | [FR-04](#fr-04--the-spirit-as-the-true-law) | The Spirit as the true Law; written laws as ideals fitted to circumstances | 5, 16 | Supported as a principle | The Gospels |
@@ -40,7 +40,7 @@
 1. ~~Discussion 002, together with FR-05 and FR-11.~~ Decided.
 2. ~~FR-08, because the Ruth pilot needs it.~~ Confirmed for Ruth.
 3. ~~FR-01, FR-02 and FR-16 in Discussion 007; FR-17 in Discussion 001.~~ Decided 2026-10-05.
-4. ~~Adam and Eve in [Discussion 008](../discussions/008-adam-eve-and-the-garden.md), with FR-18.~~ Decided for the Garden 2026-10-08. The staging of God's presence is [009](../discussions/009-god-in-the-garden.md), round 2.
+4. ~~Adam and Eve in [Discussion 008](../discussions/008-adam-eve-and-the-garden.md), with FR-18.~~ Decided for the Garden 2026-10-08. The staging of God's presence is [009](../discussions/009-god-in-the-garden.md), decided the same day after two rounds.
 5. FR-03 and FR-13.
 6. FR-04, FR-06, FR-07 and FR-09.
 7. FR-10 (the bloodline; the resurrection is decided), FR-14 and FR-19.

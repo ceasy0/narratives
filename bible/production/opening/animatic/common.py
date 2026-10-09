@@ -9,7 +9,7 @@ from __future__ import annotations
 import numpy as np
 
 FPS = 24
-DURATION = 290.0  # 4:50
+DURATION = 300.0  # 5:00 (4:50 until 2026-10-08; ten seconds of fade from black added at the front)
 
 _rng_master = np.random.default_rng(20261008)
 

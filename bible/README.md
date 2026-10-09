@@ -16,8 +16,8 @@ This directory holds the planning documents, the Opening's research, treatment, 
 | [`canon/FRAMINGS.md`](./canon/FRAMINGS.md) | Your unconventional framings: what each says, which texts support it and which pull against it, and a first-pass fit grade |
 | [`discussions/`](./discussions/) | The theological, philosophical and production conversations. 002, 005, 007, 008, 009 (for the Garden) and (for Genesis) 001 are decided. 006 is under discussion. |
 | [`world/TIMELINE.md`](./world/TIMELINE.md) | The working chronology: fixed anchors, the major dating questions, every arc's dates, the kings and the prophets |
-| [`story/arcs/01-beginnings/`](./story/arcs/01-beginnings/README.md) | Arc 1, *Genesis* (Genesis 1–11). The Opening (1:1–2:7): [dossier](./story/arcs/01-beginnings/opening/DOSSIER.md), [treatment v3.1](./story/arcs/01-beginnings/opening/TREATMENT.md), [script](./scripts/beginnings/opening.fountain) and the [animatic](./production/opening/README.md). The Garden (2:8–3:24): its [dossier](./story/arcs/01-beginnings/garden/DOSSIER.md), seeded with the look |
-| [`production/opening/`](./production/opening/README.md) | **New, 2026-10-08:** the Opening's first animatic, all 4:50 with sound, rendered in code (`opening-animatic-v1.mp4`), and the code that makes it |
+| [`story/arcs/01-beginnings/`](./story/arcs/01-beginnings/README.md) | Arc 1, *Genesis* (Genesis 1–11). The Opening (1:1–2:7): [dossier](./story/arcs/01-beginnings/opening/DOSSIER.md), [treatment v3.2](./story/arcs/01-beginnings/opening/TREATMENT.md), [script](./scripts/beginnings/opening.fountain) and the [animatic](./production/opening/README.md). The Garden (2:8–3:24): its [dossier](./story/arcs/01-beginnings/garden/DOSSIER.md), seeded with the look |
+| [`production/opening/`](./production/opening/README.md) | **New, 2026-10-08:** the Opening's animatic, all 5:00 with sound, rendered in code (`opening-animatic-v2.mp4`, with the fade from black; v1 is the 4:50 cut), and the code that makes it |
 | [`story/arcs/07-ruth/`](./story/arcs/07-ruth/README.md) | The Ruth pilot: the plan, the research dossier, the treatment, the beat sheet and (new, 2026-10-08) a [storyboard](./story/arcs/07-ruth/STORYBOARD.md) of sixteen key frames |
 | [`scripts/ruth/`](./scripts/ruth/ruth.fountain) | The first-draft Ruth screenplay, with every line tagged |
 | [`style/`](./style/STORYTELLING.md) | Your notes on how scenes should play ([`STORYTELLING`](./style/STORYTELLING.md)), how each character speaks ([`VOICES`](./style/VOICES.md)), and the word list ([`LEXICON`](./style/LEXICON.md)) |
@@ -38,12 +38,12 @@ This directory holds the planning documents, the Opening's research, treatment, 
 | | |
 |---|---|
 | Phase | Writing from the front of the Bible to the end (your decision, 2026-10-03). The first pass is treatments and beats only (2026-10-05); scripts come after. Episodes run about an hour. |
-| Episode 1 | *In the Beginning:* the Opening (Genesis 1:1–2:7, 4:50), then the Garden to 3:24. |
-| The Opening | **Script v1 and animatic v1 done (2026-10-08).** The [script](./scripts/beginnings/opening.fountain) is shot by shot, timed and tagged. The [animatic](./production/opening/README.md) is all fourteen beats rendered in code with a generated soundtrack, cut to the treatment's timings, with a placeholder face and placeholder creatures and people. It's the first thing you can watch end to end. What it isn't yet is the finished animation: the README says exactly what's placeholder and what replaces it. |
+| Episode 1 | *In the Beginning:* the Opening (Genesis 1:1–2:7, 5:00), then the Garden to 3:24. |
+| The Opening | **Script v1.1 and animatic v2 done (2026-10-08).** Your note of that evening is applied: ten seconds added at the front as a fade in from black, the sound leading the picture slightly, so the sequence runs 5:00 and everything after 0:00 is ten seconds later. The [script](./scripts/beginnings/opening.fountain) is shot by shot, timed and tagged. The [animatic](./production/opening/README.md) is all fourteen beats rendered in code with a generated soundtrack, cut to the treatment's timings, with a placeholder face and placeholder creatures and people. It's the first thing you can watch end to end. What it isn't yet is the finished animation: the README says exactly what's placeholder and what replaces it. |
 | The Garden | **Unblocked.** [008](./discussions/008-adam-eve-and-the-garden.md) and [009](./discussions/009-god-in-the-garden.md) are decided (2026-10-08). The [dossier](./story/arcs/01-beginnings/garden/DOSSIER.md) is seeded with every decision and the look (your stone paths and stepped centre, with my response). **Next: the treatment.** |
 | The map | v1.1: Arc 1 is *Genesis* in eight hours with your names; every later hour is renumbered by two; Season 2 is *The Father of Nations*; Season 3 waits on a name ([§11](./story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when)). |
 | Ruth | Parked as a first draft, now with a [storyboard](./story/arcs/07-ruth/STORYBOARD.md) of sixteen key frames. Its slot in the map is after Gideon (hour 69). |
-| This session | Ran in the cloud, so nothing on your computer was touched. The animatic was rendered here; it reruns on your machine with Python, numpy, Pillow and ffmpeg. |
+| The last session | Ran on your computer (2026-10-08, late). ffmpeg was installed with winget; Python 3.14 with numpy and Pillow was already there, as `py`. Animatic v2 was rendered on this machine. Nothing was committed or pushed. |
 | Formats | Markdown for docs · Fountain for screenplays · mp4 for the animatic |
 
 ## What I need from you
@@ -54,8 +54,8 @@ Everything the project is waiting on, in one place. I'll keep this list current.
 
 ### Tonight's work
 
-1. **The animatic.** Watch [`opening-animatic-v1.mp4`](./production/opening/opening-animatic-v1.mp4) (4:50). What I most want to know: does the pace hold through beats 3 and 13, the two the REVIEW flagged? Does the release at 0:28 land? Is the face in the static readable, or does it need the stronger cue? Anything whose timing is wrong is a number in the treatment's table, and the whole thing re-renders in a quarter of an hour.
-2. **The script.** [`opening.fountain`](./scripts/beginnings/opening.fountain), v1. It's the treatment made exact, with timecodes; every tag is carried over.
+1. **The animatic.** Watch [`opening-animatic-v2.mp4`](./production/opening/opening-animatic-v2.mp4) (5:00, with your fade from black). What I most want to know: is the ten-second fade right, or does the wait before the face (now at 0:16) feel dead? Does the pace hold through beats 3 and 13, the two the REVIEW flagged? Does the release at 0:38 land? Is the face in the static readable, or does it need the stronger cue? Anything whose timing is wrong is a number in the treatment's table, and the whole thing re-renders in a quarter of an hour.
+2. **The script.** [`opening.fountain`](./scripts/beginnings/opening.fountain), v1.1. It's the treatment made exact, with timecodes; every tag is carried over.
 3. **The Ruth boards.** [Sixteen frames](./story/arcs/07-ruth/STORYBOARD.md), blocked not drawn, and two rules I proposed from drawing them (toward the camera is home; Naomi's state as the frame's fullness). Keep or strike.
 
 ### The map, and the Garden
@@ -64,10 +64,12 @@ Everything the project is waiting on, in one place. I'll keep this list current.
 5. **Hour 8's name and shape.** *The Scattering* is fine by me; the risk is thinness, and my two ways to carry it are in §11. Yes to trying it as the Table of Nations fulfilled, with a merge into hour 7 as the fallback?
 6. **The Garden's look.** The stepped centre, adopted as I've read it ([dossier §2](./story/arcs/01-beginnings/garden/DOSSIER.md#2-the-look)): a low, broad, worn terrace of placed stone, no wall, the way east a descent. And the color rule I drew from your description: color only in what lives. Yes, no, or a change?
 
-### For the Opening's build, at the next local session
+### For the Opening's build, at a local session
+
+*Also yours to say:* whether the 4:50 cut, `opening-animatic-v1.mp4` (42 MB), stays in the folder beside v2 or goes. It's in the git history either way.
 
 7. **The face shoot.** Your own face, on a phone, lit from the front: the six expression runs in the [dossier §6](./story/arcs/01-beginnings/opening/DOSSIER.md#real-expressions-cheaply), ten seconds each, a few takes. The animatic's placeholder face is the one thing that drops straight out when this exists.
-8. **FL Studio 2025's plugin folders** get read in that session, and Python and ffmpeg installed, under your yes. The animatic's soundtrack is written as eight stems for you to take into FL Studio ([production README](./production/opening/README.md)).
+8. **FL Studio 2025's plugin folders** get read in that session. (Python and ffmpeg are on the machine as of 2026-10-08.) The animatic's soundtrack is written as eight stems for you to take into FL Studio ([production README](./production/opening/README.md)).
 
 ### Before the rest of Genesis 1–11
 
