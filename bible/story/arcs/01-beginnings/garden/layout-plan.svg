@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Georgia, serif">
   <rect width="900" height="620" fill="#f4f1ea"/>
-  <text x="20" y="32" font-size="20" fill="#2b2b2b">The Garden — proposed plan (P6)</text>
+  <text x="20" y="32" font-size="20" fill="#2b2b2b">The Garden — plan (decided 2026-10-09)</text>
   <text x="20" y="52" font-size="12" fill="#666">North up. Island about 400 m a side; terraces 120 m at the foot, 40 m at the top.</text>
   <!-- marsh + water -->
   <rect x="30" y="75" width="520" height="520" fill="#c9d6c2"/>
@@ -15,6 +15,18 @@
   <text x="370" y="200" font-size="12" fill="#2f3f25">tall trees</text>
   <text x="130" y="490" font-size="12" fill="#2f3f25">flowers, open ground</text>
   <text x="380" y="490" font-size="12" fill="#2f3f25">wild, dense</text>
+  <!-- limestone paths along the headwaters -->
+  <g fill="#cfcac0">
+    <rect x="279" y="145" width="22" height="125"/><rect x="279" y="400" width="22" height="125"/>
+    <rect x="100" y="324" width="125" height="22"/><rect x="355" y="324" width="125" height="22"/>
+  </g>
+  <!-- winding paths in the quarters -->
+  <g fill="none" stroke="#d9c9a3" stroke-width="3" stroke-linecap="round">
+    <path d="M279,180 C230,190 200,230 150,215 S120,270 140,300 M255,300 C220,280 180,300 160,250"/>
+    <path d="M301,190 C340,220 390,180 430,215 S450,290 410,300 M301,250 C340,240 360,280 330,312"/>
+    <path d="M279,440 C240,420 200,470 160,440 S120,380 150,360 M250,395 C210,400 190,370 130,385"/>
+    <path d="M301,470 C350,500 400,440 440,470 S460,380 420,360 M335,355 C360,400 330,430 301,420"/>
+  </g>
   <!-- channels -->
   <g stroke="#5f9fc0" stroke-width="8">
     <line x1="290" y1="145" x2="290" y2="270"/><line x1="290" y1="400" x2="290" y2="525"/>
@@ -40,10 +52,12 @@
     <line x1="578" y1="135" x2="594" y2="135" stroke="#5f9fc0" stroke-width="6"/><text x="598" y="139">four channels, four quarters</text>
     <circle cx="585" cy="160" r="6" fill="#3f6b2e"/><text x="598" y="164">tree of life</text>
     <circle cx="585" cy="184" r="6" fill="#5a4a2a"/><text x="598" y="188">tree of knowledge</text>
-    <rect x="579" y="200" width="12" height="12" fill="#c3beb4" stroke="#6e6a62"/><text x="598" y="211">five stone terraces</text>
+    <rect x="579" y="200" width="12" height="12" fill="#c3beb4" stroke="#6e6a62"/><text x="598" y="211">five spring-built terraces</text>
+    <rect x="579" y="222" width="12" height="12" fill="#cfcac0"/><text x="598" y="233">grey limestone paths, headwaters</text>
+    <line x1="578" y1="250" x2="594" y2="250" stroke="#d9c9a3" stroke-width="3"/><text x="598" y="254">winding paths, quarters</text>
   </g>
   <!-- section -->
-  <text x="580" y="270" font-size="14" fill="#2b2b2b">Section, west–east</text>
+  <text x="580" y="285" font-size="14" fill="#2b2b2b">Section, west–east</text>
   <rect x="575" y="420" width="300" height="20" fill="#9fc3d6"/>
   <polygon points="590,420 860,420 860,412 590,412" fill="#a9b98f"/>
   <g fill="#c3beb4" stroke="#6e6a62">
@@ -55,6 +69,6 @@
   <line x1="732" y1="352" x2="732" y2="325" stroke="#5a4a2a" stroke-width="3"/><circle cx="732" cy="319" r="10" fill="#5a4a2a"/>
   <rect x="860" y="414" width="20" height="5" fill="#bdb6a8"/>
   <text x="580" y="462" font-size="11" fill="#555">about 12 m high; the way out is down, then east across the water</text>
-  <text x="580" y="300" font-size="11" fill="#555">morning: mist off the water, blue shade,</text>
+  <text x="580" y="302" font-size="11" fill="#555">morning: mist off the water, blue shade,</text>
   <text x="580" y="314" font-size="11" fill="#555">warm sun breaking through</text>
 </svg>
