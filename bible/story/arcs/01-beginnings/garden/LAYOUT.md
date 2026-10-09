@@ -2,7 +2,7 @@
 
 > Research for README item 6: the shape, the layout and the light of the Garden of Eden, and what I think of your picture of it. Companion to the [Garden dossier](./DOSSIER.md), whose §2 ("The look") this extends. Nothing here is decided until you say so.
 
-**Status:** v0.4, 2026-10-09. v0.4 adds where the water comes from (§5.7). v0.1 was written from your note below; v0.2 added your two comments on it (the stones' size and the ground itself, §5.4; the mood and shadow, §6); v0.3 added your rule for the living things (§6). Decided: **grey limestone; a natural, peaceful, beautiful mood carried by shadow; plants and animals of the region or the wider region** ([FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far)). Everything else here is still a proposal.
+**Status:** v0.5, 2026-10-09. v0.5 records your yes to the spring-built centre and answers whether it could be out in the delta (§5.7). v0.4 added where the water comes from. v0.1 was written from your note below; v0.2 added your two comments on it (the stones' size and the ground itself, §5.4; the mood and shadow, §6); v0.3 added your rule for the living things (§6). Decided: **grey limestone; a natural, peaceful, beautiful mood carried by shadow; plants and animals of the region or the wider region; the stepped centre built by its own spring** ([FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far)). Everything else here is still a proposal.
 
 Your note of 2026-10-09:
 
@@ -202,7 +202,11 @@ Your question (2026-10-09): "How would the river have sprung up from the middle.
 
 **What I'd do.** Make the stepped centre a spring mound. The terraces are old travertine, weathered grey, mossy and overgrown (your grey limestone), built over ages by the spring that still rises from a fissure on the top, between the two trees. Where the water runs now, the fresh stone is pale and glistening, thin bright lines down the grey steps; that is Ezekiel's "stones of fire" catching the sun. The four channels are the spring's four overflows, and the water round the island is where they collect. In the cool of the morning, a mist can lift off the moving water (2:6's *'ed*). This answers three questions at once: **where the river comes from, why there are steps, and who built them. The water built them. Nobody cut anything, and "the LORD God planted" stands.**
 
+**Decided 2026-10-09:** "Yes lets do this. That sounds really nice."
+
 **The catches.** No spring mound like this is known on the delta itself. There the limestone lies deep under river mud, and the springs come up at the desert's edge. So this is one more reason to think about question 3 in §8. At the desert's edge (B) it's ordinary geology; out in the marsh (A) it's the sign that this place isn't like the rest of the plain. Second, the big travertine terraces at Pamukkale come from warm, mineral-rich water, and I can't show that the Dammam's water built anything like them. The mechanism is real, but the scale here is our choice. **Grade: Compatible,** with the region's springs at P4 (real) and the spring-built mound at P5.
+
+**Could it be out in the delta? Yes: rare, not impossible.** (Your question, 2026-10-09: "Its not impossible though, right?") Under the delta, the same water-bearing limestone is still there, only buried under the rivers' mud. The water under pressure needs a crack to come up through, and cracks exist: the ground under southern Iraq is folded and faulted (the buried domes of the oil fields near Basra are such folds), and Bahrain's springs were said to rise even through the seabed. A spring that finds a fault keeps flowing, and its lime builds a mound until it stands above the marsh. Nothing like it is known there today, but the mud has been piling up on that plain for seven thousand years and could bury one. At the desert's edge it would be ordinary; in the marsh it would be rare. Rare is exactly what the Garden is. *Medium confidence on the faults; high that the limestone runs under the delta.*
 
 ---
 
@@ -264,10 +268,10 @@ All of this is buildable in Blender: a terrain mesh, scattered vegetation (geome
 
 ## 8. What I need from you
 
-Decided so far (2026-10-09): grey limestone; the mood carried by shadow; plants and animals of the region or the wider region. Three questions left, each one word:
+Decided so far (2026-10-09): grey limestone; the mood carried by shadow; plants and animals of the region or the wider region; the stepped centre built by its own spring. Three questions left, each one word:
 
-1. **The plan** (§6): the square island with the stepped centre, four channels from a spring between the two trees, and one causeway east. Yes, no, or a change?
+1. **The plan** (§6): the square island with the stepped centre, four channels from the spring between the two trees, and one causeway east. Yes, no, or a change? (The spring-built centre itself is decided.)
 2. **The stone's form** (§5.4): a natural limestone pavement, the ground itself (my recommendation), or precise masonry?
-3. **Where the limestone lies** (§5.4): a deliberate stranger in the mud plain (my recommendation), or the Garden at the plain's desert edge?
+3. **Where the spring rises** (§5.4, §5.7): out in the marsh, rare but possible (my recommendation), or at the plain's desert edge, where such springs are ordinary?
 
 When these are answered, they go into the dossier's §2 as the Garden's look, and the treatment uses it.
