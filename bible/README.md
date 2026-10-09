@@ -62,7 +62,7 @@ Everything the project is waiting on, in one place. I'll keep this list current.
 
 4. **Season 3's name.** My proposal is *The Struggle* (what "Israel" means); the alternatives are in [§11](./story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when).
 5. **Hour 8's name and shape.** *The Scattering* is fine by me; the risk is thinness, and my two ways to carry it are in §11. Yes to trying it as the Table of Nations fulfilled, with a merge into hour 7 as the fallback?
-6. **The Garden's look.** The stepped centre, adopted as I've read it ([dossier §2](./story/arcs/01-beginnings/garden/DOSSIER.md#2-the-look)): a low, broad, worn terrace of placed stone, no wall, the way east a descent. And the color rule I drew from your description: color only in what lives. Yes, no, or a change?
+6. **The Garden's look.** Your square with water on four sides, the blue light, the grey stone and the Greek feel, researched in [the Garden's layout](./story/arcs/01-beginnings/garden/LAYOUT.md) (2026-10-09), with a plan drawn. My answer: the square and the water are the oldest shape paradise has (Ezek 31:4; Rev 21:16; 22:1–2; the Persian *pairidaeza*), and they join the stepped centre as one design: a square island, four channels from a spring between the two trees, one causeway east where the cherubim stand. Keep the Greek feel, not Greek forms. Yes, no, or a change ([§8](./story/arcs/01-beginnings/garden/LAYOUT.md#8-what-i-need-from-you))? The color rule (color only in what lives) still stands with it.
 
 ### For the Opening's build, at the next local session
 

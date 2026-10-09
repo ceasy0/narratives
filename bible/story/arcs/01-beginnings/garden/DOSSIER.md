@@ -30,6 +30,8 @@ Everything the treatment needs, with where each decision lives. Nothing here is 
 
 ## 2. The look
 
+> **2026-10-09:** your next picture (a square with water on all four sides, blue light through the trees, grey stone, "almost like a Greek feel") and the research on what the Garden looked like are in [LAYOUT.md](./LAYOUT.md). It proposes one design that joins the square, the water and the stepped centre below, for you to accept or change.
+
 ### Your description (2026-10-08)
 
 > I imagine the Garden with beautiful stone walkways or paths, with all kinds of plants on either side of the path and animals walking it. We can discuss this, but I think the middle should be like a step pyramid with the two trees probably within it (it should have an open top then). Let me know what you think.
