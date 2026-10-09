@@ -1,0 +1,270 @@
+{
+  "main": {
+    "id": "a77174ded4fc5004",
+    "type": "split",
+    "children": [
+      {
+        "id": "5da77f675142f39f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62f2f77fe6814b10",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bible/README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "4d758ea192a3ea2a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bible/CLAUDE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CLAUDE"
+            }
+          },
+          {
+            "id": "f0dfc900662e3c02",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bible/REVIEW.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "REVIEW"
+            }
+          },
+          {
+            "id": "af739b99ca925d61",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bible/ROADMAP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ROADMAP"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "582e9ae35af2fa00",
+    "type": "split",
+    "children": [
+      {
+        "id": "fdbbf1e089ea3c7c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e9d613b53bc9542",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b81b102962fe4de6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8fc5753a9c0cbe5d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4928d84f1f616345",
+    "type": "split",
+    "children": [
+      {
+        "id": "0528c1b1f4aecf62",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "77311fbd447b3154",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "bible/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "de61d5133cf80ace",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "bible/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "5dbada62a7fe14f2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a01c321d53d8494b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "ca0a6d59a4295aca",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "bible/README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "2e9d613b53bc9542",
+  "lastOpenFiles": [
+    "bible/scripts/beginnings/opening.pdf",
+    "bible/ROADMAP.md",
+    "bible/REVIEW.md",
+    "bible/CLAUDE.md",
+    "bible/README.md",
+    "bible/discussions/002-jesus-humanity.md",
+    "bible/canon/FOUNDATIONS.md",
+    "bible/story/ARCHITECTURE.md",
+    "bible/story/arcs/07-ruth/storyboard/sheet-2.png",
+    "bible/story/arcs/07-ruth/storyboard/sheet-1.png",
+    "bible/story/arcs/07-ruth/storyboard/draw.py",
+    "bible/story/arcs/07-ruth/storyboard",
+    "bible/story/arcs/07-ruth/STORYBOARD.md",
+    "bible/story/arcs/01-beginnings/garden/DOSSIER.md",
+    "bible/story/arcs/01-beginnings/garden",
+    "bible/scripts/beginnings/opening.fountain",
+    "bible/scripts/beginnings",
+    "bible/production/opening/animatic/sound.py",
+    "bible/production/opening/animatic/render.py",
+    "bible/production/opening/animatic/face.py",
+    "bible/production/opening/animatic/common.py",
+    "bible/production/opening/animatic/check_flicker.py",
+    "bible/production/opening/README.md",
+    "bible/world/TIMELINE.md",
+    "bible/canon/FRAMINGS.md",
+    "bible/canon/POSITIONS.md",
+    "bible/discussions/009-god-in-the-garden.md",
+    "bible/discussions/008-adam-eve-and-the-garden.md",
+    "bible/discussions/005-beyond-the-text.md",
+    "bible/story/arcs/01-beginnings/README.md",
+    "bible/story/arcs/01-beginnings/opening/TREATMENT.md",
+    "bible/story/arcs/01-beginnings/opening/DOSSIER.md",
+    "README.md"
+  ]
+}
