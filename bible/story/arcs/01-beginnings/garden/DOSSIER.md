@@ -30,7 +30,8 @@ Everything the treatment needs, with where each decision lives. Nothing here is 
 
 ## 2. The look
 
-> **2026-10-09:** your next picture (a square with water on all four sides, blue light through the trees, grey stone, "almost like a Greek feel") and the research on what the Garden looked like are in [LAYOUT.md](./LAYOUT.md). It proposes one design that joins the square, the water and the stepped centre below, for you to accept or change.
+> **2026-10-09.** Decided: **grey limestone**, and **the mood**, natural, peaceful and beautiful, carried by shadow. Your next picture (a square with water on all four sides, blue light through the trees, "almost like a Greek feel") and the research on what the Garden looked like are in [LAYOUT.md](./LAYOUT.md), with a plan. It proposes one design that joins the square, the water and the stepped centre below (§6 there), the ground as a natural limestone pavement rather than masonry (§5.4), and the rules for shadow (§6). Those are still open ([§8 there](./LAYOUT.md#8-what-i-need-from-you)). Where this section says the stone is "placed," read it with LAYOUT §5.4: the proposal now is living rock, not laid stone.
+
 
 ### Your description (2026-10-08)
 
@@ -81,4 +82,4 @@ From [008, round 1](../../../../discussions/008-adam-eve-and-the-garden.md#round
 Nothing that blocks it. Two things it would be better with:
 
 1. Which animals, and how many. The plain's own are in [008's check](../../../../discussions/008-adam-eve-and-the-garden.md#the-check-the-ur-and-uruk-country): lions, aurochs, onagers, the birds of the marshes, gazelle, wild boar, the Mesopotamian fallow deer. The treatment will propose a dozen and a conduit among them.
-2. Whether the stepped centre is right, and the color rule (§2).
+2. Whether the stepped centre is right, and the color rule (§2). Now asked together with the square island and the limestone in [LAYOUT §8](./LAYOUT.md#8-what-i-need-from-you).

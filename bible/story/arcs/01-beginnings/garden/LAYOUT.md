@@ -2,7 +2,9 @@
 
 > Research for README item 6: the shape, the layout and the light of the Garden of Eden, and what I think of your picture of it. Companion to the [Garden dossier](./DOSSIER.md), whose §2 ("The look") this extends. Nothing here is decided until you say so.
 
-**Status:** v0.1, 2026-10-09. Written from your note of 2026-10-09:
+**Status:** v0.2, 2026-10-09. v0.1 was written from your note below; v0.2 adds your two comments on it (the stones' size and the ground itself, §5.4; the mood and shadow, §6) and records what's decided: **grey limestone, and a natural, peaceful, beautiful mood carried by shadow** ([FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far)). Everything else here is still a proposal.
+
+Your note of 2026-10-09:
 
 > I was thinking that the Garden should be square shaped with water surrounding all four sides, but this may be wrong. What I do need the scene to feel like is something natural, with blue-lighting peeking through the trees and bushes from the sun that pairs well with grey/dark grey stone (almost like a Greek feel to me). I want you to deeply research the Garden and what it possibly looked like, its layout, etc. and tell me what you think.
 
@@ -233,4 +235,10 @@ All of this is buildable in Blender: a terrain mesh, scattered vegetation (geome
 
 ## 8. What I need from you
 
-**Do you want the square island with the stepped centre and the causeway east, as in §6?** Yes, no, or change it. If yes, I'll fold it into the dossier's §2 as the Garden's look, and the treatment will use it.
+Decided so far (2026-10-09): grey limestone, and the mood carried by shadow. Three questions left, each one word:
+
+1. **The plan** (§6): the square island with the stepped centre, four channels from a spring between the two trees, and one causeway east. Yes, no, or a change?
+2. **The stone's form** (§5.4): a natural limestone pavement, the ground itself (my recommendation), or precise masonry?
+3. **Where the limestone lies** (§5.4): a deliberate stranger in the mud plain (my recommendation), or the Garden at the plain's desert edge?
+
+When these are answered, they go into the dossier's §2 as the Garden's look, and the treatment uses it.
