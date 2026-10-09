@@ -62,7 +62,7 @@ Everything the project is waiting on, in one place. I'll keep this list current.
 
 4. **Season 3's name.** My proposal is *The Struggle* (what "Israel" means); the alternatives are in [§11](./story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when).
 5. **Hour 8's name and shape.** *The Scattering* is fine by me; the risk is thinness, and my two ways to carry it are in §11. Yes to trying it as the Table of Nations fulfilled, with a merge into hour 7 as the fallback?
-6. **The Garden's look.** The stepped centre, adopted as I've read it ([dossier §2](./story/arcs/01-beginnings/garden/DOSSIER.md#2-the-look)): a low, broad, worn terrace of placed stone, no wall, the way east a descent. And the color rule I drew from your description: color only in what lives. Yes, no, or a change?
+6. ~~**The Garden's look.**~~ **Decided 2026-10-09:** a square island in fresh water out in the marsh; a stepped centre of old grey travertine built by the spring that rises between the two trees; four somewhat straight headwaters with broad grey limestone paths along them; clear paths winding through the four planted quarters; one causeway east. Grey limestone, a peaceful mood made with shadow, plants and animals of the region, color only in what lives, all of it well kept. Your rule: the line "between natural and too rare to be natural." Summary in the [dossier §2](./story/arcs/01-beginnings/garden/DOSSIER.md#the-look-decided-2026-10-09), research and plan in [LAYOUT.md](./story/arcs/01-beginnings/garden/LAYOUT.md). Nothing needed from you.
 
 ### For the Opening's build, at a local session
 

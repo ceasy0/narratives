@@ -30,6 +30,9 @@ Everything the treatment needs, with where each decision lives. Nothing here is 
 
 ## 2. The look
 
+> **2026-10-09:** the look is decided. It's summarized below under "The look, decided"; the research and the plan drawing are in [LAYOUT.md](./LAYOUT.md). Your description and my first response are kept here as the record of how it started.
+
+
 ### Your description (2026-10-08)
 
 > I imagine the Garden with beautiful stone walkways or paths, with all kinds of plants on either side of the path and animals walking it. We can discuss this, but I think the middle should be like a step pyramid with the two trees probably within it (it should have an open top then). Let me know what you think.
@@ -54,12 +57,17 @@ Everything the treatment needs, with where each decision lives. Nothing here is 
 
 **Grade for the look as a whole: Compatible,** close to Supported on the mountain (Ezek 28; Gen 2:10) and on the stone against the brick (11:3); the step form itself is P4 (the plain's temples) staged as P5 (yours).
 
-### What it fixes for the build
+### The look, decided (2026-10-09)
 
-- A step pyramid of about four to six terraces, broad and low rather than tall, open at the top, the two trees standing in the open top with room to walk between and around them. The tree of life and the tree of the knowledge of good and evil look different from one another but neither looks strange: the text doesn't mark them, and the serpent's whole case depends on the fruit looking "good for food and a delight to the eyes" (3:6).
-- Stone paths from the foot of it outward to the water, between planted beds; the animals use the paths.
-- The river entering from the high side and dividing (2:10), so there's running water on every path.
-- The way east: the one path that leaves the Garden, which is the one the cherubim will stand on.
+Your answers of 2026-10-09 settle it; the research, the reasons and the plan drawing are in [LAYOUT.md](./LAYOUT.md) (§5.4, §5.7, §6). This replaces the first sketch of the build that stood here. **Your rule for the whole Garden:** "find the line between natural and too rare to be natural; I think that's where the magic is here."
+
+- **Where:** a square island, about 400 m a side, set to the four directions, in fresh water out in the marsh near where Eridu would stand: rare, but possible. Beyond it the marsh, the plain, the sea on the horizon.
+- **The centre:** five broad, low terraces of old grey travertine, built by an artesian spring that still rises from a fissure on the open top, between the two trees. Pale, glistening lines where the water runs now. The two trees look different from one another but neither looks strange (3:6).
+- **The four headwaters:** the spring's four channels run somewhat straight down the four faces to the four sides (2:10), following the limestone's joints. Along both banks, the paths are **broad slabs of beautiful grey limestone**, the ground itself and not masonry.
+- **The quarters:** four planted quarters between them, each different, with **clear paths winding all through them** of earth, gravel, sand and stepping stones.
+- **The care:** the paths clear and smooth, the Garden well kept: natural in shape, tended in fact.
+- **The way east:** one causeway across the water from the eastern headwater's path, the only dry way out, where the cherubim and the fire stand (3:24).
+- **Stone, light, life:** grey limestone; a natural, peaceful, beautiful mood made mostly with shadow, cool blue shade and warm shafts of sun; plants and animals of the region or the wider region; color only in what lives.
 
 ## 3. The six movements, as they now stand
 
@@ -78,5 +86,5 @@ From [008, round 1](../../../../discussions/008-adam-eve-and-the-garden.md#round
 
 Nothing that blocks it. Two things it would be better with:
 
-1. Which animals, and how many. The plain's own are in [008's check](../../../../discussions/008-adam-eve-and-the-garden.md#the-check-the-ur-and-uruk-country): lions, aurochs, onagers, the birds of the marshes, gazelle, wild boar, the Mesopotamian fallow deer. The treatment will propose a dozen and a conduit among them.
-2. Whether the stepped centre is right, and the color rule (§2).
+1. Which animals, and how many. The plain's own are in [008's check](../../../../discussions/008-adam-eve-and-the-garden.md#the-check-the-ur-and-uruk-country): lions, aurochs, onagers, the birds of the marshes, gazelle, wild boar, the Mesopotamian fallow deer. The wider region's are allowed too (your rule, 2026-10-09; the list is in [LAYOUT §6](./LAYOUT.md#the-plants-and-animals)). The treatment will propose a dozen and a conduit among them.
+2. ~~Whether the stepped centre is right, and the color rule (§2).~~ Decided 2026-10-09 (§2, "The look, decided").
