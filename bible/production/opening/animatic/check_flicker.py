@@ -2,7 +2,7 @@
 luminance larger than a threshold, per second, in the two risky stretches (beat 4 and beat 11),
 and reports the worst second. This is not IRIS or PEAT and does not replace them (treatment §5).
 
-    python check_flicker.py ../opening-animatic-v1.mp4
+    python check_flicker.py ../opening-animatic-v2.mp4
 """
 import subprocess
 import sys
@@ -35,5 +35,6 @@ def report(path, name, t0, t1, fps=24):
 
 if __name__ == "__main__":
     p = sys.argv[1]
-    worst = max(report(p, "beat 4", 58, 74), report(p, "beat 11 (the sky falls)", 207, 216), report(p, "beat 2 (the release)", 27, 30))
+    # times are for the 5:00 cut (treatment v3.2); the 4:50 cut ran ten seconds earlier
+    worst = max(report(p, "beat 4", 68, 84), report(p, "beat 11 (the sky falls)", 217, 226), report(p, "beat 2 (the release)", 37, 40))
     print("OK by this crude measure" if worst <= 3 else "WARNING: check with IRIS/PEAT before viewing full screen")

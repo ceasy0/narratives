@@ -101,12 +101,14 @@ def lowpass_env(x, cutoff_fn):
 # ------------------------------------------------------------------------- the stems
 
 def stem_hiss():
-    """Wind over open water; from 16 s it narrows and climbs, like a breath drawn in that doesn't stop."""
+    """Wind over open water, fading in from silence over the first nine seconds (it leads the picture,
+    which comes up from 2 s to 10 s); from 26 s it narrows and climbs, like a breath drawn in that
+    doesn't stop."""
     x = noise(N, 1)
     y = noise(N, 2)
 
     def gain(t, f):
-        climb = sstep(16.0, 28.0, t)
+        climb = sstep(26.0, 38.0, t)
         centre = 700 * (2 ** (climb * 2.6))  # up to about 4.2 kHz
         width = 2.2 - 1.6 * climb
         g = logband(f, centre, width) * (f > 60)
@@ -118,7 +120,8 @@ def stem_hiss():
     # kin bring it back; here only beat 1 and the laugh pulses (stem_laugh) use it.
     L = stft_filter(x, gain)
     R = stft_filter(y, gain)
-    level = env_curve([(0, 0.0), (1.5, 1.0), (16, 1.0), (27.9, 1.0 * db(10)), (28.0, 0.0), (DURATION, 0.0)])
+    # the fade in: an equal-power-ish curve from silence at 0:00 to full at 0:09, a second ahead of the picture
+    level = env_curve([(0, 0.0), (2.0, 0.08), (5.0, 0.4), (9.0, 1.0), (26, 1.0), (37.9, 1.0 * db(10)), (38.0, 0.0), (DURATION, 0.0)])
     out = np.stack([L, R], axis=1) * level[:, None] * 0.05
     return out
 
@@ -128,7 +131,7 @@ def stem_whisper():
     x = noise(N, 3)
 
     def gain(t, f):
-        climb = sstep(16.0, 28.0, t)
+        climb = sstep(26.0, 38.0, t)
         g = np.zeros_like(f)
         for fc, bw, a in ((520, 0.25, 1.0), (1500, 0.2, 0.7), (2500, 0.18, 0.45)):
             g += a * logband(f, fc * (1 + 0.8 * climb), bw)
@@ -136,12 +139,12 @@ def stem_whisper():
         return g * (0.3 + 0.7 * breath)
 
     w = stft_filter(x, gain)
-    level = env_curve([(0, 0), (5.5, 0), (10, 0.5), (17, 1.0), (27.9, 1.0 * db(6)), (28.0, 0), (DURATION, 0)])
+    level = env_curve([(0, 0), (15.5, 0), (20, 0.5), (27, 1.0), (37.9, 1.0 * db(6)), (38.0, 0), (DURATION, 0)])
     return np.stack([w, w], axis=1) * level[:, None] * 0.09
 
 
 def stem_release():
-    """The release at 0:28: a distorted sub-bass hit with real weight, and a tail that is the static
+    """The release at 0:38: a distorted sub-bass hit with real weight, and a tail that is the static
     itself, pitched and smeared, passing the ears and shutting behind the head. Then true silence."""
     buf = np.zeros((N, 2), np.float32)
     n = int(2.2 * SR)
@@ -184,7 +187,7 @@ def stem_note():
         (B["cross"], 880), (B["swarm"], 330), (B["landbeat"], 220), (B["dust"], 196), (B["fill"], 165),
         (B["rest"], 110), (DURATION, 110)])
     amp = env_curve([
-        (0, 0), (34.5, 0), (35.5, 0.12), (B["sep"] + 12, 0.16), (B["sep"] + 13, 0.10), (B["eve"], 0.10),
+        (0, 0), (44.5, 0), (45.5, 0.12), (B["sep"] + 12, 0.16), (B["sep"] + 13, 0.10), (B["eve"], 0.10),
         (B["vault"], 0.16), (B["cross"], 0.22), (B["cross"] + 6, 0.16), (B["swarm"], 0.14), (B["fill"], 0.10),
         (B["rest"], 0.10), (B["rest"] + 17, 0.10), (B["rest"] + 22, 0.0), (DURATION, 0)])
     # the timbre: purer for the photon, warmer for the faces and people
@@ -192,7 +195,7 @@ def stem_note():
     base = tone(f, amp, harmonics=((1, 1.0),), vib=0.003)
     warm = tone(f, amp, harmonics=((1, 0.0), (2, 0.35), (3, 0.18), (4, 0.08), (5, 0.04)), vib=0.003)
     out = base + warm * (1 - purity)
-    # the proton: two more voices lock in at 94-99 s (a fifth and an octave), and stay through the atom
+    # the proton: two more voices lock in at 106-109 s (a fifth and an octave), and stay through the atom
     k = env_curve([(0, 0), (B["land"] + 2.5, 0), (B["land"] + 5, 1), (B["earth"] + 6, 1), (B["lights"] + 10, 0), (DURATION, 0)])
     out += tone(f * 1.5, amp * 0.6 * k, harmonics=((1, 1.0), (2, 0.2)), vib=0.004)
     out += tone(f * 2.0, amp * 0.4 * k, harmonics=((1, 1.0),), vib=0.005)
@@ -200,7 +203,7 @@ def stem_note():
 
 
 def stem_laugh():
-    """The laugh carried by the hiss: hard pulses in the rhythm of laughter, no voice. 42-48 s. Then,
+    """The laugh carried by the hiss: hard pulses in the rhythm of laughter, no voice. 52-58 s. Then,
     in beat 4, each dark turn brings it back, shorter each time."""
     buf = np.zeros((N, 2), np.float32)
     r = rng(6)
@@ -292,7 +295,7 @@ def stem_cosmos():
     the water."""
     buf = np.zeros((N, 2), np.float32)
     r = rng(8)
-    # the electron: a high ping each orbit from 101 s, fading as the glare clears
+    # the electron: a high ping each orbit from 111 s, fading as the glare clears
     t = B["land"] + 7.0
     while t < B["earth"] + 6:
         place(buf, t, blip(1760, 0.15, 0.12, 0.4), 0.3 * np.sin(t * 9), 0.6 * (1 - sstep(B["earth"], B["earth"] + 6, t)))
@@ -490,7 +493,7 @@ def stem_world():
         ch = np.sin(2 * np.pi * (f0 * (1 + 0.15 * np.sin(2 * np.pi * 30 * tb_))) * tb_) * np.sin(np.pi * tb_ / 0.12)
         place(buf, t, ch, r.uniform(-1, 1), 0.04)
         t += r.uniform(0.15, 0.9)
-    # the flock lifting: wingbeats in their thousands, 268-276
+    # the flock lifting: wingbeats in their thousands, 278-286
     nb = int(8 * SR)
     tb_ = np.arange(nb, dtype=np.float32) / SR
     fl = stft_filter(noise(nb, 900), lambda ts, f: logband(f, 1200, 1.0)) * (0.5 + 0.5 * np.sin(2 * np.pi * 9 * tb_) ** 2) * np.sin(np.pi * tb_ / 8) ** 0.7

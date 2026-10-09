@@ -3,7 +3,8 @@ the web, the stars, and the photon's crossing. Every function takes global time 
 returns an H x W x 3 float32 image. Everything is a pure function of t, so frames can be rendered
 in any order and in parallel.
 
-Timings follow treatment v3.1 §2 exactly.
+Timings follow treatment v3.2 §2 exactly: v3.1's table with ten seconds added at the front, which
+are the fade from black (the author, 2026-10-08). Everything after 0:00 runs ten seconds later.
 """
 from __future__ import annotations
 
@@ -14,8 +15,13 @@ from common import (Grid, Static, ValueNoise, Noise3, curl_field, worley, smooth
 import face as F
 
 # beat boundaries (seconds)
-B = dict(deep=0.0, light=28.0, sep=36.0, eve=58.0, vault=74.0, land=94.0, earth=112.0,
-         lights=122.0, cross=142.0, swarm=156.0, landbeat=188.0, dust=212.0, fill=230.0, rest=266.0, end=290.0)
+B = dict(deep=0.0, light=38.0, sep=46.0, eve=68.0, vault=84.0, land=104.0, earth=122.0,
+         lights=132.0, cross=152.0, swarm=166.0, landbeat=198.0, dust=222.0, fill=240.0, rest=276.0, end=300.0)
+
+# The opening fade: the picture comes up out of black over the first ten seconds. The sound leads it
+# (sound.py brings the hiss up from 0:00), so the grain is first seen about two seconds after the
+# hiss is first heard.
+FADE_PICTURE = (2.0, 10.0)
 
 SMALL = 0.55   # half-height of the small face
 LARGE = 2.0    # half-height of the large face
@@ -62,11 +68,11 @@ def up4(a, g):
 
 def face_strength(t):
     """How clearly the face stands out of the static, 0..1."""
-    return sstep(5.0, 17.0, t)
+    return sstep(15.0, 27.0, t)
 
 
 def flow_amp(t):
-    return 0.30 * sstep(3.0, 10.0, t)
+    return 0.30 * sstep(13.0, 20.0, t)
 
 
 def beat_deep(c: Ctx, t):
@@ -100,6 +106,10 @@ def beat_deep(c: Ctx, t):
         # The final build should drop this once the motion cue alone is tested at full quality.
         s = s * (1 - 0.30 * inside) + 0.5 * 0.30 * inside
     img = gray(s)
+    # the fade in from black
+    fade = sstep(FADE_PICTURE[0], FADE_PICTURE[1], t)
+    if fade < 1.0:
+        img = img * fade
     return img
 
 
@@ -136,7 +146,7 @@ def beat_light(c: Ctx, t):
         out = s * band + white * (0.3 + 0.7 * push)
         return gray(np.clip(out, 0, 1))
     # black, silence, the white face alone, eyes closed; then the eyes open and the large face forms
-    k = sstep(6.5, 7.3, tl)  # 34.5 - 35.3
+    k = sstep(6.5, 7.3, tl)  # 44.5 - 45.3
     e = F.mix_expr(F.NEUTRAL_CLOSED, F.NEUTRAL_OPEN, k)
     if k > 0:
         # the second face forms in the same instant, on both sides
