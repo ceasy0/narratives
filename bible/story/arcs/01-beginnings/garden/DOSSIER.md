@@ -57,18 +57,19 @@ Everything the treatment needs, with where each decision lives. Nothing here is 
 
 **Grade for the look as a whole: Compatible,** close to Supported on the mountain (Ezek 28; Gen 2:10) and on the stone against the brick (11:3); the step form itself is P4 (the plain's temples) staged as P5 (yours).
 
-### The look, decided (2026-10-09)
+### The look, decided (2026-10-09, revised 2026-10-10)
 
-Your answers of 2026-10-09 settle it; the research, the reasons and the plan drawing are in [LAYOUT.md](./LAYOUT.md) (§5.4, §5.7, §6). This replaces the first sketch of the build that stood here. **Your rule for the whole Garden:** "find the line between natural and too rare to be natural; I think that's where the magic is here."
+Your answers of 2026-10-09 and 2026-10-10 settle it; the research, the reasons and the plan drawing are in [LAYOUT.md](./LAYOUT.md) (§5.4, §5.7, §6, §9, §10). **Your rule for the whole Garden:** "find the line between natural and too rare to be natural; I think that's where the magic is here."
 
-- **Where:** a square island, about 400 m a side, set to the four directions, in fresh water out in the marsh near where Eridu would stand: rare, but possible. Beyond it the marsh, the plain, the sea on the horizon.
-- **The centre:** five broad, low terraces of old grey travertine, built by an artesian spring that still rises from a fissure on the open top, between the two trees. Pale, glistening lines where the water runs now. The two trees look different from one another but neither looks strange (3:6).
-- **The four headwaters:** the spring's four channels run somewhat straight down the four faces to the four sides (2:10), following the limestone's joints. Along both banks, the paths are **broad slabs of beautiful grey limestone**, the ground itself and not masonry.
-- **The quarters:** four planted quarters between them, each different, with **clear paths winding all through them** of earth, gravel, sand and stepping stones.
+- **Where:** a round island, about 450 m across, in a ring of fresh water out in the marsh near where Eridu would stand: a stranger in the plain, "unordinary but not impossible." Beyond it the marsh, the plain, the sea on the horizon.
+- **The centre:** five broad, low terraces of old grey travertine, built by an artesian spring that still rises on the open top: round at the foot as the spring laid them, squared toward the top by Adam's work ("to work it and keep it," 2:15). The two trees stand north and south of the spring, so the way in from the east runs straight up between them (which is which is open). Pale, glistening lines where the water runs.
+- **The four headwaters:** straight from the spring to the ring (on the limestone's joints, straightened by Adam), across it as current seams, then out through a low rim of spring stone as natural rivers into the marsh (2:10). Along their banks inside the ring, **broad slabs of grey limestone**, the ground itself, smoothed by his work.
+- **The quarters:** four planted quarters of the circle, each different, with **clear paths winding all through them** of earth, gravel, sand and stepping stones.
 - **The care:** the paths clear and smooth, the Garden well kept: natural in shape, tended in fact.
-- **The way east:** one causeway across the water from the eastern headwater's path, the only dry way out, where the cherubim and the fire stand (3:24).
-- **Proposed 2026-10-10, open:** a ring instead of the square, the terraces squared toward the top by Adam's work, and Babel built over the Garden after the flood ([LAYOUT §9](./LAYOUT.md#9-why-there-the-place-babel-and-the-ring-2026-10-10-proposals); README item 20).
-- **Stone, light, life:** grey limestone; a natural, peaceful, beautiful mood made mostly with shadow, cool blue shade and warm shafts of sun; plants and animals of the region or the wider region; color only in what lives.
+- **The way east:** one causeway across the ring beside the eastern river, the only dry way out, where the cherubim and the fire stand (3:24).
+- **Light and air:** sunny yet cool and breezy, never hot and humid: dry clear air, crisp shadows, a breeze off the water, the plain's spring season. The shade makes the blue; most of the frame is in shade, with warm shafts of sun. Outside after 3:24: the plain's summer.
+- **Stone and life:** grey limestone; plants and animals of the region or the wider region; color only in what lives.
+- **Open (README item 20):** gold in the Garden; which tree is north; Eridu as the Garden's gate; and Babel, at the gate or over the centre ([LAYOUT §9–10](./LAYOUT.md#10-your-notes-of-2026-10-10-evening-the-light-gold-the-trees-eridu-dilmun-the-rivers)).
 
 ## 3. The six movements, as they now stand
 

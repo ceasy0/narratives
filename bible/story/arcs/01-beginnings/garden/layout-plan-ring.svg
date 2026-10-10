@@ -1,11 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Georgia, serif">
   <rect width="900" height="620" fill="#f4f1ea"/>
-  <text x="20" y="32" font-size="20" fill="#2b2b2b">The Garden — the ring, proposed 2026-10-10 (P6)</text>
+  <text x="20" y="32" font-size="20" fill="#2b2b2b">The Garden — the ring (decided 2026-10-10)</text>
   <text x="20" y="52" font-size="12" fill="#666">North up. Round island about 450 m across in a ring of fresh water; terraces round at the foot, squared toward the top by Adam.</text>
   <rect x="30" y="75" width="520" height="520" fill="#c9d6c2"/>
   <text x="40" y="92" font-size="11" fill="#556">reed marsh, palms</text>
+  <!-- natural rivers beyond the ring -->
+  <g fill="none" stroke="#7fb3cf" stroke-width="7" stroke-linecap="round">
+    <path d="M290,90 C300,80 270,70 285,60"/><path d="M290,580 C275,592 305,600 290,612"/>
+    <path d="M45,335 C38,320 30,350 22,338"/><path d="M535,335 C545,350 552,320 560,330"/>
+  </g>
   <circle cx="290" cy="335" r="245" fill="#9fc3d6"/>
-  <rect x="490" y="323" width="60" height="24" fill="#bdb6a8" stroke="#7d776c"/>
+  <circle cx="290" cy="335" r="245" fill="none" stroke="#bdb6a8" stroke-width="4"/>
+  <!-- current seams -->
+  <g stroke="#c4e0ee" stroke-width="4" stroke-dasharray="6 5">
+    <line x1="290" y1="90" x2="290" y2="135"/><line x1="290" y1="535" x2="290" y2="580"/>
+    <line x1="45" y1="335" x2="90" y2="335"/><line x1="490" y1="335" x2="535" y2="335"/>
+  </g>
+  <rect x="490" y="347" width="60" height="18" fill="#bdb6a8" stroke="#7d776c"/>
   <circle cx="290" cy="335" r="200" fill="#a9b98f" stroke="#7d776c" stroke-width="2"/>
   <g fill="#cfcac0">
     <rect x="279" y="135" width="22" height="135"/><rect x="279" y="400" width="22" height="135"/>
@@ -29,23 +40,28 @@
     <rect x="268" y="313" width="44" height="44" fill="#e6e1d6"/>
   </g>
   <circle cx="290" cy="335" r="5" fill="#3d86b0"/>
-  <circle cx="278" cy="323" r="7" fill="#3f6b2e"/><circle cx="302" cy="347" r="7" fill="#5a4a2a"/>
-  <text x="497" y="316" font-size="12" fill="#2b2b2b">causeway</text>
-  <text x="497" y="362" font-size="11" fill="#8a3b1f">cherubim (3:24)</text>
-  <text x="60" y="585" font-size="11" fill="#2b4f66">ring of fresh water, "flowing around" (Ezek 31:4)</text>
+  <circle cx="290" cy="320" r="7" fill="#3f6b2e"/><circle cx="290" cy="350" r="7" fill="#5a4a2a"/>
+  <line x1="340" y1="335" x2="312" y2="335" stroke="#8a3b1f" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="497" y="384" font-size="12" fill="#2b2b2b">causeway</text>
+  <text x="497" y="399" font-size="11" fill="#8a3b1f">cherubim (3:24)</text>
+  <text x="60" y="590" font-size="11" fill="#2b4f66">ring of fresh water, held by a rim of spring stone</text>
   <g font-size="12" fill="#2b2b2b">
-    <circle cx="585" cy="110" r="5" fill="#3d86b0"/><text x="598" y="114">spring between the trees (2:10)</text>
-    <line x1="578" y1="135" x2="594" y2="135" stroke="#5f9fc0" stroke-width="6"/><text x="598" y="139">four headwaters, straight on the joints</text>
-    <circle cx="585" cy="160" r="6" fill="#3f6b2e"/><text x="598" y="164">tree of life</text>
-    <circle cx="585" cy="184" r="6" fill="#5a4a2a"/><text x="598" y="188">tree of knowledge</text>
-    <circle cx="585" cy="206" r="6" fill="#c3beb4" stroke="#6e6a62"/><text x="598" y="211">terraces: round (the spring's)...</text>
-    <rect x="579" y="222" width="12" height="12" fill="#e6e1d6" stroke="#6e6a62"/><text x="598" y="233">...squared at the top (Adam's)</text>
-    <rect x="579" y="244" width="12" height="12" fill="#cfcac0"/><text x="598" y="255">grey limestone paths, headwaters</text>
-    <line x1="578" y1="272" x2="594" y2="272" stroke="#d9c9a3" stroke-width="3"/><text x="598" y="276">winding paths, quarters</text>
+    <circle cx="585" cy="100" r="5" fill="#3d86b0"/><text x="598" y="104">spring between the trees (2:10)</text>
+    <line x1="578" y1="122" x2="594" y2="122" stroke="#5f9fc0" stroke-width="6"/><text x="598" y="126">headwaters, straight to the ring</text>
+    <line x1="578" y1="143" x2="594" y2="143" stroke="#c4e0ee" stroke-width="4" stroke-dasharray="6 5"/><text x="598" y="147">current seams across the ring</text>
+    <line x1="578" y1="164" x2="594" y2="164" stroke="#7fb3cf" stroke-width="6"/><text x="598" y="168">natural rivers beyond the rim</text>
+    <circle cx="585" cy="186" r="6" fill="#3f6b2e"/><text x="598" y="190">tree of life, north (proposed)</text>
+    <circle cx="585" cy="208" r="6" fill="#5a4a2a"/><text x="598" y="212">tree of knowledge, south (proposed)</text>
+    <circle cx="585" cy="230" r="6" fill="#c3beb4" stroke="#6e6a62"/><text x="598" y="234">terraces: round (the spring's)...</text>
+    <rect x="579" y="246" width="12" height="12" fill="#e6e1d6" stroke="#6e6a62"/><text x="598" y="257">...squared at the top (Adam's)</text>
+    <rect x="579" y="268" width="12" height="12" fill="#cfcac0"/><text x="598" y="279">grey limestone paths, headwaters</text>
+    <line x1="578" y1="296" x2="594" y2="296" stroke="#d9c9a3" stroke-width="3"/><text x="598" y="300">winding paths, quarters</text>
   </g>
-  <text x="580" y="330" font-size="13" fill="#2b2b2b">If Babel is built here (§9.4):</text>
-  <text x="580" y="350" font-size="11" fill="#555">the flood buries the Garden in river mud;</text>
-  <text x="580" y="366" font-size="11" fill="#555">the spring still rises; the builders raise</text>
-  <text x="580" y="382" font-size="11" fill="#555">their brick tower over it, on Adam's square,</text>
-  <text x="580" y="398" font-size="11" fill="#555">without the trees.</text>
+  <text x="580" y="345" font-size="13" fill="#2b2b2b">Open (LAYOUT §10.4):</text>
+  <text x="580" y="365" font-size="11" fill="#555">Eridu's dune to the east, the Garden's gate:</text>
+  <text x="580" y="381" font-size="11" fill="#555">its first shrine where the cherubim stood,</text>
+  <text x="580" y="397" font-size="11" fill="#555">and Babel's tower raised there later,</text>
+  <text x="580" y="413" font-size="11" fill="#555">looking over the drowned Garden.</text>
+  <text x="580" y="437" font-size="11" fill="#555">Coming in from the east, the way runs</text>
+  <text x="580" y="453" font-size="11" fill="#555">straight up between the two trees.</text>
 </svg>
