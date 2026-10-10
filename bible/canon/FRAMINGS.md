@@ -107,7 +107,7 @@
 - **Item 4:** how to read Genesis 1.
 - **Item 5:** Adam and Eve. Your Adam and Eve section follows an existing human population. Gen 4:14–17 hints at other people (Cain fears being killed, takes a wife and builds a city). Joshua Swamidass's *The Genealogical Adam and Eve* (2019) argues that a recent couple could be genealogical ancestors of everyone, which connects to your bloodline idea.
 - **Item 7:** the flood.
-- **Possibly where Eden was.** Gen 2:13's Gihon "flows around the whole land of Cush," and Josephus identified it with the Nile, which fits your Nile ending. But Gen 2:14 names the Tigris and the Euphrates.
+- **Possibly where Eden was.** Gen 2:13's Gihon "flows around the whole land of Cush," and Josephus identified it with the Nile, which fits your Nile ending. But Gen 2:14 names the Tigris and the Euphrates. *(2026-10-08: superseded for the Garden. The Garden is on the lower plain near Eridu and the Nile is no longer the Gihon; Josephus's reading stays a note. [FOUNDATIONS §4](./FOUNDATIONS.md#4-decisions-so-far), [008, round 2](../discussions/008-adam-eve-and-the-garden.md#round-2--2026-10-08).)*
 
 **About the tool list in the draft:** it came from an earlier AI session. Tools change monthly, so we'll choose them in Phase 6 (ROADMAP §15.5). The abstract opening is a strong candidate for procedural animation.
 
@@ -468,7 +468,7 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 **What pulls against it:**
 - The chapter defines its own terms: Day, Night, Sky, Earth, Seas (1:5, 8, 10). Its first hearers pictured a firm sky with water above it (Job 37:18; Gen 7:11).
 - Physics counts four forces, not two. Proto-life before the stars has nothing behind it: life's elements are made inside stars.
-- The flying things of 1:20 come before the land animals, and nothing flies in the sequence.
+- The flying things of 1:20 come before the land animals, and nothing flies in the sequence. *(Fixed 2026-10-05: flying things added; see the answer below.)*
 - Any reading pinned to current science moves when the science does.
 
 **First-pass grade:** Compatible as a reading that's shown and never narrated. Tension if it's asserted as what the writer meant. The detail, verse by verse, is in the [Opening's dossier §2](../story/arcs/01-beginnings/opening/DOSSIER.md#2-your-reading-of-genesis-1-and-how-it-fits).
@@ -558,7 +558,7 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 **First-pass grade:** Supported for 2:4–6 as a recap. Compatible for 2:7 as both: the recap of 1:27 and the hinge into the Garden. The Opening already shows it this way, and the breath across the cut is that hinge. The full case is in the [Opening dossier §2](../story/arcs/01-beginnings/opening/DOSSIER.md#on-247).
 
-**What it changes:** nothing in the Opening. In the Garden it favors Adam being "new in what happens to him," not new in body ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md), question 1), and it raises a question about 2:19 (question 10).
+**What it changes:** nothing in the Opening. In the Garden it favors Adam being "new in what happens to him," not new in body ([Discussion 008](../discussions/008-adam-eve-and-the-garden.md), question 1), and it raises a question about 2:19 (question 10; answered 2026-10-07: the animals "had formed", brought to the man to name, [008, round 1](../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07)).
 
 ---
 
@@ -588,4 +588,4 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 **What it changes on screen:** nothing in the Garden beyond a real snake and a voice. **Confirmed 2026-10-08:** the fitting form works for you, and the serpent's words come from outside, from the animal, with the Opening's hiss under them ([008, round 2](../discussions/008-adam-eve-and-the-garden.md#round-2--2026-10-08)). The design question is Job's and the Gospels'; the map lists where the role is played ([ARCHITECTURE §8](../story/ARCHITECTURE.md#8-the-threads)).
 
-**Question for when we take this up:** does the fitting form (the role, real wherever it's played) say what you mean? And in Job and the wilderness, who or what plays it?
+**Question for when we take this up:** in Job and the wilderness, who or what plays the role?

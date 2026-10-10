@@ -31,7 +31,7 @@
 |---|---|---|---|
 | Genesis 38 (Judah and Tamar) | After Joseph is sold, before Potiphar | The same, as its own hour | It happens during Joseph's years in Egypt, and the text put it there on purpose (ROADMAP §10.5). Nothing moves. |
 | Job | Between Esther and Psalms | Its own short arc between Joseph and the Exodus | Undated; its setting is patriarchal; the Greek postscript makes Job a king of Edom from Genesis 36 ([005](../discussions/005-beyond-the-text.md), bin 2). The years in Egypt are the text's own silence, and Job fills it from outside Israel. Alternative: straight after Genesis 36. |
-| Judges 17–21 (Micah's idol; the Levite's concubine) | The end of Judges | Right after Joshua's death, before Othniel | The text dates them itself: Micah's Levite is Moses's grandson (18:30), and Phinehas son of Eleazar is still high priest (20:28). So the collapse is immediate, which is 2:10's point. The cost: the book's own ending, "there was no king," moves. **Your call.** |
+| Judges 17–21 (Micah's idol; the Levite's concubine) | The end of Judges | Right after Joshua's death, before Othniel | The text dates them itself: Micah's Levite is Moses's grandson (18:30), and Phinehas son of Eleazar is still high priest (20:28). So the collapse is immediate, which is 2:10's point. The cost: the book's own ending, "there was no king," moves. **Accepted 2026-10-08** ("if they come after chronologically", [§11](#11-what-the-map-needs-decided-and-when)). |
 | Ruth | Its own book after Judges | After Gideon, before Abimelech | About 1140 BC ([TIMELINE §4](../world/TIMELINE.md#arc-7--judges-and-ruth)) |
 | Daniel's visions (7–12) | After his stories | Interleaved with them, held in the last Daniel hour | They're dated in the text (Belshazzar's first year; Cyrus's third) |
 | Esther | After Nehemiah | Between the second Temple (515) and Ezra (458) | Xerxes reigned 486–465 |
@@ -88,9 +88,9 @@ By their headings, placed in the hour they name. Others are sung where a psalm w
 | Galatians | Cyprus and Galatia (Arc 17), written after the first journey |
 | 1–2 Thessalonians | Athens and Corinth |
 | 1–2 Corinthians | Ephesus, and read aloud to a divided church |
-| Romans | Troas and Miletus, written from Corinth |
+| Romans | Miletus, written from Corinth |
 | Ephesians, Philippians, Colossians, Philemon | Rome: Philippians in chains; Onesimus carries Philemon |
-| James | Antioch and Herod (if early, c. 45–48), or The Fire (if 62) |
+| James | Antioch (if early, c. 45–48), or The Fire (if 62) |
 | 1 Timothy, Titus, 2 Timothy | The Fire: the last letters, "I have fought the good fight" |
 | Hebrews, 1–2 Peter, Jude | The Fire and The Siege, read aloud in house churches in Rome |
 | 1–3 John | Patmos (Arc 18), the old man at Ephesus |
@@ -110,7 +110,7 @@ Undated; the Garden provisionally about 5000–4000 BC on the lower plain betwee
 | 3 | The Days of Noah | Gen 5:1–6:8 | The long generations; Enoch walks with God and is gone; the sons of God and the Nephilim; the earth filled with violence; God's grief; Noah finds favor. **The why for the flood,** an hour before it. | Position 6 |
 | 4 | The Ark | Gen 6:9–7:16 | A ship built on dry land over years; the mockery (2 Pet 2:5, P3); the animals; the door shut from outside. | Position 7 |
 | 5 | The Flood | Gen 7:17–9:17 | The water; the long drift; the raven and the dove; the altar; the rainbow. | Position 7 |
-| 6 | The Table of Nations | Gen 9:18–10:32; 11:1–2 | Noah's vineyard and Canaan's curse; the clans of the three sons growing into one people with one language; Nimrod, "a mighty hunter before the LORD," the first man called a king (10:8–10); the move east to the plain of Shinar (11:2); the first bricks fired, "brick for stone" (11:3). **The why for Babel:** the audience knows every clan before the tower goes up. Noah and Shem are still alive (9:28; 11:10–11). | — |
+| 6 | The Table of Nations | Gen 9:18–10:32; 11:1–3 | Noah's vineyard and Canaan's curse; the clans of the three sons growing into one people with one language; Nimrod, "a mighty hunter before the LORD," the first man called a king (10:8–10); the move east to the plain of Shinar (11:2); the first bricks fired, "brick for stone" (11:3). **The why for Babel:** the audience knows every clan before the tower goes up. Noah and Shem are still alive (9:28; 11:10–11). | — |
 | 7 | The Tower of Babel | Gen 11:1–4; 10:8–12 | The city and the tower "with its top in the heavens," on the plain where Eden was, built of brick because the plain has no stone; "let us make a name for ourselves, lest we be dispersed over the face of the whole earth." Nimrod's kingdom: Babel, Erech, Accad. The tower as the Garden's stepped centre rebuilt without the trees ([the Garden's look](./arcs/01-beginnings/garden/DOSSIER.md)). | — |
 | 8 | The Scattering | Gen 11:5–26; 10:25, 32 | "The LORD came down to see"; the languages confused, kin who can't understand each other; the building stops; the clans walk off to their lands, each with its own tongue, "from these the nations spread abroad" (10:32); Peleg, "in his days the earth was divided" (10:25); the line of Shem to Terah, ending in Ur, which is the Call's door. *Could merge with 7:* nine verses between them (§11). | — |
 
@@ -118,7 +118,7 @@ Undated; the Garden provisionally about 5000–4000 BC on the lower plain betwee
 
 1951–c. 1690 BC.
 
-**Abraham** (your Season 2 and the first half of Season 3; the merges are in §10)
+**Abraham** (Season 2, *The Father of Nations*; in your draft, Season 2 and the first half of Season 3; the merges are in §10)
 
 | # | Episode | Text | Heart | Waits on |
 |---|---|---|---|---|
@@ -136,7 +136,7 @@ Undated; the Garden provisionally about 5000–4000 BC on the lower plain betwee
 
 | # | Episode | Text | Heart | Waits on |
 |---|---|---|---|---|
-| 18 | Twins | Gen 25:19–26 | Rebekah's hard pregnancy; the boys; the stew; Isaac's own year at Gerar and the wells. | FR-08 |
+| 18 | Twins | Gen 25:19–26:35 | Rebekah's hard pregnancy; the boys; the stew; Isaac's own year at Gerar and the wells. | FR-08 |
 | 19 | The Blessing | Gen 27:1–28:9 | The goatskins; the blind father's hands; Esau's cry; Jacob sent away. | — |
 | 20 | The Ladder | Gen 28:10–29:30 | The stone pillow and the dream; the well and Rachel; seven years "like a few days"; the morning after, and it's Leah. | FR-08 |
 | 21 | The Wives | Gen 29:31–30:43 | The children, named as a war between sisters; the mandrakes; Joseph born; the speckled flocks. | — |
@@ -219,7 +219,7 @@ c. 1550–1446 BC. An 18th-dynasty Egypt after the Hyksos are expelled.
 
 ### Arc 7 — Judges and Ruth
 
-c. 1380–1050 BC. Judges 17–21 placed first (§3), your call.
+c. 1380–1050 BC. Judges 17–21 placed first (§3), accepted 2026-10-08.
 
 | # | Episode | Text | Heart | Waits on |
 |---|---|---|---|---|
@@ -401,7 +401,7 @@ c. 6 BC–AD 33. The order follows a standard harmony with John's feasts as the 
 | 174 | Jericho | Luke 17–19:27; Mark 10:32–52 | Ten lepers, one returns; the Pharisee and the tax collector; children; the rich young man; James and John's request; Bartimaeus; Zacchaeus in the tree. | — |
 | 175 | The Colt | John 12; Mark 11 | Bethany, Mary's nard; the colt; branches; the fig tree; the tables (if twice); Greeks: "we wish to see Jesus"; "now is my soul troubled." | Position 11 |
 | 176 | The Temple Courts | Mark 12; Matt 23 | "By what authority?"; the tenants; the coin; the Sadducees' widow; "you are not far from the kingdom"; the widow's two coins; the seven woes; Judas's price. | — |
-| 177 | Olivet | Mark 13; Matt 24–25 | "Not one stone"; the signs; the ten virgins; the talents; the sheep and the goats, "I was a stranger." *Could fold into 174.* | Position 19's kind of question |
+| 177 | Olivet | Mark 13; Matt 24–25 | "Not one stone"; the signs; the ten virgins; the talents; the sheep and the goats, "I was a stranger." *Could fold into 176.* | Position 19's kind of question |
 | 178 | The Upper Room | Mark 14:12–31; John 13–17 | A towel; the bread and the cup; "one of you"; Judas into the night; "I will not leave you orphans"; the prayer. | Position 18; FR-05 |
 | 179 | Gethsemane | Mark 14:32–72; John 18:1–27 | "Let this cup pass"; sweat like blood; the kiss; Malchus's ear; the young man who ran naked; Annas; the rooster. | 002; 007 |
 | 180 | Pilate | Mark 15:1–20; Luke 23:1–25; John 18:28–19:16 | Judas's rope; "are you the king?"; Herod's robe; Procula's dream; Barabbas; the scourging; "Behold the man"; the bowl of water. | ROADMAP §8.7 |
@@ -502,7 +502,7 @@ Your `Bible_Structure.md` is the base. Every merge is here so you can undo it.
 
 | Your draft | The map | Why |
 |---|---|---|
-| Cain and Abel (4–5) | Cain (4); The Days of Noah (5–6:8) | Chapter 5 belongs with the flood as its why; Cain earns his own hour |
+| Cain and Abel (4–5) | Cain and Abel (4); The Days of Noah (5–6:8) | Chapter 5 belongs with the flood as its why; Cain earns his own hour |
 | Noah and the Flood (6–9) | The Ark; The Flood | A ship built over years is its own hour; the water is another |
 | The Table of Nations (10); The Tower (11:1–4); The Scattering (11:5–26) | ~~Babel (9:18–11:26)~~ **Restored, your call (2026-10-08):** The Table of Nations; The Tower of Babel; The Scattering | You want the clans known before they scatter. I'd merged them because nine verses are one hour, not two; my view of the risk is in §11. |
 | Abram in Egypt; Abram and Lot Separate | Egypt (12:10–13:18) | The return from Egypt is the reason for the separation |
@@ -512,7 +512,7 @@ Your `Bible_Structure.md` is the base. Every merge is here so you can undo it.
 | Abraham and Abimelek (20); The Birth of Isaac (21) | Gerar (20–21) | Both happen at Gerar and Beersheba within a year |
 | Abraham Tested (22); The Death of Sarah (23) | The Binding (22–23) | Tradition (P3) ties her death to Moriah; the hour needs its aftermath |
 | Isaac and Rebekah (24); The Death of Abraham (25:1–18) | Rebekah (24–25:18) | Abraham's death is the end of her hour, with the two brothers at the grave |
-| Jacob and Esau (25:19–34); Isaac and Abimelek (26) | Twins (25:19–26) | Chapter 26 is Isaac's one story and sits inside the boys' childhood |
+| Jacob and Esau (25:19–34); Isaac and Abimelek (26) | Twins (25:19–26:35) | Chapter 26 is Isaac's one story and sits inside the boys' childhood |
 | Jacob's Dream at Bethel (28:10–22); Jacob Arrives in Paddan Aram (29) | The Ladder (28:10–29:30) | The dream is thirteen verses; the hour runs to the morning he finds it's Leah |
 | Your book outline from Exodus on | Arcs 4–14 | Built from your section headings where they fit (your "Law of Moses 1 and 2" became rule 7) |
 

@@ -1,6 +1,6 @@
 # 002 — Jesus's humanity: limits, struggle, and the question of sin
 
-**Status:** **Decided** 2026-10-01, with two sub-questions deferred to the Gospels arc. See [Decision](#decision). Round 3 (2026-10-02) takes up your reading of 2 Sam 7:14b; it refines the decision rather than changing it.
+**Status:** **Decided** 2026-10-01, with two sub-questions deferred to the Gospels arc. See [Decision](#decision). Round 3 (2026-10-02) takes up your reading of 2 Sam 7:14b; it refines the decision rather than changing it, and awaits your answer ([README item 13](../README.md#open-discussions)).
 **Needed before:** The Gospels, and the Mark 2 Jesus-voice exercise. It doesn't block Ruth.
 **Fit grade of your view:** **Supported.** You've placed Jesus's falls in his capacity, not his will, and that resolves the conflict with the text flagged below.
 

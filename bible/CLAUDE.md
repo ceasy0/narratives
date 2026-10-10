@@ -23,11 +23,12 @@
 | A storytelling rule | `style/STORYTELLING.md` | treatments cite it |
 | An arc's research, treatment, beats | `story/arcs/NN-*/` | — |
 | A project review | `REVIEW.md` (2026-10-07; a dated record, so its times for the Opening are the 4:50 cut's) | — |
+| A project audit | `AUDIT.md` (2026-10-10; a dated record of faults found and fixed; its open calls are README items) | — |
 | The series as episodes | `story/ARCHITECTURE.md` | arc plans link to their section |
 
 Record a decision once, in its home, and link from the rest. Don't paste it into a second file.
 
-## Current phase (2026-10-09)
+## Current phase (2026-10-10)
 
 - **The map:** `story/ARCHITECTURE.md` v1.2, 205 hours in 18 arcs. Arc 1 is *Genesis*, eight hours with the author's names (In the Beginning; Cain and Abel; The Days of Noah; The Ark; The Flood; The Table of Nations; The Tower of Babel; The Scattering). Every hour after it is numbered two higher than in v1. Season 3 is *The Struggle*, for now (2026-10-09). **Filling the hours** (the author, 2026-10-09): first fill each episode with what the Bible itself gives, without worrying about runtime; contextual scenes fill the gaps later. Keep the map current: when an arc is treated, its lines get corrected.
 - **Writing front to end, treatments and beats first,** from Genesis 1 (the author's decisions of 2026-10-03 and 2026-10-05). Ruth is parked as a first draft, with a storyboard.

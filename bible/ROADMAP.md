@@ -6,6 +6,14 @@
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
+> **Superseded sections (noted 2026-10-10, as REVIEW §2.3.2 asked).** Where this roadmap and the files below disagree, they win, and these parts are kept only as the record:
+> - **The order of writing** (§0 "How we start", §11, §17's Ruth-then-Joseph plan): replaced 2026-10-03/05. Ruth is parked as a first draft and the first pass runs front to end from Genesis 1, treatments and beats only ([FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far)).
+> - **The pilot animatic** (§0, §11.2, §15.4, §17 Phase 6): replaced 2026-10-07/08. The Opening is the exception and its animatic is built ([production/opening](./production/opening/README.md)); Ruth gets storyboards and sketches, not an animatic.
+> - **The arc map** (§10.3): replaced 2026-10-08 by [`story/ARCHITECTURE.md`](./story/ARCHITECTURE.md).
+> - **The Positions Register** (§8.2): moved to [`canon/POSITIONS.md`](./canon/POSITIONS.md) 2026-10-07. Decisions live in FOUNDATIONS §4, not a `DECISIONS.md` (§16's tree is the original plan).
+> - **Depicting God and Jesus's humanity** (§8.3, §8.4, §19.1): decided in Discussions [001](./discussions/001-how-god-speaks.md#decision), [002](./discussions/002-jesus-humanity.md#decision), [007](./discussions/007-the-faces-of-god.md#decision) and [009](./discussions/009-god-in-the-garden.md#decision).
+> - **Hardware** (§15.5): as of 2026-10-08 the details are in `CLAUDE.md` ("Sessions run on the author's computer").
+
 ### What changed in v2
 
 | Your answer | What it changed |
@@ -165,7 +173,7 @@ There are eleven principles. Everything else in this document expands on one of 
 
 ## 4. The provenance system
 
-This is where your freedom to add things lives, along with the safeguards that keep additions honest. It follows the same instinct as the [Primordia plan](../../primordia/IMPLEMENTATION_PLAN.md): uncertainty is recorded as data, not waved away with a disclaimer.
+This is where your freedom to add things lives, along with the safeguards that keep additions honest. It follows the same instinct as the Primordia plan (its `IMPLEMENTATION_PLAN.md`, outside this repository): uncertainty is recorded as data, not waved away with a disclaimer.
 
 ### 4.1 Content provenance: where did this come from?
 
@@ -710,7 +718,7 @@ The stories will raise philosophical questions on their own, and each one has co
 
 ### 8.3 Depicting God, the Spirit, angels and Satan
 
-These are the options to decide in the register:
+These are the options to decide in the register *(decided since: Discussions 001 and 007, 2026-10-05, and 009 for the Garden, 2026-10-08; see FOUNDATIONS §4)*:
 
 - **God:** voice only; or voice plus the natural phenomena the text names (fire, cloud, storm, light). A human-like figure appears only where the text itself describes one (Gen 18; Ezek 1:26–28; Dan 7:9, the "Ancient of Days"), and even then perhaps at a distance or veiled.
 - **The Holy Spirit:** as the text describes, "in bodily form like a dove" (Luke 3:22), and as wind and "tongues as of fire" (Acts 2:2–3).
@@ -719,7 +727,7 @@ These are the options to decide in the register:
 
 ### 8.4 Fully God and fully man
 
-*Status: open. See [Discussion 002](./discussions/002-jesus-humanity.md). Your answer to Q7 makes his humanity the center of the project, and that's well supported by the text. The word "fallible" needs working through.*
+*Status: decided 2026-10-01 in [Discussion 002](./discussions/002-jesus-humanity.md#decision), two sub-questions deferred to the Gospels (this note was written while it was open). Your answer to Q7 makes his humanity the center of the project, and that's well supported by the text. The word "fallible" needs working through.*
 
 The Council of Chalcedon (451) set out what most Christians hold: Jesus is one person, fully God and fully human. Screen portrayals tend to fall off one side or the other:
 
@@ -832,7 +840,7 @@ Tier A and Tier B lines need a base rendering. There are three options:
 
 ### 9.4 Harmony and chronology
 
-The four Gospels overlap. Samuel–Kings overlaps with Chronicles. The prophets have to be placed within particular kings' reigns. All of this needs one consistent timeline, and `canon/HARMONY.md` records each ordering decision with its reason. The standard tools are Kurt Aland's *Synopsis of the Four Gospels* and Edwin Thiele's chronology of the kings.
+The four Gospels overlap. Samuel–Kings overlaps with Chronicles. The prophets have to be placed within particular kings' reigns. All of this needs one consistent timeline, and `canon/HARMONY.md` (to be created before the Gospels) will record each ordering decision with its reason. The standard tools are Kurt Aland's *Synopsis of the Four Gospels* and Edwin Thiele's chronology of the kings.
 
 Harmony decisions reach all the way down into production. For example, the sign on the cross reads differently in each Gospel:
 
@@ -913,6 +921,8 @@ Then we discuss it. Anything adopted is labeled P3 and must pass the fit check (
 The Bible summarizes itself in other places that could serve as frames too: Stephen's speech (Acts 7), Hebrews 11, Psalm 78 and Nehemiah 9.
 
 ### 10.3 Draft arc map
+
+*Superseded by [`story/ARCHITECTURE.md`](./story/ARCHITECTURE.md) (2026-10-08); kept for the record.*
 
 Dates follow the decided [working chronology](./world/TIMELINE.md). They're approximate, and the early ones depend on the model we chose.
 
@@ -1273,7 +1283,7 @@ All of these are real and widely used, and some are free.
 
 **Animation now, live action later (decided 2026-10-01).** You'd like this to become a live-action show or films. The 3D animated version is the placeholder: it should be visually appealing in its own right, and it should also be the blueprint for live action. That changes a few things:
 
-- **Every shot should be filmable.** The animation uses real-world cameras and lenses, realistic proportions and real locations, so its shots can be reshot with actors.
+- **Every shot should be filmable.** The animation uses real-world cameras and lenses, realistic proportions and real locations, so its shots can be reshot with actors. *Exception (2026-10-03): the Opening and visions.*
 - **Build each world once.** Environments built in a real-time engine such as Unreal can later serve as backgrounds on an LED stage (virtual production, as used on *The Mandalorian*), so the 3D work carries straight into a live-action shoot.
 - **The effects-heavy scenes get developed in animation first.** Creation, the plagues, the sea, Sinai, Elijah's fire, Ezekiel's visions, the Transfiguration and Revelation can be designed and timed in 3D. Live-action productions call this previsualization, and it's where effects budgets get planned.
 - **Color is designed for each episode.** A color script marks where the palette stays earthy and where it breaks into the bright, vibrant moments you're imagining.
@@ -1318,7 +1328,7 @@ Before any 3D work, the pilot becomes an **animatic**: storyboards timed to scra
 - **Motion capture:** anything from capture suits (such as Rokoko) to markerless capture from phone or video, plus stock animation libraries (such as Mixamo) for background characters.
 - **AI tools:** these are changing fast. For now they're most useful for exploring concepts, previsualization and developing a look. Keeping characters consistent over long sequences and precise control remain the hard parts. In 2026, AI video costs roughly $0.03–$0.75 per generated second, about the same whether the look is 2D or 3D, while AI that only *looks* 3D gives you no sets or cameras to carry into live action. [Discussion 006](./discussions/006-2d-or-3d.md) has the figures. **The hybrid we're discussing** (006, round 1): 3D built in Blender by AI on your own computer, for structure, consistency and reuse; then AI restyling guided by the 3D renders, for the painterly surface. Prompt-only generation is for throwaway concept images. We'll reassess when we reach Phase 6.
 - **Your computer (2026-10-05):** an RTX 2060 Super on one machine and, you think, an RTX 4060 on the other, both with 8 GB of video memory. That's enough for Blender, for depth and restyling models, and for the Opening's code-built beats; local AI video at that size is possible but slow. Blender should be installed, and I may install video tools and whatever else is needed. The plan for real expressions is a filmed face turned into depth maps ([Opening dossier §6](./story/arcs/01-beginnings/opening/DOSSIER.md#6-the-visualization)).
-- **Local versus cloud:** writing and research work fine in cloud sessions like this one. Anything that drives Blender or renders needs Claude Code running on your own machine. [`../../primordia/SETUP_GUIDE.md`](../../primordia/SETUP_GUIDE.md) already covers that setup. Reference scenes for recruiting collaborators (the Genesis opening, a Ruth scene, the crucifixion as an animatic) are planned in 006 and don't need to wait for Phase 6.
+- **Local versus cloud:** writing and research work fine in cloud sessions like this one. Anything that drives Blender or renders needs Claude Code running on your own machine. Primordia's `SETUP_GUIDE.md` (outside this repository) already covers that setup. Reference scenes for recruiting collaborators (the Genesis opening, a Ruth scene, the crucifixion as an animatic) are planned in 006 and don't need to wait for Phase 6.
 
 ### 15.6 Sound
 
@@ -1386,7 +1396,7 @@ narratives/bible/
 
 | Phase | Goal | Deliverables | Done when |
 |---|---|---|---|
-| **0. Foundations** | Make the decisions everything else depends on | **Done 2026-10-01:** FOUNDATIONS, FRAMINGS, the language and Name decisions, and Discussion 002. For now the principles, language rules and Positions Register stay in this roadmap. LEXICON and VOICES get built from the Ruth work rather than in advance. | You'd be comfortable handing the style documents to another writer |
+| **0. Foundations** | Make the decisions everything else depends on | **Done 2026-10-01:** FOUNDATIONS, FRAMINGS, the language and Name decisions, and Discussion 002. For now the principles and language rules stay in this roadmap; the Positions Register moved to `canon/POSITIONS.md` (2026-10-07). LEXICON and VOICES get built from the Ruth work rather than in advance. | You'd be comfortable handing the style documents to another writer |
 | **1. Pilot: Ruth** | Prove the method end to end | Research dossier, treatment, scene cards, tagged draft script, your rewrite, audit | There's a locked Ruth script you're proud of |
 | **2. Calibration** | Learn from the pilot | Revised style documents; lexicon v1; the Mark 2 Jesus-voice exercise; optionally the script checker | The rules match how you actually write |
 | **3. Architecture** | Plan the whole series | ARCHITECTURE.md (the arc list, the through-line, the framing decision); TIMELINE.md (**done early**, 2026-10-01); an overview of each era | You can see the whole series on one page |
@@ -1445,7 +1455,7 @@ The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./cano
 | 1 | Canon | Start with the widely shared canon, then study the Ethiopian canon and the apocrypha. Adopt material only after discussion. |
 | 2 | "Missing from the Bible" | Anything outside the Bible we could potentially use (§9.5) |
 | 3 | Audience | You. There's no rating; the intensity ceiling is high (principle 8). |
-| 4 | Depicting God | Open: [Discussion 001](./discussions/001-how-god-speaks.md) |
+| 4 | Depicting God | Decided 2026-10-05: God seen through faces, the face as God's image ([007](./discussions/007-the-faces-of-god.md#decision)); how God speaks decided for Genesis ([001](./discussions/001-how-god-speaks.md#decision)); not seen in the Garden ([009](./discussions/009-god-in-the-garden.md#decision)) |
 | 5 | Tradition | Non-denominational. Truth over matching any one framework. |
 | 6 | Names | "Jesus." "God" or "the Lord" by default; "Yahweh" only in oaths and where the Name itself is the point (revised 2026-10-01, §5.5) |
 | 7 | Invented dialogue for Jesus | Case by case, with no new sermons or teachings. His humanity is central. What "fallible" means is decided: limited in capacity, never in will ([Discussion 002](./discussions/002-jesus-humanity.md#decision)). |

@@ -46,7 +46,7 @@ All in `animatic/`. Pure functions of time, so frames render in any order and in
 | `render.py` | The frame loop: `--preview 10 30 45` writes PNGs at those seconds; `--video out.mp4 --procs 4` renders slices in parallel through ffmpeg and concatenates them |
 | `build.py` | Frames, soundtrack, mux: one command |
 
-**To change a timing:** edit the beat boundaries `B` at the top of `beats_abstract.py` (they're the treatment's table) and the sub-timings inside the beat's function, then rebuild. **To preview a change:** `py render.py --preview 54 57.5 59 --out preview` and look at the PNGs. On this machine the command is `py`, not `python` (dossier §6).
+**To change a timing:** edit the beat boundaries `B` at the top of `beats_abstract.py` (they're the treatment's table) and the sub-timings inside the beat's function, then rebuild. **To preview a change:** `py animatic/render.py --preview 54 57.5 59 --out preview` (from this folder; inside `animatic/` it's `py render.py`) and look at the PNGs. On this machine the command is `py`, not `python` (dossier §6).
 
 ## 4. Safety
 

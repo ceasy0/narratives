@@ -35,6 +35,6 @@ def report(path, name, t0, t1, fps=24):
 
 if __name__ == "__main__":
     p = sys.argv[1]
-    # times are for the 5:00 cut (treatment v3.2); the 4:50 cut ran ten seconds earlier
+    # times are for the 5:00 cut (treatment v3.2 and v3.3); the 4:50 cut ran ten seconds earlier
     worst = max(report(p, "beat 4", 68, 84), report(p, "beat 11 (the sky falls)", 217, 226), report(p, "beat 2 (the release)", 37, 40))
     print("OK by this crude measure" if worst <= 3 else "WARNING: check with IRIS/PEAT before viewing full screen")

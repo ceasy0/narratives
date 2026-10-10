@@ -695,17 +695,17 @@ def p1_21(sk, rng):
     # Orpah, small, going back up the road, looking over her shoulder
     Figure(sk, pose_stand(women=True, stride=0.45, lean=0.15), 1035, 418, 17, 1, tone=0.7, head="veil", veil_tone=0.55, face_turn=-0.4, light=L,
            arms={"n": (-15, -5), "f": (20, 25)}).draw()
-    # Naomi (left, facing right) and Ruth (facing her), Ruth clinging to her; the wind pulls their mantles right
+    # Naomi (left, facing right) and Ruth (facing her), Ruth clinging to her; the east wind, at Ruth's back, pulls their mantles left
     nf = Figure(sk, pose_stand(women=True), 385, 655, 40, 1, tone=0.42, head="veil", veil_tone=0.3, face_turn=0.55, light=L, expr="sad",
                 arms={"n": {"e": (0.95, 4.9), "w": (1.7, 4.4), "hand": "open"}, "f": (-10, 0)})
     nf.draw()
-    flutter(sk, nf, (0.55, 6.3), 1.5, 0.9, 0.3, 0.45)
+    flutter(sk, nf, (0.55, 6.3), -1.5, 0.9, 0.3, 0.45)
     rf = Figure(sk, pose_stand(women=True, lean=0.2), 560, 650, 40, -1, tone=0.72, head="veil", veil_tone=0.6, face_turn=0.6, light=L, expr="speak",
                 arms={"n": {"e": (1.15, 4.8), "w": (2.15, 5.0), "hand": "mitt"}, "f": {"e": (0.75, 4.7), "w": (1.75, 4.55), "hand": "mitt"}})
-    flutter(sk, rf, (-0.3, 6.4), 2.2, 1.1, 0.6, 0.55)
+    flutter(sk, rf, (-0.3, 6.4), -2.2, 1.1, 0.6, 0.55)
     rf.draw()
     dust_streaks(sk, rng, 0, 380, 900, 640, 26, 0.35, -0.03)
-    arrow(sk, [(40, 250), (170, 244), (300, 248)], label="wind from the west", label_dy=-12)
+    arrow(sk, [(470, 248), (330, 244), (200, 250)], label="wind from the east, at their backs", label_dx=-170, label_dy=-14)
     arrow(sk, [(1075, 440), (1150, 395), (1215, 360)], label=None)
     tag(sk, 1035, 285, "Orpah, back to her mother's house", 1000, 240)
     tag(sk, 385, 380, "Naomi", 330, 350)
@@ -718,7 +718,7 @@ def p1_21(sk, rng):
            arms={"n": "none", "f": "none"}).draw()
     Figure(sub, pose_stand(women=True), 900, 1400, 150, -1, tone=0.72, head="veil", veil_tone=0.6, face_turn=0.65, light=L, expr="speak",
            arms={"n": "none", "f": "none"}).draw()
-    note(sub, 650, 190, "\u201cWhere you go, I will go...\u201d", 36, RED, "middle")
+    note(sub, 650, 190, "\u201cWhere you go, I'll go...\u201d", 36, RED, "middle")
     embed(sk, sub, 700, 480, 380, 214, 210, 140, 880, 495, "CLOSE: the oath; Naomi's nod")
 
 
@@ -974,25 +974,21 @@ def cloak_on_legs(sk, f):
     sk.line([f.P((1.6, 1.15)), f.P((2.5, 0.2))], f.lw * 0.6, 0.5, passes=1)
 
 
-@panel("3.8", "\u201cEmpty.\u201d Medium, dawn, in the ruin: the six measures of barley on the floor between them; Naomi sits as Ruth speaks. \u201cWait, my daughter.\u201d")
+@panel("3.8", "\u201cEmpty.\u201d Medium, dawn, in Naomi's house, roofed again: the six measures of barley on the floor between them; Naomi sits as Ruth speaks. \u201cWait, my daughter.\u201d")
 def p3_8(sk, rng):
     yf = 570
     interior_wall(sk, rng, yf, 0.6, light_from_left=False)
-    # the broken top of the wall and the open roof: sky through the gap
-    gap = [(0, 0), (W, 0), (W, 60), (1000, 90), (860, 140), (700, 120), (560, 170), (420, 130), (300, 150), (160, 100), (0, 110)]
-    sk.fill(gap, grey(0.86), 1, amp=3)
-    sk.line(gap[2:], 1.8, 0.85, amp=2)
-    sk.shape([(120, 70), (900, 210), (905, 236), (115, 96)], grey(0.38), 2.0)  # a fallen beam
+    # the roof is back (end of Act Two): new beams and the reed-and-mud ceiling, dark above the dawn
+    sk.fill([(0, 0), (W, 0), (W, 110), (0, 110)], grey(0.42), 1, amp=1.5)
+    sk.line([(0, 110), (W, 110)], 1.8, 0.85, amp=1)
+    for bx in (90, 330, 570, 810, 1050):
+        sk.shape([(bx, 96), (bx + 150, 96), (bx + 150, 124), (bx, 124)], grey(0.3), 2.0)  # a beam end
+    # jars along the back wall, full of grain
+    for jx in (420, 500, 580):
+        jar(sk, rng, jx, yf, 54, 96, tone=0.68)
     # the floor, rubble, thistles
     sk.fill([(0, yf), (W, yf), (W, H), (0, H)], grey(0.55), 1, smooth=False)
     scribble_ground(sk, rng, 0, yf, W, H, 60, 0.25)
-    stones(sk, rng, 26, 0, yf + 10, 260, H - 10, (6, 16), 0.58, (-1, 0.3))
-    stones(sk, rng, 14, 1050, yf + 10, W, H - 10, (6, 16), 0.58, (-1, 0.3))
-    for x in (60, 140, 1220):
-        for k in range(4):
-            a = math.radians(-90 + (k - 1.5) * 18)
-            sk.line([(x, yf + 40), (x + math.cos(a) * 46, yf + 40 + math.sin(a) * 46)], 1.1, 0.75, passes=1)
-            sk.add(f'<circle cx="{x + math.cos(a) * 46:.0f}" cy="{yf + 40 + math.sin(a) * 46:.0f}" r="4" fill="{grey(0.3)}"/>')
     # the door on the right, first light coming in
     dx0, dx1, dy0 = 1010, 1170, 170
     sk.fill([(dx0, dy0), (dx1, dy0), (dx1, yf), (dx0, yf)], "#faf8f2", 1, smooth=False, amp=0.5)
@@ -1011,14 +1007,14 @@ def p3_8(sk, rng):
         x = rng.uniform(540, 700); y = rng.uniform(625, 662)
         d.append(f"M{x:.1f},{y:.1f}l{rng.uniform(1, 3):.1f},{rng.uniform(-1, 1):.1f}")
     sk.add(f'<path d="{"".join(d)}" fill="none" stroke="{INK}" stroke-width="1" stroke-opacity="0.5"/>')
-    # Naomi sits (on a fallen stone), looking up at Ruth
+    # Naomi sits (on a stone seat), looking up at Ruth
     sk.blob([[(150, 700), (165, 598), (230, 586), (330, 590), (345, 700)]], grey(0.62), 1.8, L, True, 3.2, 0.5, soft=0)
     Figure(sk, pose_sit_stone(2.0), 270, 700, 54, 1, tone=0.4, head="veil", veil_tone=0.3, face_turn=0.65, expr="neutral", head_tilt=-14,
            arms={"n": {"e": (1.0, 4.9), "w": (1.75, 4.1), "hand": "mitt"}, "f": {"e": (0.5, 4.9), "w": (1.3, 4.2)}}, **kw).draw()
     # Ruth, standing, speaking, a hand toward the grain
     Figure(sk, pose_stand(women=True), 870, 720, 58, -1, tone=0.76, head="veil", veil_tone=0.64, face_turn=0.55, expr="speak",
            arms={"n": {"e": (0.95, 4.75), "w": (1.9, 4.2), "hand": "open"}, "f": (-6, -2)}, **kw).draw()
-    note(sk, 830, 110, "Ruth: \u201cHe said, Don't go back to your mother-in-law empty.\u201d", 17, anchor="middle")
+    note(sk, 830, 150, "Ruth: \u201cHe said I shouldn't come back to you empty.\u201d", 17, anchor="middle")
     note(sk, 250, 300, "Naomi: \u201cWait, my daughter.\u201d", 18, anchor="start")
     note(sk, 1090, 600, "first light", 15, anchor="middle")
     note(sk, 615, 600, "six measures of barley", 14, anchor="middle")
