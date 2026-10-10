@@ -67,6 +67,7 @@ Your answers of 2026-10-09 settle it; the research, the reasons and the plan dra
 - **The quarters:** four planted quarters between them, each different, with **clear paths winding all through them** of earth, gravel, sand and stepping stones.
 - **The care:** the paths clear and smooth, the Garden well kept: natural in shape, tended in fact.
 - **The way east:** one causeway across the water from the eastern headwater's path, the only dry way out, where the cherubim and the fire stand (3:24).
+- **Proposed 2026-10-10, open:** a ring instead of the square, the terraces squared toward the top by Adam's work, and Babel built over the Garden after the flood ([LAYOUT §9](./LAYOUT.md#9-why-there-the-place-babel-and-the-ring-2026-10-10-proposals); README item 20).
 - **Stone, light, life:** grey limestone; a natural, peaceful, beautiful mood made mostly with shadow, cool blue shade and warm shafts of sun; plants and animals of the region or the wider region; color only in what lives.
 
 ## 3. The six movements, as they now stand

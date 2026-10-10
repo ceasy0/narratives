@@ -50,7 +50,7 @@ This directory holds the planning documents, the Opening's research, treatment, 
 
 Everything the project is waiting on, in one place. I'll keep this list current. Your answers of 2026-10-08 (evening) settled the map's four questions, the Garden's five, Genesis 18 and the Garden's look; they're recorded in [Discussion 009](./discussions/009-god-in-the-garden.md#round-2--2026-10-08-evening), [FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far), [ARCHITECTURE §11](./story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when) and the [Garden dossier](./story/arcs/01-beginnings/garden/DOSSIER.md).
 
-**The short version: item 1 is your reaction to animatic v3, item 2 is the pacing you flagged, item 3 is the Ruth sketches. The rest are carried over.** Answered questions are taken off this list once the answer is recorded where it belongs (your rule, 2026-10-10); your answers of 2026-10-09 (Season 3's name, filling the hours from the text, the Garden's look) are in [FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far).
+**The short version: item 1 is your reaction to animatic v3, item 2 is the pacing you flagged, item 3 is the Ruth sketches, item 20 is the Garden's ring and Babel. The rest are carried over.** Answered questions are taken off this list once the answer is recorded where it belongs (your rule, 2026-10-10); your answers of 2026-10-09 (Season 3's name, filling the hours from the text, the Garden's look) are in [FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far).
 
 ### The Opening, v3, and Ruth
 
@@ -90,3 +90,7 @@ The map lists the hard passages it found, by arc, in [ARCHITECTURE §11](./story
 17. **Before the Gospels:** FR-03's on-screen approach; the disputed passages (Position 3); Gospel harmony (Position 11, which sets the order of hours 146–183); Luke's census (Position 10); Peter's role and the Last Supper (Position 18); FR-09; FR-10's bloodline and "the colors of Christ" (the resurrection is decided); the two questions left from Discussion 002.
 18. **Before Revelation:** how to read it (Position 19).
 19. **Before Genesis 16:** Position 14 beyond Genesis 18, scene by scene (Hagar first).
+
+### The Garden
+
+20. **The ring, Adam's square, and Babel over the Garden** (your questions of 2026-10-10, answered in [LAYOUT §9](./story/arcs/01-beginnings/garden/LAYOUT.md#9-why-there-the-place-babel-and-the-ring-2026-10-10-proposals), with a [sketch](./story/arcs/01-beginnings/garden/layout-plan-ring.svg)). My view: the ring is more natural than the square and fits Ezekiel's "rivers flowing around" (31:4); the terraces round at the foot and squared toward the top by Adam's work ("to work it and keep it," 2:15), so the square becomes the first human shape, the one every later temple-mountain copies. And Babel built over the buried Garden, its tower over the spring: Babylon's own holy quarter was called "Eridu," and Ur is 12 km away. Graded Tension on Babel's location (Gen 10:10 lists it as Babylon), and it leans on the flood question (item 7). Yes to both, one, or neither?

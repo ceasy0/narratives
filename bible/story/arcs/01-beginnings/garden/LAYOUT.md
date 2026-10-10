@@ -2,7 +2,7 @@
 
 > Research for what was README item 6 (answered and taken off the list): the shape, the layout and the light of the Garden of Eden, and what I think of your picture of it. Companion to the [Garden dossier](./DOSSIER.md), whose §2 ("The look") this extends. The look it proposes was decided on 2026-10-09 (§6).
 
-**Status:** v1.0, 2026-10-09: **the plan is decided** and folded into the [dossier's §2](./DOSSIER.md#2-the-look). v1.0 adds your last answers: the plan, the two kinds of path, the spring in the marsh, and your rule for the whole Garden (§6). v0.6 recorded your note that the paths are clear and smooth and the Garden well kept (§6, §7). v0.5 recorded your yes to the spring-built centre and answers whether it could be out in the delta (§5.7). v0.4 added where the water comes from. v0.1 was written from your note below; v0.2 added your two comments on it (the stones' size and the ground itself, §5.4; the mood and shadow, §6); v0.3 added your rule for the living things (§6). Decided: **everything in §6**, under one rule, yours: "find the line between natural and too rare to be natural; I think that's where the magic is" ([FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far)). Everything else here is still a proposal.
+**Status:** v1.1, 2026-10-10: your questions of 2026-10-10 (why the Garden is where it is, Babel, Ur and Uruk, and a ring instead of a square) are answered in §9, **as proposals: nothing in §6 changes until you say so.** v1.0, 2026-10-09: **the plan is decided** and folded into the [dossier's §2](./DOSSIER.md#2-the-look). v1.0 adds your last answers: the plan, the two kinds of path, the spring in the marsh, and your rule for the whole Garden (§6). v0.6 recorded your note that the paths are clear and smooth and the Garden well kept (§6, §7). v0.5 recorded your yes to the spring-built centre and answers whether it could be out in the delta (§5.7). v0.4 added where the water comes from. v0.1 was written from your note below; v0.2 added your two comments on it (the stones' size and the ground itself, §5.4; the mood and shadow, §6); v0.3 added your rule for the living things (§6). Decided: **everything in §6**, under one rule, yours: "find the line between natural and too rare to be natural; I think that's where the magic is" ([FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far)). Everything else here is still a proposal.
 
 Your note of 2026-10-09:
 
@@ -275,3 +275,95 @@ All of this is buildable in Blender: a terrain mesh, scattered vegetation (geome
 Nothing for the look: it's decided (2026-10-09) and folded into the [dossier's §2](./DOSSIER.md#2-the-look). The answers that closed it: the plan, with clear winding paths through the quarters and straight grey limestone paths along the four headwaters; the ground as natural limestone, not masonry (it follows from your rule; say so if you meant otherwise); and the spring out in the marsh, rare but possible ("I like your pick").
 
 Next, the Garden's treatment builds on it.
+
+**Reopened as a proposal, 2026-10-10:** a ring instead of the square, Adam squaring the centre, and Babel built over the Garden (§9). The question is in the README's list.
+
+## 9. Why there: the place, Babel, and the ring (2026-10-10, proposals)
+
+Your questions of 2026-10-10:
+
+> I think there is something very special about this place that I am missing. Why is the spring of Eden where it is as opposed to anywhere else? Wasn't Babel built very close to Eden? Why? Wasn't Ur and Uruk very close by too? What is the reason Adam was brought there? Would it be possible that Babel was built on top of this Garden, with the Tower in the center?
+>
+> Also if the square is too unnatural i think a ring works better (seems to also work better with the description that the water was all around), for both the moat of water around the Garden and for the stacked layering of the Garden itself. In fact for the stacked layering, if those structures were usually made square by people, we can still keep it square. It would be like the garden was very close to the shape that Adam made it when he arrived there; he just made the ring stand out better, carved the middle into something with edges, etc. Let me know what you think.
+
+**The short version.** I think the special thing you're sensing is real, and it's this: **this spot is the one place in that world where all its waters meet.** The rivers of four lands come down to it, the sea comes up to it, and fresh water rises from under the ground in the middle of it. It's a land with no rain where everything lives on water from somewhere else, and here every water comes together. The people who lived there knew it: they called it the first city, the place where kingship came down from heaven, and the home of the god of the fresh water under the earth. **Ur is 12 km away, Uruk about 60. Babel is the hard one, and the most interesting.** Babylon is about 240 km up the Euphrates, but Babylon named its own holy centre, the quarter of Marduk's temple beside the great tower, "Eridu." **So yes, Babel built over the Garden is possible, and I think it's the strongest idea in this round.** It gives the first hour of Genesis and the seventh the same ground. **The ring is better than the square, for the reason you give,** and Adam squaring the centre gives the square a meaning it didn't have before. Details, the case against, and the grades below. All of it is P5/P6 and yours to accept or change.
+
+### 9.1 Why the spring is where it is
+
+**What the text gives.** God chose the place: "the LORD God planted a garden in Eden, in the east" (2:8). Three things in the text make it *this* place:
+
+1. **Water in a land without rain.** "The LORD God had not caused it to rain on the land, and there was no man to work the ground, and a mist (*'ed*) was going up from the land and was watering the whole face of the ground" (2:5–6). In a rainless land, life is only where water comes up or comes down a river. The Garden is where it does both.
+2. **The source of the world's rivers.** "A river went out from Eden to water the garden, and from there it divided and became four heads" (2:10), and the four reach Havilah, Cush, Assyria and beyond (2:11–14). The Garden is drawn as the place the known world's rivers belong to. On the geography you chose ([008](../../../../discussions/008-adam-eve-and-the-garden.md#round-2--2026-10-08)), they're the Tigris, the Euphrates, the Karun from Iran and the dry Wadi al-Batin from Arabia, all meeting at the head of the Gulf.
+3. **Where God is met.** "They heard the sound of the LORD God walking in the garden" (3:8). It's the first sanctuary (§4).
+
+**What the place has that nowhere else does.** Put those together on your map and the spot is where every kind of water in that world meets: the four rivers from four lands, the sea, and the fresh water rising from below (§5.7). The Sumerians named the two waters: the *Abzu*, the fresh water under the earth, and the salt sea. Eridu stood where they met, and its temple was the house of the Abzu.
+
+**The ancient memory of the spot.** Three traditions from that country point at it:
+
+- **The first city.** "After kingship descended from heaven, kingship was in Eridu" (the Sumerian King List).
+- **The place of the undying.** At the end of the flood story in *Gilgamesh*, the gods give the flood hero Utnapishtim eternal life and settle him "far away, at the mouth of the rivers" (Tablet XI). The Mesopotamian picture of the place where a man lives forever is exactly where you put the Garden: the mouth of the rivers.
+- **Paradise down the Gulf.** Dilmun, "where the lion kills not," where Enki makes fresh water rise from the ground (*Enki and Ninhursag*).
+
+**My view.** The Garden is where it is because it's the one place where the waters God separated in Genesis 1 (1:6–10) come back together for life, and it's at the centre of the world those people knew. I wouldn't say any of that in the film. The audience should feel it: water arriving from every direction, and rising in the middle.
+
+### 9.2 Why Adam was brought there
+
+**The text.** Adam is made outside the Garden and brought in: "the LORD God formed the man... and the LORD God planted a garden... and there he put the man whom he had formed" (2:7–8); "the LORD God took the man and put him in the garden of Eden to work it and keep it" (2:15). The verb in 2:15, *wayyanniḥehu*, is from *nuaḥ*, "to rest"; in this form it means "set down, place," and it's the verb used for things set down before the LORD in the sanctuary (Exod 16:33–34; Num 17:4). *Medium confidence on how much weight that parallel can carry; Wenham and Walton both draw it.*
+
+**Two reasons in the text, both stated.** To work it and keep it (2:15): the Garden needs him ("there was no man to work the ground," 2:5). And to be where God is met: the first words he hears are spoken there (2:16–17).
+
+**What the series already has.** His line walked from the Nile across the gap ([008](../../../../discussions/008-adam-eve-and-the-garden.md#round-2--2026-10-08)), and movement 1 opens with him "taken and put" (dossier §3). So the Garden is not where he was born. He is brought from the wild world to the one place in it where everything comes together, and given the work of keeping it.
+
+### 9.3 Ur, Uruk, Eridu and Babel: the neighbours
+
+| Place | From the Garden (Eridu) | In the Bible | Why it matters |
+|---|---|---|---|
+| **Eridu** | the Garden's site | not named | The first city (the King List); temple of the fresh water rising, rebuilt on the same spot 17 or 18 times from about 5300 BC; its last great tower, Amar-Sin's ziggurat (about 2040 BC), was never finished. |
+| **Ur** | about 12 km | Abraham's city: "Ur of the Chaldeans" (11:28, 31) | **The man God calls out (12:1) is born within sight of where the Garden was.** |
+| **Uruk** | about 60 km | Erech, in Nimrod's kingdom (10:10) | The world's first true city, about 4000–3100 BC. Its king Enmerkar asks for materials for "the lofty Abzu temple of Enki at Eridu" in the Sumerian story that tells of the speech of mankind being changed. |
+| **Babel / Babylon** | about 240 km up the Euphrates | "Babel, Erech, Accad and Calneh, in the land of Shinar" (10:10); the tower (11:1–9) | Babylon's central quarter, where Marduk's temple Esagila stood beside the great ziggurat Etemenanki (the tower most scholars connect with Babel), **was called Eridu** (the Babylonian city text *Tintir*, Tablet V: "Eridu, in which Esagila is built"; A. R. George). |
+
+*Distances measured on the sites' coordinates, straight line; high confidence. The Tintir quarter: high confidence. The Sumerian story is* Enmerkar and the Lord of Aratta*; its "Spell of Nudimmud" (Nudimmud is Enki, Eridu's god) has Enki "change the speech in their mouths." Scholars have compared it to Babel since Samuel Kramer, and they disagree on whether the spell breaks the one language apart or makes it one.*
+
+**So: Ur and Uruk are next door, and Babel is far by the map but tied to Eridu by everything else.** The Babylonians called their holiest ground by Eridu's name. The Sumerian story of the changed speech is told by Uruk about Eridu's god, in a story about building Eridu's temple. And Eridu has the oldest sacred building in the land, built and rebuilt on one spot over the fresh water, ending in a tower nobody finished. David Rohl (*Legend: The Genesis of Civilisation*, 1998) argued that the first Babel was Eridu. That's a minority view, P4.
+
+### 9.4 Babel built on the Garden, with the Tower at its centre
+
+**For it.**
+
+1. **The same plain.** The builders "found a plain in the land of Shinar and settled there" (11:2). Shinar is the whole lower plain; hour 7 of the map already says "on the plain where Eden was" ([ARCHITECTURE §7](../../../ARCHITECTURE.md#7-the-map)).
+2. **The same spot, by the same reasoning.** People who find a mound with fresh water rising out of a rainless marsh will build there, and keep building there. That's exactly what Eridu's archaeology shows: a small shrine on a dune by the water, raised on a platform, rebuilt again and again, growing into a tower.
+3. **The same aim.** "A tower with its top in the heavens" (11:4) is the mountain of God (Ezek 28:14) rebuilt by hand. "They had brick for stone" (11:3): the Garden's stone is gone, so they make their own. The name they give it, Babylonian *Bab-ili*, means "gate of god." It claims to be what Eden was, the place where heaven and earth meet.
+4. **The same God.** "The LORD came down to see the city and the tower" (11:5), the God who walked in the Garden in the wind of the day (3:8). The audience will have stood on that ground with him once already.
+5. **The contrast the text already draws.** "Let us make a name for ourselves" (11:4); and in the next chapter, to the man from Ur: "I will make your name great" (12:2). On your idea, Abraham is called out from beside the ground where the tower stands.
+
+**Against it.**
+
+1. **Babel is Babylon in Genesis's own list** (10:10), and everyone from the prophets on read it so. Putting Babel at Eridu needs either Rohl's reading or the Tintir tie. **Tension**, not contradiction: Genesis gives no coordinates, and Babylon itself gave its centre Eridu's name. The series can make that the link: the empire of the Exile carries the name of the place it was first built.
+2. **The cherubim guard "the way to the tree of life"** (3:24), and the text sets no end to it. If people build on the Garden, it has to be gone first. The plainest way is the flood (Genesis 6–8), which on a plain like this leaves metres of river mud over everything; Woolley found such a layer at Ur, next door. *High confidence on Woolley's layer; it isn't proof of Noah's flood.* **This ties the idea to Position 7, global or regional flood (README item 7):** either way the Garden is buried, but how we show it depends on the answer.
+3. **Exactly the centre?** The text doesn't place the tower anywhere. Over the spring is my choice too, because the spring is the reason anyone would build there. I'd not show the trees' remains; the builders shouldn't know what they're standing on, only that the water comes up there. The audience will know.
+
+**My view: yes, adopt it, as a choice graded Tension on Babel's location and Compatible on everything else.** It's the boldest thing the series can do with Genesis 1–11: hour 1 and hour 7 are the same place, the mountain God made and the tower men made over it, and the man God calls in hour 8's wake is from 12 km away. It also explains why the series has stood on this plain for so long. What it changes: hour 7's line on the map, the flood's look over the Garden (hour 5), and one sentence in the dossier.
+
+### 9.5 The ring, and Adam's square
+
+**The ring is more natural, and fits the text better.** Ezekiel's "rivers flowing *around* the place of its planting" (31:4) uses *sevivot*, from the root "to turn, go round." A spring mound is round in plan, and the water spreading from it makes rings; travertine terraces form curved, lobed steps, not straight ones. On your rule ("the line between natural and too rare to be natural"), the square island was on the wrong side of the line. The ring is on the right side.
+
+**Adam's square: I'd adopt it.** It's your best idea in this round after Babel, and the two belong together:
+
+- **It gives the square a meaning.** Round is God's planting; square is the man's work. "To work it and keep it" (2:15): his first work shapes the ground God gave him. The ring is how it was planted; the square at the centre is how it was kept.
+- **It explains every square after it.** The square temple platforms of Eridu, the ziggurats, Babel's tower, the square holy of holies, Revelation's square city: all remember the shape the first man gave the centre. And Babel, built over it in brick, copies his square without the trees.
+- **Revelation fits it.** The Garden at the beginning is round, God's; the city at the end is square, and "the kings of the earth will bring their glory into it" (Rev 21:16, 24): God's planting and human work joined. That's my reading, P6, and it isn't said in the film.
+- **It can be done without cutting stone.** Fresh spring stone (tufa) is soft when wet and hardens in the air. It can be scraped, pressed and squared with wood and stone tools, by hand. That's shaping, not hewing, so it keeps to the spirit of Exod 20:25 (§5.4). *Medium-high confidence on tufa's softness.*
+- **It plays.** At his arrival (movement 1) the centre is natural rings of grey stone. In their life (movement 4) we see him work it: clearing, edging, squaring the top around the two trees. By the Fall the top has edges. It's the "work and keep" shown, without a word.
+
+**The case against.** The text says nothing of building; Adam as the first architect is P5. And the square at the centre makes holy ground partly man-made, which is the same impulse as Babel's, turned the right way. That's a strength if the series wants the rhyme, and a risk if it reads as Adam improving on God. I'd keep his work modest: edges and a level top, not monuments.
+
+**Proposed plan, if you take both** ([sketch](./layout-plan-ring.svg)):
+
+1. A round island in a ring of fresh water, out in the marsh. The causeway east stays, the only dry way across.
+2. The four headwaters still run straight to the four directions, along the limestone's joints, with the grey limestone paths beside them. The winding paths fill the four quarters, which are now quarters of a circle.
+3. The terraces: round at the foot, as the spring built them, and squared toward the top by Adam's work; the top a square platform with the spring between the two trees.
+4. Everything else in §6 (stone, light, plants, animals, care) unchanged.
+
+**What I need from you:** the README's list has it as one question: the ring with Adam's square, and Babel over the Garden. Yes to both, one, or neither?

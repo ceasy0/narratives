@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Georgia, serif">
+  <rect width="900" height="620" fill="#f4f1ea"/>
+  <text x="20" y="32" font-size="20" fill="#2b2b2b">The Garden — the ring, proposed 2026-10-10 (P6)</text>
+  <text x="20" y="52" font-size="12" fill="#666">North up. Round island about 450 m across in a ring of fresh water; terraces round at the foot, squared toward the top by Adam.</text>
+  <rect x="30" y="75" width="520" height="520" fill="#c9d6c2"/>
+  <text x="40" y="92" font-size="11" fill="#556">reed marsh, palms</text>
+  <circle cx="290" cy="335" r="245" fill="#9fc3d6"/>
+  <rect x="490" y="323" width="60" height="24" fill="#bdb6a8" stroke="#7d776c"/>
+  <circle cx="290" cy="335" r="200" fill="#a9b98f" stroke="#7d776c" stroke-width="2"/>
+  <g fill="#cfcac0">
+    <rect x="279" y="135" width="22" height="135"/><rect x="279" y="400" width="22" height="135"/>
+    <rect x="90" y="324" width="135" height="22"/><rect x="355" y="324" width="135" height="22"/>
+  </g>
+  <g fill="none" stroke="#d9c9a3" stroke-width="3" stroke-linecap="round">
+    <path d="M279,190 C230,200 200,240 160,230 S130,280 150,305 M255,300 C220,280 190,300 175,260"/>
+    <path d="M301,195 C340,225 390,195 420,230 S440,290 405,305 M301,250 C340,240 360,280 330,312"/>
+    <path d="M279,440 C240,420 200,465 165,440 S135,385 155,362 M250,395 C210,400 190,372 140,388"/>
+    <path d="M301,470 C350,495 395,445 425,465 S445,385 410,362 M335,355 C360,400 330,430 301,420"/>
+  </g>
+  <g stroke="#5f9fc0" stroke-width="8">
+    <line x1="290" y1="135" x2="290" y2="275"/><line x1="290" y1="395" x2="290" y2="535"/>
+    <line x1="90" y1="335" x2="230" y2="335"/><line x1="350" y1="335" x2="490" y2="335"/>
+  </g>
+  <g stroke="#6e6a62" stroke-width="2">
+    <circle cx="290" cy="335" r="66" fill="#b9b4aa"/>
+    <circle cx="290" cy="335" r="54" fill="#c3beb4"/>
+    <rect x="248" y="293" width="84" height="84" rx="16" fill="#cdc8be"/>
+    <rect x="258" y="303" width="64" height="64" rx="6" fill="#d7d2c8"/>
+    <rect x="268" y="313" width="44" height="44" fill="#e6e1d6"/>
+  </g>
+  <circle cx="290" cy="335" r="5" fill="#3d86b0"/>
+  <circle cx="278" cy="323" r="7" fill="#3f6b2e"/><circle cx="302" cy="347" r="7" fill="#5a4a2a"/>
+  <text x="497" y="316" font-size="12" fill="#2b2b2b">causeway</text>
+  <text x="497" y="362" font-size="11" fill="#8a3b1f">cherubim (3:24)</text>
+  <text x="60" y="585" font-size="11" fill="#2b4f66">ring of fresh water, "flowing around" (Ezek 31:4)</text>
+  <g font-size="12" fill="#2b2b2b">
+    <circle cx="585" cy="110" r="5" fill="#3d86b0"/><text x="598" y="114">spring between the trees (2:10)</text>
+    <line x1="578" y1="135" x2="594" y2="135" stroke="#5f9fc0" stroke-width="6"/><text x="598" y="139">four headwaters, straight on the joints</text>
+    <circle cx="585" cy="160" r="6" fill="#3f6b2e"/><text x="598" y="164">tree of life</text>
+    <circle cx="585" cy="184" r="6" fill="#5a4a2a"/><text x="598" y="188">tree of knowledge</text>
+    <circle cx="585" cy="206" r="6" fill="#c3beb4" stroke="#6e6a62"/><text x="598" y="211">terraces: round (the spring's)...</text>
+    <rect x="579" y="222" width="12" height="12" fill="#e6e1d6" stroke="#6e6a62"/><text x="598" y="233">...squared at the top (Adam's)</text>
+    <rect x="579" y="244" width="12" height="12" fill="#cfcac0"/><text x="598" y="255">grey limestone paths, headwaters</text>
+    <line x1="578" y1="272" x2="594" y2="272" stroke="#d9c9a3" stroke-width="3"/><text x="598" y="276">winding paths, quarters</text>
+  </g>
+  <text x="580" y="330" font-size="13" fill="#2b2b2b">If Babel is built here (§9.4):</text>
+  <text x="580" y="350" font-size="11" fill="#555">the flood buries the Garden in river mud;</text>
+  <text x="580" y="366" font-size="11" fill="#555">the spring still rises; the builders raise</text>
+  <text x="580" y="382" font-size="11" fill="#555">their brick tower over it, on Adam's square,</text>
+  <text x="580" y="398" font-size="11" fill="#555">without the trees.</text>
+</svg>
