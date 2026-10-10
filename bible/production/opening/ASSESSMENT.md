@@ -47,7 +47,7 @@ Rough numbers for the RTX 2060 Super (8 GB of video memory), from what similar s
 The 8 GB of video memory is the real limit: tens of millions of sand grains or a dense volume can run out of it. The workarounds are standard (render in layers, instance the grains, bake the simulation), and the laptop's RTX 4060, if it has 8 GB too, doesn't change that.
 
 **The face, three ways, best first:**
-1. **Your face, scanned and filmed.** A photo scan (a phone and photogrammetry, or a FaceBuilder-type add-on) gives the shape and the skin; your six expression runs (README item 7) drive it. The most "you," and the most work to rig.
+1. **Your face, scanned and filmed.** A photo scan (a phone and photogrammetry, or a FaceBuilder-type add-on) gives the shape and the skin; your six expression runs (README item 4) drive it. The most "you," and the most work to rig.
 2. **A MetaHuman sculpted toward your face.** Very high quality and rigged already. Epic's licence now allows using MetaHumans outside Unreal, as I understand it; check the current terms before committing.
 3. **The filmed depth maps alone** (dossier §6, "Real expressions, cheaply"): your phone takes turned into depth by a depth-estimation model, used as the relief the sand flows over. Cheapest, and enough for beats 1–2, where the face is under sand; not enough for the lit faces of beats 3 and 14.
 
@@ -57,7 +57,7 @@ A cloud thread like this one can't reach your PC. A **Remote Control session** o
 
 A sensible order, each step watchable on its own:
 1. **The sound first, in FL Studio** (§5). It's what you flagged as the biggest problem and the cheapest to fix well.
-2. **The face:** the shoot (item 7), then the scan or MetaHuman route in Blender.
+2. **The face:** the shoot (item 4), then the scan or MetaHuman route in Blender.
 3. **Beats 1–3 in Blender:** the sand over the face, the release, the two faces.
 4. **Beats 4, 5, 7 as GPU shaders,** composited in Blender.
 5. **Beats 6, 8, 9 in Blender** (the proton, the star's interior, the photon).

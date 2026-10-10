@@ -16,7 +16,7 @@ It isn't the finished animation. Three things are placeholders by necessity, bec
 
 | Placeholder | What it is now | What replaces it |
 |---|---|---|
-| **The face** (beats 1–4, 14) | Since v3, a real human face: MediaPipe's canonical face mesh (`animatic/facemesh.py`, Apache 2.0), deformed for the four-face rule's expressions and lit in code. It reads as a human face, but it's anyone's face, and it has no skin. | Your face, scanned or filmed (README item 7; [ASSESSMENT §3](./ASSESSMENT.md#3-what-it-would-take-on-your-desktop)), in Blender. `FaceMesh.render` is the one function to swap. |
+| **The face** (beats 1–4, 14) | Since v3, a real human face: MediaPipe's canonical face mesh (`animatic/facemesh.py`, Apache 2.0), deformed for the four-face rule's expressions and lit in code. It reads as a human face, but it's anyone's face, and it has no skin. | Your face, scanned or filmed (README item 4; [ASSESSMENT §3](./ASSESSMENT.md#3-what-it-would-take-on-your-desktop)), in Blender. `FaceMesh.render` is the one function to swap. |
 | **The world** (beats 10–14) | Flat silhouettes and gradients: cells, the swimmer, the fish, the great creature, the shore, the night, the *Triceratops*, the tree, the band, the delta. The face at the cliff is the mesh. Staging, direction and timing are real; the look isn't. | Blender, as you planned for the beats after the sun, or AI video from painted key frames, beat by beat. |
 | **The sound** | Ten stems generated from the treatment's rules (`animatic/sound.py`): the hiss (wind, sand, swell), the whisper, the release (six layers), the held note, the atmospheres, the laugh, the grains, the cosmos, the world, and one shared reverb space. Better than v2, still synthesized. | Your FL Studio arrangement, from the brief in [ASSESSMENT §5](./ASSESSMENT.md#5-the-sound-in-fl-studio-a-brief). The stems are written as 48 kHz stereo WAVs into `animatic/out/audio/` when you build. |
 
@@ -58,5 +58,5 @@ The order, and why, is in [ASSESSMENT §6](./ASSESSMENT.md#6-what-id-do-next-in-
 
 1. Your pass on v3 (README, item 1), and your references as screen recordings if you'd like me to see them (x.com and YouTube refused this session).
 2. A session on your desktop: read the plugin folders, and start the sound in FL Studio from the brief.
-3. The face shoot (item 7), then your face in Blender.
+3. The face shoot (item 4), then your face in Blender.
 4. Beats 1–3 in Blender; beats 4, 5 and 7 as GPU shaders; the rest by the route you choose.

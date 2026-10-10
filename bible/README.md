@@ -50,7 +50,7 @@ This directory holds the planning documents, the Opening's research, treatment, 
 
 Everything the project is waiting on, in one place. I'll keep this list current. Your answers of 2026-10-08 (evening) settled the map's four questions, the Garden's five, Genesis 18 and the Garden's look; they're recorded in [Discussion 009](./discussions/009-god-in-the-garden.md#round-2--2026-10-08-evening), [FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far), [ARCHITECTURE §11](./story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when) and the [Garden dossier](./story/arcs/01-beginnings/garden/DOSSIER.md).
 
-**The short version: item 1 is your reaction to animatic v3, item 2 is the pacing you flagged, item 3 is the Ruth sketches. Your answers of 2026-10-09 settled items 4 and 5 and the script; they're recorded in [FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far). Item 6 is the Garden's look. The rest are carried over.**
+**The short version: item 1 is your reaction to animatic v3, item 2 is the pacing you flagged, item 3 is the Ruth sketches. The rest are carried over.** Answered questions are taken off this list once the answer is recorded where it belongs (your rule, 2026-10-10); your answers of 2026-10-09 (Season 3's name, filling the hours from the text, the Garden's look) are in [FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far).
 
 ### The Opening, v3, and Ruth
 
@@ -58,41 +58,35 @@ Everything the project is waiting on, in one place. I'll keep this list current.
 2. **Pacing of beats 12 and 13.** You found the leaf falling and the run before the newborn too quick, and said it would be easier to judge in a fuller animatic. My proposal: the leaf falls for three seconds instead of one and a half, then two seconds of stillness instead of half a second (+3 s); the cat and the clash each get two more seconds (+4 s). The sequence would run 5:07. Yes, a change, or wait for the Blender pass?
 3. **The Ruth sketches.** All sixteen frames, now drawn as pencil sketches: [sheet 1](./story/arcs/07-ruth/storyboard/sketches/sheet-1.png) and [sheet 2](./story/arcs/07-ruth/storyboard/sketches/sheet-2.png) ([STORYBOARD](./story/arcs/07-ruth/STORYBOARD.md)). Do they help? Keep the red-pencil names and lines on the frames, or strip them? Still open from v1: the two rules I proposed (toward the camera is home; Naomi's state as the frame's fullness), keep or strike.
 
-### The map, and the Garden
-
-4. ~~**Season 3's name.**~~ **Answered 2026-10-09:** *The Struggle*, "for now" ([§11](./story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when)).
-5. ~~**Hour 8's name and shape.**~~ **Answered 2026-10-09:** fill each episode with what the Bible itself gives, without worrying about runtime, and fill the gaps with contextual scenes later. So hour 8 stays *The Scattering* and is written from the text; whether it holds an hour is seen at the treatment ([§11](./story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when)).
-6. ~~**The Garden's look.**~~ **Decided 2026-10-09:** a square island in fresh water out in the marsh; a stepped centre of old grey travertine built by the spring that rises between the two trees; four somewhat straight headwaters with broad grey limestone paths along them; clear paths winding through the four planted quarters; one causeway east. Grey limestone, a peaceful mood made with shadow, plants and animals of the region, color only in what lives, all of it well kept. Your rule: the line "between natural and too rare to be natural." Summary in the [dossier §2](./story/arcs/01-beginnings/garden/DOSSIER.md#the-look-decided-2026-10-09), research and plan in [LAYOUT.md](./story/arcs/01-beginnings/garden/LAYOUT.md). Nothing needed from you.
-
 ### For the Opening's build, at a local session
 
-7. **The face shoot.** Your own face, on a phone, lit from the front: the six expression runs in the [dossier §6](./story/arcs/01-beginnings/opening/DOSSIER.md#real-expressions-cheaply), ten seconds each, a few takes. With a photo scan if you can (the ways are in [ASSESSMENT §3](./production/opening/ASSESSMENT.md#3-what-it-would-take-on-your-desktop)). The animatic's face is a real mesh now, but it's anyone's face; yours is the one that drops in.
-8. **A session on your desktop** (a Remote Control session from the project): read the plugin folders you listed, tailor the [sound brief](./production/opening/ASSESSMENT.md#5-the-sound-in-fl-studio-a-brief) to them, set up the FL Studio project with the generated stems, and start the Blender scenes. (Python and ffmpeg are on the machine as of 2026-10-08.)
+4. **The face shoot.** Your own face, on a phone, lit from the front: the six expression runs in the [dossier §6](./story/arcs/01-beginnings/opening/DOSSIER.md#real-expressions-cheaply), ten seconds each, a few takes. With a photo scan if you can (the ways are in [ASSESSMENT §3](./production/opening/ASSESSMENT.md#3-what-it-would-take-on-your-desktop)). The animatic's face is a real mesh now, but it's anyone's face; yours is the one that drops in.
+5. **A session on your desktop** (a Remote Control session from the project): read the plugin folders you listed, tailor the [sound brief](./production/opening/ASSESSMENT.md#5-the-sound-in-fl-studio-a-brief) to them, set up the FL Studio project with the generated stems, and start the Blender scenes. (Python and ffmpeg are on the machine as of 2026-10-08.)
 
 ### Before the rest of Genesis 1–11
 
-9. **The "sons of God" and the Nephilim** (Gen 6:1–4; Position 6), before hour 3.
-10. **The flood:** global or regional (Position 7), before hour 4.
-11. **Dating Genesis 1–11.** Adam at about 5000–4000 BC stands as provisional until Genesis 4–5 is treated ([TIMELINE §3.4](./world/TIMELINE.md#34-primeval-history-genesis-111)).
+6. **The "sons of God" and the Nephilim** (Gen 6:1–4; Position 6), before hour 3.
+7. **The flood:** global or regional (Position 7), before hour 4.
+8. **Dating Genesis 1–11.** Adam at about 5000–4000 BC stands as provisional until Genesis 4–5 is treated ([TIMELINE §3.4](./world/TIMELINE.md#34-primeval-history-genesis-111)).
 
 ### Ruth (parked)
 
-12. Your pass on the [script](./scripts/ruth/ruth.fountain), whenever you return to it, then the audit and the lock.
-13. The David connection at the end, deferred by your choice.
-14. **Length.** The draft is 37 pages, about 37 minutes. At an hour an episode it needs about twenty minutes more, or a partner.
+9. Your pass on the [script](./scripts/ruth/ruth.fountain), whenever you return to it, then the audit and the lock.
+10. The David connection at the end, deferred by your choice.
+11. **Length.** The draft is 37 pages, about 37 minutes. At an hour an episode it needs about twenty minutes more, or a partner.
 
 ### Open discussions
 
-15. **[006](./discussions/006-2d-or-3d.md):** 2D or 3D, the hybrid plan, and the look book. The animatic is a data point: everything in it is code, and the question is what the finished look is.
-16. **[002](./discussions/002-jesus-humanity.md), round 3:** the two guardrails on 2 Sam 7:14b.
+12. **[006](./discussions/006-2d-or-3d.md):** 2D or 3D, the hybrid plan, and the look book. The animatic is a data point: everything in it is code, and the question is what the finished look is.
+13. **[002](./discussions/002-jesus-humanity.md), round 3:** the two guardrails on 2 Sam 7:14b.
 
 ### Before later arcs
 
 The map lists the hard passages it found, by arc, in [ARCHITECTURE §11](./story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when); the first is the ban (*herem*), before Arc 5.
 
-17. **Before Job and the Gospels:** FR-19, the devil as what evil actions are, and who plays the role each time.
-18. **Before the Exodus:** which pharaoh; the large numbers (Position 9); the full version of God among the nations (Discussion 004); how Moses is set apart (Discussion 001, deferred); the bridegroom of blood; Pharaoh's heart.
-19. **Before the prophets:** whether the great visions of Isaiah, Ezekiel and Daniel are where the Opening's world comes back at full strength (Discussion 001, deferred; you said "possibly"); who speaks Isaiah 40–66.
-20. **Before the Gospels:** FR-03's on-screen approach; the disputed passages (Position 3); Gospel harmony (Position 11, which sets the order of hours 146–183); Luke's census (Position 10); Peter's role and the Last Supper (Position 18); FR-09; FR-10's bloodline and "the colors of Christ" (the resurrection is decided); the two questions left from Discussion 002.
-21. **Before Revelation:** how to read it (Position 19).
-22. **Before Genesis 16:** Position 14 beyond Genesis 18, scene by scene (Hagar first).
+14. **Before Job and the Gospels:** FR-19, the devil as what evil actions are, and who plays the role each time.
+15. **Before the Exodus:** which pharaoh; the large numbers (Position 9); the full version of God among the nations (Discussion 004); how Moses is set apart (Discussion 001, deferred); the bridegroom of blood; Pharaoh's heart.
+16. **Before the prophets:** whether the great visions of Isaiah, Ezekiel and Daniel are where the Opening's world comes back at full strength (Discussion 001, deferred; you said "possibly"); who speaks Isaiah 40–66.
+17. **Before the Gospels:** FR-03's on-screen approach; the disputed passages (Position 3); Gospel harmony (Position 11, which sets the order of hours 146–183); Luke's census (Position 10); Peter's role and the Last Supper (Position 18); FR-09; FR-10's bloodline and "the colors of Christ" (the resurrection is decided); the two questions left from Discussion 002.
+18. **Before Revelation:** how to read it (Position 19).
+19. **Before Genesis 16:** Position 14 beyond Genesis 18, scene by scene (Hagar first).

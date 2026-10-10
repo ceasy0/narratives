@@ -54,7 +54,7 @@ There's no separate beat sheet. For a five-minute sequence with no dialogue, the
 
 ## What this arc still needs from you
 
-For the Opening: your notes on the animatic, and the face shoot at a local session. For the Garden: nothing that blocks the treatment; the stepped centre and the color rule to confirm ([README](../../../README.md#what-i-need-from-you), items 1, 6, 7). For the rest: Positions 6 and 7 before hours 3 and 4; hour 8's shape and name.
+For the Opening: your notes on the animatic, and the face shoot at a local session. For the Garden: nothing; its look was decided 2026-10-09, and the treatment is next. For the rest: Positions 6 and 7 before hours 3 and 4 ([README](../../../README.md#what-i-need-from-you), items 1, 4, 6, 7). Hour 8 stays *The Scattering*, written from the text (2026-10-09).
 
 ## Decided for the Opening
 

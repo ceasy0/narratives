@@ -1,6 +1,6 @@
 # The Garden — What It Looked Like
 
-> Research for README item 6: the shape, the layout and the light of the Garden of Eden, and what I think of your picture of it. Companion to the [Garden dossier](./DOSSIER.md), whose §2 ("The look") this extends. The look it proposes was decided on 2026-10-09 (§6).
+> Research for what was README item 6 (answered and taken off the list): the shape, the layout and the light of the Garden of Eden, and what I think of your picture of it. Companion to the [Garden dossier](./DOSSIER.md), whose §2 ("The look") this extends. The look it proposes was decided on 2026-10-09 (§6).
 
 **Status:** v1.0, 2026-10-09: **the plan is decided** and folded into the [dossier's §2](./DOSSIER.md#2-the-look). v1.0 adds your last answers: the plan, the two kinds of path, the spring in the marsh, and your rule for the whole Garden (§6). v0.6 recorded your note that the paths are clear and smooth and the Garden well kept (§6, §7). v0.5 recorded your yes to the spring-built centre and answers whether it could be out in the delta (§5.7). v0.4 added where the water comes from. v0.1 was written from your note below; v0.2 added your two comments on it (the stones' size and the ground itself, §5.4; the mood and shadow, §6); v0.3 added your rule for the living things (§6). Decided: **everything in §6**, under one rule, yours: "find the line between natural and too rare to be natural; I think that's where the magic is" ([FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far)). Everything else here is still a proposal.
 
