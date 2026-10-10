@@ -61,7 +61,7 @@ The files get created one at a time, in order. You can read the Markdown files o
 - **The framings and decisions that apply:**
   - FR-08 (Boaz as Ruth's opposite);
   - Discussion 001 (Ruth as the book where God works through people);
-  - God's name used in full (Ruth 2:4);
+  - the Name used sparingly: "Yahweh" only in the two oaths (1:17; 3:13), "God" or "the Lord" elsewhere;
   - the light version of "God among the nations" (Moab and Chemosh).
 - **Open decisions, each with my recommended default** (see the table below).
 

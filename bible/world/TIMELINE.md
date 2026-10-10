@@ -2,7 +2,7 @@
 
 > One timeline for every arc to fit into. It shows which dates are fixed, which depend on interpretation, and the model we'll use.
 
-**Status:** v1, 2026-10-01. **Decided:** you adopted my recommendation on all five forks (§8). Every arc's dossier uses these dates.
+**Status:** v1.1, 2026-10-08 (adds §3.4's notes for the Opening and the Garden, and Arc 7's placement of Judges 17–21); v1, 2026-10-01. **Decided:** you adopted my recommendation on all five forks (§8). Every arc's dossier uses these dates.
 
 ---
 
@@ -31,7 +31,7 @@
 | Abraham, Isaac and Jacob | 1951–1661 BC | Consistent within the text; no outside record names them |
 | Israel in Egypt (Joseph to Moses) | 1661–1446 | Depends on the model |
 | Exodus, Sinai and the wilderness | 1446–1406 | Depends on the model |
-| Conquest | 1406 – c. 1400 | Depends on the model |
+| Conquest | 1406 – c. 1380 | Depends on the model |
 | Judges, including **Ruth around 1140** | c. 1380–1050 | Depends on the model, ± 20–30 years |
 | Saul, David and Solomon | c. 1050–931 | ± 10 years |
 | The divided kingdom | 931–722 (Israel), 931–586 (Judah) | ± 1–2 years from 853 BC on |
@@ -215,7 +215,7 @@ These dates follow the text-first model. "c." means approximate, and dates "deri
 
 Dates are approximate (± 20–30 years). This is one reasonable arrangement that allows for the overlaps.
 
-**Added 2026-10-08.** Judges 17–21 dates itself early: Micah's Levite is Moses's grandson (Judg 18:30), and Phinehas son of Eleazar is still high priest in the Benjamite war (20:28). So both stories fall within a generation of Joshua's death, before Othniel, and the series map places them there ([ARCHITECTURE §3](../story/ARCHITECTURE.md#3-where-the-map-departs-from-the-bibles-order)), your call. Ruth (c. 1140) falls between Gideon and Abimelech.
+**Added 2026-10-08.** Judges 17–21 dates itself early: Micah's Levite is Moses's grandson (Judg 18:30), and Phinehas son of Eleazar is still high priest in the Benjamite war (20:28). So both stories fall within a generation of Joshua's death, before Othniel, and the series map places them there ([ARCHITECTURE §3](../story/ARCHITECTURE.md#3-where-the-map-departs-from-the-bibles-order)), accepted 2026-10-08. Ruth (c. 1140) falls between Gideon and Abimelech.
 
 | BC | Event | Reference |
 |---|---|---|
@@ -399,7 +399,7 @@ These dates follow Edwin Thiele's reconstruction, simplified to single years, an
 | Ezekiel | 593–571 | Among the exiles in Babylonia |
 | Haggai | 520 | The rebuilding |
 | Zechariah | 520–518 and later | The rebuilding |
-| Malachi | c. 460–430 | After Ezra and Nehemiah |
+| Malachi | c. 460–430 | Around Ezra and Nehemiah |
 
 Job has no fixed date. Its setting feels patriarchal.
 

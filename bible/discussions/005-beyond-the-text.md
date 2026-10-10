@@ -104,7 +104,7 @@ My grades, for you to react to. "Arc" is where the item would come up.
 | Abraham smashes his father's idols | *Genesis Rabbah* 38; *Jubilees* 12 | 2 | Joshua 24:2 says Terah "served other gods," so a young Abraham in an idol-maker's household is consistent. The fiery furnace that follows in the legend is a step too far. | Genesis |
 | Moses's Egyptian education | Acts 7:22 | **Scripture** | Already P1. Worth showing. | Exodus |
 | Moses leads an Egyptian campaign into Cush | Josephus, *Antiquities* 2.238–253 | 2 | Could explain his Cushite wife (Num 12:1). Late and legendary. | Exodus |
-| The Watchers | 1 Enoch 6–16, quoted in Jude 14–15 | 2 | Bears on Gen 6:1–4 and the Nephilim. A decision for the Genesis discussion. | Genesis |
+| The Watchers | 1 Enoch 6–16 (alluded to in Jude 6; Jude 14–15 quotes 1 Enoch 1:9) | 2 | Bears on Gen 6:1–4 and the Nephilim. A decision for the Genesis discussion. | Genesis |
 | Job as Jobab, king of Edom | The Greek postscript to Job 42:17 | 2 | It would place Job in Genesis 36's world. | Job |
 | The Queen of Sheba bears Solomon a son, Menelik | *Kebra Nagast* (14th century) | 2 | Late, but it's the founding story of Ethiopian Christianity and its monarchy. It belongs with the Ethiopian canon study (ROADMAP §9.5). | Solomon |
 | Isaiah is sawn in two under Manasseh | *Ascension of Isaiah*; Talmud, *Yevamot* 49b | 1 | Hebrews 11:37 ("they were sawn in two") almost certainly alludes to it. | The divided kingdom |

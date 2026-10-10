@@ -70,7 +70,7 @@ The baseline for everyone is setting 2: plain modern English (ROADMAP §5.2), wi
 - **The neighbor:** shrewd, not cruel. A single chuckle and a gesture do most of his talking.
 - **The foreman:** young, careful, a little defensive with the boss.
 - **The gleaners:** the young one sharp and loud; the old one never looks up from her work and always has the last word.
-- **Mr. So-and-so:** solid, careful, a father first. "Land is land."
+- **Mr. So-and-so:** solid, careful, a father first. "Land is yours where your foot walks."
 
 ## Accents
 

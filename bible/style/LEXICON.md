@@ -2,7 +2,7 @@
 
 > Term-by-term rules: which words we use, which we avoid, and why. Started with Ruth; it grows with every arc and feeds the script checker later (ROADMAP §13.5).
 
-**Status:** v1, 2026-10-02. Built from the Ruth script. The general rules are in ROADMAP §5; this file is the working list.
+**Status:** v1.1, 2026-10-10 (adds "kind," not "species"). v1, 2026-10-02: built from the Ruth script. The general rules are in ROADMAP §5; this file is the working list.
 
 ---
 
@@ -17,6 +17,12 @@
 | "the goddess," "her" | a name for the goddess | We don't know which goddess a Moabite household figure was. |
 
 **Swearing:** no sacred names as curses (ROADMAP §5.4, category 1). Oaths are the opposite of swearing: "May Yahweh do that to me, and worse," "as Yahweh lives."
+
+## Adam and Eve
+
+| Say | Avoid | Why |
+|---|---|---|
+| "kind," "of one kind" | "species" | The change in them isn't bodily (the author, 2026-10-07 and 2026-10-08; CLAUDE.md) |
 
 ## Family and law
 

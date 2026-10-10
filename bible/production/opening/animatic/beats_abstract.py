@@ -3,7 +3,7 @@ the web, the stars, and the photon's crossing. Every function takes global time 
 returns an H x W x 3 float32 image. Everything is a pure function of t, so frames can be rendered
 in any order and in parallel.
 
-Timings follow treatment v3.2 §2 exactly: v3.1's table with ten seconds added at the front, which
+Timings follow treatment v3.3 §2 exactly (v3.2's table, unchanged in v3.3): v3.1's table with ten seconds added at the front, which
 are the fade from black (the author, 2026-10-08). Everything after 0:00 runs ten seconds later.
 """
 from __future__ import annotations

@@ -47,8 +47,8 @@
 
 | Part | Passage | Where | Whose eyes | Script pages |
 |---|---|---|---|---|
-| Prologue: The House of Bread | 1:1–2 | Bethlehem | Naomi's family | 3 |
-| Act One: Full and Empty | 1:3–22 | Moab, the road, Bethlehem | Elimelech, Naomi and Ruth | 17 (Moab 10, the road 6, the return 2) |
+| Prologue: The House of Bread | 1:1–2 | Bethlehem | Naomi's family | 4 |
+| Act One: Full and Empty | 1:3–22 | Moab, the road, Bethlehem | Elimelech, Naomi and Ruth | 17 (Moab 10, the road and the return 7) |
 | Act Two: The Field | 2 | Boaz's field, Naomi's house | Ruth, and once Boaz | 7 |
 | Act Three: The Threshing Floor | 3 | Naomi's house, the floor at night | Ruth | 4 |
 | Act Four: The Gate | 4 | The gate, Naomi's house | Boaz, then Naomi | 5 |
@@ -211,7 +211,7 @@ Naomi and the boys bury him at the edge of the village, and nobody else comes. T
 
 When the boys have gone in, Naomi stays at the grave. "You said two," she tells him. **[P6·51]**
 
-At dusk, Ruth comes up the path with a loaf wrapped in a cloth: the bread that friends bring to people in mourning (Jer 16:7; Ezek 24:17). **[P6·13]** She doesn't say much. She sets it down and sits with them.
+At dusk, Ruth comes up the path with a loaf wrapped in a cloth: the bread that friends bring to people in mourning (Jer 16:7; Ezek 24:17). **[P6·13]** She doesn't say much. She sets it down and sits with her.
 
 Later that night, she finds Naomi alone in the courtyard, praying, with no image in front of her. **[P6·14]**
 
@@ -263,7 +263,7 @@ Of everything Naomi brought from Bethlehem, only she is left. At this point the 
 
 "The rain came back. God has visited his people. There's bread in Bethlehem."
 
-She asks after a name or two. He doesn't know them. She goes home and starts to pack (1:6).
+She starts to ask after someone, "Do you know—", and stops. She isn't ready to hear who's dead. She goes home and starts to pack (1:6).
 
 **Leaving.** Before dawn, Ruth says goodbye to her mother at the door. **[P6·20]**
 
@@ -433,7 +433,7 @@ They lie awake the rest of the night, an arm's length apart, under the stars, in
 
 Before light, before anyone could recognize anyone, he says: "No one can know a woman came to the floor" (3:14–15). He has her hold out her shawl, pours six measures of barley into it, lifts it onto her back, and goes up into town.
 
-Naomi has been awake all night. "How did it go, my daughter?" (3:16) The Hebrew says, literally, *Who are you, my daughter?*, echoing Boaz's question at midnight. Ruth tells her everything. Then: "He gave me these six measures of barley. He said, 'Don't go back to your mother-in-law empty'" (3:17).
+Naomi has been awake all night. "How did it go, my daughter?" (3:16) The Hebrew says, literally, *Who are you, my daughter?*, echoing Boaz's question at midnight. Ruth tells her everything. Then: "He gave me these six measures of barley. He said I shouldn't come back to you empty" (3:17).
 
 *Empty* is Naomi's own word from the day she came home. We never heard Boaz say it on the floor; as in the text, it reaches us first in Ruth's mouth. Naomi has to sit down.
 

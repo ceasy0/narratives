@@ -183,7 +183,7 @@ Whether live action happens at all can stay open. Nothing in the writing depends
 
 **Decided 2026-10-05, for the Opening and for every depiction of God that follows.**
 
-1. **The face is God's,** and it recurs through the series: at the cliff, in Adam and toward the end in Jesus, recognizable without being identical. It can be a man's or a woman's (Gen 1:26–27; 5:3). *My reading, which your answers fit but you haven't said in so many words:* it's God's image, God as he can be seen (claim A; Col 1:15), and not a picture of the Father.
+1. **The face is God's,** and it recurs through the series: at the cliff, in Adam and toward the end in Jesus, recognizable without being identical. It can be a man's or a woman's (Gen 1:26–27; 5:3). **Confirmed by you 2026-10-07:** it's God's image, God as he can be seen (claim A; Col 1:15), and not a picture of the Father.
 2. **Both interactions are God's acts:** the wounding and the healing (Deut 32:39).
 3. **The malice isn't in God.** A separated part with an ego perceives part of God as malicious; the separation is real as experience and never real as objective fact (Ps 18:26; 50:21; 1 John 1:5).
 4. **The halves aren't persons.** The dark and the light are the two fundamental experiences, separation and connection, and not the Father and the Son.

@@ -2,7 +2,7 @@
 
 > How you want scenes to play, learned from your notes. Every treatment, scene card and script starts from this file.
 
-**Status:** started 2026-10-01 from your first round of notes on the Ruth treatment, updated 2026-10-02 from your second and third, 2026-10-03 from your notes on the Opening, and 2026-10-05 from your notes on the Opening's treatment v2. It grows with each round. When a note is specific to one story, it stays in that story's files; when it's a pattern, it goes here.
+**Status:** started 2026-10-01 from your first round of notes on the Ruth treatment, updated 2026-10-02 from your second and third, 2026-10-03 from your notes on the Opening, 2026-10-05 from your notes on the Opening's treatment v2, and 2026-10-07 and 2026-10-08 from the rounds in the log below. It grows with each round. When a note is specific to one story, it stays in that story's files; when it's a pattern, it goes here.
 
 ---
 

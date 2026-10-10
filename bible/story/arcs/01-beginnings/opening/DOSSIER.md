@@ -202,7 +202,7 @@ All four faces are one face, and the malice appears only after the cut. In v3 th
 
 ## 6. The visualization
 
-**When:** now. The Opening is the exception to the first pass (your decision, 2026-10-07). The order: the script, then a timed storyboard with a rough soundtrack, then beats 1–8 in code, then 9–14. **Done 2026-10-08, in a cloud session:** the [script](../../../../scripts/beginnings/opening.fountain) (v1) and a first animatic of the whole sequence with sound, rendered in code with a procedural face and silhouette creatures and people standing in for the real ones ([production README](../../../../production/opening/README.md)). **Re-rendered the same day on this machine as animatic v2,** at 5:00, with the fade from black. The face shoot below is what replaces the placeholder face.
+**When:** now. The Opening is the exception to the first pass (your decision, 2026-10-07). The order: the script, then a timed storyboard with a rough soundtrack, then beats 1–8 in code, then 9–14. **Done 2026-10-08, in a cloud session:** the [script](../../../../scripts/beginnings/opening.fountain) (v1) and a first animatic of the whole sequence with sound, rendered in code with a procedural face and silhouette creatures and people standing in for the real ones ([production README](../../../../production/opening/README.md)). **Re-rendered the same day on this machine as animatic v2,** at 5:00, with the fade from black. **Animatic v3 (2026-10-09, cloud),** with script v1.2 and treatment v3.3: your notes on v2 applied (a real face mesh in the sand, the steady note, the layered release, the faces breaking into grains), no timing moved ([production README](../../../../production/opening/README.md)). The face shoot below is what replaces the placeholder face.
 
 ### Your machine, checked (2026-10-07)
 
@@ -240,7 +240,7 @@ Your note on beat 2: the sound at the release "needs to be incredibly powerful, 
 
 ### What the prototype shows
 
-It's at `H:\Current\Projects\Agentic\Biblical Story Concept`, confirmed on 2026-10-07 from this machine: four rendered videos (the full narrative and three staged demos), the render scripts, the web visualizer, and the saved frames. I can't play the videos until ffmpeg is installed, so what follows is from the render script's timeline and the frames. It's an 80-second black-and-white piece that ends at the hydrogen atom.
+It's at `H:\Current\Projects\Agentic\Biblical Story Concept`, confirmed on 2026-10-07 from this machine: four rendered videos (the full narrative and three staged demos), the render scripts, the web visualizer, and the saved frames. I couldn't play the videos then (ffmpeg came on 2026-10-08), so what follows is from the render script's timeline and the frames. It's an 80-second black-and-white piece that ends at the hydrogen atom.
 
 | | |
 |---|---|
@@ -266,7 +266,7 @@ The later beats (the band, the cliff, the close-up of the eye) need a full human
 
 ### Sound, with FL Studio
 
-I can't operate FL Studio myself. What I can do on your computer is generate the raw sounds in code: the hiss, the whisper shaped from it, the climb, the pulses of the laugh, the held note and its pitch following the focus. I'd write them out as audio stems, with a cue sheet and MIDI where it helps, timed to the storyboard. You then bring them into FL Studio to arrange, mix and add to. To plan that I need your FL Studio edition and any plugins you have ([README](../../../../README.md#what-i-need-from-you)).
+I can't operate FL Studio myself. What I can do on your computer is generate the raw sounds in code: the hiss, the whisper shaped from it, the climb, the pulses of the laugh, the held note and its pitch following the focus. I'd write them out as audio stems, with a cue sheet and MIDI where it helps, timed to the storyboard. You then bring them into FL Studio to arrange, mix and add to. Your editions (FL Studio 2024 and 2025) are known since 2026-10-08; reading your plugin folders and tailoring the brief is [README](../../../../README.md#what-i-need-from-you) item 5.
 
 ### The safety check
 
