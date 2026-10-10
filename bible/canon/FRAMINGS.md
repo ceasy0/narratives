@@ -15,7 +15,7 @@
 
 | ID | Framing | Arcs | First-pass grade | Discuss before |
 |---|---|---|---|---|
-| [FR-01](#fr-01--the-opening-creation-as-cosmic-and-biological-history) | The opening: creation shown as cosmic and biological history | 1 | Compatible, shown and never narrated; Tension on death before Eden. The malice is settled ([007](../discussions/007-the-faces-of-god.md)). **Treatment v3.2.** | Done for the first pass |
+| [FR-01](#fr-01--the-opening-creation-as-cosmic-and-biological-history) | The opening: creation shown as cosmic and biological history | 1 | Compatible, shown and never narrated; Tension on death before Eden. The malice is settled ([007](../discussions/007-the-faces-of-god.md)). **Treatment v3.3.** | Done for the first pass |
 | [FR-02](#fr-02--god-yin-and-yang-as-the-trinity) | God and fundamental duality as the Trinity | All depictions of God | Tension. **2026-10-05:** "God does not need the duality in order to be"; God creates it. The faces don't depict the persons. | Left here for now, by your choice |
 | [FR-03](#fr-03--mary-and-joseph-the-conception) | A virgin conception, with Joseph's line joined by the Spirit; the village's version shown as rumor (revised) | 16 | **Tension**; adopted provisionally (the original version was Contradiction) | Confirm the on-screen approach before the Gospels |
 | [FR-04](#fr-04--the-spirit-as-the-true-law) | The Spirit as the true Law; written laws as ideals fitted to circumstances | 5, 16 | Supported as a principle | The Gospels |

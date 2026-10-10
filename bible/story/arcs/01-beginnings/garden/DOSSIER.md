@@ -2,7 +2,7 @@
 
 > Genesis 2:8–3:24, the rest of Episode 1, "In the Beginning." What's decided, what the place looks like, and what the treatment will be built from. Started the evening the last choices were made.
 
-**Status:** v0.1, 2026-10-08. A seed: §1 gathers every decision from Discussions [008](../../../../discussions/008-adam-eve-and-the-garden.md) and [009](../../../../discussions/009-god-in-the-garden.md) in one place; §2 is your description of the Garden with my response; §3 is the six movements as they now stand. The text work (the 42 verses translated and annotated, the animals of the plain, the serpent's words, the sentences as poetry, the production notes) comes with the treatment, which is the next writing deliverable.
+**Status:** v0.2, 2026-10-09: the look is decided (§2, "The look, decided"; the research and plan are in [LAYOUT.md](./LAYOUT.md)). v0.1, 2026-10-08, was a seed: §1 gathers every decision from Discussions [008](../../../../discussions/008-adam-eve-and-the-garden.md) and [009](../../../../discussions/009-god-in-the-garden.md) in one place; §2 is your description of the Garden with my response; §3 is the six movements as they now stand. The text work (the 42 verses translated and annotated, the animals of the plain, the serpent's words, the sentences as poetry, the production notes) comes with the treatment, which is the next writing deliverable.
 
 ---
 
