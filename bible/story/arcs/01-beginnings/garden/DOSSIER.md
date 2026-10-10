@@ -2,7 +2,7 @@
 
 > Genesis 2:8–3:24, the rest of Episode 1, "In the Beginning." What's decided, what the place looks like, and what the treatment will be built from. Started the evening the last choices were made.
 
-**Status:** v0.2, 2026-10-09: the look is decided (§2, "The look, decided"; the research and plan are in [LAYOUT.md](./LAYOUT.md)). v0.1, 2026-10-08, was a seed: §1 gathers every decision from Discussions [008](../../../../discussions/008-adam-eve-and-the-garden.md) and [009](../../../../discussions/009-god-in-the-garden.md) in one place; §2 is your description of the Garden with my response; §3 is the six movements as they now stand. The text work (the 42 verses translated and annotated, the animals of the plain, the serpent's words, the sentences as poetry, the production notes) comes with the treatment, which is the next writing deliverable.
+**Status:** v0.3, 2026-10-10: the ring, Adam's square, the light and the rivers decided; gold, the trees, Eridu and Babel open (§2; [LAYOUT §9–10](./LAYOUT.md)); corrections from the project audit (the animals' sources, Eridu's date). v0.2, 2026-10-09: the look is decided (§2, "The look, decided"; the research and plan are in [LAYOUT.md](./LAYOUT.md)). v0.1, 2026-10-08, was a seed: §1 gathers every decision from Discussions [008](../../../../discussions/008-adam-eve-and-the-garden.md) and [009](../../../../discussions/009-god-in-the-garden.md) in one place; §2 is your description of the Garden with my response; §3 is the six movements as they now stand. The text work (the 42 verses translated and annotated, the animals of the plain, the serpent's words, the sentences as poetry, the production notes) comes with the treatment, which is the next writing deliverable.
 
 ---
 
@@ -45,7 +45,7 @@ Everything the treatment needs, with where each decision lives. Nothing here is 
 
 1. **Eden is a mountain in the Bible's own memory.** Ezekiel puts it there twice: "You were in Eden, the garden of God... you were on the holy mountain of God" (Ezek 28:13–14). A river flows *out* of Eden to water the garden (2:10), which is what water does from high ground. A stepped hill with the trees at its top is the text's picture, not a departure from it.
 2. **It's what the people of that plain built.** The temple at Eridu, the city nearest your Garden, began in the Ubaid period as a shrine on a platform; each rebuilding raised the platform, and that sequence is where the ziggurat comes from. The sacred mountain built in steps, with the holy place on its open top, is this country's own idea of where God is met. A stepped centre in Eden says the Garden is the first sanctuary (009, "What the texts say") in the plain's own language, before anyone has built one.
-3. **It gives Babel its meaning.** Genesis 11 happens in the same country (Shinar is the plain). "Let us build ourselves a city and a tower with its top in the heavens" (11:4) is, on your design, humanity rebuilding the Garden's centre without the trees, and climbing it to make a name instead of to meet God. Hour 7 of the map now says so. And the text hands you the material: "they had brick for stone" (11:3), because the plain has no stone at all. So the Garden's stone is the sign that it isn't the plain's own work; the tower's brick is the sign that it is.
+3. **It gives Babel its meaning.** Genesis 11 happens in the same country (Shinar is the plain). "Let us build ourselves a city and a tower with its top in the heavens" (11:4) is, on your design, humanity rebuilding the Garden's centre without the trees, and climbing it to make a name instead of to meet God. Hour 7 of the map now says so. And the text hands you the material: "they had brick for stone" (11:3), because the plain has almost no stone. So the Garden's stone is the sign that it isn't the plain's own work; the tower's brick is the sign that it is.
 4. **It stages the whole hour.** The command is given at the top, in front of the trees. The naming can run along the paths. The temptation is a climb. The Fall happens on the open top, with the whole Garden below. God's walking in the evening wind (3:8) is heard from the top by two people who are hiding on it. And when they're sent out, the way east is a descent, and the cherubim's fire stands at the foot.
 
 **Two things to watch.**
@@ -69,7 +69,7 @@ Your answers of 2026-10-09 and 2026-10-10 settle it; the research, the reasons a
 - **The way east:** one causeway across the ring beside the eastern river, the only dry way out, where the cherubim and the fire stand (3:24).
 - **Light and air:** sunny yet cool and breezy, never hot and humid: dry clear air, crisp shadows, a breeze off the water, the plain's spring season. The shade makes the blue; most of the frame is in shade, with warm shafts of sun. Outside after 3:24: the plain's summer.
 - **Stone and life:** grey limestone; plants and animals of the region or the wider region; color only in what lives.
-- **Open (README item 20):** gold in the Garden; which tree is north; Eridu as the Garden's gate; and Babel, at the gate or over the centre ([LAYOUT §9–10](./LAYOUT.md#10-your-notes-of-2026-10-10-evening-the-light-gold-the-trees-eridu-dilmun-the-rivers)).
+- **Open (README item 20):** gold in the Garden; which tree is north; Eridu as the Garden's gate, which needs the Garden to come before Eridu (about 5400 BC, earlier than the provisional date); and Babel, at the gate or over the centre ([LAYOUT §9–10](./LAYOUT.md#10-your-notes-of-2026-10-10-evening-the-light-gold-the-trees-eridu-dilmun-the-rivers)).
 
 ## 3. The six movements, as they now stand
 
@@ -86,7 +86,6 @@ From [008, round 1](../../../../discussions/008-adam-eve-and-the-garden.md#round
 
 ## 4. What the treatment still needs from you
 
-Nothing that blocks it. Two things it would be better with:
+Nothing that blocks it. One thing it would be better with:
 
-1. Which animals, and how many. The plain's own are in [008's check](../../../../discussions/008-adam-eve-and-the-garden.md#the-check-the-ur-and-uruk-country): lions, aurochs, onagers, the birds of the marshes, gazelle, wild boar, the Mesopotamian fallow deer. The wider region's are allowed too (your rule, 2026-10-09; the list is in [LAYOUT §6](./LAYOUT.md#the-plants-and-animals)). The treatment will propose a dozen and a conduit among them.
-2. ~~Whether the stepped centre is right, and the color rule (§2).~~ Decided 2026-10-09 (§2, "The look, decided").
+1. Which animals, and how many. The plain's own: lions, aurochs, onagers and the birds of the marshes ([008's check](../../../../discussions/008-adam-eve-and-the-garden.md#the-check-the-ur-and-uruk-country)), with gazelle, wild boar and the Mesopotamian fallow deer added in [LAYOUT §6](./LAYOUT.md#the-plants-and-animals). The wider region's are allowed too (your rule, 2026-10-09; the list is in [LAYOUT §6](./LAYOUT.md#the-plants-and-animals)). The treatment will propose a dozen and a conduit among them.

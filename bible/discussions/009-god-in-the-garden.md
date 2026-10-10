@@ -206,7 +206,7 @@ Your answers to the five choices, in your words, with my response to each.
 
 ### What this settles for the treatment
 
-The Garden's treatment is unblocked. Every choice it needs is now decided here or in 008. The shape, with your walk to the centre: six movements as before, with movement 1 ending at the two trees on the command. The look of the place is in the [Garden dossier](../story/arcs/01-beginnings/garden/DOSSIER.md), from your description of 2026-10-08 (the stone paths, the stepped centre, the trees in its open top).
+The Garden's treatment is unblocked. Every choice it needs is now decided here or in 008. The shape, with your walk to the centre: six movements as before, with movement 1 ending at the two trees on the command. The look of the place is in the [Garden dossier](../story/arcs/01-beginnings/garden/DOSSIER.md), from your description of 2026-10-08 (the stone paths, the stepped centre, the trees in its open top); decided 2026-10-09 in [LAYOUT §6](../story/arcs/01-beginnings/garden/LAYOUT.md#6-what-id-build).
 
 ## Decision
 

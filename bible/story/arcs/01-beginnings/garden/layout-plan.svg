@@ -14,11 +14,11 @@
   <text x="140" y="200" font-size="12" fill="#2f3f25">orchard</text>
   <text x="370" y="200" font-size="12" fill="#2f3f25">tall trees</text>
   <text x="130" y="490" font-size="12" fill="#2f3f25">flowers, open ground</text>
-  <text x="380" y="490" font-size="12" fill="#2f3f25">wild, dense</text>
+  <text x="380" y="490" font-size="12" fill="#2f3f25">dense, shaded</text>
   <!-- limestone paths along the headwaters -->
   <g fill="#cfcac0">
-    <rect x="279" y="145" width="22" height="125"/><rect x="279" y="400" width="22" height="125"/>
-    <rect x="100" y="324" width="125" height="22"/><rect x="355" y="324" width="125" height="22"/>
+    <rect x="279" y="145" width="22" height="133"/><rect x="279" y="392" width="22" height="133"/>
+    <rect x="100" y="324" width="133" height="22"/><rect x="347" y="324" width="133" height="22"/>
   </g>
   <!-- winding paths in the quarters -->
   <g fill="none" stroke="#d9c9a3" stroke-width="3" stroke-linecap="round">
@@ -29,23 +29,23 @@
   </g>
   <!-- channels -->
   <g stroke="#5f9fc0" stroke-width="8">
-    <line x1="290" y1="145" x2="290" y2="270"/><line x1="290" y1="400" x2="290" y2="525"/>
-    <line x1="100" y1="335" x2="225" y2="335"/><line x1="355" y1="335" x2="480" y2="335"/>
+    <line x1="290" y1="145" x2="290" y2="278"/><line x1="290" y1="392" x2="290" y2="525"/>
+    <line x1="100" y1="335" x2="233" y2="335"/><line x1="347" y1="335" x2="480" y2="335"/>
   </g>
   <!-- terraces -->
   <g fill="none" stroke="#6e6a62" stroke-width="2">
-    <rect x="225" y="270" width="130" height="130" fill="#b9b4aa"/>
-    <rect x="236" y="281" width="108" height="108" fill="#c3beb4"/>
-    <rect x="247" y="292" width="86" height="86" fill="#cdc8be"/>
-    <rect x="258" y="303" width="64" height="64" fill="#d7d2c8"/>
-    <rect x="268" y="313" width="44" height="44" fill="#e6e1d6"/>
+    <rect x="233" y="278" width="114" height="114" fill="#b9b4aa"/>
+    <rect x="242.5" y="287.5" width="95" height="95" fill="#c3beb4"/>
+    <rect x="252" y="297" width="76" height="76" fill="#cdc8be"/>
+    <rect x="261.5" y="306.5" width="57" height="57" fill="#d7d2c8"/>
+    <rect x="271" y="316" width="38" height="38" fill="#e6e1d6"/>
   </g>
   <circle cx="290" cy="335" r="5" fill="#3d86b0"/>
   <circle cx="278" cy="323" r="7" fill="#3f6b2e"/><circle cx="302" cy="347" r="7" fill="#5a4a2a"/>
   <!-- labels -->
   <text x="445" y="317" font-size="12" fill="#2b2b2b">causeway east</text>
   <text x="445" y="362" font-size="11" fill="#8a3b1f">cherubim, the fire (3:24)</text>
-  <text x="75" y="575" font-size="11" fill="#2b4f66">fresh water, 30–60 m (Ezek 31:4)</text>
+  <text x="75" y="575" font-size="11" fill="#2b4f66">fresh water, 30–60 m (cf. Ezek 31:4)</text>
   <!-- legend -->
   <g font-size="12" fill="#2b2b2b">
     <circle cx="585" cy="110" r="5" fill="#3d86b0"/><text x="598" y="114">spring on the top (2:10)</text>
@@ -68,7 +68,7 @@
   <line x1="718" y1="352" x2="718" y2="322" stroke="#3f6b2e" stroke-width="3"/><circle cx="718" cy="316" r="10" fill="#3f6b2e"/>
   <line x1="732" y1="352" x2="732" y2="325" stroke="#5a4a2a" stroke-width="3"/><circle cx="732" cy="319" r="10" fill="#5a4a2a"/>
   <rect x="860" y="414" width="20" height="5" fill="#bdb6a8"/>
-  <text x="580" y="462" font-size="11" fill="#555">about 12 m high; the way out is down, then east across the water</text>
+  <text x="580" y="462" font-size="11" fill="#555">about 12 m high (exaggerated here); the way out is down, then east across the water</text>
   <text x="580" y="302" font-size="11" fill="#555">morning: mist off the water, blue shade,</text>
   <text x="580" y="314" font-size="11" fill="#555">warm sun breaking through</text>
 </svg>
