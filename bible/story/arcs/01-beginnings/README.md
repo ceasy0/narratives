@@ -13,7 +13,7 @@ About an hour (your decision, 2026-10-03).
 | Part | Text | Length | Status |
 |---|---|---|---|
 | **The Opening** | Gen 1:1–2:7 | 5:00 | Treatment v3.3; script v1.2; animatic v3 (2026-10-09: the sand over a real face mesh, the steady note, the large face to the side, fronts of light, sparks, the fractal). **Next:** your notes on v3; the sound in FL Studio; the face shoot; beats 1–3 in Blender ([production README](../../../production/opening/README.md), [assessment](../../../production/opening/ASSESSMENT.md)). |
-| **The Garden** | Gen 2:8–3:24 | About 55 minutes | Decided in 008 and 009. [Dossier v0.2](./garden/DOSSIER.md): the decisions, the look, the six movements. **Next: the treatment.** |
+| **The Garden** | Gen 2:8–3:24 | About 55 minutes | Decided in 008 and 009. [Dossier v0.3](./garden/DOSSIER.md): the decisions, the look, the six movements. **Next: the treatment.** |
 
 **Decided for the Garden** (2026-10-07 and 2026-10-08), gathered in the [Garden dossier §1](./garden/DOSSIER.md#1-whats-decided): Adam of the line at the cliff and new in what happens to him; the place near Eridu, about 5000–4000 BC; the people outside unseen; the world outside wild, not hostile, with the animals carrying the difference; God never seen, present through the world in two registers (the hearer's own voice over the held note; signs and double meanings the hearer reads), and nothing in the world speaks but the serpent; the command at the two trees after a silent walk, the first words of the series; the naming shown without words; Eve made in the deep sleep as the first glimpse of the Opening, and of one kind with Adam; the Fall as awareness and ego in one act, judged as a stern yet loving father; the serpent an animal embodying the role, its words from outside with the hiss under them; the clothes through a dead conduit; the Opening's world at the gate with the animals' faces for the cherubim; six movements.
 
@@ -25,7 +25,7 @@ Eight hours, as mapped in [ARCHITECTURE](../../ARCHITECTURE.md#arc-1--genesis-ge
 
 | # | Episode | Text | Status |
 |---|---|---|---|
-| 1 | In the Beginning | Gen 1:1–3:24 | The Opening at script v1.2 and animatic v3; the Garden at dossier v0.2 (the look decided), treatment next |
+| 1 | In the Beginning | Gen 1:1–3:24 | The Opening at script v1.2 and animatic v3; the Garden at dossier v0.3 (the look decided, the ring revised 2026-10-10), treatment next |
 | 2 | Cain and Abel | Gen 4 | Not started. Opens on the sentence lived: thorns, heat, the lion closer. |
 | 3 | The Days of Noah | Gen 5:1–6:8 | Not started. Needs Position 6. The why for the flood. |
 | 4 | The Ark | Gen 6:9–7:16 | Not started. Needs Position 7. |
@@ -49,7 +49,7 @@ There's no separate beat sheet. For a five-minute sequence with no dialogue, the
 
 | Step | File | What's in it |
 |---|---|---|
-| 1 | [`garden/DOSSIER.md`](./garden/DOSSIER.md) ✓ v0.2 (look decided 2026-10-09) | Every decision from 008 and 009 on one page; your description of the Garden and my response; the six movements as they now stand. The text work comes with the treatment. |
+| 1 | [`garden/DOSSIER.md`](./garden/DOSSIER.md) ✓ v0.3 (look decided 2026-10-09, revised 2026-10-10) | Every decision from 008 and 009 on one page; your description of the Garden and my response; the six movements as they now stand. The text work comes with the treatment. |
 | 2 | `garden/TREATMENT.md` | **Next.** |
 
 ## What this arc still needs from you
