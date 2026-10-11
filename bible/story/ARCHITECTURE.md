@@ -520,7 +520,7 @@ Kept as you had them: In the Beginning (1–3) as Episode 1; Cain and Abel as Ep
 
 ## 11. What the map needs decided, and when
 
-Only the new items; everything already open is in the [README](../README.md#what-i-need-from-you).
+This table is the schedule. Every open question is in the [README](../README.md#what-i-need-from-you) (the author's rule, 2026-10-11): the hard passages below are its item 25.
 
 | Before | Decision |
 |---|---|

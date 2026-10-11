@@ -36,7 +36,7 @@
 
 ## Open questions the stories will raise on their own
 
-Each has consequences for staging, and gets an entry when its arc comes. The map ([ARCHITECTURE §11](../story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when)) adds the hard passages it found, by arc: the ban (*herem*), the bridegroom of blood, Jephthah's vow, the medium at Endor, the bears, who speaks Isaiah 40–66, Ananias and Sapphira.
+Each has consequences for staging, and gets an entry when its arc comes. They're tracked as open in the [README](../README.md#what-i-need-from-you), item 26. The map ([ARCHITECTURE §11](../story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when)) adds the hard passages it found, by arc: the ban (*herem*), the bridegroom of blood, Jephthah's vow, the medium at Endor, the bears, who speaks Isaiah 40–66, Ananias and Sapphira.
 
 - Suffering and evil (Job)
 - Providence and free will: "you meant evil against me, but God meant it for good" (Gen 50:20), and Pharaoh's hardened heart
