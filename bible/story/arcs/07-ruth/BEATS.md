@@ -184,12 +184,12 @@ Page numbers are where the scene starts in the draft. Tags point to the treatmen
 
 ## 5. Where the invention sits
 
-From the script's own count (the tier mix at its end): 214 speeches, 48% recorded (Tier B), 1% implied (C), 51% invented (D).
+From the script's own count (the tier mix at its end): 214 speeches, 47% recorded (Tier B), 1% implied (C), 52% invented (D).
 
 | Part | Speeches | Recorded | Invented |
 |---|---|---|---|
 | Prologue | 20 | 0 | 20 |
-| Act One | 94 | 23 | 69 (and 2 implied) |
+| Act One | 94 | 22 | 70 (and 2 implied) |
 | Act Two | 46 | 28 | 18 |
 | Act Three | 24 | 24 | 0 |
 | Act Four | 30 | 27 | 3 |

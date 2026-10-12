@@ -65,7 +65,7 @@
 
 **The ending.** The naming of Obed, a last image facing Moab that comes to rest on Obed's face, and a fade to black.
 
-**Tier mix** (counted in the script). 214 speeches: no Tier A, since God doesn't speak; 48% recorded (B); 1% implied (C); 51% invented (D). The invention is concentrated in the prologue and the Moab years, which your notes asked to open up. Act Three is entirely recorded speech, and Act Four almost entirely.
+**Tier mix** (counted in the script). 214 speeches: no Tier A, since God doesn't speak; 47% recorded (B); 1% implied (C); 52% invented (D). The invention is concentrated in the prologue and the Moab years, which your notes asked to open up. Act Three is entirely recorded speech, and Act Four almost entirely.
 
 ---
 
@@ -257,7 +257,7 @@ That night Naomi sits up with him and hums, under her breath, the tune she used 
 
 **Kin.** Mahlon and Chilion are family now, so Moab mourns them properly. At the graves, Ruth's mother cuts her own arms and then Ruth's, and Ruth lets her. **[P6·18]** Orpah does the same for Chilion. Naomi tears her clothes and sits in the dust between three graves. Afterward she takes Ruth's arm, tears a strip from her own ruined dress, and binds the cuts.
 
-Of everything Naomi brought from Bethlehem, only she is left. At this point the text stops using her name: she's just "the woman" (1:5).
+Of everything Naomi brought from Bethlehem, only she is left. At this point the narrator leaves off her name: she's just "the woman" (1:5). It comes back at 1:8, when she speaks.
 
 **Bread.** In the market, Naomi hears a Judean accent and follows it to a trader from the hills around Bethlehem. **[C·19]** She asks about home.
 

@@ -306,7 +306,7 @@ So "duality creates God" gives way to its fitting version, and the third risk is
 
 If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one of the stories where the theory fits best:
 
-1. **The text pairs them in its own words.** Boaz is introduced as *ish gibbor hayil*, "a man of worth" (2:1). He later calls Ruth *eshet hayil*, "a woman of worth" (3:11). It's the same word, and Ruth is the only individual woman the Hebrew Bible calls that. In Hebrew Bibles, Ruth comes right after Proverbs, which ends with its poem about the *eshet hayil*.
+1. **The text pairs them in its own words.** Boaz is introduced as *ish gibbor hayil*, "a man of worth" (2:1). He later calls Ruth *eshet hayil*, "a woman of worth" (3:11). It's the same word, and Ruth is the only individual woman the Hebrew Bible calls that. In the Leningrad Codex, Ruth comes right after Proverbs, which ends with its poem about the *eshet hayil*.
 2. **They mirror each other's kindness.** Both are defined by *hesed*, loyal kindness (2:20; 3:10). The "wings" Boaz blesses her under (2:12) become the "wing" of his own garment that she asks him to spread over her (3:9).
 3. **They're opposite in every circumstance and alike in character.** Older and younger (3:10), rich and destitute, landowner and gleaner, Israelite and Moabite, insider and foreigner. That's your "two sides of one coin" almost exactly.
 4. **"Chance."** She "happened" to come to his field (2:3). The Hebrew is literally "her chance chanced upon" it. In your framework, that's water finding its way.
