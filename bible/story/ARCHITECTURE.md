@@ -101,7 +101,7 @@ By their headings, placed in the hour they name. Others are sung where a psalm w
 
 ### Arc 1 — Genesis (Genesis 1–11)
 
-Undated; the Garden provisionally about 5000–4000 BC on the lower plain between the rivers ([008](../discussions/008-adam-eve-and-the-garden.md), decided 2026-10-08). **Eight hours, your count (2026-10-08):** Noah in three, and the nations in three, so that the clans are known before they're scattered (your Sodom principle, §2 rule 2). My view of the last three is in §11.
+Undated; the Garden provisionally about 5500 BC (revised 2026-10-13) on the lower plain between the rivers ([008](../discussions/008-adam-eve-and-the-garden.md), decided 2026-10-08). **Eight hours, your count (2026-10-08):** Noah in three, and the nations in three, so that the clans are known before they're scattered (your Sodom principle, §2 rule 2). My view of the last three is in §11.
 
 | # | Episode | Text | Heart | Waits on |
 |---|---|---|---|---|
@@ -111,7 +111,7 @@ Undated; the Garden provisionally about 5000–4000 BC on the lower plain betwee
 | 4 | The Ark | Gen 6:9–7:16 | A ship built on dry land over years; the mockery (2 Pet 2:5, P3); the animals; the door shut from outside. | Position 7 |
 | 5 | The Flood | Gen 7:17–9:17 | The water; the long drift; the raven and the dove; the altar; the rainbow. | Position 7 |
 | 6 | The Table of Nations | Gen 9:18–10:32; 11:1–3 | Noah's vineyard and Canaan's curse; the clans of the three sons growing into one people with one language; Nimrod, "a mighty hunter before the LORD," the first man called a king (10:8–10); the move east to the plain of Shinar (11:2); the first bricks fired, "brick for stone" (11:3). **The why for Babel:** the audience knows every clan before the tower goes up. Noah and Shem are still alive (9:28; 11:10–11). | — |
-| 7 | The Tower of Babel | Gen 11:1–4; 10:8–12 | The city and the tower "with its top in the heavens," on the plain where Eden was, built of brick because the plain has no stone; "let us make a name for ourselves, lest we be dispersed over the face of the whole earth." Nimrod's kingdom: Babel, Erech, Accad. The tower as the Garden's stepped centre rebuilt without the trees ([the Garden's look](./arcs/01-beginnings/garden/DOSSIER.md)). | — |
+| 7 | The Tower of Babel | Gen 11:1–4; 10:8–12 | The city and the tower "with its top in the heavens," at Eridu, on the dune at the Garden's gate, over the drowned Garden (decided 2026-10-13), built of brick because the plain has no stone; "let us make a name for ourselves, lest we be dispersed over the face of the whole earth." Nimrod's kingdom: Babel, Erech, Accad. The tower as the Garden's stepped centre rebuilt without the trees ([the Garden's look](./arcs/01-beginnings/garden/DOSSIER.md)). | — |
 | 8 | The Scattering | Gen 11:5–26; 10:25, 32 | "The LORD came down to see"; the languages confused, kin who can't understand each other; the building stops; the clans walk off to their lands, each with its own tongue, "from these the nations spread abroad" (10:32); Peleg, "in his days the earth was divided" (10:25); the line of Shem to Terah, ending in Ur, which is the Call's door. *Could merge with 7:* nine verses between them (§11). | — |
 
 ### Arc 2 — The Promise (Genesis 11:27–36)

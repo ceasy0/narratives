@@ -138,6 +138,8 @@ Confidence varies a great deal by era, and the timeline should show that rather 
 
 **Decided 2026-10-08** ("Yes, for now"): the place is adopted, and the date above stands as provisional until Genesis 4–5 is treated. "Cush" in Gen 2:13 is read as the Mesopotamian Cush of Gen 10:8–10 ([008, round 2](../discussions/008-adam-eve-and-the-garden.md#round-2--2026-10-08)).
 
+**Revised 2026-10-13** (your answer on Eridu): **the provisional date for Adam in the Garden is about 5500 BC,** just before Eridu was founded (about 5400 BC), so that Eridu can stand at the Garden's gate and be Cain's city (Irad, 4:18). That's about 230 years earlier than a strict count of the Greek genealogies on this model (about 5270 BC), which works because the genealogies aren't read here as a complete calendar. Cain's city is then Eridu, early in the Ubaid period, not the Uruk period. The reasons and sources are in [the Garden's LAYOUT §10.4](../story/arcs/01-beginnings/garden/LAYOUT.md#104-eridu-as-the-gardens-gate-and-the-date-decided-2026-10-13).
+
 ### 3.5 Jesus
 
 - **His birth** came before Herod died. Most scholars date Herod's death to 4 BC; a minority, to 1 BC. Herod killed boys "two years old and under" (Matt 2:16), which suggests a birth around 6–5 BC.

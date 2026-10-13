@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Georgia, serif">
   <rect width="900" height="620" fill="#f4f1ea"/>
-  <text x="20" y="32" font-size="20" fill="#2b2b2b">The Garden — the ring (decided 2026-10-10)</text>
+  <text x="20" y="32" font-size="20" fill="#2b2b2b">The Garden — the ring (decided 2026-10-10 and 2026-10-13)</text>
   <text x="20" y="52" font-size="12" fill="#666">North up. Round island about 450 m across in a ring of fresh water; terraces round at the foot, squared toward the top by Adam.</text>
   <rect x="30" y="75" width="520" height="520" fill="#c9d6c2"/>
   <text x="40" y="92" font-size="11" fill="#556">reed marsh, palms</text>
@@ -50,19 +50,19 @@
     <line x1="578" y1="122" x2="594" y2="122" stroke="#5f9fc0" stroke-width="6"/><text x="598" y="126">headwaters, straight to the ring</text>
     <line x1="578" y1="143" x2="594" y2="143" stroke="#c4e0ee" stroke-width="4" stroke-dasharray="6 5"/><text x="598" y="147">current seams across the ring</text>
     <line x1="578" y1="164" x2="594" y2="164" stroke="#7fb3cf" stroke-width="6"/><text x="598" y="168">natural rivers beyond the rim</text>
-    <circle cx="585" cy="186" r="6" fill="#3f6b2e"/><text x="598" y="190">tree of life, north (proposed)</text>
-    <circle cx="585" cy="208" r="6" fill="#5a4a2a"/><text x="598" y="212">tree of knowledge, south (proposed)</text>
+    <circle cx="585" cy="186" r="6" fill="#3f6b2e"/><text x="598" y="190">tree of life, north</text>
+    <circle cx="585" cy="208" r="6" fill="#5a4a2a"/><text x="598" y="212">tree of knowledge, south</text>
     <circle cx="585" cy="230" r="6" fill="#c3beb4" stroke="#6e6a62"/><text x="598" y="234">terraces: round (the spring's)...</text>
     <rect x="579" y="246" width="12" height="12" fill="#e6e1d6" stroke="#6e6a62"/><text x="598" y="257">...squared at the top (Adam's)</text>
     <rect x="579" y="268" width="12" height="12" fill="#cfcac0"/><text x="598" y="279">grey limestone paths, headwaters</text>
     <line x1="578" y1="296" x2="594" y2="296" stroke="#d9c9a3" stroke-width="3"/><text x="598" y="300">winding paths, quarters</text>
   </g>
-  <text x="580" y="345" font-size="13" fill="#2b2b2b">Open (LAYOUT §10.4):</text>
+  <text x="580" y="345" font-size="13" fill="#2b2b2b">Decided 2026-10-13 (LAYOUT §10.4, §10.7):</text>
   <text x="580" y="365" font-size="11" fill="#555">Eridu's dune to the east, the Garden's gate:</text>
   <text x="580" y="381" font-size="11" fill="#555">its first shrine where the cherubim stood,</text>
   <text x="580" y="397" font-size="11" fill="#555">and Babel's tower raised there later,</text>
   <text x="580" y="413" font-size="11" fill="#555">looking over the drowned Garden.</text>
-  <text x="580" y="429" font-size="11" fill="#8a3b1f">(needs the Garden before Eridu, ~5400 BC)</text>
+  <text x="580" y="429" font-size="11" fill="#8a3b1f">(the Garden ~5500 BC; Eridu after, ~5400 BC)</text>
   <text x="580" y="453" font-size="11" fill="#555">Coming in from the east, the way runs</text>
   <text x="580" y="469" font-size="11" fill="#555">straight up between the two trees.</text>
 </svg>
