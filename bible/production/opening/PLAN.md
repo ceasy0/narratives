@@ -47,7 +47,7 @@ Your desktop: RTX 2060 Super (8 GB video memory), 32 GB RAM, Windows, Blender 5.
 | **DaVinci Resolve** | Color grade, if Blender's isn't enough | Free | Optional |
 | **FL Studio** | The sound | Yours | Installed |
 
-**Where things live.** Scripts, shot lists, notes and the small reference files stay in this repository. The big files (`.blend` scenes, caches, renders, EXR sequences) live in a working folder outside git on your fastest drive with room to spare. Renders of five minutes in layers can run to a few hundred gigabytes. Question 3 (§9) asks where.
+**Where things live.** Scripts, shot lists, notes and the small reference files stay in this repository. The big files (`.blend` scenes, caches, renders, EXR sequences) live in a working folder outside git on your fastest drive with room to spare. Renders of five minutes in layers can run to a few hundred gigabytes. **Your rule (2026-10-13):** project files live on the H drive, in `H:\Current\Projects\Agentic\Narratives\bible`, and program and system files go on whichever PC you're working on. So the big files go in `bible/production/opening/work/`, which git ignores, and the programs (Blender add-ons, Python environments, Unreal and MetaHuman if needed) install on the PC. The H drive is a Seagate Backup Plus 2 TB, a USB hard disk: big enough, but slow for caches and for scrubbing image sequences, and it's the only copy of anything git doesn't hold. So two things I'd do: keep the throwaway caches (simulation caches, preview frames) on the PC's internal drive, where Blender puts them by default, and copy only what we keep to H; and when you get another drive, use it as a backup of `work/`, not as a second place to work.
 
 ## 3. The pipeline
 
@@ -69,7 +69,7 @@ Your desktop: RTX 2060 Super (8 GB video memory), 32 GB RAM, Windows, Blender 5.
 
 ## 4. Beat by beat
 
-The registers come from Discussion 006 (decided 2026-10-13): beats 1–9 are the vision register, vibrant and abstract; the descent into the world (10–14) takes either the live-action look or *Arcane* (question 1).
+The registers come from Discussion 006 (decided 2026-10-13): beats 1–9 are the vision register, vibrant and abstract; the descent into the world (10–14) takes the live-action look if it can be done, and *Arcane* if not (your answer, 2026-10-13). The test is the first AI-video shots: if they hold up next to the 3D layout, live action stays.
 
 | Beat | What it needs to be | Method | Main risk |
 |---|---|---|---|
@@ -125,26 +125,26 @@ The brief (2026-10-03) says the sequence "should feel very fast," and you've fou
 | 13. Fill the earth | 36 s | Medium | Relentless: running, always left | — |
 | 14. Rest | 24 s | Still | Real time, stillness, one breath | — |
 
-**Two questions for the tempo map** (question 4, §9): should beat 1 stay slow as the one slow opening, or should the sand move faster sooner? And do beats 3, 7 and 11 match what I wrote in the fourth column?
+**The tempo map stands for now** (your answer, 2026-10-13: "sounds right for now"); the layout pass is where it gets tested, beat by beat.
 
-Pacing also depends on the music, and you'll score to the picture. Two ways to work: lock the picture first and score to it (the plan's default), or you sketch a rough score early, a few minutes in FL Studio with the main hits and the held note, and the layout is cut to it. The second is how many music-driven sequences are made, and it may suit how you work. Your call (question 5).
+**Picture and sound go back and forth** (your answer, 2026-10-13). The layout is cut first, so you have something to score against; your rough score then feeds back into the cut, and so on until both lock together. For the picture, you'll give me reference images to work from. For the sound, I guide you: how to make each sound in FL Studio, how the layers fit together, and, from your descriptions, where to find sounds in films to listen to for inspiration.
 
 ## 7. Costs and time
 
 **Money.** Everything in the pipeline is free except:
-- **AI video for beats 10–14.** For about 134 seconds of footage at roughly four tries per kept shot, about 550 seconds generated: about **$70 with Veo 3.1 Fast**, about **$130 with Kling 3.0**, about **$220 with standard Veo 3.1**, before retakes. For the whole of beats 10–14 with generous retakes, plan on **$150–500**. Video-to-video restyling of Blender renders (Runway Aleph) is about $0.28 a second. Sora's API was withdrawn in September 2026. Prices from [TOOLS §5](./TOOLS.md#5-ai-video-for-live-action-looking-placeholder-shots), October 2026.
+- **AI video for beats 10–14** (Google Veo, your pick, 2026-10-13, unless something better exists when we get there). For about 134 seconds of footage at roughly four tries per kept shot, about 550 seconds generated: about **$70 with Veo 3.1 Fast**, about **$130 with Kling 3.0**, about **$220 with standard Veo 3.1**, before retakes. For the whole of beats 10–14 with generous retakes, plan on **$150–500**. Video-to-video restyling of Blender renders (Runway Aleph) is about $0.28 a second. Sora's API was withdrawn in September 2026. Prices from [TOOLS §5](./TOOLS.md#5-ai-video-for-live-action-looking-placeholder-shots), October 2026.
 - **The face, only if MetaHuman fails:** about $500 for Character Creator 5 and Headshot 3.
 - Optional add-ons (Faceit, about $80–100).
 
 **Render time on your card** (estimates; the first test will correct them): EEVEE at 2–10 seconds a frame is 4–20 hours for all 7,200 frames; Cycles at 30–60 seconds a frame would be 60–120 hours, so it's used only for the beats that need it. GPU shader passes take minutes. Renders run overnight, in ten-second parts that pick up where they stopped.
 
-**Your time.** The sessions need you for the review gates, the webcam performance, and the AI video account. Most of the building I can do while you're away from the machine, once the session is set up.
+**Your time.** The sessions need you for the review gates, the webcam performance (you'll film the six expression runs, 2026-10-13), and the AI video account. Most of the building I can do while you're away from the machine, once the session is set up.
 
 **Rights.** In the US, purely AI-generated frames generally can't be copyrighted; your designs, layouts, edits and direction can. For a placeholder that's fine; it's one more reason the 3D layout should be ours, not the model's (Discussion 006).
 
 ## 8. The sound: handoff
 
-The sound is yours, made in FL Studio and laid over the picture afterward (your decision, 2026-10-13). What I hand you at picture lock:
+The sound is yours, made in FL Studio and laid over the picture afterward (your decision, 2026-10-13). Along the way I guide you through making each sound and fitting the layers together, and find sounds in films for you to listen to from your descriptions (§6). What I hand you at picture lock:
 
 1. **The locked picture**, two copies: one clean, one with the timecode and shot numbers burned in.
 2. **A cue sheet** (a spreadsheet): every sound event the picture makes, frame-accurate: the release at 0:38:00, each turn in beat 4, each ignition (with its position in the frame, for panning), the impacts, the quake, the leaf landing, the first footfall at 4:00, the breath.
@@ -171,19 +171,13 @@ The longer sound brief from the assessment (layers per beat, the release's six l
 
 ## 9. What I need from you
 
-1. **Beats 10–14: the live-action look or *Arcane*?** Discussion 006 gives the series *Arcane* as its base and accepts a live-action-looking placeholder for now; the Opening's descent sits between the two. *My recommendation:* the live-action look, because the Opening lands on a real face in the real world, and it's the best proof of the live-action goal; the Garden then opens the *Arcane* register.
-2. **A Remote Control session on your desktop,** started from this thread, in the project folder. The first session: install moderngl and MediaPipe in their own environment; set up the working folder and the master edit; test the face (MetaHuman, then the fallbacks); build the layout of one beat as the proof of the method. *Recommended first beat:* beat 12 into 13, the leaf and the run, because it's where your notes are and it has everything: time-lapse, a real-time moment, a camera move and people.
-3. **Where the big files live:** which drive and folder, and roughly how much free space it has. And whether Unreal Engine is installed (MetaHuman needs it; it's a large download).
-4. **The tempo map** (§6): mark any beat where the fourth column is wrong.
-5. **Score first or picture first** (§6): lock the picture and score to it, or a rough score first and the layout cut to it?
-6. **The webcam performance:** are you willing to film the six expression runs (a few minutes, on a webcam or phone), or should I key the expressions by hand?
-7. **An AI video account,** when we reach beats 10–14: which provider you'd rather use, and a budget. *My recommendation:* Google's Veo 3.1 Fast through the Gemini API, for its first-and-last-frame control and price.
+1. **Approve the first Remote Control session.** It starts from the Opening thread, in `H:\Current\Projects\Agentic\Narratives`, on your desktop; you approve it on the card in the thread, and keep the desktop on and the Claude app running while it works. It brings your folder up to the shared branch; installs moderngl and MediaPipe in their own Python environment on the PC; makes `work/`; checks whether Unreal Engine is installed (MetaHuman needs it); fetches the reference images; sets up the master edit with v3.1 cut into it; and lays out beat 12 into 13, the leaf and the run, as the proof of the method. Then it shows you the playblast.
 
-You offered to list folders: the only listing I need now is the free space on your drives (in PowerShell, `Get-PSDrive -PSProvider FileSystem`). The session can read the rest itself.
+Decided 2026-10-13, and folded in above: the live-action look for beats 10–14 if it can be done, *Arcane* if not (§4); the files on H and the programs on the PC (§2); the tempo map for now (§6); picture and sound back and forth, with your reference images and my guidance on the sound (§6, §8); you'll film the expressions (§5); Google Veo (§7).
 
 ## 10. Order of work
 
-1. **Now (done in this round):** this plan; the [reference page](./REFERENCES.md); animatic v3.1 with your leaf note and the impact on screen, as the timing reference until layout replaces it.
+1. **Done:** this plan; the [reference page](./REFERENCES.md); animatic v3.1, the timing reference until layout replaces it.
 2. **Session 1, on your desktop:** set-up; the face test; the master edit with v3.1 cut into it shot by shot; the layout of beats 12–13 as the proof.
 3. **The shot list and tempo map** for all fourteen beats (stage A), drafted from the script and corrected by you.
 4. **Layout of every beat** (stage B), reviewed in batches, to layout lock.
