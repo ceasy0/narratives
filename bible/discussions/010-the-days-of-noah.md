@@ -144,7 +144,7 @@ You asked what I think. My opinion: **date Genesis 1–11 by the Greek Bible's n
 1. **The New Testament uses it.** Luke's genealogy of Jesus has "Cainan, the son of Arphaxad" (Luke 3:36). Cainan is only in the Greek Genesis. Luke counted the line from the Greek. And the Greek is the Old Testament the New Testament quotes most.
 2. **The Hebrew flood lands in recorded history.** 2240 BC is the age of the Akkadian empire, with written records on the plain all the way through it. A flood that ends the plain's world can't go there. The Greek puts it about 3000 BC, beside Shuruppak's flood layer (about 2900 BC) and the King List's flood before Kish. That's the best match any calendar gives.
 3. **Adam at the start of the plain.** About 5300 BC is the early Ubaid, when the lower plain was first farmed by irrigation and Eridu was being built. Your new date for Adam, about 5500 BC (your answer on the Garden's gate, 2026-10-13), sits at the old end of the Greek count, within its margin.
-4. **Babel in Peleg's days.** The Greek puts Peleg at about 2490–2150 BC. That's the age when Sargon of Akkad (about 2334–2279 BC) made the first empire on the plain, and "the beginning of his kingdom was Babel, Erech, Accad" is said of Nimrod (10:10). Hour 6's Nimrod and hour 7's tower sit in the right century.
+4. **Babel in Peleg's days.** The Greek puts Peleg at about 2490–2150 BC. That's the age when Sargon of Akkad (about 2334–2279 BC) made the first empire on the plain, and "the beginning of his kingdom was Babel, Erech, Accad" is said of Nimrod (10:10). Hour 6's Nimrod and hour 7's tower sit in the right century. *Added 2026-10-13, from the Garden's research:* with Babel at Eridu, "they left off building the city" (11:8) may be Amar-Sin's unfinished ziggurat there, about 2047–2039 BC, under the kings of Ur, a few decades before Abraham is born in Ur (1951). That's just after Peleg's lifetime on this count, and within the looseness of a calendar with gaps; if the tower is earlier, the unfinished building is an earlier Eridu platform ([LAYOUT §10.7](../story/arcs/01-beginnings/garden/LAYOUT.md)).
 
 **Against it.**
 
@@ -152,7 +152,7 @@ You asked what I think. My opinion: **date Genesis 1–11 by the Greek Bible's n
 - In the common Greek text, Methuselah outlives the flood by fourteen years (one manuscript family fixes it by making him 187 at Lamech's birth). We'd follow that reading.
 - The genealogies may skip generations anyway (Matthew 1:8 skips three kings; "father of" can mean ancestor), so no calendar from them is exact.
 
-**So:** a working calendar, not a claim. **Adam about 5500 BC; the flood about 3000 BC; Babel about 2400–2200 BC; Abraham 1951 BC.** It's a decision about which text to follow, recorded case by case, as ROADMAP §9.2 asks.
+**So:** a working calendar, not a claim. **Adam about 5500 BC; the flood about 3000 BC; Babel between about 2400 and 2040 BC; Abraham 1951 BC.** It's loose on purpose: Adam to the flood is about 2,500 years here, where the Greek numbers give 2,242, because the genealogies are read with gaps (the Garden's date already needs that). A flood about 3000 BC also fits Eridu, which lies drowned under silt by the end of the Uruk period. It's a decision about which text to follow, recorded case by case, as ROADMAP §9.2 asks.
 
 ### Questions for our conversation
 
