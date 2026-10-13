@@ -1,6 +1,6 @@
 # 002 — Jesus's humanity: limits, struggle, and the question of sin
 
-**Status:** **Decided** 2026-10-01, with two sub-questions deferred to the Gospels arc. See [Decision](#decision). Round 3 (2026-10-02) takes up your reading of 2 Sam 7:14b; it refines the decision rather than changing it, and awaits your answer ([README item 13](../README.md#open-discussions)).
+**Status:** **Decided** 2026-10-01, with two sub-questions deferred to the Gospels arc. See [Decision](#decision). Round 3 (2026-10-02) takes up your reading of 2 Sam 7:14b; it refines the decision rather than changing it. **Accepted 2026-10-13** ("everything here seems to work for me so far"), with a consistency check of the whole discussion against what was decided later ([the check](#check-2026-10-13)); one question from it is open ([README item 13](../README.md#open-discussions)).
 **Needed before:** The Gospels, and the Mark 2 Jesus-voice exercise. It doesn't block Ruth.
 **Fit grade of your view:** **Supported.** You've placed Jesus's falls in his capacity, not his will, and that resolves the conflict with the text flagged below.
 
@@ -217,6 +217,21 @@ Where the text puts the suspicion first, so do we, from the observer's point of 
 - Do the two guardrails work for you?
 - Does the Isaiah 53 bridge appeal to you as a second layer of the same verse, or do you want 14b to stay about his growing up?
 - Would you like the Temple at twelve to become the series' first on-screen example of your reading, when we reach the Gospels?
+
+### Check — 2026-10-13
+
+**Your note:** "Everything here seems to work for me so far. Let me know if you find any inconsistencies."
+
+**Round 3, accepted.** I've read your note as a yes to round 3's three questions: the two guardrails on 2 Sam 7:14b (it's never called sin, and it never covers the Passion), the Isaiah 53 bridge as a second layer of the same verse, and the Temple at twelve as the series' first on-screen example of your reading (the map already has it there, [hour 150](../story/ARCHITECTURE.md)). Recorded in [FOUNDATIONS §4](../canon/FOUNDATIONS.md#4-decisions-so-far) and [FR-12](../canon/FRAMINGS.md#fr-12--the-messianic-prophecies). Tell me if you meant less than that.
+
+**What I checked.** Every citation in the file, and the discussion against everything decided since 2026-10-02 (001, 005, 007, 008, 009, the Positions Register, the framings and the map). The citations hold. Four things didn't line up:
+
+1. **Round 3 was still shown as waiting on you** in five places (this file, FOUNDATIONS §5, the discussions index, the README and FR-12). Fixed.
+2. **Positions 13 and 15 point here, and this discussion doesn't settle them.** Position 13 (is Jesus's divinity visible on screen beyond what the text shows, such as at the Transfiguration?) is never taken up here. Position 15 (how much did Jesus know, and when?) is answered in principle by the decision ("incomplete knowledge... it grows," Luke 2:52; Mark 13:32), but not scene by scene. Neither was in the README's list for the Gospels. Fixed: [POSITIONS](../canon/POSITIONS.md) now says so, and both are in README item 17.
+3. **Round 1's note on the Opening** ("the dark face tries to kill the white face") was written before Discussion 007 decided that the two halves are experiences, not persons, and that the malice is how a separated part sees the whole. Read it under 007: the image is the shape of the Joseph story and the cross, not a picture of two persons. Noted here; nothing else depends on it.
+4. **One question the later discussions raise for this one.** Discussion 008 decided that the Fall brings "awareness and ego in one act," and 007 that an ego is how a separated part perceives God. This discussion says Jesus is fully human and never wills wrong. So: does Jesus carry the ego? *My proposal:* he has the awareness without the grab. "He did not count equality with God a thing to be grasped" (Phil 2:6) is the Fall's "you will be like God" (Gen 3:5) undone, as 008 noted. The ego reaches him as temptation ("If you are the Son of God...," Matt 4:3) and the separation as experience at the cross ("why have you forsaken me?" Mark 15:34, 001's "real as experience, never as objective fact"), and he never takes either as his own. That fits Heb 4:15, "tempted as we are, yet without sin." **Grade: Supported** (Phil 2:5–8; Heb 4:15; Mark 15:34). It's the one point I'd add to the decision, and it's yours to say (README item 13).
+
+One grade sharpened while checking, no change to the decision: Isaiah 7:15–16 is **Supported as a picture of growth** (Luke 2:52; Heb 5:8, 14); reading Isaiah's child as Jesus is typology, the way Matthew reads 7:14 (Matt 1:23), since the verse's first sense is a child of Ahaz's day (Isa 7:16).
 
 ## Decision
 

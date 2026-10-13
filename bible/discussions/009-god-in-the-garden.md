@@ -1,6 +1,6 @@
 # 009 — God in the Garden
 
-**Status:** **Decided, 2026-10-08,** after two rounds. Seeded 2026-10-07 at your request (Discussion 008, question 7); round 1 on 2026-10-08 (your answers to all six questions, your idea that God speaks through the animals, my response, and what cherubim and the sword are); round 2 the same evening (the animals' two registers, the clothes, the sword, Eve, the walk to the centre). The Garden's treatment is unblocked.
+**Status:** **Decided, 2026-10-08,** after two rounds. Seeded 2026-10-07 at your request (Discussion 008, question 7); round 1 on 2026-10-08 (your answers to all six questions, your idea that God speaks through the animals, my response, and what cherubim and the sword are); round 2 the same evening (the animals' two registers, the clothes, the sword, Eve, the walk to the centre). The Garden's treatment is unblocked. **Reopened 2026-10-13** for round 3: your idea that God is seen in the Garden as an old man, Adam's father or ancestor ([round 3](#round-3--2026-10-13-god-as-an-old-man-seeded-not-decided)). Until you decide, the decision below stands, and the treatment's staging of God waits on it.
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), the rest of Episode 1
 **Builds on:** [001](./001-how-god-speaks.md) (how God speaks: decided for Genesis) and [007](./007-the-faces-of-god.md) (the faces of God: decided)
 **Positions:** 12 (can God be shown), 21 (how God speaks)
@@ -208,9 +208,63 @@ Your answers to the five choices, in your words, with my response to each.
 
 The Garden's treatment is unblocked. Every choice it needs is now decided here or in 008. The shape, with your walk to the centre: six movements as before, with movement 1 ending at the two trees on the command. The look of the place is in the [Garden dossier](../story/arcs/01-beginnings/garden/DOSSIER.md), from your description of 2026-10-08 (the stone paths, the stepped centre, the trees in its open top); decided 2026-10-09 in [LAYOUT §6](../story/arcs/01-beginnings/garden/LAYOUT.md#6-what-id-build).
 
+### Round 3 — 2026-10-13: God as an old man (seeded, not decided)
+
+Your note, answering the question about "God is not seen in Episode 1" (README item 22):
+
+> We will have to find some way to have God in the Garden. I'm starting to think about showing God in a way that represents the progression of our perception of God. So for the Garden scene God could be represented as an old man. And this could actually work by calling the old man Adam's father or ancestor (if we say ancestor given the fact that the Bible says people back then lived for almost a thousand years, then the old man could also be an ancestor of Eve. But the commonality would have to go back far enough). I understand that this would be a large creative action, so we'd need to discuss it first.
+
+It reopens the first line of the decision below. Nothing is changed until you decide. What follows is the case, both ways, and my view.
+
+**Two ideas in one.** (1) God is seen in the Garden, as an old man who is Adam's father or ancestor. (2) How God is shown changes across the series, following how people perceived him. The second is a framing for the whole series, logged as [FR-20](../canon/FRAMINGS.md#fr-20--god-shown-as-each-age-perceives-him); the first is its first instance.
+
+**What supports it, and it's more than I expected.**
+
+- **Adam's father is God, in the Bible's own words.** Luke ends Jesus's genealogy "...the son of Enos, the son of Seth, the son of Adam, the son of God" (Luke 3:38). And Genesis describes God making Adam in the same words it uses for Adam fathering Seth: "When God created man, he made him in the likeness of God... When Adam had lived 130 years, he fathered a son in his own likeness, after his image" (Gen 5:1–3). Father and son is the Bible's picture of what Adam is to God. "Is not he your father, who created you?" (Deut 32:6); "you are our Father; we are the clay, and you are our potter" (Isa 64:8), the potter being the one who "formed" Adam from the ground (Gen 2:7).
+- **They hid from his face.** "The man and his wife hid themselves from the presence of the LORD God" (3:8): "presence" is *penei*, literally "the face." The text has a face in the Garden.
+- **The oldest Christian reading has someone walking there.** Theophilus of Antioch (*To Autolycus* 2.22, second century): it was the Word, "assuming the person of the Father," who walked in paradise and spoke with Adam. That's very close to your idea: the one who can be seen, in the role of the father.
+- **God appears as a man, elsewhere in Genesis.** The three visitors at Mamre (Gen 18, your reading, decided); "a man wrestled with him until daybreak," and Jacob says "I have seen God face to face" (Gen 32:24–30); the commander at Jericho (Josh 5:13–15); the visitor to Manoah's wife (Judg 13). So a human form is how God is seen in exactly the age the Garden opens.
+- **The old man is a biblical image.** "The Ancient of Days took his seat; his clothing was white as snow, and the hair of his head like pure wool" (Dan 7:9). And in Revelation, the risen Son has that same white hair: "the hairs of his head were white, like white wool, like snow" (Rev 1:14). The series could begin with God seen as an old father and end with the Son wearing the old man's hair: "whoever has seen me has seen the Father" (John 14:9), shown, never said.
+- **"At many times and in many ways."** "Long ago, at many times and in many ways, God spoke to our fathers by the prophets, but in these last days he has spoken to us by his Son" (Heb 1:1–2). The Bible itself says God was known differently in different ages. Paul: "now we see in a mirror dimly, but then face to face" (1 Cor 13:12). Jesus: "I still have many things to say to you, but you cannot bear them now" (John 16:12). And your own reading from 007: God appears according to who is looking (Ps 18:25–26).
+
+**What pulls against it.**
+
+- **Your own answer, two rounds ago.** "Probably not. At least, probably only through the world if possible." The two registers, the clothes through a dead conduit and the cherubim with the animals' faces were all built on God not being seen. Some of that survives an old man; some doesn't (below).
+- **"You saw no form... the likeness of male or female"** (Deut 4:15–16). The strongest text against any figure for God, and it's about how God was met at Sinai.
+- **The old man is the most familiar picture of God there is.** Michelangelo's Sistine ceiling, Blake's *Ancient of Days*, every cartoon. The project exists partly to avoid the conventions; this is the oldest one. And it's specifically the picture of *the Father*, which 007 decided the face isn't ("God's image, God as he can be seen, and not a picture of the Father"). The Orthodox Church formally rejected painting the Father as an old man (the Great Council of Moscow, 1666–67). If the old man reads as "God the Father, with a beard," it contradicts 007's decision.
+- **A literal ancestor makes a man into God.** If the old man is actually Adam's human grandfather, then either a human being is God (something the Bible gives only to Jesus), or he's a man through whom God acts without knowing it (001's rule, as at Mamre). But in the Garden God plants, forms, builds a woman, sentences the serpent and posts cherubim. A human conduit can't do those. And Luke 3:38 gives Adam no father but God.
+- **The thousand years.** The long lives begin with Adam (Gen 5); the text gives no ages for anyone before him. The people at the cliff and their descendants are ordinary people. An ancestor who has lived for ages would be the only long life outside Adam's line.
+- **The voice.** If he's there, the questions of 3:9–13 look like they should come from his mouth. That would break 001's device the first time it's used, and the audience would learn that God talks out loud.
+
+**Three forms it could take.**
+
+| | What we'd see | Fit |
+|---|---|---|
+| **A. A real man, Adam's ancestor** | An old man of the people outside, Adam's grandfather or forebear, who takes him into the Garden; God acts and speaks through him | **Tension to Contradiction.** The craftsman's acts (2:7–8, 19, 22; 3:21, 24) can't be a man's; Luke 3:38. |
+| **B. An appearance in the likeness of their forebears** | God appears as an old man who looks like the ancestor at the cliff, grown old: the Opening's face, aged. Adam doesn't know him as kin; he knows him the way a child knows a father. He isn't a person with a life of his own; he's there when God is there, and not otherwise. "Ancestor" in the sense of the whole line: the face handed down from the cliff to Adam (Gen 5:3), which is the face of God's image (007). | **Supported** for a human form (Gen 18; 32:24–30) and for "father" (Luke 3:38; Gen 5:1–3); **Compatible** for the old age and the face (Dan 7:9; Rev 1:14); **Tension** with Deut 4:15, as Gen 18 and 32 already are. |
+| **C. The old man as their perception** | As B, but the series makes clear it's how *they* see him: in the Garden, a father; at Mamre, travelers; at Sinai, fire. The form is the age's, the presence is God's | **Compatible** (Heb 1:1; 1 Cor 13:12; Ps 18:25–26), and it's 001's "real as experience" applied to the eye |
+
+**My view (mine, for you to push against).** **B and C together, kept rare, and the voice kept as decided.**
+
+- **He's seen at three moments, no more.** He takes Adam and puts him in the Garden (2:15, "the LORD God took the man and put him"): an old man leading a young one in by the hand is the hour's first image after the breath, and it tells the audience everything about the relationship without a word. He's heard walking in the evening wind (3:8) and seen, for the first time, by two people hiding from his face. And he makes the clothes (3:21): the hands we ruled out come back, on the dead animal, and the dead conduit stays.
+- **The words still come in their own voices** (001). His mouth doesn't move. The held note is on him, because the note belongs to whatever is in focus (009, round 1), and the hearer hears it in their own voice. So he joins the animals as the face of the moment; he doesn't replace the device.
+- **The rest of the hour stays through the world.** The naming, the command at the trees, the sleep and the serpent go as decided. The second register (signs and double meanings) still carries the silent hours.
+- **He bears the face.** The Opening's face, at the end of a long life. It's what keeps him from being the Sistine God: he isn't a generic patriarch, he's the face the audience has already met, and that Adam also has (007). Father and son with one face. That also answers the audit's question in item 22 (whether the face in Adam may read as God's face): yes, because Adam is "in his likeness."
+- **I'd drop "Adam's ancestor" as a literal claim** (A). "Father," in Luke's sense, is stronger and costs nothing.
+
+**What it would change, if you adopt it:** 009's decision (God seen, three times, in the likeness of an old father; the voice unchanged); Position 12 and 21; FOUNDATIONS §4; the Garden's dossier and the hour's movements 1 and 6; and FR-20 for every later depiction. Nothing would change in the Opening.
+
+**For round 3:**
+
+1. **Is God seen in the Garden?** As an old man (B and C, my pick), as a real ancestor (A), or still not seen?
+2. **If seen: how often?** The three moments above, or more?
+3. **His voice:** their own voices, as decided (my pick), or his?
+4. **The face:** does he bear the Opening's face, aged?
+5. **The progression** ([FR-20](../canon/FRAMINGS.md#fr-20--god-shown-as-each-age-perceives-him)): a rule for the whole series, tried arc by arc?
+
 ## Decision
 
-**Decided 2026-10-08, after two rounds.**
+**Decided 2026-10-08, after two rounds.** *Reopened 2026-10-13 by your idea of God as an old man; round 3 above is under discussion, and the first line below stands until you decide.*
 
 - **God is not seen in Episode 1:** not the face, not the figure. He's present through the world (your answer 1, round 1).
 - **Two registers for God through the world** (round 2). The first is Discussion 001's device: the world goes quiet, the held note returns, and the words come in the hearer's own voice; it carries every recorded speech. The second is signs and double meanings in the world, which Adam reads: an animal's act, the river, a thing in the Garden meaning two things at once; it carries the silent hours. Nothing in the world speaks. The serpent, a voice from outside with the hiss under it, is the only exception, and it's the counterfeit of both registers.
