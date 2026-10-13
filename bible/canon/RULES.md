@@ -635,11 +635,11 @@ The stories will raise philosophical questions on their own, and each one has co
 
 ### 8.2 The Positions Register
 
-The register is [`canon/POSITIONS.md`](../POSITIONS.md). Each entry there holds the question and its key texts, the main views, what each view means for the story, and your position with the date you decided it.
+The register is [`canon/POSITIONS.md`](./POSITIONS.md). Each entry there holds the question and its key texts, the main views, what each view means for the story, and your position with the date you decided it.
 
 ### 8.3 Depicting God, the Spirit, angels and Satan
 
-How God is shown and heard is decided in Discussions [001](../discussions/001-how-god-speaks.md#decision), [007](../discussions/007-the-faces-of-god.md#decision) and [009](../discussions/009-god-in-the-garden.md#decision) ([FOUNDATIONS §4](../FOUNDATIONS.md#4-decisions-so-far)). The options below are the background, and the rest are decided in the register as each arc needs them:
+How God is shown and heard is decided in Discussions [001](../discussions/001-how-god-speaks.md#decision), [007](../discussions/007-the-faces-of-god.md#decision) and [009](../discussions/009-god-in-the-garden.md#decision) ([FOUNDATIONS §4](./FOUNDATIONS.md#4-decisions-so-far)). The options below are the background, and the rest are decided in the register as each arc needs them:
 
 - **God:** voice only; or voice plus the natural phenomena the text names (fire, cloud, storm, light). A human-like figure appears only where the text itself describes one (Gen 18; Ezek 1:26–28; Dan 7:9, the "Ancient of Days"), and even then perhaps at a distance or veiled.
 - **The Holy Spirit:** as the text describes, "in bodily form like a dove" (Luke 3:22), and as wind and "tongues as of fire" (Acts 2:2–3).
