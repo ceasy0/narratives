@@ -1,0 +1,74 @@
+shot,beat,start,end,frames,what
+0100,1,00:00:00,00:10:00,240,The static comes up out of black
+0110,1,00:10:00,00:14:00,96,"Static at full strength, no shape"
+0120,1,00:14:00,00:16:00,48,The static begins to flow
+0130,1,00:16:00,00:26:00,240,The face rises under the sand
+0140,1,00:26:00,00:38:00,288,The picture holds; the sound draws in
+0200,2,00:38:00,00:38:02,2,Two frames: the sand pressed onto the face
+0210,2,00:38:02,00:38:10,8,The sand blasted inward; the face turns white
+0220,2,00:38:10,00:44:12,146,"The white face alone, eyes closed, six seconds"
+0230,2,00:44:12,00:46:00,36,The eyes open; the black gathers into a second face
+0300,3,00:46:00,00:57:00,264,"Two faces: malice and fear, climbing"
+0310,3,00:57:00,00:58:12,36,The dark face comes for the white one
+0320,3,00:58:12,01:05:12,168,"The turn: a front of light; compassion and upset, settling"
+0330,3,01:05:12,01:08:00,60,Their eyes close; asleep by 01:08
+0400,4,01:08:00,01:10:00,48,"It turns back, whole frame; fear and the laugh"
+0410,4,01:10:00,01:11:00,24,"The blow lands; the turn; the next turns, quicker"
+0420,4,01:11:00,01:13:00,48,The change spreads in uneven fronts; patches crack
+0430,4,01:13:00,01:15:00,48,The faces blur into one grey
+0440,4,01:15:00,01:17:00,48,A sea of grains; the first sparks of color
+0450,4,01:17:00,01:24:00,168,One grey grain where the faces were
+0500,5,01:24:00,01:28:00,96,The picture opens into depth
+0510,5,01:28:00,01:44:00,384,The pair sea; the fall toward the fractal's edge
+0600,6,01:44:00,01:47:00,72,Three lock together: a proton
+0610,6,01:47:00,01:51:00,96,The three settle; the same everywhere
+0620,6,01:51:00,01:53:00,48,An atom
+0630,6,01:53:00,02:02:00,216,The glare clears: gas in every direction
+0700,7,02:02:00,02:12:00,240,The gas draws into threads and knots
+0800,8,02:12:00,02:20:00,192,"The buds light: stars, bursts, new stars"
+0810,8,02:20:00,02:24:00,96,The fall into a star
+0820,8,02:24:00,02:30:00,144,"Inside: the electron torn off, two collisions"
+0830,8,02:30:00,02:32:00,48,"The photon leaves, and we go with it"
+0900,9,02:32:00,02:33:12,36,"Black, and speed"
+0910,9,02:33:12,02:42:00,204,"A red point grows and cools: crust, cloud, ocean"
+0920,9,02:42:00,02:43:12,36,Down through cloud
+0930,9,02:43:12,02:46:00,60,Through the surface; the cell
+1000,10,02:46:00,02:57:00,264,"The cell divides, again and again"
+1010,10,02:57:00,03:04:00,168,"Swallowed whole, and the two are one"
+1020,10,03:04:00,03:08:00,96,"Clumps, a sheet, a body"
+1030,10,03:08:00,03:12:00,96,The swimmer with two eyes
+1040,10,03:12:00,03:15:12,84,A fish; the great creature passes
+1050,10,03:15:12,03:18:00,60,The shallows; wings seen from below
+1100,11,03:18:00,03:24:00,144,The haul-out onto the shore
+1110,11,03:24:00,03:27:00,72,"Lizard-shaped, running among ferns"
+1120,11,03:27:00,03:33:00,144,"Night: the giants, the moon, the small creature"
+1130,11,03:33:00,03:35:00,48,The dead Triceratops; the creature on it
+1140,11,03:35:00,03:36:12,36,"The creature's face, listening"
+1150,11,03:36:12,03:38:12,48,A glow in the south
+1160,11,03:38:12,03:39:12,24,The quake
+1170,11,03:39:12,03:42:00,60,The sky falls; we stay on the dead face
+1200,12,03:42:00,03:44:00,48,The last fire falling on the dead face; it stops
+1210,12,03:44:00,03:46:12,60,"Dark sky; ash; the flesh goes, the skull shows"
+1220,12,03:46:12,03:49:00,60,The skull sinks into the ground
+1230,12,03:49:00,03:52:00,72,"The sky clears; ferns, then flowers and trees"
+1240,12,03:52:00,03:54:00,48,"A shoot, a sapling, a tree"
+1250,12,03:54:00,03:58:00,96,"One leaf falls, slowly, and settles"
+1260,12,03:58:00,04:00:00,48,Everything is still: two seconds
+1300,13,04:00:00,04:01:12,36,Feet over the leaf; it is whipped away
+1310,13,04:01:12,04:03:00,36,We pull back and go with the band
+1320,13,04:03:00,04:10:00,168,"The run, right to left, through forest"
+1330,13,04:10:00,04:14:00,96,Open woodland; the cat
+1340,13,04:14:00,04:17:00,72,The run goes on
+1350,13,04:17:00,04:20:00,72,The clash with the other band
+1360,13,04:20:00,04:22:00,48,The run goes on; the pace eases
+1370,13,04:22:00,04:26:00,96,Grassland; the newborn passed along the line
+1380,13,04:26:00,04:27:00,24,The line walks on
+1390,13,04:27:00,04:30:12,84,The woman at the small grave
+1395,13,04:30:12,04:36:00,132,Dry country; the river
+1400,14,04:36:00,04:38:00,48,They come up onto the cliff and stop
+1410,14,04:38:00,04:46:00,192,"The valley, the braided river, the flock"
+1420,14,04:46:00,04:53:00,168,We move in on one face
+1430,14,04:53:00,04:56:00,72,The breath drawn in
+1440,14,04:56:00,04:58:20,68,"The eye, with the river in it"
+1450,14,04:58:20,04:59:08,12,The grain of the static in the pupil
+1460,14,04:59:08,05:00:00,16,"Black, on the held breath"

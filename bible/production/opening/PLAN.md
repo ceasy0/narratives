@@ -32,15 +32,15 @@
 
 ## 2. The machine and the tools
 
-Your desktop: RTX 2060 Super (8 GB video memory), 32 GB RAM, Windows, Blender 5.0, Python 3.14 (`py`), ffmpeg, FL Studio. The 2060 Super is a modest card for this work but enough, if we choose the right tools: Blender's EEVEE renderer for most beats (seconds a frame), Cycles only where volumes or refraction need it (a minute a frame), and GPU shaders for the abstract layers (fractions of a second a frame).
+Your desktop: RTX 2060 Super (8 GB video memory), 32 GB RAM, Windows 10, Blender 5.0.1, Unreal Engine 5.7.2 with the Epic Games Launcher (so MetaHuman needs no engine download), Python 3.14 (`py`) and 3.12, ffmpeg 9.0.2, FL Studio. Drives, free space on 2026-10-13: C: (the internal 1 TB SSD, where programs and caches go) 95 GB; D: (3 TB hard disk) 2,331 GB; E: (2 TB hard disk) 1,304 GB; H: (the project drive) 1,664 GB. C: is the tight one, so heavy simulation caches don't go there. The 2060 Super is a modest card for this work but enough, if we choose the right tools: Blender's EEVEE renderer for most beats (seconds a frame), Cycles only where volumes or refraction need it (a minute a frame), and GPU shaders for the abstract layers (fractions of a second a frame).
 
 | Tool | For | Cost | Status |
 |---|---|---|---|
 | **Blender 5.0** (or 5.2 LTS) | Layout, the face, the sand, the stars, the volumes, the world, the edit, the compositing | Free | Installed. 5.0 added shader nodes that can loop, which makes fractal shaders possible in EEVEE |
-| **Python + moderngl** | GPU shader passes (grains, sparks, fractal, web) rendered to image sequences without a window | Free | To install, in its own environment |
+| **Python + moderngl** | GPU shader passes (grains, sparks, fractal, web) rendered to image sequences without a window | Free | Installed in the environment at `C:\Users\corbi\AdonaiOpening\venv` (Python 3.12, with numpy and Pillow); it opens an off-screen context on the RTX 2060 Super |
 | **Kalles Fraktaler 2+ and zoomasm** | A true deep zoom into the Mandelbrot set, if beat 5 wants one | Free, open source | Optional |
 | **Mandelbulber2** | 3D fractal fly-throughs, scriptable from the command line | Free, open source | Optional |
-| **MediaPipe** (Python) | Your expressions from a webcam video: 52 expression weights per frame, no scan | Free | To install, in its own environment |
+| **MediaPipe** (Python) | Your expressions from a webcam video: 52 expression weights per frame, no scan | Free | Installed in the same environment |
 | **A face tool** (§5) | The designed face | Free (MetaHuman, MPFB2) or about $500 (Character Creator 5 + Headshot 3) | Your call after a test |
 | **ComfyUI** with FLUX.2 Klein 4B or SDXL | Concept frames and style frames; restyling Blender renders | Free; the models run on 8 GB | Optional, for look development |
 | **An AI video API** (Veo 3.1 Fast, or Kling 3.0, Runway) | Beats 10–14, from our layouts and key frames | Pay per second (§7) | Needs your account and key |
@@ -48,6 +48,8 @@ Your desktop: RTX 2060 Super (8 GB video memory), 32 GB RAM, Windows, Blender 5.
 | **FL Studio** | The sound | Yours | Installed |
 
 **Where things live.** Scripts, shot lists, notes and the small reference files stay in this repository. The big files (`.blend` scenes, caches, renders, EXR sequences) live in a working folder outside git on your fastest drive with room to spare. Renders of five minutes in layers can run to a few hundred gigabytes. **Your rule (2026-10-13):** project files live on the H drive, in `H:\Current\Projects\Agentic\Narratives\bible`, and program and system files go on whichever PC you're working on. So the big files go in `bible/production/opening/work/`, which git ignores, and the programs (Blender add-ons, Python environments, Unreal and MetaHuman if needed) install on the PC. The H drive is a Seagate Backup Plus 2 TB, a USB hard disk: big enough, but slow for caches and for scrubbing image sequences, and it's the only copy of anything git doesn't hold. So two things I'd do: keep the throwaway caches (simulation caches, preview frames) on the PC's internal drive, where Blender puts them by default, and copy only what we keep to H; and when you get another drive, use it as a backup of `work/`, not as a second place to work.
+
+**The folders.** The scripts that build everything are in [`pipeline/`](./pipeline/) (in git): the shot list, the master edit and each beat's layout. They write to `work/` on H: `work/edit/` (the master edit), `work/layout/` (one `.blend` per layout) and `work/playblast/` (the playblasts, which the master edit picks up by name). Blender's caches and proxies, and the Python environment, are on the PC in `C:\Users\corbi\AdonaiOpening\`. That folder isn't under `%LOCALAPPDATA%` because the Claude app redirects that path into its own private folder, where Blender wouldn't find it.
 
 ## 3. The pipeline
 
@@ -171,15 +173,21 @@ The longer sound brief from the assessment (layers per beat, the release's six l
 
 ## 9. What I need from you
 
-1. **Approve the first Remote Control session.** It starts from the Opening thread, in `H:\Current\Projects\Agentic\Narratives`, on your desktop; you approve it on the card in the thread, and keep the desktop on and the Claude app running while it works. It brings your folder up to the shared branch; installs moderngl and MediaPipe in their own Python environment on the PC; makes `work/`; checks whether Unreal Engine is installed (MetaHuman needs it); fetches the reference images; sets up the master edit with v3.1 cut into it; and lays out beat 12 into 13, the leaf and the run, as the proof of the method. Then it shows you the playblast.
+1. **Watch the first layout: beats 12 and 13, 03:42 to 04:36.** It's `work/playblast/1200-1395-layout.mp4`, and it's on channel 2 of the master edit (`work/edit/opening-master.blend`) over the animatic. It's grey stand-ins at true scale: judge only where the camera is, what's in frame, which way things move and how fast. Send notes by timecode. The choices I made, each a number in [`pipeline/layout_b12_13.py`](./pipeline/layout_b12_13.py):
+   - **03:42–03:54, one locked camera** on the dead face, 35 mm, 0.9 m off the ground, pushing in from 4.2 m to 3.4 m, tipping up as the tree grows.
+   - **03:54–04:01:12, one camera on the ground:** 35 mm, 16 cm high, 0.9 m from where the leaf lands. It tilts down with the leaf, holds through the two still seconds, and the feet come through the same shot with no cut. A real leaf, 12 cm long, is small in that frame; say if you want it closer or the leaf bigger.
+   - **04:01:12–04:03:12, the pull back** is one move: the ground camera lifts and catches the band up.
+   - **04:03–04:36, one travelling camera,** 35 mm, 1.5 m high, 6.5 m from the band (8 m for the cat and the clash, 5 m for the newborn, 10 m at the river). It drops back to the rear for the cat, goes up the line with the newborn, and lets the line walk through the frame past the grave.
+   - **The band covers about 110 m:** it runs at 4.5 m/s through the forest, slows through the fights, and walks at 1.6 m/s from the newborn on. That leaves the grassland about 15 m and the river country about 10 m. Three trunks cross the lens in the forest and one in the woodland, as the places where a generation passes.
+   - **Known faults:** the river doesn't read from eye height in grey; the people are stick stand-ins that only swing their limbs, so the fights are positions, not action; the cliff isn't there yet, so the layout stops on the walk at 04:36.
 
 Decided 2026-10-13, and folded in above: the live-action look for beats 10–14 if it can be done, *Arcane* if not (§4); the files on H and the programs on the PC (§2); the tempo map for now (§6); picture and sound back and forth, with your reference images and my guidance on the sound (§6, §8); you'll film the expressions (§5); Google Veo (§7).
 
 ## 10. Order of work
 
-1. **Done:** this plan; the [reference page](./REFERENCES.md); animatic v3.1, the timing reference until layout replaces it.
-2. **Session 1, on your desktop:** set-up; the face test; the master edit with v3.1 cut into it shot by shot; the layout of beats 12–13 as the proof.
-3. **The shot list and tempo map** for all fourteen beats (stage A), drafted from the script and corrected by you.
+1. **Done:** this plan; the [reference page](./REFERENCES.md) and its images; animatic v3.1, the timing reference until layout replaces it; the set-up on your desktop (§2); the master edit, with v3.1 cut into 73 shots at the script's timecodes; the first layout of beats 12–13 (§9).
+2. **Next on your desktop:** your notes on the beats 12–13 layout, and its second pass; the face test (MetaHuman in Unreal 5.7, brought into Blender, one frame rendered).
+3. **The shot list and tempo map** for all fourteen beats (stage A), the cut list is [`pipeline/shots.csv`](./pipeline/shots.csv), drafted from the script; each shot still needs its camera, screen direction, speed and sound hits, and your corrections.
 4. **Layout of every beat** (stage B), reviewed in batches, to layout lock.
 5. **Style frames** (stage C), one per beat.
 6. **Build** (stage D) in this order: beats 1–3 (the face and the sand, the heart of it), 4–5 (the shaders), 6–9, then 10–14 with the AI video.

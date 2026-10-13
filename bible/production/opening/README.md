@@ -53,6 +53,19 @@ All in `animatic/`. Pure functions of time, so frames render in any order and in
 
 Beat 4's flicker and beat 11's falling sky are designed to the rules in [treatment §4](../../story/arcs/01-beginnings/opening/TREATMENT.md#4-whats-mine-and-the-open-problems): only the first three turns take the whole frame (never more than three a second), the spread is organic, and the grains turn out of step so the frame's brightness holds. A rough check on the rendered frames (mean luminance change per frame in beats 2, 4 and 11) is printed by `py animatic/check_flicker.py <video>`; v3.1 passes it (its worst second: three large changes in beat 4, at the whole-frame turns; none in beat 11, where the falling sky is now on screen; one at the release). **Before anyone watches it full screen, run the finished render through IRIS or PEAT**, as the treatment requires; this animatic has not had that check.
 
-## 5. Next
+## 5. The layout pipeline
 
-The order, and why, is in [PLAN §10](./PLAN.md#10-order-of-work). In short: a session on your desktop ([PLAN §9](./PLAN.md#9-what-i-need-from-you)) that sets up the working folder and the master edit, tests the face, and builds the layout of one beat (12 into 13, the leaf and the run) as the proof of the method; then the layout of all fourteen beats, cut together and judged as a whole before anything is rendered at quality.
+The scripts in [`pipeline/`](./pipeline/) build the master edit and the layouts in Blender, on your desktop. Blender is at `C:\Program Files\Blender Foundation\Blender 5.0\blender.exe` (it isn't on the PATH); run each as `blender -b --factory-startup -P <script>` from this folder. Everything they write goes to `work/`, which git ignores.
+
+| File | What it does |
+|---|---|
+| `pipeline/shots.csv` | The cut list: 73 shots with their timecodes, from the script. Shot 1250 is beat 12's fifth shot. |
+| `pipeline/opening.py` | Shared paths, timecodes and the shot list. Frames are film frames: 03:42:00 is frame 5328 everywhere. |
+| `pipeline/master_edit.py` | Builds `work/edit/opening-master.blend`: one strip per shot cut from the v3.1 animatic (channel 1), every layout playblast in `work/playblast/` at its timecode (channel 2), the guide sound (channel 5), a marker at each beat. Run it again after any new playblast. |
+| `pipeline/layout_b12_13.py` | Builds the grey layout of beats 12–13 (`work/layout/b12-13-layout.blend`) and, with `-- render`, its playblast (`work/playblast/1200-1395-layout.mp4`, six minutes to render). Every placement, lens and speed is a number at the top. `-- still=03:59:00,04:00:04` renders single frames instead. |
+
+To look yourself: open `work/layout/b12-13-layout.blend`, press Numpad 0 for the camera, and scrub; the markers switch the camera at each shot. Open `work/edit/opening-master.blend` in the Video Editing workspace to see it in the cut.
+
+## 6. Next
+
+The order, and why, is in [PLAN §10](./PLAN.md#10-order-of-work). In short: your notes on the first layout, beats 12 into 13 ([PLAN §9](./PLAN.md#9-what-i-need-from-you)), and the face test; then the layout of all fourteen beats, cut together and judged as a whole before anything is rendered at quality.
