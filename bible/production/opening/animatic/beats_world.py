@@ -326,7 +326,8 @@ def night_sky(w: WCtx, t, amount):
 def beat_land(w: WCtx, t):
     g, c = w.g, w.c
     tl = t - B["landbeat"]
-    if tl < 8.0:
+    # v3.1: retimed to fit the beat's 24 s (the impact used to fall past 3:42 and never render)
+    if tl < 6.0:
         # shallows, mud, air. The creature hauls out onto a shore; the air alive with wings
         day = sky(g, (0.75, 0.85, 0.95), (0.95, 0.9, 0.8), horizon=0.1)
         img = day
@@ -347,19 +348,19 @@ def beat_land(w: WCtx, t):
         # plants hold their shapes
         img = ferns(w, t, 12, 0.35, -0.35, (0.2, 0.32, 0.15), img, seed=1)
         # the creature: fins that push like legs, hauling from the water (right) onto the mud
-        k = sstep(0.5, 6.0, tl)
+        k = sstep(0.4, 5.6, tl)
         cx = lerp(0.9, -0.3, k)
         cy = lerp(-0.25, -0.45, k)
-        kind = "fish" if tl < 2.5 else "tetrapod"
+        kind = "fish" if tl < 2.0 else "tetrapod"
         body, eye = creature_mask(w, kind, cx, cy, 0.5, t, facing=-1)
         img = over(img, body * 0.95, (0.22, 0.2, 0.15))
         img = over(img, eye, (0.02, 0.02, 0.02))
         img = ferns(w, t, 6, 0.5, -0.8, (0.12, 0.22, 0.1), img, seed=2)
         return np.clip(img, 0, 1)
 
-    if tl < 12.0:
+    if tl < 9.0:
         # lizard-shaped now, low and quick, among ferns
-        k = tl - 8.0
+        k = (tl - 6.0) * 4.0 / 3.0
         img = sky(g, (0.7, 0.8, 0.9), (0.9, 0.85, 0.7), horizon=0.2)
         img = over_img(img, 1 - smoothstep(0.1, 0.25, g.y), np.stack([0.4 + 0.0 * g.x, 0.36 + 0.0 * g.x, 0.25 + 0.0 * g.x], axis=-1))
         img = ferns(w, t, 20, 0.5, -0.4, (0.18, 0.3, 0.12), img, seed=4)
@@ -370,9 +371,9 @@ def beat_land(w: WCtx, t):
         img = ferns(w, t, 10, 0.75, -0.9, (0.1, 0.2, 0.08), img, seed=5)
         return np.clip(img, 0, 1)
 
-    if tl < 19.5:
+    if tl < 15.0:
         # night. Small, furred and sharp-nosed, at the feet of enormous animals. Wings cross the moon.
-        k = tl - 12.0
+        k = (tl - 9.0) * 7.5 / 6.0
         img = night_sky(w, t, 1.0)
         moon = disc(g, 1.0, 0.55, 0.13)
         img = over(img, moon, (0.92, 0.92, 0.85))
@@ -409,18 +410,19 @@ def beat_land(w: WCtx, t):
         return np.clip(img, 0, 1)
 
     # the dead animal, and the small creature on it; then its face fills the frame; then the sky falls
-    k = tl - 19.5
+    # 0-2 on the body; 2-3.5 its face; 3.5-5.5 the glow; 5.5-6.5 the quake; 6.5-9 the sky falls
+    k = tl - 15.0
     img = night_sky(w, t, 1.0)
     if k > 3.5:
         # a glow comes up low in the south where no dawn should be, and climbs
-        gk = sstep(3.5, 7.5, k)
+        gk = sstep(3.5, 5.8, k)
         glow = np.clip(1 - np.sqrt(((g.x + 1.2) / 2.2) ** 2 + ((g.y + 0.7) / (0.5 + 1.2 * gk)) ** 2), 0, 1) ** 1.5
         img = add(img, glow * gk, (0.9, 0.35, 0.08))
-        heat = sstep(7.5, 9.5, k)
+        heat = sstep(6.0, 8.5, k)
         img = img * (1 - 0.5 * heat) + np.array([0.9, 0.45, 0.15], np.float32) * heat * 0.5
     shake = 0.0
-    if 6.3 < k < 8.0:
-        shake = 0.02 * np.sin(t * 60) * (1 - (k - 6.3) / 1.7)
+    if 5.5 < k < 7.0:
+        shake = 0.025 * np.sin(t * 60) * (1 - (k - 5.5) / 1.5)
     img = over_img(img, 1 - smoothstep(-0.55 + shake, -0.4 + shake, g.y), np.stack([0.16 + 0 * g.x, 0.17 + 0 * g.x, 0.15 + 0 * g.x], axis=-1))
     img = triceratops(w, img, -0.1, -0.35 + shake, 1.0, (0.05, 0.05, 0.06), k)
     if k < 2.0:
@@ -446,18 +448,18 @@ def beat_land(w: WCtx, t):
         img = over(img, wv.mask(0.5) * 0.6, (0.7, 0.7, 0.65))
         img = add(img, disc(g, 0.42, 0.05, 0.03) + disc(g, -0.42, 0.05, 0.03), (0.5, 0.5, 0.5))
     else:
-        # it goes still; then runs for a hole among the roots, at 8 s
-        if k < 8.0:
+        # it goes still; then runs for a hole among the roots, as the sky starts to fall
+        if k < 6.5:
             body, eye = creature_mask(w, "shrew", 0.15, -0.05 + shake, 0.3, t, facing=-1)
             img = over(img, body * 0.97, (0.09, 0.08, 0.07))
             img = over(img, eye, (0.6, 0.6, 0.55))
-        elif k < 9.5:
-            rk = (k - 8.0) / 1.5
+        elif k < 7.5:
+            rk = (k - 6.5) / 1.0
             body, eye = creature_mask(w, "shrew", 0.15 - 1.9 * rk, -0.05 - 0.45 * rk, 0.3, t, facing=-1)
             img = over(img, body * 0.97, (0.09, 0.08, 0.07))
-    if k > 8.0:
+    if k > 6.5:
         # the sky starts to fall: one streak, then dozens, then the whole sky streaming down
-        img = falling_sky(w, img, k - 8.0, t)
+        img = falling_sky(w, img, (k - 6.5) * 1.6, t)
     return np.clip(img, 0, 1)
 
 
@@ -477,7 +479,7 @@ def triceratops(w: WCtx, img, cx, cy, s, color, k):
     return img
 
 
-def falling_sky(w: WCtx, img, k, t):
+def falling_sky(w: WCtx, img, k, t, amount=1.0):
     g = w.g
     n = int(min(1 + k * k * 25, 400))
     fr = w.fire[:n]
@@ -488,8 +490,8 @@ def falling_sky(w: WCtx, img, k, t):
         y0 = 1.3 - ph
         cv.line([(x + 0.15, y0 + 0.3), (x, y0)], 0.006 + 0.004 * fr[i, 1])
     m = cv.mask(1.0)
-    img = add(img, m * 1.0, (1.0, 0.75, 0.35))
-    img = add(img, blur(m, 6 * g.h / 540) * 0.6, (1.0, 0.4, 0.1))
+    img = add(img, m * amount, (1.0, 0.75, 0.35))
+    img = add(img, blur(m, 6 * g.h / 540) * 0.6 * amount, (1.0, 0.4, 0.1))
     return img
 
 
@@ -511,26 +513,29 @@ def tree(w: WCtx, cv: Canvas, x, y, h, growth, depth=0, ang=np.pi / 2, width=0.0
 def beat_dust(w: WCtx, t):
     g, c = w.g, w.c
     td = t - B["dust"]
-    # the sky: fire stops by 2 s; dark and stays dark; clears from 9 s; green comes back
-    fire = 1 - sstep(0.5, 2.5, td)
-    dark = sstep(1.0, 3.0, td) * (1 - sstep(9.0, 12.0, td))
-    day = sstep(9.0, 12.5, td)
+    # v3.1 timings: the fire stops by 2 s; dark and stays dark; clears from 6.5 s; green; the tree at 10-12;
+    # the leaf falls slowly from 12 to 16; then two seconds of stillness (treatment, beat 12)
+    fire = 1 - sstep(0.3, 2.0, td)
+    dark = sstep(0.8, 2.0, td) * (1 - sstep(6.5, 8.5, td))
+    day = sstep(6.5, 9.0, td)
     skyc = sky(g, (0.65, 0.78, 0.9), (0.9, 0.85, 0.75), horizon=-0.1) * day + np.array([0.1, 0.08, 0.06], np.float32) * (1 - day)
     img = skyc * (1 - dark * 0.8)
     if fire > 0:
         img = img * (1 - 0.4 * fire) + np.array([0.9, 0.45, 0.15], np.float32) * fire * 0.4
+        # the last of the fire still falling, carried over the cut from beat 11
+        img = falling_sky(w, img, 4.0, t, amount=fire)
     # ground: ash grey, then green
     gm = 1 - smoothstep(-0.55, -0.4, g.y)
     n = c.vn.fbm(g.x * 3, g.y * 3, 3)
     ashcol = np.stack([0.32 + 0.1 * n, 0.3 + 0.1 * n, 0.28 + 0.1 * n], axis=-1)
-    green = sstep(10.0, 13.5, td)
+    green = sstep(7.0, 9.5, td)
     greencol = np.stack([0.25 + 0.1 * n, 0.4 + 0.15 * n, 0.15 + 0.05 * n], axis=-1)
     gcol = ashcol * (1 - green) + greencol * green
     gcol = gcol * (1 - dark * 0.7)
     img = over_img(img, gm, gcol)
     # the head: flesh goes, the skull shows, sinks into the ground
-    decay = sstep(4.0, 8.0, td)
-    sink = sstep(7.5, 11.0, td)
+    decay = sstep(2.0, 5.0, td)
+    sink = sstep(4.5, 7.0, td)
     cy = -0.35 - 0.7 * sink
     if sink < 1.0:
         col = (0.05 * (1 - decay) + 0.55 * decay, 0.05 * (1 - decay) + 0.52 * decay, 0.06 * (1 - decay) + 0.45 * decay)
@@ -542,40 +547,40 @@ def beat_dust(w: WCtx, t):
             sv.ellipse(-0.1 - 0.2, cy - 0.05, 0.1, 0.07)
             img = over(img, sv.mask(1.0) * decay, (0.12, 0.1, 0.08))
         # ash settles on the face
-        if td > 2.0:
-            amt = sstep(2.0, 7.0, td)
+        if td > 1.5:
+            amt = sstep(1.5, 5.0, td)
             img = over(img, (1 - smoothstep(cy + 0.3, cy + 0.6, g.y)) * smoothstep(cy + 0.1, cy + 0.35, g.y) * amt * 0.5, (0.4, 0.4, 0.4))
     # ash falling
-    if 1.5 < td < 9.0:
+    if 1.0 < td < 7.0:
         a = w.ash
         xs = (a[:, 0] * 2 - 1) * g.aspect
-        ys = ((a[:, 1] * 2.4 - (td - 1.5) * (0.15 + 0.15 * a[:, 2])) % 2.4) - 1.2
+        ys = ((a[:, 1] * 2.4 - (td - 1.0) * (0.15 + 0.15 * a[:, 2])) % 2.4) - 1.2
         cols = np.tile(np.array([[0.6, 0.6, 0.6]], np.float32), (len(a), 1))
-        img += splat(g, xs, ys, cols, np.ones(len(a), np.float32) * 0.6 * sstep(1.5, 3.0, td) * (1 - sstep(7.0, 9.0, td)), radius_px=1.0 * g.h / 540)
+        img += splat(g, xs, ys, cols, np.ones(len(a), np.float32) * 0.6 * sstep(1.0, 2.5, td) * (1 - sstep(5.5, 7.0, td)), radius_px=1.0 * g.h / 540)
     # the first green to come back is ferns, everywhere; then flowering things and trees
-    if td > 10.0:
-        img = ferns(w, t, 30, 0.4, -0.5, (0.2, 0.36, 0.14), img, seed=8, growth=sstep(10.0, 13.0, td))
-    if td > 12.5:
+    if td > 7.0:
+        img = ferns(w, t, 30, 0.4, -0.5, (0.2, 0.36, 0.14), img, seed=8, growth=sstep(7.0, 9.0, td))
+    if td > 8.5:
         fl = w.flowers
         xs = (fl[:, 0] * 2 - 1) * g.aspect
         ys = fl[:, 1] * 0.5 - 0.95
         cols = hsv(fl[:, 2], 0.8, 1.0)
-        img += splat(g, xs, ys, cols, np.ones(len(fl), np.float32) * sstep(12.5, 14.5, td), radius_px=1.6 * g.h / 540, glow_px=0)
+        img += splat(g, xs, ys, cols, np.ones(len(fl), np.float32) * sstep(8.5, 10.0, td), radius_px=1.6 * g.h / 540, glow_px=0)
         tv = Canvas(g)
         for i, tx in enumerate((-1.6, -1.2, 1.3, 1.65)):
-            tree(w, tv, tx, -0.5, 0.6, sstep(12.5, 15.0, td), seed=20 + i, width=0.05)
+            tree(w, tv, tx, -0.5, 0.6, sstep(8.5, 10.5, td), seed=20 + i, width=0.05)
         img = over(img, tv.mask(1.0) * 0.9, (0.1, 0.09, 0.06))
     # animals pass as blurs
-    if 12.5 < td < 15.5:
+    if 8.5 < td < 10.5:
         bv = Canvas(g)
         for i in range(3):
-            ph = ((td - 12.5) * (1.5 + 0.5 * i) + i * 0.7) % 1.0
+            ph = ((td - 8.5) * (1.5 + 0.5 * i) + i * 0.7) % 1.0
             bx = -2.2 + ph * 4.4 * (1 if i % 2 == 0 else -1) * 1
             bv.ellipse(bx, -0.55, 0.25, 0.08)
         img = over(img, blur(bv.mask(0), 14 * g.h / 540) * 0.7, (0.15, 0.12, 0.08))
     # where the head lay, a shoot: a sapling, then a tree, in a few seconds
-    if td > 14.0:
-        gr = sstep(14.0, 16.5, td)
+    if td > 10.0:
+        gr = sstep(10.0, 12.0, td)
         tv = Canvas(g)
         tree(w, tv, -0.1, -0.55, 0.45 + 0.5 * gr, gr, seed=5, width=0.03 + 0.03 * gr)
         img = over(img, tv.mask(1.0) * 0.95, (0.12, 0.1, 0.06))
@@ -586,13 +591,16 @@ def beat_dust(w: WCtx, t):
             for i in range(int(60 * (gr - 0.6) / 0.4)):
                 lv.ellipse(-0.1 + r.uniform(-0.55, 0.55), 0.1 + r.uniform(-0.3, 0.5), 0.05, 0.035)
             img = over(img, lv.mask(1.0) * 0.9, (0.2, 0.4, 0.14))
-    # one leaf comes loose and falls into frame, and settles on the earth
-    if td > 16.0:
-        lk = sstep(16.0, 17.6, td)
-        lx = 0.1 + 0.12 * np.sin(lk * 9) * (1 - lk)
-        ly = lerp(0.55, -0.72, lk)
+    # one leaf comes loose and falls into frame, slowly, rocking side to side the way a real leaf falls,
+    # and settles on the earth; then two seconds in which nothing moves (the feet will whip it away)
+    if td > 12.0:
+        lk = np.clip((td - 12.0) / 4.0, 0.0, 1.0)
+        ease = lk * lk * (3 - 2 * lk) * 0.35 + lk * 0.65   # nearly constant speed, settling at the end
+        sway = np.sin(lk * 2 * np.pi * 2.25)               # two and a quarter swings on the way down
+        lx = 0.1 + 0.22 * sway * (1 - lk) ** 0.7
+        ly = lerp(0.55, -0.72, ease) + 0.03 * np.abs(np.cos(lk * 2 * np.pi * 2.25)) * (1 - lk)
+        rot = 0.9 * sway * (1 - lk) + 0.15
         lv = Canvas(g)
-        rot = 0.6 * np.sin(lk * 7)
         pts = [(0, 0.05), (0.03, 0.02), (0.04, -0.02), (0, -0.06), (-0.04, -0.02), (-0.03, 0.02)]
         lv.poly([(lx + x * np.cos(rot) - y * np.sin(rot), ly + x * np.sin(rot) + y * np.cos(rot)) for x, y in pts])
         img = over(img, lv.mask(0.8) * 0.95, (0.5, 0.35, 0.12))
@@ -786,10 +794,22 @@ def beat_feet(w: WCtx, img, tf, t):
     g = w.g
     gcol = np.stack([0.32 + 0 * g.x, 0.28 + 0 * g.x, 0.18 + 0 * g.x], axis=-1)
     img = over_img(img, 1 - smoothstep(-0.2, 0.3, g.y), gcol)
+    # the leaf lies still until the first foot lands beside it (0.25 s), then the rush of feet whips it up
+    # and away to the left, tumbling, and the stillness of beat 12 is over
+    wk = np.clip((tf - 0.25) / 1.1, 0.0, 1.0)
+    lx0 = 0.1 - 2.6 * wk ** 1.4
+    ly0 = -0.3 + 0.9 * np.sin(np.pi * min(wk * 1.3, 1.0)) * (1 - 0.3 * wk)
+    rot = 9.0 * wk
     lv = Canvas(g)
     pts = [(0, 0.12), (0.08, 0.05), (0.1, -0.05), (0, -0.15), (-0.1, -0.05), (-0.08, 0.05)]
-    lv.poly([(0.1 + x * 1.6, -0.3 + y * 1.6) for x, y in pts])
+    lv.poly([(lx0 + (x * np.cos(rot) - y * np.sin(rot)) * 1.6, ly0 + (x * np.sin(rot) + y * np.cos(rot)) * 1.6) for x, y in pts])
     img = over(img, lv.mask(1.0) * 0.95, (0.5, 0.35, 0.12))
+    if wk > 0:
+        # dust kicked up behind the feet
+        dv = Canvas(g)
+        for i in range(6):
+            dv.ellipse(0.4 - 0.5 * i - 1.2 * wk, -0.25 + 0.05 * np.sin(i * 3), 0.25 + 0.1 * wk, 0.07 + 0.04 * wk)
+        img = over(img, blur(dv.mask(0), 10 * g.h / 540) * 0.35 * np.sin(np.pi * wk), (0.55, 0.48, 0.35))
     cv = Canvas(g)
     for i in range(10):
         ph = (t * 2.2 + i * 0.37) % 1.0

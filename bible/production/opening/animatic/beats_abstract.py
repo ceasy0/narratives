@@ -91,7 +91,7 @@ def face_strength(t):
 
 
 def flow_amp(t):
-    return sstep(12.0, 20.0, t)
+    return sstep(14.0, 21.0, t)  # the static begins to flow at 0:14 (script)
 
 
 def relief(c, t, e=None, rise=1.0):
@@ -469,7 +469,7 @@ def beat_eve(c: Ctx, t):
     eb_d = F.mix_expr(F.MALICE, F.LAUGH, 0.6 + 0.4 * climb)
     es_l = F.mix_expr(F.UPSET, F.SLEEP, 0.4 + 0.6 * climb)
     eb_l = F.mix_expr(F.COMPASSION, F.SLEEP, 0.4 + 0.6 * climb)
-    fade = 1 - sstep(8.5, 13.0, te)  # the faces dissolve into the grains
+    fade = 1 - sstep(5.0, 9.0, te)  # the faces dissolve into the grains, 1:13-1:17 (script)
     if fade > 0.01:
         dark = dark_scene(c, t, es_d, eb_d)
         lit = light_scene(c, t, es_l, eb_l, tend=0.6)
@@ -1100,7 +1100,7 @@ def beat_cross(c: Ctx, t):
     # into a single cell: it grows at the centre as we close
     cell_r = 0.02 * np.exp(tw * 1.0)
     cell_r = min(cell_r, 0.24)
-    img = draw_cell(c, img, 0.0, 0.0, cell_r, t, lit=sstep(2.6, 3.3, tw))
+    img = draw_cell(c, img, 0.0, 0.0, cell_r, t, lit=sstep(1.6, 2.3, tw))  # lit before the beat ends at 2:46
     return np.clip(img, 0, 1)
 
 

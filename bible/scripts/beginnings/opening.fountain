@@ -1,17 +1,19 @@
 Title: ADONAI
 Credit: Episode 1, "In the Beginning"
 Author: The Opening (Genesis 1:1–2:7)
-Draft date: 2026-10-09
-Notes: Shooting script, first draft, v1.2
+Draft date: 2026-10-13
+Notes: Shooting script, first draft, v1.3
 
 /*
 ABOUT THIS SCRIPT
 
-One unbroken sequence, 5:00, no words. Every shot is timed to treatment v3.3 and tagged. Timecodes are from the first frame. The animatic (production/opening/opening-animatic-v3.mp4) is cut to these exact timings.
+One unbroken sequence, 5:00, no words. Every shot is timed to treatment v3.4 and tagged. Timecodes are from the first frame. The animatic (production/opening/opening-animatic-v3.1.mp4) is cut to these exact timings.
 
 v1.1 (2026-10-08): ten seconds added at the front, the fade in from black (the author's note). Every timecode after 00:00 is ten seconds later than in v1; nothing else has changed.
 
 v1.2 (2026-10-09): the author's notes on animatic v2, as treatment v3.3. No time moved. The fade starts on frame 0; the static is sand pouring over a face that rises under it; the large face forms off to the side; the turn-overs are fronts of light; the faces break up into the grains; the first colors are sparks of light; beat 5 falls into a fractal.
+
+v1.3 (2026-10-13): beats 11 and 12 retimed inside their own lengths, so no beat moves. The impact now happens inside beat 11 (it had run past 3:42, so it was never on screen), and beat 12 reaches the tree sooner so the leaf can fall slowly, for four seconds, and lie still for two; at 4:00 the running feet whip it away (the author's note, 2026-10-13).
 
 See bible/story/arcs/01-beginnings/opening/TREATMENT.md for every source and every decision behind each shot.
 */
@@ -176,55 +178,55 @@ SOUND: Wingbeats, through water.
 
 = BEAT 11. THE LAND (3:18–3:42). Gen 1:24–25.
 
-03:18 to 03:26. Shallows, mud, air. Daylight, warm. Fins that push like legs. The creature hauls out of the water on the right onto a shore where nothing like it has walked, and keeps going. The air over the shallows is alive with wings, insects glinting in the sun. Plants hold their shapes. The world has almost stopped shimmering. [[P2 with license: winged insects before any backboned animal walked, low-to-medium confidence; kept for 1:20 before 1:24.]]
+03:18 to 03:24. Shallows, mud, air. Daylight, warm. Fins that push like legs. The creature hauls out of the water on the right onto a shore where nothing like it has walked, and keeps going. The air over the shallows is alive with wings, insects glinting in the sun. Plants hold their shapes. The world has almost stopped shimmering. [[P2 with license: winged insects before any backboned animal walked, low-to-medium confidence; kept for 1:20 before 1:24.]]
 
 SOUND: Surf. Insects.
 
-03:26 to 03:30. It is lizard-shaped now, low and quick, running among ferns.
+03:24 to 03:27. It is lizard-shaped now, low and quick, running among ferns.
 
-03:30 to 03:37:12. Night. A moon. Enormous animals, columns for legs, their bodies above the frame. Birds asleep in a branch. Something with long leathery wings crosses the moon. At their feet, in short bursts, a small furred sharp-nosed creature. [[P1: 1:24–25. P2: early amniotes; shrew-like early mammals; pterosaurs and birds in the last of the dinosaurs' world.]]
+03:27 to 03:33. Night. A moon. Enormous animals, columns for legs, their bodies above the frame. Birds asleep in a branch. Something with long leathery wings crosses the moon. At their feet, in short bursts, a small furred sharp-nosed creature. [[P1: 1:24–25. P2: early amniotes; shrew-like early mammals; pterosaurs and birds in the last of the dinosaurs' world.]]
 
 SOUND: Crickets. A low hush.
 
-03:37:12 to 03:39:12. The small creature is on the body of a great animal that has died: a huge horned head lying on its side in the ferns, the frill up. It picks beetles off it. [[P6: the body is there before the impact, so the impact doesn't have to kill it. A Triceratops, confirmed 2026-10-07.]]
+03:33 to 03:35. The small creature is on the body of a great animal that has died: a huge horned head lying on its side in the ferns, the frill up. It picks beetles off it. [[P6: the body is there before the impact, so the impact doesn't have to kill it. A Triceratops, confirmed 2026-10-07.]]
 
-03:39:12 to 03:41. The small creature's face fills the frame: whiskers, black eyes, ears up. Listening.
+03:35 to 03:36:12. The small creature's face fills the frame: whiskers, black eyes, ears up. Listening.
 
-03:41 to 03:44:12. Low in the south a glow comes up where no dawn should be. It climbs. The creature goes still.
+03:36:12 to 03:38:12. Low in the south a glow comes up where no dawn should be. It climbs. The creature goes still.
 
 SOUND: A rumble, below hearing at first, climbing.
 
-03:44:12 to 03:46. The ground heaves under it. The frame shakes.
+03:38:12 to 03:39:12. The ground heaves under it. The frame shakes.
 
 SOUND: The quake.
 
-03:46 to 03:50. The sky starts to fall: one streak of fire, then dozens, then the whole sky streaming down, and the air grows hot. The creature runs for a hole among the roots of a tree. We don't go with it. We stay on the dead animal's face. [[P5: the impact, close enough to frighten the animal and far enough not to incinerate everything (2026-10-05). P2: about 3,000 km from Chicxulub, the impact below the horizon; the plume, the quake within minutes, then the debris coming back down for hours. Medium confidence on the order; dossier §5.]]
+03:39:12 to 03:42. The sky starts to fall: one streak of fire, then dozens, then the whole sky streaming down, and the air grows hot. The creature runs for a hole among the roots of a tree. We don't go with it. We stay on the dead animal's face. [[P5: the impact, close enough to frighten the animal and far enough not to incinerate everything (2026-10-05). P2: about 3,000 km from Chicxulub, the impact below the horizon; the plume, the quake within minutes, then the debris coming back down for hours. Medium confidence on the order; dossier §5.]]
 
 SOUND: The roar, and under it, still, the note.
 
 = BEAT 12. DUST (3:42–4:00). Gen 2:7.
 
-03:42 to 03:45. On the dead animal's face. Time runs: it is the last time the world moves faster than we can follow. The fire stops falling.
+03:42 to 03:44. On the dead animal's face, the last of the fire still falling. Time runs: it is the last time the world moves faster than we can follow. The fire stops falling.
 
-03:45 to 03:51. The sky goes dark and stays dark. Ash settles on the face. The flesh goes. The skull shows.
+03:44 to 03:48. The sky goes dark and stays dark. Ash settles on the face. The flesh goes. The skull shows.
 
 SOUND: The roar fades to wind. A long hush.
 
-03:49:12 to 03:53. The skull sinks into the ground.
+03:46:12 to 03:49. The skull sinks into the ground.
 
-03:51 to 03:56. The sky clears. The first green to come back is ferns, everywhere: the same ferns the lizard-shaped creature ran through. Then the land greens differently: flowering things, and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19. P2: the impact winter, and the fern spike. P6: the ferns as a callback.]]
+03:49 to 03:52. The sky clears. The first green to come back is ferns, everywhere: the same ferns the lizard-shaped creature ran through. Then the land greens differently: flowering things, and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19. P2: the impact winter, and the fern spike. P6: the ferns as a callback.]]
 
-03:56 to 03:58:12. Where the head lay, a shoot. It is a sapling, then a tree, in two seconds.
+03:52 to 03:54. Where the head lay, a shoot. It is a sapling, then a tree, in two seconds.
 
-03:58 to 03:59:12. One leaf comes loose and falls into frame. It settles on the earth.
+03:54 to 03:58. One leaf comes loose and falls into frame, slowly, rocking from side to side the way a real leaf falls. It settles on the earth. [[P5: "the falling leaf should feel like a slow scene that gets whipped into motion and action by the tribe of people running over it" (2026-10-13).]]
 
-03:59:12 to 04:00. Everything is still.
+03:58 to 04:00. Everything is still. Two seconds.
 
 SOUND: Wind, and the note. Nothing else.
 
 = BEAT 13. FILL THE EARTH (4:00–4:36). Gen 1:26–28.
 
-04:00 to 04:01:12. Feet. A crowd of them, running, straight over the leaf, from right to left.
+04:00 to 04:01:12. Feet. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up into the air and away, tumbling, in a kick of dust: the stillness is over.
 
 SOUND: Feet. People shouting, wild, without words: the first human voices.
 

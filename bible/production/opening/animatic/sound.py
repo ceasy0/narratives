@@ -250,7 +250,7 @@ def stem_release():
     m = min(len(wet), N - i0)
     buf[i0:i0 + m] += wet[:m] * 0.22
     # true silence after: nothing of the release lasts past 0:45.5 (the note rises out of the end of it)
-    fade = np.interp(T, [0, t0 + 5.0, t0 + 7.4, DURATION], [1, 1, 0, 0]).astype(np.float32)
+    fade = np.interp(T, [0, t0 + 3.5, t0 + 5.8, DURATION], [1, 1, 0, 0]).astype(np.float32)
     return buf * fade[:, None]
 
 
@@ -543,7 +543,7 @@ def stem_cosmos():
 
     def gain(ts, f):
         k = sstep(0, 4.0, ts)
-        out_ = sstep(12.5, 14.0, ts)
+        out_ = sstep(10.0, 12.0, ts)  # drops away before the crossing, instead of cutting off
         centre = 150 * (2 ** (k * 3.5))
         return logband(f, centre, 1.4) * (0.2 + 0.8 * k) * (1 - out_)
 
@@ -593,21 +593,22 @@ def stem_world():
         under = sstep(B["swarm"], B["swarm"] + 1, t) * (1 - sstep(B["landbeat"], B["landbeat"] + 2, t))
         g += logband(f, 150, 1.0) * under * 0.7 * (0.8 + 0.2 * np.sin(t * 0.9))
         # surf and air: beat 11 day
-        shore = sstep(B["landbeat"], B["landbeat"] + 2, t) * (1 - sstep(B["landbeat"] + 11, B["landbeat"] + 13, t))
+        # beat 11 (v3.1): day 0-9 s, night 9-15, the dead animal 15-18.5, glow 18.5-20.5, quake 20.5-21.5, the sky falls from 21.5
+        shore = sstep(B["landbeat"], B["landbeat"] + 2, t) * (1 - sstep(B["landbeat"] + 8, B["landbeat"] + 9.5, t))
         g += logband(f, 900, 1.6) * shore * 0.35 * (0.5 + 0.5 * np.sin(t * 0.5) ** 2)
         # night: a low hush; crickets are separate
-        night = sstep(B["landbeat"] + 11, B["landbeat"] + 13, t) * (1 - sstep(B["landbeat"] + 19.5, B["landbeat"] + 21, t))
+        night = sstep(B["landbeat"] + 8.5, B["landbeat"] + 10, t) * (1 - sstep(B["landbeat"] + 15, B["landbeat"] + 16.5, t))
         g += logband(f, 200, 1.2) * night * 0.15
         # the glow, the quake, the sky falling: a rumble that climbs to a roar
-        glow = sstep(B["landbeat"] + 23, B["landbeat"] + 27, t)
-        quake = sstep(B["landbeat"] + 25.8, B["landbeat"] + 26.3, t) * (1 - sstep(B["landbeat"] + 27.5, B["landbeat"] + 28.5, t))
-        fall = sstep(B["landbeat"] + 27.5, B["dust"] + 1.0, t) * (1 - sstep(B["dust"] + 1.0, B["dust"] + 4.0, t))
+        glow = sstep(B["landbeat"] + 18.5, B["landbeat"] + 21, t) * (1 - sstep(B["dust"] + 1.0, B["dust"] + 4.0, t))
+        quake = sstep(B["landbeat"] + 20.5, B["landbeat"] + 20.8, t) * (1 - sstep(B["landbeat"] + 21.5, B["landbeat"] + 22.5, t))
+        fall = sstep(B["landbeat"] + 21.5, B["dust"] + 0.5, t) * (1 - sstep(B["dust"] + 1.0, B["dust"] + 3.5, t))
         g += logband(f, 45, 0.8) * (glow * 0.7 + quake * 1.5)
         g += logband(f, 300 + 1500 * fall, 1.6) * fall * 1.3
         # the long dark: wind, then hush; wind through the green
-        wind = sstep(B["dust"] + 2, B["dust"] + 6, t) * (1 - sstep(B["dust"] + 15, B["dust"] + 17, t))
+        wind = sstep(B["dust"] + 2, B["dust"] + 5, t) * (1 - sstep(B["dust"] + 14, B["dust"] + 16, t))
         g += logband(f, 500, 1.4) * wind * 0.3 * (0.6 + 0.4 * np.sin(t * 0.4 + 1) ** 2)
-        still = sstep(B["dust"] + 16, B["dust"] + 17.5, t) * (1 - sstep(B["fill"], B["fill"] + 0.5, t))
+        still = sstep(B["dust"] + 15, B["dust"] + 16.5, t) * (1 - sstep(B["fill"], B["fill"] + 0.5, t))
         g += logband(f, 400, 1.6) * still * 0.08
         # the band: forest air, then open ground, then the river
         band = sstep(B["fill"], B["fill"] + 1, t) * (1 - sstep(B["rest"] + 1, B["rest"] + 3, t))
@@ -634,7 +635,7 @@ def stem_world():
     place(buf, B["swarm"] + 26.5, deep * 0.4, 0.0, 0.7)
     # wings over the water, then insects, then crickets
     t = B["swarm"] + 30
-    while t < B["landbeat"] + 8:
+    while t < B["landbeat"] + 6:
         nb = int(0.25 * SR)
         tb_ = np.arange(nb, dtype=np.float32) / SR
         fl = noise(nb, int(t * 100) % 10000) * (np.sin(2 * np.pi * 14 * tb_) ** 2) * np.sin(np.pi * tb_ / 0.25)
@@ -642,25 +643,25 @@ def stem_world():
         place(buf, t, fl, r.uniform(-1, 1), 0.25)
         t += r.uniform(0.3, 1.2)
     t = B["landbeat"]
-    while t < B["landbeat"] + 12:
+    while t < B["landbeat"] + 9:
         f0 = r.uniform(3000, 5000)
         nb = int(r.uniform(0.3, 1.5) * SR)
         tb_ = np.arange(nb, dtype=np.float32) / SR
         buzz = np.sin(2 * np.pi * f0 * tb_) * (0.6 + 0.4 * np.sin(2 * np.pi * 180 * tb_)) * np.sin(np.pi * tb_ / (nb / SR))
         place(buf, t, buzz, r.uniform(-1, 1), 0.03)
         t += r.uniform(0.2, 0.8)
-    t = B["landbeat"] + 12
-    while t < B["landbeat"] + 25.5:
+    t = B["landbeat"] + 9
+    while t < B["landbeat"] + 20.5:
         nb = int(0.06 * SR)
         tb_ = np.arange(nb, dtype=np.float32) / SR
         ch = np.sin(2 * np.pi * 4200 * tb_) * np.sin(np.pi * tb_ / 0.06)
         for k in range(3):
-            place(buf, t + k * 0.09, ch, 0.6, 0.05 * (1 - sstep(B["landbeat"] + 23.5, B["landbeat"] + 25.5, t)))
+            place(buf, t + k * 0.09, ch, 0.6, 0.05 * (1 - sstep(B["landbeat"] + 18.5, B["landbeat"] + 20.5, t)))
         t += 0.5 + 0.1 * r.random()
     # the sky falling: streaks, each a short descending whistle, more and more of them
-    t = B["landbeat"] + 27.6
+    t = B["landbeat"] + 21.6
     while t < B["dust"] + 2.0:
-        k = sstep(B["landbeat"] + 27.6, B["dust"], t)
+        k = sstep(B["landbeat"] + 21.6, B["dust"], t)
         nb = int(0.5 * SR)
         tb_ = np.arange(nb, dtype=np.float32) / SR
         wh = stft_filter(noise(nb, int(t * 1000) % 100000), lambda ts, f: logband(f, 4000 * np.exp(-ts * 3) + 500, 0.6)) * np.exp(-tb_ / 0.2)
