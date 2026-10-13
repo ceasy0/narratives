@@ -2,7 +2,7 @@
 
 > Research for what was README item 6 (answered and taken off the list): the shape, the layout and the light of the Garden of Eden, and what I think of your picture of it. Companion to the [Garden dossier](./DOSSIER.md), whose §2 ("The look") this extends. The look it proposes was decided on 2026-10-09 (§6).
 
-**Status:** v1.4, 2026-10-13: your answers on §10 recorded and checked. Gold, as long as it's factual: river gold failed the check and is out; gold light, bdellium and living gold stay (§10.2). The trees: life north, knowledge south (§10.3). The Garden before Eridu, about 5500 BC, researched (§10.4). Babel is Eridu, checked (§10.7). Every date in this file checked against the sources (Eridu from about 5400 BC; Ur about 20 km). v1.3, 2026-10-10 (late): fixes from the project audit. Ezekiel 31:4 is an echo of Eden, not a picture of it, so the water all round is Compatible, not Supported (§2, §5.2, §9.5); Eridu's first shrine is older than the provisional date for Adam, so Eridu as the gate needs a date decision (§3, §10.4); Ur is about 20 km away, not 12 (§9.3); and smaller corrections (the elephants and tigers, tufa and travertine, the Iranian words). v1.2, 2026-10-10 (evening): your notes on §9 are answered in §10. **Decided:** the ring, with Adam's work (straight headwaters, a squared top, smoothed stone); the light (sunny, cool, breezy, dry); the rivers crossing the ring; the limestone a stranger in the plain. §6 is updated to match. **Open:** gold, which tree is north, Eridu as the gate, and Babel. v1.1, 2026-10-10: your questions of 2026-10-10 (why the Garden is where it is, Babel, Ur and Uruk, and a ring instead of a square) are answered in §9, **as proposals: nothing in §6 changes until you say so.** v1.0, 2026-10-09: **the plan is decided** and folded into the [dossier's §2](./DOSSIER.md#2-the-look). v1.0 adds your last answers: the plan, the two kinds of path, the spring in the marsh, and your rule for the whole Garden (§6). v0.6 recorded your note that the paths are clear and smooth and the Garden well kept (§6, §7). v0.5 recorded your yes to the spring-built centre and answers whether it could be out in the delta (§5.7). v0.4 added where the water comes from. v0.1 was written from your note below; v0.2 added your two comments on it (the stones' size and the ground itself, §5.4; the mood and shadow, §6); v0.3 added your rule for the living things (§6). Decided: **everything in §6**, under one rule, yours: "find the line between natural and too rare to be natural; I think that's where the magic is" ([FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far)). Everything else here is still a proposal.
+**Status:** v1.5, 2026-10-13 (later): your notes on the walk in, the look of one man's work and the blue and yellow accent (§11); the plan redrawn with the east entrance and the path along the river; the trees' line in §6 brought up to date. v1.4, 2026-10-13: your answers on §10 recorded and checked. Gold, as long as it's factual: river gold failed the check and is out; gold light, bdellium and living gold stay (§10.2). The trees: life north, knowledge south (§10.3). The Garden before Eridu, about 5500 BC, researched (§10.4). Babel is Eridu, checked (§10.7). Every date in this file checked against the sources (Eridu from about 5400 BC; Ur about 20 km). v1.3, 2026-10-10 (late): fixes from the project audit. Ezekiel 31:4 is an echo of Eden, not a picture of it, so the water all round is Compatible, not Supported (§2, §5.2, §9.5); Eridu's first shrine is older than the provisional date for Adam, so Eridu as the gate needs a date decision (§3, §10.4); Ur is about 20 km away, not 12 (§9.3); and smaller corrections (the elephants and tigers, tufa and travertine, the Iranian words). v1.2, 2026-10-10 (evening): your notes on §9 are answered in §10. **Decided:** the ring, with Adam's work (straight headwaters, a squared top, smoothed stone); the light (sunny, cool, breezy, dry); the rivers crossing the ring; the limestone a stranger in the plain. §6 is updated to match. **Open:** gold, which tree is north, Eridu as the gate, and Babel. v1.1, 2026-10-10: your questions of 2026-10-10 (why the Garden is where it is, Babel, Ur and Uruk, and a ring instead of a square) are answered in §9, **as proposals: nothing in §6 changes until you say so.** v1.0, 2026-10-09: **the plan is decided** and folded into the [dossier's §2](./DOSSIER.md#2-the-look). v1.0 adds your last answers: the plan, the two kinds of path, the spring in the marsh, and your rule for the whole Garden (§6). v0.6 recorded your note that the paths are clear and smooth and the Garden well kept (§6, §7). v0.5 recorded your yes to the spring-built centre and answers whether it could be out in the delta (§5.7). v0.4 added where the water comes from. v0.1 was written from your note below; v0.2 added your two comments on it (the stones' size and the ground itself, §5.4; the mood and shadow, §6); v0.3 added your rule for the living things (§6). Decided: **everything in §6**, under one rule, yours: "find the line between natural and too rare to be natural; I think that's where the magic is" ([FOUNDATIONS](../../../../canon/FOUNDATIONS.md#4-decisions-so-far)). Everything else here is still a proposal.
 
 Your note of 2026-10-09:
 
@@ -223,8 +223,8 @@ Your question (2026-10-09): "How would the river have sprung up from the middle.
 3. **The four headwaters and their paths.** The spring's four channels run out from the terraces to the four directions: the "four heads" of 2:10. They're straight to the ring (on the limestone's joints, and straightened further by Adam), cross it as current seams, and leave through the rim as natural rivers (§10.6). They're somewhat straight, and the paths along both banks are **the beautiful grey limestone**: the broad pavement slabs of §5.4, smooth, clean and wide. Why straight, naturally: limestone cracks along straight parallel joints, and water running over it follows them, so a spring's channels across bare limestone really do run in near-straight lines, with the slabs beside them split along the same lines. Straight enough to feel laid out, not so straight it couldn't have happened. That's your line.
 4. **The four quarters and their winding paths.** Between the headwaters, four planted quarters of the circle, each different (one of orchard, one of tall trees, one of flowering plants and open ground, one dense and shaded). **Clear paths wind all through them**, and these needn't be limestone: packed earth, fine pale gravel, sand, stepping stones across the wet places, the soft ground worn smooth by feet and hooves. They curve with the land and the trees, the way animal trails do. They're clear and tended (your note, 2026-10-09), the planting kept up to their edges. The animals use both kinds of path.
 5. **The terraces.** At the centre, five broad, low steps of grey stone, built by the spring itself (§5.7): round at the foot as the spring laid them, and squared toward the top by Adam's work (decided 2026-10-10, §9.5), about 130 m across at the foot and a 40 m square at the top, each about two and a half metres high, about 12 m in all. Worn, overgrown at the edges, smoothed where he worked them. A ramp or stair in the middle of each face, beside the channel.
-6. **The top.** Open. A pavement of lighter stone that catches the sun (Ezekiel's "stones of fire"). The spring rises in the middle and splits four ways to the four faces (§5.7: an artesian spring that built the terraces itself). The two trees stand on either side of it, north and south (your proposal, 2026-10-10; which is which is open, §10.3), looking different but neither strange (dossier §2). That is Revelation 22:2 too: the tree of life "on either side of the river." From here you can see the whole Garden and the water round it.
-7. **The way east.** One causeway across the ring on the east side, beside the eastern river where it leaves, the eastern headwater's limestone path carried on across the water to the plain. Coming in, you walk straight up between the two trees. It's the only dry way in or out. It's how they leave, a descent from the top and then the crossing, and the cherubim and the turning fire stand on it (3:24).
+6. **The top.** Open. A pavement of lighter stone that catches the sun (Ezekiel's "stones of fire"). The spring rises in the middle and splits four ways to the four faces (§5.7: an artesian spring that built the terraces itself). The two trees stand on either side of it, the tree of life north and the tree of knowledge south (decided 2026-10-13, §10.3), looking different but neither strange (dossier §2). That is Revelation 22:2 too: the tree of life "on either side of the river." From here you can see the whole Garden and the water round it.
+7. **The way east.** One causeway across the ring on the east side, tight along the eastern river's bank where it leaves, with the path keeping to the river for a while outside the ring as it winds into the marsh (2026-10-13, §11.1), the eastern headwater's limestone path carried on across the water to the plain. Coming in, you walk straight up between the two trees. It's the only dry way in or out. It's how they leave, a descent from the top and then the crossing, and the cherubim and the turning fire stand on it (3:24).
 
 ### The light and the palette
 
@@ -232,7 +232,7 @@ Your question (2026-10-09): "How would the river have sprung up from the middle.
 
 
 - **Morning:** a brief mist off the water and the channels that burns off in the first hour, cool blue shade, warm shafts through the trees. The first shot of the Garden.
-- **Day:** the blue thins out but stays in the shadows. Grey stone, deep green, and color only in what lives (the dossier's rule): flowers, fruit, birds, fish in the channels, the animals.
+- **Day:** the blue thins out but stays in the shadows. Grey stone, deep green, and color only in what lives (the dossier's rule): flowers, fruit, birds, fish in the channels, the animals. **Blue and yellow are the accent** wherever they come naturally (2026-10-13, §11.5).
 - **Evening (3:8):** the wind of the day moving the trees; the light goes long and gold across the terraces; the shadows go deep blue. The sound in the wind is heard in that light.
 - **Outside:** the plain's summer: flat, white, hot, hazy, without shade.
 
@@ -476,3 +476,94 @@ The ring is the spring's own pool, held up by its rim a little above the marsh, 
 **The date.** The Amar-Sin echo (point 2) needs Babel about 2040 BC, under the kings of Ur, still before Abraham (1951 BC), who is born in their city. If Babel is dated earlier, about 2400–2200 BC (the proposal in README item 4), the tower they leave unfinished is an earlier platform at Eridu, and Amar-Sin's is only its last echo. Either works with Babel at Eridu.
 
 **What it changes:** hour 7's line on the map; Babel over the Garden's centre (§9.4) is set aside. The flood decides how drowned the Garden is when the tower goes up (README item 3). *P4 for the texts; P5 for the reading. Grade: Tension on Babel's location (10:10), Compatible on everything else.*
+
+---
+
+
+## 11. Your notes of 2026-10-13: the walk in, one man's work, blue and yellow
+
+> After the opening, when Adam breathes out, he should be positioned at the entrance of the garden on the east side (also, the path to the entrance should stay with the river for a little while, not get positioned lower like it is in the svg image). There wont be any talking, but it will just be a scene of him walking to the center of the garden. It is as hes walking to the center that he sees all the animals of the garden, walking by them. Adam himself looks like a man in his early 20s, and he has a slight pleasant wonder on his face as we walks through and looks at the garden. The sound is peaceful, no or not much music here. There are some birds chirping and other natural noises as Adam walks through the Garden.
+>
+> The garden itself should look artificial enough to look like Adam has been there for years, but natural enough to still seem like only one person worked to upkeep this garden; the goal is for the audience to almost think that the garden doesnt look natural, but when thinking about it more, you could see how one man could have completed it with some time.
+>
+> The garden itself is stone grey and forest green, which is good. But there needs to be an aesthetic of blue and yellow; so wherever these complimentary colors can be highlighted naturally, they should be. I like your idea that the Garden feels like spring.
+
+**Recorded as decided (2026-10-13):** all of it, as your direction for the scene and the look. The spring season was already decided (§10.1). And on the card in the thread: the Garden already looks kept when Adam first walks in ("Prepared," §11.4).
+
+### 11.1 The entrance, and the path along the river
+
+- **Adam's first shot** (2:8, the breath from the cliff let out) is at the **east entrance**, where the causeway reaches the island. He stands on the eastern headwater's limestone path, facing west, with the channel running beside him toward the spring and the terraces ahead.
+- **The causeway runs tight along the eastern river's bank,** and outside the ring **the path keeps to the river** as it winds into the marsh, for a while, before the two part. The plan is redrawn so (the first version had the causeway set apart, below the river). A path along a river bank is the most natural path there is, so this sits well on your line.
+- It's the one way in and the one way out (3:24), so the hour's last shots can retrace this walk backwards: down the eastern face, along the eastern headwater, over the causeway beside the river, past the cherubim.
+
+### 11.2 The walk
+
+- **No talking.** He walks from the entrance along the eastern headwater to the centre, then up the terraces to the two trees. The walk can wander off the straight path into the quarters and back (§6: about three minutes straight; the scene can take longer).
+- **The animals.** He sees all of them as he walks, the plain's and the wider region's (§6, "The plants and animals"): grazing, drinking at the channels, lying in the shade, birds on the stone. They look up at him and go back to what they were doing; the lion lies down (dossier §1). He passes them; he doesn't meet them. Meeting each one comes in the naming (2:19–20, movement 2), when they're brought to him one by one.
+- **Adam:** a man in his early twenties, with a slight, pleasant wonder on his face as he walks and looks.
+- **It ends at the centre** as decided ([009](../../../../discussions/009-god-in-the-garden.md#decision)): the climb, the two trees, the world going quiet, the held note, and the command in his own voice, the first words of the series.
+
+### 11.3 The sound
+
+**Peaceful and natural: no music, or very little.** The Opening's held note faded under the wind at the cliff and stays away until the command, so the walk is the first time in the series the world is heard on its own. It's made separately, in FL Studio, like the Opening's sound (your note of 2026-10-13).
+
+What's in it, all of the region:
+- **Water:** the spring, the channels, the current seams; a fish turning.
+- **Wind** in the plane leaves and the reeds; bees in the flowers.
+- **Birds:** the hoopoe's soft "oop-oop-oop"; doves purring; the white-eared bulbul, the commonest garden songbird of Iraq; reed warblers at the edge of the ring; a kingfisher's whistle over the water; bee-eaters trilling overhead; the golden oriole's fluting call.
+- **Frogs** at the water's edge.
+- **The animals' small sounds:** hooves on stone, an animal drinking.
+
+*High confidence that all of these birds live in or pass through southern Iraq.*
+
+### 11.4 The look: one man's work
+
+**The aim (yours):** the audience almost thinks the Garden isn't natural, and then, thinking about it, sees how one man could have done it with time. It's your rule ("the line between natural and too rare to be natural") seen from the other side: too kept to be wild, never more than one pair of hands could keep.
+
+**What one man can do, so it shows:**
+- path edges a little too clean;
+- stone swept;
+- stepping stones set exactly a stride apart;
+- plants pruned and trained, slightly too even;
+- no dead wood;
+- channels cleared;
+- loose stones set along the edges;
+- the top squared and levelled, by scraping and pressing fresh spring stone (§9.5).
+
+**What he can't do, so it never shows:**
+- carving;
+- walls;
+- moved monoliths;
+- regular masonry;
+- symmetry beyond the cross of the four headwaters.
+
+Plants of different ages, a few things left to grow as they will, and wear where feet go keep it on the line.
+
+**At the walk-in (decided 2026-10-13: "Prepared").** The walk is his first moment there: God planted the Garden and put him in it (2:8, 15).
+
+**It already looks kept.** It's God's planting, made ready for him: it looks as if someone has kept it, and no one is there. That's the second register, a place prepared. His own work, through movement 4, keeps it so and adds his mark (the squared top, the straighter headwaters, §9.5).
+
+### 11.5 Blue and yellow
+
+**Grey and forest green are the base** ("which is good"). **Blue and yellow are the accent,** complementary, drawn out wherever they come naturally. They stay inside the color rule (color only in what lives, plus light, water and sky), and they come small and scattered against the grey and green. Nothing made is blue or yellow.
+
+**Blue:**
+- **Sky and water:** the deep sky of dry, clear air (§10.1), the shade (§6: the blue is in the shadows), the channels, the ring, the dawn mist.
+- **Flowers:** irises and grape hyacinth from the Zagros and Taurus spring, chicory, alkanet, blue flax, cornflower.
+- **Birds:** the white-throated and common kingfishers; the European roller, turquoise, passing through in spring; the blue rock thrush, a blue bird on grey stone.
+- **Insects:** blue damselflies and dragonflies over the channels.
+
+**Yellow:**
+- **Light:** the sun's shafts through the canopy and the gold evening (§10.2).
+- **Flowers:** crown daisy, yellow flag iris at the water's edge, wild mustard, buttercups, the centres of chamomile, and wild barley turning gold.
+- **Birds:** the golden oriole.
+- **Living things:** bees and pollen in the light, the bdellium resin (§10.2).
+- **On the stone:** yellow lichen on the old grey limestone, which is alive, so inside the rule.
+
+**Where they meet:**
+- The **European bee-eater** carries both, a yellow throat and a blue-green belly, in flocks over the water.
+- Yellow flag iris stands against blue water.
+- Yellow lichen and a blue rock thrush on the same grey step.
+- A shaft of yellow sun falls into a blue shadow.
+
+**Grade: Compatible.** The species are of the region or the wider region, at P2/P4. *Medium confidence on the exact ranges of a few flowers about 5500 BC.*
