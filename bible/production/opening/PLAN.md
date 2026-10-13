@@ -2,7 +2,7 @@
 
 > How to make the Opening's five minutes at high quality, and whether I can. Your request of 2026-10-13: "I want you to tell me if you think you actually can make this animatic at a high quality? And if so, how you would do so." With your rules: the sound is its own part, made by you in FL Studio and laid over the finished picture; no face scan if a normal face can be had without one; settle the pipeline and the workflow first.
 
-**Status:** v1, 2026-10-13. Replaces the assessment of 2026-10-09; what still held from it is folded in here. The research behind every tool and price is in [TOOLS.md](./TOOLS.md), with sources. The visual references are in [REFERENCES.md](./REFERENCES.md). Everything here is my view (P6) unless it quotes you; the decisions it rests on are in [FOUNDATIONS §4](../../canon/FOUNDATIONS.md#4-decisions-so-far).
+**Status:** v1, 2026-10-13. The research behind every tool and price is in [TOOLS.md](./TOOLS.md), with sources. The visual references are in [REFERENCES.md](./REFERENCES.md). Everything here is my view (P6) unless it quotes you; the decisions it rests on are in [FOUNDATIONS §4](../../canon/FOUNDATIONS.md#4-decisions-so-far).
 
 ---
 

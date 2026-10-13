@@ -157,7 +157,7 @@ And a new note on how the faces play:
 - **The sleep.** "In peace I will both lie down and sleep" (Ps 4:8). "He gives to his beloved sleep" (Ps 127:2). And the Garden's turning point is a sleep: the "deep sleep" in which the woman is made (Gen 2:21).
 - **One shape.** Separation climbs and connection settles. That's evening and morning as a rhythm and not only as a switch.
 
-One choice is left about sound: do we hear the laugh? Nothing is spoken in the Opening, and the first human voices are meant to come with the band. My default is that the laugh is carried by the static's hiss in pulses, with no voice. It's in [treatment §5](../story/arcs/01-beginnings/opening/TREATMENT.md#5-whats-mine-and-the-open-problems).
+One choice is left about sound: do we hear the laugh? Nothing is spoken in the Opening, and the first human voices are meant to come with the band. My default is that the laugh is carried by the static's hiss in pulses, with no voice. It's in [treatment §4](../story/arcs/01-beginnings/opening/TREATMENT.md#4-whats-mine-and-the-open-problems).
 
 **3. "Duality creates God."**
 
