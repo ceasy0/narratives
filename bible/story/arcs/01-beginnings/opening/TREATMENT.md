@@ -2,9 +2,9 @@
 
 > Genesis 1:1–2:7. One unbroken sequence, 5 minutes, no words. It opens Episode 1; the Garden (2:8–3:24) follows it.
 
-**Status:** v3.3, 2026-10-09. Applies your notes on animatic v2 (2026-10-09): the fade starts on the first frame; the static is sand flowing over a face that rises out of it, so its features are seen; the large face sits to the side, turned toward the small one, not behind it; the turn-overs are fronts of light, fast but not cuts; the faces break back into grains rather than being laid over them; the first colors are flashes of light and the shimmer is stronger. Nothing in the table (§2) moved. You thought the treatment fits what you imagine (2026-10-09); the work now is getting the animatic to match it. What changed is in §4. v3.2 (2026-10-08) applied your note of 2026-10-08: beat 1 is ten seconds longer, and those ten seconds are a fade in from black, with the sound leading the picture slightly. The sequence now runs 5:00, and every time after 0:00 is ten seconds later than in v3.1 (§4). v3.1 (2026-10-07) applied your three notes on v3: the sound of the release, the faces forming in sync, and the four-face rule (§4, §5). Your checks of 2026-10-07 confirmed the whisper, the laugh in the hiss, the impact and the *Triceratops*, the child's burial and the face as God's image. v3 (2026-10-05) was revised from your notes on v2. You kept all eleven of my suggestions ("do not strike any of them right now") and answered the five open items. New in v3: a sound for the face in the static, the face turning white as the static is whipped away, the four faces rising and falling in intensity, flying things, the impact placed at a safe distance, the band always walking left, the burial checked against the evidence, and a greener Nile. Everything tagged P5 is yours. Everything tagged P6 is my suggestion. What changed is in §4.
+**Status:** v3.4, 2026-10-13. Two fixes inside beats 11 and 12, with no beat moved: the impact now happens inside beat 11 (it had run past 3:42, so it was never on screen), and beat 12 reaches the tree sooner so the leaf falls slowly and lies still for two seconds before the running feet whip it away (your note, 2026-10-13). The plan for making this at full quality is the [production plan](../../../../production/opening/PLAN.md). What changed is in §4. v3.3 (2026-10-09) applied your notes on animatic v2 (2026-10-09): the fade starts on the first frame; the static is sand flowing over a face that rises out of it, so its features are seen; the large face sits to the side, turned toward the small one, not behind it; the turn-overs are fronts of light, fast but not cuts; the faces break back into grains rather than being laid over them; the first colors are flashes of light and the shimmer is stronger. Nothing in the table (§2) moved. You thought the treatment fits what you imagine (2026-10-09); the work now is getting the animatic to match it. What changed is in §4. v3.2 (2026-10-08) applied your note of 2026-10-08: beat 1 is ten seconds longer, and those ten seconds are a fade in from black, with the sound leading the picture slightly. The sequence now runs 5:00, and every time after 0:00 is ten seconds later than in v3.1 (§4). v3.1 (2026-10-07) applied your three notes on v3: the sound of the release, the faces forming in sync, and the four-face rule (§4, §5). Your checks of 2026-10-07 confirmed the whisper, the laugh in the hiss, the impact and the *Triceratops*, the child's burial and the face as God's image. v3 (2026-10-05) was revised from your notes on v2. You kept all eleven of my suggestions ("do not strike any of them right now") and answered the five open items. New in v3: a sound for the face in the static, the face turning white as the static is whipped away, the four faces rising and falling in intensity, flying things, the impact placed at a safe distance, the band always walking left, the burial checked against the evidence, and a greener Nile. Everything tagged P5 is yours. Everything tagged P6 is my suggestion. What changed is in §4.
 
-**This treatment is the Opening's beat sheet, and the Opening is the exception to the first pass** (your decision, 2026-10-07). Its [script](../../../../scripts/beginnings/opening.fountain) (v1.2) and an [animatic](../../../../production/opening/README.md) (v3) of all fourteen beats with sound exist as of 2026-10-09, cut to the table in §2; the order of the build is in the [dossier §6](./DOSSIER.md#6-the-visualization). Change a timing here, and the animatic re-renders to it.
+**This treatment is the Opening's beat sheet, and the Opening is the exception to the first pass** (your decision, 2026-10-07). Its [script](../../../../scripts/beginnings/opening.fountain) (v1.3) and an [animatic](../../../../production/opening/README.md) (v3.1) of all fourteen beats with sound exist as of 2026-10-13, cut to the table in §2; the order of the build is in the [production plan](../../../../production/opening/PLAN.md). Change a timing here, and the animatic re-renders to it.
 
 ---
 
@@ -150,13 +150,13 @@ We stay on the dead animal's face, and time runs. It's the last time the world m
 
 Where the head lay, a shoot. It's a sapling, then a tree, in a few seconds.
 
-One leaf comes loose and falls into frame. It settles on the earth.
+One leaf comes loose and falls into frame, slowly, rocking from side to side the way a real leaf falls. It settles on the earth. [[Your note (2026-10-13): "the falling leaf should feel like a slow scene that gets whipped into motion and action by the tribe of people running over it."]]
 
 Everything is still. Two seconds.
 
 ### 13. Fill the earth (4:00–4:36)
 
-Feet. A crowd of them, running, straight over the leaf, from right to left. People, shouting, wild. We go with them.
+Feet. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up and away, tumbling. People, shouting, wild. We go with them.
 
 A band of early humans, men and women, with spears and tools, in forest. Something is chasing them, or they're chasing something. [[P1: 1:27, "male and female he created them."]]
 
@@ -185,6 +185,16 @@ Closer: the eye, with the river in it. In the dark of the pupil, for an instant,
 Black, on the held breath. [[Decided 2026-10-05: the breath is let out in the Garden's first shot, by Adam. On your recap reading, this is the hinge: 2:7 closes the recap, and 2:8 opens the new story with "the man whom he had formed."]]
 
 ## 4. What changed
+
+### From v3.3 to v3.4 (2026-10-13)
+
+The table (§2) is unchanged.
+
+| v3.3 | v3.4 | Why |
+|---|---|---|
+| The leaf falls in about a second and a half, then half a second of stillness (the script and animatic; this treatment already asked for two) | The leaf falls slowly, for about four seconds, then two seconds of stillness; beat 12's earlier stages run quicker to make room | Your note: the leaf is too fast; it should be a slow scene |
+| The feet run over the leaf | The rush of feet whips the leaf up and away | Your note: the tribe whips the slow scene into motion |
+| The impact's glow, quake and falling sky timed at 3:41–3:50, past beat 11's end | All of it inside beat 11: the glow at 3:36, the quake at 3:38, the sky falling from 3:39 and still falling over the cut into beat 12 | The audit (2026-10-10, README item 21): it had never been on screen. Your answer: fix as much as you can |
 
 ### From v3.2 to v3.3 (2026-10-09)
 
