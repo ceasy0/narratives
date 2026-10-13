@@ -2,9 +2,9 @@
 
 > Genesis 1:1–2:7. One unbroken sequence, 5 minutes, no words. It opens Episode 1; the Garden (2:8–3:24) follows it.
 
-**Status:** v3.4, 2026-10-13. Two fixes inside beats 11 and 12, with no beat moved: the impact now happens inside beat 11 (it had run past 3:42, so it was never on screen), and beat 12 reaches the tree sooner so the leaf falls slowly and lies still for two seconds before the running feet whip it away (your note, 2026-10-13). The plan for making this at full quality is the [production plan](../../../../production/opening/PLAN.md). What changed is in §4. v3.3 (2026-10-09) applied your notes on animatic v2 (2026-10-09): the fade starts on the first frame; the static is sand flowing over a face that rises out of it, so its features are seen; the large face sits to the side, turned toward the small one, not behind it; the turn-overs are fronts of light, fast but not cuts; the faces break back into grains rather than being laid over them; the first colors are flashes of light and the shimmer is stronger. Nothing in the table (§2) moved. You thought the treatment fits what you imagine (2026-10-09); the work now is getting the animatic to match it. What changed is in §4. v3.2 (2026-10-08) applied your note of 2026-10-08: beat 1 is ten seconds longer, and those ten seconds are a fade in from black, with the sound leading the picture slightly. The sequence now runs 5:00, and every time after 0:00 is ten seconds later than in v3.1 (§4). v3.1 (2026-10-07) applied your three notes on v3: the sound of the release, the faces forming in sync, and the four-face rule (§4, §5). Your checks of 2026-10-07 confirmed the whisper, the laugh in the hiss, the impact and the *Triceratops*, the child's burial and the face as God's image. v3 (2026-10-05) was revised from your notes on v2. You kept all eleven of my suggestions ("do not strike any of them right now") and answered the five open items. New in v3: a sound for the face in the static, the face turning white as the static is whipped away, the four faces rising and falling in intensity, flying things, the impact placed at a safe distance, the band always walking left, the burial checked against the evidence, and a greener Nile. Everything tagged P5 is yours. Everything tagged P6 is my suggestion. What changed is in §4.
+**Status:** v3.4, 2026-10-13: the Opening's beat sheet, as the [script](../../../../scripts/beginnings/opening.fountain) (v1.3) and the [animatic](../../../../production/opening/README.md) (v3.1) are cut to it. Everything tagged P5 is yours; everything tagged P6 is my suggestion.
 
-**This treatment is the Opening's beat sheet, and the Opening is the exception to the first pass** (your decision, 2026-10-07). Its [script](../../../../scripts/beginnings/opening.fountain) (v1.3) and an [animatic](../../../../production/opening/README.md) (v3.1) of all fourteen beats with sound exist as of 2026-10-13, cut to the table in §2; the order of the build is in the [production plan](../../../../production/opening/PLAN.md). Change a timing here, and the animatic re-renders to it.
+**The Opening is the exception to the first pass** (your decision, 2026-10-07), so it has a script and an animatic ahead of the rest. The timings are the table in §2: change a timing here, and the animatic re-renders to it. How the finished Opening gets made is the [production plan](../../../../production/opening/PLAN.md).
 
 ---
 
@@ -44,7 +44,7 @@ Six rules, from your notes. Every beat follows them.
 
 **Your reading puts the days in order,** from the first day to the seventh. With the wings added, nothing in Genesis 1 is now out of order ([dossier §2](./DOSSIER.md#2-your-reading-of-genesis-1-and-how-it-fits)). **And your reading of 2:4–7 as a recap** (2026-10-05) is how the Opening was already built: 2:4–7 isn't shown as something that happens afterward; it's shown inside the seventh day, at the cliff. My view of that reading is in the [dossier §2](./DOSSIER.md#on-247).
 
-**Pace.** Beat 1 is slow, and slower since v3.2: thirty-eight seconds, the first ten of them a fade. Beat 2 is instant. From there each beat covers more time in less screen until the leaf (two seconds of stillness) and the cliff (twenty-four, in real time). There are no cuts to black inside it. Each beat hands over through the thing we're already looking at. Beat 3 now carries two arcs of expression in 22 seconds, about 12 for the separation and 10 for the connection. That's tight but in keeping with "very fast." The storyboard will tell us whether it needs a few more seconds.
+**Pace.** Beat 1 is slow: thirty-eight seconds, the first ten of them a fade. Beat 2 is instant. From there each beat covers more time in less screen until the leaf (two seconds of stillness) and the cliff (twenty-four, in real time). There are no cuts to black inside it. Each beat hands over through the thing we're already looking at. Beat 3 now carries two arcs of expression in 22 seconds, about 12 for the separation and 10 for the connection. That's tight but in keeping with "very fast." The storyboard will tell us whether it needs a few more seconds.
 
 **One thing is followed all the way through.** A face becomes a particle. The particle becomes a proton. The proton gives off a photon. The photon feeds a cell. The cell's line becomes an animal. The animal leaves a body. The body becomes a tree. The tree drops a leaf. People run over the leaf, and one of them has the face.
 
@@ -86,7 +86,7 @@ Four faces, and two things that happen between them. The halves aren't persons. 
 
 It turns back. Dark ground. The small face wakes white, into the dark, already afraid, and the large face is already laughing. This time the blow lands and we see it. Over again: white ground, dark face, the hurt tended, and both faces sinking toward sleep. Dark. Light. Each turn is quicker than the last, and each goes further: the laugh wider and the terror sharper, the peace sooner and the sleep deeper. The note under it climbs. [[P1: 1:5, "there was evening and there was morning, the first day." P5: yours.]]
 
-After the first few turns, the change stops taking the whole frame at once. It spreads. The turn runs through the ground in uneven fronts, the way ink runs through water or frost creeps over glass, and leaves behind it patches of every shape and size, each turning over on its own beat. The patches break into smaller ones, the way mud cracks as it dries: never in lines, never in a grid, never like a screen split into screens. It goes on until black and white are the size of grains and the frame is a sea of them again. It isn't static this time. Every grain is turning between dark and light too fast to follow, each on its own beat, so the frame as a whole never flashes. It shimmers. Where two grains meet there's a flash of color, the first color in the sequence: not paint but light, sparks that flare and die, with the oil-on-water colors of a soap film drifting through them. Each patch shows the faces in its own state, so as the patches shrink the faces break up into the grains themselves; they aren't laid over the sea, they become it. [[P5: yours (2026-10-09): the first colors should look like flashes of light, the shimmer more pronounced, and the split back into grains smooth, not overlaid. P5: yours: the alternation speeds up until the ground is a sea of particles again; and yours (2026-10-05): the divisions look organic, "not like 4 screens making up the whole screen." P6: the spreading, which keeps the flicker safe to watch (§5, problem 1), and color born from black and white. P2: rapid black-and-white flicker really does produce color in the eye; they're called Fechner colors.]]
+After the first few turns, the change stops taking the whole frame at once. It spreads. The turn runs through the ground in uneven fronts, the way ink runs through water or frost creeps over glass, and leaves behind it patches of every shape and size, each turning over on its own beat. The patches break into smaller ones, the way mud cracks as it dries: never in lines, never in a grid, never like a screen split into screens. It goes on until black and white are the size of grains and the frame is a sea of them again. It isn't static this time. Every grain is turning between dark and light too fast to follow, each on its own beat, so the frame as a whole never flashes. It shimmers. Where two grains meet there's a flash of color, the first color in the sequence: not paint but light, sparks that flare and die, with the oil-on-water colors of a soap film drifting through them. Each patch shows the faces in its own state, so as the patches shrink the faces break up into the grains themselves; they aren't laid over the sea, they become it. [[P5: yours (2026-10-09): the first colors should look like flashes of light, the shimmer more pronounced, and the split back into grains smooth, not overlaid. P5: yours: the alternation speeds up until the ground is a sea of particles again; and yours (2026-10-05): the divisions look organic, "not like 4 screens making up the whole screen." P6: the spreading, which keeps the flicker safe to watch (§4, problem 1), and color born from black and white. P2: rapid black-and-white flicker really does produce color in the eye; they're called Fechner colors.]]
 
 The faces have turned over so fast that every expression is on them at once: the laugh and the sleep, the terror and the peace, too fast to tell apart. They blur into one grey. Where they were there's a single grain like all the others, and we stay on it. [[P5: yours: the face becomes one particle, and everything up to here is 1:1–5. P6: all four expressions in the one grey, as "the totality."]]
 
@@ -180,78 +180,11 @@ We move in, slowly, on one of them. We've seen this face before, at the very sta
 
 The held note, which hasn't stopped since the first face's eyes opened, fades under the wind. The face draws a breath in. [[P1: 2:7, "and breathed into his nostrils the breath of life." Choice 8, decided: real time, one breath. P5: your reading (2026-10-05) that 2:4–7 is a recap of 1:1–2:3. On it, the cliff is where the two meet: the seventh day's rest, and the recap's land with no one to work it, watered from below, and the human formed from its dust.]]
 
-Closer: the eye, with the river in it. In the dark of the pupil, for an instant, the grain of the static. [[P6, kept: the first glimpse (§6).]]
+Closer: the eye, with the river in it. In the dark of the pupil, for an instant, the grain of the static. [[P6, kept: the first glimpse (§5).]]
 
 Black, on the held breath. [[Decided 2026-10-05: the breath is let out in the Garden's first shot, by Adam. On your recap reading, this is the hinge: 2:7 closes the recap, and 2:8 opens the new story with "the man whom he had formed."]]
 
-## 4. What changed
-
-### From v3.3 to v3.4 (2026-10-13)
-
-The table (§2) is unchanged.
-
-| v3.3 | v3.4 | Why |
-|---|---|---|
-| The leaf falls in about a second and a half, then half a second of stillness (the script and animatic; this treatment already asked for two) | The leaf falls slowly, for about four seconds, then two seconds of stillness; beat 12's earlier stages run quicker to make room | Your note: the leaf is too fast; it should be a slow scene |
-| The feet run over the leaf | The rush of feet whips the leaf up and away | Your note: the tribe whips the slow scene into motion |
-| The impact's glow, quake and falling sky timed at 3:41–3:50, past beat 11's end | All of it inside beat 11: the glow at 3:36, the quake at 3:38, the sky falling from 3:39 and still falling over the cut into beat 12 | The audit (2026-10-10, README item 21): it had never been on screen. Your answer: fix as much as you can |
-
-### From v3.2 to v3.3 (2026-10-09)
-
-Your notes on animatic v2. The table (§2) is unchanged: no beat moved and nothing was added or cut.
-
-| v3.2 | v3.3 | Why |
-|---|---|---|
-| The picture fades up from about 0:02 | The fade starts on frame 0, slowly; the sound still a little ahead | Your note |
-| The face stands out of the static by the way the static inside it moves | The static is sand pouring over a face rising under it; the face is read by how the grains run around its contours and catch the light | Your note: "like flowing sand overtop an extruding face," with the eyes, nose and mouth readable |
-| The hiss alone, then the whisper | Wind, the crackle of pouring sand and a low swell under it, then the whisper | Your note that the mix should be a soundscape |
-| The large face forms behind the small one | It forms off to the side, turned toward the small one, lit only by it | Your note |
-| The turn-over in one frame | A front of light from where they touch, crossing the frame in half a second | Your note: smoother transitions |
-| The faces fade into the grain sea | Each patch shows the faces in its own state, so the faces break up into the grains | Your note: the split back into grains was "overlaid on the scene" |
-| A flash of color where grains meet | Sparks of colored light that flare and die, with a drifting soap-film sheen | Your note: flashes of light, a stronger shimmer |
-| Beat 5: grains appearing in pairs, depth | The same, in front of a fall into the Mandelbrot set's boundary | Your suggestion of fractal geometry; my staging (P6). It's the clearest picture I know of "patterns that gather and lose themselves, never regular," and of depth that never runs out |
-
-### From v3.1 to v3.2 (2026-10-08)
-
-| v3.1 | v3.2 | Why |
-|---|---|---|
-| Opens cold on full static at 0:00 | Opens on black and silence; the hiss rises first, and the static fades up from about 0:02 to full strength at 0:10 | Your note: for the first ten seconds the scene and the audio fade in from black. The sound leading slightly is my suggestion, which you confirmed. |
-| Beat 1 runs 28 seconds; the sequence runs 4:50 | Beat 1 runs 38 seconds; the sequence runs 5:00 | Your note: the static scene extended by ten seconds. The added ten seconds are the fade. |
-| The release at 0:28; every later beat as timed in v3.1 | The release at 0:38; every time after 0:00 is ten seconds later; no beat after the first changes length | The ten seconds go in at the front |
-| "A little under five minutes" (your brief of 2026-10-03) | Five minutes exactly | A change to a recorded decision, logged in [FOUNDATIONS §4](../../../../canon/FOUNDATIONS.md#4-decisions-so-far) |
-
-### From v3 to v3.1 (2026-10-07)
-
-| v3 | v3.1 | Why |
-|---|---|---|
-| The script and visualization wait for the end of the first pass | They go ahead now | Your decision: the Opening stays the exception |
-| "One enormous release, and then nothing" | The release has a body (a distorted sub-bass hit) and a layered mid-high tail, which is the static passing the ears and shutting behind the head; then silence; the held note rises out of the tail | Your note that the sound here needs to be incredibly powerful; my proposal attached |
-| The eyes open; then, in beat 3, the black gathers into the second face | The second face forms in the same instant the eyes and mouth open, and the turn-over forms both faces at once | Your note: perfectly synced, on both sides |
-| Malice, fear, upset, compassion, described in words | Each face's brows and mouth are set by your four-face rule: the large faces smile, the small faces frown; raised brows for fear and compassion, lowered for malice and upset | Your drawing and rule |
-| Five open checks | The whisper, the laugh in the hiss, the impact with a *Triceratops*, the child's burial and the face as God's image, all confirmed | Your answers |
-
-### From v2 to v3 (2026-10-05)
-
-| v2 | v3 | Why |
-|---|---|---|
-| The face appears in the static in silence, and the hiss climbs | A whisper made of the hiss comes from where the face is, then draws in and climbs | Your note that the face needs a sound |
-| Black and silence, then the face turns white | The static strips the face white in the instant it's whipped away; the eyes open after a beat of silence | Your note; 1:3–4 puts the light first and the seeing after |
-| Malice and terror; then content and eased | Fear climbs to terror against malice climbing to mad laughter; upset and compassion settle into peace and sleep | Your note on the faces' intensity |
-| The laugh had no sound | The laugh is carried by the static's hiss, in pulses, with no voice | Rule 1 (nothing spoken); your call in §5 |
-| The alternation breaks into halves, then quarters | It spreads in uneven, organic fronts and cracks like drying mud, never in lines or a grid; each grain on its own beat | Your note: organic, "not like 4 screens" |
-| Nothing flies | A great sea creature; wings above the water; insects over the shore; pterosaurs and birds by night; birds over the delta | Your yes to flying animals; 1:20–22 |
-| "A flash below the horizon, a wall of wind, fire falling"; the creature passes a body as it runs | A glow rising in the south, the ground heaving, the sky falling for hours; the body is already there, and the creature runs from it | Your note on the impact's distance |
-| Ash, a skull, the land greening | An impact winter, then ferns first, then flowering plants | The fern spike; a callback to beat 11 |
-| The band heads north, the view passing trees | Always moving right to left; the fight, the burial and the newborn all happen on the move | Your note |
-| "They bury someone" | A woman finishes a child's grave and walks on | You asked whether they buried their dead; the record is mostly children |
-| A green river through dry country; a pale, partly green delta | A high river with reeds, papyrus and hippos; a green delta, mist and birds | Your note; the Nile ran higher about 56,000–44,000 years ago |
-| 2:7 at the cliff, the breath across the cut | The same, now read as the hinge of your recap reading | Your reading of 2:4–7 |
-
-### From v1 to v2 (2026-10-03)
-
-Fourteen beats in place of eleven, following the days in order from your verse-by-verse reading; the static whipped behind the face in a blink; no taijitu, with the ground and the face trading black and white; the blow landing and healed, over and over; all four faces one face; color born in beat 4; the focus held like a face while the surround settles; the delta as it was about 55,000 years ago; the person at the cliff an ancestor of Adam; the breath drawn in at the cliff.
-
-## 5. What's mine, and the open problems
+## 4. What's mine, and the open problems
 
 **My suggestions (P6). You kept all eleven (2026-10-05).**
 
@@ -280,13 +213,13 @@ The finished render gets checked with a free analyzer, such as EA's open-source 
 
 **Problem 2: the breath. Decided 2026-10-05.** It crosses the cut: drawn in at the cliff, let out by Adam in the Garden.
 
-**The four faces' rule (yours, 2026-10-07), and my reading of it.** Your drawing sets it: two frowns, two smiles, two raised brows, two lowered. Reading the drawing, the two large faces smile (malice with its brows down, compassion with its brows up) and the two small faces frown (fear with its brows up, upset with its brows down). No two faces share both features, and the four together use each feature exactly twice. What I think it says, which is more than it looks: the whole's mouth is a smile on both sides, and only its brows change; the part's mouth is a frown on both sides. That's Discussion 007's decision drawn as a face: the same smile, read as malice by a frightened part and as care by a tended one. I'd keep the rule exactly, as the starting state of each half. The climb (fear to terror, malice to laughter) keeps the brows and opens the mouths wider; the settling (upset and compassion to peace and sleep) lets both faces converge, as you decided, so the rule dissolves on purpose on the connection side. The faces are real and human-looking, never the drawing's marks (STORYTELLING, "Real faces"). **Your check (2026-10-08):** "Sounds good, but make sure the emotions translate well to real faces. Those were quick drawings." So the rule is the starting state on paper, and the test is the filmed face in the build (dossier §6): if malice with lowered brows and a smile doesn't read as malice on a real face, the face wins and the rule bends.
+**The four faces' rule (yours, 2026-10-07), and my reading of it.** Your drawing sets it: two frowns, two smiles, two raised brows, two lowered. Reading the drawing, the two large faces smile (malice with its brows down, compassion with its brows up) and the two small faces frown (fear with its brows up, upset with its brows down). No two faces share both features, and the four together use each feature exactly twice. What I think it says, which is more than it looks: the whole's mouth is a smile on both sides, and only its brows change; the part's mouth is a frown on both sides. That's Discussion 007's decision drawn as a face: the same smile, read as malice by a frightened part and as care by a tended one. I'd keep the rule exactly, as the starting state of each half. The climb (fear to terror, malice to laughter) keeps the brows and opens the mouths wider; the settling (upset and compassion to peace and sleep) lets both faces converge, as you decided, so the rule dissolves on purpose on the connection side. The faces are real and human-looking, never the drawing's marks (STORYTELLING, "Real faces"). **Your check (2026-10-08):** "Sounds good, but make sure the emotions translate well to real faces. Those were quick drawings." So the rule is the starting state on paper, and the test is the real face in the build ([production plan §5](../../../../production/opening/PLAN.md#5-the-face-without-a-scan)): if malice with lowered brows and a smile doesn't read as malice on a real face, the face wins and the rule bends.
 
 **Problem 3: an hour. Decided for now (2026-10-08): six movements,** with Cain as a fallback only if the Garden's treatment runs thin ([Discussion 008, decision](../../../../discussions/008-adam-eve-and-the-garden.md#decision)). The six movements were first laid out in [Discussion 008, round 1](../../../../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07). Episode 1 is this sequence plus the Garden, at about an hour. That leaves roughly fifty-five minutes for Genesis 2:8–3:24: 42 verses with about a dozen recorded speeches. It would be the most invented hour in the series, in its most argued-over chapter. It's question 8 of [Discussion 008](../../../../discussions/008-adam-eve-and-the-garden.md).
 
 **One small choice: do we hear the laugh?** Rule 1 says nothing is spoken, and a laugh isn't speech, but it is a voice, and the first human voices are meant to come at beat 13. I've carried the laugh in the hiss: pulses in the rhythm of laughter, with no voice. The alternative was a real laugh, buried in the noise. **Decided 2026-10-07: the hiss, and no real laugh.**
 
-## 6. Glimpses
+## 5. Glimpses
 
 You want the Opening's look and sound to come down but never leave: kept in glimpses past Abraham and Moses and on to the end, with a conclusion that fulfils it. **Your note (2026-10-05):** the glimpses and the links back to the Opening will come naturally, and you'll say when a glimpse-type moment should occur. So nothing is planned from this table. It stays here as notes on where the texts themselves come close.
 
@@ -301,7 +234,7 @@ You want the Opening's look and sound to come down but never leave: kept in glim
 | Jesus | Matt 17:2; Mark 15:33–34 | His face shining like the sun. Later, darkness over the land and a face alone in it. |
 | The end | 1 Cor 13:12; Rev 22:4–5 | "Now we see in a mirror dimly, but then face to face." "They will see his face," and "night will be no more." |
 
-## 7. Additions register
+## 6. Additions register
 
 | # | Addition | Level | The test |
 |---|---|---|---|
