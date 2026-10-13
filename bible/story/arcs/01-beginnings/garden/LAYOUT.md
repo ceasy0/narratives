@@ -473,4 +473,6 @@ The ring is the spring's own pool, held up by its rim a little above the marsh, 
 
 **One thing I couldn't confirm:** David Rohl (*Legend*, 1998) argues the two cities were confused because both were written NUN.KI. Eridu's name is NUN.KI, but I found no source showing Babylon written that way, so it isn't part of the case.
 
+**The date.** The Amar-Sin echo (point 2) needs Babel about 2040 BC, under the kings of Ur, still before Abraham (1951 BC), who is born in their city. If Babel is dated earlier, about 2400–2200 BC (the proposal in README item 8), the tower they leave unfinished is an earlier platform at Eridu, and Amar-Sin's is only its last echo. Either works with Babel at Eridu.
+
 **What it changes:** hour 7's line on the map; Babel over the Garden's centre (§9.4) is set aside. The flood decides how drowned the Garden is when the tower goes up (README item 7). *P4 for the texts; P5 for the reading. Grade: Tension on Babel's location (10:10), Compatible on everything else.*
