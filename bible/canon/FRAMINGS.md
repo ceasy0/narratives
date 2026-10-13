@@ -618,4 +618,4 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 **First-pass grade:** **Compatible** as a series rule, in the form "the presence is God's; the form is what that age could receive" (Heb 1:1). **Tension** if it becomes a progression from wrong pictures to right ones. For the Garden, the grades by form are in [009, round 3](../discussions/009-god-in-the-garden.md#round-3--2026-10-13-god-as-an-old-man-seeded-not-decided): Supported for an appearance in human form as a father; Tension to Contradiction for a literal human ancestor.
 
-**Status:** under discussion in 009's round 3 (README item 15).
+**Status:** for the Garden, answered 2026-10-13 in a different form: not an appearance but a real man, Adam's ancestor, through whom God speaks as at Mamre ([009, your answer](../discussions/009-god-in-the-garden.md#round-3-your-answer--2026-10-13)). So the Garden's form is "an elder of the family," and the progression across the series stays open as a rule to try arc by arc.
