@@ -2,7 +2,7 @@
 
 > Your unconventional framings of ideas and passages: what each one says, which texts support it and which pull against it, a first-pass fit grade, and what it would change on screen. These grades are starting points for discussion, not verdicts.
 
-**Status:** v1.4, 2026-10-07 (status lines brought up to date on 2026-10-08 and 2026-10-09: Discussion 009 is decided, and the Opening's treatment is at v3.3; no grade changed). FR-10's resurrection sub-question is decided (in addition to the body); FR-16 gains the four-face rule; FR-19 (the devil as what evil actions are) is new. v1.3 (2026-10-05): FR-01, FR-02, FR-10, FR-15, FR-16 and FR-17 are updated from your notes on the Opening's treatment v2 and your answers to Discussions 001 and 007. FR-18 (Genesis 2:4–7 as a recap) is new. v1.2 (2026-10-03) updated FR-01 and FR-02 and added FR-15 to FR-17. Earlier: FR-03 revised, and FR-08 given its Ruth reading (v1.1, 2026-10-01). Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes of 2026-10-03.
+**Status:** v1.5, 2026-10-13: FR-20 (God shown as each age perceives him) is new, from your note on the Garden, under discussion in [009, round 3](../discussions/009-god-in-the-garden.md#round-3--2026-10-13-god-as-an-old-man-seeded-not-decided); FR-12's round 3 is accepted (your note on Discussion 002). v1.4, 2026-10-07 (status lines brought up to date on 2026-10-08 and 2026-10-09: Discussion 009 is decided, and the Opening's treatment is at v3.3; no grade changed). FR-10's resurrection sub-question is decided (in addition to the body); FR-16 gains the four-face rule; FR-19 (the devil as what evil actions are) is new. v1.3 (2026-10-05): FR-01, FR-02, FR-10, FR-15, FR-16 and FR-17 are updated from your notes on the Opening's treatment v2 and your answers to Discussions 001 and 007. FR-18 (Genesis 2:4–7 as a recap) is new. v1.2 (2026-10-03) updated FR-01 and FR-02 and added FR-15 to FR-17. Earlier: FR-03 revised, and FR-08 given its Ruth reading (v1.1, 2026-10-01). Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes of 2026-10-03.
 **Fit grades** (defined in ROADMAP §8.8):
 - **Supported:** the text points this way.
 - **Compatible:** the text is silent or open, and the framing fills a gap without strain.
@@ -34,6 +34,7 @@
 | [FR-17](#fr-17--layered-minds-with-god-at-the-top) | Layered minds with God at the top; separation as God's own limit on himself; prophets taking part in God | 2 onward | Supported to Tension. **Restated 2026-10-05** in the forms that fit. | Done for Genesis ([001](../discussions/001-how-god-speaks.md)) |
 | [FR-18](#fr-18--genesis-247-as-a-recap) | Genesis 2:4–7 as a recap of 1:1–2:3, not a later event | 1 | Supported for 2:4–6; Compatible for 2:7 as both recap and hinge. **Applied 2026-10-07:** Adam is new in what happens to him. | Done |
 | [FR-19](#fr-19--the-devil-as-what-evil-actions-are) | The devil as what evil actions are; the serpent embodying the role | 1, Job, 16 | Supported for the serpent embodying the role; Tension for the larger claim, with a fitting form | Before Job |
+| [FR-20](#fr-20--god-shown-as-each-age-perceives-him) | God shown as each age perceives him; in the Garden, an old man, Adam's father | All depictions of God | Compatible as a series rule (Heb 1:1); for the Garden, Supported to Tension depending on the form | [009, round 3](../discussions/009-god-in-the-garden.md#round-3--2026-10-13-god-as-an-old-man-seeded-not-decided), before the Garden's treatment |
 
 **Order of discussion:**
 
@@ -44,6 +45,8 @@
 5. FR-03 and FR-13.
 6. FR-04, FR-06, FR-07 and FR-09.
 7. FR-10 (the bloodline; the resurrection is decided), FR-14 and FR-19.
+
+**Now (2026-10-13):** FR-20 in 009's round 3, because the Garden's treatment waits on it.
 
 ---
 
@@ -414,7 +417,7 @@ If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one
 
 **Your reading (2026-10-01):** both passages are part of your picture of the Messiah. He never willfully commits iniquity; he only appears to. As a child he has to learn to refuse evil and choose good. Isaiah 7:15–16, read that way, is Supported. 2 Samuel 7:14b, read as "appears to commit iniquity," is Tension: it works as typology, but not as a plain statement about Jesus ([Discussion 002](../discussions/002-jesus-humanity.md#decision)).
 
-**Your reading, round 3 (2026-10-02):** the "iniquity" is a choice that was right in his eyes but had consequences he couldn't foresee, and the discipline is the natural result, not a cruelty. My grade: **Compatible as typology,** with two guardrails: it's never called sin, and it never covers the Passion, which the texts say was for others. The Temple at twelve (Luke 2:41–52) is its scene. Isaiah 53 offers a second bridge through the same word for "stripes" ([Discussion 002, round 3](../discussions/002-jesus-humanity.md#round-3--2026-10-02-2-samuel-714b)).
+**Your reading, round 3 (2026-10-02):** the "iniquity" is a choice that was right in his eyes but had consequences he couldn't foresee, and the discipline is the natural result, not a cruelty. My grade: **Compatible as typology,** with two guardrails: it's never called sin, and it never covers the Passion, which the texts say was for others. The Temple at twelve (Luke 2:41–52) is its scene. Isaiah 53 offers a second bridge through the same word for "stripes" ([Discussion 002, round 3](../discussions/002-jesus-humanity.md#round-3--2026-10-02-2-samuel-714b)). **Accepted 2026-10-13:** both guardrails, the Isaiah 53 bridge as a second layer, and the Temple at twelve as the first on-screen example ([002, the check](../discussions/002-jesus-humanity.md#check-2026-10-13)).
 
 Jewish tradition reads most of these passages as being about kings of their own time or a future human king. That's worth knowing when we fill in the Positions Register.
 
@@ -589,3 +592,30 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 **What it changes on screen:** nothing in the Garden beyond a real snake and a voice. **Confirmed 2026-10-08:** the fitting form works for you, and the serpent's words come from outside, from the animal, with the Opening's hiss under them ([008, round 2](../discussions/008-adam-eve-and-the-garden.md#round-2--2026-10-08)). The design question is Job's and the Gospels'; the map lists where the role is played ([ARCHITECTURE §8](../story/ARCHITECTURE.md#8-the-threads)).
 
 **Question for when we take this up:** in Job and the wilderness, who or what plays the role?
+
+---
+
+## FR-20 — God shown as each age perceives him
+
+**Source:** your note on the Garden, 2026-10-13 (README item 22). **Arcs:** 1 (the Garden) and every later depiction of God.
+
+**Your framing:**
+
+> I'm starting to think about showing God in a way that represents the progression of our perception of God. So for the Garden scene God could be represented as an old man. And this could actually work by calling the old man Adam's father or ancestor.
+
+**What it would mean across the series (my sketch, for you to push against):** the presence is always God's; the form is what each age could see. The Garden: an old father. Abraham: travelers at the tent (Gen 18, decided). Jacob: a man who wrestles till dawn (Gen 32). Moses: fire in a bush, then cloud and fire on the mountain. Isaiah: a king enthroned (Isa 6). Daniel: the Ancient of Days, the old man again (Dan 7:9). The Gospels: a son, the face as a young man. Revelation: the Son with the old man's white hair (Rev 1:14), and at the end the face seen plainly (Rev 22:4).
+
+**What fits:**
+- "At many times and in many ways, God spoke to our fathers... in these last days he has spoken to us by his Son" (Heb 1:1–2).
+- "Now we see in a mirror dimly, but then face to face" (1 Cor 13:12); "you cannot bear them now" (John 16:12).
+- God appears according to who is looking (Ps 18:25–26), as Discussion 007 already holds.
+- Adam as "the son of God" (Luke 3:38), made in God's likeness as Seth is in Adam's (Gen 5:1–3).
+
+**What pulls against it:**
+- **The Bible's own order isn't a straight line.** The most bodily appearances are early (the Garden, Mamre, Peniel) and the later ones are visions; Sinai, in the middle, insists on "no form" (Deut 4:15). A progression from crude to refined isn't what the texts show.
+- **"Perception" can slide into "only perception."** If every form is the age's projection, the Garden's God is a story Adam tells himself. The texts say God really came (3:8; 18:1).
+- **The old man is the picture of the Father,** which Discussion 007 decided the face is not.
+
+**First-pass grade:** **Compatible** as a series rule, in the form "the presence is God's; the form is what that age could receive" (Heb 1:1). **Tension** if it becomes a progression from wrong pictures to right ones. For the Garden, the grades by form are in [009, round 3](../discussions/009-god-in-the-garden.md#round-3--2026-10-13-god-as-an-old-man-seeded-not-decided): Supported for an appearance in human form as a father; Tension to Contradiction for a literal human ancestor.
+
+**Status:** under discussion in 009's round 3 (README item 22).

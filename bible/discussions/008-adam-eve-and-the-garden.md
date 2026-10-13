@@ -368,7 +368,7 @@ The two small opens from this discussion go there: whether the change passes to 
 **Decided for the Garden, 2026-10-08.**
 
 - **Adam** is of the line at the cliff and new in what happens to him; with him something major changes in humans (your answer 1, 2026-10-07). We say "kind," not "species."
-- **The place:** the lower plain between the rivers at the sea's edge, near where Eridu would stand, about 5000–4000 BC (2026-10-08). The Nile stops being the Gihon. "Cush" names more than one land in Genesis itself (10:7–10), as Havilah does (10:7, 29).
+- **The place:** the lower plain between the rivers at the sea's edge, near where Eridu would stand, about 5000–4000 BC (2026-10-08); revised 2026-10-13 to about 5500 BC, before Eridu, which stands at the Garden's gate ([LAYOUT §10.4](../story/arcs/01-beginnings/garden/LAYOUT.md#104-eridu-as-the-gardens-gate-and-the-date-decided-2026-10-13)). The Nile stops being the Gihon. "Cush" names more than one land in Genesis itself (10:7–10), as Havilah does (10:7, 29).
 - **The people outside** aren't seen in the Garden, for now (your answer 3).
 - **Eve:** option D. The deep sleep as the Garden's first glimpse of the Opening, one face becoming two; the poem and the text's words kept exactly (2026-10-08). **Confirmed the same evening in [009, round 2](./009-god-in-the-garden.md#round-2--2026-10-08-evening):** she and Adam are "of one kind" from the moment she wakes; your phrase.
 - **What the Fall adds:** awareness and ego in one act. The eating is both a crime and a child's grab; the judgment plays as a stern yet loving father's (2026-10-08).
