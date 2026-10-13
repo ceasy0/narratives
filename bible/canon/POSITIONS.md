@@ -1,6 +1,6 @@
 # Positions Register
 
-> Every interpretive and theological choice the story depends on, with its key texts, why it matters on screen, and when it has to be decided. Moved here from ROADMAP §8.2 on 2026-10-07, as the roadmap always intended (§16). Decisions are dated; the reasoning lives in the linked discussion.
+> Every interpretive and theological choice the story depends on, with its key texts, why it matters on screen, and when it has to be decided. Moved here from RULES §8.2 on 2026-10-07, as the roadmap always intended (§16). Decisions are dated; the reasoning lives in the linked discussion.
 
 **Status:** v1.3, 2026-10-13. Every interpretive and theological choice the story depends on, with its lean or decision and the point by which it must be decided.
 

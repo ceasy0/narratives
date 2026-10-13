@@ -148,11 +148,11 @@ You asked what I think. My opinion: **date Genesis 1–11 by the Greek Bible's n
 
 **Against it.**
 
-- The Hebrew text is the project's default ([ROADMAP §9.2](../ROADMAP.md#92-base-text)), and the Greek numbers look systematically adjusted: most of the extra years come from adding a hundred to the fathers' ages at their sons' births. Scholars mostly think one side or both reworked the numbers.
+- The Hebrew text is the project's default ([RULES §9.2](../canon/RULES.md#92-base-text)), and the Greek numbers look systematically adjusted: most of the extra years come from adding a hundred to the fathers' ages at their sons' births. Scholars mostly think one side or both reworked the numbers.
 - In the common Greek text, Methuselah outlives the flood by fourteen years (one manuscript family fixes it by making him 187 at Lamech's birth). We'd follow that reading.
 - The genealogies may skip generations anyway (Matthew 1:8 skips three kings; "father of" can mean ancestor), so no calendar from them is exact.
 
-**So:** a working calendar, not a claim. **Adam about 5500 BC; the flood about 3000 BC; Babel between about 2400 and 2040 BC; Abraham 1951 BC.** It's loose on purpose: Adam to the flood is about 2,500 years here, where the Greek numbers give 2,242, because the genealogies are read with gaps (the Garden's date already needs that). A flood about 3000 BC also fits Eridu, which lies drowned under silt by the end of the Uruk period. It's a decision about which text to follow, recorded case by case, as ROADMAP §9.2 asks.
+**So:** a working calendar, not a claim. **Adam about 5500 BC; the flood about 3000 BC; Babel between about 2400 and 2040 BC; Abraham 1951 BC.** It's loose on purpose: Adam to the flood is about 2,500 years here, where the Greek numbers give 2,242, because the genealogies are read with gaps (the Garden's date already needs that). A flood about 3000 BC also fits Eridu, which lies drowned under silt by the end of the Uruk period. It's a decision about which text to follow, recorded case by case, as RULES §9.2 asks.
 
 ### Questions for our conversation
 

@@ -9,7 +9,7 @@ This directory holds the planning documents, the Opening's research, treatment, 
 | File | What's in it |
 |---|---|
 | [`story/ARCHITECTURE.md`](./story/ARCHITECTURE.md) | The whole Bible as episodes, one line each: 205 hours in 18 arcs, the threads that run through them, the seasons, and every change from your draft |
-| [`ROADMAP.md`](./ROADMAP.md) | The founding plan: principles, the provenance system, language rules, the fit check for framings, story architecture, the writing pipeline and the road to 3D. **Start with §0.** |
+| [`canon/RULES.md`](./canon/RULES.md) | How the series is written: the principles, the provenance system, the language rules, the fit check for framings, the writing pipeline and the research toolkit. The founding roadmap it came from is in [`archive/`](./archive/ROADMAP.md). |
 | [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md) | Your stance and every decision so far, in your own words where possible. It overrides everything else. |
 | [`canon/POSITIONS.md`](./canon/POSITIONS.md) | The Positions Register: every interpretive and theological choice the story depends on, and when each must be decided |
 | [`canon/FRAMINGS.md`](./canon/FRAMINGS.md) | Your unconventional framings: what each says, which texts support it and which pull against it, and a first-pass fit grade |
@@ -21,7 +21,7 @@ This directory holds the planning documents, the Opening's research, treatment, 
 | [`scripts/ruth/`](./scripts/ruth/ruth.fountain) | The first-draft Ruth screenplay, with every line tagged |
 | [`style/`](./style/STORYTELLING.md) | Your notes on how scenes should play ([`STORYTELLING`](./style/STORYTELLING.md)), how each character speaks ([`VOICES`](./style/VOICES.md)), and the word list ([`LEXICON`](./style/LEXICON.md)) |
 | [`CLAUDE.md`](./CLAUDE.md) | The working rules Claude loads in every session, so nothing depends on memory. |
-| [`archive/`](./archive/) | Dated records kept for reference: the [project review](./archive/REVIEW.md) of 2026-10-07 and the [project audit](./archive/AUDIT.md) of 2026-10-10. Their open calls are in the list below. |
+| [`archive/`](./archive/) | Dated records kept for reference: the founding [roadmap](./archive/ROADMAP.md), the [project review](./archive/REVIEW.md) of 2026-10-07 and the [project audit](./archive/AUDIT.md) of 2026-10-10. Their open calls are in the list below. |
 
 ## The short version
 

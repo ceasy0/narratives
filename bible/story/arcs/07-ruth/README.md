@@ -2,7 +2,7 @@
 
 > How we'll write the pilot, step by step: which files, what goes in each, and where you review.
 
-**Status: parked, 2026-10-03.** You've said Ruth is good for what it is, that your remaining changes are small, and that expansions can be discussed later, once more of the broader story is laid out. The work has moved to [Genesis](../01-beginnings/README.md). What follows is where Ruth stood when it was parked. The [dossier](./DOSSIER.md) is done, and the whole-Bible chronology is decided ([`world/TIMELINE.md`](../../../world/TIMELINE.md)). The [treatment](./TREATMENT.md) is at v4, with three rounds of your notes applied. The [beat sheet](./BEATS.md) and a complete **first-draft script** ([`scripts/ruth/ruth.fountain`](../../../scripts/ruth/ruth.fountain)) are written. **Next: your pass on the script.** For why Ruth is the pilot, see ROADMAP §11.4.
+**Status: parked, 2026-10-03.** You've said Ruth is good for what it is, that your remaining changes are small, and that expansions can be discussed later, once more of the broader story is laid out. The work has moved to [Genesis](../01-beginnings/README.md). What follows is where Ruth stood when it was parked. The [dossier](./DOSSIER.md) is done, and the whole-Bible chronology is decided ([`world/TIMELINE.md`](../../../world/TIMELINE.md)). The [treatment](./TREATMENT.md) is at v4, with three rounds of your notes applied. The [beat sheet](./BEATS.md) and a complete **first-draft script** ([`scripts/ruth/ruth.fountain`](../../../scripts/ruth/ruth.fountain)) are written. **Next: your pass on the script.** For why Ruth is the pilot, see archived ROADMAP §11.4.
 
 ---
 
@@ -13,7 +13,7 @@
 | 1 | [`DOSSIER.md`](./DOSSIER.md) ✓ | Markdown | Everything we need to know before writing. Built so that it also teaches you the story. |
 | 2 | [`TREATMENT.md`](./TREATMENT.md) ✓ v4 | Markdown, in prose | The whole episode told as a short story (roughly 3–8 pages): what happens, how it's shaped, and what it means |
 | 3 | [`BEATS.md`](./BEATS.md) ✓ v1 | Markdown | The structure scene by scene, Naomi's arc marker by marker, and the pacing, with page numbers from the draft |
-| 4 | `SCENES.md` | Markdown | One scene card per scene (template in ROADMAP §13.2). **For the pilot, the story side is folded into the beat sheet,** and the production side (props, costumes, light) waits until the script is locked, so it's written once from the final scenes. |
+| 4 | `SCENES.md` | Markdown | One scene card per scene (template in RULES §13.2). **For the pilot, the story side is folded into the beat sheet,** and the production side (props, costumes, light) waits until the script is locked, so it's written once from the final scenes. |
 | Test | `scripts/ruth/sample-the-road.fountain` ✓ | Fountain | One scene written as a script before the beat sheet, to test how the dialogue sounds. Your notes on it went into the full script, which now contains the scene, so the sample was retired; it's in the git history. |
 | 4b | [`STORYBOARD.md`](./STORYBOARD.md) ✓ v2 | Markdown + PNG | **2026-10-08:** sixteen key frames as blocked compositions, drawn in code (`storyboard/draw.py`), with shot notes and two proposed rules. **v2, 2026-10-09:** the same frames as pencil-and-wash sketches (`storyboard/sketches/`), at your request. Key frames, not a full board, since Ruth may still change. |
 | 5 | [`scripts/ruth/ruth.fountain`](../../../scripts/ruth/ruth.fountain) ✓ first draft | Fountain (`.fountain`) | The screenplay, 37 pages. It's plain text that renders to standard screenplay format, and every line carries a hidden `[[tag]]` saying where it came from. The tier mix is at the end. |
@@ -90,7 +90,7 @@ The structure, then a card for each scene. Each card records:
 A first draft in Fountain at setting 2 (plain modern English), with every line tagged. You then rewrite whatever you want, probably most of the dialogue. After that I:
 - compare my draft with your version and write down the patterns in `style/`;
 - ask about anything I can't interpret;
-- run the audit checklist (ROADMAP §13.4);
+- run the audit checklist (RULES §13.4);
 - fit-check any new interpretation your edits introduce.
 
 Then we lock the script.
@@ -109,7 +109,7 @@ Then we lock the script.
 | Moab's religion on screen | **Decided:** sincere and textured | Treatment |
 | Ruth's first marriage | **Decided** (FR-08): real and loving on her side, but unfinished | Treatment |
 | The threshing floor (3:1–14) | **Default:** keep the text's charged ambiguity, resolved toward honor. It can be intense, but not explicit (principle 8). | Scene cards |
-| Ruth's speech | **Decided by the series rule** (ROADMAP §5.7), which you confirmed 2026-10-02: English with a Moabite accent, all the way through | Treatment |
+| Ruth's speech | **Decided by the series rule** (RULES §5.7), which you confirmed 2026-10-02: English with a Moabite accent, all the way through | Treatment |
 | 1:13 | **Decided 2026-10-02:** the most likely reading, "far more bitter for me than for you" ([TREATMENT §7](./TREATMENT.md#from-your-notes)) | Script |
 | Expansions | **Decided 2026-10-02:** the friend names Obed, Boaz's hesitation, Mr. So-and-so's son, and Naomi's lullaby. Orpah and Chilion stay a gap to explore later. | Script |
 | The David connection | **Deferred** until more of the story exists. The last shot rests on Obed's face so a flash-forward can be added later ([TREATMENT §7](./TREATMENT.md#for-later-arcs)). | Before lock, or later |

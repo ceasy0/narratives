@@ -1,6 +1,6 @@
 # The Garden — The Look and the Research Behind It
 
-> How the Garden of Eden looks in *Adonai*, topic by topic: each section gives what's decided first, then the reasons and the sources. The one-page summary is the [dossier](./DOSSIER.md#2-the-look); open questions are in the [README](../../../../README.md#what-i-need-from-you). Provenance tags and fit grades as in the [ROADMAP](../../../../ROADMAP.md) (§4, §8.8). How each decision was reached is in git's history and in Discussions [008](../../../../discussions/008-adam-eve-and-the-garden.md) and [009](../../../../discussions/009-god-in-the-garden.md).
+> How the Garden of Eden looks in *Adonai*, topic by topic: each section gives what's decided first, then the reasons and the sources. The one-page summary is the [dossier](./DOSSIER.md#2-the-look); open questions are in the [README](../../../../README.md#what-i-need-from-you). Provenance tags and fit grades as in the [ROADMAP](../../../../canon/RULES.md) (§4, §8.8). How each decision was reached is in git's history and in Discussions [008](../../../../discussions/008-adam-eve-and-the-garden.md) and [009](../../../../discussions/009-god-in-the-garden.md).
 
 **Status:** v2.0, 2026-10-13. The Garden's look as decided, by topic, with the research behind each part.
 

@@ -60,7 +60,7 @@ This happens in the time of the judges, before Israel had kings.
 This translation is my own, made from the Hebrew (the Masoretic Text) and checked against the BSB, WEB, KJV, NRSV, ESV, NIV and JPS translations. It stays close to the Hebrew, sometimes at the cost of smoothness, because it's the base for every recorded line of dialogue (Tier B). The script will modernize the dialogue to setting 2.
 
 **Conventions:**
-- God's personal name, which most English Bibles print as "the LORD," is written **Yahweh**, so you can see every place the text uses it. The dialogue uses it far more sparingly (ROADMAP §5.5).
+- God's personal name, which most English Bibles print as "the LORD," is written **Yahweh**, so you can see every place the text uses it. The dialogue uses it far more sparingly (RULES §5.5).
 - "Shaddai" is left untranslated. It's usually rendered "the Almighty."
 - Square brackets mark words added for sense.
 
@@ -456,7 +456,7 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 | A Bethlehem family moves to *Moab* | Moving to enemy country, and into the territory of the people descended from Lot's daughters | Bethlehem villagers' reactions; a Moabite marketplace that's foreign but alive |
 | "Ruth the Moabite" | A shock and a stigma, every time | Townspeople's looks and whispers, and the foreman's careful phrasing |
 | Gleaning | The bottom rung of society, and dangerous for a woman alone | The threat shown in the field, and Boaz's orders as protection |
-| "Redeemer" | A legal and family obligation everyone understood | One line of setup early on (a naturally motivated explanation, §7.2 of the ROADMAP), or Naomi working it out aloud |
+| "Redeemer" | A legal and family obligation everyone understood | One line of setup early on (a naturally motivated explanation, RULES §7.2), or Naomi working it out aloud |
 | Washing, oil and a cloak | She's ending her mourning, or dressing as a bride | Visual ritual: the widow's clothes come off |
 | A woman alone at a threshing floor at night | Scandal, and the risk of being taken for a prostitute | Other workers sleeping nearby; Boaz's urgency about secrecy (3:14) |
 | "Spread your wing over me" | A marriage proposal | Boaz's stunned reaction |
@@ -493,9 +493,9 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 
 - **FR-08: Boaz as Ruth's "relative opposite."** It stays unspoken unless it feels right to say. It's staged through mirroring: "worth" (2:1 and 3:11), the wing (2:12 and 3:9), *hesed* on both sides, and opposite circumstances with matching character. The marriage to Mahlon is loving on Ruth's side but unfinished: the barrier the water flows around ([FRAMINGS](../../../canon/FRAMINGS.md#fr-08--marriage-to-ones-relative-opposite)).
 - **Discussion 001: God working through people.** God never speaks in Ruth, so there's no God-voice to decide. The narrator's two direct statements can be carried by characters: Naomi hears the news "Yahweh has visited his people" (1:6), and the women say "Blessed be Yahweh…" (4:14). Providence shows up as "chance," harvest and human kindness ([Discussion 001](../../../discussions/001-how-god-speaks.md)).
-- **The Name, sparingly.** The text uses "Yahweh" 18 times: twice in the narrator's voice (1:6; 4:13) and 16 times in speech (1:8, 9, 13, 17, 21 twice; 2:4 twice, 12 twice, 20; 3:10, 13; 4:11, 12, 14). Under the revised rule (ROADMAP §5.5), the episode keeps it in the two oaths, Ruth's (1:17) and Boaz's (3:13), and says "God" or "the Lord" elsewhere. Naomi's older name for God, *Shaddai* (1:20, 21), becomes "the Almighty."
+- **The Name, sparingly.** The text uses "Yahweh" 18 times: twice in the narrator's voice (1:6; 4:13) and 16 times in speech (1:8, 9, 13, 17, 21 twice; 2:4 twice, 12 twice, 20; 3:10, 13; 4:11, 12, 14). Under the revised rule (RULES §5.5), the episode keeps it in the two oaths, Ruth's (1:17) and Boaz's (3:13), and says "God" or "the Lord" elsewhere. Naomi's older name for God, *Shaddai* (1:20, 21), becomes "the Almighty."
 - **God among the nations (light version).** Ruth leaves "her gods" for Yahweh (1:15–16), and Orpah goes back to hers without condemnation. Moab is shown as foreign but sincere (§12).
-- **Language.** Under the series rule (ROADMAP §5.7), English stands for Hebrew. Moabite was a sister dialect that Israelites understood without an interpreter, so Moabites speak English with a Moabite accent, and Ruth keeps hers throughout. No reconstructed language is needed in this episode.
+- **Language.** Under the series rule (RULES §5.7), English stands for Hebrew. Moabite was a sister dialect that Israelites understood without an interpreter, so Moabites speak English with a Moabite accent, and Ruth keeps hers throughout. No reconstructed language is needed in this episode.
 - **The intensity ceiling (principle 8).** The grief in Moab, the danger in the fields and the charge of the threshing floor can all play at full strength. Nothing is explicit.
 - **Modern words, ancient minds.** Naomi doesn't "process grief," and Ruth's loyalty is astonishing *because* it cuts against every family and ethnic obligation she has.
 
@@ -510,7 +510,7 @@ A childless widow had no one to provide for her and no one to protect her. Glean
 - Boaz is Ruth's opposite, unspoken.
 - The Name used sparingly: "Yahweh" in the two oaths (1:17; 3:13), "God" or "the Lord" elsewhere (revised).
 - Setting 2 register.
-- The series language rule (ROADMAP §5.7): Moabites speak English with a Moabite accent.
+- The series language rule (RULES §5.7): Moabites speak English with a Moabite accent.
 
 **Your answers (2026-10-01):**
 
@@ -537,7 +537,7 @@ A childless widow had no one to provide for her and no one to protect her. Glean
   - Graves in Moab.
   - The road: plateau, descent, the Dead Sea basin, the climb.
   - The view of the Moab mountains from Bethlehem.
-- **Reuse.** The Bethlehem landscape (terraces, fields, threshing floors) carries over to the David arc and the Nativity (ROADMAP §11.4).
+- **Reuse.** The Bethlehem landscape (terraces, fields, threshing floors) carries over to the David arc and the Nativity (archived ROADMAP §11.4).
 - **Props:**
   - sickles;
   - sheaves and binding cord;

@@ -10,7 +10,7 @@
 
 - **No title cards or quote cards,** for now. Scenes fade in from black and out to black.
 - **No montages for passing time.** Cut straight to the later moment and let the change show. For a long jump, fade to black and caption it: *Ten years later.* *Exception (2026-10-03): the Opening and visions.*
-- **It's headed for live action.** The 3D animation is the placeholder, so write every shot as something a camera and real actors could do (ROADMAP §15). Expect moments of bright, vibrant color and some scenes that need advanced effects. *Exception (2026-10-03): the Opening and visions.*
+- **It's headed for live action.** The 3D animation is the placeholder, so write every shot as something a camera and real actors could do (archived ROADMAP §15). Expect moments of bright, vibrant color and some scenes that need advanced effects. *Exception (2026-10-03): the Opening and visions.*
 - **Episodes run about an hour** (2026-10-03).
 - **A journey keeps moving, and keeps its direction.** When people are traveling, life happens on the move: they fight, bury their dead and carry their newborns without stopping, and they cross the frame the same way every time. Stopping is an event. (The band in the Opening always walks right to left, and stops only at the cliff, 2026-10-05.)
 - **A slower start is fine; a lurch isn't.** An episode can open more slowly, but the change of pace has to be smooth, and the end mustn't feel rushed. The way to do it: let story time slow down gradually while screen time holds steady, and start the slowdown before the act break, not at it. (Ruth: twelve years in Moab move fast, and the parting on the road slows into real time before Act Two begins. See BEATS §3.)
@@ -83,5 +83,5 @@
 - **Speak to what the other person already knows.** "You know you should go back" persuades by appealing to Ruth's own judgment, not by arguing. It sounds more like a real person than a reason does.
 - **When the text is ambiguous, use the most likely reading.** Note the others, but don't hedge in the dialogue. (Your instruction on 1:13.)
 - **Every scene should flow into the next.** Look at the transition as well as the scene.
-- **God's name is used sparingly.** Characters say "God" or "the Lord." "Yahweh" is kept for oaths and for places where the Name itself is the point (ROADMAP §5.5).
-- **English always stands for Israel's own language.** Sister dialects such as Moabite are accents. Everything else is spoken as itself, by your three tiers (ROADMAP §5.7).
+- **God's name is used sparingly.** Characters say "God" or "the Lord." "Yahweh" is kept for oaths and for places where the Name itself is the point (RULES §5.5).
+- **English always stands for Israel's own language.** Sister dialects such as Moabite are accents. Everything else is spoken as itself, by your three tiers (RULES §5.7).

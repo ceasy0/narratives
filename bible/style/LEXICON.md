@@ -1,8 +1,8 @@
 # Lexicon
 
-> Term-by-term rules: which words we use, which we avoid, and why. Started with Ruth; it grows with every arc and feeds the script checker later (ROADMAP §13.5).
+> Term-by-term rules: which words we use, which we avoid, and why. Started with Ruth; it grows with every arc and feeds the script checker later (RULES §13.5).
 
-**Status:** v1.1, 2026-10-10. The working word list, built from the Ruth script. The general rules are in ROADMAP §5.
+**Status:** v1.1, 2026-10-10. The working word list, built from the Ruth script. The general rules are in RULES §5.
 
 ---
 
@@ -10,13 +10,13 @@
 
 | Say | Don't say | Why |
 |---|---|---|
-| "God," "the Lord" | — | The default (ROADMAP §5.5) |
+| "God," "the Lord" | — | The default (RULES §5.5) |
 | "Yahweh" | anywhere but an oath, or where the Name itself is the point | Kept rare and weighty. In Ruth: 1:17 and 3:13 only. |
 | "the Almighty" | "Shaddai," "El Shaddai" | Naomi's old name for God at the well (1:20–21) |
 | "Chemosh" | "Kemosh," "the Moabite god" | Moab's god, by name (Num 21:29) |
 | "the goddess," "her" | a name for the goddess | We don't know which goddess a Moabite household figure was. |
 
-**Swearing:** no sacred names as curses (ROADMAP §5.4, category 1). Oaths are the opposite of swearing: "May Yahweh do that to me, and worse," "as Yahweh lives."
+**Swearing:** no sacred names as curses (RULES §5.4, category 1). Oaths are the opposite of swearing: "May Yahweh do that to me, and worse," "as Yahweh lives."
 
 ## Adam and Eve
 
@@ -45,7 +45,7 @@
 | "glean," "gleaners" | "pick up leftovers" | The legal right is the point (Lev 19:9–10). |
 | "sheaves," "stalks," "reapers," "threshing floor," "winnow" | — | Concrete farm words are fine and timeless. |
 | "a measure," "six measures" | "pounds," "kilos," "bushels" in dialogue | Units are for the action lines: "about an ephah, around thirty pounds." |
-| "silver," "shekels' weight of silver" | "coins," "money" | There are no coins until centuries later; silver is weighed (ROADMAP §5.4, category 4). "Pay" is fine: "what somebody will pay." |
+| "silver," "shekels' weight of silver" | "coins," "money" | There are no coins until centuries later; silver is weighed (RULES §5.4, category 4). "Pay" is fine: "what somebody will pay." |
 | "the use of the field" | "lease," "rent" | |
 | "the harvest" | "summer job," "season" in a modern sense | |
 
@@ -66,7 +66,7 @@
 | "Goodbye" as a word on its own | Fine in principle, but the characters' own blessings are better: "God be with you." |
 | "Look," "Listen," "So," "Well" as openers | Written-sounding (STORYTELLING) |
 | "OK," "deal," "fine" as agreement | Too modern in this mouth. "Yes." "Good." Or a nod. |
-| Therapy words: "process," "closure," "trauma," "boundaries" | ROADMAP §5.4, category 5 |
+| Therapy words: "process," "closure," "trauma," "boundaries" | RULES §5.4, category 5 |
 
 ## Animals and things
 

@@ -1,6 +1,6 @@
 """A rough photosensitivity check on a rendered video: counts frame-to-frame changes in mean
 luminance larger than a threshold, per second, in the two risky stretches (beat 4 and beat 11),
-and reports the worst second. This is not IRIS or PEAT and does not replace them (treatment §5).
+and reports the worst second. This is not IRIS or PEAT and does not replace them (treatment §4).
 
     python check_flicker.py ../opening-animatic-v3.1.mp4
 """

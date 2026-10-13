@@ -9,7 +9,7 @@
 ## 1. What this project is
 
 - **A creative project, not a historical one.** Its aim is "an accurate and powerful expression of Christianity and, eventually, human history. Or, at least, an accurate representation of my views of Christianity." Historical evidence informs it, but creative judgment drives it.
-- **Faithful to the spirit, not word-perfect.** The philosophy is "to capture the nature or spirit of Christianity, not get every little detail/word 100% accurate." The Bible adapting itself for its own readers is the precedent (ROADMAP §2.1).
+- **Faithful to the spirit, not word-perfect.** The philosophy is "to capture the nature or spirit of Christianity, not get every little detail/word 100% accurate." The Bible adapting itself for its own readers is the precedent (RULES §2.1).
 - **Bound by the texts.** "There shouldn't be anything that completely goes against anything in the texts." Checking this is part of my job.
 - **Framed correctly.** "I don't want to change the Bible or its stories, but I want it framed correctly (which I believe it may not be, at least in some areas, due to the amount of time that has passed)."
 - **Not a "hidden history."** The spirit must not change. Interpretations can differ from convention, can "expand the view" wider than the Bible, and can take liberties "only where it seems/feels absolutely right to," and only after discussion.
@@ -26,7 +26,7 @@
 
 ## 3. Non-negotiables
 
-1. **No contradiction of the texts.** Every framing gets a fit check (ROADMAP §8.8). A framing graded "Contradiction" doesn't go in as stated.
+1. **No contradiction of the texts.** Every framing gets a fit check (RULES §8.8). A framing graded "Contradiction" doesn't go in as stated.
 2. **Discussion before liberty.** Unconventional framings, liberties, and anything from beyond the canon are discussed first and adopted only if they "genuinely seem right."
 3. **Additions must have a reason.** Added dialogue or material "should make sense in context with evidence or the spirit/nature of the story." Nothing is added "for the shallow reason of getting more theology out."
 4. **The recorded words are the default.** Changing the substance of a recorded line requires a discussion and a logged decision.
@@ -40,13 +40,13 @@ Each decision once, as it stands now, with its date and a link to where it's arg
 
 | Topic | Decision | Where it's explained |
 |---|---|---|
-| Title | **Working title: *Adonai*** (2026-10-02). It's Hebrew for "my Lord," the word Jewish readers say aloud in place of the Name, so it's also what the series' "the Lord" stands for. | ROADMAP §0 |
-| Canon | Start with the books most widely accepted as canon. Later, study the Ethiopian canon, the Apocrypha and other texts to learn about them, and use anything from outside the Bible only after discussion. | ROADMAP §4.1, §9.1, §9.5 |
+| Title | **Working title: *Adonai*** (2026-10-02). It's Hebrew for "my Lord," the word Jewish readers say aloud in place of the Name, so it's also what the series' "the Lord" stands for. | archived ROADMAP §0 |
+| Canon | Start with the books most widely accepted as canon. Later, study the Ethiopian canon, the Apocrypha and other texts to learn about them, and use anything from outside the Bible only after discussion. | RULES §4.1, §9.1, §9.5 |
 | Beyond the text | **Decided 2026-10-08:** the two-question test and three bins; Jesus in the East out; "recognition, not derivation" for Jesus meeting outsiders; FR-06's imagery is enough. | [Discussion 005](../discussions/005-beyond-the-text.md#decision) |
 | Scope | The Bible's window only. Other cultures and time periods may become separate projects later. | — |
 | Tradition | Non-denominational | §2 above |
 | Audience and rating | You; no rating | §1 above |
-| Intensity | A high ceiling for gore, pain, beauty and pleasure, so it can get there when the story calls for it. It isn't always intense. Nothing overly sexual. | ROADMAP principle 8 |
+| Intensity | A high ceiling for gore, pain, beauty and pleasure, so it can get there when the story calls for it. It isn't always intense. Nothing overly sexual. | RULES principle 8 |
 | Output and the look | Screenplays first. **Decided 2026-10-13** ([Discussion 006](../discussions/006-2d-or-3d.md)): live action is the end goal, and an AI-made placeholder that looks like live action is enough for now. *Arcane* is the base style, with other styles added where needed; visions and spiritual scenes are more vibrant and abstract, like *Spider-Verse*. It's made by you and AI together, with no team. | [006](../discussions/006-2d-or-3d.md); [REFERENCES](../production/opening/REFERENCES.md) |
 | Format | Episodes of about an hour (2026-10-03), the final format decided later. | — |
 | Your source documents | Keep only the summaries in the repository. | §7 below |
@@ -55,11 +55,11 @@ Each decision once, as it stands now, with its date and a link to where it's arg
 
 | Topic | Decision | Where it's explained |
 |---|---|---|
-| Dialogue register | Setting 2 (plain modern) as the baseline. More slang is fine where it makes sense. | ROADMAP §5.2 |
-| Languages | English always stands for Israel's own language (Hebrew; in Jesus's time, Aramaic). Sister dialects Israelites could understand, such as Moabite, are English with their own accent. Every other language is spoken as itself, by your three tiers: (1) the original, reconstructed, only if that can be done with high confidence; (2) otherwise its descendant language; (3) otherwise the language of that region today. Nobody's language depends on whose episode it is. "It makes the most sense because the language wouldn't have been that different anyway" (2026-10-02). | ROADMAP §5.7 |
-| Names | "Jesus." "Yahweh" sparingly, in oaths and where the Name itself is the point; everywhere else, "God" or "the Lord." "Don't completely get rid of its usage. But try to diminish it where you can" (2026-10-01). | ROADMAP §5.5 |
+| Dialogue register | Setting 2 (plain modern) as the baseline. More slang is fine where it makes sense. | RULES §5.2 |
+| Languages | English always stands for Israel's own language (Hebrew; in Jesus's time, Aramaic). Sister dialects Israelites could understand, such as Moabite, are English with their own accent. Every other language is spoken as itself, by your three tiers: (1) the original, reconstructed, only if that can be done with high confidence; (2) otherwise its descendant language; (3) otherwise the language of that region today. Nobody's language depends on whose episode it is. "It makes the most sense because the language wouldn't have been that different anyway" (2026-10-02). | RULES §5.7 |
+| Names | "Jesus." "Yahweh" sparingly, in oaths and where the Name itself is the point; everywhere else, "God" or "the Lord." "Don't completely get rid of its usage. But try to diminish it where you can" (2026-10-01). | RULES §5.5 |
 | Ambiguous text | Where the Hebrew or Greek can be read more than one way, the dialogue follows the most likely reading, with the alternatives in a note (2026-10-02). First case: Ruth 1:13. | [Ruth TREATMENT §7](../story/arcs/07-ruth/TREATMENT.md#from-your-notes) |
-| Invented dialogue for Jesus | "We will have to see as we go." No whole new teachings or sermons. You expect there will be added dialogue. | ROADMAP §4.2; [Discussion 002](../discussions/002-jesus-humanity.md) |
+| Invented dialogue for Jesus | "We will have to see as we go." No whole new teachings or sermons. You expect there will be added dialogue. | RULES §4.2; [Discussion 002](../discussions/002-jesus-humanity.md) |
 | "Kind," not "species" | Of Adam and Eve, and of anyone after the cliff (2026-10-07): the change in them isn't bodily. "We can just call them both of one kind" (2026-10-08). | [009, round 2](../discussions/009-god-in-the-garden.md#round-2--2026-10-08-evening) |
 
 ### God, Christ and the reading of the text
@@ -85,8 +85,8 @@ Each decision once, as it stands now, with its date and a link to where it's arg
 | Order of writing | **Decided 2026-10-03 and 2026-10-05:** "from front to end, for all the books," treatments and beats only on the first whole pass, scripts after, "so I can know whether to change it based on things I don't see yet." Ruth is parked as a first draft. The Opening is the exception ("Opening stays the exception," 2026-10-07): its script and animatic go ahead now. | [README](../README.md#status) |
 | The map | **Decided 2026-10-08** ("Yes, map first"): the whole Bible as episodes, one line each, 205 hours in 18 arcs. Arc 1 is *Genesis*: *In the Beginning* (1–3), *Cain and Abel* (4), Noah in three hours, *The Table of Nations*, *The Tower of Babel* and *The Scattering* ("these nations didn't scatter until after the tower of babel"). Arc 2 is *The Promise*: Season 2 *The Father of Nations*, Season 3 *The Struggle* "for now" (2026-10-09). The density "looks good at least for the first arc"; placements outside the Bible's order are fine "if they come after chronologically"; the optional hours "look good for now"; thirty-eight hours for the Gospels and eighteen for the Church "sounds right." | [`story/ARCHITECTURE.md`](../story/ARCHITECTURE.md) |
 | Filling the hours | **Decided 2026-10-09:** "At first, lets just try and fill the episodes as much as we can with the info from the Bible itself without worrying about runtime, then as we go we can go back and fill in gaps with contextual scenes." | [ARCHITECTURE §11](../story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when) |
-| Structure | Mix it up however works best, as long as it can be put in chronological order. | ROADMAP §10.2 |
-| Reframing | Different interpretations and understandings. The structural tools (point of view, intercutting) may come later. | ROADMAP §10.5, §8.8 |
+| Structure | Mix it up however works best, as long as it can be put in chronological order. | RULES §10.2 |
+| Reframing | Different interpretations and understandings. The structural tools (point of view, intercutting) may come later. | RULES §10.5, §8.8 |
 | Storytelling | Your notes on how scenes should play: no cards, no montages for passing time, real family dynamics, layered peoples, dialogue that sounds real. Links between episodes go only at the beginnings and ends of episodes or scenes. No tidy sentiment ("too neat... disney-movie ish"). Gaps can stay open for later exploration. The main character's arc must be visible at every stage. The Opening and visions are the exception to "no montages" and "every shot filmable" (2026-10-03). | [`style/STORYTELLING.md`](../style/STORYTELLING.md) |
 | The primordial through the series | **Decided 2026-10-03:** the Opening's look comes down as it goes, but "shouldn't completely go away." It stays "in glimpses all the way through past Abraham's and Moses' lives, and further," and is "referenced, connected with, and hinted to throughout the entire series (with a fulfilling conclusion)." The glimpses "will come naturally"; you'll say when one should occur, and none is planned in advance (2026-10-05). | [STORYTELLING](../style/STORYTELLING.md#the-opening-visions-and-the-primordial) |
 

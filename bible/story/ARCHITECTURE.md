@@ -22,20 +22,20 @@
 3. **Chronological order, including the five places the Bible's own order isn't** (§3). You decided the structure can be anything that can be put in chronological order; the map simply puts it there.
 4. **Density: about one and a half to two chapters of narrative an hour**, which is Ruth's density with your expansions. Your draft runs at about one chapter an hour through Abraham. At that density the whole Bible is roughly 350 hours; at this one, about 200. I've used this one and listed every merge (§10) so you can restore any of them. My reason: at one chapter an hour, most of each hour is Tier D and P6, and the REVIEW's warning about the Garden would apply to the whole of Genesis. The hours still have room for the context you want; they have less room for invented talk.
 5. **Kings is the spine; Chronicles adds.** Chronicles tells the same story for the returned exiles. Where it adds a scene that Kings doesn't have (Jehoshaphat's singers, Manasseh's chains, Zechariah stoned in the court), the scene goes in. Where the two differ, Kings leads and the difference is noted (Position 2).
-6. **A prophet is a character inside the history** (ROADMAP §10.4). Each prophetic book is placed in the hours its prophet lived through (§5). Where the book's own date is uncertain, the default is named and flagged.
+6. **A prophet is a character inside the history** (RULES §10.4). Each prophetic book is placed in the hours its prophet lived through (§5). Where the book's own date is uncertain, the default is named and flagged.
 7. **Law is lived, not read.** Each law book keeps the stories it contains (Nadab and Abihu, the blasphemer, the wood-gatherer, Zelophehad's daughters), and its rules become customs the characters keep on screen without comment. The one exception is Deuteronomy, which is a speech and gets staged as one: an old man's farewell.
 
 ## 3. Where the map departs from the Bible's order
 
 | What | The Bible's order | The map's order | Why |
 |---|---|---|---|
-| Genesis 38 (Judah and Tamar) | After Joseph is sold, before Potiphar | The same, as its own hour | It happens during Joseph's years in Egypt, and the text put it there on purpose (ROADMAP §10.5). Nothing moves. |
+| Genesis 38 (Judah and Tamar) | After Joseph is sold, before Potiphar | The same, as its own hour | It happens during Joseph's years in Egypt, and the text put it there on purpose (RULES §10.5). Nothing moves. |
 | Job | Between Esther and Psalms | Its own short arc between Joseph and the Exodus | Undated; its setting is patriarchal; the Greek postscript makes Job a king of Edom from Genesis 36 ([005](../discussions/005-beyond-the-text.md), bin 2). The years in Egypt are the text's own silence, and Job fills it from outside Israel. Alternative: straight after Genesis 36. |
 | Judges 17–21 (Micah's idol; the Levite's concubine) | The end of Judges | Right after Joshua's death, before Othniel | The text dates them itself: Micah's Levite is Moses's grandson (18:30), and Phinehas son of Eleazar is still high priest (20:28). So the collapse is immediate, which is 2:10's point. The cost: the book's own ending, "there was no king," moves. **Accepted 2026-10-08** ("if they come after chronologically", [§11](#11-what-the-map-needs-decided-and-when)). |
 | Ruth | Its own book after Judges | After Gideon, before Abimelech | About 1140 BC ([TIMELINE §4](../world/TIMELINE.md#arc-7--judges-and-ruth)) |
 | Daniel's visions (7–12) | After his stories | Interleaved with them, held in the last Daniel hour | They're dated in the text (Belshazzar's first year; Cyrus's third) |
 | Esther | After Nehemiah | Between the second Temple (515) and Ezra (458) | Xerxes reigned 486–465 |
-| The letters | After Acts | Inside Acts, where each was written and read | ROADMAP §10.4 |
+| The letters | After Acts | Inside Acts, where each was written and read | RULES §10.4 |
 
 ## 4. Where the Psalms go
 
@@ -355,7 +355,7 @@ c. 1100–1010 BC.
 
 ### Arc 15 — Between the Testaments (optional)
 
-c. 332–4 BC. Outside the canon (P2 from Josephus, P3 from Maccabees); Daniel 8 and 11 foretell it. Worth four hours because the Gospels' world (Pharisees, Sadducees, Herod, Rome, the Greek Bible) is made here, and the audience has to know it ("what they knew that we don't," ROADMAP §7).
+c. 332–4 BC. Outside the canon (P2 from Josephus, P3 from Maccabees); Daniel 8 and 11 foretell it. Worth four hours because the Gospels' world (Pharisees, Sadducees, Herod, Rome, the Greek Bible) is made here, and the audience has to know it ("what they knew that we don't," RULES §7).
 
 | # | Episode | Text | Heart |
 |---|---|---|---|
@@ -404,7 +404,7 @@ c. 6 BC–AD 33. The order follows a standard harmony with John's feasts as the 
 | 177 | Olivet | Mark 13; Matt 24–25 | "Not one stone"; the signs; the ten virgins; the talents; the sheep and the goats, "I was a stranger." *Could fold into 176.* | Position 19's kind of question |
 | 178 | The Upper Room | Mark 14:12–31; John 13–17 | A towel; the bread and the cup; "one of you"; Judas into the night; "I will not leave you orphans"; the prayer. | Position 18; FR-05 |
 | 179 | Gethsemane | Mark 14:32–72; John 18:1–27 | "Let this cup pass"; sweat like blood; the kiss; Malchus's ear; the young man who ran naked; Annas; the rooster. | 002; 007 |
-| 180 | Pilate | Mark 15:1–20; Luke 23:1–25; John 18:28–19:16 | Judas's rope; "are you the king?"; Herod's robe; Procula's dream; Barabbas; the scourging; "Behold the man"; the bowl of water. | ROADMAP §8.7 |
+| 180 | Pilate | Mark 15:1–20; Luke 23:1–25; John 18:28–19:16 | Judas's rope; "are you the king?"; Herod's robe; Procula's dream; Barabbas; the scourging; "Behold the man"; the bowl of water. | RULES §8.7 |
 | 181 | Golgotha | Mark 15:21–47; Luke 23:26–56; John 19:17–42 | Simon of Cyrene; the seven words; darkness at noon; the veil torn; "it is finished"; the spear; the linen; the stone. 3 April 33. | 002 (what the cross accomplishes); 007 |
 | 182 | The Third Day | John 20; Luke 24:1–49; Matt 28:1–15 | The women; the stone gone; "Mary," and a face recognized; Emmaus, the long walk and the broken bread; the locked room; Thomas's hand. | FR-10 (the resurrection, decided) |
 | 183 | Galilee | John 21; Matt 28:16–20; Acts 1:1–11 | Breakfast on the shore; "do you love me?" three times; "feed my sheep"; the mountain; the cloud. | Position 18 (Peter) |

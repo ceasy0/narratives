@@ -4,7 +4,7 @@
 
 **Status:** v4, 2026-10-02, with three rounds of your notes applied and a full check for errors (§7). The [beat sheet](./BEATS.md) and a complete [first-draft script](../../../scripts/ruth/ruth.fountain) follow it. **Checkpoint:** your pass on the script.
 
-**How to read it:** §2 is the story, and it reads straight through. A tag like **[P6·1]** marks an addition: its source level (ROADMAP §4.1), then its number in the register in §3, which says why it's there and what it rests on. New additions take the next free number, so numbers stay the same from draft to draft. Events without a tag are in the text. Background without a tag comes from the [dossier](./DOSSIER.md). The quoted dialogue follows the script, which is now the place where the wording lives.
+**How to read it:** §2 is the story, and it reads straight through. A tag like **[P6·1]** marks an addition: its source level (RULES §4.1), then its number in the register in §3, which says why it's there and what it rests on. New additions take the next free number, so numbers stay the same from draft to draft. Events without a tag are in the text. Background without a tag comes from the [dossier](./DOSSIER.md). The quoted dialogue follows the script, which is now the place where the wording lives.
 
 ---
 
@@ -42,7 +42,7 @@
 
 **Voices.** Naomi and Boaz sound a little more formal than Ruth. Ruth is plain and direct, with few words.
 
-**Language.** Everyone speaks English. Moabites, Ruth among them, speak it with a Moabite accent (ROADMAP §5.7).
+**Language.** Everyone speaks English. Moabites, Ruth among them, speak it with a Moabite accent (RULES §5.7).
 
 **God** never speaks and works no visible miracle. He's present in bread, in "chance," in the blessings people speak, in a child, and perhaps in a wind (§5).
 
@@ -470,7 +470,7 @@ Fade to black.
 
 ## 3. Additions register
 
-Every item passes all five parts of the addition test (ROADMAP §4.3): it's **consistent** with the text and our decisions, **plausible**, **purposeful**, **subordinate** and **recognizable**. The table records the reasoning behind the two that most often fail, purpose and plausibility. Items marked **your call** are in §6. Items 48–52 were new in v3 and 53–58 are new in v4; each sits in the table for its act.
+Every item passes all five parts of the addition test (RULES §4.3): it's **consistent** with the text and our decisions, **plausible**, **purposeful**, **subordinate** and **recognizable**. The table records the reasoning behind the two that most often fail, purpose and plausibility. Items marked **your call** are in §6. Items 48–52 were new in v3 and 53–58 are new in v4; each sits in the table for its act.
 
 **The Moab years are the biggest block of invention,** at about ten pages of script (items 7–20 and 48–54). That's what your notes asked for, and it stays subordinate as long as everything in it builds toward the oath on the road and the losses behind it. It does: Elimelech's stand over the measure is part of what Ruth sees in this family (§5).
 
@@ -479,7 +479,7 @@ Every item passes all five parts of the addition test (ROADMAP §4.3): it's **co
 | # | Addition | Level | Why it's there | What it rests on |
 |---|---|---|---|---|
 | 1 | Boaz and his wife in the dead field. By Act Two he's a widower. | P6 | The glimpse of the one who stays, which you decided on. A wealthy man of 45 being unmarried needs an answer, and this also shows the famine took people from those who stayed, so the deaths in Moab don't read as punishment for leaving. | The text is silent. A Talmudic tradition (P3) also makes him a widower (*Bava Batra* 91a). **Your call.** |
-| 2 | The family at the bread bin | P6, Tier D | Your note: the humor plus a real family's friction. It also lets the audience in on the town's name (ROADMAP §5.6). | Bethlehem means "house of bread." |
+| 2 | The family at the bread bin | P6, Tier D | Your note: the humor plus a real family's friction. It also lets the audience in on the town's name (RULES §5.6). | Bethlehem means "house of bread." |
 | 3 | Naomi's oldest friend | P6, Tier D | Your note: more interaction at the departure. She comes back as the woman who says "Naomi?" at the well (27). | — |
 | 4 | The use of the field sold at the gate | P4, Tier D | Explains how Naomi has land to "sell" in 4:3 (dossier §10), states the right of redemption out loud, and puts the gate and its old elder on screen so Act Four returns to them (52). | Land sold in hard times could be bought back by family (Lev 25:25–28). |
 | 5 | Boaz's barley and blessing: "I think you have two sons" | P6, Tier D | His first words are a blessing, as in the text (2:4). The barley gives Naomi's "he hasn't stopped being kind" (2:20) something to refer to, and his last line hints that he has no son, which pays off at the gate (42). | The kindness Naomi praises in 2:20 is literally kindness that "has not abandoned" them, which implies it began earlier. |
@@ -527,7 +527,7 @@ Every item passes all five parts of the addition test (ROADMAP §4.3): it's **co
 | 31 | The gleaners' gossip: Boaz's worth, and Rahab | P6, Tier D | Carries the narrator's "a man of worth" (2:1), so that "a woman of worth" (3:11) echoes. It gives the family memory decided in TIMELINE §7 its one line. | Matt 1:5; Josh 6:25 ("she has lived in Israel to this day"). **Your call.** |
 | 32 | The harasser has to drop stalks for her | P6 | Humor, paid off within one day | 2:15–16 |
 | 33 | "He gave us his own barley, the day we left" | P6, Tier D | Connects 2:20 to the prologue, for an audience that might not remember | 2:20 |
-| 34 | "Family?" and Naomi explains "redeemer" | P6, Tier D | The audience needs the word, and Ruth, a foreigner, genuinely doesn't know it (ROADMAP §7.2). Ruth's question gives the second half of 2:20 its own beat. | Lev 25:25, 47–49 |
+| 34 | "Family?" and Naomi explains "redeemer" | P6, Tier D | The audience needs the word, and Ruth, a foreigner, genuinely doesn't know it (RULES §7.2). Ruth's question gives the second half of 2:20 its own beat. | Lev 25:25, 47–49 |
 | 55 | Boaz's side: the grain he sends with the foreman; the dry jar in his empty house | P6, Tier D | Your pick (expansion 3). His words at the floor imply he expected her to want a younger man (3:10), and this shows it from his side before she proves him wrong. The jar is his wife's, from the prologue. | 3:10 |
 | 35 | The last day of the harvest: the song, "alone since the famine," Boaz's distance | P6, P4 | Replaces the old montage with one cut. Shows what seven weeks changed, pays off the song, says why Boaz is unmarried, and answers why he waits: his age, and the nearer redeemer (dossier §10). | 2:23; 3:10, 12 |
 
@@ -545,7 +545,7 @@ Every item passes all five parts of the addition test (ROADMAP §4.3): it's **co
 | # | Addition | Level | Why it's there | What it rests on |
 |---|---|---|---|---|
 | 52 | The old elder from the sale witnesses the redemption | P6 | The man who spoke the formula twelve years ago sees it fulfilled, and says "We are witnesses" first. It closes Elimelech's thread without a word about him. | 4:2, 9–11; the sale (4) |
-| 40 | A donkey brays over Mr. So-and-so's name | P6 | The film's version of the narrator's joke: the man is never named (4:1; ROADMAP §5.8). He's credited as "Mr. So-and-so." | **Your call.** |
+| 40 | A donkey brays over Mr. So-and-so's name | P6 | The film's version of the narrator's joke: the man is never named (4:1; RULES §5.8). He's credited as "Mr. So-and-so." | **Your call.** |
 | 56 | Mr. So-and-so's son at his elbow, and the look | P6 | Your pick (expansion 4). One look makes his refusal a father's prudence, not villainy, and "my own inheritance" (4:6) gets a face. | 4:6 |
 | 41 | His son asks about the sandal | P6, Tier D | The text explains the custom (4:7), so a character may too. Giving the question to his own son means the boy watches his father hand over his right, for the boy's sake. | The sole of the foot and the right to land: Deut 11:24; Josh 1:3; Ps 60:8 |
 | 42 | Boaz's cost: his first son will carry Mahlon's name | P4 | Shows what Boaz pays that the nearer redeemer wouldn't | Deut 25:6; Ruth 4:5, 10. The genealogy still counts Obed as Boaz's son (4:21). |
@@ -675,10 +675,10 @@ No contradictions with the text. This section has three parts: the things your n
 | Issue | Why it matters | What I've done |
 |---|---|---|
 | **The David connection** | The book's last line is the reveal: Obed is "the father of Jesse, the father of David" (4:17). Without a card, nothing in the episode says so, and nobody alive knows it. | **Deferred,** as you asked. Your idea: the camera closes on Obed's face, then flash-forwards to scenes from David's life, preferably battles, with a voice-over to be worked out. The last shot now rests on Obed's face, so this can be added later at the very end without touching anything else. Notes for when you decide: (a) the voice-over could be the book's own ending, the genealogy (4:17–22), which is recorded text and needs no invention; (b) the best-fitting battle may be 2 Sam 23:13–17, where David's three mighty men break through a Philistine garrison to bring him water from "the well of Bethlehem by the gate," the same well where the women said Naomi's name; (c) the flash-forward shots could be reused from the David episodes, so they'd cost almost nothing extra once those exist. |
-| **Bethlehem gets reused** | David is anointed here (1 Sam 16) and Jesus is born here. The well stands "by the gate" (2 Sam 23:15). | The well is now by the gate in Ruth (27). The Bethlehem set should be designed once (gate, well, threshing floor below the town, terraces) and grown in later arcs (ROADMAP §15.1). |
+| **Bethlehem gets reused** | David is anointed here (1 Sam 16) and Jesus is born here. The well stands "by the gate" (2 Sam 23:15). | The well is now by the gate in Ruth (27). The Bethlehem set should be designed once (gate, well, threshing floor below the town, terraces) and grown in later arcs (archived ROADMAP §15.1). |
 | **David and Moab** | David later leaves his parents with the king of Moab for safety (1 Sam 22:3–4), and later still conquers Moab and executes two of every three captives (2 Sam 8:2). | Nothing to change in Ruth. Worth knowing if you choose flash-forwards: Ruth's great-grandson both shelters with Moab and crushes it. |
 | **Ezra and Nehemiah** | After the exile, Ezra and Nehemiah dissolve marriages to foreign women, Moabites included, reading Deuteronomy 23:3 aloud (Ezra 9–10; Neh 13:1–3, 23–27). | The Bible holds Ruth and Nehemiah side by side without resolving them, and the series should too. Ruth's episode makes no general statement about foreign marriage, so it won't contradict the later arc. |
-| **The Moabite accent** | Moabites appear again: Eglon (Judg 3), Mesha (2 Kgs 3), and the Moabite women of Solomon's court (1 Kgs 11:1). | The accent needs designing once and keeping across the series. It shouldn't be a real modern accent, which would carry the same modern associations we avoided by not using Arabic. Added to ROADMAP §5.7. |
+| **The Moabite accent** | Moabites appear again: Eglon (Judg 3), Mesha (2 Kgs 3), and the Moabite women of Solomon's court (1 Kgs 11:1). | The accent needs designing once and keeping across the series. It shouldn't be a real modern accent, which would carry the same modern associations we avoided by not using Arabic. Added to RULES §5.7. |
 | **Rachel's tomb** | We put Rachel's pillar on the road near Bethlehem, following Genesis (35:19–20; 48:7). But Saul passes "Rachel's tomb in the territory of Benjamin" north of Jerusalem (1 Sam 10:2), Jeremiah hears Rachel weeping "in Ramah" (Jer 31:15), and Matthew applies that verse to Bethlehem's children (Matt 2:18). | Nothing to change in Ruth. The Samuel arc will have to stage 1 Sam 10:2 without contradicting this one, for example by treating Saul's landmark as a second memorial or a border marker. A decision for the Samuel arc. |
 | **Naomi's friend's name** | She now has four scenes (§6, choice 15). | The script uses NAOMI'S FRIEND until you choose. |
 
@@ -708,4 +708,4 @@ Your answers, 2026-10-02:
 1. **Your pass on the [script](../../../scripts/ruth/ruth.fountain).** Rewrite whatever you want, probably a lot of the dialogue. A PDF is the easiest way to read it. The [beat sheet](./BEATS.md) is the map.
 2. **Your answers on the new choices** in §6 (12–15), especially where the lullaby is planted.
 3. **I learn from your edits:** I compare your version with mine, write the patterns into [`style/`](../../../style/STORYTELLING.md), and ask about anything I can't read.
-4. **The audit** (ROADMAP §13.4), then the lock.
+4. **The audit** (RULES §13.4), then the lock.

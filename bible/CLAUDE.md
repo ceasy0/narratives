@@ -9,7 +9,7 @@
 3. `canon/FRAMINGS.md`: the author's unconventional framings, each with its fit grade and status.
 4. `discussions/README.md`: which discussions are open, and what each one blocks.
 5. `style/STORYTELLING.md`: the author's notes on how scenes should play. Apply them to every draft, along with `style/VOICES.md` (how each character speaks) and `style/LEXICON.md` (the word list).
-6. `ROADMAP.md` is the founding document: §3 (principles), §4 (provenance), §5 (language), §8.8 (the fit check). Where it conflicts with the files above, they win.
+6. `canon/RULES.md`: how the series is written: §3 (principles), §4 (provenance), §5 (language), §8.8 (the fit check). Where it conflicts with the files above, they win. The founding roadmap it came from is `archive/ROADMAP.md`, kept as the record.
 
 ## Where things live
 
@@ -55,7 +55,7 @@ Where every piece stands (versions, what's next) is `README.md`'s "Status"; read
 - **Material from beyond the canon** comes in only after discussion. Label it P3.
 - **Learn from the author's edits.** After each of their passes, compare it with the draft, record recurring patterns in the `style/` docs, and ask about any change you can't interpret.
 - **Ambiguous text: use the most likely reading.** Where the Hebrew or Greek can be read more than one way, the dialogue follows the most likely reading, with the reasons and the alternatives in a note (the author's instruction, 2026-10-02).
-- **One language rule** (confirmed by the author). English always stands for Israel's own language; sister dialects are accents; every other language follows the author's three tiers (ROADMAP §5.7). Use "Yahweh" only in oaths and where the Name itself is the point (§5.5).
+- **One language rule** (confirmed by the author). English always stands for Israel's own language; sister dialects are accents; every other language follows the author's three tiers (RULES §5.7). Use "Yahweh" only in oaths and where the Name itself is the point (§5.5).
 - **Non-English lines** always come with the original script, a transliteration, a literal back-translation and a confidence level. Flag reconstructed languages, especially first-century Galilean Aramaic, for specialist review.
 - **Write decisions down.** Decisions go in `canon/FOUNDATIONS.md` or `canon/POSITIONS.md`, dated. Long conversations go in `discussions/`. Nothing important should live only in chat, because the next session won't see it.
 - **Check citations.** Verify verse references, and flag anything stated with less than full confidence.

@@ -4,13 +4,13 @@
 
 **Status:** v1, 2026-10-02, drawn from the first-draft Ruth script and your edits to the treatment and the sample scene. Your rewrite of the script will be the real test. Whatever you change in a character's lines, I'll record here.
 
-The baseline for everyone is setting 2: plain modern English (ROADMAP §5.2), with the patterns in [`STORYTELLING.md`](./STORYTELLING.md). This file records only what's particular to each voice.
+The baseline for everyone is setting 2: plain modern English (RULES §5.2), with the patterns in [`STORYTELLING.md`](./STORYTELLING.md). This file records only what's particular to each voice.
 
 ---
 
 ## Ruth
 
-**Accent:** Moabite (ROADMAP §5.7). The accent is the only thing foreign about her English.
+**Accent:** Moabite (RULES §5.7). The accent is the only thing foreign about her English.
 
 **How she talks:** few words, plain and direct, and she means every one. She asks real questions ("Then how do they pray to him?" "Who are you talking to?" "Where is he?"). She doesn't explain herself; the one long speech she gives is the oath. Her humor is dry and short ("It wouldn't be funny"). With Boaz she's formal at first, then bolder than she was told to be ("You're a redeemer").
 
@@ -74,4 +74,4 @@ The baseline for everyone is setting 2: plain modern English (ROADMAP §5.2), wi
 
 ## Accents
 
-The Moabite accent is designed once and kept across the series (ROADMAP §5.7). It mustn't be a real modern accent. Israelites from different tribes may get regional colors later (the Ephraimites' "Sibboleth," Judg 12:6, is the Bible's own proof that they had them).
+The Moabite accent is designed once and kept across the series (RULES §5.7). It mustn't be a real modern accent. Israelites from different tribes may get regional colors later (the Ephraimites' "Sibboleth," Judg 12:6, is the Bible's own proof that they had them).

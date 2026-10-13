@@ -1,17 +1,19 @@
 # Adonai: Roadmap
 
+> **Archived 2026-10-13.** This is the founding roadmap (v2.9) as it last stood, kept as the record. The rules in it that are still in force are in [`canon/RULES.md`](../canon/RULES.md), under the same section numbers; the decisions are in [FOUNDATIONS](../canon/FOUNDATIONS.md); the live state is in the [README](../README.md#status).
+
 > A detailed, faithful dramatization of the Bible. It gets written first as story and screenplay and produced later as a fully rendered 3D animated series. It uses modern dialogue so that ancient people feel as present to us as they did to the people who first heard their stories.
 
-**Status:** v2.9, 2026-10-07. The Positions Register has moved to [`canon/POSITIONS.md`](./canon/POSITIONS.md); §8.2 is a pointer. From here on this roadmap is the founding document and the live state lives in `CLAUDE.md`, `README.md` and `canon/`. v2.8, 2026-10-05. v2.8 records that the first pass from Genesis to Revelation is treatments and beats only (§17), your computer and sound tools (§15.5–15.6), and the Positions decided in Discussions 001 and 007 (§8.2). v2.7, 2026-10-02. *Adonai* is the series' working title. Phase 1, the Ruth pilot ([plan](./story/arcs/07-ruth/README.md)), is under way: the dossier is done, the [treatment](./story/arcs/07-ruth/TREATMENT.md) is at v4, and the [beat sheet](./story/arcs/07-ruth/BEATS.md) and a complete [first-draft script](./scripts/ruth/ruth.fountain) are written. v2.7 adds the first `VOICES` and `LEXICON` (§16), a low-cost hybrid production plan from [Discussion 006](./discussions/006-2d-or-3d.md) (§15.5), and corrects two out-of-date rows in §19.1. v2.6 records your confirmation of the language rule (§5.7), the working title, and two new discussions: [005](./discussions/005-beyond-the-text.md) on traditions and rumored events, and [006](./discussions/006-2d-or-3d.md) on 2D versus 3D (§15). v2.5 added one language rule for the whole series (§5.7), uses God's name more sparingly (§5.5), and plans for live action, with the 3D animation as its placeholder (§1.1, §15). The whole-Bible [working chronology](./world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](./canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](./discussions/).
+**Status:** v2.9, 2026-10-07. The Positions Register has moved to [`canon/POSITIONS.md`](../canon/POSITIONS.md); §8.2 is a pointer. From here on this roadmap is the founding document and the live state lives in `CLAUDE.md`, `README.md` and `canon/`. v2.8, 2026-10-05. v2.8 records that the first pass from Genesis to Revelation is treatments and beats only (§17), your computer and sound tools (§15.5–15.6), and the Positions decided in Discussions 001 and 007 (§8.2). v2.7, 2026-10-02. *Adonai* is the series' working title. Phase 1, the Ruth pilot ([plan](../story/arcs/07-ruth/README.md)), is under way: the dossier is done, the [treatment](../story/arcs/07-ruth/TREATMENT.md) is at v4, and the [beat sheet](../story/arcs/07-ruth/BEATS.md) and a complete [first-draft script](../scripts/ruth/ruth.fountain) are written. v2.7 adds the first `VOICES` and `LEXICON` (§16), a low-cost hybrid production plan from [Discussion 006](../discussions/006-2d-or-3d.md) (§15.5), and corrects two out-of-date rows in §19.1. v2.6 records your confirmation of the language rule (§5.7), the working title, and two new discussions: [005](../discussions/005-beyond-the-text.md) on traditions and rumored events, and [006](../discussions/006-2d-or-3d.md) on 2D versus 3D (§15). v2.5 added one language rule for the whole series (§5.7), uses God's name more sparingly (§5.5), and plans for live action, with the 3D animation as its placeholder (§1.1, §15). The whole-Bible [working chronology](../world/TIMELINE.md), pulled forward from Phase 3, is decided. Earlier changes: v2.1 recorded your language and Name decisions and added the [Framings Register](../canon/FRAMINGS.md). Your answers to the v1 questions are recorded in [`canon/FOUNDATIONS.md`](../canon/FOUNDATIONS.md). The two biggest open questions each have a discussion brief in [`discussions/`](../discussions/).
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
-> **Superseded sections (noted 2026-10-10, as [REVIEW](./archive/REVIEW.md) §2.3.2 asked).** Where this roadmap and the files below disagree, they win, and these parts are kept only as the record:
-> - **The order of writing** (§0 "How we start", §11, §17's Ruth-then-Joseph plan): replaced 2026-10-03/05. Ruth is parked as a first draft and the first pass runs front to end from Genesis 1, treatments and beats only ([FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far)).
-> - **The pilot animatic** (§0, §11.2, §15.4, §17 Phase 6): replaced 2026-10-07/08. The Opening is the exception and its animatic is built ([production/opening](./production/opening/README.md)); Ruth gets storyboards and sketches, not an animatic.
-> - **The arc map** (§10.3): replaced 2026-10-08 by [`story/ARCHITECTURE.md`](./story/ARCHITECTURE.md).
-> - **The Positions Register** (§8.2): moved to [`canon/POSITIONS.md`](./canon/POSITIONS.md) 2026-10-07. Decisions live in FOUNDATIONS §4, not a `DECISIONS.md` (§16's tree is the original plan).
-> - **Depicting God and Jesus's humanity** (§8.3, §8.4, §19.1): decided in Discussions [001](./discussions/001-how-god-speaks.md#decision), [002](./discussions/002-jesus-humanity.md#decision), [007](./discussions/007-the-faces-of-god.md#decision) and [009](./discussions/009-god-in-the-garden.md#decision).
+> **Superseded sections (noted 2026-10-10, as [REVIEW](./REVIEW.md) §2.3.2 asked).** Where this roadmap and the files below disagree, they win, and these parts are kept only as the record:
+> - **The order of writing** (§0 "How we start", §11, §17's Ruth-then-Joseph plan): replaced 2026-10-03/05. Ruth is parked as a first draft and the first pass runs front to end from Genesis 1, treatments and beats only ([FOUNDATIONS §4](../canon/FOUNDATIONS.md#4-decisions-so-far)).
+> - **The pilot animatic** (§0, §11.2, §15.4, §17 Phase 6): replaced 2026-10-07/08. The Opening is the exception and its animatic is built ([production/opening](../production/opening/README.md)); Ruth gets storyboards and sketches, not an animatic.
+> - **The arc map** (§10.3): replaced 2026-10-08 by [`story/ARCHITECTURE.md`](../story/ARCHITECTURE.md).
+> - **The Positions Register** (§8.2): moved to [`canon/POSITIONS.md`](../canon/POSITIONS.md) 2026-10-07. Decisions live in FOUNDATIONS §4, not a `DECISIONS.md` (§16's tree is the original plan).
+> - **Depicting God and Jesus's humanity** (§8.3, §8.4, §19.1): decided in Discussions [001](../discussions/001-how-god-speaks.md#decision), [002](../discussions/002-jesus-humanity.md#decision), [007](../discussions/007-the-faces-of-god.md#decision) and [009](../discussions/009-god-in-the-garden.md#decision).
 > - **Hardware** (§15.5): as of 2026-10-08 the details are in `CLAUDE.md` ("Sessions run on the author's computer").
 
 ### What changed in v2
@@ -25,9 +27,9 @@ Read §0 for the short version and §19 for what's decided and what's still open
 | Use original languages, not only English | §5.7 rewritten: four approaches, the Bible's own scenes where language drives the plot, and a translation workflow with honest confidence levels |
 | "Yahweh where someone actually said it" | §5.5 corrected. People spoke the Name freely in Old Testament times, so your rule makes "Yahweh" common in that era. |
 | Start with the widely accepted canon, then study the Ethiopian canon and the apocrypha | New §9.5: a study track for texts beyond the canon, starting from the traditions the New Testament writers themselves draw on |
-| Depicting God (Q4) and invented dialogue for Jesus (Q7) need discussion | [Discussion 001](./discussions/001-how-god-speaks.md) and [Discussion 002](./discussions/002-jesus-humanity.md). §8.4 now marks what the texts settle and what's still open. |
+| Depicting God (Q4) and invented dialogue for Jesus (Q7) need discussion | [Discussion 001](../discussions/001-how-god-speaks.md) and [Discussion 002](../discussions/002-jesus-humanity.md). §8.4 now marks what the texts settle and what's still open. |
 | Ruth as the pilot: is it because it's short? | §11.4: brevity is the smallest reason |
-| You'll revise as we go and want me to pick up on it | §13.1 adds a "learning from your edits" step. [`CLAUDE.md`](./CLAUDE.md) carries the project rules into every future session. |
+| You'll revise as we go and want me to pick up on it | §13.1 adds a "learning from your edits" step. [`CLAUDE.md`](../CLAUDE.md) carries the project rules into every future session. |
 
 ---
 
@@ -69,7 +71,7 @@ Read §0 for the short version and §19 for what's decided and what's still open
 
 **How we start:**
 
-1. ~~You answer the foundational questions.~~ Done; see [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md). A few follow-up questions remain in §19.
+1. ~~You answer the foundational questions.~~ Done; see [`canon/FOUNDATIONS.md`](../canon/FOUNDATIONS.md). A few follow-up questions remain in §19.
 2. We settle the language approach (§5.7) and how to handle God's name in Old Testament dialogue (§5.5). Ruth needs both.
 3. I turn the rules in this roadmap into standalone working documents: principles, a language guide, a lexicon and a positions register.
 4. We write the **Ruth** pilot all the way through (§11): a research dossier, a treatment, scene cards, a script, your rewrite and an audit. Ruth doesn't depend on the big discussions about how God speaks or about Jesus, so it can go ahead while those conversations continue.
@@ -77,7 +79,7 @@ Read §0 for the short version and §19 for what's decided and what's still open
 
 **Two tracks run alongside the writing the whole time:**
 
-- **Discussions** ([`discussions/`](./discussions/)): your framings and the theological questions, taken as they come up. Each one is settled before any arc that depends on it.
+- **Discussions** ([`discussions/`](../discussions/)): your framings and the theological questions, taken as they come up. Each one is settled before any arc that depends on it.
 - **The extra-texts study track** (§9.5): learning what the Ethiopian canon, the Apocrypha and related texts actually contain, so you can decide what, if anything, to use.
 
 3D production (§15) starts only after the pilot script is locked, and it starts with an *animatic* (storyboards timed to rough audio), not with 3D models.
@@ -166,7 +168,7 @@ There are eleven principles. Everything else in this document expands on one of 
 7. **Tradition is not text.** Popular images such as the apple, the three kings, or Mary Magdalene as a prostitute are checked against Scripture. We use them only on purpose, and we label them when we do (§6).
 8. **Full intensity when the story calls for it.** The Bible holds violence, pain, grief, beauty, love and desire at full strength, and so can we. The ceiling is high for gore, pain, beauty and pleasure. Intensity is a tool, not a default. It's used when the story calls for it and matched to what the text is doing (§7.4). The firm limit: no explicit sexual content. Desire and intimacy can be powerful on screen without being explicit, as the Song of Songs shows.
 9. **Show, don't preach.** Theology comes through events and through the teaching the text itself records. Invented dialogue never exists just to deliver doctrine.
-10. **This is your project, and decisions get written down.** It expresses your understanding. I gather information, check it and challenge it; you decide. When your framing and the text seem to pull apart, I'll say so, with the passages, and we'll talk it through before anything is built on it. Decisions are recorded with their reasoning in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md) and the Positions Register (§8.2), so the series stays consistent over years of writing.
+10. **This is your project, and decisions get written down.** It expresses your understanding. I gather information, check it and challenge it; you decide. When your framing and the text seem to pull apart, I'll say so, with the passages, and we'll talk it through before anything is built on it. Decisions are recorded with their reasoning in [`canon/FOUNDATIONS.md`](../canon/FOUNDATIONS.md) and the Positions Register (§8.2), so the series stays consistent over years of writing.
 11. **Explore before deciding.** Unconventional framings are welcome. Each one gets a fair hearing, a check against every relevant text (the fit check, §8.8), the strongest case against it as well as for it, and a recorded decision.
 
 ---
@@ -209,7 +211,7 @@ Three refinements:
 
 - **Iconic lines.** Some lines are so familiar that a fresh rendering distracts the audience. Examples are "Let there be light," "It is finished" and "Father, forgive them." **Keep the familiar wording when it's accurate and not archaic. Modernize it when the familiar form is archaic or misleading.** The KJV's "Suffer the little children to come unto me" only confuses a modern listener, because "suffer" meant "allow." It becomes "Let the little children come to me."
 - **Parallel passages.** When two or more Gospels record the same saying in different words, a Tier A line follows one Gospel's wording. We don't blend phrases from different Gospels into one sentence unless that decision is recorded in `HARMONY.md` (§9.4). Also, most of Jesus's words reach us as Greek translations of what he said in Aramaic. Tier A means faithful to the Greek text we have. The few Aramaic words the Gospels preserve are the exception (§5.7).
-- **Invented lines for Jesus and for God.** *Decided:* case by case, with no new sermons or teachings. An added line has to make sense in its context, with evidence or the spirit of the story behind it, and is never there just to add theology. Expect Jesus to have real Tier D dialogue: ordinary talk, humor, friendship, fear, tenderness, and toughness. The open question is how far his humanity goes, and that's [Discussion 002](./discussions/002-jesus-humanity.md).
+- **Invented lines for Jesus and for God.** *Decided:* case by case, with no new sermons or teachings. An added line has to make sense in its context, with evidence or the spirit of the story behind it, and is never there just to add theology. Expect Jesus to have real Tier D dialogue: ordinary talk, humor, friendship, fear, tenderness, and toughness. The open question is how far his humanity goes, and that's [Discussion 002](../discussions/002-jesus-humanity.md).
 
 ### 4.3 The addition test
 
@@ -485,7 +487,7 @@ The result: most main characters speak English almost all the time, because most
 
 - **Before Babel** there's one language (Gen 11:1), so everyone speaks English.
 - **The patriarchs.** Abraham's family came from Aramaic-speaking country, and Jacob's sons were born in Haran to Aramean mothers (Gen 31:47; Deut 26:5, "a wandering Aramean was my father"). How much of Jacob's household speaks Aramaic is a decision for Genesis.
-- **When God speaks to someone outside Israel** (Abimelech, Pharaoh, Balaam, Nebuchadnezzar, the Magi, Cornelius), in what language? The risen Jesus speaks to Paul "in the Hebrew language" (Acts 26:14). This belongs to [Discussion 001](./discussions/001-how-god-speaks.md).
+- **When God speaks to someone outside Israel** (Abimelech, Pharaoh, Balaam, Nebuchadnezzar, the Magi, Cornelius), in what language? The risen Jesus speaks to Paul "in the Hebrew language" (Acts 26:14). This belongs to [Discussion 001](../discussions/001-how-god-speaks.md).
 - **Acts.** Paul's Greek-speaking churches would put long stretches of Acts in Greek. That's the rule's biggest cost, and we'll look at it when we get there.
 
 **For live action** (§15), real, speakable languages mean native speakers can check the lines, coach the actors and perform them.
@@ -714,7 +716,7 @@ The stories will raise philosophical questions on their own, and each one has co
 
 ### 8.2 The Positions Register
 
-**Moved to [`canon/POSITIONS.md`](./canon/POSITIONS.md) on 2026-10-07,** as §16 always planned. That file is now the register; this section is kept only as a pointer. Each entry there holds the question and its key texts, the main views, what each view means for the story, and your position with the date you decided it.
+**Moved to [`canon/POSITIONS.md`](../canon/POSITIONS.md) on 2026-10-07,** as §16 always planned. That file is now the register; this section is kept only as a pointer. Each entry there holds the question and its key texts, the main views, what each view means for the story, and your position with the date you decided it.
 
 ### 8.3 Depicting God, the Spirit, angels and Satan
 
@@ -727,7 +729,7 @@ These are the options to decide in the register *(decided since: Discussions 001
 
 ### 8.4 Fully God and fully man
 
-*Status: decided 2026-10-01 in [Discussion 002](./discussions/002-jesus-humanity.md#decision), two sub-questions deferred to the Gospels (this note was written while it was open). Your answer to Q7 makes his humanity the center of the project, and that's well supported by the text. The word "fallible" needs working through.*
+*Status: decided 2026-10-01 in [Discussion 002](../discussions/002-jesus-humanity.md#decision), two sub-questions deferred to the Gospels (this note was written while it was open). Your answer to Q7 makes his humanity the center of the project, and that's well supported by the text. The word "fallible" needs working through.*
 
 The Council of Chalcedon (451) set out what most Christians hold: Jesus is one person, fully God and fully human. Screen portrayals tend to fall off one side or the other:
 
@@ -922,9 +924,9 @@ The Bible summarizes itself in other places that could serve as frames too: Step
 
 ### 10.3 Draft arc map
 
-*Superseded by [`story/ARCHITECTURE.md`](./story/ARCHITECTURE.md) (2026-10-08); kept for the record.*
+*Superseded by [`story/ARCHITECTURE.md`](../story/ARCHITECTURE.md) (2026-10-08); kept for the record.*
 
-Dates follow the decided [working chronology](./world/TIMELINE.md). They're approximate, and the early ones depend on the model we chose.
+Dates follow the decided [working chronology](../world/TIMELINE.md). They're approximate, and the early ones depend on the model we chose.
 
 | # | Arc | Books | Approximate era | Heart of it | Main challenge |
 |---|---|---|---|---|---|
@@ -1315,7 +1317,7 @@ The text includes costume details too: tassels on the corners of garments (Num 1
 | Stylized realism (painterly look, grounded proportions) | Ages well; forgiving; distinctive; violence can be felt without gore | Needs strong art direction |
 | Cartoon | Cheapest | Reads as children's content and undercuts the gravity |
 
-**Recommendation (revised for live action):** realistic proportions, lighting and cameras, so the animation previews the live-action version shot for shot. The surface can stay slightly stylized, which ages better and avoids the uncanny valley. The final decision comes in Phase 6. **2D versus 3D** is open in [Discussion 006](./discussions/006-2d-or-3d.md). My recommendation there: a 3D pipeline with a painterly surface, because only 3D carries over to live action, with the Bible's visions free to break into a drawn or painted style. Ethnicity and appearance follow the evidence. Israelites are Semitic, and Egyptians, Cushites (Moses's wife may have been one, Num 12:1), Philistines (of Aegean origin), Persians, Greeks and Romans each look distinct.
+**Recommendation (revised for live action):** realistic proportions, lighting and cameras, so the animation previews the live-action version shot for shot. The surface can stay slightly stylized, which ages better and avoids the uncanny valley. The final decision comes in Phase 6. **2D versus 3D** is open in [Discussion 006](../discussions/006-2d-or-3d.md). My recommendation there: a 3D pipeline with a painterly surface, because only 3D carries over to live action, with the Bible's visions free to break into a drawn or painted style. Ethnicity and appearance follow the evidence. Israelites are Semitic, and Egyptians, Cushites (Moses's wife may have been one, Num 12:1), Philistines (of Aegean origin), Persians, Greeks and Romans each look distinct.
 
 ### 15.4 The bridge: storyboards and an animatic
 
@@ -1326,15 +1328,15 @@ Before any 3D work, the pilot becomes an **animatic**: storyboards timed to scra
 - **Blender:** free, and covers the complete 3D pipeline (modeling, rigging, animation and rendering).
 - **Unreal Engine:** real-time rendering and fast iteration; free for small creators.
 - **Motion capture:** anything from capture suits (such as Rokoko) to markerless capture from phone or video, plus stock animation libraries (such as Mixamo) for background characters.
-- **AI tools:** these are changing fast. For now they're most useful for exploring concepts, previsualization and developing a look. Keeping characters consistent over long sequences and precise control remain the hard parts. In 2026, AI video costs roughly $0.03–$0.75 per generated second, about the same whether the look is 2D or 3D, while AI that only *looks* 3D gives you no sets or cameras to carry into live action. [Discussion 006](./discussions/006-2d-or-3d.md) has the figures. **The hybrid we're discussing** (006, round 1): 3D built in Blender by AI on your own computer, for structure, consistency and reuse; then AI restyling guided by the 3D renders, for the painterly surface. Prompt-only generation is for throwaway concept images. We'll reassess when we reach Phase 6.
-- **Your computer (2026-10-05):** an RTX 2060 Super on one machine and, you think, an RTX 4060 on the other, both with 8 GB of video memory. That's enough for Blender, for depth and restyling models, and for the Opening's code-built beats; local AI video at that size is possible but slow. Blender should be installed, and I may install video tools and whatever else is needed. The plan for real expressions is a filmed face turned into depth maps ([Opening dossier §6](./story/arcs/01-beginnings/opening/DOSSIER.md#6-the-visualization)).
+- **AI tools:** these are changing fast. For now they're most useful for exploring concepts, previsualization and developing a look. Keeping characters consistent over long sequences and precise control remain the hard parts. In 2026, AI video costs roughly $0.03–$0.75 per generated second, about the same whether the look is 2D or 3D, while AI that only *looks* 3D gives you no sets or cameras to carry into live action. [Discussion 006](../discussions/006-2d-or-3d.md) has the figures. **The hybrid we're discussing** (006, round 1): 3D built in Blender by AI on your own computer, for structure, consistency and reuse; then AI restyling guided by the 3D renders, for the painterly surface. Prompt-only generation is for throwaway concept images. We'll reassess when we reach Phase 6.
+- **Your computer (2026-10-05):** an RTX 2060 Super on one machine and, you think, an RTX 4060 on the other, both with 8 GB of video memory. That's enough for Blender, for depth and restyling models, and for the Opening's code-built beats; local AI video at that size is possible but slow. Blender should be installed, and I may install video tools and whatever else is needed. The plan for real expressions is a filmed face turned into depth maps ([Opening dossier §6](../story/arcs/01-beginnings/opening/DOSSIER.md#6-the-visualization)).
 - **Local versus cloud:** writing and research work fine in cloud sessions like this one. Anything that drives Blender or renders needs Claude Code running on your own machine. Primordia's `SETUP_GUIDE.md` (outside this repository) already covers that setup. Reference scenes for recruiting collaborators (the Genesis opening, a Ruth scene, the crucifixion as an animatic) are planned in 006 and don't need to wait for Phase 6.
 
 ### 15.6 Sound
 
 - **Voices:** an accent strategy (§5.7), and casting that matches the characters' origins where possible.
 - **Music:** built around the instruments the Bible names: lyre (*kinnor*), harp (*nevel*), frame drum (*tof*), pipe (*halil*), ram's horn (*shofar*), cymbals and trumpets (Ps 150; 1 Sam 10:5). Nobody knows exactly what the music sounded like, so the score can draw on the instruments without being bound to any reconstruction.
-- **God's voice:** decided scene by scene, from the text (§7.5). An encounter alone brings back the Opening's held note, with the words in the hearer's own voice ([Discussion 001](./discussions/001-how-god-speaks.md#decision)).
+- **God's voice:** decided scene by scene, from the text (§7.5). An encounter alone brings back the Opening's held note, with the words in the hearer's own voice ([Discussion 001](../discussions/001-how-god-speaks.md#decision)).
 - **Your tools (2026-10-05):** you have FL Studio. The plan is to generate raw sounds and stems in code, timed to the picture, and arrange and mix them in FL Studio.
 
 ### 15.7 Scale and money
@@ -1407,17 +1409,17 @@ narratives/bible/
 
 Phase 6 can start once the pilot is locked and can run alongside Phases 3–5.
 
-**Changed 2026-10-03.** You parked Ruth as a first draft and chose to write from the front of the Bible to the end, so that the broader story is laid out before any part is revised. The order of Phases 2–5 gives way to that: the work starts at Genesis 1 ([arc 1](./story/arcs/01-beginnings/README.md)).
+**Changed 2026-10-03.** You parked Ruth as a first draft and chose to write from the front of the Bible to the end, so that the broader story is laid out before any part is revised. The order of Phases 2–5 gives way to that: the work starts at Genesis 1 ([arc 1](../story/arcs/01-beginnings/README.md)).
 
 **Changed 2026-10-05.** The first pass is treatments and beats only, for every book. Scripts come after it.
 
-**Changed 2026-10-07.** The Opening is the exception: its script and visualization go ahead during the first pass. And [`REVIEW.md`](./archive/REVIEW.md) proposes bringing Phase 3's `ARCHITECTURE.md` forward, before the Garden's treatment, so the whole series is on one page early.
+**Changed 2026-10-07.** The Opening is the exception: its script and visualization go ahead during the first pass. And [`REVIEW.md`](./REVIEW.md) proposes bringing Phase 3's `ARCHITECTURE.md` forward, before the Garden's treatment, so the whole series is on one page early.
 
 **Two tracks run continuously beside every phase:**
 
 | Track | What it is | Gate |
 |---|---|---|
-| **Discussions** | Your framings and the theological questions, taken as they come up ([`discussions/`](./discussions/)) | Each discussion must be settled before any arc that depends on it. 001 (how God speaks) must be done before Genesis and the Exodus; 002 (Jesus's humanity) before the Gospels. Neither blocks Ruth. |
+| **Discussions** | Your framings and the theological questions, taken as they come up ([`discussions/`](../discussions/)) | Each discussion must be settled before any arc that depends on it. 001 (how God speaks) must be done before Genesis and the Exodus; 002 (Jesus's humanity) before the Gospels. Neither blocks Ruth. |
 | **Study track** | Briefs on texts beyond the canon (§9.5) | Anything adopted must be decided before the arc it would appear in |
 
 ---
@@ -1437,7 +1439,7 @@ Phase 6 can start once the pilot is locked and can run alongside Phases 3–5.
 | **An echo chamber.** The project expresses your views, and I could drift into just agreeing with you. | Every framing gets the strongest case against it as well as for it (§8.8), and I'll name dissonance plainly when I see it |
 | **Framing drift.** Many individual interpretive choices can add up to something inconsistent, or to something that quietly changes the spirit of the story. | The fit check, the Positions Register, and occasionally re-reading the decisions together |
 | **Errors in ancient languages** | Confidence levels on every translation (§5.7); specialist review before production; Aramaic and lower-confidence languages always flagged |
-| **Losing context between sessions.** I don't remember past conversations; only what's written in this folder carries over. | [`CLAUDE.md`](./CLAUDE.md), FOUNDATIONS and the discussion files are written so a new session can pick up exactly where we left off |
+| **Losing context between sessions.** I don't remember past conversations; only what's written in this folder carries over. | [`CLAUDE.md`](../CLAUDE.md), FOUNDATIONS and the discussion files are written so a new session can pick up exactly where we left off |
 | **Translation copyright** | Our own rendering, with a public-domain reference text (§9.3) |
 | **Unintentionally giving offense,** to Jewish viewers or to other Christian traditions | Accuracy plus charity: §8.7 and the text-first discussion approach |
 | **The cost of 3D** | Stylized realism; the animatic first; a proof of concept before scaling up |
@@ -1448,38 +1450,38 @@ Phase 6 can start once the pilot is locked and can run alongside Phases 3–5.
 
 ### 19.1 Decided in v2
 
-The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](./canon/FOUNDATIONS.md).
+The full record, mostly in your own words, is in [`canon/FOUNDATIONS.md`](../canon/FOUNDATIONS.md).
 
 | # | Question | Decision |
 |---|---|---|
 | 1 | Canon | Start with the widely shared canon, then study the Ethiopian canon and the apocrypha. Adopt material only after discussion. |
 | 2 | "Missing from the Bible" | Anything outside the Bible we could potentially use (§9.5) |
 | 3 | Audience | You. There's no rating; the intensity ceiling is high (principle 8). |
-| 4 | Depicting God | Decided 2026-10-05: God seen through faces, the face as God's image ([007](./discussions/007-the-faces-of-god.md#decision)); how God speaks decided for Genesis ([001](./discussions/001-how-god-speaks.md#decision)); not seen in the Garden ([009](./discussions/009-god-in-the-garden.md#decision)) |
+| 4 | Depicting God | Decided 2026-10-05: God seen through faces, the face as God's image ([007](../discussions/007-the-faces-of-god.md#decision)); how God speaks decided for Genesis ([001](../discussions/001-how-god-speaks.md#decision)); not seen in the Garden ([009](../discussions/009-god-in-the-garden.md#decision)) |
 | 5 | Tradition | Non-denominational. Truth over matching any one framework. |
 | 6 | Names | "Jesus." "God" or "the Lord" by default; "Yahweh" only in oaths and where the Name itself is the point (revised 2026-10-01, §5.5) |
-| 7 | Invented dialogue for Jesus | Case by case, with no new sermons or teachings. His humanity is central. What "fallible" means is decided: limited in capacity, never in will ([Discussion 002](./discussions/002-jesus-humanity.md#decision)). |
+| 7 | Invented dialogue for Jesus | Case by case, with no new sermons or teachings. His humanity is central. What "fallible" means is decided: limited in capacity, never in will ([Discussion 002](../discussions/002-jesus-humanity.md#decision)). |
 | 8 | Pilot | Ruth (§11.4) |
 | 9 | Structure | Decide later, as long as it can be arranged chronologically |
 | 10 | Reframing | Different interpretations and understandings, checked with the fit check (§8.8) |
 | 11 | Output | Screenplays first |
 | 12 | Format | Episodes for now; the final format gets decided later |
-| 13 | Chronology | The text-first model, with all five forks as recommended ([TIMELINE §8](./world/TIMELINE.md#8-decisions-for-you)) |
-| 14 | Rahab | Boaz's ancestor several generations back, not his mother ([Ruth dossier §5](./story/arcs/07-ruth/DOSSIER.md#5-when-chronology-and-rahab)) |
+| 13 | Chronology | The text-first model, with all five forks as recommended ([TIMELINE §8](../world/TIMELINE.md#8-decisions-for-you)) |
+| 14 | Rahab | Boaz's ancestor several generations back, not his mother ([Ruth dossier §5](../story/arcs/07-ruth/DOSSIER.md#5-when-chronology-and-rahab)) |
 | 15 | The language rule | Confirmed 2026-10-02: English always stands for Israel's own language, sister dialects are accents, and everything else follows your three tiers (§5.7) |
 | 16 | Title | Working title: *Adonai* (§0) |
 
 ### 19.2 Still open
 
-**The current list is in the [README](./README.md#what-i-need-from-you)** (from 2026-10-03). The list below is the older one and is kept for the record.
+**The current list is in the [README](../README.md#what-i-need-from-you)** (from 2026-10-03). The list below is the older one and is kept for the record.
 
-1. **Your pass on the Ruth [script](./scripts/ruth/ruth.fountain),** and the four new choices in the treatment ([TREATMENT §6](./story/arcs/07-ruth/TREATMENT.md#6-choices-for-you), 12–15).
-2. **[Discussion 005](./discussions/005-beyond-the-text.md):** traditions and rumored events. Round 1 proposes "recognition, not derivation" for an Eastern traveler meeting Jesus.
-3. **[Discussion 006](./discussions/006-2d-or-3d.md):** the hybrid production plan and the reference scenes. Not needed until Phase 6, but a one-frame test could happen any time you work locally.
-4. **[Discussion 002](./discussions/002-jesus-humanity.md), round 3:** the two guardrails for your reading of 2 Sam 7:14b.
+1. **Your pass on the Ruth [script](../scripts/ruth/ruth.fountain),** and the four new choices in the treatment ([TREATMENT §6](../story/arcs/07-ruth/TREATMENT.md#6-choices-for-you), 12–15).
+2. **[Discussion 005](../discussions/005-beyond-the-text.md):** traditions and rumored events. Round 1 proposes "recognition, not derivation" for an Eastern traveler meeting Jesus.
+3. **[Discussion 006](../discussions/006-2d-or-3d.md):** the hybrid production plan and the reference scenes. Not needed until Phase 6, but a one-frame test could happen any time you work locally.
+4. **[Discussion 002](../discussions/002-jesus-humanity.md), round 3:** the two guardrails for your reading of 2 Sam 7:14b.
 5. **FR-03's on-screen approach,** to confirm before the Gospels.
 6. **Deferred:**
-   - The David connection at the end of Ruth, until more of the story exists ([TREATMENT §7](./story/arcs/07-ruth/TREATMENT.md#for-later-arcs)).
+   - The David connection at the end of Ruth, until more of the story exists ([TREATMENT §7](../story/arcs/07-ruth/TREATMENT.md#for-later-arcs)).
    - Discussion 001, before Genesis.
    - The two sub-questions left over from Discussion 002, before the Gospels.
    - The remaining Positions, each before the arc that needs it.

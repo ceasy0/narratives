@@ -10,7 +10,7 @@
 
 ## 1. The shape
 
-**Length.** 37 pages, which is about 40 to 45 minutes on screen. A page of script runs about a minute, and pages like these, with a lot of silent action, run a little longer. The treatment estimated 58 minutes; the script is the better measure, and the animatic will be the real one (ROADMAP §15.4).
+**Length.** 37 pages, which is about 40 to 45 minutes on screen. A page of script runs about a minute, and pages like these, with a lot of silent action, run a little longer. The treatment estimated 58 minutes; the script is the better measure, and the animatic will be the real one (archived ROADMAP §15.4).
 
 | Part | Pages | Share | Story time | Naomi |
 |---|---|---|---|---|

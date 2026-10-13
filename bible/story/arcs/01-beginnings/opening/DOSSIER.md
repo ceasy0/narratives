@@ -220,6 +220,6 @@ Each is recorded once in [FOUNDATIONS §4](../../../../canon/FOUNDATIONS.md#4-de
 | The impact | The asteroid that killed the dinosaurs, about 3,000 km away: close enough to frighten the animal, too far to burn everything (§5). |
 | The people | Always walking forward, to the left, through fighting, burial and birth; burial rare, mostly children (§5). |
 | The cliff | **An ancestor of Adam**, about 55,000 years ago, when humans left Africa (§5), with the Nile greener than strictly required. The ending plays in real time, with one breath. |
-| The breath | **Crosses the cut:** drawn in at the cliff, let out by Adam, a man in his early twenties, at the Garden's east entrance ([Garden LAYOUT §11](../garden/LAYOUT.md#11-your-notes-of-2026-10-13-the-walk-in-one-mans-work-blue-and-yellow)). |
+| The breath | **Crosses the cut:** drawn in at the cliff, let out by Adam, a man in his early twenties, at the Garden's east entrance ([Garden LAYOUT §10](../garden/LAYOUT.md#10-the-walk-in)). |
 | The exception | The Opening and visions are exempt from two storytelling rules ([STORYTELLING](../../../../style/STORYTELLING.md)). |
 | Glimpses | The Opening's world comes back in glimpses through the series; you'll say when one should occur. |

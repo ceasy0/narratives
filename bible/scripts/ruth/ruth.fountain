@@ -11,16 +11,16 @@ This is plain-text screenplay format (Fountain). Open it in Highland, Beat or Sl
 
 Anything in [[double brackets]] is a working note. Notes don't appear in a rendered script. They say where each line or moment comes from:
 
-  A, B, C, D   dialogue tiers: locked, recorded, implied, invented (ROADMAP §4.2)
-  P1–P6        content levels: Scripture, history, tradition, inference, your conviction, invention (ROADMAP §4.1)
+  A, B, C, D   dialogue tiers: locked, recorded, implied, invented (RULES §4.2)
+  P1–P6        content levels: Scripture, history, tradition, inference, your conviction, invention (RULES §4.1)
   ·n           the item's number in the treatment's additions register (TREATMENT §3)
   "your wording"   a line you wrote or rewrote in your notes on the treatment or the sample scene
 
 Act labels are for reading only. Nothing appears on screen but the one caption the treatment calls for ("Ten years later").
 
-Accents: Ruth, Orpah and every Moabite speak English with a Moabite accent. Naomi, Boaz and every Israelite speak with Bethlehem's (ROADMAP §5.7).
+Accents: Ruth, Orpah and every Moabite speak English with a Moabite accent. Naomi, Boaz and every Israelite speak with Bethlehem's (RULES §5.7).
 
-Names: other people say "Ruth" from the start, so the audience knows her name. Naomi never says it until Act Three (3:1). "Yahweh" is heard twice, in the two oaths (1:17; 3:13). Everywhere else it's "God" or "the Lord," and Shaddai is "the Almighty" (ROADMAP §5.5).
+Names: other people say "Ruth" from the start, so the audience knows her name. Naomi never says it until Act Three (3:1). "Yahweh" is heard twice, in the two oaths (1:17; 3:13). Everywhere else it's "God" or "the Lord," and Shaddai is "the Almighty" (RULES §5.5).
 
 The tier mix for the whole script is at the end.
 */
@@ -72,7 +72,7 @@ CHILION (15) lifts the lid of the bread bin. Peers in. Holds the pose. A long, t
 CHILION
 (announcing it to the courtyard)
 House of bread.
-[[D. P6·2. Bethlehem means "house of bread" (ROADMAP §5.6).]]
+[[D. P6·2. Bethlehem means "house of bread" (RULES §5.6).]]
 
 MAHLON
 (not looking up from the rope)
@@ -974,7 +974,7 @@ A beat. Then, steady, every word meant:
 
 RUTH (CONT'D)
 May Yahweh do that to me, and worse, if anything but death comes between us.
-[[B: 1:17. The first time she says the Name, and she says it in an oath (ROADMAP §5.5).]]
+[[B: 1:17. The first time she says the Name, and she says it in an oath (RULES §5.5).]]
 
 Naomi looks at her for a long time. We watch her take it in: the girl who brought bread to a grave nobody else came to, the girl at her oven for ten years, the girl who won't let go.
 
@@ -1625,7 +1625,7 @@ He looks at her.
 
 BOAZ (CONT'D)
 ...then as Yahweh lives, I'll redeem you myself.
-[[B: 3:13. The Name in an oath: the second and last time in the episode (ROADMAP §5.5).]]
+[[B: 3:13. The Name in an oath: the second and last time in the episode (RULES §5.5).]]
 
 BOAZ (CONT'D)
 Lie down until morning.

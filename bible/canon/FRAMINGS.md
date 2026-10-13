@@ -3,7 +3,7 @@
 > Your unconventional framings of ideas and passages: what each one says, which texts support it and which pull against it, a first-pass fit grade, and what it would change on screen. These grades are starting points for discussion, not verdicts.
 
 **Status:** v1.5, 2026-10-13. Twenty framings (FR-01 to FR-20), each with what it says, the texts for and against it, and its fit grade. Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes on each round since.
-**Fit grades** (defined in ROADMAP §8.8):
+**Fit grades** (defined in RULES §8.8):
 - **Supported:** the text points this way.
 - **Compatible:** the text is silent or open, and the framing fills a gap without strain.
 - **Tension:** it works only under a particular reading of some texts, which we'd name and adopt on purpose.
@@ -112,7 +112,7 @@
 - **Item 7:** the flood.
 - **Possibly where Eden was.** Gen 2:13's Gihon "flows around the whole land of Cush," and Josephus identified it with the Nile, which fits your Nile ending. But Gen 2:14 names the Tigris and the Euphrates. *(2026-10-08: superseded for the Garden. The Garden is on the lower plain near Eridu and the Nile is no longer the Gihon; Josephus's reading stays a note. [FOUNDATIONS §4](./FOUNDATIONS.md#4-decisions-so-far), [008, round 2](../discussions/008-adam-eve-and-the-garden.md#round-2--2026-10-08).)*
 
-**About the tool list in the draft:** it came from an earlier AI session. Tools change monthly, so we'll choose them in Phase 6 (ROADMAP §15.5). The abstract opening is a strong candidate for procedural animation.
+**About the tool list in the draft:** it came from an earlier AI session. Tools change monthly, so we'll choose them in Phase 6 (archived ROADMAP §15.5). The abstract opening is a strong candidate for procedural animation.
 
 **First-pass grade:** Compatible under a non-chronological reading of Genesis 1, especially with John 1 as the frame. Tension on the malicious darkness. *(2026-10-03: now Compatible as a reading that's shown and never narrated, with the days in order; Tension on the malicious darkness and on death before Eden.)*
 

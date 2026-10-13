@@ -174,7 +174,7 @@ That's one option. The point of this discussion is to find yours.
 
 *For:*
 - **It's how it originally landed.** He really was scandalous: "they took offense at him" (Mark 6:3). Jesus himself says "blessed is the one who is not offended by me" (Matt 11:6). Modern audiences know he's the hero, so nothing he does can look wrong unless we work at it.
-- **It makes his opponents understandable rather than cartoonish.** That's both accurate and important (ROADMAP §8.7).
+- **It makes his opponents understandable rather than cartoonish.** That's both accurate and important (RULES §8.7).
 - **It turns the audience's own judgment into part of the story.** That's the logic of "let him who is without sin cast the first stone."
 
 *Against:*

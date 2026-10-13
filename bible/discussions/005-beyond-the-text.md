@@ -20,7 +20,7 @@ You've heard that Jesus may have gone east to study Eastern religions between hi
 
 ## Where I agree
 
-Silence isn't denial, and the Bible says so about itself: "there are also many other things that Jesus did" (John 21:25; also 20:30). The project is built for this. Tradition is P3, scholarly inference P4, your conviction P5 and invention P6, and each can go in if it passes the addition test (ROADMAP §4.1, §4.3).
+Silence isn't denial, and the Bible says so about itself: "there are also many other things that Jesus did" (John 21:25; also 20:30). The project is built for this. Tradition is P3, scholarly inference P4, your conviction P5 and invention P6, and each can go in if it passes the addition test (RULES §4.1, §4.3).
 
 ## Where silence has edges
 
@@ -106,7 +106,7 @@ My grades, for you to react to. "Arc" is where the item would come up.
 | Moses leads an Egyptian campaign into Cush | Josephus, *Antiquities* 2.238–253 | 2 | Could explain his Cushite wife (Num 12:1). Late and legendary. | Exodus |
 | The Watchers | 1 Enoch 6–16 (alluded to in Jude 6; Jude 14–15 quotes 1 Enoch 1:9) | 2 | Bears on Gen 6:1–4 and the Nephilim. A decision for the Genesis discussion. | Genesis |
 | Job as Jobab, king of Edom | The Greek postscript to Job 42:17 | 2 | It would place Job in Genesis 36's world. | Job |
-| The Queen of Sheba bears Solomon a son, Menelik | *Kebra Nagast* (14th century) | 2 | Late, but it's the founding story of Ethiopian Christianity and its monarchy. It belongs with the Ethiopian canon study (ROADMAP §9.5). | Solomon |
+| The Queen of Sheba bears Solomon a son, Menelik | *Kebra Nagast* (14th century) | 2 | Late, but it's the founding story of Ethiopian Christianity and its monarchy. It belongs with the Ethiopian canon study (RULES §9.5). | Solomon |
 | Isaiah is sawn in two under Manasseh | *Ascension of Isaiah*; Talmud, *Yevamot* 49b | 1 | Hebrews 11:37 ("they were sawn in two") almost certainly alludes to it. | The divided kingdom |
 | Jeremiah is stoned in Egypt | *Lives of the Prophets* | 2 | Jeremiah 43–44 leaves him in Egypt, and his death isn't recorded. | Jeremiah |
 | Jeremiah hides the ark on Mount Nebo | 2 Maccabees 2:4–8 | 2 | What happened to the ark is a real gap in the text. | The exile |
