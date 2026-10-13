@@ -1,6 +1,6 @@
 # 009 — God in the Garden
 
-**Status:** **Decided, 2026-10-08; revised 2026-10-13 (round 3: God speaks through Adam's ancestor),** after two rounds. Seeded 2026-10-07 at your request (Discussion 008, question 7); round 1 on 2026-10-08 (your answers to all six questions, your idea that God speaks through the animals, my response, and what cherubim and the sword are); round 2 the same evening (the animals' two registers, the clothes, the sword, Eve, the walk to the centre). The Garden's treatment is unblocked. **Reopened 2026-10-13** for round 3 and answered the same day: God speaks through Adam's ancestor, a real man, as at Mamre ([round 3](#round-3--2026-10-13-god-as-an-old-man-seeded-not-decided), [your answer](#round-3-your-answer--2026-10-13)). Five details are open (README item 15).
+**Status:** Decided (2026-10-13): God speaks through Adam's ancestor, a real man never called God, as at Mamre, and through the world in two registers; five details open (README item 15).
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), the rest of Episode 1
 **Builds on:** [001](./001-how-god-speaks.md) (how God speaks: decided for Genesis) and [007](./007-the-faces-of-god.md) (the faces of God: decided)
 **Positions:** 12 (can God be shown), 21 (how God speaks)
