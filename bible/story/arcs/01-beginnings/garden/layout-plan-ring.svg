@@ -16,8 +16,14 @@
     <line x1="290" y1="90" x2="290" y2="135"/><line x1="290" y1="535" x2="290" y2="580"/>
     <line x1="45" y1="335" x2="90" y2="335"/><line x1="490" y1="335" x2="535" y2="335"/>
   </g>
-  <rect x="488" y="339" width="49" height="11" fill="#bdb6a8" stroke="#7d776c"/>
-  <path d="M536,344.5 C548,342.5 556,348.5 568,346.5 S583,340.5 590,342.5" fill="none" stroke="#bdb6a8" stroke-width="9" stroke-linecap="butt"/>
+  <!-- two slab bridges on dry-stacked piers, either side of the eastern river; the ring flows on under them -->
+  <g fill="#7d776c"><rect x="491" y="318" width="3" height="15"/><rect x="497" y="318" width="3" height="15"/><rect x="503" y="318" width="3" height="15"/><rect x="509" y="318" width="3" height="15"/><rect x="515" y="318" width="3" height="15"/><rect x="521" y="318" width="3" height="15"/><rect x="527" y="318" width="3" height="15"/><rect x="533" y="318" width="3" height="15"/><rect x="491" y="337" width="3" height="15"/><rect x="497" y="337" width="3" height="15"/><rect x="503" y="337" width="3" height="15"/><rect x="509" y="337" width="3" height="15"/><rect x="515" y="337" width="3" height="15"/><rect x="521" y="337" width="3" height="15"/><rect x="527" y="337" width="3" height="15"/><rect x="533" y="337" width="3" height="15"/></g>
+  <g fill="#bdb6a8" stroke="#7d776c"><rect x="488" y="320" width="49" height="11"/><rect x="488" y="339" width="49" height="11"/></g>
+  <!-- the paths on both banks of the river, outside the ring: trodden earth on the levees (no limestone out in the marsh) -->
+  <g fill="none" stroke="#cbbd98" stroke-width="9" stroke-linecap="butt">
+    <path d="M536,325.5 C548,323.5 556,329.5 568,327.5 S583,321.5 590,323.5"/>
+    <path d="M536,344.5 C548,342.5 556,348.5 568,346.5 S583,340.5 590,342.5"/>
+  </g>
   <circle cx="290" cy="335" r="200" fill="#a9b98f" stroke="#7d776c" stroke-width="2"/>
   <g fill="#cfcac0">
     <rect x="279" y="135" width="22" height="135"/><rect x="279" y="400" width="22" height="135"/>
@@ -45,9 +51,10 @@
   <line x1="340" y1="335" x2="312" y2="335" stroke="#8a3b1f" stroke-width="1.5" stroke-dasharray="3 3"/>
   <polyline points="488,343 356,343 340,335" fill="none" stroke="#8a3b1f" stroke-width="1.5" stroke-dasharray="3 3"/>
   <circle cx="491" cy="344" r="4" fill="#8a3b1f"/>
-  <text x="440" y="316" font-size="11" fill="#8a3b1f">Adam, 2:8</text>
-  <text x="470" y="372" font-size="12" fill="#2b2b2b">causeway, beside the river</text>
-  <text x="470" y="387" font-size="11" fill="#8a3b1f">cherubim (3:24)</text>
+  <text x="418" y="318" font-size="11" fill="#8a3b1f">Adam, 2:8</text>
+  <g text-anchor="end"><text x="478" y="368" font-size="12" fill="#2b2b2b">two slab bridges</text>
+  <text x="474" y="382" font-size="11" fill="#2b2b2b">on stone piers</text>
+  <text x="470" y="396" font-size="11" fill="#8a3b1f">cherubim (3:24)</text></g>
   <text x="60" y="590" font-size="11" fill="#2b4f66">ring of fresh water, held by a rim of spring stone</text>
   <g font-size="12" fill="#2b2b2b">
     <circle cx="620" cy="100" r="5" fill="#3d86b0"/><text x="633" y="104">spring between the trees (2:10)</text>
@@ -61,13 +68,14 @@
     <rect x="614" y="268" width="12" height="12" fill="#cfcac0"/><text x="633" y="279">grey limestone paths, headwaters</text>
     <line x1="613" y1="296" x2="629" y2="296" stroke="#d9c9a3" stroke-width="3"/><text x="633" y="300">winding paths, quarters</text>
     <line x1="613" y1="318" x2="629" y2="318" stroke="#8a3b1f" stroke-width="1.5" stroke-dasharray="3 3"/><text x="633" y="322">Adam's walk in from the east (2:8)</text>
+    <rect x="613" y="335" width="17" height="7" fill="#bdb6a8" stroke="#7d776c"/><rect x="617" y="334" width="2" height="9" fill="#7d776c"/><rect x="624" y="334" width="2" height="9" fill="#7d776c"/><line x1="613" y1="356" x2="629" y2="356" stroke="#cbbd98" stroke-width="6"/><text x="633" y="343">slab bridges on stone piers</text><text x="633" y="360">earth paths on both river banks</text>
   </g>
-  <text x="615" y="367" font-size="13" fill="#2b2b2b">Decided 2026-10-13 (LAYOUT §10.4, §10.7):</text>
-  <text x="615" y="387" font-size="11" fill="#555">Eridu's dune to the east, the Garden's gate:</text>
-  <text x="615" y="403" font-size="11" fill="#555">its first shrine where the cherubim stood,</text>
-  <text x="615" y="419" font-size="11" fill="#555">and Babel's tower raised there later,</text>
-  <text x="615" y="435" font-size="11" fill="#555">looking over the drowned Garden.</text>
-  <text x="615" y="451" font-size="11" fill="#8a3b1f">(the Garden ~5500 BC; Eridu after, ~5400 BC)</text>
-  <text x="615" y="475" font-size="11" fill="#555">Coming in from the east, the way runs</text>
-  <text x="615" y="491" font-size="11" fill="#555">straight up between the two trees.</text>
+  <text x="615" y="381" font-size="13" fill="#2b2b2b">Decided 2026-10-13 (LAYOUT §10.4, §10.7):</text>
+  <text x="615" y="401" font-size="11" fill="#555">Eridu's dune to the east, the Garden's gate:</text>
+  <text x="615" y="417" font-size="11" fill="#555">its first shrine where the cherubim stood,</text>
+  <text x="615" y="433" font-size="11" fill="#555">and Babel's tower raised there later,</text>
+  <text x="615" y="449" font-size="11" fill="#555">looking over the drowned Garden.</text>
+  <text x="615" y="465" font-size="11" fill="#8a3b1f">(the Garden ~5500 BC; Eridu after, ~5400 BC)</text>
+  <text x="615" y="489" font-size="11" fill="#555">Coming in from the east, the way runs</text>
+  <text x="615" y="505" font-size="11" fill="#555">straight up between the two trees.</text>
 </svg>
