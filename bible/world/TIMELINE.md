@@ -2,7 +2,7 @@
 
 > One timeline for every arc to fit into. It shows which dates are fixed, which depend on interpretation, and the model we'll use.
 
-**Status:** v1.1, 2026-10-08 (adds §3.4's notes for the Opening and the Garden, and Arc 7's placement of Judges 17–21); v1, 2026-10-01. **Decided:** you adopted my recommendation on all five forks (§8). Every arc's dossier uses these dates.
+**Status:** v1.1, 2026-10-08. **Decided:** you adopted my recommendation on all five forks (§8). Every arc's dossier uses these dates.
 
 ---
 

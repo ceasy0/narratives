@@ -2,26 +2,9 @@
 
 > The whole episode told as a short story: what happens, how it's shaped, and what it means.
 
-**Status:** v4, 2026-10-02. Your third round of notes is applied: three line changes, four of the expansions in §8, a moment between Mahlon and Ruth before he dies, and two things you asked me to make sure of, that Naomi's arc from full to empty to full is clearly visible and that the long first act doesn't make the episode feel slow and then rushed ([BEATS §2–3](./BEATS.md#2-naomi-full-empty-full)). The full check for errors found seven more things to fix (§7). The [beat sheet](./BEATS.md) and a complete [first-draft script](../../../scripts/ruth/ruth.fountain) now exist. **Checkpoint:** your pass on the script.
+**Status:** v4, 2026-10-02, with three rounds of your notes applied and a full check for errors (§7). The [beat sheet](./BEATS.md) and a complete [first-draft script](../../../scripts/ruth/ruth.fountain) follow it. **Checkpoint:** your pass on the script.
 
 **How to read it:** §2 is the story, and it reads straight through. A tag like **[P6·1]** marks an addition: its source level (ROADMAP §4.1), then its number in the register in §3, which says why it's there and what it rests on. New additions take the next free number, so numbers stay the same from draft to draft. Events without a tag are in the text. Background without a tag comes from the [dossier](./DOSSIER.md). The quoted dialogue follows the script, which is now the place where the wording lives.
-
----
-
-## What changed in v4
-
-| Your note | What I did |
-|---|---|
-| 1:9, "a husband you deserve" | Done, word for word. It's closer to the text than my version was: in Hebrew, the "rest" Naomi wishes them *is* the security of a husband's house. |
-| 1:13, the most likely reading | "No. This is far more bitter for me than for you" stays. Of the three ways the Hebrew can be read, this one has the best support: the oldest translations, the grammar, the logic of her argument, and her own words at the well (§7). |
-| 1:15, "You know you should go back. Go after her." | Done. "Her people and her gods" now isn't said but seen: Orpah walks back toward her village with the little goddess in her fist, and Naomi is watching her when she speaks (§7). |
-| Expansions 2, 3, 4 and 6 | Naomi's friend names Obed (58). Boaz's hesitation, from his side, in one scene in the field and one image at home (55). Mr. So-and-so's son stands beside him at the gate; his father looks at him, and it's the son who asks about the sandal (56). Naomi sings to Obed (54). |
-| The right kind of song | Not the harvest song: that's a work song, sung in a field. Naomi sings Obed a lullaby, the one she sang to her own sons. It's planted once, very quietly: she hums it at Mahlon's bedside on his last night (54). On the roof she sings it with the words. |
-| Expansions 1, 5, 7 and 8 | Left out. The gaps around Orpah and Chilion stay open for you to explore later (§8). |
-| Mahlon and Ruth before he dies | No song. On his last day she holds the cup for him, because he can't. He looks at the quiet wall that Chilion and Orpah used to argue through: "He'd have a joke for this." Ruth: "It wouldn't be funny." He almost laughs, and it turns into the cough (53). |
-| Naomi's arc, clearly shown | A table in [BEATS §2](./BEATS.md#2-naomi-full-empty-full) lists every marker from full to empty and back, with page numbers. Two new ones mark the return: she dances at the second wedding as she did at the first (57), and when the women say her name at the birth, she laughs for the first time since her sons died (58). |
-| Act One's length and the pacing | Measured on the script, not guessed ([BEATS §3](./BEATS.md#3-pacing)). The episode is a V: down to Naomi's lowest point at the well and the ruin, a little past the middle, and back up. The oath sits at the center. The first part moves fast through twelve years; the rest slows into one harvest, one night and one morning, so it starts fast and settles rather than dragging and then rushing. The slowdown starts inside Act One, at the edge of the plateau, so Act Two doesn't arrive as a change of gear. |
-| Check for errors | Seven fixes and two notes for later arcs (§7). One correction is to my own estimate: the script runs 37 pages, about 40 to 45 minutes, not 58. |
 
 ---
 

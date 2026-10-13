@@ -1,6 +1,6 @@
 # 008 — Adam, Eve and the Garden
 
-**Status:** **Decided for the Garden, 2026-10-08,** after round 2. Seeded 2026-10-03; round 1 on 2026-10-07; round 2 on 2026-10-08 (the place, Eve, the Fall, the serpent, the hour, the naming, and a question about Cush). What's left (how the naming plays, and whether the change passes to Eve in the sleep) is carried into [009](./009-god-in-the-garden.md), round 2, since both turn on how God is present.
+**Status:** **Decided for the Garden, 2026-10-08.** What's left (how the naming plays, and whether the change passes to Eve in the sleep) is carried into [009](./009-god-in-the-garden.md), since both turn on how God is present.
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), which is the rest of Episode 1
 **Positions:** 5 (Adam and Eve), 16 (the serpent), and where Eden is
 **Fit grade:** your first idea (Adam as the first of a new species) was Tension. Your answer of 2026-10-07 (of the line at the cliff, and new in what happens to him) is Supported. See round 1.

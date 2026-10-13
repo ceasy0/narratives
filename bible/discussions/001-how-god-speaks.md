@@ -1,6 +1,6 @@
 # 001 — How God speaks, and how we show it
 
-**Status:** **Decided for Genesis, 2026-10-05.** Seeded 2026-10-01; round 1 on 2026-10-03; round 2 on 2026-10-05. Moses and the visions are deferred to their own books.
+**Status:** **Decided for Genesis, 2026-10-05.** Moses and the visions are deferred to their own books.
 **Needed before:** Genesis and the Exodus. It doesn't block Ruth, where God never speaks.
 **Fit grade of your view:** Supported for much of it; Tension in a few specific places. The one sentence that was Contradiction as stated ("prophets are God") has been restated in a form that fits ([round 2](#round-2--2026-10-05)).
 

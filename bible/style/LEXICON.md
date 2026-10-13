@@ -2,7 +2,7 @@
 
 > Term-by-term rules: which words we use, which we avoid, and why. Started with Ruth; it grows with every arc and feeds the script checker later (ROADMAP §13.5).
 
-**Status:** v1.1, 2026-10-10 (adds "kind," not "species"). v1, 2026-10-02: built from the Ruth script. The general rules are in ROADMAP §5; this file is the working list.
+**Status:** v1.1, 2026-10-10. The working word list, built from the Ruth script. The general rules are in ROADMAP §5.
 
 ---
 
