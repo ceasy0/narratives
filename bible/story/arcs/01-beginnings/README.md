@@ -17,7 +17,7 @@ About an hour (your decision, 2026-10-03).
 
 **Decided for the Garden** (2026-10-07 and 2026-10-08), gathered in the [Garden dossier §1](./garden/DOSSIER.md#1-whats-decided): Adam of the line at the cliff and new in what happens to him; the place just west of Eridu, about 5500 BC (revised 2026-10-13); the people outside unseen; the world outside wild, not hostile, with the animals carrying the difference; God never seen, present through the world in two registers (the hearer's own voice over the held note; signs and double meanings the hearer reads), and nothing in the world speaks but the serpent; the command at the two trees after a silent walk, the first words of the series; the naming shown without words; Eve made in the deep sleep as the first glimpse of the Opening, and of one kind with Adam; the Fall as awareness and ego in one act, judged as a stern yet loving father; the serpent an animal embodying the role, its words from outside with the hiss under them; the clothes through a dead conduit; the Opening's world at the gate with the animals' faces for the cherubim; six movements.
 
-**The rule for the hour** ([REVIEW §2.5](../../../REVIEW.md)): no invented speech between Adam and Eve that the Opening's grammar could carry instead. Fallback if it runs thin: let Episode 1 run to 4:16 (Cain). "Don't worry about the fallback unless we need it."
+**The rule for the hour** ([REVIEW §2.5](../../../archive/REVIEW.md)): no invented speech between Adam and Eve that the Opening's grammar could carry instead. Fallback if it runs thin: let Episode 1 run to 4:16 (Cain). "Don't worry about the fallback unless we need it."
 
 ## The rest of the arc
 

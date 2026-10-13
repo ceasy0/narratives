@@ -90,7 +90,7 @@ The map lists the hard passages it found, by arc, in [ARCHITECTURE §11](./story
 
 ### From the project audit (2026-10-10)
 
-The audit's full record, with what was fixed, is [AUDIT.md](./AUDIT.md). These are the calls only you can make.
+The audit's full record, with what was fixed, is [archive/AUDIT.md](./archive/AUDIT.md). These are the calls only you can make.
 
 16. **Ruth, four points of text.** (a) The old Moabite says Israel "came over the river" to stab Eglon; in Judges 3:13–26 Eglon was on Israel's side, at Jericho. Moab's own version on purpose, or a slip to fix? (b) Eglon's death is "about 180 years ago" in the script; [TIMELINE](./world/TIMELINE.md)'s dates give about 160. I'd use 160. (c) [FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far) says the pilot ends with the naming of Obed; the script ends after it, with the lullaby on the roof (your pick). I'd record it as "the naming, and the roof." (d) Naomi says "Ruth" at 3:1 where the text has "my daughter," tagged as recorded speech with no logged decision. Log it as yours, or go back to the text?
 17. **The map, three placements** ([ARCHITECTURE](./story/ARCHITECTURE.md)). (a) Ruth (c. 1152–1139) falls inside Gideon's forty years of rest, but hour 68 runs to his death; I'd end hour 68 at Judges 8:28 and open hour 70, *Abimelech*, with 8:29–35. (b) Psalm 54 (the Ziphites) sits in *Abigail*; its story is 1 Sam 23 or 26, so *Nob* (81) or *Endor* (83). I'd say *Endor*. (c) Job is called its own arc, which makes 19 arcs, not 18; I'd say "18 arcs and Job." All three as I suggest?

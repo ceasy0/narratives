@@ -1,6 +1,6 @@
 # Architecture — the whole Bible as episodes
 
-> The series on one page, as [REVIEW §2.1](../REVIEW.md#21-write-the-whole-bible-map-before-the-gardens-treatment) proposed and you chose (2026-10-08, "Yes, map first"). Every episode in one line: its text, when it happens, its heart, and what it waits on. It's a map, not a treatment: nothing here is written until its arc comes, and every line can move.
+> The series on one page, as [REVIEW §2.1](../archive/REVIEW.md#21-write-the-whole-bible-map-before-the-gardens-treatment) proposed and you chose (2026-10-08, "Yes, map first"). Every episode in one line: its text, when it happens, its heart, and what it waits on. It's a map, not a treatment: nothing here is written until its arc comes, and every line can move.
 
 **Status:** v1.2, 2026-10-09. 205 hours in 18 arcs. **What's yours:** the shape of seasons 1–3 and most of their titles, Arc 1's names and count, and the rule for filling the hours (§11). **What's mine:** the density (§2), the merges in Genesis (§10), the placements where the text isn't in order (§3), everything from Genesis 30 on, and the threads (§8). Episode counts are the honest number for about an hour each, not a target.
 

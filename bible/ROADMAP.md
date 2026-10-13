@@ -6,7 +6,7 @@
 
 Read §0 for the short version and §19 for what's decided and what's still open. The sections in between hold the reasoning.
 
-> **Superseded sections (noted 2026-10-10, as REVIEW §2.3.2 asked).** Where this roadmap and the files below disagree, they win, and these parts are kept only as the record:
+> **Superseded sections (noted 2026-10-10, as [REVIEW](./archive/REVIEW.md) §2.3.2 asked).** Where this roadmap and the files below disagree, they win, and these parts are kept only as the record:
 > - **The order of writing** (§0 "How we start", §11, §17's Ruth-then-Joseph plan): replaced 2026-10-03/05. Ruth is parked as a first draft and the first pass runs front to end from Genesis 1, treatments and beats only ([FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far)).
 > - **The pilot animatic** (§0, §11.2, §15.4, §17 Phase 6): replaced 2026-10-07/08. The Opening is the exception and its animatic is built ([production/opening](./production/opening/README.md)); Ruth gets storyboards and sketches, not an animatic.
 > - **The arc map** (§10.3): replaced 2026-10-08 by [`story/ARCHITECTURE.md`](./story/ARCHITECTURE.md).
@@ -1411,7 +1411,7 @@ Phase 6 can start once the pilot is locked and can run alongside Phases 3–5.
 
 **Changed 2026-10-05.** The first pass is treatments and beats only, for every book. Scripts come after it.
 
-**Changed 2026-10-07.** The Opening is the exception: its script and visualization go ahead during the first pass. And [`REVIEW.md`](./REVIEW.md) proposes bringing Phase 3's `ARCHITECTURE.md` forward, before the Garden's treatment, so the whole series is on one page early.
+**Changed 2026-10-07.** The Opening is the exception: its script and visualization go ahead during the first pass. And [`REVIEW.md`](./archive/REVIEW.md) proposes bringing Phase 3's `ARCHITECTURE.md` forward, before the Garden's treatment, so the whole series is on one page early.
 
 **Two tracks run continuously beside every phase:**
 

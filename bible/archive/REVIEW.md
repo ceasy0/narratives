@@ -24,7 +24,7 @@
 
 The reason you gave for writing front to end was "so I can know whether to change it based on things I don't see yet." A full first pass of treatments and beats for sixty-six books will take a long time to deliver that view: the Opening alone took three versions over three days for five minutes of screen. The thing that would give you the view in a few sessions is the one document the roadmap planned and never got: `story/ARCHITECTURE.md`, the series on one page. Every episode of the whole Bible in one line each, with its text, its era, its heart, and which discussions it depends on. Then the first pass runs in order with the map as its guide, and you can see the shape of the whole, where the Opening's glimpses would fall, where the bloodline threads run, and which arcs can be skipped or merged, before another hour is written.
 
-**My proposal:** make the map the next deliverable after this round's answers, then the Garden. *Your answer, 2026-10-08: "Yes, map first." Written as [`story/ARCHITECTURE.md`](./story/ARCHITECTURE.md).*
+**My proposal:** make the map the next deliverable after this round's answers, then the Garden. *Your answer, 2026-10-08: "Yes, map first." Written as [`story/ARCHITECTURE.md`](../story/ARCHITECTURE.md).*
 
 ### 2.2 Two depths for the first pass
 
@@ -44,7 +44,7 @@ The Opening is now the exception, so its script and visualization are live, and 
 
 ### 2.5 The Garden hour
 
-Fifty-five minutes for forty-two verses will be the most invented hour in the series, in the most argued-over chapter of the Bible, and it comes first. I don't think that's a reason to shrink it; it's a reason to build it from the text's own gaps rather than from dialogue. My first shape is in [Discussion 008](./discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07). The one thing I'd watch: the Opening earned its wordlessness; the Garden has about a dozen recorded speeches and will tempt invented ones. The rule I'd set for it now: no invented speech between Adam and Eve that the Opening's grammar could carry instead.
+Fifty-five minutes for forty-two verses will be the most invented hour in the series, in the most argued-over chapter of the Bible, and it comes first. I don't think that's a reason to shrink it; it's a reason to build it from the text's own gaps rather than from dialogue. My first shape is in [Discussion 008](../discussions/008-adam-eve-and-the-garden.md#round-1--2026-10-07). The one thing I'd watch: the Opening earned its wordlessness; the Garden has about a dozen recorded speeches and will tempt invented ones. The rule I'd set for it now: no invented speech between Adam and Eve that the Opening's grammar could carry instead.
 
 ### 2.6 Three theological edges to keep an eye on
 
