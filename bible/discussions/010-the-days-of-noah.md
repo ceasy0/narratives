@@ -210,6 +210,14 @@ The spectrum is [FR-10](../canon/FRAMINGS.md#fr-10--christ-as-a-bloodline-the-ra
 1. **The flood's scale:** regional in reach and beyond nature in size, the Ark grounding on Mount Judi above the Tigris (my pick), or a natural flood with the Ark on the first hills at the plain's edge?
 2. **The wave:** a wall of your scale in the visionary register, after the plain sees the storm and the sea coming in (my pick), or shown literally?
 
+### Round 2 note — 2026-10-13: a wave from the Gulf of Oman
+
+> I just checked the depth of the gulf of Oman. Is there any possible way an incredibly large wave started here and traveled all the way up the Persian gulf and past it?
+
+**Not by nature, but the geography is a gift for the other version.** The Gulf of Oman is deep (over 3,000 m), and its north shore is the Makran subduction zone, the one place nearby that can make a great tsunami (1945, magnitude 8.1; some estimates allow a 9). But a wave from there has to squeeze through the Strait of Hormuz, about 55 km wide and under 100 m deep, behind the Musandam headland, and then run about 1,000 km over a gulf 35–50 m deep. In shallow water a tsunami slows to about 65 km an hour, so it takes most of a day, and the shallow bottom and the strait drain its energy the whole way. Models of even the largest Makran quakes give waves of around a metre or less inside the Persian Gulf (*medium confidence on the figures*). By the head of the Gulf it's nothing like a wall.
+
+**What it gives the story.** If the flood is beyond nature (my pick in round 2), the place it begins is right there: the deep water past the strait is the nearest "great deep" to the plain, *tehom* in the Opening's sense. "The fountains of the great deep burst open" (7:11) can be the Gulf of Oman breaking open, and what comes up the Persian Gulf isn't a breaking wave that loses itself in the shallows but the sea itself rising and coming on, a wall that doesn't spend itself, which is exactly why it can't be weather. That keeps your source, your scale and the real map, and it's honest about what it is.
+
 ## Decision
 
 **Decided 2026-10-13 (round 1):**
