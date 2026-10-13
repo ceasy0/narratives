@@ -53,4 +53,4 @@ There's no separate beat sheet. For a five-minute sequence with no dialogue, the
 
 ## What this arc still needs from you
 
-Everything open is in the [README's list](../../../README.md#what-i-need-from-you): for the Opening, the first Remote Control session; for the Garden, the details of God speaking through Adam's ancestor; for hours 3 to 8, Discussions [010](../../../discussions/010-the-days-of-noah.md) and [011](../../../discussions/011-when-god-relents.md).
+Everything open is in the [README's list](../../../README.md#what-i-need-from-you): for the Opening, your notes on the first layout (beats 12–13); for the Garden, the details of God speaking through Adam's ancestor; for hours 3 to 8, Discussions [010](../../../discussions/010-the-days-of-noah.md) and [011](../../../discussions/011-when-god-relents.md).
