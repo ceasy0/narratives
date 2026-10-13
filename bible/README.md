@@ -51,9 +51,9 @@ The one place that says where every piece stands. Each document's own history is
 
 ## What I need from you
 
-Everything the project is waiting on, in one place. I'll keep this list current. Your answers of 2026-10-08 (evening) settled the map's four questions, the Garden's five and Genesis 18; they're recorded in [Discussion 009](./discussions/009-god-in-the-garden.md#round-2--2026-10-08-evening), [FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far), [ARCHITECTURE §11](./story/ARCHITECTURE.md#11-what-the-map-needs-decided-and-when) and the [Garden dossier](./story/arcs/01-beginnings/garden/DOSSIER.md).
+Everything the project is waiting on, in one place. I'll keep this list current. Settled answers live in [FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far), with the reasoning in the [discussions](./discussions/README.md).
 
-**The short version (renumbered 2026-10-13): item 1 is the Opening's production plan, items 2–4 are the days of Noah and the dates (your answers of 2026-10-13, with my recommendations), item 8 is the one question left from Discussion 002, item 15 is the details of God speaking through Adam's ancestor, items 16 and 17 are from the project audit of 2026-10-10, and items 18–19 gather the questions for later arcs that were kept in other files (2026-10-11). The rest are carried over.** Answered questions are taken off this list once the answer is recorded where it belongs (your rule, 2026-10-10); your answers of 2026-10-09 (Season 3's name, filling the hours from the text, the Garden's look) are in [FOUNDATIONS §4](./canon/FOUNDATIONS.md#4-decisions-so-far).
+**The short version: item 1 is the Opening's production plan, items 2–4 are the days of Noah and the dates (with my recommendations), item 8 is the one question left from Discussion 002, item 15 is the details of God speaking through Adam's ancestor, items 16 and 17 come from the [project audit](./archive/AUDIT.md), and items 18–19 are the questions for later arcs. The rest wait on the arcs they belong to.** Answered questions are taken off this list once the answer is recorded where it belongs.
 
 ### The Opening
 
