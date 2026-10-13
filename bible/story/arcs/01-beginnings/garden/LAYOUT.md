@@ -228,6 +228,7 @@ The smoothness has natural causes too: limestone and spring stone wear smooth un
 **Decided.**
 - **Stone and neutral** for everything that doesn't live, **forest green** for everything that grows, and color **only in what lives** (plus light, water and sky): flowers, fruit, birds, fish in the channels, the animals' coats. Nothing made is colored.
 - **Blue and yellow are the accent,** complementary, drawn out wherever they come naturally, small and scattered against the grey and green. Nothing made is blue or yellow.
+- **Adam's ancestor's off-white linen robe,** bleached in the sun with no dye, is the only near-white thing in the Garden, so the eye goes to him, the first face in the series that speaks ([009](../../../../discussions/009-god-in-the-garden.md#decision)). It's uncolored cloth, so it keeps the rule.
 - **The serpent** is the one living thing whose color is wrong.
 - **Outside, after 3:24,** the first shot has no color at all: mud, dust, thorns, heat.
 
