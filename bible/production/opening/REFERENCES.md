@@ -10,7 +10,7 @@
 3. **Julius Horsthuis, *Fractal Time* (2019) and *Recombination* (2023)**: fractal landscapes that grow and fold without end. They're the reference for the vault (beat 5) and the "nicer fractal feel" you liked in the middle beats.
 4. **Malick, *Voyage of Time* (2016)**: the same team's IMAX follow-up, from the cosmos to early life. It's the closest film to beats 6–11.
 
-**Images.** The cloud session that wrote this couldn't download any images: its network policy refused every image host (Wikimedia, NASA, ESA/Webb, ESO, NOIRLab, USFWS). So the only image in `references/img/` is one rendered here, a Mandelbrot boundary for beat 5, which needs no licence. Every open-licence image chosen for this book is listed with its direct URL, credit and licence in [`references/fetch_refs.py`](./references/fetch_refs.py). On your desktop, `py references/fetch_refs.py` saves them to `references/img/` at 1600 px, JPEG quality 85, and the filenames below will then resolve (the first Remote Control session can run it). Wikimedia Commons pages couldn't be read at all from here, so no Commons images are included. Those licences couldn't be verified.
+**Images.** The open-licence images chosen for this book are in `references/img/`, each at most 1600 px on the long side, JPEG quality 85, with its credit and licence in the table at the end. [`references/fetch_refs.py`](./references/fetch_refs.py) holds each one's direct URL and downloads any that are missing (`py references/fetch_refs.py`). One isn't there: Bentley's snowflake, because the Smithsonian's server refuses scripted downloads (HTTP 403), so save it by hand from its page if it's wanted. The Mandelbrot boundary for beat 5 was rendered for this book and needs no licence. Wikimedia Commons pages couldn't be read when the book was written, so no Commons images are included; those licences aren't verified.
 
 ---
 
@@ -27,7 +27,7 @@
 - **Kseniya Simonova, sand animation** (winner of *Ukraine's Got Talent*, 2009). <https://en.wikipedia.org/wiki/Kseniya_Simonova>
   *Take:* faces appearing and dissolving in poured sand on a lightbox, in real time. Shows how few grain-moves it takes to read as a face. **Link only.**
 - **Namib Sand Sea**, NASA Earth Observatory (SeaHawk/HawkEye), image of the day 26 Nov 2021. <https://science.nasa.gov/earth/earth-observatory/namib-sand-sea-149130/>
-  *Take:* from orbit, dunes read as a single flowing grain field, which is the scale-free "sea" texture before the face. **Open (NASA, PD).** → `references/img/01-namib-sand-sea-nasa.jpg` (fetch)
+  *Take:* from orbit, dunes read as a single flowing grain field, which is the scale-free "sea" texture before the face. **Open (NASA, PD).** → `references/img/01-namib-sand-sea-nasa.jpg`
 - **Aeolian Features, Large and Small** (PSP_010221_1420), HiRISE, NASA/JPL/University of Arizona, 2008. <https://www.uahirise.org/PSP_010221_1420>
   *Take:* ripples riding on dunes, two scales of wind-sorted grain at once. Use it for the flow pattern around the brow and nose. **Open (HiRISE images are public domain, credit requested; <https://uahirise.org/media/usage.php>).** No direct file URL was confirmed, so download it from the page.
 
@@ -38,7 +38,7 @@
 - **2001: A Space Odyssey, the Star Gate**, Stanley Kubrick / Douglas Trumbull, 1968 (slit-scan). <https://en.wikipedia.org/wiki/Slit-scan_photography>
   *Take:* light streaming past the camera on both sides, giving speed without any object. It's the feel of the sheet of static rushing past the head and closing behind it. **Link only.**
 - **NASA Captures Supersonic Shock Interaction** (AirBOS schlieren), NASA, 6 Mar 2019. <https://www.nasa.gov/image-article/nasa-captures-supersonic-shock-interaction-7>
-  *Take:* real shock fronts made visible as curved sheets of distorted air. It's the shape of the blast "sheet thrown by a gale" as it wraps a form. **Open (NASA, PD).** → `references/img/02-schlieren-shockwaves-nasa.jpg` (fetch)
+  *Take:* real shock fronts made visible as curved sheets of distorted air. It's the shape of the blast "sheet thrown by a gale" as it wraps a form. **Open (NASA, PD).** → `references/img/02-schlieren-shockwaves-nasa.jpg`
 - **Enter the Void, title sequence**, Gaspar Noé / Tom Kan (electrography by Thorsten Fleisch), 2009. <https://www.artofthetitle.com/title/enter-the-void/>
   *Take:* the violence of a cut-to-white on a beat, at the edge of what the eye can take. Use it for the single-frame impact, *not* for duration, because it strobes far harder than the treatment allows (photosensitivity, §5 problem 1). **Link only.**
 - **Under the Skin**, Jonathan Glazer (DP Daniel Landin), 2013. <https://en.wikipedia.org/wiki/Under_the_Skin_(2013_film)>
@@ -67,9 +67,9 @@
 - **Blackground**, Alberto Seveso, c. 2014 (ink in water photographs). <https://www.thisiscolossal.com/?p=42423>
   *Take:* ink fronts against black, with curling edges and fine filaments. It's the shape of the uneven fronts in which the turn-over spreads. **Link only.**
 - **Possible Mud Cracks Preserved in Martian Rock** (PIA21261), NASA/JPL-Caltech/MSSS, 17 Jan 2017. <https://www.jpl.nasa.gov/images/pia21261-possible-mud-cracks-preserved-in-martian-rock/>
-  *Take:* the cracking pattern itself: polygons of every size, meeting at T-junctions, nothing regular. **Open (NASA, PD).** → `references/img/04-mud-cracks-mars-pia21261.jpg` (fetch)
+  *Take:* the cracking pattern itself: polygons of every size, meeting at T-junctions, nothing regular. **Open (NASA, PD).** → `references/img/04-mud-cracks-mars-pia21261.jpg`
 - **Photomicrograph of Stellar Snowflake No. 382**, Wilson A. Bentley, c. 1890 (Smithsonian Institution Archives). <https://siarchives.si.edu/collections/siris_arc_403534>
-  *Take:* frost-scale branching in pure black and white, the "frost creeps over glass" texture at its most delicate. **Open (CC0).** → `references/img/04-bentley-snowflake-382.jpg` (fetch)
+  *Take:* frost-scale branching in pure black and white, the "frost creeps over glass" texture at its most delicate. **Open (CC0).** → `references/img/04-bentley-snowflake-382.jpg` (not downloaded: save it by hand from the page)
 - **Fechner colour** <https://en.wikipedia.org/wiki/Fechner_color> and **thin-film interference** <https://en.wikipedia.org/wiki/Thin-film_interference>
   *Take:* the science of the treatment's two colour sources. Black-and-white flicker produces faint colour in the eye (Benham's top), and soap-film colours come from light interfering between two surfaces. Keep the sparks *thin and spectral*, not saturated paint. **Reference text.**
 
@@ -110,9 +110,9 @@
 *The gas draws together along threads that branch like roots and leaf veins; knots swell like buds where they cross.*
 
 - **Map of the Cosmic Web Generated from Slime Mould Algorithm** (heic2003a), NASA, ESA, J. Burchett & O. Elek (UC Santa Cruz), 2020. <https://esahubble.org/images/heic2003a/>
-  *Take:* the cosmic web traced by an algorithm modelled on *Physarum* slime mould. Treatment §7's "like roots, like veins" is literally how astronomers mapped it. **Open (CC BY 4.0).** → `references/img/07-cosmic-web-slime-mould-heic2003a.jpg` (fetch; CDN path inferred, not confirmed)
+  *Take:* the cosmic web traced by an algorithm modelled on *Physarum* slime mould. Treatment §7's "like roots, like veins" is literally how astronomers mapped it. **Open (CC BY 4.0).** → `references/img/07-cosmic-web-slime-mould-heic2003a.jpg`
 - **Web-like structures in the young universe** (eso0120a), ESO (simulation by Tom Theuns, MPA), 2001. <https://www.eso.org/public/images/eso0120a/>
-  *Take:* gas density at about 2 billion years, with thin filaments and bright knots, colour-coded yellow, red and blue by density. **Open (CC BY 4.0).** → `references/img/07-cosmic-web-sim-eso0120a.jpg` (fetch)
+  *Take:* gas density at about 2 billion years, with thin filaments and bright knots, colour-coded yellow, red and blue by density. **Open (CC BY 4.0).** → `references/img/07-cosmic-web-sim-eso0120a.jpg`
 - **IllustrisTNG media** (TNG50, TNG100), TNG Collaboration. <https://www.tng-project.org/media/>
   *Take:* the shock-heated edges of filaments and the gas-velocity slices, showing the web *growing* and not just sitting there. Its movies are the best motion reference for "the gas is doing this itself". **Free to download and share with credit "TNG Collaboration"; commercial use needs permission. Use it for reference only.**
 - **The Millennium Simulation**, Springel et al. (MPA Garching), 2005. <https://wwwmpa.mpa-garching.mpg.de/galform/virgo/millennium/>
@@ -125,13 +125,13 @@
 *The knots ignite one by one, fierce blue-white along the threads; some burn out and burst, and what they throw off gathers again; we fall into one star: violence, bare nuclei, fusion, a photon.*
 
 - **Pillars of Creation** (weic2216a), Webb NIRCam: NASA, ESA, CSA, STScI; J. DePasquale, A. Koekemoer, A. Pagan (STScI), 2022. <https://esawebb.org/images/weic2216a/>
-  *Take:* stars igniting inside gas columns, with the thread-and-bud look at stellar scale. **Open (CC BY 4.0).** → `references/img/08-pillars-of-creation-webb-weic2216a.jpg` (fetch)
+  *Take:* stars igniting inside gas columns, with the thread-and-bud look at stellar scale. **Open (CC BY 4.0).** → `references/img/08-pillars-of-creation-webb-weic2216a.jpg`
 - **"Cosmic Cliffs" in Carina** (weic2205a), NASA, ESA, CSA and STScI, 2022. <https://esawebb.org/images/weic2205a/>
-  *Take:* the edge of a star-forming cloud lit from within, with orange gas against blue-white points. **Open (CC BY 4.0).** → `references/img/08-cosmic-cliffs-webb-weic2205a.jpg` (fetch)
+  *Take:* the edge of a star-forming cloud lit from within, with orange gas against blue-white points. **Open (CC BY 4.0).** → `references/img/08-cosmic-cliffs-webb-weic2205a.jpg`
 - **The Crab Nebula** (weic2326a), NASA, ESA, CSA, STScI, T. Temim (Princeton), 2023. <https://esawebb.org/images/weic2326a/>
-  *Take:* "some burn out and burst". The filamentary shell of a star that blew apart shows what's thrown off before it gathers again. **Open (CC BY 4.0).** → `references/img/08-crab-nebula-webb-weic2326a.jpg` (fetch)
+  *Take:* "some burn out and burst". The filamentary shell of a star that blew apart shows what's thrown off before it gathers again. **Open (CC BY 4.0).** → `references/img/08-crab-nebula-webb-weic2326a.jpg`
 - **NSF's Inouye Solar Telescope first light**, NSO/NSF/AURA. <https://noirlab.edu/public/images/NSO-DKIST-firstlight-full>
-  *Take:* the Sun's surface as cells of boiling plasma, each the size of Texas. It's the wall we fall through into the star. **Open (CC BY 4.0, per NOIRLab's terms: <https://noirlab.edu/public/copyright/>).** → `references/img/08-sun-granulation-inouye.jpg` (fetch; JPEG path inferred)
+  *Take:* the Sun's surface as cells of boiling plasma, each the size of Texas. It's the wall we fall through into the star. **Open (CC BY 4.0, per NOIRLab's terms: <https://noirlab.edu/public/copyright/>).** → `references/img/08-sun-granulation-inouye.jpg`
 - **Sunshine**, Danny Boyle (VFX by Moving Picture Company and others), 2007; AWN "Sunshine: 2057 — A VFX Odyssey" (20 Jul 2007) <https://www.awn.com/print/vfxworld/sunshine-2057-vfx-odyssey>
   *Take:* the problem of filming *into* a sun: distant, close and inside shots each built differently, with scale sold by layered texture and flares. It's the closest film precedent for the fall into the star. **Link only.**
 
@@ -140,11 +140,11 @@
 *The photon breaks the star's surface; black and speed; a dull red molten world cools to crust, cloud and blue-grey ocean; down through cloud and sea into green water and a cell.*
 
 - **Dynamic Looping Action** (PIA22475), NASA/GSFC/Solar Dynamics Observatory, 2018. <https://science.nasa.gov/photojournal/dynamic-looping-action/>
-  *Take:* magnetic loops arching off the surface, the last thing the photon passes on the way out. **Open (NASA, PD).** → `references/img/09-sun-loops-sdo-pia22475.jpg` (fetch)
+  *Take:* magnetic loops arching off the surface, the last thing the photon passes on the way out. **Open (NASA, PD).** → `references/img/09-sun-loops-sdo-pia22475.jpg`
 - **The Blue Marble** (AS17-148-22727), NASA / Apollo 17 crew, 7 Dec 1972. <https://www.nasa.gov/image-article/blue-marble-view-from-apollo-17/>
-  *Take:* the end state of the approach, the Earth whole and lit. Ours is the early version: ocean almost everywhere, little land, no green. **Open (NASA, PD).** → `references/img/09-blue-marble-apollo17.jpg` (fetch)
+  *Take:* the end state of the approach, the Earth whole and lit. Ours is the early version: ocean almost everywhere, little land, no green. **Open (NASA, PD).** → `references/img/09-blue-marble-apollo17.jpg`
 - **Sunglint and Clouds off Western South America** (ISS031-E-35310), NASA JSC, 2012. <https://science.nasa.gov/earth/earth-observatory/sunglint-and-clouds-off-western-south-america-78107/>
-  *Take:* the descent's middle layer, with cloud over a sea that turns to mirror in the sun. **Open (NASA, PD).** → `references/img/09-sunglint-clouds-iss.jpg` (fetch)
+  *Take:* the descent's middle layer, with cloud over a sea that turns to mirror in the sun. **Open (NASA, PD).** → `references/img/09-sunglint-clouds-iss.jpg`
 - **An artist's conception of the early Earth**, Simone Marchi / SwRI. <https://www.eurekalert.org/multimedia/756499>
   *Take:* the Hadean surface, with magma pushed up by impacts and distant water. Use it for the "dull red, still molten" first glimpse. **Restricted ("per NASA and SwRI requirements"); link only.**
 - **Powers of Ten** (as in beat 6). *Take:* the unbroken scale-dive, which here runs downward, from planet to cell. **Link only.**
@@ -177,7 +177,7 @@
 - **Chicxulub Impact**, painting by Donald E. Davis for NASA. <https://www.eurekalert.org/multimedia/640635>
   *Take:* the close view, which ours deliberately is *not*. Use it for the plume's colour and scale, then put that plume below the horizon 3,000 km away. **Credit NASA; "Usage restrictions: none".** The page has no direct file link, and the Wikimedia copy couldn't be checked, so it isn't in the fetch list.
 - **Shaded Relief with Height as Color and Landsat, Yucatán Peninsula** (PIA03381), NASA/JPL (SRTM), 2003. <https://www.jpl.nasa.gov/images/pia03381-shaded-relief-with-height-as-color-and-landsat-yucatan-peninsula-mexico>
-  *Take:* the buried crater's ring as it shows today. It's background for the dossier, and possibly a glimpse later in the series. **Open (NASA, PD).** → `references/img/11-yucatan-relief-pia03381.jpg` (fetch)
+  *Take:* the buried crater's ring as it shows today. It's background for the dossier, and possibly a glimpse later in the series. **Open (NASA, PD).** → `references/img/11-yucatan-relief-pia03381.jpg`
 - **Fossils found from the day the dinosaurs died (Tanis)**, *National Geographic*, 2019. <https://www.nationalgeographic.com/science/article/fossils-found-from-day-dinosaurs-died-chicxulub-tanis-cretaceous-extinction>; PNAS summary <https://pmc.ncbi.nlm.nih.gov/articles/PMC6486731>
   *Take:* the timing at Hell Creek: seismic waves within minutes, a surge of water, and impact spherules falling **within about 15 minutes**, mostly over **about 2 hours**. It supports the treatment's order (glow, quake, falling sky) and tells the animatic how long each phase lasts. **Link only.** (The PNAS paper's own page refused the fetch.)
 
@@ -218,11 +218,11 @@
 *A cliff edge at dawn; wind and breathing; the river opening like a hand into braided green channels to the horizon; mist; a flock lifts off in its thousands, turns and settles; the slow move in to the face; the eye with the river in it.*
 
 - **Okavango Delta** (ISS040-E-8209), NASA JSC, 2014. <https://science.nasa.gov/earth/earth-observatory/okavango-delta-84078/>
-  *Take:* the best living analogue for what the treatment describes: a river fanning into many green channels across dry country. **Open (NASA, PD).** → `references/img/14-okavango-delta-iss.jpg` (fetch)
+  *Take:* the best living analogue for what the treatment describes: a river fanning into many green channels across dry country. **Open (NASA, PD).** → `references/img/14-okavango-delta-iss.jpg`
 - **Nile River Delta at Night** (ISS025-E-9858), NASA JSC, 2010. <https://science.nasa.gov/earth/earth-observatory/nile-river-delta-at-night-46820/>
-  *Take:* the delta's real outline, the "hand" shape at its true scale. The lights are today's, so use only the shape. **Open (NASA, PD).** → `references/img/14-nile-delta-night-iss.jpg` (fetch)
+  *Take:* the delta's real outline, the "hand" shape at its true scale. The lights are today's, so use only the shape. **Open (NASA, PD).** → `references/img/14-nile-delta-night-iss.jpg`
 - **Afternoon liftoff of snow geese, Loess Bluffs NWR**, Robert L. Keyser III / USFWS. <https://www.fws.gov/media/afternoon-liftoff-snow-geese-loess-bluffs-national-wildlife-refuge>
-  *Take:* thousands of birds lifting off water at once, with density and wingbeat texture. That's the scale of the flock. **Open (USFWS, public domain).** → `references/img/14-snow-geese-liftoff-usfws.jpg` (fetch)
+  *Take:* thousands of birds lifting off water at once, with density and wingbeat texture. That's the scale of the flock. **Open (USFWS, public domain).** → `references/img/14-snow-geese-liftoff-usfws.jpg`
 - **Days of Heaven**, Terrence Malick (DP Néstor Almendros), 1978; UW Cinematheque on its magic hour <https://cinema.wisc.edu/2024/04/29/days-heaven-magic-hour-and-half/>
   *Take:* faces and land in the short window of dawn light. That's the light for the cliff. **Link only.**
 - **Baraka**, Ron Fricke, 1992 (70 mm, wordless); ASC "Baraka: A World Beyond Words" <https://theasc.com/article/baraka-a-world-beyond-words/>
@@ -237,23 +237,23 @@
 | File | Beat | Source page | Credit | Licence | Status |
 |---|---|---|---|---|---|
 | `references/img/05-mandelbrot-seahorse-render.jpg` | 5 | rendered locally (z² + c, centre −0.7435 + 0.1314i) | rendered for this book | none needed | **in `references/img/`** |
-| `references/img/01-namib-sand-sea-nasa.jpg` | 1 | https://science.nasa.gov/earth/earth-observatory/namib-sand-sea-149130/ | NASA Earth Observatory / Alan Holmes (SeaHawk/HawkEye) | Public domain (NASA) | fetch |
-| `references/img/02-schlieren-shockwaves-nasa.jpg` | 2 | https://www.nasa.gov/image-article/nasa-captures-supersonic-shock-interaction-7 | NASA | Public domain (NASA) | fetch |
-| `references/img/04-mud-cracks-mars-pia21261.jpg` | 4 | https://www.jpl.nasa.gov/images/pia21261-possible-mud-cracks-preserved-in-martian-rock/ | NASA/JPL-Caltech/MSSS | Public domain (NASA) | fetch |
-| `references/img/04-bentley-snowflake-382.jpg` | 4 | https://siarchives.si.edu/collections/siris_arc_403534 | Wilson A. Bentley, c. 1890; Smithsonian Institution Archives | CC0 | fetch |
-| `references/img/07-cosmic-web-slime-mould-heic2003a.jpg` | 7 | https://esahubble.org/images/heic2003a/ | NASA, ESA, and J. Burchett and O. Elek (UC Santa Cruz) | CC BY 4.0 | fetch (CDN path inferred) |
-| `references/img/07-cosmic-web-sim-eso0120a.jpg` | 7 | https://www.eso.org/public/images/eso0120a/ | ESO | CC BY 4.0 | fetch |
-| `references/img/08-pillars-of-creation-webb-weic2216a.jpg` | 8 | https://esawebb.org/images/weic2216a/ | NASA, ESA, CSA, STScI; J. DePasquale, A. Koekemoer, A. Pagan (STScI) | CC BY 4.0 | fetch |
-| `references/img/08-cosmic-cliffs-webb-weic2205a.jpg` | 8 | https://esawebb.org/images/weic2205a/ | NASA, ESA, CSA, and STScI | CC BY 4.0 | fetch |
-| `references/img/08-crab-nebula-webb-weic2326a.jpg` | 8 | https://esawebb.org/images/weic2326a/ | NASA, ESA, CSA, STScI, T. Temim (Princeton University) | CC BY 4.0 | fetch |
-| `references/img/08-sun-granulation-inouye.jpg` | 8 | https://noirlab.edu/public/images/NSO-DKIST-firstlight-full | NSO/NSF/AURA | CC BY 4.0 | fetch (JPEG path inferred) |
-| `references/img/09-sun-loops-sdo-pia22475.jpg` | 9 | https://science.nasa.gov/photojournal/dynamic-looping-action/ | NASA/GSFC/Solar Dynamics Observatory | Public domain (NASA) | fetch |
-| `references/img/09-blue-marble-apollo17.jpg` | 9 | https://www.nasa.gov/image-article/blue-marble-view-from-apollo-17/ | NASA (AS17-148-22727) | Public domain (NASA) | fetch |
-| `references/img/09-sunglint-clouds-iss.jpg` | 9 | https://science.nasa.gov/earth/earth-observatory/sunglint-and-clouds-off-western-south-america-78107/ | ISS Crew Earth Observations, NASA JSC | Public domain (NASA) | fetch |
-| `references/img/11-yucatan-relief-pia03381.jpg` | 11 | https://www.jpl.nasa.gov/images/pia03381-shaded-relief-with-height-as-color-and-landsat-yucatan-peninsula-mexico | NASA/JPL | Public domain (NASA) | fetch |
-| `references/img/14-nile-delta-night-iss.jpg` | 14 | https://science.nasa.gov/earth/earth-observatory/nile-river-delta-at-night-46820/ | ISS Crew Earth Observations, NASA JSC | Public domain (NASA) | fetch |
-| `references/img/14-okavango-delta-iss.jpg` | 14 | https://science.nasa.gov/earth/earth-observatory/okavango-delta-84078/ | ISS Crew Earth Observations, NASA JSC | Public domain (NASA) | fetch |
-| `references/img/14-snow-geese-liftoff-usfws.jpg` | 14 | https://www.fws.gov/media/afternoon-liftoff-snow-geese-loess-bluffs-national-wildlife-refuge | Robert L. Keyser III / USFWS | Public domain | fetch |
+| `references/img/01-namib-sand-sea-nasa.jpg` | 1 | https://science.nasa.gov/earth/earth-observatory/namib-sand-sea-149130/ | NASA Earth Observatory / Alan Holmes (SeaHawk/HawkEye) | Public domain (NASA) | **in `references/img/`** |
+| `references/img/02-schlieren-shockwaves-nasa.jpg` | 2 | https://www.nasa.gov/image-article/nasa-captures-supersonic-shock-interaction-7 | NASA | Public domain (NASA) | **in `references/img/`** |
+| `references/img/04-mud-cracks-mars-pia21261.jpg` | 4 | https://www.jpl.nasa.gov/images/pia21261-possible-mud-cracks-preserved-in-martian-rock/ | NASA/JPL-Caltech/MSSS | Public domain (NASA) | **in `references/img/`** |
+| `references/img/04-bentley-snowflake-382.jpg` | 4 | https://siarchives.si.edu/collections/siris_arc_403534 | Wilson A. Bentley, c. 1890; Smithsonian Institution Archives | CC0 | not downloaded (the server refuses scripts; by hand) |
+| `references/img/07-cosmic-web-slime-mould-heic2003a.jpg` | 7 | https://esahubble.org/images/heic2003a/ | NASA, ESA, and J. Burchett and O. Elek (UC Santa Cruz) | CC BY 4.0 | **in `references/img/`** |
+| `references/img/07-cosmic-web-sim-eso0120a.jpg` | 7 | https://www.eso.org/public/images/eso0120a/ | ESO | CC BY 4.0 | **in `references/img/`** |
+| `references/img/08-pillars-of-creation-webb-weic2216a.jpg` | 8 | https://esawebb.org/images/weic2216a/ | NASA, ESA, CSA, STScI; J. DePasquale, A. Koekemoer, A. Pagan (STScI) | CC BY 4.0 | **in `references/img/`** |
+| `references/img/08-cosmic-cliffs-webb-weic2205a.jpg` | 8 | https://esawebb.org/images/weic2205a/ | NASA, ESA, CSA, and STScI | CC BY 4.0 | **in `references/img/`** |
+| `references/img/08-crab-nebula-webb-weic2326a.jpg` | 8 | https://esawebb.org/images/weic2326a/ | NASA, ESA, CSA, STScI, T. Temim (Princeton University) | CC BY 4.0 | **in `references/img/`** |
+| `references/img/08-sun-granulation-inouye.jpg` | 8 | https://noirlab.edu/public/images/NSO-DKIST-firstlight-full | NSO/NSF/AURA | CC BY 4.0 | **in `references/img/`** |
+| `references/img/09-sun-loops-sdo-pia22475.jpg` | 9 | https://science.nasa.gov/photojournal/dynamic-looping-action/ | NASA/GSFC/Solar Dynamics Observatory | Public domain (NASA) | **in `references/img/`** |
+| `references/img/09-blue-marble-apollo17.jpg` | 9 | https://www.nasa.gov/image-article/blue-marble-view-from-apollo-17/ | NASA (AS17-148-22727) | Public domain (NASA) | **in `references/img/`** |
+| `references/img/09-sunglint-clouds-iss.jpg` | 9 | https://science.nasa.gov/earth/earth-observatory/sunglint-and-clouds-off-western-south-america-78107/ | ISS Crew Earth Observations, NASA JSC | Public domain (NASA) | **in `references/img/`** |
+| `references/img/11-yucatan-relief-pia03381.jpg` | 11 | https://www.jpl.nasa.gov/images/pia03381-shaded-relief-with-height-as-color-and-landsat-yucatan-peninsula-mexico | NASA/JPL | Public domain (NASA) | **in `references/img/`** |
+| `references/img/14-nile-delta-night-iss.jpg` | 14 | https://science.nasa.gov/earth/earth-observatory/nile-river-delta-at-night-46820/ | ISS Crew Earth Observations, NASA JSC | Public domain (NASA) | **in `references/img/`** |
+| `references/img/14-okavango-delta-iss.jpg` | 14 | https://science.nasa.gov/earth/earth-observatory/okavango-delta-84078/ | ISS Crew Earth Observations, NASA JSC | Public domain (NASA) | **in `references/img/`** |
+| `references/img/14-snow-geese-liftoff-usfws.jpg` | 14 | https://www.fws.gov/media/afternoon-liftoff-snow-geese-loess-bluffs-national-wildlife-refuge | Robert L. Keyser III / USFWS | Public domain | **in `references/img/`** |
 
 Licence terms checked: ESA/Webb CC BY 4.0, credit in full (<https://esawebb.org/copyright/>); ESO CC BY 4.0 (<https://www.eso.org/public/copyright/>); NOIRLab/NSO CC BY 4.0 unless noted (<https://noirlab.edu/public/copyright/>); NASA images generally not copyrighted, credit NASA, no implied endorsement (<https://www.nasa.gov/nasa-brand-center/images-and-media/>); HiRISE public domain (<https://uahirise.org/media/usage.php>). ESA/Hubble uses the same CC BY 4.0 terms as ESA/Webb.
 
