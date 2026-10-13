@@ -102,6 +102,10 @@ You'd rather not do scans, and you thought v3's face looked fairly realistic. Go
 
 **This is the face that recurs through the series** (Discussion 007), so it's worth designing once, carefully, with references, before any shot uses it. It should be "similar enough to recognize" between the first face and the early human at the cliff (your words, 2026-10-03), which is easiest if it's literally the same head, aged and weathered for the cliff.
 
+**One face, reshaped.** A face on a standard rigged head (a MetaHuman, or any head fitted to one) can be reshaped into kin: jaw, nose, brow, eye spacing, age and weight change while the expressions keep working, because the mesh layout doesn't. That gives Discussion 007's recurring face, with every bearer a variation of it. Shape warps well; skin doesn't, so each variant needs its skin reworked (age, weathering, tone). A woman, a child or a very different face is better designed from scratch than stretched.
+
+**If the designed face doesn't look real enough, a scan of your face is the fallback** (your offer, 2026-10-13), as the base for the recurring face only; the series' other characters stay designed, so they don't all descend from you. One scan is enough: Epic's free phone app RealityScan makes it and Mesh to MetaHuman fits it to a rigged head. The MetaHuman test decides whether it's needed.
+
 **The performance.** Your face, but no scan: you film yourself on a webcam doing the six expression runs (eyes closed and still; eyes opening; fear to terror; malice to a wild laugh; upset to peace and sleep; compassion to peace and sleep). Software reads your expression from the video as 52 numbers a frame and drives the designed face with them. Your likeness is never used; only your acting. With MetaHuman, its own Animator does this from a webcam; otherwise MediaPipe does it for any face in Blender. The extremes (terror, the wild laugh) will need pushing by hand, because webcam tracking softens them. If you'd rather not perform at all, I can key the expressions by hand from the four-face rule; it'll be less alive.
 
 ## 6. Pacing: the tempo map
