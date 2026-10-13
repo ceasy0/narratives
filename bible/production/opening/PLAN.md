@@ -165,6 +165,8 @@ The sound is yours, made in FL Studio and laid over the picture afterward (your 
 | 4:00 | E3 (165 Hz) | The people |
 | 4:36 | A2 (110 Hz) | The face again |
 
+**Across the cut into the Garden** (from the Garden's walk in, [LAYOUT §11](../../story/arcs/01-beginnings/garden/LAYOUT.md#11-your-notes-of-2026-10-13-the-walk-in-one-mans-work-blue-and-yellow), 2026-10-13): the Opening ends on black with the breath held, and the Garden's first shot is Adam, a man in his early twenties, letting it out at the east entrance. So the breath is one stem that carries over the cut, and the FL Studio project should hold both sides of it. By then the held note has faded under the cliff's wind; the Garden's walk has little or no music, only birds, water and wind, and the note comes back only at the command. If the animatic ever runs past 5:00, that out-breath is its tail shot, and Adam's face should read as kin to the cliff's ([Discussion 007](../../discussions/007-the-faces-of-god.md)).
+
 The longer sound brief from the assessment (layers per beat, the release's six layers, one shared reverb space) still applies as a starting point; it's in the git history of this file (the assessment of 2026-10-09, §5) if you want it.
 
 ## 9. What I need from you
