@@ -2,7 +2,7 @@
 
 > Your unconventional framings of ideas and passages: what each one says, which texts support it and which pull against it, a first-pass fit grade, and what it would change on screen. These grades are starting points for discussion, not verdicts.
 
-**Status:** v1.5, 2026-10-13. Twenty framings (FR-01 to FR-20), each with what it says, the texts for and against it, and its fit grade. Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes on each round since.
+**Status:** v1.5, 2026-10-13. Twenty-one framings (FR-01 to FR-21), each with what it says, the texts for and against it, and its fit grade. Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes on each round since.
 **Fit grades** (defined in RULES §8.8):
 - **Supported:** the text points this way.
 - **Compatible:** the text is silent or open, and the framing fills a gap without strain.
@@ -35,6 +35,7 @@
 | [FR-18](#fr-18--genesis-247-as-a-recap) | Genesis 2:4–7 as a recap of 1:1–2:3, not a later event | 1 | Supported for 2:4–6; Compatible for 2:7 as both recap and hinge. **Applied 2026-10-07:** Adam is new in what happens to him. | Done |
 | [FR-19](#fr-19--the-devil-as-what-evil-actions-are) | The devil as what evil actions are; the serpent embodying the role | 1, Job, 16 | Supported for the serpent embodying the role; Tension for the larger claim, with a fitting form | Before Job |
 | [FR-20](#fr-20--god-shown-as-each-age-perceives-him) | God shown as each age perceives him; in the Garden, an old man, Adam's father | All depictions of God | Compatible as a series rule (Heb 1:1); for the Garden, Supported to Tension depending on the form | [009, round 3](../discussions/009-god-in-the-garden.md#round-3--2026-10-13-god-as-an-old-man-seeded-not-decided), before the Garden's treatment |
+| [FR-21](#fr-21--the-flip-christ-with-the-oldest-then-the-newest) | The flip: before the fall Christ stays with the oldest of the line, after it with the newest | 1, then the line to the Gospels | Compatible as an image (Rev 22:13, 16; Dan 7); Tension where it rests on FR-10 | [009, round 4](../discussions/009-god-in-the-garden.md#round-4--2026-10-13-christ-in-the-garden-and-the-flip-seeded-not-decided), before the Garden's treatment |
 
 **Order of discussion:**
 
@@ -46,7 +47,7 @@
 6. FR-04, FR-06, FR-07 and FR-09.
 7. FR-10 (the bloodline; the resurrection is decided), FR-14 and FR-19.
 
-**Now (2026-10-13):** FR-20 in 009's round 3, because the Garden's treatment waits on it.
+**Now:** FR-21 in 009's round 4, because the Garden's treatment waits on it.
 
 ---
 
@@ -361,7 +362,8 @@ If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one
 
 **Your framing:**
 - "Christ" is the line of Jesus's descendants who are revealed to the world.
-- The line splits like a rainbow and recombines.
+- The line splits like a rainbow and recombines. Each branch carries a hue; "Christ is not complete until every hue and saturation (so every shade) is connected" (your note, 2026-10-13).
+- Before Jesus, the line runs back to Adam: in the Garden it rests with the oldest, and after the fall with the newest ([FR-21](#fr-21--the-flip-christ-with-the-oldest-then-the-newest)). At the flood, only Noah's family still held the whole spectrum, so the world could grow again from them ([010](../discussions/010-the-days-of-noah.md#round-1-your-answers--2026-10-13)).
 - The next coming gathers some, and each later stage gathers more.
 - Most people alive today descend from Jesus.
 
@@ -597,7 +599,7 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 ## FR-20 — God shown as each age perceives him
 
-**Source:** your note on the Garden, 2026-10-13 (then README item 22; item 15 since the renumbering). **Arcs:** 1 (the Garden) and every later depiction of God.
+**Source:** your note on the Garden, 2026-10-13 (then README item 22). **Arcs:** 1 (the Garden) and every later depiction of God.
 
 **Your framing:**
 
@@ -619,3 +621,28 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 **First-pass grade:** **Compatible** as a series rule, in the form "the presence is God's; the form is what that age could receive" (Heb 1:1). **Tension** if it becomes a progression from wrong pictures to right ones. For the Garden, the grades by form are in [009, round 3](../discussions/009-god-in-the-garden.md#round-3--2026-10-13-god-as-an-old-man-seeded-not-decided): Supported for an appearance in human form as a father; Tension to Contradiction for a literal human ancestor.
 
 **Status:** for the Garden, answered 2026-10-13 in a different form: not an appearance but a real man, Adam's ancestor, through whom God speaks as at Mamre ([009, your answer](../discussions/009-god-in-the-garden.md#round-3-your-answer--2026-10-13)). So the Garden's form is "an elder of the family," and the progression across the series stays open as a rule to try arc by arc.
+
+---
+
+## FR-21 — The flip: Christ with the oldest, then the newest
+
+**Source:** your note on the Garden, 2026-10-13. **Arcs:** 1 (the Garden), then the whole line to the Gospels.
+
+**Your framing:**
+
+> Before it [the fall], Christ stayed with the oldest person on the Christ bloodline, and after Christ now stays with the newest on the bloodline; almost like something flipped.
+
+**What fits:**
+- "The first and the last" (Rev 1:17; 22:13); "the root and the descendant of David" (Rev 22:16); David's son who is David's Lord (Matt 22:41–45); "before Abraham was, I am" (John 8:58).
+- The Ancient of Days and one like a son of man (Dan 7:9, 13), and the Son with the old man's hair (Rev 1:14).
+- After the fall Genesis keeps choosing the younger: Abel, Isaac, Jacob ("the older shall serve the younger," 25:23; Rom 9:12), Joseph, Perez, Ephraim, and then David.
+- The promise is a child to come (3:15), and each mother and father looks to the newborn: Eve (4:1), Lamech (5:29).
+- Death gives it a reason: before the fall nobody in the line dies; after it, Genesis 5's "and he died," so what the oldest carried has to pass down.
+
+**What pulls against it:**
+- No text says Christ was with anyone before Jesus in this way; it rests on FR-10.
+- "The newest" can't mean every newborn: Cain is Eve's first, and the line runs through Seth (4:25). Read as the promise riding forward.
+
+**First-pass grade:** **Compatible** as an image and a structure; **Tension** where it relies on FR-10.
+
+**Status:** seeded in [009, round 4](../discussions/009-god-in-the-garden.md#round-4--2026-10-13-christ-in-the-garden-and-the-flip-seeded-not-decided), with a proposal for the screen (the held note passing from the ancestor to Eve's newborn); not decided.

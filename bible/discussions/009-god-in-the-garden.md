@@ -1,6 +1,6 @@
 # 009 — God in the Garden
 
-**Status:** Decided (2026-10-13): God speaks through Adam's ancestor, a real man never called God, as at Mamre, and through the world in two registers; five details open (README item 15).
+**Status:** Decided (2026-10-13): God speaks through Adam's ancestor, a real man never called God, as at Mamre, and through the world in two registers; round 4 open: whether Christ is in that man, the flip at the fall, and the clothes (README item 13).
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), the rest of Episode 1
 **Builds on:** [001](./001-how-god-speaks.md) (how God speaks: decided for Genesis) and [007](./007-the-faces-of-god.md) (the faces of God: decided)
 **Positions:** 12 (can God be shown), 21 (how God speaks)
@@ -210,7 +210,7 @@ The Garden's treatment is unblocked. Every choice it needs is now decided here o
 
 ### Round 3 — 2026-10-13: God as an old man (seeded, not decided)
 
-Your note, answering the question about "God is not seen in Episode 1" (then README item 22; the question is item 15 since the renumbering of 2026-10-13):
+Your note, answering the question about "God is not seen in Episode 1" (then README item 22):
 
 > We will have to find some way to have God in the Garden. I'm starting to think about showing God in a way that represents the progression of our perception of God. So for the Garden scene God could be represented as an old man. And this could actually work by calling the old man Adam's father or ancestor (if we say ancestor given the fact that the Bible says people back then lived for almost a thousand years, then the old man could also be an ancestor of Eve. But the commonality would have to go back far enough). I understand that this would be a large creative action, so we'd need to discuss it first.
 
@@ -284,7 +284,7 @@ It reopens the first line of the decision below. Nothing is changed until you de
 
 **Two things it changes, and one it costs.**
 
-1. **The voice.** At Mamre the visitors speak aloud. So the ancestor speaks aloud, with the held note under his voice: that's how the audience knows God is speaking through him, and it's the same sign as the encounter alone. The first words of the series are still a human voice speaking God's words; they're his, not Adam's. The encounter alone (the words in your own voice) stays for scenes with nobody there, from Cain on. *My recommendation; it's your call (README item 15).*
+1. **The voice.** At Mamre the visitors speak aloud. So the ancestor speaks aloud, with the held note under his voice: that's how the audience knows God is speaking through him, and it's the same sign as the encounter alone. The first words of the series are still a human voice speaking God's words; they're his, not Adam's. The encounter alone (the words in your own voice) stays for scenes with nobody there, from Cain on. *My recommendation; it's your call (README item 13).*
 2. **The people outside are seen in the Garden,** in one man. 008 left that open ("that may very well change"); this is the change.
 3. **The cost: the face.** If he bears the Opening's face, he reads as God; if he doesn't, he's a man. Since we're not calling him God, I'd give him the line's face (the cliff's, aged) the way any grandfather has it, and never light or frame him as more than a man. The held note is the only sign.
 
@@ -300,16 +300,60 @@ The color rule holds: nothing made is colored ([the Garden's look](../story/arcs
 
 **Grade: Compatible overall:** Supported for God speaking through a man (Gen 18; 001's decision 5), Tension at 2:22 if he brings Eve from outside. What's mine (P6): that he planted the Garden, that he's Adam's and Eve's grandfather, and that he stays inside the gate.
 
+### Round 4 — 2026-10-13: Christ in the Garden, and the flip (seeded, not decided)
+
+Your note:
+
+> I'm starting to think that the God in the Garden should genuinely be Christ or God's physical form. And it makes me think of another change the fall brought. Before it, Christ stayed with the oldest person on the Christ bloodline, and after Christ now stays with the newest on the bloodline; almost like something flipped. Tell me what you think about this. I like your idea of having him wear what anyone else would wear (we have to talk about this, because it says Adam and Eve were naked. We can talk about naked being symbolic for their mind or something), but would the white robe fit better in this view or no? But I do see what you mean about your version paying off for verse 3:22.
+
+Three questions: who the ancestor is, the flip, and the clothes (his and theirs). Nothing changes until you decide; round 3's decision stands meanwhile.
+
+**1. Christ, or God's physical form?**
+
+- **Not the Father.** "No one has ever seen God; the only God, who is at the Father's side, he has made him known" (John 1:18); "God is spirit" (John 4:24); he "dwells in unapproachable light, whom no one has ever seen or can see" (1 Tim 6:16). If God has a form that can be seen, the New Testament's answer is the Son: "the image of the invisible God" (Col 1:15). So "God's physical form" and "Christ" are one option, not two, and 007 already decided the face is God's image, not a picture of the Father.
+- **Christ in the Garden is the oldest Christian reading.** Theophilus (*To Autolycus* 2.22) and Irenaeus (*Demonstration* 12) say it was the Word who walked in paradise and spoke with Adam; Justin says the same of the visitor at Mamre (*Dialogue with Trypho* 56). So the walker in 3:8 as Christ is **Supported** by the tradition, and by "he is before all things" (Col 1:17).
+- **What pulls against it is a real man.** Round 3 made him a real man with a life of his own, not an appearance. A man born into the line who *is* the Son would be a second incarnation, and the texts give one: "when the fullness of time had come, God sent forth his Son, born of woman" (Gal 4:4); "the Word became flesh" (John 1:14); "once for all at the end of the ages" (Heb 9:26); "in these last days he has spoken to us by his Son" (Heb 1:2). As a claim that he is Jesus before Jesus: **Contradiction.**
+- **The precedent that fits: Melchizedek.** Genesis has a man who blesses Abraham with bread and wine and then vanishes, and Hebrews says of him that he is "without father or mother or genealogy... resembling the Son of God" (Heb 7:3). Not the Son; resembling him, in a way that the later story reveals. That's the form I'd give the ancestor: a real man in whom Christ is, the way [FR-10](../canon/FRAMINGS.md#fr-10--christ-as-a-bloodline-the-rainbow-widening-comings) holds Christ is in the line, the first and fullest bearer of it, with God speaking through him as at Mamre. **Tension**, the same Tension FR-10 already carries, and no new one.
+
+**2. The flip.** Before the fall, Christ stays with the oldest of the line; after it, with the newest. Logged as [FR-21](../canon/FRAMINGS.md#fr-21--the-flip-christ-with-the-oldest-then-the-newest). I think it's one of the best ideas in the project, and the texts are more on its side than I expected:
+
+- **"The first and the last."** Christ calls himself "the Alpha and the Omega, the first and the last, the beginning and the end" (Rev 22:13), and "the root and the descendant of David" (Rev 22:16). Root and descendant is the flip in four words: the oldest of the line and the newest. Jesus puts it as a riddle: if David calls the Messiah "Lord," "how is he his son?" (Matt 22:41–45). And "before Abraham was, I am" (John 8:58).
+- **The Ancient of Days and the Son of Man.** Daniel sees an old man enthroned and "one like a son of man" coming to him (Dan 7:9, 13). The old one and the young one. In Revelation the Son has the old man's white hair (Rev 1:14).
+- **After the fall, Genesis keeps choosing the younger.** Abel's offering over Cain's (4:4); Isaac, not Ishmael (21:12); "the older shall serve the younger" (25:23; Rom 9:12); Joseph; Perez breaking out ahead of Zerah (38:29); Ephraim blessed over Manasseh with crossed hands (48:14–19); David, the youngest, called in from the sheep (1 Sam 16:11). The right of the firstborn is the law, and the story keeps overturning it. Your flip explains why.
+- **After the fall, everyone looks to the child.** The promise is "her offspring" (3:15), a child not yet born. Eve's first words outside are about her baby: "I have gotten a man with the LORD" (4:1; Luther read it "I have gotten the man, the LORD," as if she thought Cain was the promised one). Lamech names Noah: "this one shall bring us relief" (5:29). The hope moves forward, generation by generation, to "Jesus, who is called Christ" (Matt 1:16), and then on in his children, who are his body (FR-10, decided).
+- **And it has a reason inside the story: death.** Before the fall no one in the line dies, so Christ can rest with the eldest. After it, "you are dust" (3:19), and Genesis 5's refrain begins: "and he died." Something that would die with the oldest has to pass down. The flip is what mortality does to the line.
+
+**What pulls against it:** the texts never say Christ was with anyone before Jesus in this way, so it's P6 and lives inside FR-10's Tension; and "the newest" can't mean every newborn, since Cain is Eve's first and the line runs through Seth (4:25). I'd read it as the promise riding forward, with the held note showing where it is.
+
+**On screen (my proposal):** the held note sits under the ancestor in the Garden. At the gate he stays inside, with the tree of life: the oldest, who doesn't die. Outside, the next time we hear the note it's under a newborn's face: Eve's child, 4:1. The audience feels the flip without a word. *Grade:* **Compatible** as an image and a structure (Rev 22:13, 16; Dan 7; the younger chosen); **Tension** where it relies on Christ being a bloodline (FR-10).
+
+**3. The clothes.**
+
+*His.* With him as Christ in the man, I'd change my earlier pick from hide or wool to **plain undyed linen**, still not a white robe:
+
+- **Against the white robe, even now.** In the Gospels Christ wears ordinary clothes (the tunic of John 19:23) and "had no form or majesty that we should look at him" (Isa 53:2). His clothes turn white once, at the Transfiguration, for three people, "as no one on earth could bleach them" (Mark 9:3). If the ancestor is Christ, he should be dressed the way Christ was dressed: like anyone. White robes in the Bible are also what the redeemed are *given* at the end (Rev 3:5, 3:18, 7:14); putting one on him at the start spends the end.
+- **For linen.** Flax was grown and woven in the Near East long before the plain's first towns (linen at Nahal Hemar about 6500 BC; flax in the Samarran farms about 6000 BC). Undyed, it's pale and plain, a working cloth. And it's the Bible's cloth for a heavenly man who looks like a man: "a man clothed in linen" (Ezek 9:2; Dan 10:5, a figure many read as Christ), and the high priest's plain linen on the Day of Atonement (Lev 16:4). In Sumer it was the cloth of priests (as I recall it; I'd check before the treatment cites it). Nobody watching will read "God"; anyone who knows will see it.
+- **What it changes at 3:21–22.** He no longer dresses them like himself: their clothes are skins, made by a death; his aren't. I think that's stronger. Humanity leaves the Garden in skins and gets linen back at the end: "fine linen, bright and pure" (Rev 19:8). And "the man has become like one of us" (3:22) still means two things through him; it was never only about the clothes.
+
+*Theirs.* **Naked in the body and in the mind, both.** The text needs the body: they sew fig leaves (3:7) and are given skins (3:21), which only makes sense if they wore nothing. But you're right that the mind is the point. "Naked," *'arummim*, is a pun on the serpent's "crafty," *'arum* (2:25; 3:1), and what changes at 3:7 is that "their eyes were opened" and they "knew": the body is the same, the shame is new. Two old readings help the screen. Jewish tradition says they were clothed in light before the fall (Rabbi Meir's Torah read "garments of light," *'or* with an aleph, for "garments of skin," *Genesis Rabbah* 20:12), and Ephrem the Syrian speaks of a "robe of glory" they lost. So the camera never treats their bodies as the subject: the Garden's light and shade cover them, and their nakedness reads as a child's beside a grandfather. After 3:7 the same bodies are suddenly exposed, the same way the shade becomes cover (3:8). *Grade:* **Supported** for both together; **Contradiction** if they were clothed before 3:7.
+
+**For round 4:**
+
+1. **Who he is:** a real man in whom Christ is, the line's first bearer, never named, as Melchizedek "resembles the Son" (my pick); or still only a man God speaks through (round 3)?
+2. **The flip:** adopt it, with the held note passing from the ancestor to Eve's newborn (my pick)?
+3. **His clothes:** plain undyed linen (my pick), hide or wool, or a white robe?
+4. **Their nakedness:** physical and of the mind, with the light covering them (my pick)?
+
 ## Decision
 
-**Decided 2026-10-08, after two rounds; revised 2026-10-13 in round 3** (your answer: God speaks through Adam's ancestor, a real man, as at Mamre). The open details of round 3 are README item 15.
+**Decided 2026-10-08, after two rounds; revised 2026-10-13 in round 3** (your answer: God speaks through Adam's ancestor, a real man, as at Mamre). The open details of round 3, and round 4, are README item 13.
 
 - **God speaks through Adam's ancestor** (round 3, 2026-10-13): a real man, old, of the people outside, Adam's and Eve's grandfather (P6), who planted the Garden and is never called God. God is never seen as God; he speaks and acts through this man as through the visitors at Mamre, and through the world. *(Was: "God is not seen in Episode 1," round 1.)*
 - **Two registers for God through the world** (round 2). The first is Discussion 001's device: the world goes quiet, the held note returns, and the words come in the hearer's own voice; it carries every recorded speech. The second is signs and double meanings in the world, which Adam reads: an animal's act, the river, a thing in the Garden meaning two things at once; it carries the silent hours. Nothing in the world speaks. The serpent, a voice from outside with the hiss under it, is the only exception, and it's the counterfeit of both registers.
-- **The command (2:16–17)** is the first thing spoken in the series, at the two trees, after minutes of silent walking (your answers, rounds 1 and 2). *Round 3:* the ancestor is waiting there and speaks it; whether aloud with the held note under it (my pick) or in Adam's own voice is README item 15.
+- **The command (2:16–17)** is the first thing spoken in the series, at the two trees, after minutes of silent walking (your answers, rounds 1 and 2). *Round 3:* the ancestor is waiting there and speaks it; whether aloud with the held note under it (my pick) or in Adam's own voice is README item 13.
 - **The naming (2:19–20)** is shown and wordless: the names are never heard; the looking is the scene (round 2).
-- **The questions (3:9–13) and the sentences (3:14–19)** come through the ancestor (round 3); the voice follows item 15's answer. *(Was: in their own voices, the serpent's sentence in both, out of step, round 1.)*
-- **The clothes (3:21):** one of the named animals is dead (round 2), and the ancestor's hands make the skins into clothes and dress them (round 3, my proposal, in item 15).
+- **The questions (3:9–13) and the sentences (3:14–19)** come through the ancestor (round 3); the voice follows item 13's answer. *(Was: in their own voices, the serpent's sentence in both, out of step, round 1.)*
+- **The clothes (3:21):** one of the named animals is dead (round 2), and the ancestor's hands make the skins into clothes and dress them (round 3, my proposal, in item 13).
 - **The sword (3:24):** the Opening's world at full strength, fire turning over, and the cherubim's faces are the Garden's own animals (round 2).
 - **Eve is of one kind with Adam** from the moment she wakes (round 2). We say "of one kind."
 - **"Before he speaks,"** not "before he sleeps" (round 2).
