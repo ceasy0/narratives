@@ -1,6 +1,6 @@
 # 010 — The days of Noah: the sons of God, the Nephilim, the flood, and the dates
 
-**Status:** **Seeded 2026-10-13,** from your answers to README items 6, 7 and 8 ("I'm unsure... was Goliath a descendant of the Nephilim?"; "to me the flood was regional, but it was incredibly massive... a tsunami or something from the Persian Gulf"; "what is your opinion?" on the dates). Nothing here is decided. My recommendations are marked as mine; the choices are yours.
+**Status:** **Seeded 2026-10-13,** from your answers to README items 6, 7 and 8 (2–4 since the renumbering; "I'm unsure... was Goliath a descendant of the Nephilim?"; "to me the flood was regional, but it was incredibly massive... a tsunami or something from the Persian Gulf"; "what is your opinion?" on the dates). Nothing here is decided. My recommendations are marked as mine; the choices are yours.
 **Needed before:** hour 3, *The Days of Noah* (Gen 5:1–6:8), for the sons of God; hours 4 and 5, *The Ark* and *The Flood*, for the flood; and the dates before Genesis 4–5 is treated
 **Positions:** [6](../canon/POSITIONS.md) (the sons of God and the Nephilim), [7](../canon/POSITIONS.md) (the flood), and the dating of Genesis 1–11 ([TIMELINE §3.4](../world/TIMELINE.md#34-primeval-history-genesis-111))
 **Builds on:** [008](./008-adam-eve-and-the-garden.md) (the Garden on the lower plain near Eridu; the people outside), [001](./001-how-god-speaks.md), and [FR-19](../canon/FRAMINGS.md#fr-19--the-devil-as-what-evil-actions-are)
@@ -125,7 +125,7 @@ So the link goes Nephilim → Anakim (only in a report the text calls bad) → t
 
 ---
 
-## Part 3. The dates (README item 8)
+## Part 3. The dates
 
 You asked what I think. My opinion: **date Genesis 1–11 by the Greek Bible's numbers, as a working calendar, loosely.** That's where your Garden date has already gone.
 

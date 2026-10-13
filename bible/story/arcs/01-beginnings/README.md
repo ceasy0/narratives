@@ -54,7 +54,7 @@ There's no separate beat sheet. For a five-minute sequence with no dialogue, the
 
 ## What this arc still needs from you
 
-For the Opening: the production plan's questions, and a session on your desktop. For the Garden: the ring, Adam's square and Babel over the Garden (proposed 2026-10-10); the look was decided 2026-10-09, and the treatment is next. For the rest: Positions 6 and 7 before hours 3 and 4 ([README](../../../README.md#what-i-need-from-you), items 1, 6, 7, 8). Hour 8 stays *The Scattering*, written from the text (2026-10-09).
+For the Opening: the production plan's questions, and a session on your desktop. For the Garden: the look and its last four points are decided (2026-10-13), the treatment is next, and how God is shown in it waits on your idea of God as an old man ([009, round 3](../../../discussions/009-god-in-the-garden.md#round-3--2026-10-13-god-as-an-old-man-seeded-not-decided)). For the rest: Positions 6 and 7 and the dates before hours 3 and 4 ([Discussion 010](../../../discussions/010-the-days-of-noah.md)). All in the [README](../../../README.md#what-i-need-from-you), items 1, 2, 3, 4 and 15. Hour 8 stays *The Scattering*, written from the text (2026-10-09).
 
 ## Decided for the Opening
 

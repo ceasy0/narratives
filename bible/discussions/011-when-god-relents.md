@@ -1,6 +1,6 @@
 # 011 — When God regrets and relents
 
-**Status:** **Seeded 2026-10-13.** You asked me to pick one of the questions the stories raise on their own (README item 26) and discuss it now. I picked this one, because it's the first the story reaches: hour 3 ends on it (Gen 6:6), a year before any of the others.
+**Status:** **Seeded 2026-10-13.** You asked me to pick one of the questions the stories raise on their own (README item 19; it was item 26 when you asked) and discuss it now. I picked this one, because it's the first the story reaches: hour 3 ends on it (Gen 6:6), a year before any of the others.
 **Needed before:** hour 3, *The Days of Noah* (Gen 5:1–6:8); then the golden calf (Exod 32), Saul (1 Sam 15) and Jonah
 **Positions:** an open question in [POSITIONS](../canon/POSITIONS.md#open-questions-the-stories-will-raise-on-their-own), "God relenting"
 **Builds on:** [001](./001-how-god-speaks.md) (how God speaks), [007](./007-the-faces-of-god.md) (the malice is a separated part's perception), [010](./010-the-days-of-noah.md) (the flood)

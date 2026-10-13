@@ -417,7 +417,7 @@ If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one
 
 **Your reading (2026-10-01):** both passages are part of your picture of the Messiah. He never willfully commits iniquity; he only appears to. As a child he has to learn to refuse evil and choose good. Isaiah 7:15–16, read that way, is Supported. 2 Samuel 7:14b, read as "appears to commit iniquity," is Tension: it works as typology, but not as a plain statement about Jesus ([Discussion 002](../discussions/002-jesus-humanity.md#decision)).
 
-**Your reading, round 3 (2026-10-02):** the "iniquity" is a choice that was right in his eyes but had consequences he couldn't foresee, and the discipline is the natural result, not a cruelty. My grade: **Compatible as typology,** with two guardrails: it's never called sin, and it never covers the Passion, which the texts say was for others. The Temple at twelve (Luke 2:41–52) is its scene. Isaiah 53 offers a second bridge through the same word for "stripes" ([Discussion 002, round 3](../discussions/002-jesus-humanity.md#round-3--2026-10-02-2-samuel-714b)). **Accepted 2026-10-13:** both guardrails, the Isaiah 53 bridge as a second layer, and the Temple at twelve as the first on-screen example ([002, the check](../discussions/002-jesus-humanity.md#check-2026-10-13)).
+**Your reading, round 3 (2026-10-02):** the "iniquity" is a choice that was right in his eyes but had consequences he couldn't foresee, and the discipline is the natural result, not a cruelty. My grade: **Compatible as typology,** with two guardrails: it's never called sin, and it never covers the Passion, which the texts say was for others. The Temple at twelve (Luke 2:41–52) is its scene. Isaiah 53 offers a second bridge through the same word for "stripes" ([Discussion 002, round 3](../discussions/002-jesus-humanity.md#round-3--2026-10-02-2-samuel-714b)). **Accepted 2026-10-13:** both guardrails, the Isaiah 53 bridge as a second layer, and the Temple at twelve as the first on-screen example ([002, the check](../discussions/002-jesus-humanity.md#check--2026-10-13)).
 
 Jewish tradition reads most of these passages as being about kings of their own time or a future human king. That's worth knowing when we fill in the Positions Register.
 
@@ -597,7 +597,7 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 ## FR-20 — God shown as each age perceives him
 
-**Source:** your note on the Garden, 2026-10-13 (README item 22). **Arcs:** 1 (the Garden) and every later depiction of God.
+**Source:** your note on the Garden, 2026-10-13 (then README item 22; item 15 since the renumbering). **Arcs:** 1 (the Garden) and every later depiction of God.
 
 **Your framing:**
 
@@ -618,4 +618,4 @@ This lies mostly beyond the Bible's window and feeds Discussion 004. Two doorway
 
 **First-pass grade:** **Compatible** as a series rule, in the form "the presence is God's; the form is what that age could receive" (Heb 1:1). **Tension** if it becomes a progression from wrong pictures to right ones. For the Garden, the grades by form are in [009, round 3](../discussions/009-god-in-the-garden.md#round-3--2026-10-13-god-as-an-old-man-seeded-not-decided): Supported for an appearance in human form as a father; Tension to Contradiction for a literal human ancestor.
 
-**Status:** under discussion in 009's round 3 (README item 22).
+**Status:** under discussion in 009's round 3 (README item 15).

@@ -4,6 +4,8 @@
 
 The questions only you can answer are in the [README](./README.md#what-i-need-from-you), items 2, 3, 11, 13 (extended) and 21–24, not here.
 
+> **Numbering note, 2026-10-13.** Item numbers in this record are the README's numbering of 2026-10-10. The list was renumbered on 2026-10-13 after answered items were deleted: 2, 3, 12, 20 and 21 are answered and gone; 8 is now 4, 11 is 7, 13 is 8 (now asking a different question from Discussion 002), 14 is 9, 17 is 12, 22 became item 15 (your idea of God in the Garden as an old man, which replaced the audit's question), 23 is 16 and 24 is 17.
+
 ## What held up
 
 - The map's arithmetic: hours 1–205 with no gaps or duplicates, season ranges joined end to end, hour numbers cited elsewhere matching v1.2.

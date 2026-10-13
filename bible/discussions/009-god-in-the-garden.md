@@ -210,7 +210,7 @@ The Garden's treatment is unblocked. Every choice it needs is now decided here o
 
 ### Round 3 — 2026-10-13: God as an old man (seeded, not decided)
 
-Your note, answering the question about "God is not seen in Episode 1" (README item 22):
+Your note, answering the question about "God is not seen in Episode 1" (then README item 22; the question is item 15 since the renumbering of 2026-10-13):
 
 > We will have to find some way to have God in the Garden. I'm starting to think about showing God in a way that represents the progression of our perception of God. So for the Garden scene God could be represented as an old man. And this could actually work by calling the old man Adam's father or ancestor (if we say ancestor given the fact that the Bible says people back then lived for almost a thousand years, then the old man could also be an ancestor of Eve. But the commonality would have to go back far enough). I understand that this would be a large creative action, so we'd need to discuss it first.
 
@@ -249,7 +249,7 @@ It reopens the first line of the decision below. Nothing is changed until you de
 - **He's seen at three moments, no more.** He takes Adam and puts him in the Garden (2:15, "the LORD God took the man and put him"): an old man leading a young one in by the hand is the hour's first image after the breath, and it tells the audience everything about the relationship without a word. He's heard walking in the evening wind (3:8) and seen, for the first time, by two people hiding from his face. And he makes the clothes (3:21): the hands we ruled out come back, on the dead animal, and the dead conduit stays.
 - **The words still come in their own voices** (001). His mouth doesn't move. The held note is on him, because the note belongs to whatever is in focus (009, round 1), and the hearer hears it in their own voice. So he joins the animals as the face of the moment; he doesn't replace the device.
 - **The rest of the hour stays through the world.** The naming, the command at the trees, the sleep and the serpent go as decided. The second register (signs and double meanings) still carries the silent hours.
-- **He bears the face.** The Opening's face, at the end of a long life. It's what keeps him from being the Sistine God: he isn't a generic patriarch, he's the face the audience has already met, and that Adam also has (007). Father and son with one face. That also answers the audit's question in item 22 (whether the face in Adam may read as God's face): yes, because Adam is "in his likeness."
+- **He bears the face.** The Opening's face, at the end of a long life. It's what keeps him from being the Sistine God: he isn't a generic patriarch, he's the face the audience has already met, and that Adam also has (007). Father and son with one face. That also answers the audit's old question (whether the face in Adam may read as God's face): yes, because Adam is "in his likeness."
 - **I'd drop "Adam's ancestor" as a literal claim** (A). "Father," in Luke's sense, is stronger and costs nothing.
 
 **What it would change, if you adopt it:** 009's decision (God seen, three times, in the likeness of an old father; the voice unchanged); Position 12 and 21; FOUNDATIONS §4; the Garden's dossier and the hour's movements 1 and 6; and FR-20 for every later depiction. Nothing would change in the Opening.

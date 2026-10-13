@@ -347,7 +347,7 @@ Your questions of 2026-10-10:
 **Against it.**
 
 1. **Babel is Babylon in Genesis's own list** (10:10), and everyone from the prophets on read it so. Putting Babel at Eridu needs either Rohl's reading or the Tintir tie. **Tension**, not contradiction: Genesis gives no coordinates, and Babylon itself gave its centre Eridu's name. The series can make that the link: the empire of the Exile carries the name of the place it was first built.
-2. **The cherubim guard "the way to the tree of life"** (3:24), and the text sets no end to it. If people build on the Garden, it has to be gone first. The plainest way is the flood (Genesis 6–8), which on a plain like this leaves metres of river mud over everything; Woolley found such a layer at Ur, next door. *High confidence on Woolley's layer; it isn't proof of Noah's flood.* **This ties the idea to Position 7, global or regional flood (README item 7):** either way the Garden is buried, but how we show it depends on the answer.
+2. **The cherubim guard "the way to the tree of life"** (3:24), and the text sets no end to it. If people build on the Garden, it has to be gone first. The plainest way is the flood (Genesis 6–8), which on a plain like this leaves metres of river mud over everything; Woolley found such a layer at Ur, next door. *High confidence on Woolley's layer; it isn't proof of Noah's flood.* **This ties the idea to Position 7, global or regional flood (README item 3):** either way the Garden is buried, but how we show it depends on the answer.
 3. **The dates.** On the provisional date for Adam, Eridu's shrine is older than the Garden (§10.4). Babel over the centre doesn't need Eridu, but the Eridu ties above work best if the Garden comes first (§10.4, option a).
 4. **Exactly the centre?** The text doesn't place the tower anywhere. Over the spring is my choice too, because the spring is the reason anyone would build there. I'd not show the trees' remains; the builders shouldn't know what they're standing on, only that the water comes up there. The audience will know.
 
@@ -426,7 +426,7 @@ What makes Greek light feel the way you mean is **dry, clear air**: hard bright 
 
 > (c) Sounds good, make sure to research it.
 
-**Decided:** the Garden comes first, about **5500 BC**, and Eridu, about 5400 BC, is built after the expulsion, on the dune just east of the Garden: its gate. This moves the provisional date for Adam back from about 5000–4000 BC ([TIMELINE §3.4](../../../../world/TIMELINE.md#34-primeval-history-genesis-111); the dating of Genesis 1–11 as a whole is still README item 8).
+**Decided:** the Garden comes first, about **5500 BC**, and Eridu, about 5400 BC, is built after the expulsion, on the dune just east of the Garden: its gate. This moves the provisional date for Adam back from about 5000–4000 BC ([TIMELINE §3.4](../../../../world/TIMELINE.md#34-primeval-history-genesis-111); the dating of Genesis 1–11 as a whole is still README item 4).
 
 **Not the exact spot,** as before: the excavators dug Eridu down to clean sand under the first shrine ("a virgin sand-dune site with no previous habitation"), so the Garden isn't under it. It lies out in the basin, west of the dune.
 
@@ -473,6 +473,6 @@ The ring is the spring's own pool, held up by its rim a little above the marsh, 
 
 **One thing I couldn't confirm:** David Rohl (*Legend*, 1998) argues the two cities were confused because both were written NUN.KI. Eridu's name is NUN.KI, but I found no source showing Babylon written that way, so it isn't part of the case.
 
-**The date.** The Amar-Sin echo (point 2) needs Babel about 2040 BC, under the kings of Ur, still before Abraham (1951 BC), who is born in their city. If Babel is dated earlier, about 2400–2200 BC (the proposal in README item 8), the tower they leave unfinished is an earlier platform at Eridu, and Amar-Sin's is only its last echo. Either works with Babel at Eridu.
+**The date.** The Amar-Sin echo (point 2) needs Babel about 2040 BC, under the kings of Ur, still before Abraham (1951 BC), who is born in their city. If Babel is dated earlier, about 2400–2200 BC (the proposal in README item 4), the tower they leave unfinished is an earlier platform at Eridu, and Amar-Sin's is only its last echo. Either works with Babel at Eridu.
 
-**What it changes:** hour 7's line on the map; Babel over the Garden's centre (§9.4) is set aside. The flood decides how drowned the Garden is when the tower goes up (README item 7). *P4 for the texts; P5 for the reading. Grade: Tension on Babel's location (10:10), Compatible on everything else.*
+**What it changes:** hour 7's line on the map; Babel over the Garden's centre (§9.4) is set aside. The flood decides how drowned the Garden is when the tower goes up (README item 3). *P4 for the texts; P5 for the reading. Grade: Tension on Babel's location (10:10), Compatible on everything else.*
