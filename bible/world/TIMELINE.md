@@ -140,6 +140,8 @@ Confidence varies a great deal by era, and the timeline should show that rather 
 
 **Revised 2026-10-13** (your answer on Eridu): **the provisional date for Adam in the Garden is about 5500 BC,** just before Eridu was founded (about 5400 BC), so that Eridu can stand at the Garden's gate and be Cain's city (Irad, 4:18). That's about 230 years earlier than a strict count of the Greek genealogies on this model (about 5270 BC), which works because the genealogies aren't read here as a complete calendar. Cain's city is then Eridu, early in the Ubaid period, not the Uruk period. The reasons and sources are in [the Garden's LAYOUT §10.4](../story/arcs/01-beginnings/garden/LAYOUT.md#104-eridu-as-the-gardens-gate-and-the-date-decided-2026-10-13).
 
+**Proposed 2026-10-13, not decided** ([Discussion 010, part 3](../discussions/010-the-days-of-noah.md#part-3-the-dates-readme-item-8); README item 8): date the rest of Genesis 1–11 by the Greek genealogies as a loose working calendar, counted back from Abraham (1951 BC): **the flood about 3000 BC** (the Hebrew count gives about 2240 BC, inside the Akkadian empire's written history; the Greek lands beside Shuruppak's flood layer and the King List's flood, about 2900 BC), and **Babel in Peleg's days, about 2400–2200 BC** (the age of Akkad; Gen 10:10, 25). Luke 3:36 follows the Greek genealogy. A case decision under [ROADMAP §9.2](../ROADMAP.md#92-base-text), where the Hebrew is the default.
+
 ### 3.5 Jesus
 
 - **His birth** came before Herod died. Most scholars date Herod's death to 4 BC; a minority, to 1 BC. Herod killed boys "two years old and under" (Matt 2:16), which suggests a birth around 6–5 BC.
