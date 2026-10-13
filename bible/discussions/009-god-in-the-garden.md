@@ -1,6 +1,6 @@
 # 009 — God in the Garden
 
-**Status:** Decided (2026-10-13): God speaks through Adam's ancestor, a real man never called God, as at Mamre, and through the world in two registers; round 4 open: whether Christ is in that man, the flip at the fall, and the clothes (README item 13).
+**Status:** Decided (2026-10-13): God speaks through Adam's ancestor, a real man never called God, as at Mamre, and through the world in two registers; his clothes decided (an off-white linen robe); round 4 open: whether Christ is in that man, the flip at the fall, their nakedness (README item 13).
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), the rest of Episode 1
 **Builds on:** [001](./001-how-god-speaks.md) (how God speaks: decided for Genesis) and [007](./007-the-faces-of-god.md) (the faces of God: decided)
 **Positions:** 12 (can God be shown), 21 (how God speaks)
@@ -344,6 +344,12 @@ Three questions: who the ancestor is, the flip, and the clothes (his and theirs)
 3. **His clothes:** plain undyed linen (my pick), hide or wool, or a white robe?
 4. **Their nakedness:** physical and of the mind, with the light covering them (my pick)?
 
+### Round 4, your answer on his clothes — 2026-10-13
+
+> I think as a creative change, I want the old man in the Garden to wear an off-white linen robe; I agree that it shouldn't be fully white, but as white as it can get naturally.
+
+**It works, and it's better than my plain linen.** Linen whitens in the sun: it was bleached by washing and laying it out in the light, and fine linen at its whitest is near white without dye or chalk. That's the Bible's own phrase for it, "fine linen, bright and pure" (Rev 19:8), and the high priest's holy linen (Lev 16:4). Off-white keeps him a man of his time, and it's the color of the man clothed in linen (Dan 10:5) for anyone who knows. What keeps it from reading as the film-angel robe is everything but the color: a working cut, a plain belt, worn edges, earth on the hem, the cloth creased and handled. It's the only near-white thing in the Garden, where nothing made is colored, so the eye will go to him; that's right for the first face of the series that speaks. At 3:21 the contrast stays: he dresses them in skins, made by a death; his own robe isn't. **Decided.**
+
 ## Decision
 
 **Decided 2026-10-08, after two rounds; revised 2026-10-13 in round 3** (your answer: God speaks through Adam's ancestor, a real man, as at Mamre). The open details of round 3, and round 4, are README item 13.
@@ -354,6 +360,7 @@ Three questions: who the ancestor is, the flip, and the clothes (his and theirs)
 - **The naming (2:19–20)** is shown and wordless: the names are never heard; the looking is the scene (round 2).
 - **The questions (3:9–13) and the sentences (3:14–19)** come through the ancestor (round 3); the voice follows item 13's answer. *(Was: in their own voices, the serpent's sentence in both, out of step, round 1.)*
 - **The clothes (3:21):** one of the named animals is dead (round 2), and the ancestor's hands make the skins into clothes and dress them (round 3, my proposal, in item 13).
+- **What he wears** (round 4): an off-white linen robe, as white as linen gets naturally, never pure white; worn and plainly cut, a man's working clothes.
 - **The sword (3:24):** the Opening's world at full strength, fire turning over, and the cherubim's faces are the Garden's own animals (round 2).
 - **Eve is of one kind with Adam** from the moment she wakes (round 2). We say "of one kind."
 - **"Before he speaks,"** not "before he sleeps" (round 2).
