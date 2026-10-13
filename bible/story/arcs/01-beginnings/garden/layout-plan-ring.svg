@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Georgia, serif">
   <rect width="900" height="620" fill="#f4f1ea"/>
-  <text x="20" y="32" font-size="20" fill="#2b2b2b">The Garden — the ring (decided 2026-10-10 and 2026-10-13)</text>
+  <text x="20" y="32" font-size="20" fill="#2b2b2b">The Garden — the plan</text>
   <text x="20" y="52" font-size="12" fill="#666">North up. Round island about 450 m across in a ring of fresh water; terraces round at the foot, squared toward the top by Adam.</text>
   <rect x="30" y="75" width="560" height="520" fill="#c9d6c2"/>
   <text x="40" y="92" font-size="11" fill="#556">reed marsh, palms</text>
@@ -70,7 +70,7 @@
     <line x1="613" y1="318" x2="629" y2="318" stroke="#8a3b1f" stroke-width="1.5" stroke-dasharray="3 3"/><text x="633" y="322">Adam's walk in from the east (2:8)</text>
     <rect x="613" y="335" width="17" height="7" fill="#bdb6a8" stroke="#7d776c"/><rect x="617" y="334" width="2" height="9" fill="#7d776c"/><rect x="624" y="334" width="2" height="9" fill="#7d776c"/><line x1="613" y1="356" x2="629" y2="356" stroke="#cbbd98" stroke-width="6"/><text x="633" y="343">slab bridges on stone piers</text><text x="633" y="360">earth paths on both river banks</text>
   </g>
-  <text x="615" y="381" font-size="13" fill="#2b2b2b">Decided 2026-10-13 (LAYOUT §10.4, §10.7):</text>
+  <text x="615" y="381" font-size="13" fill="#2b2b2b">Eridu and Babel (LAYOUT §1):</text>
   <text x="615" y="401" font-size="11" fill="#555">Eridu's dune to the east, the Garden's gate:</text>
   <text x="615" y="417" font-size="11" fill="#555">its first shrine where the cherubim stood,</text>
   <text x="615" y="433" font-size="11" fill="#555">and Babel's tower raised there later,</text>
