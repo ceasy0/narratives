@@ -2,7 +2,7 @@
 
 > Everything we need to know before writing the Ruth pilot. It's also built to teach you the story.
 
-**Status:** v1.1, 2026-10-01. Step 1 of the [pilot plan](./README.md) is done: your checkpoint answers are in §12, and §5 now follows the decided chronology. The next step, the [treatment](./TREATMENT.md), is drafted.
+**Status:** v1.1, 2026-10-01. Complete: your checkpoint answers are in §12, and §5 follows the decided chronology. The [treatment](./TREATMENT.md) is built on it.
 
 **How to read it:** start with §1, the retelling, then §2, the full translation. Everything after that is reference to dip into as needed. §5 answers your question about Rahab, and §12 records your decisions.
 

@@ -2,7 +2,7 @@
 
 > How you want scenes to play, learned from your notes. Every treatment, scene card and script starts from this file.
 
-**Status:** started 2026-10-01 from your first round of notes on the Ruth treatment, updated 2026-10-02 from your second and third, 2026-10-03 from your notes on the Opening, 2026-10-05 from your notes on the Opening's treatment v2, and 2026-10-07 and 2026-10-08 from the rounds in the log below. It grows with each round. When a note is specific to one story, it stays in that story's files; when it's a pattern, it goes here.
+**Status:** your notes on how scenes should play, gathered from every round of notes since 2026-10-01. When a note is specific to one story, it stays in that story's files; when it's a pattern, it goes here.
 
 ---
 
@@ -85,17 +85,3 @@
 - **Every scene should flow into the next.** Look at the transition as well as the scene.
 - **God's name is used sparingly.** Characters say "God" or "the Lord." "Yahweh" is kept for oaths and for places where the Name itself is the point (ROADMAP §5.5).
 - **English always stands for Israel's own language.** Sister dialects such as Moabite are accents. Everything else is spoken as itself, by your three tiers (ROADMAP §5.7).
-
-## Log
-
-| Date | Round | Source |
-|---|---|---|
-| 2026-10-01 | 1 | Your notes on the Ruth treatment v1: the prologue, Act One, and series-wide points |
-| 2026-10-02 | 2 | Your notes on the Ruth treatment v2: line changes in every act, and Elimelech as a protective father |
-| 2026-10-02 | 3 | Your notes on the sample scene and treatment v3: 1:9, 1:13 and 1:15; four expansions; the deathbed song; Naomi's arc; pacing |
-| 2026-10-03 | 4 | Your notes on the Opening: nothing spoken, the faces, the come-down, the primordial through the series; the exception to two rules; hour-long episodes |
-| 2026-10-05 | 5 | Your notes on the Opening's treatment v2: a sound for every appearance, expressions that run to the climax, organic division, the journey that keeps moving, glimpses left to come naturally, the recurring face, real expressions |
-| 2026-10-07 | 6 | Your notes on the Opening's treatment v3: the release's sound, the faces forming in sync, the four-face rule |
-| 2026-10-08 | 7 | Your notes with the series draft: the why comes earlier (the Sodom principle); the four-face rule to be checked on real faces |
-| 2026-10-08 | 8 | Your answers on the Garden: two registers for God through the world; the clothes through the world; the Opening's world at the gate; a silent walk to the centre before the first words; the Garden's look (stone paths, a stepped centre, color among stone and green) |
-| 2026-10-08 | 9 | Your note on the Opening's animatic: ten more seconds of static at the front, faded in from black, the sound leading the picture slightly |

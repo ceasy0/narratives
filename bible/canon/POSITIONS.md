@@ -2,7 +2,7 @@
 
 > Every interpretive and theological choice the story depends on, with its key texts, why it matters on screen, and when it has to be decided. Moved here from ROADMAP §8.2 on 2026-10-07, as the roadmap always intended (§16). Decisions are dated; the reasoning lives in the linked discussion.
 
-**Status:** v1.3, 2026-10-13: Position 21 revised for the Garden (God speaks through Adam's ancestor, 009 round 3). v1.2, 2026-10-13: Positions 6 and 7 seeded in Discussion 010; Positions 13 and 15 corrected (Discussion 002 does not settle 13, and answers 15 only in principle); God relenting seeded in Discussion 011. v1.1, 2026-10-08 (the "decide by" points for Positions 6 and 7 were made exact the same day, now that Genesis is under way: hours 3 and 4 of the map). Position 5 decided; 14 given its lean from Genesis 18; 21 updated from 009's rounds 1 and 2; the map's hard passages listed below the table. v1 (2026-10-07) updated 5, 12, 16 and 21 from Discussions 007, 008 and 009.
+**Status:** v1.3, 2026-10-13. Every interpretive and theological choice the story depends on, with its lean or decision and the point by which it must be decided.
 
 **How an entry works.** Each position holds the question and its key texts, the main views, what each view means for the story, and your position with the date you decided it. Not everything has to be decided now; each has a "decide by" point, and a discussion must be decided before any arc that depends on it is written.
 

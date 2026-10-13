@@ -1,6 +1,6 @@
 # 007 — The faces of God: the first face, duality and the Trinity
 
-**Status:** **Decided for the Opening, 2026-10-05.** Seeded 2026-10-03; your answers to all five questions on 2026-10-05.
+**Status:** **Decided for the Opening, 2026-10-05.**
 **Needed before:** the Opening's script is locked (question 1); the Garden (questions 2–3); every later depiction of God
 **Fit grade:** it divides into four claims, graded separately below. Two are Supported. Two were Contradiction as first stated, and your answers of 2026-10-05 take the fitting version of both.
 **Framings:** [FR-01](../canon/FRAMINGS.md#fr-01--the-opening-creation-as-cosmic-and-biological-history), [FR-02](../canon/FRAMINGS.md#fr-02--god-yin-and-yang-as-the-trinity), [FR-16](../canon/FRAMINGS.md#fr-16--the-faces). **Positions:** 12.

@@ -1,6 +1,6 @@
 # 005 — Beyond the text: traditions, legends and rumored events
 
-**Status:** **Decided, 2026-10-08,** after two rounds. Seeded 2026-10-02; round 1 the same day; your answers to round 1 on 2026-10-08. Items in bins 1 and 2 are still settled one by one, before the arc each would appear in.
+**Status:** **Decided, 2026-10-08.** Items in bins 1 and 2 are still settled one by one, before the arc each would appear in.
 **Needed before:** each arc an item would appear in. The question of Jesus in the East needs settling before the Gospels.
 **Fit grade:** it varies by item; see the tables. The usual story of Jesus studying in the East is graded **Contradiction**.
 

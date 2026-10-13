@@ -2,7 +2,7 @@
 
 > The series on one page, as [REVIEW §2.1](../REVIEW.md#21-write-the-whole-bible-map-before-the-gardens-treatment) proposed and you chose (2026-10-08, "Yes, map first"). Every episode in one line: its text, when it happens, its heart, and what it waits on. It's a map, not a treatment: nothing here is written until its arc comes, and every line can move.
 
-**Status:** v1.2, 2026-10-09. Season 3 is *The Struggle*, for now; and your rule for filling the hours: what the Bible itself gives first, runtime aside, with contextual scenes added later to fill the gaps, so hour 8 stays *The Scattering*, written from the text (§11). v1.1 (2026-10-08, evening) applied your names and your count for Arc 1 (Genesis, eight hours: Noah in three, the nations in three), your name for Season 2, and renumbers every hour after it by two. v1 built from your draft (`Bible_Structure.md`, seasons 1–3 and the book outline to Judges), the roadmap's arc map (§10.3), the working chronology, and everything decided so far. **What's yours:** the shape of seasons 1–3 and most of their titles. **What's mine:** the density (§2), the merges in Genesis (§10), the placements where the text isn't in order (§3), everything from Genesis 30 on, and the threads (§8). Episode counts are the honest number for about an hour each, not a target.
+**Status:** v1.2, 2026-10-09. 205 hours in 18 arcs. **What's yours:** the shape of seasons 1–3 and most of their titles, Arc 1's names and count, and the rule for filling the hours (§11). **What's mine:** the density (§2), the merges in Genesis (§10), the placements where the text isn't in order (§3), everything from Genesis 30 on, and the threads (§8). Episode counts are the honest number for about an hour each, not a target.
 
 ---
 
