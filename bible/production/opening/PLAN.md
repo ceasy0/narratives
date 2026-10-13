@@ -190,7 +190,7 @@ Decided 2026-10-13, and folded in above: the live-action look for beats 10–14 
 ## 10. Order of work
 
 1. **Done:** this plan; the [reference page](./REFERENCES.md) and its images; animatic v3.1, the timing reference until layout replaces it; the set-up on your desktop (§2); the master edit, with v3.1 cut into 73 shots at the script's timecodes; the first layout of beats 12–13 (§9).
-2. **Next on your desktop:** your notes on the beats 12–13 layout, and its second pass; the face test (MetaHuman in Unreal 5.7, brought into Blender, one frame rendered).
+2. **Next on your desktop:** your notes on the beats 12–13 layout, and its second pass. The face test (MetaHuman in Unreal 5.7, brought into Blender, one frame rendered) comes after those notes: the story reel has to be right first (you, 2026-10-13).
 3. **The shot list and tempo map** for all fourteen beats (stage A), the cut list is [`pipeline/shots.csv`](./pipeline/shots.csv), drafted from the script; each shot still needs its camera, screen direction, speed and sound hits, and your corrections.
 4. **Layout of every beat** (stage B), reviewed in batches, to layout lock.
 5. **Style frames** (stage C), one per beat.
