@@ -80,7 +80,7 @@ TRAVEL = T("04:15")                               # cut to the travelling camera
 SPEED = [(-3, 5.0), (1.5, 5.0), (2.5, 4.5), (10, 4.5), (10.5, 3.5), (14, 3.5), (14.5, 4.0),
          (17, 4.0), (17.4, 3.0), (20, 3.0), (22, 1.8), (26, 1.8), (27, 1.6), (33, 1.6), (36, 1.2)]
 # The travelling camera's distance from the lane, m, at seconds from 04:00.
-CAM_DIST = [(6, 9.5), (9.5, 9.5), (11, 9.0), (13.5, 9.0), (15, 6.5), (16.5, 6.5), (17.5, 8.5), (21.3, 8.5), (22.5, 7.0), (26.5, 7.0), (27.5, 6.0),
+CAM_DIST = [(6, 9.5), (9.5, 9.5), (11, 9.0), (13.5, 9.0), (15, 6.5), (16.5, 6.5), (17.5, 8.5), (22.0, 8.5), (23.2, 7.8), (26.5, 7.8), (27.5, 6.0),
             (30.5, 6.0), (33, 10.0), (36, 10.0)]
 # How far ahead of the band's centre the camera looks, m: it drops back to the rear for the
 # cat (04:10-04:14), then up the line with the newborn (04:22-04:26), lets the line walk through the frame past the grave, then catches up.
@@ -866,7 +866,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, tenth pass"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, eleventh pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)
