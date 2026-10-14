@@ -53,21 +53,25 @@ def lerp(a, b, u):
 LENS = 35.0                    # mm, on a 36 mm sensor: the travelling camera
 LEAF = Vector((2.0, 1.6, 0.0))  # where the leaf lands; the band's lane runs over it
 LANE_X = LEAF.x
-SKULL = Vector((1.6, 0.6, 0.0))                   # where the head lies and the tree grows, at the lane's edge
-BURROW = Vector((1.3, 1.4, 0.0))                  # the hole the small creature ran into (beat 11), beside the head
+SKULL = Vector((LEAF.x + 1.8, LEAF.y, 0.0))       # where the head lies and the tree grows: straight ahead, past the lane
+BURROW = SKULL + Vector((-0.5, -1.0, 0.0))        # the hole the small creature ran into (beat 11), beside the head
 TREE_H = 8.0                   # the tree that grows there, m; we only ever see its stump
 BRANCH = Vector((LEAF.x, LEAF.y, 3.0))            # the tip of its low branch, over the lane, above the frame
 TREE_GROW = (T("03:54"), T("03:56:12"))           # a shoot, a sapling, a tree; then still
 LEAF_LOOSE = (T("03:58"), T("03:59"))             # the leaf trembles on its stem, then lets go
 LEAF_FALL = (T("03:59"), T("04:03"))              # falls 2.9 m, like a feather; still until 04:06 (3 s)
-# The unbroken shot, 03:42-04:07, locked off, low and right up next to the dead animal (your notes,
-# 2026-10-14): its head decomposing on the right of frame, the burrow beside it; then only the
-# stump of the tree that grows there, the forest coming up beyond; the leaf falls into frame from
-# above like a feather and lands near the bottom; then a whip left after the runners.
-CAM_FIXED = Vector((0.4, 2.1, 0.4))                # 1.9 m from the head, 40 cm up, 1.7 m from where the leaf lands
-AIM = CAM_FIXED + Vector((math.cos(math.radians(-33)), math.sin(math.radians(-33)), 0)) * 6.0 + Vector((0, 0, 0.5))
+# The unbroken shot, 03:42-04:07, low and right up next to the dead animal (your notes, 2026-10-14),
+# looking straight across the band's path: the head decomposing in the centre of frame, the burrow
+# beside it; then only the stump of the tree that grows there, centred, the forest beyond; the leaf
+# falls into frame from above like a feather, in front of the stump, and as it comes down the view
+# tips down a little, so the ground fills the frame and only legs will show. Square to the path,
+# the runners can't be seen coming: their feet and legs come in from the right as they reach the
+# leaf. Then a jerk of a whip left after them.
+CAM_FIXED = Vector((LEAF.x - 1.6, LEAF.y, 0.4))    # 40 cm up, 1.6 m from where the leaf lands, 3.4 m from the head
+PITCH = (2.0, -9.0)                                # degrees: level-ish on the face and the tree, then tipped down
+TIP_DOWN = (T("04:01:12"), T("04:03:06"))          # as the leaf comes down
 FIXED_LENS = 24.0
-WHIP = (T("04:06:04"), T("04:06:18"))             # the camera whips left after the runners and runs with them
+WHIP = (T("04:06:03"), T("04:06:11"))             # a jerk left after the runners (8 frames, no ease-in), then runs with them
 ACTION = T("04:07")                               # cut to the fast cuts of the run (SH1310-1316)
 TRAVEL = T("04:12")                               # cut to the travelling camera (SH1320 on)
 
@@ -106,7 +110,7 @@ for f in range(T0 - 1, F0 - 1, -1):
     _s -= curve(SPEED, (f - T0) / O.FPS) * DT
     _dist[f] = _s
 LEAD = 3.0                                  # the lead runner is this far ahead of the centre
-YC = {f: LEAF.y - LEAD + _dist[f] for f in FR}   # the lead runner's foot is on the leaf at 04:00
+YC = {f: LEAF.y - LEAD + _dist[f] for f in FR}   # the band's centre; the lead runner (LEAD ahead) is on the leaf at 04:06
 
 
 # ---------------------------------------------------------------- scene set-up
@@ -195,7 +199,7 @@ def key_grey(ob, pairs):
 def in_view(x, y):
     """In front of the low locked camera, within 6 m: kept clear, so the ferns don't fill the frame."""
     d = Vector((x - CAM_FIXED.x, y - CAM_FIXED.y))
-    a = (AIM - CAM_FIXED).to_2d()
+    a = Vector((1.0, 0.0))                                   # the camera faces east, square to the path
     return d.length < 6.0 and d.length > 0 and d.angle(a) < math.radians(45)
 
 
@@ -264,6 +268,18 @@ for x, y in spaced(32, (5, 60), (47, 86), 6.0):          # open woodland
 for x, y in spaced(4, (25, 60), (86, 100), 12.0):        # lone trees in the grass
     tree_mesh(bm, (x, y, 0), random.uniform(6, 9), .3)
 far_trees = obj_from_bm("Trees beyond the forest", bm, 0.26)
+
+# Forest on the other (west) side too, beyond where the travelling camera runs, so the shots from
+# the far side of the band (SH1314-1316) look into trees; it grows with the rest.
+west_trees = []
+for x, y in spaced(60, (-40, -12), (-28, 47), 3.5):
+    bm = bmesh.new()
+    tree_mesh(bm, (0, 0, 0), random.uniform(11, 22), random.uniform(.2, .45))
+    ob = obj_from_bm("Tree, west", bm, random.uniform(.2, .3))
+    ob.location = (x, y, 0)
+    start = T("03:52") + random.uniform(0, 1.4)
+    key_scale(ob, [(start - 1, 0.0), (start, 0.0), (start + 0.4, 0.25), (start + 1.0, 1.0)])
+    west_trees.append(ob)
 
 # Ferns at the skull, which come first (03:51), before the trees; none in the camera's near view.
 ferns = []
@@ -514,9 +530,11 @@ for i, (name, h, dx, dy, spear) in enumerate(BAND):
         x = LANE_X + lerp(dx, 0.12 * (i % 2) - 0.06, u)
         y = YC[f] + lerp(dy, LINE.get(i, dy), u)
         ph, w = WANDER[i], 1.0 - 0.75 * u
+        if i == 0:                                                    # the lead runner keeps to the leaf
+            w *= smooth(0.5, 3.0, t)
         x += w * (0.3 * math.sin(0.8 * t + ph[0]) + 0.15 * math.sin(2.1 * t + ph[1]))
         y += w * (0.7 * math.sin(0.5 * t + ph[2]) + 0.3 * math.sin(1.4 * t + ph[3]))
-        x = max(x, SKULL.x + 0.75 * (1 - smooth(0.6, 1.5, abs(y - SKULL.y))))           # round the tree,
+        x = min(x, SKULL.x - 0.75 * (1 - smooth(0.6, 1.5, abs(y - SKULL.y))))           # round the tree,
         x = max(x, CAM_FIXED.x + 0.5 * (1 - smooth(0.3, 1.0, abs(y - CAM_FIXED.y))))   # and past the camera
         a, p = 0.0, None
         if i == 0:                                                    # a look back at what's after them
@@ -701,20 +719,21 @@ def key_lens(cam, frames, lenses):
     key(None, "lens", frames, lenses, index=0, target=cam.data)
 
 
-# Camera 1, 03:42-04:07, one unbroken shot, locked off, low, right up next to the dead animal.
-# It doesn't move until the feet come over the leaf; then it whips left, catches up with the
-# runners and runs with them.
+# Camera 1, 03:42-04:07, one unbroken shot, low, right up next to the dead animal, square to the
+# band's path. It doesn't move but to tip down a little with the leaf; then the feet come over it
+# and it jerks left after the runners and runs with them.
 cam1 = camera("CAM unbroken")
 f1 = [f for f in FR if f < fr(ACTION)]
 pos, tgt = [], []
 for f in f1:
     t = (f - T0) / O.FPS
-    g = Vector(AIM)
-    if t > WHIP[0]:                                                              # the whip: turn at an even
-        u = (t - WHIP[0]) / (WHIP[1] - WHIP[0])                                  # rate, eased in and out
-        u = min(1.0, u) ** 3 * (u * (6 * u - 15) + 10) if u < 1 else 1.0
-        runners = Vector((LANE_X, YC[f] + 0.5, 1.0))                             # the backs of the runners
-        d0, d1 = (AIM - CAM_FIXED).normalized(), (runners - CAM_FIXED).normalized()
+    pitch = math.radians(lerp(PITCH[0], PITCH[1], smooth(TIP_DOWN[0], TIP_DOWN[1], t)))
+    g = CAM_FIXED + Vector((math.cos(pitch), 0.0, math.sin(pitch))) * 6.0
+    if t > WHIP[0]:                                                              # the whip: off at once, at
+        u = min(1.0, (t - WHIP[0]) / (WHIP[1] - WHIP[0]))                         # full speed, easing only
+        u = 1 - (1 - u) ** 3                                                      # into the runners
+        ahead = Vector((LANE_X, YC[f] + LEAD + 1.0, 0.9))                        # just ahead of the lead runner,
+        d0, d1 = (g - CAM_FIXED).normalized(), (ahead - CAM_FIXED).normalized()  # always left of the leaf
         g = CAM_FIXED + d0.slerp(d1, u) * 4.0
     pos.append(CAM_FIXED)
     tgt.append(g)
@@ -729,13 +748,14 @@ key_lens(cam1, f1, [FIXED_LENS] * len(f1))
 # at that moment (across, along, up; across is toward the camera's side, west); the height it
 # looks at on them; and the lens. A target of None follows the runner; a fixed point (from the
 # same moment) holds there while they run out of frame.
-CUTS = {"1310": (0, None, (-1.4, 0.6, 0.25), 0.3, None, 24),      # running with the lead runner's feet, low
-        "1311": (0, 0.5, (-2.5, 0.0, 1.6), 1.55, None, 50),       # his face as he passes, looking back
+CUTS = {"1310": (3, None, (-1.3, 0.1, 1.45), 1.42, None, 50),     # a face, close, running with her (the centre woman)
+        "1311": (0, 0.5, (-2.5, 0.0, 1.6), 1.55, None, 35),       # the lead man as he passes, looking back
         "1312": (3, 0.5, (-14.0, 0.0, 4.5), 1.0, None, 35),       # wide and high: the band through the forest
         "1313": (9, 0.2, (-3.5, 1.0, 1.5), 1.0, (5.0, -16.0), 35),  # back past the rear: something in the trees
-        "1314": (5, 0.5, (-3.0, 0.0, 1.1), 0.95, None, 50),       # the girl, running hard
-        "1315": (7, 0.5, (-2.2, 0.0, 0.6), 0.8, None, 28),        # spears and legs, low
-        "1316": (4, 1.0, (-1.2, 1.0, 1.3), 1.2, None, 24)}        # they come at the lens and stream past it
+        # 1314-1316 from the other side of the band (your note, 2026-10-14): they run to the right of frame
+        "1314": (5, 0.5, (3.0, 0.0, 1.1), 0.95, None, 50),        # the girl, running hard
+        "1315": (7, 0.5, (2.2, 0.0, 0.6), 0.8, None, 28),         # spears and legs, low
+        "1316": (4, 1.0, (1.2, 1.0, 1.3), 1.2, None, 24)}         # they come at the lens and stream past it
 cam2 = camera("CAM action")
 f2, pos, tgt, lens = [], [], [], []
 for sh in O.shots():
@@ -745,6 +765,10 @@ for sh in O.shots():
     xs, ys = band_paths[who]
     k = int(round(lerp(sh["start"], sh["end"] - 1, when or 0))) - PF[0]
     stand = Vector((xs[k] + off[0], ys[k] + off[1], off[2]))
+    for tr in forest_trees + west_trees:                       # never inside a trunk: step along the path
+        d = Vector((stand.x - tr.location.x, stand.y - tr.location.y))
+        if d.length < 1.0:
+            stand.y += (1.0 - d.length) * (1 if d.y >= 0 else -1) + 0.2
     for f in range(sh["start"], sh["end"]):
         i = f - PF[0]
         f2.append(f)
@@ -789,7 +813,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, fifth pass"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, sixth pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)

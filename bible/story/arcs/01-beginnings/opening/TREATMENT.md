@@ -146,21 +146,21 @@ Low in the south a glow comes up, where no dawn should be. It climbs, and the cr
 
 ### 12. Dust (3:42–4:06)
 
-We stay on the dead animal's face, close, low, in one locked shot that doesn't cut until the run, with the hole the small creature ran into beside it, and time runs. It's the last time the world moves faster than we can follow. The fire stops falling. The sky goes dark and stays dark: a long winter of soot and dust. Ash settles on the face. The flesh goes. The skull shows, and sinks into the ground. The sky clears. The first green to come back is ferns, everywhere, the same ferns the lizard-shaped creature ran through. Then the land greens differently, with flowering things and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19, "you are dust." P2: the impact winter, and the "fern spike": for thousands of years after the impact, ferns made up nearly all the plant life in western North America. P6: the ferns as a callback.]]
+We stay on the dead animal's face, close, low, in the centre of the frame, in one shot that doesn't cut until the run, with the hole the small creature ran into beside it, and time runs. It's the last time the world moves faster than we can follow. The fire stops falling. The sky goes dark and stays dark: a long winter of soot and dust. Ash settles on the face. The flesh goes. The skull shows, and sinks into the ground. The sky clears. The first green to come back is ferns, everywhere, the same ferns the lizard-shaped creature ran through. Then the land greens differently, with flowering things and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19, "you are dust." P2: the impact winter, and the "fern spike": for thousands of years after the impact, ferns made up nearly all the plant life in western North America. P6: the ferns as a callback.]]
 
 Where the head lay, right beside us, a shoot. It's a sapling, then a tree, in a few seconds; we see only its trunk, with the forest beyond. Then everything is still.
 
-A leaf falls into the frame from above, slowly, swinging like a feather, and settles on the earth near the bottom of the frame. [[Your note (2026-10-13): "the falling leaf should feel like a slow scene that gets whipped into motion and action by the tribe of people running over it."]]
+A leaf falls into the frame from above, in front of the trunk, slowly, swinging like a feather; the view tips down a little with it, and it settles on the earth. [[Your note (2026-10-13): "the falling leaf should feel like a slow scene that gets whipped into motion and action by the tribe of people running over it."]]
 
 Everything is still. Three seconds.
 
 ### 13. Fill the earth (4:06–4:42)
 
-Feet. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up and away, tumbling, and the view whips after them. Then the first cut in the Opening: the people bring it. People, shouting, wild.
+Feet: we never see the people coming, and their legs are the first of them in frame. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up and away, tumbling, and the view jerks after them. Then the first cut in the Opening: the people bring it. People, shouting, wild.
 
 A band of early humans, men and women, with spears and tools, in forest, running from something: five seconds of fast cuts, an action scene, before the view settles in beside them. What's after them is the big cat that catches them in the woodland. [[P1: 1:27, "male and female he created them." P5: running from something, in fast cuts (your notes on the first layout, 2026-10-14). P6: the cat as what they flee.]]
 
-From here the band never stops moving, and neither do we. The view travels beside them, and they cross the frame from right to left the whole way. Whatever happens to them happens on the move. [[P5: yours (2026-10-05): whether they're fighting, burying a loved one or holding a newborn, they're always still walking forward, to the left, to the next scene. P6: north is screen left, so the view faces east the whole way, toward "Eden, in the east" (2:8).]]
+From here the band never stops moving, and neither do we. The view travels beside them, and they cross the frame from right to left the whole way; only three of the fast cuts, from the far side of the band, have them running right (your notes, 2026-10-14). Whatever happens to them happens on the move. [[P5: yours (2026-10-05): whether they're fighting, burying a loved one or holding a newborn, they're always still walking forward, to the left, to the next scene. P6: north is screen left, so the view faces east the whole way, toward "Eden, in the east" (2:8).]]
 
 The world is ordinary now: real light, real color, real sound. Only time still skips. Each time the view passes behind a tree or a rise, it's their children, then theirs. We're always on a face, and through all the generations it's nearly the same face. [[P6, kept: from Gen 5:3, a son "in his own likeness, after his image."]]
 
