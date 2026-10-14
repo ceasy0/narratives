@@ -1,6 +1,6 @@
 # 009 — God in the Garden
 
-**Status:** Decided (2026-10-13): God speaks through Adam's ancestor, a real man never called God, as at Mamre, and through the world in two registers; his clothes decided (an off-white linen robe); round 4 open: whether Christ is in that man, the flip at the fall, their nakedness (README item 13).
+**Status:** Decided (2026-10-13): God speaks through Adam's ancestor, a real man never called God, as at Mamre, and through the world in two registers; his clothes decided (an off-white linen robe) and their nakedness (real, never sexual, covered by the staging; 2026-10-14); round 4 open: whether Christ is in that man, and the flip at the fall (README item 13).
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), the rest of Episode 1
 **Builds on:** [001](./001-how-god-speaks.md) (how God speaks: decided for Genesis) and [007](./007-the-faces-of-god.md) (the faces of God: decided)
 **Positions:** 12 (can God be shown), 21 (how God speaks)
@@ -350,6 +350,16 @@ Three questions: who the ancestor is, the flip, and the clothes (his and theirs)
 
 **It works, and it's better than my plain linen.** Linen whitens in the sun: it was bleached by washing and laying it out in the light, and fine linen at its whitest is near white without dye or chalk. That's the Bible's own phrase for it, "fine linen, bright and pure" (Rev 19:8), and the high priest's holy linen (Lev 16:4). Off-white keeps him a man of his time, and it's the color of the man clothed in linen (Dan 10:5) for anyone who knows. What keeps it from reading as the film-angel robe is everything but the color: a working cut, a plain belt, worn edges, earth on the hem, the cloth creased and handled. It's the only near-white thing in the Garden, where nothing made is colored, so the eye will go to him; that's right for the first face of the series that speaks. At 3:21 the contrast stays: he dresses them in skins, made by a death; his own robe isn't. **Decided.**
 
+### Round 4, your answer on their nakedness — 2026-10-14
+
+> The series will not show over-the-top sexuality, but the natural nakedness of Adam and Eve still needs to be portrayed. We can still make sure to cover them on screen for as most of it, but I imagine there will be moments where nudity is shown simply due to the angle the camera needs to be for the scene or something else. I can't say for certain though.
+
+And: you'll try your best to have no nudity, and if the AI tools can't make it, a placeholder version with none.
+
+**Decided, and it's my pick with one line drawn more clearly.** Their nakedness is real, in body and in mind, and never sexual: the camera never makes their bodies the subject. Light and shade, leaves, water, hair, the angle and the edge of the frame cover them for nearly all of it, which is the "garments of light" reading put to work. The placeholder shows no nudity at all. That's your aim, and it's also all the AI video tools will make: their policies refuse nudity, so the placeholder's staging has to cover them by design. Whether a brief, non-sexual moment of nudity ever belongs in a live-action version is left for then; it'll turn on who the series is for and the rating it needs. (In the US, brief non-sexual nudity seen from behind usually stays within PG-13; frontal nudity pushes toward R. Medium confidence; ratings are decided case by case.)
+
+**The text keeps the problem small.** They're naked only from their making to 3:7. After that they wear the fig leaves they sew (3:7), then the skins (3:21). So it's the first four movements and the start of the fifth; the judgment and everything after are clothed.
+
 ## Decision
 
 **Decided 2026-10-08, after two rounds; revised 2026-10-13 in round 3** (your answer: God speaks through Adam's ancestor, a real man, as at Mamre). The open details of round 3, and round 4, are README item 13.
@@ -364,4 +374,5 @@ Three questions: who the ancestor is, the flip, and the clothes (his and theirs)
 - **The sword (3:24):** the Opening's world at full strength, fire turning over, and the cherubim's faces are the Garden's own animals (round 2).
 - **Eve is of one kind with Adam** from the moment she wakes (round 2). We say "of one kind."
 - **"Before he speaks,"** not "before he sleeps" (round 2).
+- **Their nakedness** (round 4, 2026-10-14): real, in body and in mind, and never sexual. The staging covers them for nearly all of it; the placeholder shows no nudity; any brief non-sexual moment in a live-action version is left for then. Fig leaves from 3:7, skins from 3:21.
 - The wispy voices and the ethereal form are out.
