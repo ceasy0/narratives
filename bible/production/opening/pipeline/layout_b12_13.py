@@ -69,7 +69,8 @@ LEAF_FALL = (T("03:59"), T("04:03"))              # falls 2.9 m, like a feather;
 # leaf. Then a jerk of a whip left after them.
 CAM_FIXED = Vector((LEAF.x - 1.6, LEAF.y, 0.4))    # 40 cm up, 1.6 m from where the leaf lands, 3.4 m from the head
 PITCH = (2.0, -9.0)                                # degrees: level-ish on the face and the tree, then tipped down
-TIP_WAIT = 0.5                                     # s: the tip down starts this long after the leaf comes into frame
+TIP_WAIT = 1.0                                     # s: the tip down starts this long after the leaf comes into frame
+TIP_TIME = 2.6                                     # s: and takes this long, slowly, settling after the leaf lands
 FIXED_LENS = 24.0
 WHIP = (T("04:06:03"), T("04:06:11"))             # a jerk left after the runners (8 frames, no ease-in), then runs with them
 ACTION = T("04:07")                               # cut to the fast cuts of the run (SH1310-1316)
@@ -83,7 +84,7 @@ CAM_DIST = [(6, 9.5), (9.5, 9.5), (11, 9.0), (13.5, 9.0), (15, 6.5), (16.5, 6.5)
             (30.5, 6.0), (33, 10.0), (36, 10.0)]
 # How far ahead of the band's centre the camera looks, m: it drops back to the rear for the
 # cat (04:10-04:14), then up the line with the newborn (04:22-04:26), lets the line walk through the frame past the grave, then catches up.
-CAM_AHEAD = [(3.5, 1.0), (9.5, 1.0), (11, -2.0), (13.5, -2.0), (15, 1.0), (20, 1.0), (22, -3.4), (26, 3.2), (30.5, -1.0), (33, 1.0), (36, 1.0)]
+CAM_AHEAD = [(3.5, 1.0), (9.5, 1.0), (11, -2.0), (12.6, -5.0), (13.6, -5.5), (15.6, 0.0), (16.5, 1.0), (20, 1.0), (22, -3.4), (26, 3.2), (30.5, -1.0), (33, 1.0), (36, 1.0)]
 CAM_HEIGHT = 1.5
 ZONES = {"forest": (-25, 47), "woodland": (47, 86), "grassland": (86, 101), "dry": (101, 135)}
 WIPES = [8.8, 15.5, 21.0]  # seconds at which a trunk crosses the lens (a generation passes)
@@ -417,11 +418,11 @@ key_scale(leaf, [(la - 0.2, 0), (la - 0.15, 1), ((lf[-1] - T0) / O.FPS, 1), ((lf
 leaf_at = {f: Vector((lloc[0][i], lloc[1][i], lloc[2][i])) for i, f in enumerate(lf)}
 
 # When the leaf first comes into the locked frame (below its top edge, at the leaf's depth), and
-# the tip down that follows TIP_WAIT later (your note, 2026-10-14), done by the time it lands.
+# the tip down that follows TIP_WAIT later and takes TIP_TIME (your notes, 2026-10-14).
 _half_v = math.atan(36.0 * 9 / 16 / 2 / FIXED_LENS)
 _in = next((f - T0) / O.FPS for f in lf if leaf_at[f].z <
            CAM_FIXED.z + (leaf_at[f].x - CAM_FIXED.x) * math.tan(_half_v + math.radians(PITCH[0])))
-TIP_DOWN = (_in + TIP_WAIT, max(_in + TIP_WAIT + 1.3, LEAF_FALL[1] + 0.25))
+TIP_DOWN = (_in + TIP_WAIT, _in + TIP_WAIT + TIP_TIME)
 print("leaf in frame at", O.timecode(int(fr(_in))), "| tip down", O.timecode(int(fr(TIP_DOWN[0]))), "to", O.timecode(int(fr(TIP_DOWN[1]))))
 
 for i in range(7):                         # the kick of dust
@@ -516,6 +517,13 @@ BAND = [("Lead man", 1.72, 0.0, 3.0, True), ("Woman A", 1.60, 0.7, 2.2, False),
         ("Man G (rear)", 1.73, 0.4, -3.0, True), ("Man H (rear)", 1.70, -0.4, -3.6, True)]
 LINE = {0: 2.7, 1: 3.6, 2: 1.8, 3: 0.9, 4: 0.0, 5: -0.9, 6: -1.8, 7: -2.7, 8: -3.6}   # index 9 falls at the clash
 CAT_T = (T("04:16"), T("04:20"))
+# The cat (your note, 2026-10-14: a fight would look awkward): it runs down the last but one,
+# Man G, leaps and drags him down from behind; the last, Man H, turns back, kills it with one
+# thrust of his spear, hauls Man G up, and the two run on and catch the band up. Nobody stops.
+SEIZED, RESCUER = 8, 9
+GRAB = CAT_T[0] + 1.6                      # the leap lands
+KILL = GRAB + 0.7                          # the spear
+UP = KILL + 0.3                            # the hand up
 CLASH_T = (T("04:23"), T("04:26"))
 BABY_T = (T("04:28"), T("04:32"))
 GRAVE_T = (T("04:33"), T("04:36:12"))
@@ -532,7 +540,7 @@ WANDER = [[random.uniform(0, 2 * math.pi) for _ in range(4)] for _ in BAND]
 for i, (name, h, dx, dy, spear) in enumerate(BAND):
     fig = figure(name, h, 0.72 if "Woman" in name or name == "Girl" else 0.6, spear)
     xs, ys, face, pose = [], [], [], []
-    stopped = None
+    stopped = held = halt = None
     for f, t in zip(PF, PT):
         u = smooth(20, 22, t)
         x = LANE_X + lerp(dx, 0.12 * (i % 2) - 0.06, u)
@@ -551,9 +559,28 @@ for i, (name, h, dx, dy, spear) in enumerate(BAND):
             k = smooth(GRAVE_UP - 0.4, GRAVE_UP, t) * (1 - smooth(GRAVE_UP + 0.5, GRAVE_UP + 0.9, t))
             x -= 0.35 * k
             p = {"arm_l": -1.1 * k, "lean": 0.25 * k}
-        if i in (8, 9) and CAT_T[0] + 1.0 < t < CAT_T[1] - 0.5:      # the rear guard turns on the cat
-            a = math.pi * smooth(CAT_T[0] + 1.0, CAT_T[0] + 1.3, t) * (1 - smooth(CAT_T[1] - 0.9, CAT_T[1] - 0.5, t))
-            p = {"arms": -1.9, "lean": 0.0}
+        catch = smooth(UP + 0.5, UP + 3.0, t)                         # after the rescue: run to catch them up
+        if i == SEIZED and t > GRAB:                                  # dragged down from behind, then hauled up
+            if held is None:
+                held = (x, y)
+            down = smooth(GRAB, GRAB + 0.25, t) * (1 - smooth(UP, UP + 0.5, t))
+            back = held[1] - 0.6 * smooth(GRAB, KILL, t)
+            x, y = lerp(held[0], x, catch), lerp(back, y, catch)
+            if down > 0.01:
+                p = {"lean": -1.3 * down, "z": 0.1 * down, "legs": 0.3 * down, "arms": 0.9 * down}
+        if i == RESCUER and GRAB - 0.2 < t:                           # turns back, kills it, hauls him up
+            k_ = f - PF[0]
+            sx, sy = band_paths[SEIZED][0][k_], band_paths[SEIZED][1][k_]
+            if halt is None:
+                halt = (x, y)
+            side = (sx + 0.55, sy + 0.9)                              # beside him, between him and the band
+            reach = smooth(GRAB - 0.2, GRAB + 0.3, t) * (1 - catch)
+            x, y = lerp(x, side[0], reach), lerp(y, side[1], reach)
+            a = math.pi * smooth(GRAB - 0.2, GRAB + 0.1, t) * (1 - smooth(UP + 0.2, UP + 0.6, t))
+            if KILL - 0.35 < t < KILL + 0.2:                          # the thrust
+                p = {"arms": -1.9, "lean": 0.45}
+            elif UP - 0.05 < t < UP + 0.6:                            # the hand up
+                p = {"arm_l": -1.1, "lean": 0.3}
         if i == 9 and t > 18.5:                                       # one of ours goes down at the clash
             if stopped is None:
                 stopped = (x, y)
@@ -596,25 +623,30 @@ for sx in (-0.2, 0.2):
 cat = obj_from_bm("Big cat", bm, 0.16)
 cl, cr = [[], [], []], [[], [], []]
 down_at = None
+xs8, ys8 = band_paths[SEIZED]
 for f, t in zip(PF, PT):
+    idx = f - PF[0]
     rear = YC[f] - 3.6
     gap = curve([(-1.0, 40.0), (3.6, 26.0), (5.2, 15.0), (CAT_T[0] - 0.5, 10.0)], t)   # the charge, then on their heels
-    gap = lerp(gap, 2.2, smooth(CAT_T[0] - 0.5, CAT_T[0] + 1.3, t))   # closing from behind
-    gap = lerp(gap, 0.9, smooth(CAT_T[0] + 2.4, CAT_T[0] + 3.0, t))   # the spring
-    y = rear - gap
-    z = 0.9 * math.sin(math.pi * smooth(CAT_T[0] + 2.4, CAT_T[0] + 3.1, t))
-    run = 1 - smooth(CAT_T[0] + 2.2, CAT_T[0] + 2.4, t)
-    z += run * 0.18 * abs(math.sin(math.pi * 2.6 * t))               # the gallop
+    x, y = LANE_X + 0.1, rear - gap
+    k = smooth(CAT_T[0] - 0.5, GRAB, t)                               # runs him down
+    x, y = lerp(x, xs8[idx], k), lerp(y, ys8[idx] - 0.7, k)
+    run = 1 - smooth(GRAB - 0.1, GRAB, t)
+    z = run * 0.18 * abs(math.sin(math.pi * 2.6 * t))                 # the gallop
+    z += 0.6 * math.sin(math.pi * smooth(GRAB - 0.45, GRAB, t)) * run  # the leap
     nose = run * 0.12 * math.sin(2 * math.pi * 2.6 * t)
     roll = 0.0
-    if t > CAT_T[0] + 3.1:                                            # speared: down, and still
+    if t >= GRAB:                                                     # on him, from behind
+        x, y, z = xs8[idx], ys8[idx] - 0.5, 0.3
+        nose = 0.35 + 0.1 * math.sin(2 * math.pi * 4 * t)
+    if t >= KILL:                                                     # speared: rolls off, and lies still
         if down_at is None:
-            down_at = y
-        k = smooth(CAT_T[0] + 3.1, CAT_T[0] + 3.4, t)
-        y, z, roll = down_at + 0.8 * k, 0.0, 1.5 * k
-    for i, v in enumerate((LANE_X + 0.1, y, z)):
+            down_at = (x, y)
+        kk = smooth(KILL, KILL + 0.3, t)
+        x, y, z, roll, nose = down_at[0] + 0.4 * kk, down_at[1] - 0.4 * kk, 0.0, 1.5 * kk, 0.0
+    for i, v in enumerate((x, y, z)):
         cl[i].append(v)
-    for i, v in enumerate((nose if t <= CAT_T[0] + 3.1 else 0.0, roll, 0.0)):
+    for i, v in enumerate((nose, roll, 0.0)):
         cr[i].append(v)
 key(cat, "location", PF, cl)
 key(cat, "rotation_euler", PF, cr)
@@ -825,7 +857,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, seventh pass"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, eighth pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)
@@ -851,6 +883,27 @@ if still:                                   # still=03:55:00,04:00:06  -> PNGs b
         scene.frame_set(O.frame(tc))
         r.filepath = str(O.PLAYBLAST / "stills" / ("b12-13-" + tc.replace(":", "") + ".png"))
         bpy.ops.render.render(write_still=True)
+elif [a for a in sys.argv if a.startswith("clean=")]:
+    # clean=04:14:00-04:17:12 -> work/aitest/clean-<range>.mp4 and its first and last frames,
+    # with no burn-in, as input for the AI video tests (ai_video_test.py)
+    rng = [a for a in sys.argv if a.startswith("clean=")][0][6:]
+    a_, b_ = (O.frame(x) for x in rng.split("-"))
+    r.use_stamp = False
+    d = O.WORK / "aitest"
+    d.mkdir(parents=True, exist_ok=True)
+    tag = rng.replace(":", "")
+    r.image_settings.media_type = 'IMAGE'
+    r.image_settings.file_format = 'PNG'
+    for f_, name in ((a_, "first"), (b_ - 1, "last")):
+        scene.frame_set(f_)
+        r.filepath = str(d / ("clean-%s-%s.png" % (tag, name)))
+        bpy.ops.render.render(write_still=True)
+    r.image_settings.media_type = 'VIDEO'
+    r.image_settings.file_format = 'FFMPEG'
+    scene.frame_start, scene.frame_end = a_, b_ - 1
+    r.filepath = str(d / ("clean-%s.mp4" % tag))
+    bpy.ops.render.render(animation=True)
+    print("clean", r.filepath)
 elif RENDER:
     bpy.ops.render.render(animation=True)
     print("playblast", out)
