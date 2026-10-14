@@ -70,4 +70,4 @@ To look yourself: open `work/layout/b12-13-layout.blend`, press Numpad 0 for the
 
 ## 6. Next
 
-The order, and why, is in [PLAN §10](./PLAN.md#10-order-of-work). In short: your notes on the eleventh pass of the first layout, beats 12 into 13 ([PLAN §9](./PLAN.md#9-what-i-need-from-you)), then the face test once the story reel is right; then the layout of all fourteen beats, cut together and judged as a whole before anything is rendered at quality.
+The order, and why, is in [PLAN §10](./PLAN.md#10-order-of-work). In short: your notes on the twelfth pass of the first layout, beats 12 into 13 ([PLAN §9](./PLAN.md#9-what-i-need-from-you)), then the face test once the story reel is right; then the layout of all fourteen beats, cut together and judged as a whole before anything is rendered at quality.

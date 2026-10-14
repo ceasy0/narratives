@@ -79,9 +79,16 @@ TRAVEL = T("04:15")                               # cut to the travelling camera
 # The band's speed, m/s, at seconds from 04:00 (linear between the points).
 SPEED = [(-3, 5.0), (1.5, 5.0), (2.5, 4.5), (10, 4.5), (10.5, 3.5), (14, 3.5), (14.5, 4.0),
          (17, 4.0), (17.4, 3.0), (20, 3.0), (22, 1.8), (26, 1.8), (27, 1.6), (33, 1.6), (36, 1.2)]
-# The travelling camera's distance from the lane, m, at seconds from 04:00.
-CAM_DIST = [(6, 9.5), (9.5, 9.5), (11, 9.0), (13.5, 9.0), (15, 6.5), (16.5, 6.5), (17.5, 8.5), (22.0, 8.5), (23.2, 7.8), (26.5, 7.8), (27.5, 6.0),
-            (30.5, 6.0), (33, 10.0), (36, 10.0)]
+# The travelling camera stays this far from the band's path. In these shots it only ever moves
+# forward with them, slowly or fast, never in or out (your note, 2026-10-14): getting closer or
+# wider is the lens.
+CAM_DIST = 9.5
+# Its lens, mm, at seconds from 04:07: the framings the earlier passes got by moving in and out
+# (9 m for the cat, 6.5 m after it, 8.5 m for the clash, 10 m at the river), the small zoom in
+# SH1360 once the trunk has passed, and a little more at the grave.
+CAM_LENS = [(6, 35), (9.5, 35), (11, 37), (13.5, 37), (15, 51), (16.5, 51), (17.5, 39), (20.4, 39), (21.6, 43),
+            (26.5, 43), (27.5, 48), (30.5, 48), (33, 33), (36, 33)]
+CAM_MIN_SPEED = 0.5            # m/s: it never stops or goes back, however slowly it goes
 # How far ahead of the band's centre the camera looks, m: it drops back to the rear for the
 # cat (04:10-04:14), then up the line with the newborn (04:22-04:26), lets the line walk through the frame past the grave, then catches up.
 CAM_AHEAD = [(3.5, 1.0), (9.5, 1.0), (11, -2.0), (12.6, -5.0), (13.6, -5.5), (15.6, 0.0), (16.5, 1.0), (20, 1.0), (22, -3.4), (26, 3.2), (30.5, -1.0), (33, 1.0), (36, 1.0)]
@@ -90,9 +97,12 @@ ZONES = {"forest": (-25, 47), "woodland": (47, 86), "grassland": (86, 101), "dry
 # Seconds at which a trunk crosses the lens (a generation passes), and where it stands along the
 # path from the band's centre; None centres it on the camera's own position at that moment, which
 # the lone tree in the grass after the newborn needs (SH1370-1380, your note, 2026-10-14).
-# (t, along, the camera distance it was placed for, and when it's taken away once out of frame:
-# the 04:27 trunk, since the camera now stays further back there and would pass it again)
-WIPES = [(8.8, 0.5, 9.5, None), (15.5, 0.5, 6.5, None), (21.0, 0.5, 6.75, 21.6), (26.0, None, None, None)]
+# The trunks that cross the lens, each a generation passing: (seconds from 04:07, where it stands
+# along the path from the camera's own place then). Each stands in front of the camera at a depth
+# that grows with the lens, so it fills the frame the same way whatever the zoom. The third is at
+# the end of the clash, while the camera still moves briskly, so it's a quick wipe (it used to be
+# in SH1360, where the camera now crawls); the fourth is the lone tree in the grass.
+WIPES = [(8.8, -0.5), (15.5, 0.54), (19.4, -0.3), (26.0, -0.3)]
 
 
 def curve(points, t, ease=False):
@@ -116,7 +126,14 @@ for f in range(T0 - 1, F0 - 1, -1):
     _s -= curve(SPEED, (f - T0) / O.FPS) * DT
     _dist[f] = _s
 LEAD = 3.0                                  # the lead runner is this far ahead of the centre
-YC = {f: LEAF.y - LEAD + _dist[f] for f in FR}   # the band's centre; the lead runner (LEAD ahead) is on the leaf at 04:06
+YC = {f: LEAF.y - LEAD + _dist[f] for f in FR}   # the band's centre; the lead runner (LEAD ahead) is on the leaf at 04:07
+
+# Where the travelling camera is along the path: CAM_AHEAD of the band's centre, but never going
+# back and never slower than CAM_MIN_SPEED; where the band outruns it, it falls behind them.
+CAM_Y = {}
+for _f in range(int(fr(TRAVEL)) - 1, F1 + 1):
+    _want = YC[_f] + curve(CAM_AHEAD, (_f - T0) / O.FPS, ease=True)
+    CAM_Y[_f] = _want if _f - 1 not in CAM_Y else max(_want, CAM_Y[_f - 1] + CAM_MIN_SPEED * DT)
 
 
 # ---------------------------------------------------------------- scene set-up
@@ -733,15 +750,12 @@ for x, y in ((14.5, 108), (16, 111), (15, 118), (18, 124)):
 hippos = obj_from_bm("Hippos", bm, 0.2)
 
 # ---------------------------------------------------------------- the trunks that wipe the frame
-for t, along, dist, gone in WIPES:
+for t, rel in WIPES:
     f = int(fr(t))
-    y = YC[f] + (along if along is not None else curve(CAM_AHEAD, t, ease=True) - 0.3)
     bm = bmesh.new()
     cone(bm, (0, 0, 0), 0.5, 0.42, 22, 10)
     trunk = obj_from_bm("Trunk that crosses the lens", bm, 0.12)
-    trunk.location = (LANE_X - (dist or curve(CAM_DIST, t, ease=True)) + 1.2, y, 0)
-    if gone:
-        key_scale(trunk, [(gone - DT, 1.0), (gone, 0.0)])
+    trunk.location = (LANE_X - CAM_DIST + 1.2 * curve(CAM_LENS, t, ease=True) / 35.0, CAM_Y[f] + rel, 0)
 
 
 # ---------------------------------------------------------------- cameras
@@ -838,11 +852,11 @@ f3 = [f for f in FR if f >= fr(TRAVEL)]
 pos, tgt = [], []
 for f in f3:
     t = (f - T0) / O.FPS
-    d = curve(CAM_DIST, t, ease=True)
-    y = YC[f] + curve(CAM_AHEAD, t, ease=True)
-    pos.append(Vector((LANE_X - d, y, CAM_HEIGHT)))
+    y = CAM_Y[f]
+    pos.append(Vector((LANE_X - CAM_DIST, y, CAM_HEIGHT)))
     tgt.append(Vector((LANE_X, y, 1.3)))
 key_camera(cam3, f3, pos, tgt)
+key_lens(cam3, f3, [curve(CAM_LENS, (f - T0) / O.FPS, ease=True) for f in f3])
 
 # One marker per shot, each bound to its camera: the burn-in reads its name.
 for sh in O.shots():
@@ -866,7 +880,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, eleventh pass"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, twelfth pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)
