@@ -63,6 +63,7 @@ The scripts in [`pipeline/`](./pipeline/) build the master edit and the layouts 
 | `pipeline/opening.py` | Shared paths, timecodes and the shot list. Frames are film frames: 03:42:00 is frame 5328 everywhere. |
 | `pipeline/master_edit.py` | Builds `work/edit/opening-master.blend`: one strip per shot cut from the v3.1 animatic (channel 1), every layout playblast in `work/playblast/` at its timecode (channel 2), the guide sound (channel 5), a marker at each beat. Run it again after any new playblast. |
 | `pipeline/layout_b12_13.py` | Builds the grey layout of beats 12–13 (`work/layout/b12-13-layout.blend`) and, with `-- render`, its playblast (`work/playblast/1200-1395-layout.mp4`, six minutes to render). Every placement, lens and speed is a number at the top. `-- still=03:59:00,04:00:04` renders single frames instead. |
+| `pipeline/lookdev_leaf.py` | The first look test: opens the layout of beats 12–13 and takes the leaf shot (SH1250) from grey to a lit picture: procedural materials, sun and haze, ferns, leaf litter, a cloth leaf. Writes three 1080p stills to `work/lookdev/`, and with `-- clip` a four-second clip ([PLAN §9](./PLAN.md#9-what-i-need-from-you), item 3). |
 
 To look yourself: open `work/layout/b12-13-layout.blend`, press Numpad 0 for the camera, and scrub; the markers switch the camera at each shot. Open `work/edit/opening-master.blend` in the Video Editing workspace to see it in the cut.
 
