@@ -213,6 +213,28 @@
 - **Earliest known human burial in Africa (Panga ya Saidi, "Mtoto")**, Martinón-Torres et al., *Nature* 593, 2021. <https://www.nature.com/articles/s41586-021-03457-8>; CNRS release <https://www.cnrs.fr/en/africas-oldest-human-burial-site-uncovered>
   *Take:* a three-year-old, about 78,000 years ago, wrapped in a shroud with the head on a perishable support. It's the tenderness of the act: wrapping, laying down, a hand on the earth. **Copyrighted (not open access; the figures are © the authors under exclusive licence to Springer Nature); link only.**
 
+### For the run's fast cuts (SH1300–1316)
+
+You asked for scenes of people running through dense growth in an action scene (2026-10-14). These are from my memory of the films, so check each scene before leaning on a detail. What to look at is the camera, not the look.
+
+- **Apocalypto**, the chase (its second half). <https://en.wikipedia.org/wiki/Apocalypto>
+  *Take:* the camera low, at shin height, tracking through undergrowth with leaves whipping across the lens; the man running and the men after him cut together, so you always know how close they are. A black jaguar chases him too. It's the nearest thing to beat 13 on film. **Link only.**
+- **Prey**, Dan Trachtenberg (DP Jeff Cutter), 2022. <https://en.wikipedia.org/wiki/Prey_(2022_film)>
+  *Take:* a young hunter on foot in forest and long grass, pursued by animals and worse; a mountain lion hunted in the trees. The camera stays at her level and shows the pursuer gaining in wide shots. Pre-modern people, a predator, woods: close to our run. **Link only.**
+- **The Lost World: Jurassic Park**, Steven Spielberg (DP Janusz Kamiński), 1997: the long grass. <https://en.wikipedia.org/wiki/The_Lost_World:_Jurassic_Park>
+  *Take:* the high overhead shot of men running through tall grass while lines in the grass close in on them from behind. It shows how fast the pursuer is without showing it, which is SH1312 and SH1313's job. **Link only.**
+- **The Last of the Mohicans**, Michael Mann (DP Dante Spinotti), 1992: the runs through the forest. <https://en.wikipedia.org/wiki/The_Last_of_the_Mohicans_(1992_film)>
+  *Take:* long lenses from a fixed place, panning with runners as they flick between trunks: exactly the planted camera that turns and whips as they pass. **Link only.**
+- **Predator**, John McTiernan (DP Donald McAlpine), 1987: the runs through the jungle. <https://en.wikipedia.org/wiki/Predator_(film)>
+  *Take:* foliage in the foreground, the runner glimpsed through it, the long lens squeezing the jungle flat. **Link only.**
+- **Raiders of the Lost Ark**, Steven Spielberg (DP Douglas Slocombe), 1981: the opening run from the Hovitos. <https://en.wikipedia.org/wiki/Raiders_of_the_Lost_Ark>
+  *Take:* the runner coming at a wide lens with the pursuers spilling out of the trees behind: SH1316, they come at the lens and stream past it. **Link only.**
+- **Planet of the Apes**, Franklin J. Schaffner (DP Leon Shamroy), 1968: the hunt in the cornfield. <https://en.wikipedia.org/wiki/Planet_of_the_Apes_(1968_film)>
+  *Take:* a whole group fleeing through tall growth, scattering, nobody in formation: the crowd your note asked for. **Link only.**
+- **The Revenant** (above), its opening attack in the forest.
+  *Take:* a wide lens that roves among people under attack, close enough to touch them. **Link only.**
+
+
 ## 14. Rest (4:42–5:06)
 
 *A cliff edge at dawn; wind and breathing; the river opening like a hand into braided green channels to the horizon; mist; a flock lifts off in its thousands, turns and settles; the slow move in to the face; the eye with the river in it.*

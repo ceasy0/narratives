@@ -158,7 +158,7 @@ Everything is still. Three seconds.
 
 Feet: we never see the people coming, and their legs are the first of them in frame. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up and away, tumbling, and the view jerks after them. Then the first cut in the Opening: the people bring it. People, shouting, wild.
 
-A band of early humans, men and women, with spears and tools, in forest, running from something: five seconds of fast cuts, an action scene, before the view settles in beside them. What's after them is the big cat that catches them in the woodland. [[P1: 1:27, "male and female he created them." P5: running from something, in fast cuts (your notes on the first layout, 2026-10-14). P6: the cat as what they flee.]]
+A band of early humans, men and women, with spears and tools, in forest, running from something: seven seconds of fast cuts, an action scene, before the view settles in beside them. What's after them is the big cat that catches them in the woodland. [[P1: 1:27, "male and female he created them." P5: running from something, in fast cuts (your notes on the first layout, 2026-10-14). P6: the cat as what they flee.]]
 
 From here the band never stops moving, and neither do we. The view travels beside them, and they cross the frame from right to left the whole way; only three of the fast cuts, from the far side of the band, have them running right (your notes, 2026-10-14). Whatever happens to them happens on the move. [[P5: yours (2026-10-05): whether they're fighting, burying a loved one or holding a newborn, they're always still walking forward, to the left, to the next scene. P6: north is screen left, so the view faces east the whole way, toward "Eden, in the east" (2:8).]]
 

@@ -69,11 +69,11 @@ LEAF_FALL = (T("03:59"), T("04:03"))              # falls 2.9 m, like a feather;
 # leaf. Then a jerk of a whip left after them.
 CAM_FIXED = Vector((LEAF.x - 1.6, LEAF.y, 0.4))    # 40 cm up, 1.6 m from where the leaf lands, 3.4 m from the head
 PITCH = (2.0, -9.0)                                # degrees: level-ish on the face and the tree, then tipped down
-TIP_DOWN = (T("04:01:12"), T("04:03:06"))          # as the leaf comes down
+TIP_WAIT = 0.5                                     # s: the tip down starts this long after the leaf comes into frame
 FIXED_LENS = 24.0
 WHIP = (T("04:06:03"), T("04:06:11"))             # a jerk left after the runners (8 frames, no ease-in), then runs with them
 ACTION = T("04:07")                               # cut to the fast cuts of the run (SH1310-1316)
-TRAVEL = T("04:12")                               # cut to the travelling camera (SH1320 on)
+TRAVEL = T("04:14")                               # cut to the travelling camera (SH1320 on)
 
 # The band's speed, m/s, at seconds from 04:00 (linear between the points).
 SPEED = [(-3, 5.0), (1.5, 5.0), (2.5, 4.5), (10, 4.5), (10.5, 3.5), (14, 3.5), (14.5, 4.0),
@@ -86,7 +86,7 @@ CAM_DIST = [(6, 9.5), (9.5, 9.5), (11, 9.0), (13.5, 9.0), (15, 6.5), (16.5, 6.5)
 CAM_AHEAD = [(3.5, 1.0), (9.5, 1.0), (11, -2.0), (13.5, -2.0), (15, 1.0), (20, 1.0), (22, -3.4), (26, 3.2), (30.5, -1.0), (33, 1.0), (36, 1.0)]
 CAM_HEIGHT = 1.5
 ZONES = {"forest": (-25, 47), "woodland": (47, 86), "grassland": (86, 101), "dry": (101, 135)}
-WIPES = [6.8, 9.0, 15.5, 21.0]  # seconds at which a trunk crosses the lens (a generation passes)
+WIPES = [8.8, 15.5, 21.0]  # seconds at which a trunk crosses the lens (a generation passes)
 
 
 def curve(points, t, ease=False):
@@ -416,6 +416,14 @@ key(leaf, "rotation_euler", lf, lrot)
 key_scale(leaf, [(la - 0.2, 0), (la - 0.15, 1), ((lf[-1] - T0) / O.FPS, 1), ((lf[-1] - T0) / O.FPS + DT, 0)])
 leaf_at = {f: Vector((lloc[0][i], lloc[1][i], lloc[2][i])) for i, f in enumerate(lf)}
 
+# When the leaf first comes into the locked frame (below its top edge, at the leaf's depth), and
+# the tip down that follows TIP_WAIT later (your note, 2026-10-14), done by the time it lands.
+_half_v = math.atan(36.0 * 9 / 16 / 2 / FIXED_LENS)
+_in = next((f - T0) / O.FPS for f in lf if leaf_at[f].z <
+           CAM_FIXED.z + (leaf_at[f].x - CAM_FIXED.x) * math.tan(_half_v + math.radians(PITCH[0])))
+TIP_DOWN = (_in + TIP_WAIT, max(_in + TIP_WAIT + 1.3, LEAF_FALL[1] + 0.25))
+print("leaf in frame at", O.timecode(int(fr(_in))), "| tip down", O.timecode(int(fr(TIP_DOWN[0]))), "to", O.timecode(int(fr(TIP_DOWN[1]))))
+
 for i in range(7):                         # the kick of dust
     bm = bmesh.new()
     ball(bm, (0, 0, 0), (1, 1, 0.8), 6)
@@ -575,9 +583,10 @@ for i, (name, h, dx, dy, spear) in enumerate(BAND):
     people.append(fig)
     band_paths[i] = (xs, ys)
 
-# The cat: lion-sized, what the band is running from. It is after them from before the leaf,
-# far back (glimpsed in SH1313), closes from behind (the right) at 04:10, springs, goes down
-# and is left behind.
+# The cat: lion-sized, what the band is running from. It is after them from before the leaf, far
+# back; in SH1313 it's charging, closing about 7 m a second (your note, 2026-10-14: faster); it
+# trails them, catches them from behind (the right) at 04:16, springs, goes down and is left
+# behind. It bounds as it runs: up and down, nose rocking, at a gallop's rate.
 bm = bmesh.new()
 ball(bm, (0, 0, 0.78), (0.3, 0.95, 0.36), 10)
 ball(bm, (0, 1.0, 0.95), (0.2, 0.24, 0.2), 8)
@@ -589,11 +598,14 @@ cl, cr = [[], [], []], [[], [], []]
 down_at = None
 for f, t in zip(PF, PT):
     rear = YC[f] - 3.6
-    gap = curve([(-1.0, 34.0), (CAT_T[0] - 0.5, 16.0)], t)            # gaining on them
+    gap = curve([(-1.0, 40.0), (3.6, 26.0), (5.2, 15.0), (CAT_T[0] - 0.5, 10.0)], t)   # the charge, then on their heels
     gap = lerp(gap, 2.2, smooth(CAT_T[0] - 0.5, CAT_T[0] + 1.3, t))   # closing from behind
     gap = lerp(gap, 0.9, smooth(CAT_T[0] + 2.4, CAT_T[0] + 3.0, t))   # the spring
     y = rear - gap
     z = 0.9 * math.sin(math.pi * smooth(CAT_T[0] + 2.4, CAT_T[0] + 3.1, t))
+    run = 1 - smooth(CAT_T[0] + 2.2, CAT_T[0] + 2.4, t)
+    z += run * 0.18 * abs(math.sin(math.pi * 2.6 * t))               # the gallop
+    nose = run * 0.12 * math.sin(2 * math.pi * 2.6 * t)
     roll = 0.0
     if t > CAT_T[0] + 3.1:                                            # speared: down, and still
         if down_at is None:
@@ -602,7 +614,7 @@ for f, t in zip(PF, PT):
         y, z, roll = down_at + 0.8 * k, 0.0, 1.5 * k
     for i, v in enumerate((LANE_X + 0.1, y, z)):
         cl[i].append(v)
-    for i, v in enumerate((0.0, roll, 0.0)):
+    for i, v in enumerate((nose if t <= CAT_T[0] + 3.1 else 0.0, roll, 0.0)):
         cr[i].append(v)
 key(cat, "location", PF, cl)
 key(cat, "rotation_euler", PF, cr)
@@ -753,7 +765,7 @@ CUTS = {"1310": (3, None, (-1.3, 0.1, 1.45), 1.42, None, 50),     # a face, clos
         "1312": (3, 0.5, (-14.0, 0.0, 4.5), 1.0, None, 35),       # wide and high: the band through the forest
         "1313": (9, 0.2, (-3.5, 1.0, 1.5), 1.0, (5.0, -16.0), 35),  # back past the rear: something in the trees
         # 1314-1316 from the other side of the band (your note, 2026-10-14): they run to the right of frame
-        "1314": (5, 0.5, (3.0, 0.0, 1.1), 0.95, None, 50),        # the girl, running hard
+        "1314": (5, 0.5, (4.0, 2.0, 1.2), 1.0, None, 28),         # the girl, running hard, wider, from ahead of her
         "1315": (7, 0.5, (2.2, 0.0, 0.6), 0.8, None, 28),         # spears and legs, low
         "1316": (4, 1.0, (1.2, 1.0, 1.3), 1.2, None, 24)}         # they come at the lens and stream past it
 cam2 = camera("CAM action")
@@ -813,7 +825,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, sixth pass"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, seventh pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)
