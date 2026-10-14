@@ -1,12 +1,12 @@
 """The AI video tests on one run shot (PLAN §9, item 3): Google's Veo and Runway's Aleph.
 
-The shot is the layout's travelling camera from 04:14:00 to 04:17:12 (SH1320 and the start of
+The shot is the layout's travelling camera from 04:15:00 to 04:18:12 (SH1320 and the start of
 SH1330): the band running left through the forest, the big cat coming up behind them. It's
 rendered clean, without the burn-in, by the layout script:
 
-    blender -b --factory-startup -P layout_b12_13.py -- clean=04:14:00-04:17:12
+    blender -b --factory-startup -P layout_b12_13.py -- clean=04:15:00-04:18:12
 
-which writes work/aitest/clean-041400-041712.mp4 and its first and last frames. Then, with the
+which writes work/aitest/clean-041500-041812.mp4 and its first and last frames. Then, with the
 project's Python environment (C:\\Users\\corbi\\AdonaiOpening\\venv\\Scripts\\python.exe):
 
     python ai_video_test.py check           are the keys set, and what can they reach? (free)
@@ -31,7 +31,7 @@ import urllib.request
 
 HERE = pathlib.Path(__file__).resolve().parent
 AITEST = HERE.parent / "work" / "aitest"
-TAG = "041400-041712"
+TAG = "041500-041812"
 CLIP = AITEST / ("clean-%s.mp4" % TAG)
 FIRST, LAST = AITEST / ("clean-%s-first.png" % TAG), AITEST / ("clean-%s-last.png" % TAG)
 LIVE_FIRST, LIVE_LAST = AITEST / "live-first.png", AITEST / "live-last.png"

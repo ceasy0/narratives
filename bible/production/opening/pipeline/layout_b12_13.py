@@ -26,8 +26,8 @@ import opening as O  # noqa: E402
 RENDER = "render" in sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else False
 random.seed(12)
 
-F0, F1 = O.frame("03:42"), O.frame("04:42")       # 5328 .. 6768 (end exclusive)
-T0 = O.frame("04:06")                             # the first footfall: t = 0
+F0, F1 = O.frame("03:42"), O.frame("04:43")       # 5328 .. 6792 (end exclusive)
+T0 = O.frame("04:07")                             # the first footfall: t = 0
 FR = list(range(F0, F1 + 1))
 
 
@@ -59,7 +59,7 @@ TREE_H = 8.0                   # the tree that grows there, m; we only ever see 
 BRANCH = Vector((LEAF.x, LEAF.y, 3.0))            # the tip of its low branch, over the lane, above the frame
 TREE_GROW = (T("03:54"), T("03:56:12"))           # a shoot, a sapling, a tree; then still
 LEAF_LOOSE = (T("03:58"), T("03:59"))             # the leaf trembles on its stem, then lets go
-LEAF_FALL = (T("03:59"), T("04:03"))              # falls 2.9 m, like a feather; still until 04:06 (3 s)
+LEAF_FALL = (T("03:59"), T("04:03"))              # falls 2.9 m, like a feather; still until 04:07 (4 s)
 # The unbroken shot, 03:42-04:07, low and right up next to the dead animal (your notes, 2026-10-14),
 # looking straight across the band's path: the head decomposing in the centre of frame, the burrow
 # beside it; then only the stump of the tree that grows there, centred, the forest beyond; the leaf
@@ -72,15 +72,15 @@ PITCH = (2.0, -9.0)                                # degrees: level-ish on the f
 TIP_WAIT = 1.0                                     # s: the tip down starts this long after the leaf comes into frame
 TIP_TIME = 2.6                                     # s: and takes this long, slowly, settling after the leaf lands
 FIXED_LENS = 24.0
-WHIP = (T("04:06:03"), T("04:06:11"))             # a jerk left after the runners (8 frames, no ease-in), then runs with them
-ACTION = T("04:07")                               # cut to the fast cuts of the run (SH1310-1316)
-TRAVEL = T("04:14")                               # cut to the travelling camera (SH1320 on)
+WHIP = (T("04:07:03"), T("04:07:11"))             # a jerk left after the runners (8 frames, no ease-in), then runs with them
+ACTION = T("04:08")                               # cut to the fast cuts of the run (SH1310-1316)
+TRAVEL = T("04:15")                               # cut to the travelling camera (SH1320 on)
 
 # The band's speed, m/s, at seconds from 04:00 (linear between the points).
 SPEED = [(-3, 5.0), (1.5, 5.0), (2.5, 4.5), (10, 4.5), (10.5, 3.5), (14, 3.5), (14.5, 4.0),
          (17, 4.0), (17.4, 3.0), (20, 3.0), (22, 1.8), (26, 1.8), (27, 1.6), (33, 1.6), (36, 1.2)]
 # The travelling camera's distance from the lane, m, at seconds from 04:00.
-CAM_DIST = [(6, 9.5), (9.5, 9.5), (11, 9.0), (13.5, 9.0), (15, 6.5), (16.5, 6.5), (17.5, 8.5), (20, 8.5), (22, 5.0), (26.5, 5.0), (27.5, 6.0),
+CAM_DIST = [(6, 9.5), (9.5, 9.5), (11, 9.0), (13.5, 9.0), (15, 6.5), (16.5, 6.5), (17.5, 8.5), (21.3, 8.5), (22.5, 7.0), (26.5, 7.0), (27.5, 6.0),
             (30.5, 6.0), (33, 10.0), (36, 10.0)]
 # How far ahead of the band's centre the camera looks, m: it drops back to the rear for the
 # cat (04:10-04:14), then up the line with the newborn (04:22-04:26), lets the line walk through the frame past the grave, then catches up.
@@ -90,7 +90,9 @@ ZONES = {"forest": (-25, 47), "woodland": (47, 86), "grassland": (86, 101), "dry
 # Seconds at which a trunk crosses the lens (a generation passes), and where it stands along the
 # path from the band's centre; None centres it on the camera's own position at that moment, which
 # the lone tree in the grass after the newborn needs (SH1370-1380, your note, 2026-10-14).
-WIPES = [(8.8, 0.5), (15.5, 0.5), (21.0, 0.5), (26.0, None)]
+# (t, along, the camera distance it was placed for, and when it's taken away once out of frame:
+# the 04:27 trunk, since the camera now stays further back there and would pass it again)
+WIPES = [(8.8, 0.5, 9.5, None), (15.5, 0.5, 6.5, None), (21.0, 0.5, 6.75, 21.6), (26.0, None, None, None)]
 
 
 def curve(points, t, ease=False):
@@ -508,7 +510,7 @@ def animate(fig, frames, xs, ys, face=None, pose=None, visible=None):
         key_scale(fig["root"], visible)
 
 
-PF = [f for f in FR if f >= fr(T("04:04"))]        # people exist from 04:04 (they are far off, right)
+PF = [f for f in FR if f >= fr(T("04:05"))]        # people exist from 04:05 (they are far off, right)
 PT = [(f - T0) / O.FPS for f in PF]
 
 # The band: ten people. (name, height m, lateral place in the pack, place along it, spear)
@@ -519,7 +521,7 @@ BAND = [("Lead man", 1.72, 0.0, 3.0, True), ("Woman A", 1.60, 0.7, 2.2, False),
         ("Woman E", 1.62, 0.6, -1.6, False), ("Man F", 1.68, -0.7, -2.2, True),
         ("Man G (rear)", 1.73, 0.4, -3.0, True), ("Man H (rear)", 1.70, -0.4, -3.6, True)]
 LINE = {0: 2.7, 1: 3.6, 2: 1.8, 3: 0.9, 4: 0.0, 5: -0.9, 6: -1.8, 7: -2.7, 8: -3.6}   # index 9 falls at the clash
-CAT_T = (T("04:16"), T("04:20"))
+CAT_T = (T("04:17"), T("04:21"))
 # The cat (your note, 2026-10-14: a fight would look awkward): it runs down the last but one,
 # Man G, leaps and drags him down from behind; the last, Man H, turns back, kills it with one
 # thrust of his spear, hauls Man G up, and the two run on and catch the band up. Nobody stops.
@@ -527,14 +529,14 @@ SEIZED, RESCUER = 8, 9
 GRAB = CAT_T[0] + 1.6                      # the leap lands
 KILL = GRAB + 0.7                          # the spear
 UP = KILL + 0.3                            # the hand up
-CLASH_T = (T("04:23"), T("04:26"))
-BABY_T = (T("04:28"), T("04:32"))
-GRAVE_T = (T("04:33"), T("04:36:12"))
+CLASH_T = (T("04:24"), T("04:27"))
+BABY_T = (T("04:29"), T("04:33"))
+GRAVE_T = (T("04:34"), T("04:37:12"))
 GRAVE_WHO = 2
 GRAVE_PULLER = 7               # Man F, walking up the line behind her, takes her arm and pulls her up and on
 _y_grave = YC[int(fr(GRAVE_T[0]))] + LINE[GRAVE_WHO]
 GRAVE_UP = next((f - T0) / O.FPS for f in FR if f > fr(GRAVE_T[0]) and YC[f] + LINE[GRAVE_PULLER] >= _y_grave - 0.4)
-GLANCE = (T("04:07:16"), T("04:08:10"))   # the lead man looks back over his shoulder (SH1311)
+GLANCE = (T("04:08:16"), T("04:09:10"))   # the lead man looks back over his shoulder (SH1311)
 people = []
 band_paths = {}
 # Each runner wanders in the pack (across and along, on two slow waves of its own), so the band
@@ -609,7 +611,7 @@ for i, (name, h, dx, dy, spear) in enumerate(BAND):
         ys.append(y)
         face.append(a)
         pose.append(p)
-    animate(fig, PF, xs, ys, face, pose, visible=[(T("04:03"), 0), (T("04:04"), 1)])
+    animate(fig, PF, xs, ys, face, pose, visible=[(T("04:04"), 0), (T("04:05"), 1)])
     people.append(fig)
     band_paths[i] = (xs, ys)
 
@@ -731,12 +733,15 @@ for x, y in ((14.5, 108), (16, 111), (15, 118), (18, 124)):
 hippos = obj_from_bm("Hippos", bm, 0.2)
 
 # ---------------------------------------------------------------- the trunks that wipe the frame
-bm = bmesh.new()
-for t, along in WIPES:
+for t, along, dist, gone in WIPES:
     f = int(fr(t))
     y = YC[f] + (along if along is not None else curve(CAM_AHEAD, t, ease=True) - 0.3)
-    cone(bm, (LANE_X - curve(CAM_DIST, t, ease=True) + 1.2, y, 0), 0.5, 0.42, 22, 10)
-wipes = obj_from_bm("Trunks that cross the lens", bm, 0.12)
+    bm = bmesh.new()
+    cone(bm, (0, 0, 0), 0.5, 0.42, 22, 10)
+    trunk = obj_from_bm("Trunk that crosses the lens", bm, 0.12)
+    trunk.location = (LANE_X - (dist or curve(CAM_DIST, t, ease=True)) + 1.2, y, 0)
+    if gone:
+        key_scale(trunk, [(gone - DT, 1.0), (gone, 0.0)])
 
 
 # ---------------------------------------------------------------- cameras
@@ -861,7 +866,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, ninth pass, fixed"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, tenth pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)
@@ -888,7 +893,7 @@ if still:                                   # still=03:55:00,04:00:06  -> PNGs b
         r.filepath = str(O.PLAYBLAST / "stills" / ("b12-13-" + tc.replace(":", "") + ".png"))
         bpy.ops.render.render(write_still=True)
 elif [a for a in sys.argv if a.startswith("clean=")]:
-    # clean=04:14:00-04:17:12 -> work/aitest/clean-<range>.mp4 and its first and last frames,
+    # clean=04:15:00-04:18:12 -> work/aitest/clean-<range>.mp4 and its first and last frames,
     # with no burn-in, as input for the AI video tests (ai_video_test.py)
     rng = [a for a in sys.argv if a.startswith("clean=")][0][6:]
     a_, b_ = (O.frame(x) for x in rng.split("-"))

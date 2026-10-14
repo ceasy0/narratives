@@ -3,7 +3,7 @@
     blender -b --factory-startup -P master_edit.py
 
 One strip per shot of shots.csv, each cut from the v3.1 animatic where that shot
-is in it (channel 1; the animatic is 5:00 and the Opening 5:06 since beat 12 grew,
+is in it (channel 1; the animatic is 5:00 and the Opening 5:07 since beat 12 grew,
 so opening.animatic_frame maps one to the other), the animatic's guide sound under
 it in two pieces, shifted the same way (channel 5), and on
 channel 2 every layout playblast found in work/playblast/ named
@@ -52,11 +52,11 @@ for sh in shots:
         beat_seen.add(sh["beat"])
         scene.timeline_markers.new("BEAT %d" % sh["beat"], frame=sh["start"])
 
-cut = O.frame("04:00")                       # the guide sound: as it is up to 04:00, then 6 s later
+cut = O.frame("04:00")                       # the guide sound: as it is up to 04:00, then later by the difference
 snd = se.strips.new_sound("Guide sound (animatic v3.1), to 04:00", str(O.ANIMATIC), channel=5, frame_start=0)
 snd.frame_offset_end = O.ANIMATIC_TOTAL - cut
 snd = se.strips.new_sound("Guide sound (animatic v3.1), from its 04:00", str(O.ANIMATIC), channel=5,
-                          frame_start=6 * O.FPS)
+                          frame_start=O.TOTAL - O.ANIMATIC_TOTAL)
 snd.frame_offset_start = cut
 
 by_id = {sh["shot"]: sh for sh in shots}

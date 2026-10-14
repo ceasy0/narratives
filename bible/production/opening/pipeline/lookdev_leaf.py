@@ -27,7 +27,7 @@ ARGS = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 CLIP, CLOTH = "clip" in ARGS, "nocloth" not in ARGS
 random.seed(7)
 
-T0 = O.frame("04:06")                      # the first footfall (the layout's t = 0)
+T0 = O.frame("04:07")                      # the first footfall (the layout's t = 0)
 LEAF_LOOSE = O.frame("03:58")              # the leaf starts to tremble on its stem
 STILLS = ["04:01:16", "04:02:06", "04:03:12"]   # just in frame; mid-fall in front of the stump; landed
 CLIP_RANGE = (O.frame("04:00:12"), O.frame("04:04:12"))

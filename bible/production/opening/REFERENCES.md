@@ -1,6 +1,6 @@
 # The Opening — visual references
 
-> A look book for the Opening (Gen 1:1–2:7, 5:06, [treatment v3.6](../../story/arcs/01-beginnings/opening/TREATMENT.md)). One section per beat, in the treatment's order and times. Started 2026-10-13, at your request ("You should start a page of visual references for the animatic"). It serves the [production plan](./PLAN.md): the looks it names are what the layout and look-development stages aim at. The series' base style is *Arcane*, with the visions and spiritual scenes more vibrant and abstract, like *Spider-Verse* ([Discussion 006](../../discussions/006-2d-or-3d.md)); the Opening's beats 1–9 are the abstract register and beats 10–14 the world. Add to it freely: a reference you send goes in its beat's section.
+> A look book for the Opening (Gen 1:1–2:7, 5:07, [treatment v3.6](../../story/arcs/01-beginnings/opening/TREATMENT.md)). One section per beat, in the treatment's order and times. Started 2026-10-13, at your request ("You should start a page of visual references for the animatic"). It serves the [production plan](./PLAN.md): the looks it names are what the layout and look-development stages aim at. The series' base style is *Arcane*, with the visions and spiritual scenes more vibrant and abstract, like *Spider-Verse* ([Discussion 006](../../discussions/006-2d-or-3d.md)); the Opening's beats 1–9 are the abstract register and beats 10–14 the world. Add to it freely: a reference you send goes in its beat's section.
 
 **How to read it.** Each reference has a title, a maker and year, a link, one line on **what to take** for this beat (motion, light, colour, scale or texture), and its **licence**. "Link only" means it's copyrighted (a film, an artist's work, a paper's figures): look at it, learn from it, but don't put it in the animatic. "Open" means public domain, CC0 or CC BY, so the image can sit on a mood board or in a reference reel with its credit.
 
@@ -181,14 +181,14 @@
 - **Fossils found from the day the dinosaurs died (Tanis)**, *National Geographic*, 2019. <https://www.nationalgeographic.com/science/article/fossils-found-from-day-dinosaurs-died-chicxulub-tanis-cretaceous-extinction>; PNAS summary <https://pmc.ncbi.nlm.nih.gov/articles/PMC6486731>
   *Take:* the timing at Hell Creek: seismic waves within minutes, a surge of water, and impact spherules falling **within about 15 minutes**, mostly over **about 2 hours**. It supports the treatment's order (glow, quake, falling sky) and tells the animatic how long each phase lasts. **Link only.** (The PNAS paper's own page refused the fetch.)
 
-## 12. Dust (3:42–4:06)
+## 12. Dust (3:42–4:07)
 
 *Hold on the dead animal's face while time runs: winter, ash, flesh gone, the skull sinks; ferns everywhere, then flowers and trees; a sapling where the head lay; one leaf falls, slowly; two seconds of stillness, until the feet whip it away.*
 
 - **The Private Life of Plants**, David Attenborough / BBC, 1995. <https://en.wikipedia.org/wiki/The_Private_Life_of_Plants>
   *Take:* the classic plant time-lapse: shoots that search, unfurl and climb. It's the model for the sapling becoming a tree "in a few seconds". **Link only.**
 - **Forrest Gump, the feather**, Robert Zemeckis / ILM (VFX supervisor Ken Ralston), 1994. <https://www.ilm.com/vfx/forrest-gump/>
-  *Take:* **this is the answer to your note that the leaf falls too fast** (2026-10-13). The feather drifts for most of a minute, tumbling, catching air and rising before it falls, and the camera follows it patiently. Our leaf has four seconds now (animatic v3.1, 3:54–3:58), rocking from side to side as it falls, then two still; it should also borrow the feather's drift in the layout pass: a flutter that slows near the ground and a settle you can feel. Then the tribe's feet whip it away (4:06). **Link only.**
+  *Take:* **this is the answer to your note that the leaf falls too fast** (2026-10-13). The feather drifts for most of a minute, tumbling, catching air and rising before it falls, and the camera follows it patiently. Our leaf has four seconds now (animatic v3.1, 3:54–3:58), rocking from side to side as it falls, then two still; it should also borrow the feather's drift in the layout pass: a flutter that slows near the ground and a settle you can feel. Then the tribe's feet whip it away (4:07). **Link only.**
 - **"Why thin, flat things rise and glide on the way down"**, Z. Jane Wang & U. Pesavento, Cornell, 2004. <https://news.cornell.edu/node/319559>
   *Take:* the physics to animate the fall by. Air curling off the edges makes a leaf **flutter and tumble, climb briefly and glide**, never drop straight. An animatic leaf that falls in a straight line will always look fast. **Reference text.**
 - **Mirror** (*Zerkalo*), Andrei Tarkovsky, 1975: the wind through the field. <https://celluloidwickerman.com/2015/11/09/the-breeze-in-the-grass-elemental-realisation-in-tarkovskys-mirror-1975/>
@@ -196,7 +196,7 @@
 - **Weighing the Evidence for a Mass Extinction: On Land**, HHMI BioInteractive, 2012. <https://www.biointeractive.org/classroom-resources/weighing-evidence-mass-extinction-land>
   *Take:* the fern spike in the pollen record (data above and below the boundary). It's the evidence behind "the first green to come back is ferns". **Reference.**
 
-## 13. Fill the earth (4:06–4:42)
+## 13. Fill the earth (4:07–4:43)
 
 *Feet over the leaf, right to left; a band always moving left through forest, woodland and grassland, across generations; a big cat, another band, a newborn passed down the line, a child's grave; a green river running north.*
 
@@ -235,7 +235,7 @@ You asked for scenes of people running through dense growth in an action scene (
   *Take:* a wide lens that roves among people under attack, close enough to touch them. **Link only.**
 
 
-## 14. Rest (4:42–5:06)
+## 14. Rest (4:43–5:07)
 
 *A cliff edge at dawn; wind and breathing; the river opening like a hand into braided green channels to the horizon; mist; a flock lifts off in its thousands, turns and settles; the slow move in to the face; the eye with the river in it.*
 
