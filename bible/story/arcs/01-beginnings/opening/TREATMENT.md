@@ -1,8 +1,8 @@
 # The Opening — Treatment
 
-> Genesis 1:1–2:7. One sequence, 5 minutes, no words, unbroken until the people come. It opens Episode 1; the Garden (2:8–3:24) follows it.
+> Genesis 1:1–2:7. One sequence, 5:06, no words, unbroken until the people come. It opens Episode 1; the Garden (2:8–3:24) follows it.
 
-**Status:** v3.5, 2026-10-14: the Opening's beat sheet, as the [script](../../../../scripts/beginnings/opening.fountain) (v1.4) and the layout are cut to it; the [animatic](../../../../production/opening/README.md) (v3.1) is too, except inside beat 12 and the first seconds of beat 13. Everything tagged P5 is yours; everything tagged P6 is my suggestion.
+**Status:** v3.6, 2026-10-14: the Opening's beat sheet, 5:06 now that beat 12 runs 24 s, as the [script](../../../../scripts/beginnings/opening.fountain) (v1.5) and the layout are cut to it; the [animatic](../../../../production/opening/README.md) (v3.1) is still 5:00, with beat 12 at 18 s. Everything tagged P5 is yours; everything tagged P6 is my suggestion.
 
 **The Opening is the exception to the first pass** (your decision, 2026-10-07), so it has a script and an animatic ahead of the rest. The timings are the table in §2: change a timing here, and the animatic re-renders to it. How the finished Opening gets made is the [production plan](../../../../production/opening/PLAN.md).
 
@@ -36,9 +36,9 @@ Six rules, from your notes. Every beat follows them.
 | 9 | The crossing | 1:15 | The photon | Black; then the Earth | 2:32–2:46 | 14s |
 | 10 | The waters swarm | 1:20–23 | The cell; then the first eyes | The sea; a great sea creature; wings above the surface | 2:46–3:18 | 32s |
 | 11 | The land | 1:24–25 | The animal | Shore and wings, ferns, night; the sky falling | 3:18–3:42 | 24s |
-| 12 | Dust | 2:7 | A dead animal's face; a tree; a leaf | Land, years running | 3:42–4:00 | 18s |
-| 13 | Fill the earth | 1:26–28 | One face, handed down, always walking left | Forest to a green river | 4:00–4:36 | 36s |
-| 14 | Rest | 2:1–7 | The first face again | The delta, green, and birds | 4:36–5:00 | 24s |
+| 12 | Dust | 2:7 | A dead animal's face; a tree; a leaf | Land, years running | 3:42–4:06 | 24s |
+| 13 | Fill the earth | 1:26–28 | One face, handed down, always walking left | Forest to a green river | 4:06–4:42 | 36s |
+| 14 | Rest | 2:1–7 | The first face again | The delta, green, and birds | 4:42–5:06 | 24s |
 
 **Inside beat 1:** black at 0:00, and the fade starts on that first frame, slowly, the sound a little ahead of the picture; full strength by 0:10; it begins to flow at 0:14; the face starts to stand out at 0:16 and is unmistakable by 0:27; the whisper draws in and climbs from 0:26; the release is at 0:38.
 
@@ -144,17 +144,17 @@ The small creature is picking beetles off the body of a great animal that has di
 
 Low in the south a glow comes up, where no dawn should be. It climbs, and the creature goes still. Minutes later the ground heaves under it. Then the sky starts to fall: one streak of fire, then dozens, then the whole sky streaming down, a meteor shower that doesn't stop, and the air grows hot. The held note is still there under a roar. The creature runs for a hole among the roots of a tree. We don't go with it. We stay. [[Your note (2026-10-05): the impact is the asteroid that killed the dinosaurs, and it has to be close enough to frighten the animal and far enough not to incinerate everything. P2: this is that distance. About 3,000 km from Chicxulub, the distance of the Hell Creek country in Montana and the Dakotas, where the best record of that day lies, the impact itself is below the horizon. What's seen is the plume climbing over it; then the earthquake, within minutes; then the debris thrown into space coming back down, for hours, heating the sky. The animals that came through those first hours were the ones underground or in water. It happened in the northern spring. Medium confidence on the sequence; dossier §5.]]
 
-### 12. Dust (3:42–4:00)
+### 12. Dust (3:42–4:06)
 
-We stay on the dead animal's face, wide, in one shot from one place that doesn't cut until the run, and time runs. It's the last time the world moves faster than we can follow. The fire stops falling. The sky goes dark and stays dark: a long winter of soot and dust. Ash settles on the face. The flesh goes. The skull shows, and sinks into the ground. The sky clears. The first green to come back is ferns, everywhere, the same ferns the lizard-shaped creature ran through. Then the land greens differently, with flowering things and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19, "you are dust." P2: the impact winter, and the "fern spike": for thousands of years after the impact, ferns made up nearly all the plant life in western North America. P6: the ferns as a callback.]]
+We stay on the dead animal's face, close, low, in one locked shot that doesn't cut until the run, with the hole the small creature ran into beside it, and time runs. It's the last time the world moves faster than we can follow. The fire stops falling. The sky goes dark and stays dark: a long winter of soot and dust. Ash settles on the face. The flesh goes. The skull shows, and sinks into the ground. The sky clears. The first green to come back is ferns, everywhere, the same ferns the lizard-shaped creature ran through. Then the land greens differently, with flowering things and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19, "you are dust." P2: the impact winter, and the "fern spike": for thousands of years after the impact, ferns made up nearly all the plant life in western North America. P6: the ferns as a callback.]]
 
-Where the head lay, a shoot. It's a sapling, then a tree, in a few seconds, in a clearing, and we pan up with it until all of it is in frame.
+Where the head lay, right beside us, a shoot. It's a sapling, then a tree, in a few seconds; we see only its trunk, with the forest beyond. Then everything is still.
 
-One leaf trembles on its stem and lets go. It falls slowly, rocking from side to side the way a real leaf falls, and we pan back down with it. It settles on the earth. [[Your note (2026-10-13): "the falling leaf should feel like a slow scene that gets whipped into motion and action by the tribe of people running over it."]]
+A leaf falls into the frame from above, slowly, swinging like a feather, and settles on the earth near the bottom of the frame. [[Your note (2026-10-13): "the falling leaf should feel like a slow scene that gets whipped into motion and action by the tribe of people running over it."]]
 
 Everything is still. Three seconds.
 
-### 13. Fill the earth (4:00–4:36)
+### 13. Fill the earth (4:06–4:42)
 
 Feet. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up and away, tumbling, and the view whips after them. Then the first cut in the Opening: the people bring it. People, shouting, wild.
 
@@ -168,7 +168,7 @@ The forest thins to open woodland and then to grassland. They fight a big cat, a
 
 Dry country, and a river running north through it, high and wide and green on both banks: reeds and papyrus, trees along the water, hippos in the shallows, birds everywhere. They follow it. [[P2: about 55,000 years ago. The Nile valley is one of the two proposed ways out of Africa, and the genetics of living Egyptians favor it. Between about 56,000 and 44,000 years ago a stronger monsoon over Ethiopia made the Nile run higher. It was a wetter spell, and it may be what opened the way. P5: yours (2026-10-05): the Nile a bit more lush. P6: how much more; [dossier §5](./DOSSIER.md#5-the-science).]]
 
-### 14. Rest (4:36–5:00)
+### 14. Rest (4:42–5:06)
 
 They come up onto the edge of a cliff and stop. For the first time since the leaf, nobody is moving.
 

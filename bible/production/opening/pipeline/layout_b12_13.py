@@ -26,8 +26,8 @@ import opening as O  # noqa: E402
 RENDER = "render" in sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else False
 random.seed(12)
 
-F0, F1 = O.frame("03:42"), O.frame("04:36")       # 5328 .. 6624 (end exclusive)
-T0 = O.frame("04:00")                             # the first footfall: t = 0
+F0, F1 = O.frame("03:42"), O.frame("04:42")       # 5328 .. 6768 (end exclusive)
+T0 = O.frame("04:06")                             # the first footfall: t = 0
 FR = list(range(F0, F1 + 1))
 
 
@@ -53,20 +53,23 @@ def lerp(a, b, u):
 LENS = 35.0                    # mm, on a 36 mm sensor: the travelling camera
 LEAF = Vector((2.0, 1.6, 0.0))  # where the leaf lands; the band's lane runs over it
 LANE_X = LEAF.x
-SKULL = Vector((7.0, LEAF.y, 0.0))                # where the head lies and the tree grows, beyond the lane
-TREE_H = 8.0                   # the tree that grows there, m, in a clearing
-BRANCH = Vector((4.5, LEAF.y, 2.8))               # the tip of its low branch, reaching toward us; the leaf drifts 2.5 m as it falls
-TREE_GROW = (T("03:50:12"), T("03:52:12"))        # a shoot, a sapling, a tree
-LEAF_LOOSE = (T("03:52:12"), T("03:53:12"))       # the leaf trembles on its stem, then lets go
-LEAF_FALL = (T("03:53:12"), T("03:57"))           # falls 2.8 m, rocking; still until 04:00 (3 s)
-# The unbroken shot, 03:42-04:01, from one place, only panning: on the dead face; up with the
-# tree as it grows, until all of it is in frame; back down with the leaf; held on it through the
-# stillness; a whip left after the runners as they go over it.
-CAM_FIXED = Vector((SKULL.x - 9.0, SKULL.y, 1.3))  # 9 m from the head, 4 m from where the leaf lands
-FIXED_LENS = 24.0                                  # mm: the whole 8 m tree fits at 9 m
-WHIP = (T("04:00:04"), T("04:00:18"))             # the camera whips left after the runners and runs with them
-ACTION = T("04:01")                               # cut to the fast cuts of the run (SH1310-1316)
-TRAVEL = T("04:06")                               # cut to the travelling camera (SH1320 on)
+SKULL = Vector((1.6, 0.6, 0.0))                   # where the head lies and the tree grows, at the lane's edge
+BURROW = Vector((1.3, 1.4, 0.0))                  # the hole the small creature ran into (beat 11), beside the head
+TREE_H = 8.0                   # the tree that grows there, m; we only ever see its stump
+BRANCH = Vector((LEAF.x, LEAF.y, 3.0))            # the tip of its low branch, over the lane, above the frame
+TREE_GROW = (T("03:54"), T("03:56:12"))           # a shoot, a sapling, a tree; then still
+LEAF_LOOSE = (T("03:58"), T("03:59"))             # the leaf trembles on its stem, then lets go
+LEAF_FALL = (T("03:59"), T("04:03"))              # falls 2.9 m, like a feather; still until 04:06 (3 s)
+# The unbroken shot, 03:42-04:07, locked off, low and right up next to the dead animal (your notes,
+# 2026-10-14): its head decomposing on the right of frame, the burrow beside it; then only the
+# stump of the tree that grows there, the forest coming up beyond; the leaf falls into frame from
+# above like a feather and lands near the bottom; then a whip left after the runners.
+CAM_FIXED = Vector((0.4, 2.1, 0.4))                # 1.9 m from the head, 40 cm up, 1.7 m from where the leaf lands
+AIM = CAM_FIXED + Vector((math.cos(math.radians(-33)), math.sin(math.radians(-33)), 0)) * 6.0 + Vector((0, 0, 0.5))
+FIXED_LENS = 24.0
+WHIP = (T("04:06:04"), T("04:06:18"))             # the camera whips left after the runners and runs with them
+ACTION = T("04:07")                               # cut to the fast cuts of the run (SH1310-1316)
+TRAVEL = T("04:12")                               # cut to the travelling camera (SH1320 on)
 
 # The band's speed, m/s, at seconds from 04:00 (linear between the points).
 SPEED = [(-3, 5.0), (1.5, 5.0), (2.5, 4.5), (10, 4.5), (10.5, 3.5), (14, 3.5), (14.5, 4.0),
@@ -190,8 +193,10 @@ def key_grey(ob, pairs):
 
 # ---------------------------------------------------------------- the ground
 def in_view(x, y):
-    """Between the unbroken camera and the head, where the leaf lands: kept clear."""
-    return CAM_FIXED.x - 1.0 < x < SKULL.x - 1.2 and abs(y - CAM_FIXED.y) < 1.3
+    """In front of the low locked camera, within 6 m: kept clear, so the ferns don't fill the frame."""
+    d = Vector((x - CAM_FIXED.x, y - CAM_FIXED.y))
+    a = (AIM - CAM_FIXED).to_2d()
+    return d.length < 6.0 and d.length > 0 and d.angle(a) < math.radians(45)
 
 
 bm = bmesh.new()
@@ -217,8 +222,8 @@ for zone, (y0, y1) in ZONES.items():
         else:                      # stones
             cone(bm, (x, y, 0), random.uniform(.15, .6), random.uniform(.1, .3), random.uniform(.1, .35), 5)
     cover = obj_from_bm("Ground cover, " + zone, bm, 0.33)
-    if zone == "forest":           # bare until the ferns come back at 03:48
-        a, b = fr(T("03:48")), fr(T("03:49:12"))
+    if zone == "forest":           # bare until the ferns come back at 03:51
+        a, b = fr(T("03:51")), fr(T("03:52:12"))
         key(cover, "scale", [a, b], [[1, 1], [1, 1], [0, 1]])
 
 
@@ -240,19 +245,17 @@ def spaced(n, xr, yr, gap, keep_out=()):
     return pts
 
 
-# The forest the band runs through. Every tree here grows during 03:49-03:50:12,
+# The forest the band runs through. Every tree here grows during 03:52-03:54,
 # because the time-lapse camera sees it come up; the lane (x 0.6-3.2) is kept clear.
 forest_trees = []
-for x, y in spaced(150, (4.5, 62), (-28, 47), 3.0, keep_out=[(SKULL.x, SKULL.y, 10)]):   # a clearing round the tree
+for x, y in spaced(150, (4.5, 62), (-28, 47), 3.0, keep_out=[(SKULL.x, SKULL.y, 6)]):
     h, r = random.uniform(11, 22), random.uniform(.2, .45)
-    if (x - SKULL.x) ** 2 + (y - SKULL.y) ** 2 < 22 ** 2:   # lower near it, so it stands out
-        h *= 0.5
     bm = bmesh.new()
     tree_mesh(bm, (0, 0, 0), h, r)
     ob = obj_from_bm("Tree", bm, random.uniform(.2, .3))
     ob.location = (x, y, 0)
-    start = T("03:49") + random.uniform(0, 0.9)
-    key_scale(ob, [(start - 1, 0.0), (start, 0.0), (start + 0.25, 0.25), (start + 0.6, 1.0)])
+    start = T("03:52") + random.uniform(0, 1.4)
+    key_scale(ob, [(start - 1, 0.0), (start, 0.0), (start + 0.4, 0.25), (start + 1.0, 1.0)])
     forest_trees.append(ob)
 
 bm = bmesh.new()
@@ -262,7 +265,7 @@ for x, y in spaced(4, (25, 60), (86, 100), 12.0):        # lone trees in the gra
     tree_mesh(bm, (x, y, 0), random.uniform(6, 9), .3)
 far_trees = obj_from_bm("Trees beyond the forest", bm, 0.26)
 
-# Ferns at the skull, which come first (03:48), before the trees; none in the low camera's view of the leaf.
+# Ferns at the skull, which come first (03:51), before the trees; none in the camera's near view.
 ferns = []
 for x, y in spaced(70, (SKULL.x - 1.5, SKULL.x + 22), (SKULL.y - 11, SKULL.y + 11), 0.9, keep_out=[(SKULL.x, SKULL.y, 1.6)]):
     if in_view(x, y):
@@ -271,7 +274,7 @@ for x, y in spaced(70, (SKULL.x - 1.5, SKULL.x + 22), (SKULL.y - 11, SKULL.y + 1
     cone(bm, (0, 0, 0), random.uniform(.3, .5), 0.05, random.uniform(.4, .7), 7)
     ob = obj_from_bm("Fern", bm, 0.3)
     ob.location = (x, y, 0)
-    start = T("03:48") + random.uniform(0, 1.1)
+    start = T("03:51") + random.uniform(0, 1.6)
     key_scale(ob, [(start - 1, 0.0), (start, 0.0), (start + 0.4, 1.0)])
     ferns.append(ob)
 
@@ -287,7 +290,17 @@ ball(bm, tip + Vector((0, 0, 0.3)), (0.6, 0.6, 0.35), 8)                   # the
 the_tree = obj_from_bm("The tree", bm, 0.5)
 the_tree.location = SKULL
 a = TREE_GROW[0]
-key_scale(the_tree, [(a - 1, 0), (a, 0), (a + 0.4, 0.02), (a + 0.9, 0.12), (a + 1.5, 0.55), (a + 2.0, 1.0)])
+key_scale(the_tree, [(a - 1, 0), (a, 0), (a + 0.5, 0.02), (a + 1.1, 0.12), (a + 1.9, 0.55), (a + 2.5, 1.0)])
+
+# The burrow the small creature ran into at the end of beat 11, beside the head: a dark hole
+# among a few roots, under the ash from 03:46 and the ferns from 03:51.
+bm = bmesh.new()
+bmesh.ops.create_circle(bm, cap_ends=True, segments=12, radius=0.15, matrix=Matrix.Translation((0, 0, 0.01)))
+for ang in (20, 140, 250):
+    cone(bm, (0, 0, 0.03), 0.03, 0.015, 0.3, 5, rot=Matrix.Rotation(math.radians(ang), 4, 'Z') @ Matrix.Rotation(math.radians(84), 4, 'X'))
+burrow = obj_from_bm("Burrow", bm, 0.12)
+burrow.location = BURROW
+key(burrow, "location", [fr(T("03:46")), fr(T("03:47"))], [0.0, -0.06], index=2)   # gone under the ash
 
 
 # ---------------------------------------------------------------- the dead Triceratops
@@ -307,32 +320,32 @@ head.location = (0, 0, 0.35)
 bm = bmesh.new()
 ball(bm, (0.3, -4.6, 0.9), (1.1, 3.2, 0.95), 12)           # the body, about 6.5 m of it
 body = obj_from_bm("Body", bm, 0.3, parent=dead)
-# 03:44-03:46 the flesh goes and the skull shows; 03:46-03:48 it sinks.
-key_grey(head, [(T("03:44"), 0.3), (T("03:46"), 0.8)])
-key_scale(head, [(T("03:44"), 1.0), (T("03:46"), 0.9)])
-fs = [fr(T("03:44")), fr(T("03:46"))]
+# 03:45-03:48 the flesh goes and the skull shows; 03:48-03:50:12 it sinks.
+key_grey(head, [(T("03:45"), 0.3), (T("03:47:12"), 0.8)])
+key_scale(head, [(T("03:45"), 1.0), (T("03:47:12"), 0.9)])
+fs = [fr(T("03:45")), fr(T("03:48"))]
 key(body, "scale", fs, [[1, 0.9], [1, 0.85], [1, 0.12]])
-key(dead, "location", [fr(T("03:46")), fr(T("03:48"))], [0.0, -1.9], index=2)
+key(dead, "location", [fr(T("03:48")), fr(T("03:50:12"))], [0.0, -1.9], index=2)
 
-# Ash, lying over the place from 03:44, gone under the green by 03:49.
+# Ash, lying over the place from 03:45, gone under the green by 03:52.
 bm = bmesh.new()
 bmesh.ops.create_circle(bm, cap_ends=True, segments=32, radius=40)
 ash = obj_from_bm("Ash", bm, 0.62)
-key(ash, "location", [fr(T("03:44")), fr(T("03:45:12")), fr(T("03:48")), fr(T("03:49"))],
+key(ash, "location", [fr(T("03:45")), fr(T("03:46:12")), fr(T("03:51")), fr(T("03:52"))],
     [-0.05, 0.02, 0.02, -0.05], index=2)
 
-# The last of the falling fire, far off in the east, stopping by 03:44.
+# The last of the falling fire, far off in the east, stopping by 03:45.
 for i in range(16):
     bm = bmesh.new()
     cone(bm, (0, 0, 0), 0.5, 0.1, 26, 5, rot=Matrix.Rotation(math.radians(24), 4, 'X'))
     st = obj_from_bm("Fire", bm, 0.95)
     y = random.uniform(-70, 70)
-    t0 = T("03:42") - 0.4 + (i / 16.0) ** 1.6 * 2.2          # thinning out
+    t0 = T("03:42") - 0.4 + (i / 16.0) ** 1.6 * 3.0          # thinning out
     key(st, "location", [fr(t0 - 5), fr(t0), fr(t0 + 0.7), fr(t0 + 5)],
         [[150] * 4, [y, y, y - 34, y - 34], [70, 70, -30, -30]])
 
-# Animals pass as blurs (03:49:12, 03:50:06): each crosses the frame in a few frames.
-for tc, x, d in (("03:49:12", 4.0, 1), ("03:50:06", 11.0, -1)):
+# Animals pass as blurs (03:52:12, 03:53:06): each crosses the frame in a few frames.
+for tc, x, d in (("03:52:12", 6.0, 1), ("03:53:06", 11.0, -1)):
     bm = bmesh.new()
     ball(bm, (0, 0, 0.8), (0.45, 1.1, 0.6), 8)
     an = obj_from_bm("Animal passing", bm, 0.2)
@@ -340,8 +353,8 @@ for tc, x, d in (("03:49:12", 4.0, 1), ("03:50:06", 11.0, -1)):
     key(an, "location", [fr(t - 4), fr(t), fr(t + 0.25), fr(t + 4)],
         [[x] * 4, [-16 * d, -16 * d, 16 * d, 16 * d], [0] * 4])
 
-# The sky: light, dark from 03:44, clear from 03:48.
-sky = [(T("03:42"), 0.50), (T("03:44"), 0.10), (T("03:48"), 0.10), (T("03:49:06"), 0.66)]
+# The sky: light, dark from 03:45, clear by 03:52.
+sky = [(T("03:42"), 0.50), (T("03:45"), 0.10), (T("03:50:12"), 0.10), (T("03:52"), 0.66)]
 key(None, "color", [fr(t) for t, _ in sky], [[v for _, v in sky]] * 3, target=world)
 
 
@@ -366,11 +379,11 @@ for f in FR:
         rot = (0.5 + 0.5 * k * math.sin(ph), 0.3 * k * math.sin(ph * 0.5), 0.0)
     elif t <= 0.04:                        # the slow fall, then stillness
         u = min(1.0, max(0.0, (t - ta) / (tb - ta)))
-        sway = (1 - u) ** 0.6              # the rocking dies as it comes down
-        ph = 2 * math.pi * 0.6 * (t - ta)
-        z = Z0 * (1 - u) ** 1.05 + 0.004 - 0.04 * sway * abs(math.sin(ph))
-        drift = lerp(HANG.x, LEAF.x, smooth(0.0, 1.0, u))                # carried toward us as it falls
-        p = (drift + 0.05 * sway * math.sin(ph * 0.5), LEAF.y + 0.3 * sway * math.sin(ph), max(z, 0.004))
+        sway = (1 - u) ** 0.5              # the swinging dies as it comes down, like a feather's
+        ph = 2 * math.pi * 0.5 * (t - ta)
+        z = Z0 * (1 - u) + 0.004 - 0.07 * sway * abs(math.sin(ph))
+        drift = lerp(HANG.x, LEAF.x, smooth(0.0, 1.0, u))                # (none while the branch is over the landing place)
+        p = (drift + 0.05 * sway * math.sin(ph * 0.5), LEAF.y + 0.45 * sway * math.sin(ph), max(z, 0.004))
         rot = (0.5 * (1 - u) + 0.6 * sway * math.sin(ph), 0.25 * sway * math.sin(ph * 0.5), 0.6 * u)
     else:                                  # whipped up and away by the feet
         w = t - 0.04
@@ -421,7 +434,8 @@ def figure(name, height, grey, spear=False):
         bm = bmesh.new()
         cone(bm, (0.2 * h, -0.9, 0.62 * h), 0.012, 0.012, 2.0, 5, rot=Matrix.Rotation(math.radians(-80), 4, 'X'))
         obj_from_bm(name + " spear", bm, 0.15, parent=body)
-    return {"root": root, "body": body, "limbs": limbs, "h": h}
+    return {"root": root, "body": body, "limbs": limbs, "h": h,
+            "phase0": random.uniform(0, 2 * math.pi), "stride": random.uniform(0.88, 1.12)}   # no two in step
 
 
 def animate(fig, frames, xs, ys, face=None, pose=None, visible=None):
@@ -437,11 +451,11 @@ def animate(fig, frames, xs, ys, face=None, pose=None, visible=None):
     loc = [[], [], []]
     rot = [[], [], []]
     swing = [[] for _ in range(4)]
-    phase = 0.0
+    phase = fig.get("phase0", 0.0)
     for i in range(n):
         v = 0.0 if i == 0 else math.hypot(xs[i] - xs[i - 1], ys[i] - ys[i - 1]) / DT
         run = min(1.0, max(0.0, (v - 1.6) / 2.9))             # 0 = a walk, 1 = a run
-        cycle = lerp(1.5, 2.8, run)                           # metres per full stride cycle
+        cycle = lerp(1.5, 2.8, run) * fig.get("stride", 1.0)  # metres per full stride cycle
         phase += 2 * math.pi * v * DT / cycle
         amp = lerp(0.42, 0.8, run) * min(1.0, v / 1.0)
         p = pose[i] or {}
@@ -466,7 +480,7 @@ def animate(fig, frames, xs, ys, face=None, pose=None, visible=None):
         key_scale(fig["root"], visible)
 
 
-PF = [f for f in FR if f >= fr(T("03:58"))]        # people exist from 03:58 (they are far off, right)
+PF = [f for f in FR if f >= fr(T("04:04"))]        # people exist from 04:04 (they are far off, right)
 PT = [(f - T0) / O.FPS for f in PF]
 
 # The band: ten people. (name, height m, lateral place in the pack, place along it, spear)
@@ -477,17 +491,20 @@ BAND = [("Lead man", 1.72, 0.0, 3.0, True), ("Woman A", 1.60, 0.7, 2.2, False),
         ("Woman E", 1.62, 0.6, -1.6, False), ("Man F", 1.68, -0.7, -2.2, True),
         ("Man G (rear)", 1.73, 0.4, -3.0, True), ("Man H (rear)", 1.70, -0.4, -3.6, True)]
 LINE = {0: 2.7, 1: 3.6, 2: 1.8, 3: 0.9, 4: 0.0, 5: -0.9, 6: -1.8, 7: -2.7, 8: -3.6}   # index 9 falls at the clash
-CAT_T = (T("04:10"), T("04:14"))
-CLASH_T = (T("04:17"), T("04:20"))
-BABY_T = (T("04:22"), T("04:26"))
-GRAVE_T = (T("04:27"), T("04:30:12"))
+CAT_T = (T("04:16"), T("04:20"))
+CLASH_T = (T("04:23"), T("04:26"))
+BABY_T = (T("04:28"), T("04:32"))
+GRAVE_T = (T("04:33"), T("04:36:12"))
 GRAVE_WHO = 2
 GRAVE_PULLER = 7               # Man F, walking up the line behind her, takes her arm and pulls her up and on
 _y_grave = YC[int(fr(GRAVE_T[0]))] + LINE[GRAVE_WHO]
 GRAVE_UP = next((f - T0) / O.FPS for f in FR if f > fr(GRAVE_T[0]) and YC[f] + LINE[GRAVE_PULLER] >= _y_grave - 0.4)
-GLANCE = (T("04:01:16"), T("04:02:10"))   # the lead man looks back over his shoulder (SH1311)
+GLANCE = (T("04:07:16"), T("04:08:10"))   # the lead man looks back over his shoulder (SH1311)
 people = []
 band_paths = {}
+# Each runner wanders in the pack (across and along, on two slow waves of its own), so the band
+# is a crowd, not a formation (your note, 2026-10-14); it settles as they fall into a line.
+WANDER = [[random.uniform(0, 2 * math.pi) for _ in range(4)] for _ in BAND]
 for i, (name, h, dx, dy, spear) in enumerate(BAND):
     fig = figure(name, h, 0.72 if "Woman" in name or name == "Girl" else 0.6, spear)
     xs, ys, face, pose = [], [], [], []
@@ -496,6 +513,11 @@ for i, (name, h, dx, dy, spear) in enumerate(BAND):
         u = smooth(20, 22, t)
         x = LANE_X + lerp(dx, 0.12 * (i % 2) - 0.06, u)
         y = YC[f] + lerp(dy, LINE.get(i, dy), u)
+        ph, w = WANDER[i], 1.0 - 0.75 * u
+        x += w * (0.3 * math.sin(0.8 * t + ph[0]) + 0.15 * math.sin(2.1 * t + ph[1]))
+        y += w * (0.7 * math.sin(0.5 * t + ph[2]) + 0.3 * math.sin(1.4 * t + ph[3]))
+        x = max(x, SKULL.x + 0.75 * (1 - smooth(0.6, 1.5, abs(y - SKULL.y))))           # round the tree,
+        x = max(x, CAM_FIXED.x + 0.5 * (1 - smooth(0.3, 1.0, abs(y - CAM_FIXED.y))))   # and past the camera
         a, p = 0.0, None
         if i == 0:                                                    # a look back at what's after them
             a = 0.8 * smooth(GLANCE[0], GLANCE[0] + 0.25, t) * (1 - smooth(GLANCE[1] - 0.25, GLANCE[1], t))
@@ -531,7 +553,7 @@ for i, (name, h, dx, dy, spear) in enumerate(BAND):
         ys.append(y)
         face.append(a)
         pose.append(p)
-    animate(fig, PF, xs, ys, face, pose, visible=[(T("03:57"), 0), (T("03:58"), 1)])
+    animate(fig, PF, xs, ys, face, pose, visible=[(T("04:03"), 0), (T("04:04"), 1)])
     people.append(fig)
     band_paths[i] = (xs, ys)
 
@@ -679,26 +701,20 @@ def key_lens(cam, frames, lenses):
     key(None, "lens", frames, lenses, index=0, target=cam.data)
 
 
-# Camera 1, 03:42-04:01, one unbroken shot from one place, only panning. On the dead face; up
-# with the tree as it grows, until all of it is in frame; back down with the leaf as it falls,
-# following it from the branch to the ground; held on it through the stillness; and when the
-# feet come over it, a whip left that catches up with the runners and runs with them.
+# Camera 1, 03:42-04:07, one unbroken shot, locked off, low, right up next to the dead animal.
+# It doesn't move until the feet come over the leaf; then it whips left, catches up with the
+# runners and runs with them.
 cam1 = camera("CAM unbroken")
 f1 = [f for f in FR if f < fr(ACTION)]
 pos, tgt = [], []
-tree_mid = Vector((SKULL.x, SKULL.y, CAM_FIXED.z + 9.0 * math.tan(math.radians(14.0))))   # whole tree, centred
 for f in f1:
     t = (f - T0) / O.FPS
-    g = Vector((SKULL.x, SKULL.y, 0.7))
-    g = g.lerp(tree_mid, smooth(TREE_GROW[0] + 0.2, TREE_GROW[1] + 0.2, t))      # up, as it grows
-    lp = leaf_at.get(f, HANG) if t <= 0.04 else Vector(LEAF)                    # it lies there until the feet
-    lp = Vector((lp.x, LEAF.y + 0.3 * (lp.y - LEAF.y), lp.z))                     # follow the fall, not every rock
-    g = g.lerp(lp, smooth(T("03:52:18"), T("03:53:12"), t))                      # to the leaf, then down with it
+    g = Vector(AIM)
     if t > WHIP[0]:                                                              # the whip: turn at an even
         u = (t - WHIP[0]) / (WHIP[1] - WHIP[0])                                  # rate, eased in and out
         u = min(1.0, u) ** 3 * (u * (6 * u - 15) + 10) if u < 1 else 1.0
         runners = Vector((LANE_X, YC[f] + 0.5, 1.0))                             # the backs of the runners
-        d0, d1 = (Vector(LEAF) - CAM_FIXED).normalized(), (runners - CAM_FIXED).normalized()
+        d0, d1 = (AIM - CAM_FIXED).normalized(), (runners - CAM_FIXED).normalized()
         g = CAM_FIXED + d0.slerp(d1, u) * 4.0
     pos.append(CAM_FIXED)
     tgt.append(g)
@@ -773,7 +789,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, fourth pass"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, fifth pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)

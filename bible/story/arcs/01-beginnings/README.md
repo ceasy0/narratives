@@ -12,7 +12,7 @@ About an hour (your decision, 2026-10-03). Where each part stands is the [README
 
 | Part | Text | Length | What it has |
 |---|---|---|---|
-| **The Opening** | Gen 1:1–2:7 | 5:00 | Dossier, treatment, script and animatic; the [production plan](../../../production/opening/PLAN.md) for making the finished Opening |
+| **The Opening** | Gen 1:1–2:7 | 5:06 | Dossier, treatment, script and animatic; the [production plan](../../../production/opening/PLAN.md) for making the finished Opening |
 | **The Garden** | Gen 2:8–3:24 | About 55 minutes | Decided in [008](../../../discussions/008-adam-eve-and-the-garden.md) and [009](../../../discussions/009-god-in-the-garden.md); the [dossier](./garden/DOSSIER.md) holds the decisions, the look and the six movements. **Next: the treatment.** |
 
 Everything decided for the Opening is in its [dossier §7](./opening/DOSSIER.md#7-the-decisions); everything decided for the Garden, including the rule for the hour (no invented speech between Adam and Eve that the Opening's grammar could carry instead), is in the [Garden dossier §1](./garden/DOSSIER.md#1-whats-decided). The headline decisions are in [FOUNDATIONS §4](../../../canon/FOUNDATIONS.md#4-decisions-so-far).
@@ -37,7 +37,7 @@ Eight hours, as mapped in [ARCHITECTURE](../../ARCHITECTURE.md#arc-1--genesis-ge
 | Step | File | What's in it |
 |---|---|---|
 | 1 | [`opening/DOSSIER.md`](./opening/DOSSIER.md) | Your reading of Genesis 1 verse by verse and how it fits, your reading of 2:4–7 as a recap, what pulls against it, the science, the build, and every decision on the Opening |
-| 2 | [`opening/TREATMENT.md`](./opening/TREATMENT.md) | The sequence in fourteen beats, timed to 5:00, with what's yours and what's mine marked. It doubles as the beat sheet. |
+| 2 | [`opening/TREATMENT.md`](./opening/TREATMENT.md) | The sequence in fourteen beats, timed to 5:06, with what's yours and what's mine marked. It doubles as the beat sheet. |
 | 3 | [`scripts/beginnings/opening.fountain`](../../../scripts/beginnings/opening.fountain) | The script: shot by shot, with timecodes and tags (PDF beside it) |
 | 4 | [`production/opening/`](../../../production/opening/README.md) | The animatic, all fourteen beats rendered in code with a generated soundtrack, and its code; the [production plan](../../../production/opening/PLAN.md) (the honest answer on quality, the pipeline, the face without a scan, the tempo map, costs, and the handoff to your sound in FL Studio), the [tools research](../../../production/opening/TOOLS.md) and the [visual references](../../../production/opening/REFERENCES.md) |
 

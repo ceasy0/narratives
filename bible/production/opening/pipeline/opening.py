@@ -7,7 +7,19 @@ import csv
 import pathlib
 
 FPS = 24
-TOTAL = 300 * FPS
+TOTAL = 306 * FPS                             # 5:06 since 2026-10-14 (beat 12 is 6 s longer)
+ANIMATIC_TOTAL = 300 * FPS                    # the v3.1 animatic is still 5:00
+
+
+def animatic_frame(f):
+    """Where a frame of the 5:06 Opening is in the 5:00 animatic: the same before 03:42; beat 12
+    (03:42-04:06 now, 03:42-04:00 there) squeezed; everything after it 6 s earlier."""
+    a, b = 222 * FPS, 246 * FPS
+    if f < a:
+        return f
+    if f < b:
+        return a + round((f - a) * 18 / 24)
+    return f - 6 * FPS
 
 HERE = pathlib.Path(__file__).resolve().parent
 OPENING = HERE.parent                         # bible/production/opening

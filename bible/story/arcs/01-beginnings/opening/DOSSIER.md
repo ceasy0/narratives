@@ -4,7 +4,7 @@
 
 **Status:** v4, 2026-10-13: the research behind the [treatment](./TREATMENT.md), and every decision on the Opening in its current form. How it gets built is the [production plan](../../../../production/opening/PLAN.md). Built from your *Scene Descriptions* draft, [FR-01](../../../../canon/FRAMINGS.md#fr-01--the-opening-creation-as-cosmic-and-biological-history), [FR-02](../../../../canon/FRAMINGS.md#fr-02--god-yin-and-yang-as-the-trinity), [FR-15](../../../../canon/FRAMINGS.md#fr-15--genesis-1-read-in-order-as-the-history-of-matter), [FR-16](../../../../canon/FRAMINGS.md#fr-16--the-faces), [Discussion 001](../../../../discussions/001-how-god-speaks.md) and the prototype in `Biblical Story Concept`.
 
-**Your brief:** it starts with a face emerging from a sea of black and white static and ends on the face of an early human looking at the Nile delta. It runs 5:00, ten seconds of it a fade from black. It should feel very fast, following evolution from a single-celled organism to humans just coming out of Africa. It's the introduction to Episode 1, which runs about an hour and continues through the Garden of Eden to Genesis 3:24.
+**Your brief:** it starts with a face emerging from a sea of black and white static and ends on the face of an early human looking at the Nile delta. It runs 5:06, ten seconds of it a fade from black. It should feel very fast, following evolution from a single-celled organism to humans just coming out of Africa. It's the introduction to Episode 1, which runs about an hour and continues through the Garden of Eden to Genesis 3:24.
 
 ---
 

@@ -86,9 +86,9 @@ The registers come from Discussion 006 (decided 2026-10-13): beats 1–9 are the
 | **9. The crossing** (2:32–2:46) | The photon's flight; the Earth growing; down through cloud into the sea and a cell | Blender: a planet (public-domain NASA textures), clouds, water, a cell shader | — |
 | **10. The waters swarm** (2:46–3:18) | Time-lapse of life in the sea: cells, the swimmer, fish, the great creature, the first wings | Blender layout and camera; AI video from key frames for the creatures | Consistency between AI shots |
 | **11. The land** (3:18–3:42) | The haul-out, the lizard, the night of giants, the dead *Triceratops*, the small creature, the impact | Same; the impact's glow, quake and falling sky in Blender | AI video for animals; the impact can be all Blender |
-| **12. Dust** (3:42–4:00) | Time running on the skull; ferns, flowers, the tree; the slow leaf | Blender time-lapse (decay, growth); the leaf as a simulated cloth leaf in real time | — |
-| **13. Fill the earth** (4:00–4:36) | The run, always left; the cat, the clash, the newborn, the grave, the generations | Blender layout of the whole run (one long camera path); AI video for the people, shot by shot along it | Content filters: the fight, the clash and the child's burial may be refused by commercial models; those shots can be done in Blender or with an open model on your machine |
-| **14. Rest** (4:36–5:00) | Real time: the cliff, the delta at dawn, the face, the breath, the eye | Blender: the designed face, lit for real, and the delta (NASA imagery for the geography) | The close-up of the eye is the hardest shot for realism |
+| **12. Dust** (3:42–4:06) | Time running on the skull; ferns, flowers, the tree; the slow leaf | Blender time-lapse (decay, growth); the leaf as a simulated cloth leaf in real time | — |
+| **13. Fill the earth** (4:06–4:42) | The run, always left; the cat, the clash, the newborn, the grave, the generations | Blender layout of the whole run (one long camera path); AI video for the people, shot by shot along it | Content filters: the fight, the clash and the child's burial may be refused by commercial models; those shots can be done in Blender or with an open model on your machine |
+| **14. Rest** (4:42–5:06) | Real time: the cliff, the delta at dawn, the face, the breath, the eye | Blender: the designed face, lit for real, and the delta (NASA imagery for the geography) | The close-up of the eye is the hardest shot for realism |
 
 ## 5. The face, without a scan
 
@@ -127,7 +127,7 @@ The brief (2026-10-03) says the sequence "should feel very fast," and you've fou
 | 9. The crossing | 14 s | Medium | Speed, then a plunge | — |
 | 10. The waters swarm | 32 s | Medium | Fast time-lapse | Flat placeholders |
 | 11. The land | 24 s | **Almost none** | Eras flying past, then one held moment of listening, then the impact | Flat placeholders; the impact wasn't on screen until v3.1 |
-| 12. Dust | 18 s | Low | Time racing, then slowing to the leaf, then stillness | The leaf was too fast; fixed in v3.1 |
+| 12. Dust | 24 s | Low | Time running, slower than before, then slowing to the leaf, then stillness | 6 s longer from your layout notes (2026-10-14), so the Opening runs 5:06 |
 | 13. Fill the earth | 36 s | Medium | Relentless: running, always left | — |
 | 14. Rest | 24 s | Still | Real time, stillness, one breath | — |
 
@@ -153,10 +153,10 @@ The brief (2026-10-03) says the sequence "should feel very fast," and you've fou
 The sound is yours, made in FL Studio and laid over the picture afterward (your decision, 2026-10-13). Along the way I guide you through making each sound and fitting the layers together, and find sounds in films for you to listen to from your descriptions (§6). What I hand you at picture lock:
 
 1. **The locked picture**, two copies: one clean, one with the timecode and shot numbers burned in.
-2. **A cue sheet** (a spreadsheet): every sound event the picture makes, frame-accurate: the release at 0:38:00, each turn in beat 4, each ignition (with its position in the frame, for panning), the impacts, the quake, the leaf landing, the first footfall at 4:00, the breath.
+2. **A cue sheet** (a spreadsheet): every sound event the picture makes, frame-accurate: the release at 0:38:00, each turn in beat 4, each ignition (with its position in the frame, for panning), the impacts, the quake, the leaf landing, the first footfall at 4:06, the breath.
 3. **The guide stems** from the code (`animatic/out/audio/`), as reference only. You liked the held note; its recipe is below so you can rebuild it properly.
 
-**The held note, as made in v3:** three voices at 0 and ±4 cents, panned centre, left and right, a near-sine with a little of the second and third harmonics (fading to a pure tone for the photon), no audible vibrato, gliding between pitches over two or three seconds. It enters at 0:44.4 out of silence and ends at 4:58. Its pitch follows whatever is in focus:
+**The held note, as made in v3:** three voices at 0 and ±4 cents, panned centre, left and right, a near-sine with a little of the second and third harmonics (fading to a pure tone for the photon), no audible vibrato, gliding between pitches over two or three seconds. It enters at 0:44.4 out of silence and ends at 5:04. Its pitch follows whatever is in focus:
 
 | From | Pitch | What's in focus |
 |---|---|---|
@@ -168,24 +168,25 @@ The sound is yours, made in FL Studio and laid over the picture afterward (your 
 | 2:44 | E4 (330 Hz) | The cell, the sea |
 | 3:18 | A3 (220 Hz) | The animal |
 | 3:42 | G3 (196 Hz) | The dust |
-| 4:00 | E3 (165 Hz) | The people |
-| 4:36 | A2 (110 Hz) | The face again |
+| 4:06 | E3 (165 Hz) | The people |
+| 4:42 | A2 (110 Hz) | The face again |
 
-**Across the cut into the Garden** (from the Garden's walk in, [LAYOUT §10](../../story/arcs/01-beginnings/garden/LAYOUT.md#10-the-walk-in), 2026-10-13): the Opening ends on black with the breath held, and the Garden's first shot is Adam, a man in his early twenties, letting it out at the east entrance. So the breath is one stem that carries over the cut, and the FL Studio project should hold both sides of it. By then the held note has faded under the cliff's wind; the Garden's walk has little or no music, only birds, water and wind, and the note comes back only at the command. If the animatic ever runs past 5:00, that out-breath is its tail shot, and Adam's face should read as kin to the cliff's ([Discussion 007](../../discussions/007-the-faces-of-god.md)).
+**Across the cut into the Garden** (from the Garden's walk in, [LAYOUT §10](../../story/arcs/01-beginnings/garden/LAYOUT.md#10-the-walk-in), 2026-10-13): the Opening ends on black with the breath held, and the Garden's first shot is Adam, a man in his early twenties, letting it out at the east entrance. So the breath is one stem that carries over the cut, and the FL Studio project should hold both sides of it. By then the held note has faded under the cliff's wind; the Garden's walk has little or no music, only birds, water and wind, and the note comes back only at the command. If the picture ever runs past 5:06, that out-breath is its tail shot, and Adam's face should read as kin to the cliff's ([Discussion 007](../../discussions/007-the-faces-of-god.md)).
 
 The longer sound brief from the assessment (layers per beat, the release's six layers, one shared reverb space) still applies as a starting point; it's in the git history of this file (the assessment of 2026-10-09, §5) if you want it.
 
 ## 9. What I need from you
 
-1. **Watch the fourth pass of the first layout: beats 12 and 13, 03:42 to 04:36.** It's `work/playblast/1200-1395-layout.mp4`, on channel 2 of the master edit (`work/edit/opening-master.blend`) over the animatic. Grey stand-ins at true scale: judge where the camera is, what's in frame, which way things move and how fast. Send notes by timecode. Your notes on the first three passes (2026-10-14) are folded in; each choice is a number in [`pipeline/layout_b12_13.py`](./pipeline/layout_b12_13.py):
-   - **03:42–04:01, one unbroken shot from one place, only panning** (your notes, 2026-10-14): 24 mm, 9 m from the dead face and 1.3 m up, 4 m from where the leaf lands. It holds on the face; pans up with the tree as it grows until all 8 m of it is in frame; pans back down with the leaf, which falls from a low branch reaching toward us and drifts 2.5 m our way; holds on it through the stillness; and when the feet come over it, whips left over half a second (14 frames), eased in and out, and runs with them. **The first cut in the Opening is at 04:01,** after the whip: everything before it hands over inside the picture, so the cut comes with the people.
-   - **The tree** stands in a clearing, 8 m tall, where the head lay, beyond the band's path; the forest near it is lower, so it reads. Beat 12's inner timings moved a second earlier to make room for the leaf: the skull sinks 03:46–03:48, the green comes back from 03:48, the tree grows 03:50:12–03:52:12.
-   - **The leaf** hangs from a low branch (2.7 m up), trembles harder and harder for a second, lets go at 03:53:12, falls for nearly four seconds, and lies still for three before the feet at 04:00. It's white in the playblast so its motion reads at its true size, 12 cm.
-   - **04:01–04:06, fast cuts (SH1310–1316),** the run as an action scene, before the travelling camera. The first, at the lead runner's feet, runs with them. Every one after it is a camera planted in one place that turns to follow them and whips as they go by (your notes, 2026-10-14): the lead man looking back as he passes; the band from high and wide; back past the last runners into the trees, where something is coming; the girl running hard; spears and legs, low; the band coming at the lens and streaming past it. All keep the band moving left.
-   - **What they're running from** is the big cat (my pick): it's after them from before the leaf, glimpsed in SH1313, and catches them at 04:10. Say if it should be something else, or never seen.
-   - **04:06–04:36, the travelling camera,** 35 mm, 1.5 m high, now 9.5 m from the band through the forest (9 m for the cat, then as before: 6.5 m, 8.5 m for the clash, 5 m for the newborn, 10 m at the river). Generations pass at 04:06:19, 04:09, 04:15:12 and 04:21, each where a trunk crosses the lens.
-   - **At the grave (SH1390),** a man walking up the line behind her (Man F) reaches her as she finishes, takes her arm and pulls her up and on with him. She looks back once.
-   - **Known faults:** Workbench has no motion blur, so the whip is a smooth fast pan rather than a blur (the real render has the blur); the people are stick stand-ins, so the fights are positions, not action; the river doesn't read from eye height in grey; the cliff isn't built yet, so the layout stops at 04:36.
+1. **Watch the fifth pass of the first layout: beats 12 and 13, 03:42 to 04:42.** It's `work/playblast/1200-1395-layout.mp4`, on channel 2 of the master edit (`work/edit/opening-master.blend`) over the animatic. Grey stand-ins at true scale: judge where the camera is, what's in frame, which way things move and how fast. Send notes by timecode. Your notes on the first four passes (2026-10-14) are folded in; each choice is a number in [`pipeline/layout_b12_13.py`](./pipeline/layout_b12_13.py):
+   - **The Opening runs 5:06** (your call, 2026-10-14): beat 12 is 24 s instead of 18, and everything from 04:00 on is 6 s later. The decay is slower (the fire stops by 03:45, the flesh goes 03:45–03:48, the skull sinks 03:48–03:50:12, the green and the forest come back 03:50:12–03:54), the tree grows over 2.5 s (03:54–03:56:12), and everything is still for nearly two seconds before the leaf. The animatic stays 5:00; the master edit maps it onto the new timings shot by shot, so its beat 12 runs short under the layout.
+   - **03:42–04:07, one unbroken shot, locked off, low and right up next to the dead animal** (24 mm, 40 cm off the ground, 1.9 m from the head). The head decomposes on the right of frame, with the burrow the small creature ran into beside it, filled by the ash. The tree grows where the head lay, and we see only its stump; the forest comes up beyond it. The leaf falls into frame from above like a feather, swinging side to side, and lands near the bottom of frame, 1.7 m from the lens; three seconds of stillness; then the feet, and the whip.
+   - **The whip** turns over half a second (14 frames), eased in and out, and runs with the runners. **The first cut in the Opening is at 04:07,** after it.
+   - **04:07–04:12, fast cuts (SH1310–1316).** The first, at the lead runner's feet, runs with them. Every one after it is a camera planted in one place that turns to follow them and whips as they go by: the lead man looking back as he passes; the band from high and wide; back past the last runners into the trees, where something is coming; the girl running hard; spears and legs, low; the band coming at the lens and streaming past it.
+   - **The band is a crowd, not a formation** (your note): no two runners are in step, each has its own stride, and each wanders across and along the pack on slow waves of its own, settling as they fall into a line later. They swerve round the tree and the camera.
+   - **What they're running from** is the big cat (my pick): it's after them from before the leaf, glimpsed in SH1313, and catches them at 04:16. Say if it should be something else, or never seen.
+   - **04:12–04:42, the travelling camera,** 35 mm, 1.5 m high, 9.5 m from the band through the forest (9 m for the cat, then 6.5 m, 8.5 m for the clash, 5 m for the newborn, 10 m at the river). Generations pass where a trunk crosses the lens.
+   - **At the grave (SH1390),** a man walking up the line behind her reaches her as she finishes, takes her arm and pulls her up and on with him. She looks back once.
+   - **Known faults:** no motion blur in the playblast; the people are stick stand-ins, so the fights are positions, not action; the river doesn't read from eye height in grey; the cliff isn't built yet, so the layout stops at 04:42.
 2. **The face, after these notes** (the order you set, 2026-10-13). Your photos go in `work/face/`, out of git. Best is a set (straight on, both three-quarter views, both profiles, neutral, soft even light, no glasses) or a slow 20-second turn on your phone; one front photo works, but the sides are then guessed. The expressions are made in software (§5). *Yours to say:* your face as the base of the recurring face from the start, or the fallback behind a designed face, as planned?
 
 *Also yours to say:* whether v1 and v2 of the animatic stay in the folder beside v3.1.
@@ -194,8 +195,8 @@ Decided 2026-10-13, and folded in above: the live-action look for beats 10–14 
 
 ## 10. Order of work
 
-1. **Done:** this plan; the [reference page](./REFERENCES.md) and its images; animatic v3.1, the timing reference until layout replaces it; the set-up on your desktop (§2); the master edit, with v3.1 cut into the script's 79 shots at their timecodes; the first layout of beats 12–13 and three more passes from your notes (§9).
-2. **Next on your desktop:** your notes on the fourth pass of the beats 12–13 layout. The face test (MetaHuman in Unreal 5.7, or a head from your photos, brought into Blender, one frame rendered with one keyed expression) comes after those notes: the story reel has to be right first (you, 2026-10-13).
+1. **Done:** this plan; the [reference page](./REFERENCES.md) and its images; animatic v3.1, the timing reference until layout replaces it; the set-up on your desktop (§2); the master edit, with v3.1 cut into the script's 79 shots at their timecodes; the first layout of beats 12–13 and four more passes from your notes (§9).
+2. **Next on your desktop:** your notes on the fifth pass of the beats 12–13 layout. The face test (MetaHuman in Unreal 5.7, or a head from your photos, brought into Blender, one frame rendered with one keyed expression) comes after those notes: the story reel has to be right first (you, 2026-10-13).
 3. **The shot list and tempo map** for all fourteen beats (stage A), the cut list is [`pipeline/shots.csv`](./pipeline/shots.csv), drafted from the script; each shot still needs its camera, screen direction, speed and sound hits, and your corrections.
 4. **Layout of every beat** (stage B), reviewed in batches, to layout lock.
 5. **Style frames** (stage C), one per beat.

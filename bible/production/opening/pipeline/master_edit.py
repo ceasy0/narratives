@@ -2,8 +2,10 @@
 
     blender -b --factory-startup -P master_edit.py
 
-One strip per shot of shots.csv, each cut from the v3.1 animatic at its own
-timecode (channel 1), the animatic's guide sound under it (channel 5), and on
+One strip per shot of shots.csv, each cut from the v3.1 animatic where that shot
+is in it (channel 1; the animatic is 5:00 and the Opening 5:06 since beat 12 grew,
+so opening.animatic_frame maps one to the other), the animatic's guide sound under
+it in two pieces, shifted the same way (channel 5), and on
 channel 2 every layout playblast found in work/playblast/ named
 <first shot>-<last shot>-layout.mp4, placed at its first shot's timecode.
 A marker stands at the start of each beat. Rebuilding replaces the file.
@@ -39,17 +41,23 @@ shots = O.shots()
 tags = ['COLOR_01', 'COLOR_02', 'COLOR_03', 'COLOR_04', 'COLOR_05', 'COLOR_06', 'COLOR_07']
 beat_seen = set()
 for sh in shots:
-    st = se.strips.new_movie("SH%s %s" % (sh["shot"], sh["what"]), str(O.ANIMATIC),
-                             channel=1, frame_start=0, fit_method='FIT')
-    st.frame_offset_start = sh["start"]
-    st.frame_offset_end = O.TOTAL - sh["end"]
+    a, dur = O.animatic_frame(sh["start"]), sh["end"] - sh["start"]
+    st = se.strips.new_movie("SH%s %s" % (sh["shot"], sh["what"][:60]), str(O.ANIMATIC),
+                             channel=1, frame_start=sh["start"] - a, fit_method='FIT')
+    st.frame_offset_start = a
+    st.frame_offset_end = O.ANIMATIC_TOTAL - a - dur
     st.color_tag = tags[sh["beat"] % len(tags)]
     assert st.frame_final_start == sh["start"] and st.frame_final_end == sh["end"], sh["shot"]
     if sh["beat"] not in beat_seen:
         beat_seen.add(sh["beat"])
         scene.timeline_markers.new("BEAT %d" % sh["beat"], frame=sh["start"])
 
-snd = se.strips.new_sound("Guide sound (animatic v3.1)", str(O.ANIMATIC), channel=5, frame_start=0)
+cut = O.frame("04:00")                       # the guide sound: as it is up to 04:00, then 6 s later
+snd = se.strips.new_sound("Guide sound (animatic v3.1), to 04:00", str(O.ANIMATIC), channel=5, frame_start=0)
+snd.frame_offset_end = O.ANIMATIC_TOTAL - cut
+snd = se.strips.new_sound("Guide sound (animatic v3.1), from its 04:00", str(O.ANIMATIC), channel=5,
+                          frame_start=6 * O.FPS)
+snd.frame_offset_start = cut
 
 by_id = {sh["shot"]: sh for sh in shots}
 for f in sorted(O.PLAYBLAST.glob("*-layout.mp4")):
