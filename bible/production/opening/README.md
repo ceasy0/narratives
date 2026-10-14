@@ -16,7 +16,7 @@ It isn't the finished animation, and it won't be made into it by fixing notes on
 
 | Placeholder | What it is now | What replaces it |
 |---|---|---|
-| **The face** (beats 1–4, 14) | A real human face: MediaPipe's canonical face mesh (`animatic/facemesh.py`, Apache 2.0), deformed for the four-face rule's expressions and lit in code. It reads as a human face, but it's anyone's face, and it has no skin. | A realistic face without a scan (your preference, 2026-10-13): MetaHuman first, then the fallbacks, driven by your webcam performance if you're willing ([PLAN §5](./PLAN.md#5-the-face-without-a-scan)), in Blender. `FaceMesh.render` is the one function to swap. |
+| **The face** (beats 1–4, 14) | A real human face: MediaPipe's canonical face mesh (`animatic/facemesh.py`, Apache 2.0), deformed for the four-face rule's expressions and lit in code. It reads as a human face, but it's anyone's face, and it has no skin. | A realistic face without a scan (your preference, 2026-10-13): MetaHuman first, then the fallbacks (your own face, from photos, among them), with the expressions keyed in software ([PLAN §5](./PLAN.md#5-the-face-without-a-scan)), in Blender. `FaceMesh.render` is the one function to swap. |
 | **The world** (beats 10–14) | Flat silhouettes and gradients: cells, the swimmer, the fish, the great creature, the shore, the night, the *Triceratops*, the tree, the band, the delta. The face at the cliff is the mesh. Staging, direction and timing are real; the look isn't. | Blender for the layout, and AI video for the living bodies in a live-action look ([PLAN §4](./PLAN.md#4-beat-by-beat); *Arcane* if the live-action look can't be done). |
 | **The sound** | Ten stems generated from the treatment's rules (`animatic/sound.py`): the hiss (wind, sand, swell), the whisper, the release (six layers), the held note, the atmospheres, the laugh, the grains, the cosmos, the world, and one shared reverb space. Still synthesized. | Your FL Studio score and sound, made as a separate layer over the locked picture ([PLAN §8](./PLAN.md#8-the-sound-handoff): the cue sheet, the guide stems, the held note's pitches). The stems are written as 48 kHz stereo WAVs into `animatic/out/audio/` when you build. |
 
@@ -59,7 +59,7 @@ The scripts in [`pipeline/`](./pipeline/) build the master edit and the layouts 
 
 | File | What it does |
 |---|---|
-| `pipeline/shots.csv` | The cut list: 73 shots with their timecodes, from the script. Shot 1250 is beat 12's fifth shot. |
+| `pipeline/shots.csv` | The cut list: 79 shots with their timecodes, from the script. Shot 1250 is beat 12's fifth shot. |
 | `pipeline/opening.py` | Shared paths, timecodes and the shot list. Frames are film frames: 03:42:00 is frame 5328 everywhere. |
 | `pipeline/master_edit.py` | Builds `work/edit/opening-master.blend`: one strip per shot cut from the v3.1 animatic (channel 1), every layout playblast in `work/playblast/` at its timecode (channel 2), the guide sound (channel 5), a marker at each beat. Run it again after any new playblast. |
 | `pipeline/layout_b12_13.py` | Builds the grey layout of beats 12–13 (`work/layout/b12-13-layout.blend`) and, with `-- render`, its playblast (`work/playblast/1200-1395-layout.mp4`, six minutes to render). Every placement, lens and speed is a number at the top. `-- still=03:59:00,04:00:04` renders single frames instead. |
@@ -68,4 +68,4 @@ To look yourself: open `work/layout/b12-13-layout.blend`, press Numpad 0 for the
 
 ## 6. Next
 
-The order, and why, is in [PLAN §10](./PLAN.md#10-order-of-work). In short: your notes on the first layout, beats 12 into 13 ([PLAN §9](./PLAN.md#9-what-i-need-from-you)), then the face test once the story reel is right; then the layout of all fourteen beats, cut together and judged as a whole before anything is rendered at quality.
+The order, and why, is in [PLAN §10](./PLAN.md#10-order-of-work). In short: your notes on the second pass of the first layout, beats 12 into 13 ([PLAN §9](./PLAN.md#9-what-i-need-from-you)), then the face test once the story reel is right; then the layout of all fourteen beats, cut together and judged as a whole before anything is rendered at quality.

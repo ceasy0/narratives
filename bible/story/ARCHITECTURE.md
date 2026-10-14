@@ -443,7 +443,7 @@ c. AD 95. Patmos.
 | 202 | Patmos | Rev 1–3; 1–3 John | An old man in a quarry; a voice like a trumpet; the Son of Man among the lampstands, his face like the sun; seven letters to seven real towns. | Position 19 |
 | 203 | The Throne | Rev 4–11 | A door in heaven; the four living creatures; the Lamb standing as slain; the seals; the trumpets. The Opening at full strength, if anywhere. | Position 19; 001 (the visions) |
 | 204 | The Dragon | Rev 12–18 | A woman clothed with the sun; "that ancient serpent" named at last; the beasts; Babylon falls in an hour. | Position 19; FR-19; Position 16 (closed here) |
-| 205 | The Face | Rev 19–22 | The rider; the thousand years; the books opened; a new Jerusalem with no temple; the river and the tree of life, open again; "they will see his face." The series' last image. | Position 19; 007 (the last image, proposed) |
+| 205 | The Face | Rev 19–22 | The rider; the thousand years; the books opened; a new Jerusalem with no temple; the river and the tree of life, open again; "they will see his face." The last scene is yours, seeded in [012](../discussions/012-the-last-scene.md): the Opening's face closing its eyes as a woman's open on "Yes, I am coming soon," then black. | Position 19; 007; 012 |
 
 ---
 
@@ -520,7 +520,7 @@ Kept as you had them: In the Beginning (1–3) as Episode 1; Cain and Abel as Ep
 
 ## 11. What the map needs decided, and when
 
-This table is the schedule. Every open question is in the [README](../README.md#what-i-need-from-you) (the author's rule, 2026-10-11): the hard passages below are its item 16.
+This table is the schedule. Every open question is in the [README](../README.md#what-i-need-from-you) (the author's rule, 2026-10-11): the hard passages below are its item 17.
 
 | Before | Decision |
 |---|---|

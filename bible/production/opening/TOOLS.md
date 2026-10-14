@@ -1,6 +1,6 @@
 # The Opening — tools research
 
-> The research behind the [production plan](./PLAN.md): faces without a scan, expressions from a webcam, Blender 5, GPU shaders and fractal renderers, AI video and its prices, image models on 8 GB, and how studios catch pacing and staging problems. Gathered 2026-10-13, with a source for each point. Prices and versions move fast; re-check before spending money.
+> The research behind the [production plan](./PLAN.md): faces without a scan, expressions from a webcam, Blender 5, GPU shaders and fractal renderers, AI video and its prices, image models on 8 GB, how studios catch pacing and staging problems, and Fourier epicycles. Gathered 2026-10-13 and 2026-10-14, with a source for each point. Prices and versions move fast; re-check before spending money.
 
 Confidence marks: [H] verified from an official or primary source, [M] from a reputable secondary source or partly verified, [U] unverified or inferred.
 Target machine: Windows, RTX 2060 Super 8 GB (Turing), 32 GB RAM, Blender 5.0, Python 3.14, ffmpeg.
@@ -160,3 +160,17 @@ Prices are official per-second API rates unless noted.
   2. Write a shot list with duration, lens, camera move, and subject path per shot. Draw an overhead map per set (forest, cliff, Nile delta) showing camera and subject paths.
   3. Do a grey-box layout pass in Blender, rendered as fast EEVEE/Workbench playblasts, and cut it into the VSE in place of the boards.
   4. Only then do look-dev and final renders. Score in FL Studio to picture lock (export a locked reference MP4 with burned-in timecode and frame numbers).
+
+## 8. Fourier epicycles
+
+Asked 2026-10-14: would animations made from spatial and temporal Fourier epicycles suit the Opening, in the spirit of making detail from simple equations?
+
+- **What they are:** any closed curve, written as a path of complex numbers, is a sum of circles turning at whole-number speeds (its discrete Fourier transform). Chained tip to tip, the circles redraw the curve: that's an epicycle drawing. Done on a shape, it's spatial; done on a motion over time (a walk cycle, a breath), it's temporal, and the motion loops. [H] (standard mathematics: the DFT)
+- **What they're good at:** line drawings and lettering that assemble themselves; motion that loops; smooth morphs between two shapes, by blending their coefficients. They're cheap: one numpy FFT per shape. [H]
+- **What they aren't:** a source of detail. Epicycles redraw a shape you already have; they add nothing to it, and sharp corners cost many circles and still ring (the Gibbs effect). The Mandelbrot set, noise and the cosmic web are the other kind: a simple rule iterated, which makes detail no one drew. That's the kind the Opening's beats 1–9 are built on, in `animatic/`. [H]
+- **Where Fourier already does real work for us:** Blender's Ocean modifier builds waves from an FFT spectrum (Tessendorf's method), which is the right tool for the swell in beat 1 and the seas of beats 6 and 10. [H] https://docs.blender.org/manual/en/latest/modeling/modifiers/physics/ocean.html
+- **For this project [U]:**
+  1. Not as the base of the Opening. Beats 1–9 already make their detail from rules (sand flow, fractals, the web), and beats 10–14 need living bodies in a live-action look, which no equation gives.
+  2. Not for the face: a face traced as a line is the prototype's outline face, which your notes dropped ([dossier §6](../../story/arcs/01-beginnings/opening/DOSSIER.md#6-the-build)).
+  3. Yes for the credits, and anywhere else a line should draw itself: names or the face's contour traced by turning circles ([Discussion 012](../../discussions/012-the-last-scene.md)).
+  4. To try it: a script takes a contour (a name in a font, or the face mesh's outline from `animatic/facemesh.py`), runs the FFT, and draws the circle chain as a Grease Pencil or curve object in Blender, or as frames in the animatic's code. About a day for a test.

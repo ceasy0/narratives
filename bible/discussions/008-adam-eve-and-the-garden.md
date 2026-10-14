@@ -1,6 +1,6 @@
 # 008 — Adam, Eve and the Garden
 
-**Status:** **Decided for the Garden, 2026-10-08.** What's left (how the naming plays, and whether the change passes to Eve in the sleep) is carried into [009](./009-god-in-the-garden.md), since both turn on how God is present.
+**Status:** **Decided for the Garden, 2026-10-08.** What's left (how the naming plays, and whether the change passes to Eve in the sleep) is carried into [009](./009-god-in-the-garden.md), since both turn on how God is present. Round 3 (2026-10-14), your note that the willing is the fall, is open.
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), which is the rest of Episode 1
 **Positions:** 5 (Adam and Eve), 16 (the serpent), and where Eden is
 **Fit grade:** your first idea (Adam as the first of a new species) was Tension. Your answer of 2026-10-07 (of the line at the cliff, and new in what happens to him) is Supported. See round 1.
@@ -362,6 +362,33 @@ What it does for us: it's the lean for Position 14 (the angel of the LORD), whic
 ### For 009's round 2
 
 The two small opens from this discussion go there: whether the change passes to Eve in the sleep (my default: yes), and how the naming plays (my proposal: shown, wordless).
+
+### Round 3 — 2026-10-14: the willing is the fall
+
+Your note:
+
+> I think Adam and Eve eating the apple brought the ego/separation and the fall, not because the apple was evil or magic, but because they did something they knew they were not supposed to. They genuinely willed wrong, and it is that that brought the ego and separation.
+
+*My view: Supported, and I think it's the strongest reading of the chapter.*
+
+**For it.**
+- The scene turns on the command, not the fruit. God's first question is "Have you eaten of the tree of which I commanded you not to eat?" (3:11), and the charge against the man is "because you have listened to the voice of your wife and have eaten of the tree of which I commanded you" (3:17).
+- They knew. Eve quotes the command back to the serpent (3:2–3), and Paul says "Adam was not deceived" (1 Tim 2:14): he ate with his eyes open.
+- Paul's summary names the act: "by the one man's disobedience the many were made sinners" (Rom 5:19).
+- The fruit itself is "good for food" and "a delight to the eyes" (3:6), like everything God made (1:31). Nothing in the Garden is evil in itself.
+- Augustine reads it your way: the fruit wasn't bad; the command was given so obedience could be learned, and "the evil act had never been done had not an evil will preceded it" (*City of God* 14.12–13; medium-high confidence on the chapter numbers).
+
+**Against it.** The text gives the trees real properties. The tree is named "the tree of the knowledge of good and evil" (2:9, 17), and the serpent's "your eyes will be opened" (3:5) comes true the moment they eat: "then the eyes of both were opened" (3:7). The tree of life works by what it is: God bars the way "lest he reach out his hand and take also of the tree of life and eat, and live forever" (3:22). If one tree acts in its own right, it's harder to say the other is only a test.
+
+**How I'd hold both.** The tree can be what it's named, and what opens their eyes is still the act. To know good and evil "from the inside," the only way a creature can, is to do the evil. So the knowledge comes by the willing, and 3:7 and 3:22 still stand.
+
+**It sharpens one thing we decided.** Round 2 says awareness and ego arrive "in one act." Your note says what brings them is the willing. Augustine would push further: the will was already proud before the bite, so the ego came first and the act only showed it. That would mean they were made with an ego, which cuts against this discussion and against [002](./002-jesus-humanity.md)'s check, where Jesus has the awareness without the grab (Phil 2:6). *My suggestion:* the willing is the ego coming into being. The choice to take what was refused is the first grab, and the eating completes it, so "one act" still holds; it's the willing and the eating together.
+
+**What it changes on screen.** Nothing happens to the fruit, or to them, by magic: no glow, no change in the light at the bite, no sound from the tree. The change shows in their faces, starting at the decision, before the taste. The text has the eyes open after both have eaten (3:7), so the full turn lands then, but the camera should be on the choosing.
+
+**The apple.** The text says only "fruit." The apple comes later, from Latin, where *malum* (evil) and *mālum* (apple) sound alike. I'd keep the fruit unnamed and not an apple; the treatment can settle what it looks like.
+
+**Question for you:** record it as "the fruit does nothing by itself; the willing is the fall, and the ego comes into being in that willing, one act with the eating"? ([README item 14](../README.md#the-garden))
 
 ## Decision
 

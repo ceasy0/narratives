@@ -2,7 +2,7 @@
 
 > Genesis 1:1–2:7. One unbroken sequence, 5 minutes, no words. It opens Episode 1; the Garden (2:8–3:24) follows it.
 
-**Status:** v3.4, 2026-10-13: the Opening's beat sheet, as the [script](../../../../scripts/beginnings/opening.fountain) (v1.3) and the [animatic](../../../../production/opening/README.md) (v3.1) are cut to it. Everything tagged P5 is yours; everything tagged P6 is my suggestion.
+**Status:** v3.5, 2026-10-14: the Opening's beat sheet, as the [script](../../../../scripts/beginnings/opening.fountain) (v1.4) and the layout are cut to it; the [animatic](../../../../production/opening/README.md) (v3.1) is too, except inside beat 12 and the first seconds of beat 13. Everything tagged P5 is yours; everything tagged P6 is my suggestion.
 
 **The Opening is the exception to the first pass** (your decision, 2026-10-07), so it has a script and an animatic ahead of the rest. The timings are the table in §2: change a timing here, and the animatic re-renders to it. How the finished Opening gets made is the [production plan](../../../../production/opening/PLAN.md).
 
@@ -44,7 +44,7 @@ Six rules, from your notes. Every beat follows them.
 
 **Your reading puts the days in order,** from the first day to the seventh. With the wings added, nothing in Genesis 1 is now out of order ([dossier §2](./DOSSIER.md#2-your-reading-of-genesis-1-and-how-it-fits)). **And your reading of 2:4–7 as a recap** (2026-10-05) is how the Opening was already built: 2:4–7 isn't shown as something that happens afterward; it's shown inside the seventh day, at the cliff. My view of that reading is in the [dossier §2](./DOSSIER.md#on-247).
 
-**Pace.** Beat 1 is slow: thirty-eight seconds, the first ten of them a fade. Beat 2 is instant. From there each beat covers more time in less screen until the leaf (two seconds of stillness) and the cliff (twenty-four, in real time). There are no cuts to black inside it. Each beat hands over through the thing we're already looking at. Beat 3 now carries two arcs of expression in 22 seconds, about 12 for the separation and 10 for the connection. That's tight but in keeping with "very fast." The storyboard will tell us whether it needs a few more seconds.
+**Pace.** Beat 1 is slow: thirty-eight seconds, the first ten of them a fade. Beat 2 is instant. From there each beat covers more time in less screen until the leaf (three seconds of stillness) and the cliff (twenty-four, in real time). There are no cuts to black inside it. Each beat hands over through the thing we're already looking at. Beat 3 now carries two arcs of expression in 22 seconds, about 12 for the separation and 10 for the connection. That's tight but in keeping with "very fast." The storyboard will tell us whether it needs a few more seconds.
 
 **One thing is followed all the way through.** A face becomes a particle. The particle becomes a proton. The proton gives off a photon. The photon feeds a cell. The cell's line becomes an animal. The animal leaves a body. The body becomes a tree. The tree drops a leaf. People run over the leaf, and one of them has the face.
 
@@ -146,19 +146,19 @@ Low in the south a glow comes up, where no dawn should be. It climbs, and the cr
 
 ### 12. Dust (3:42–4:00)
 
-We stay on the dead animal's face, and time runs. It's the last time the world moves faster than we can follow. The fire stops falling. The sky goes dark and stays dark: a long winter of soot and dust. Ash settles on the face. The flesh goes. The skull shows, and sinks into the ground. The sky clears. The first green to come back is ferns, everywhere, the same ferns the lizard-shaped creature ran through. Then the land greens differently, with flowering things and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19, "you are dust." P2: the impact winter, and the "fern spike": for thousands of years after the impact, ferns made up nearly all the plant life in western North America. P6: the ferns as a callback.]]
+We stay on the dead animal's face, wide, in one shot that doesn't cut until the run, and time runs. It's the last time the world moves faster than we can follow. The fire stops falling. The sky goes dark and stays dark: a long winter of soot and dust. Ash settles on the face. The flesh goes. The skull shows, and sinks into the ground. The sky clears. The first green to come back is ferns, everywhere, the same ferns the lizard-shaped creature ran through. Then the land greens differently, with flowering things and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19, "you are dust." P2: the impact winter, and the "fern spike": for thousands of years after the impact, ferns made up nearly all the plant life in western North America. P6: the ferns as a callback.]]
 
-Where the head lay, a shoot. It's a sapling, then a tree, in a few seconds.
+Where the head lay, a shoot. It's a sapling, then a tree, in a few seconds, in a clearing, and we draw back to see all of it.
 
-One leaf comes loose and falls into frame, slowly, rocking from side to side the way a real leaf falls. It settles on the earth. [[Your note (2026-10-13): "the falling leaf should feel like a slow scene that gets whipped into motion and action by the tribe of people running over it."]]
+One leaf trembles on its stem and lets go. It falls slowly, rocking from side to side the way a real leaf falls, and we come down with it. It settles on the earth. [[Your note (2026-10-13): "the falling leaf should feel like a slow scene that gets whipped into motion and action by the tribe of people running over it."]]
 
-Everything is still. Two seconds.
+Everything is still. Three seconds.
 
 ### 13. Fill the earth (4:00–4:36)
 
-Feet. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up and away, tumbling. People, shouting, wild. We go with them.
+Feet. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up and away, tumbling, and the view whips after them. People, shouting, wild.
 
-A band of early humans, men and women, with spears and tools, in forest. Something is chasing them, or they're chasing something. [[P1: 1:27, "male and female he created them."]]
+A band of early humans, men and women, with spears and tools, in forest, running from something: five seconds of fast cuts, an action scene, before the view settles in beside them. What's after them is the big cat that catches them in the woodland. [[P1: 1:27, "male and female he created them." P5: running from something, in fast cuts (your notes on the first layout, 2026-10-14). P6: the cat as what they flee.]]
 
 From here the band never stops moving, and neither do we. The view travels beside them, and they cross the frame from right to left the whole way. Whatever happens to them happens on the move. [[P5: yours (2026-10-05): whether they're fighting, burying a loved one or holding a newborn, they're always still walking forward, to the left, to the next scene. P6: north is screen left, so the view faces east the whole way, toward "Eden, in the east" (2:8).]]
 

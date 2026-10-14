@@ -47,23 +47,29 @@ shot,beat,start,end,frames,what
 1150,11,03:36:12,03:38:12,48,A glow in the south
 1160,11,03:38:12,03:39:12,24,The quake
 1170,11,03:39:12,03:42:00,60,The sky falls; we stay on the dead face
-1200,12,03:42:00,03:44:00,48,The last fire falling on the dead face; it stops
-1210,12,03:44:00,03:46:12,60,"Dark sky; ash; the flesh goes, the skull shows"
-1220,12,03:46:12,03:49:00,60,The skull sinks into the ground
-1230,12,03:49:00,03:52:00,72,"The sky clears; ferns, then flowers and trees"
-1240,12,03:52:00,03:54:00,48,"A shoot, a sapling, a tree"
-1250,12,03:54:00,03:58:00,96,"One leaf falls, slowly, and settles"
-1260,12,03:58:00,04:00:00,48,Everything is still: two seconds
-1300,13,04:00:00,04:01:12,36,Feet over the leaf; it is whipped away
-1310,13,04:01:12,04:03:00,36,We pull back and go with the band
-1320,13,04:03:00,04:10:00,168,"The run, right to left, through forest"
+1200,12,03:42:00,03:44:00,48,"One unbroken shot to 04:01, wide: the last fire falling on the dead face; it stops"
+1210,12,03:44:00,03:46:00,48,"Dark sky; ash; the flesh goes, the skull shows"
+1220,12,03:46:00,03:48:00,48,The skull sinks into the ground
+1230,12,03:48:00,03:50:12,60,"The sky clears; ferns, then flowers and trees"
+1240,12,03:50:12,03:52:12,48,"A shoot, a sapling, a tree; we go back and up to hold all of it"
+1250,12,03:52:12,03:57:00,108,"One leaf trembles on its stem, lets go and falls, slowly; we come down with it"
+1260,12,03:57:00,04:00:00,72,Everything is still: three seconds
+1300,13,04:00:00,04:01:00,24,Feet over the leaf; it is whipped away; we whip left after them
+1310,13,04:01:00,04:01:18,18,"Fast cuts of the run: the lead runner's feet, low"
+1311,13,04:01:18,04:02:12,18,The lead man looks back over his shoulder
+1312,13,04:02:12,04:03:06,18,Wide and high: the band through the forest
+1313,13,04:03:06,04:03:22,16,Back past the rear runners: something in the trees behind them
+1314,13,04:03:22,04:04:14,16,"The girl, running hard"
+1315,13,04:04:14,04:05:06,16,"Spears and legs, low"
+1316,13,04:05:06,04:06:00,18,They stream past the lens
+1320,13,04:06:00,04:10:00,96,"We travel with them: the run, right to left, through forest"
 1330,13,04:10:00,04:14:00,96,Open woodland; the cat
 1340,13,04:14:00,04:17:00,72,The run goes on
 1350,13,04:17:00,04:20:00,72,The clash with the other band
 1360,13,04:20:00,04:22:00,48,The run goes on; the pace eases
 1370,13,04:22:00,04:26:00,96,Grassland; the newborn passed along the line
 1380,13,04:26:00,04:27:00,24,The line walks on
-1390,13,04:27:00,04:30:12,84,The woman at the small grave
+1390,13,04:27:00,04:30:12,84,The woman at the small grave; a man takes her arm and pulls her on
 1395,13,04:30:12,04:36:00,132,Dry country; the river
 1400,14,04:36:00,04:38:00,48,They come up onto the cliff and stop
 1410,14,04:38:00,04:46:00,192,"The valley, the braided river, the flock"
