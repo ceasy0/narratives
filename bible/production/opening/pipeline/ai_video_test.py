@@ -13,6 +13,10 @@ project's Python environment (C:\\Users\\corbi\\AdonaiOpening\\venv\\Scripts\\py
     python ai_video_test.py frames --go     Gemini repaints the first and last frames as live action (a few cents)
     python ai_video_test.py veo --go        Veo 3.1 Fast: a 4 s clip from those two frames and a prompt (about $0.40)
     python ai_video_test.py aleph --go      Aleph: the clean layout clip itself restyled as live action (about $1)
+    python ai_video_test.py aleph --clip mocap --go
+                                            Aleph on band_mocap_test.py's render of the same shot, rigged
+                                            bodies running CMU mocap (mocap-041500-041812.mp4) in place of
+                                            the grey layout; it writes aleph-mocap-<time>.mp4 (about $1)
 
 The two tests answer different questions. Veo makes its own shot between a first and a last
 frame: it can't follow our camera or timing, only start and end where we say. Aleph keeps the
@@ -33,6 +37,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 AITEST = HERE.parent / "work" / "aitest"
 TAG = "041500-041812"
 CLIP = AITEST / ("clean-%s.mp4" % TAG)
+CLIPS = {"clean": CLIP, "mocap": AITEST / ("mocap-%s.mp4" % TAG)}     # what Aleph can restyle (--clip)
 FIRST, LAST = AITEST / ("clean-%s-first.png" % TAG), AITEST / ("clean-%s-last.png" % TAG)
 LIVE_FIRST, LIVE_LAST = AITEST / "live-first.png", AITEST / "live-last.png"
 
@@ -103,7 +108,7 @@ def check():
             print("Runway: reached; credits", getattr(org, "credit_balance", "?"))
         except Exception as e:  # noqa: BLE001
             print("Runway: the key didn't work:", e)
-    for p in (CLIP, FIRST, LAST):
+    for p in (CLIP, FIRST, LAST, CLIPS["mocap"]):
         print("input", p.name, "present" if p.exists() else "MISSING")
 
 
@@ -159,15 +164,21 @@ def veo():
 
 
 def aleph():
-    need(CLIP)
-    print("Aleph 2 restyles the clean layout clip (about 3.5 s) as live action, 1280x720: about $1.")
+    args = sys.argv + [""]
+    which = args[args.index("--clip") + 1] if "--clip" in args else "clean"
+    if which not in CLIPS:
+        sys.exit("--clip is one of: %s" % ", ".join(CLIPS))
+    clip = CLIPS[which]
+    need(clip)
+    print("Aleph 2 restyles the %s clip, %s (about 3.5 s), as live action, 1280x720: about $1."
+          % ({"clean": "clean layout", "mocap": "mocap bodies"}[which], clip.name))
     if not GO:
         return print("(not sent: add --go)")
     import runwayml
     c = runwayml.RunwayML(api_key=key("RUNWAYML_API_SECRET"))
-    with open(CLIP, "rb") as fh:
-        up = c.uploads.create_ephemeral(file=(CLIP.name, fh, "video/mp4"))
-    uri = getattr(up, "uri", None) or ("data:video/mp4;base64," + base64.b64encode(CLIP.read_bytes()).decode())
+    with open(clip, "rb") as fh:
+        up = c.uploads.create_ephemeral(file=(clip.name, fh, "video/mp4"))
+    uri = getattr(up, "uri", None) or ("data:video/mp4;base64," + base64.b64encode(clip.read_bytes()).decode())
     task = c.video_to_video.create(model="aleph2", video_uri=uri, prompt_text=LOOK, ratio="1280:720")
     print("sent to aleph2; waiting")
     while True:
@@ -176,8 +187,9 @@ def aleph():
         if t.status in ("SUCCEEDED", "FAILED", "CANCELLED"):
             break
     if t.status != "SUCCEEDED":
-        sys.exit("Aleph %s: %s" % (t.status, getattr(t, "failure", "") or getattr(t, "failure_code", "")))
-    out = AITEST / ("aleph-%s.mp4" % time.strftime("%Y%m%d-%H%M%S"))
+        sys.exit("Aleph %s: %s (failure code %s)"
+                 % (t.status, getattr(t, "failure", ""), getattr(t, "failure_code", "")))
+    out = AITEST / ("aleph-%s%s.mp4" % ("" if which == "clean" else which + "-", time.strftime("%Y%m%d-%H%M%S")))
     urllib.request.urlretrieve(t.output[0], out)
     print("wrote", out)
 
