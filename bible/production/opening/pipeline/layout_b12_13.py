@@ -87,7 +87,8 @@ CAM_DIST = [(6, 9.5), (9.5, 9.5), (11, 9.0), (13.5, 9.0), (15, 6.5), (16.5, 6.5)
 CAM_AHEAD = [(3.5, 1.0), (9.5, 1.0), (11, -2.0), (12.6, -5.0), (13.6, -5.5), (15.6, 0.0), (16.5, 1.0), (20, 1.0), (22, -3.4), (26, 3.2), (30.5, -1.0), (33, 1.0), (36, 1.0)]
 CAM_HEIGHT = 1.5
 ZONES = {"forest": (-25, 47), "woodland": (47, 86), "grassland": (86, 101), "dry": (101, 135)}
-WIPES = [8.8, 15.5, 21.0]  # seconds at which a trunk crosses the lens (a generation passes)
+WIPES = [8.8, 15.5, 21.0, 26.0]  # seconds at which a trunk crosses the lens (a generation passes); 26.0 is the lone tree
+#                                  in the grass after the newborn (SH1370-1380, your note, 2026-10-14)
 
 
 def curve(points, t, ease=False):
@@ -731,7 +732,7 @@ hippos = obj_from_bm("Hippos", bm, 0.2)
 bm = bmesh.new()
 for t in WIPES:
     f = int(fr(t))
-    cone(bm, (LANE_X - curve(CAM_DIST, t, ease=True) + 1.2, YC[f] + 0.5, 0), 0.5, 0.42, 22, 10)
+    cone(bm, (LANE_X - curve(CAM_DIST, t, ease=True) + 1.2, YC[f] + curve(CAM_AHEAD, t, ease=True) - 0.3, 0), 0.5, 0.42, 22, 10)   # centred on the lens at t
 wipes = obj_from_bm("Trunks that cross the lens", bm, 0.12)
 
 
@@ -857,7 +858,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, eighth pass"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, ninth pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)
