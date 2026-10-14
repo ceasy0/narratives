@@ -46,7 +46,7 @@ The one place that says where every piece stands. Each document's own history is
 | The rest of Genesis | [010](./discussions/010-the-days-of-noah.md) is decided except the flood's size and the Ark's landing (item 2); [011](./discussions/011-when-god-relents.md) (God relenting) is open. Hour 2, *Cain and Abel*, needs neither. |
 | The map | [ARCHITECTURE](./story/ARCHITECTURE.md) v1.2: 205 hours in 18 arcs. |
 | Ruth | Parked as a first draft, with a [storyboard](./story/arcs/07-ruth/STORYBOARD.md) of sixteen sketched key frames. Its slot in the map is after Gideon (hour 69). **Next, when you return to it:** your pass on the script. |
-| Where the work goes | The shared branch `opening-fade-5min`; main is brought up to it when you ask. |
+| Where the work goes | `main`. |
 | Formats | Markdown for docs · Fountain for screenplays · mp4 for the animatic |
 
 ## What I need from you
