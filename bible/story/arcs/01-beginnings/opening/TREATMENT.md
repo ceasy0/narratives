@@ -1,6 +1,6 @@
 # The Opening — Treatment
 
-> Genesis 1:1–2:7. One unbroken sequence, 5 minutes, no words. It opens Episode 1; the Garden (2:8–3:24) follows it.
+> Genesis 1:1–2:7. One sequence, 5 minutes, no words, unbroken until the people come. It opens Episode 1; the Garden (2:8–3:24) follows it.
 
 **Status:** v3.5, 2026-10-14: the Opening's beat sheet, as the [script](../../../../scripts/beginnings/opening.fountain) (v1.4) and the layout are cut to it; the [animatic](../../../../production/opening/README.md) (v3.1) is too, except inside beat 12 and the first seconds of beat 13. Everything tagged P5 is yours; everything tagged P6 is my suggestion.
 
@@ -146,17 +146,17 @@ Low in the south a glow comes up, where no dawn should be. It climbs, and the cr
 
 ### 12. Dust (3:42–4:00)
 
-We stay on the dead animal's face, wide, in one shot that doesn't cut until the run, and time runs. It's the last time the world moves faster than we can follow. The fire stops falling. The sky goes dark and stays dark: a long winter of soot and dust. Ash settles on the face. The flesh goes. The skull shows, and sinks into the ground. The sky clears. The first green to come back is ferns, everywhere, the same ferns the lizard-shaped creature ran through. Then the land greens differently, with flowering things and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19, "you are dust." P2: the impact winter, and the "fern spike": for thousands of years after the impact, ferns made up nearly all the plant life in western North America. P6: the ferns as a callback.]]
+We stay on the dead animal's face, wide, in one shot from one place that doesn't cut until the run, and time runs. It's the last time the world moves faster than we can follow. The fire stops falling. The sky goes dark and stays dark: a long winter of soot and dust. Ash settles on the face. The flesh goes. The skull shows, and sinks into the ground. The sky clears. The first green to come back is ferns, everywhere, the same ferns the lizard-shaped creature ran through. Then the land greens differently, with flowering things and trees. Animals pass as blurs. [[P1: 2:7, "dust from the ground"; 3:19, "you are dust." P2: the impact winter, and the "fern spike": for thousands of years after the impact, ferns made up nearly all the plant life in western North America. P6: the ferns as a callback.]]
 
-Where the head lay, a shoot. It's a sapling, then a tree, in a few seconds, in a clearing, and we draw back to see all of it.
+Where the head lay, a shoot. It's a sapling, then a tree, in a few seconds, in a clearing, and we pan up with it until all of it is in frame.
 
-One leaf trembles on its stem and lets go. It falls slowly, rocking from side to side the way a real leaf falls, and we come down with it. It settles on the earth. [[Your note (2026-10-13): "the falling leaf should feel like a slow scene that gets whipped into motion and action by the tribe of people running over it."]]
+One leaf trembles on its stem and lets go. It falls slowly, rocking from side to side the way a real leaf falls, and we pan back down with it. It settles on the earth. [[Your note (2026-10-13): "the falling leaf should feel like a slow scene that gets whipped into motion and action by the tribe of people running over it."]]
 
 Everything is still. Three seconds.
 
 ### 13. Fill the earth (4:00–4:36)
 
-Feet. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up and away, tumbling, and the view whips after them. People, shouting, wild.
+Feet. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up and away, tumbling, and the view whips after them. Then the first cut in the Opening: the people bring it. People, shouting, wild.
 
 A band of early humans, men and women, with spears and tools, in forest, running from something: five seconds of fast cuts, an action scene, before the view settles in beside them. What's after them is the big cat that catches them in the woodland. [[P1: 1:27, "male and female he created them." P5: running from something, in fast cuts (your notes on the first layout, 2026-10-14). P6: the cat as what they flee.]]
 
