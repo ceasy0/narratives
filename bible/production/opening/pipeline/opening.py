@@ -11,7 +11,7 @@ TOTAL = 300 * FPS
 
 HERE = pathlib.Path(__file__).resolve().parent
 OPENING = HERE.parent                         # bible/production/opening
-WORK = OPENING / "work"                       # big files, on H, out of git
+WORK = OPENING / "work"                       # big files, out of git
 EDIT = WORK / "edit"
 LAYOUT = WORK / "layout"
 PLAYBLAST = WORK / "playblast"
