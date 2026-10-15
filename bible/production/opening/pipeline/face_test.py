@@ -154,6 +154,27 @@ human.data.attributes.new("stubble", 'FLOAT', 'POINT').data.foreach_set("value",
 lips = [ramp01(1.15, 0.8, (((p - E).x / 0.028) ** 2 + (((p - E).z + 0.078) / 0.011) ** 2) ** 0.5) * ramp01(-0.01, -0.03, (p - E).y)
         for p in pts]                                                    # the lips, for their own colour
 human.data.attributes.new("lip_tint", 'FLOAT', 'POINT').data.foreach_set("value", lips)
+EYES = [sum((pts[i] for i in sets[g]), Vector()) / len(sets[g]) for g in ("helper-l-eye", "helper-r-eye")]
+
+
+def under_eye(p):
+    """Below each closed eye, where the lids' hollow takes a shadow a painter would leave light."""
+    return max(ramp01(1.0, 0.45, (((p - c).x / 0.026) ** 2 + (((p - c).z + 0.014) / 0.013) ** 2) ** 0.5)
+               * ramp01(0.015, 0.0, (p - c).y) for c in EYES)
+
+
+def warmth(p):
+    """Where a painter warms the skin: the cheeks, the nose's tip, the ears."""
+    d = p - E
+    cheeks = max(ramp01(1.0, 0.2, (((p - c).x - 0.012 * (1 if c.x > E.x else -1)) ** 2 + ((p - c).z + 0.035) ** 2) ** 0.5 / 0.024)
+                 for c in EYES)
+    nose = ramp01(1.0, 0.2, ((d.x ** 2 + (d.z + 0.045) ** 2) ** 0.5) / 0.014) * ramp01(-0.02, -0.04, d.y)
+    ears = ramp01(0.06, 0.072, abs(d.x)) * ramp01(-0.06, -0.035, d.z) * ramp01(0.04, 0.0, d.z)
+    return max(cheeks, nose, ears)
+
+
+human.data.attributes.new("under_eye", 'FLOAT', 'POINT').data.foreach_set("value", [under_eye(p) for p in pts])
+human.data.attributes.new("warmth", 'FLOAT', 'POINT').data.foreach_set("value", [warmth(p) for p in pts])
 
 rig = HS.add_builtin_rig(human, "cmu_mb")
 for pb in rig.pose.bones:
@@ -204,16 +225,17 @@ def hair(n_locks=120, seed=3):
     for k, r in enumerate(sorted(roots, key=lambda p: -p.z)):    # crown first, so the outer locks lie over them
         _, n0, _ = nearest(r)
         side = 1.0 if r.x > part_x else -1.0
+        top = ramp01(E.z + 0.04, E.z + 0.11, r.z)        # 1 on the crown, 0 low on the side of the head
         if r.y > E.y + 0.1:                             # the back, to the nape
             d = Vector((0.2 * side, 0.6, -0.8))
             end_z = E.z - 0.13
         elif side < 0:                                  # right of the part: over the top, across the forehead, down the right
-            d = Vector((-1.0, -0.12 if r.y < E.y + 0.04 else 0.05, -0.15))
+            d = Vector((-(0.25 + 0.75 * top), -0.12 if r.y < E.y + 0.04 else 0.05, -(1.0 - 0.85 * top)))
             end_z = E.z - 0.085 + rng.uniform(-0.015, 0.015)
         else:                                           # left of the part: down the left, behind the ear
-            d = Vector((1.0, 0.2, -0.4))
+            d = Vector((0.25 + 0.6 * top, 0.2, -(1.0 - 0.6 * top)))
             end_z = E.z - 0.085 + rng.uniform(-0.015, 0.015)
-        lift = 0.005 + 0.022 * (k / len(roots)) + rng.uniform(0, 0.004)   # each lock over the last: volume
+        lift = 0.004 + 0.014 * top + 0.004 * (k / len(roots)) + rng.uniform(0, 0.002)   # the crown's locks lie over the side's
         wave = 40.0 * r.x + 30.0 * r.y                 # neighbours wave together, as combed hair does
         p = r - n0 * 0.003                              # rooted in the scalp
         path, norms = [p.copy()], [n0]
@@ -340,9 +362,9 @@ def sun(name, energy, colour, elevation, azimuth, angle=2.0):
 # in light and the shadows fall soft under the brow, the nose, the lips and the jaw; a cool fill;
 # a rim from behind along the hair. Soft (wide suns), as you asked of the shadows.
 sun("Morning sun", 3.4, (1.0, 0.93, 0.84), 50, 262, angle=12.0)
-sun("Sky fill", 0.35, (0.62, 0.74, 0.86), 15, 215, angle=25.0)
+sun("Sky fill", 0.28, (0.62, 0.74, 0.86), 15, 215, angle=25.0)
 sun("Rim", 2.4, (0.96, 0.9, 0.82), 30, 110, angle=6.0)
-sun("Bounce", 0.6, (1.0, 0.9, 0.8), -12, 275, angle=30.0)      # warm light up from below, lifting the shadow under the eyes
+sun("Bounce", 0.35, (1.0, 0.9, 0.8), -12, 275, angle=30.0)      # warm light up from below, lifting the shadow under the eyes
 P.sky(scene, zenith=(0.07, 0.11, 0.13), horizon=(0.13, 0.18, 0.19), below=(0.08, 0.11, 0.12),  # dark teal, as behind Vi
       clouds=(0.16, 0.21, 0.22), fill=(0.6, 0.7, 0.78), fill_strength=0.3, soft=0.35)
 
@@ -363,6 +385,8 @@ def skin_colour(g, uv):
     col = g.mix(0.15, (*P.srgb((0.88, 0.79, 0.73)), 1.0), tex)     # pale and muted, as Vi; little of the scan, whose pores read as dirt
     amt = g.math('MULTIPLY', g.new("ShaderNodeAttribute", attribute_name="stubble").outputs["Fac"], 0.3)
     col = g.mix(amt, col, g.scale(col, (0.72, 0.7, 0.75)))        # stubble, a soft cool tone
+    warm = g.new("ShaderNodeAttribute", attribute_name="warmth").outputs["Fac"]
+    col = g.mix(g.math('MULTIPLY', warm, 0.55), col, g.scale(col, (1.0, 0.82, 0.8)))   # warmer, rosier, as Vi's cheeks and nose
     lip = g.new("ShaderNodeAttribute", attribute_name="lip_tint").outputs["Fac"]
     return g.mix(g.math('MULTIPLY', lip, 0.8), col, g.scale(col, (0.8, 0.58, 0.56)))   # lips their own, darker rose, as Vi's
 
@@ -374,7 +398,7 @@ def hair_colour(g, uv):
     return g.scale(col, sh)                         # darker at the root, lighter to the ends, as in the photos
 
 
-def bake(ob, colour, size, name, ao_distance=0.015):
+def bake(ob, colour, size, name, ao_distance=0.015, masks=None):
     """Bake ob's colour (EMIT) and the light that reaches it (DIFFUSE, light only) into its UVs;
     save both as half floats for the painter."""
     scene.render.engine = 'CYCLES'
@@ -388,9 +412,11 @@ def bake(ob, colour, size, name, ao_distance=0.015):
     img = bpy.data.images.new(name + " bake", size, size, float_buffer=True, alpha=False)
     out = {}
     scene.world.light_settings.distance = ao_distance
-    for kind in ("base", "light", "ao"):
+    for kind in ("base", "light", "ao") + (("masks",) if masks else ()):
         if kind == "base":
             m, g = node_mat(name + " base", lambda g: g.new("ShaderNodeEmission", {"Color": colour(g, g.new("ShaderNodeTexCoord").outputs["UV"]), "Strength": 1.0}).outputs[0])
+        elif kind == "masks":                       # painter's masks: red, where to paint light whatever the light
+            m, g = node_mat(name + " masks", lambda g: g.new("ShaderNodeEmission", {"Color": g.new("ShaderNodeAttribute", attribute_name=masks).outputs["Color"], "Strength": 1.0}).outputs[0])
         else:
             m, g = node_mat(name + " " + kind, lambda g: g.new("ShaderNodeBsdfDiffuse", {"Color": (1, 1, 1, 1)}).outputs[0])
         tn = g.new("ShaderNodeTexImage", image=img)
@@ -401,7 +427,7 @@ def bake(ob, colour, size, name, ao_distance=0.015):
         ob.select_set(True)
         bpy.context.view_layer.objects.active = ob
         t = time.time()
-        if kind == "base":
+        if kind in ("base", "masks"):
             bpy.ops.object.bake(type='EMIT', margin=24, use_clear=True)
         elif kind == "ao":                          # occlusion close in: the creases
             bpy.ops.object.bake(type='AO', margin=24, use_clear=True)
@@ -452,14 +478,15 @@ else:
     if not (REUSE and skin_png.exists() and hair_png.exists()):
         for ob in [human, locks] + list(fitted.values()):          # something to cast shadows while baking
             wear(ob, P.flat("Bake stand-in", (0.8, 0.8, 0.8)))
-        sk = bake(human, skin_colour, SKIN_RES, "skin", 0.012)
+        sk = bake(human, skin_colour, SKIN_RES, "skin", 0.012, masks="under_eye")
         hb = bake(locks, hair_colour, HAIR_RES, "hair", 0.02)
         reg = region()
         for (src, png, pal, radii, extra) in ((sk, skin_png, "skin", "10,5,3,2", ["--region", str(reg), "--bristles", "0", "--threshold", "10"]),
                                               (hb, hair_png, "hair", "8,4,2", ["--along", "v"])):
             t = time.time()
             subprocess.run(["py", str(BRUSH), str(src["base"]), str(src["light"]), str(png), "--palette", pal,
-                            "--radii", radii, "--ao", str(src["ao"])] + extra, check=True)
+                            "--radii", radii, "--ao", str(src["ao"])] + extra
+                           + (["--masks", str(src["masks"])] if "masks" in src else []), check=True)
             print("painted %s in %.0fs" % (png.name, time.time() - t))
     wear(human, painted_mat("Painted skin", skin_png))
     wear(locks, painted_mat("Painted hair", hair_png))
@@ -468,7 +495,7 @@ else:
         tex = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]}, image=cutouts[kind])
         em = g.new("ShaderNodeEmission", {"Color": (*P.srgb(col), 1.0), "Strength": 1.0})
         tr = g.new("ShaderNodeBsdfTransparent")
-        a = g.remap(tex.outputs["Alpha"], 0.05, 0.45, 0.0, 1.0, smooth=False)     # full, as his brows are
+        a = g.remap(tex.outputs["Alpha"], 0.03, 0.3 if kind == "eyelashes" else 0.45, 0.0, 1.0, smooth=False)   # full: his brows; a bold lid line, as Vi's
         g.nt.links.new(g.new("ShaderNodeMixShader", [a, tr.outputs[0], em.outputs[0]]).outputs[0], out.inputs["Surface"])
         wear(fitted[kind], m)
     wear(fitted["eyes"], P.flat("Eye", (0.85, 0.82, 0.78)))

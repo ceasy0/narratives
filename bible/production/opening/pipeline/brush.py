@@ -33,7 +33,7 @@ PALETTES = {
     # After the frame of Vi (your reference, 2026-10-15): pale, muted skin, mostly in light, the
     # shadow a cool grey-brown in a soft, wide gradient; dark accents in the creases; the hair's
     # locks parted by dark and lit with strong painted highlights.
-    "skin": dict(shadow=(0.6, 0.54, 0.53), light=(1.02, 1.0, 0.97), soft=(0.1, 0.5),
+    "skin": dict(shadow=(0.6, 0.54, 0.53), light=(1.02, 1.0, 0.97), soft=(0.15, 0.8),
                  warm=((1.05, 0.92, 0.88), 0.12), highlight=None,
                  crease=((0.45, 0.36, 0.36), 0.45), crease_at=(0.62, 0.32), wet=0.35),
     "hair": dict(shadow=(0.5, 0.46, 0.52), light=(1.05, 1.0, 0.94), soft=(0.04, 0.5),
@@ -61,13 +61,15 @@ def blur(a, r):
     return a
 
 
-def compose(base, light, mask, palette, ao=None):
+def compose(base, light, mask, palette, ao=None, lift=None):
     """The picture to paint, 0-255 sRGB: the colour in its painted light, the creases dark."""
     p = PALETTES[palette]
     L = blur(light[..., :3].mean(-1), 3)          # the bake's noise out, so it isn't painted as grit
     top = np.percentile(L[mask > 0], 99) if mask is not None and mask.any() else np.percentile(L, 99)
     L = L / max(top, 1e-6)
     t = smoothstep(p["soft"][0], p["soft"][1], L)[..., None]
+    if lift is not None:                            # where a painter leaves it light (under the eyes)
+        t = np.maximum(t, 0.85 * blur(lift, 4)[..., None])
     col = srgb(base[..., :3])
     out = col * (np.array(p["shadow"]) * (1 - t) + np.array(p["light"]) * t)
     w = np.exp(-((L - 0.5 * (p["soft"][0] + p["soft"][1])) / 0.12) ** 2)[..., None] * p["warm"][1]
@@ -77,6 +79,8 @@ def compose(base, light, mask, palette, ao=None):
         out = out * (1 - h) + np.array(p["highlight"][0]) * h
     if ao is not None and p.get("crease"):
         c = (smoothstep(p["crease_at"][0], p["crease_at"][1], ao[..., :3].mean(-1)) * p["crease"][1])[..., None]
+        if lift is not None:
+            c = c * (1 - 0.7 * blur(lift, 4)[..., None])
         out = out * (1 - c) + out * np.array(p["crease"][0]) * c
     return np.clip(out * 255, 0, 255).astype(np.float32)
 
@@ -193,6 +197,7 @@ if __name__ == "__main__":
     ap.add_argument("--region")
     ap.add_argument("--along")
     ap.add_argument("--ao")
+    ap.add_argument("--masks")
     ap.add_argument("--bristles", type=int, default=1)
     ap.add_argument("--threshold", type=float, default=14.0)
     a = ap.parse_args()
@@ -201,7 +206,8 @@ if __name__ == "__main__":
     size = base.shape[0]
     fine = region_mask(a.region, size) if a.region else None
     ao = np.load(a.ao).astype(np.float32)[::-1] if a.ao else None
-    ref = compose(base, light, fine, a.palette, ao)
+    lift = np.load(a.masks).astype(np.float32)[::-1][..., 0] if a.masks else None
+    ref = compose(base, light, fine, a.palette, ao, lift)
     Image.fromarray(np.uint8(ref)).save(a.out.replace(".png", "-ref.png"))
     canvas = paint(ref, [int(r) for r in a.radii.split(",")], fine, a.along, a.threshold, bristles=bool(a.bristles))
     wet = PALETTES[a.palette]["wet"]

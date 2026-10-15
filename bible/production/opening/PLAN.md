@@ -208,9 +208,11 @@ The longer sound brief from the assessment (layers per beat, the release's six l
    Then I compared it with Vi and corrected it:
    - pale, muted skin, mostly in light, with the shadow a soft, cool grey-brown;
    - dark accents in the creases (the lids, the nostrils, the line of the lips), solid painted brows, and lips with their own colour;
-   - no outline, and a dark teal backdrop.
+   - no outline, and a dark teal backdrop;
+   - the light turning through a wide half-tone, so the cheek, the jaw, the neck and the side of the nose are modeled in soft painted shadow;
+   - the shade under the closed eyes left light, as a painter would, and warmth in the cheeks, the nose's tip and the ears.
 
-   The forms get more definition in the model itself: pushed away from a smoothed copy of themselves, though not round the eyes. The hair is sculpted in locks after your photos: parted on your left, swept across, falling to the jaw. Earlier versions are kept as `*-v1` (and `face-v1-v2.png`).
+   The forms get more definition in the model itself: pushed away from a smoothed copy of themselves, though not round the eyes. The hair is sculpted in locks after your photos: parted on your left, swept across, falling to the jaw, the side locks lying down the head and the crown's draped over them. Earlier versions are kept as `*-v1` (and `face-v1-v2.png`).
    - **The face** ([`pipeline/face_test.py`](./pipeline/face_test.py)): MPFB2's head shaped after your photos with its own sliders (long and lean, high cheekbones, a straight brow, a long nose, a firm jaw and chin, light stubble), with the eyes closed, as in the photos and as the Opening's face first is. `face-neutral.png`, `face-breath.png`, and `face-breath.mp4` are four seconds of the Opening's last breath: the nostrils widening, the lips parting, the chin lifting (`face-sheet.png` has four frames). **The breath is right for the Opening's face** (you, 2026-10-15; §5). Baking and painting take about three minutes; after that it renders at 1.6 seconds a frame at 1920×1080.
    - **The run** (`band_mocap_test.py -- painted`): the layout's travelling shot, 04:15:00–04:18:12, the ten motion-captured bodies in the painted look in a painted forest on the layout's rolling ground, riding it, each planted foot set down on it, and the crowns rounded into lumps of foliage. The clip (`run-041500-041812.mp4` and its sheet) is still the first version, 1280×720 at 10 seconds a frame; `run-still-041618.png` is one of its frames in the second. Neither is painted with the brush yet; the run gets it once the face is right.
    - **What it shows,** as I read it:
@@ -218,8 +220,8 @@ The longer sound brief from the assessment (layers per beat, the release's six l
      - **It's painted, in the surfaces.** Every surface of the face is now painted stroke by stroke in its own texture. How close that comes to *Arcane* is yours to judge.
      - **Where it's still short of Vi:**
        - The head is MPFB's realistic design, not a stylised one like Vi's.
-       - The hair is procedural, and its locks stick out at the side.
-       - A grey shade stays under the closed eyes.
+       - The hair is grown by rule: it lies right now, but a designer would shape it.
+       - The closed eyes' lid line is thin lashes; Vi's lids are a bold dark line.
        - *Arcane*'s textures are painted by hand, with intent: a freckle here, a warm note there, an accent where it carries the expression. Ours follow the light.
        The ways to close the gap are our own character designs, and painting by hand over the brush's textures where it matters most (the recurring face first). That hand painting would be done in Blender's Texture Paint, by you or an artist, with a pen tablet. I can paint only by script.
      - **The likeness is approximate.** The head is shaped by sliders and the hair grown by rule, both after your photos; with the eyes closed, the eyes aren't tested yet. Designing the recurring face properly is §5's job.
