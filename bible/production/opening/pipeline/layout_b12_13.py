@@ -17,7 +17,7 @@ import pathlib
 
 import bpy
 import bmesh
-from mathutils import Matrix, Vector
+from mathutils import Matrix, Vector, noise
 from bpy_extras import anim_utils
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
@@ -157,6 +157,46 @@ Y_WOOD, Y_GRASS, Y_DRY = Y(T("04:17")) + 2.4, Y(T("04:29")) + 1.3, Y(T("04:37:12
 ZONES = {"forest": (-25, Y_WOOD), "woodland": (Y_WOOD, Y_GRASS), "grassland": (Y_GRASS, Y_DRY), "dry": (Y_DRY, Y_DRY + 34)}
 print("zones", {k: (round(a), round(b)) for k, (a, b) in ZONES.items()})
 
+# The lie of the land (your note, 2026-10-15: the ground was too flat). Long swells up to about
+# 2 m high and 40 m across, smaller rises, and bumps, from smooth noise; level round where the
+# leaf lands, easing into the swells from 3 m to 14 m off, so the low camera there still sees it
+# (and everything there stays at 0); and falling
+# to the river, which runs north east of the path in the dry country (its near bank, RIVER_NEAR).
+RIVER_NEAR = [(75, Y_DRY - 13), (34, Y_DRY - 5), (15, Y_DRY + 2), (12, Y_DRY + 11), (12, Y_DRY + 139)]
+RIVER_WIDTH = 70.0
+WATER = -1.0                                   # the river's level, m
+
+
+def _swells(x, y):
+    return (4.0 * noise.noise(Vector((x / 40.0, y / 40.0, 0.3))) + 1.5 * noise.noise(Vector((x / 13.0, y / 13.0, 1.7)))
+            + 0.3 * noise.noise(Vector((x / 3.0, y / 3.0, 4.1))))
+
+
+_AT_LEAF = _swells(LEAF.x, LEAF.y)
+
+
+def river_x(y):
+    """The near bank's x at y, or None where there's no river."""
+    for (xa, ya), (xb, yb) in zip(RIVER_NEAR, RIVER_NEAR[1:]):
+        if ya <= y <= yb:
+            return lerp(xa, xb, (y - ya) / (yb - ya))
+    return None
+
+
+def height(x, y):
+    """The ground's height at (x, y), m."""
+    h = (_swells(x, y) - _AT_LEAF) * smooth(3.0, 14.0, math.hypot(x - LEAF.x, y - LEAF.y))
+    bank = river_x(y)
+    if bank is not None:                       # down a bank 6 m wide to the water, and up the far side
+        h = lerp(h, WATER - 0.4, smooth(5.0, -1.0, bank - x) * (1 - smooth(-1.0, 5.0, x - bank - RIVER_WIDTH)))
+    return h
+
+
+def ground_along(x, y, half=3.0):
+    """The ground's height at (x, y), averaged along the path `half` m either side, so a camera
+    riding it doesn't jolt."""
+    return sum(height(x, y + k * half / 3) for k in range(-3, 4)) / 7
+
 
 # ---------------------------------------------------------------- scene set-up
 bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -248,9 +288,20 @@ def in_view(x, y):
     return d.length < 6.0 and d.length > 0 and d.angle(a) < math.radians(45)
 
 
+GX, GY = (-120, 140), (-120, 320)               # the ground modelled at 1 m; flat and low beyond
+_vs = [(x, y, height(x, y)) for y in range(GY[0], GY[1] + 1) for x in range(GX[0], GX[1] + 1)]
+_w = GX[1] - GX[0] + 1
+_fs = [(j * _w + i, j * _w + i + 1, (j + 1) * _w + i + 1, (j + 1) * _w + i)
+       for j in range(GY[1] - GY[0]) for i in range(GX[1] - GX[0])]
+me = bpy.data.meshes.new("Ground")
+me.from_pydata(_vs, [], _fs)
+me.shade_smooth()
+ground = bpy.data.objects.new("Ground", me)
+ground.color = (0.42, 0.42, 0.42, 1.0)
+col.objects.link(ground)
 bm = bmesh.new()
-bmesh.ops.create_grid(bm, x_segments=1, y_segments=1, size=400)
-ground = obj_from_bm("Ground", bm, 0.42)
+bmesh.ops.create_grid(bm, x_segments=1, y_segments=1, size=1200, matrix=Matrix.Translation((0, 0, WATER - 0.5)))
+obj_from_bm("Ground beyond", bm, 0.42)
 
 # Small things on the ground, so the travelling camera has something to travel past.
 for zone, (y0, y1) in ZONES.items():
@@ -263,17 +314,17 @@ for zone, (y0, y1) in ZONES.items():
         if in_view(x, y):
             continue
         if zone == "forest":       # ferns
-            cone(bm, (x, y, 0), random.uniform(.25, .45), 0.05, random.uniform(.3, .6), 6)
+            cone(bm, (x, y, height(x, y)), random.uniform(.25, .45), 0.05, random.uniform(.3, .6), 6)
         elif zone == "woodland":   # brush and stones
-            cone(bm, (x, y, 0), random.uniform(.15, .5), 0.1, random.uniform(.15, .7), 6)
+            cone(bm, (x, y, height(x, y)), random.uniform(.15, .5), 0.1, random.uniform(.15, .7), 6)
         elif zone == "grassland":  # tufts
-            cone(bm, (x, y, 0), random.uniform(.08, .2), 0.0, random.uniform(.3, .8), 5)
+            cone(bm, (x, y, height(x, y)), random.uniform(.08, .2), 0.0, random.uniform(.3, .8), 5)
         else:                      # stones
-            cone(bm, (x, y, 0), random.uniform(.15, .6), random.uniform(.1, .3), random.uniform(.1, .35), 5)
+            cone(bm, (x, y, height(x, y)), random.uniform(.15, .6), random.uniform(.1, .3), random.uniform(.1, .35), 5)
     cover = obj_from_bm("Ground cover, " + zone, bm, 0.33)
-    if zone == "forest":           # bare until the ferns come back at 03:51
+    if zone == "forest":           # bare until the ferns come back at 03:51, up out of the ground
         a, b = fr(T("03:51")), fr(T("03:52:12"))
-        key(cover, "scale", [a, b], [[1, 1], [1, 1], [0, 1]])
+        key(cover, "location", [a, b], [-0.8, 0.0], index=2)
 
 
 # ---------------------------------------------------------------- trees
@@ -303,7 +354,7 @@ for x, y in spaced(int(2 * (Y_WOOD + 28)), (4.5, 62), (-28, Y_WOOD), 3.0, keep_o
     bm = bmesh.new()
     tree_mesh(bm, (0, 0, 0), h, r)
     ob = obj_from_bm("Tree", bm, random.uniform(.2, .3))
-    ob.location = (x, y, 0)
+    ob.location = (x, y, height(x, y) - 0.1)       # sunk a little, for the slope
     ob["r"] = r
     start = T("03:52") + random.uniform(0, 1.4)
     key_scale(ob, [(start - 1, 0.0), (start, 0.0), (start + 0.4, 0.25), (start + 1.0, 1.0)])
@@ -313,10 +364,10 @@ bm = bmesh.new()
 woodland = []
 for x, y in spaced(int(0.8 * (Y_GRASS - Y_WOOD)), (5, 60), (Y_WOOD, Y_GRASS), 6.0):   # open woodland
     h, r = random.uniform(7, 14), random.uniform(.2, .4)
-    tree_mesh(bm, (x, y, 0), h, r)
+    tree_mesh(bm, (x, y, height(x, y) - 0.1), h, r)
     woodland.append((x, y, r))
 for x, y in spaced(4, (25, 60), (Y_GRASS, Y_DRY - 1), 12.0):   # lone trees in the grass
-    tree_mesh(bm, (x, y, 0), random.uniform(6, 9), .3)
+    tree_mesh(bm, (x, y, height(x, y) - 0.1), random.uniform(6, 9), .3)
 far_trees = obj_from_bm("Trees beyond the forest", bm, 0.26)
 
 # Forest on the other (west) side too, beyond where the travelling camera runs, so the shots from
@@ -326,7 +377,7 @@ for x, y in spaced(int(0.8 * (Y_WOOD + 28)), (-40, -12), (-28, Y_WOOD), 3.5):
     bm = bmesh.new()
     tree_mesh(bm, (0, 0, 0), random.uniform(11, 22), random.uniform(.2, .45))
     ob = obj_from_bm("Tree, west", bm, random.uniform(.2, .3))
-    ob.location = (x, y, 0)
+    ob.location = (x, y, height(x, y) - 0.1)       # sunk a little, for the slope
     start = T("03:52") + random.uniform(0, 1.4)
     key_scale(ob, [(start - 1, 0.0), (start, 0.0), (start + 0.4, 0.25), (start + 1.0, 1.0)])
     west_trees.append(ob)
@@ -339,7 +390,7 @@ for x, y in spaced(70, (SKULL.x - 1.5, SKULL.x + 22), (SKULL.y - 11, SKULL.y + 1
     bm = bmesh.new()
     cone(bm, (0, 0, 0), random.uniform(.3, .5), 0.05, random.uniform(.4, .7), 7)
     ob = obj_from_bm("Fern", bm, 0.3)
-    ob.location = (x, y, 0)
+    ob.location = (x, y, height(x, y) - 0.1)       # sunk a little, for the slope
     start = T("03:51") + random.uniform(0, 1.6)
     key_scale(ob, [(start - 1, 0.0), (start, 0.0), (start + 0.4, 1.0)])
     ferns.append(ob)
@@ -370,7 +421,7 @@ litter = []
 for grey, n in ((0.34, 900), (0.27, 900), (0.21, 600)):          # leaves, 8-14 cm, three shades, darker than the leaf
     bm = bmesh.new()
     for x, y in floor_points(n, 9.0):
-        m = (Matrix.Translation((x, y, random.uniform(0.003, 0.012)))
+        m = (Matrix.Translation((x, y, height(x, y) + random.uniform(0.003, 0.012)))
              @ Matrix.Rotation(random.uniform(0, 2 * math.pi), 4, 'Z') @ Matrix.Rotation(random.uniform(-0.1, 0.1), 4, 'X')
              @ Matrix.Diagonal((random.uniform(0.04, 0.07), random.uniform(0.022, 0.04), 1, 1)))
         bmesh.ops.create_circle(bm, cap_ends=True, segments=7, radius=1.0, matrix=m)
@@ -380,7 +431,7 @@ for x, y in floor_points(160, 9.0):                                # twigs
     if (Vector((x, y)) - LEAF.xy).length < 0.2:
         continue
     r = random.uniform(0.004, 0.012)
-    cone(bm, (x, y, r), r, r * 0.6, random.uniform(0.12, 0.6), 4,
+    cone(bm, (x, y, height(x, y) + r), r, r * 0.6, random.uniform(0.12, 0.6), 4,
          rot=Matrix.Rotation(random.uniform(0, 2 * math.pi), 4, 'Z') @ Matrix.Rotation(math.radians(90), 4, 'Y'))
 litter.append(obj_from_bm("Twigs", bm, 0.17))
 bm = bmesh.new()
@@ -388,7 +439,7 @@ for x, y in floor_points(320, 9.0):                                # grass, in t
     if (Vector((x, y)) - LEAF.xy).length < 0.3:
         continue
     for _ in range(random.randint(3, 6)):
-        cone(bm, (x + random.uniform(-0.03, 0.03), y + random.uniform(-0.03, 0.03), 0), 0.006, 0.0,
+        cone(bm, (x + random.uniform(-0.03, 0.03), y + random.uniform(-0.03, 0.03), height(x, y)), 0.006, 0.0,
              random.uniform(0.08, 0.3), 3,
              rot=Matrix.Rotation(random.uniform(0, 2 * math.pi), 4, 'Z') @ Matrix.Rotation(random.uniform(0.1, 0.45), 4, 'X'))
 grass = obj_from_bm("Grass", bm, 0.4)
@@ -399,14 +450,14 @@ for x, y in spaced(16, (4.6, 11), (CAM_FIXED.y - 8, CAM_FIXED.y + 8), 1.6):   # 
         continue
     sz = random.uniform(0.35, 0.8)
     for _ in range(3):
-        ball(bm, (x + random.uniform(-.3, .3) * sz, y + random.uniform(-.3, .3) * sz, 0.55 * sz),
+        ball(bm, (x + random.uniform(-.3, .3) * sz, y + random.uniform(-.3, .3) * sz, height(x, y) + 0.55 * sz),
              (sz * random.uniform(.7, 1), sz * random.uniform(.7, 1), 0.6 * sz), 8)
     bush_at.append((x, y, sz))
 bushes = obj_from_bm("Bushes", bm, 0.3)
 for ob in litter:
     key(ob, "location", [fr(T("03:51")), fr(T("03:53"))], [-0.03, 0.0], index=2)
-for ob in (grass, bushes):
-    key(ob, "scale", [fr(T("03:51:12")), fr(T("03:53:12"))], [[1, 1], [1, 1], [0, 1]])
+for ob in (grass, bushes):                        # up out of the ground, wherever it lies
+    key(ob, "location", [fr(T("03:51:12")), fr(T("03:53:12"))], [-1.0, 0.0], index=2)
 
 # The tree that grows where the head lay: a shoot, a sapling, a tree, in two seconds.
 # Its low branch reaches out over the lane, and the leaf hangs from its tip.
@@ -458,9 +509,19 @@ key(body, "scale", fs, [[1, 0.9], [1, 0.85], [1, 0.12]])
 key(dead, "location", [fr(T("03:48")), fr(T("03:50:12"))], [0.0, -1.9], index=2)
 
 # Ash, lying over the place from 03:45, gone under the green by 03:52.
-bm = bmesh.new()
-bmesh.ops.create_circle(bm, cap_ends=True, segments=32, radius=40)
-ash = obj_from_bm("Ash", bm, 0.62)
+_vs, _fs, _ix = [], [], {}                      # lying on the ground, 40 m round the head, every 2 m
+for j in range(-20, 21):
+    for i in range(-20, 21):
+        if i * i + j * j <= 400:
+            _ix[i, j] = len(_vs)
+            _vs.append((SKULL.x + 2 * i, SKULL.y + 2 * j, height(SKULL.x + 2 * i, SKULL.y + 2 * j)))
+_fs = [(_ix[i, j], _ix[i + 1, j], _ix[i + 1, j + 1], _ix[i, j + 1]) for (i, j) in _ix
+       if (i + 1, j) in _ix and (i + 1, j + 1) in _ix and (i, j + 1) in _ix]
+me = bpy.data.meshes.new("Ash")
+me.from_pydata(_vs, [], _fs)
+ash = bpy.data.objects.new("Ash", me)
+ash.color = (0.62, 0.62, 0.62, 1.0)
+col.objects.link(ash)
 key(ash, "location", [fr(T("03:45")), fr(T("03:46:12")), fr(T("03:51")), fr(T("03:52"))],
     [-0.05, 0.02, 0.02, -0.05], index=2)
 
@@ -481,7 +542,7 @@ for tc, x, d in (("03:52:12", 6.0, 1), ("03:53:06", 11.0, -1)):
     an = obj_from_bm("Animal passing", bm, 0.2)
     t = T(tc)
     key(an, "location", [fr(t - 4), fr(t), fr(t + 0.25), fr(t + 4)],
-        [[x] * 4, [-16 * d, -16 * d, 16 * d, 16 * d], [0] * 4])
+        [[x] * 4, [-16 * d, -16 * d, 16 * d, 16 * d], [height(x, v) for v in (-16 * d, -16 * d, 16 * d, 16 * d)]])
 
 # The sky: light, dark from 03:45, clear by 03:52.
 sky = [(T("03:42"), 0.50), (T("03:45"), 0.10), (T("03:50:12"), 0.10), (T("03:52"), 0.66)]
@@ -607,7 +668,7 @@ def animate(fig, frames, xs, ys, face=None, pose=None, visible=None):
         bob = 0.035 * run * abs(math.cos(phase)) * fig["h"] / 1.7
         loc[0].append(xs[i])
         loc[1].append(ys[i])
-        loc[2].append(p.get("z", 0.0) + bob)
+        loc[2].append(height(xs[i], ys[i]) + p.get("z", 0.0) + bob)
         rot[0].append(-(p.get("lean", lerp(lerp(0.04, 0.2, run), 0.32, sprint))))
         rot[1].append(p.get("roll", 0.0))
         rot[2].append(face[i])
@@ -656,7 +717,7 @@ for (y0, y1), gap, hr in (((LEAF.y + 7, Y_WOOD), 4.0, (11, 20)), ((Y_WOOD, Y(SPR
         bm = bmesh.new()
         tree_mesh(bm, (0, 0, 0), h, r)
         ob = obj_from_bm("Tree, among the runners", bm, random.uniform(.2, .3))
-        ob.location = (x, y, 0)
+        ob.location = (x, y, height(x, y) - 0.1)
         ob["r"] = r
         start = T("03:52") + random.uniform(0, 1.4)
         key_scale(ob, [(start - 1, 0.0), (start, 0.0), (start + 0.4, 0.25), (start + 1.0, 1.0)])
@@ -807,6 +868,7 @@ for f, t in zip(PF, PT):
             down_at = (x, y)
         kk = smooth(KILL, KILL + 0.3, t)
         x, y, z, roll, nose = down_at[0] + 0.4 * kk, down_at[1] - 0.4 * kk, 0.0, 1.5 * kk, 0.0
+    z += height(x, y)
     for i, v in enumerate((x, y, z)):
         cl[i].append(v)
     for i, v in enumerate((nose, roll, 0.0)):
@@ -866,13 +928,14 @@ for f, t in zip(PF, PT):
     bf.append(f)
     bl[0].append(lerp(band_paths[a][0][ia], band_paths[b][0][ia], k) - 0.22)
     bl[1].append(lerp(band_paths[a][1][ia], band_paths[b][1][ia], k))
-    bl[2].append(1.12 + 0.1 * math.sin(math.pi * k))
+    bl[2].append(height(bl[0][-1], bl[1][-1]) + 1.12 + 0.1 * math.sin(math.pi * k))
 key(baby, "location", bf, bl)
 key_scale(baby, [(BABY_T[0] - 0.3, 0), (BABY_T[0] - 0.2, 1), (BABY_T[1] + 0.1, 1), (BABY_T[1] + 0.2, 0)])
 
 # The small grave, at the edge of the path on the camera's side.
 gi = PF.index(int(fr(GRAVE_T[0])))
-grave_pos = (band_paths[GRAVE_WHO][0][gi] - 0.75, band_paths[GRAVE_WHO][1][gi], 0)
+grave_pos = (band_paths[GRAVE_WHO][0][gi] - 0.75, band_paths[GRAVE_WHO][1][gi])
+grave_pos = (*grave_pos, height(*grave_pos))
 bm = bmesh.new()
 ball(bm, grave_pos, (0.3, 0.5, 0.16), 10)
 grave = obj_from_bm("Small grave", bm, 0.22)
@@ -881,24 +944,26 @@ grave = obj_from_bm("Small grave", bm, 0.22)
 # It runs north (to the left), east of the path: it comes in from the far right and
 # runs alongside from just past where the dry country begins. Banks green: reeds, trees, hippos
 # in the shallows.
-near = [(75, Y_DRY - 13), (34, Y_DRY - 5), (15, Y_DRY + 2), (12, Y_DRY + 11), (12, Y_DRY + 139)]
+near = RIVER_NEAR
 bm = bmesh.new()
-vs = [bm.verts.new((x, y, 0.02)) for x, y in near] + [bm.verts.new((x + 70, y, 0.02)) for x, y in reversed(near)]
+vs = [bm.verts.new((x, y, WATER)) for x, y in near] + [bm.verts.new((x + RIVER_WIDTH, y, WATER)) for x, y in reversed(near)]
 bm.faces.new(vs)
 river = obj_from_bm("River", bm, 0.14)
 bm = bmesh.new()
 for (xa, ya), (xb, yb) in zip(near, near[1:]):
     for _ in range(int(math.hypot(xb - xa, yb - ya) * 3.5)):
         u = random.random()
-        cone(bm, (lerp(xa, xb, u) - random.uniform(0, 2.5), lerp(ya, yb, u) + random.uniform(-1, 1), 0),
+        rx, ry = lerp(xa, xb, u) - random.uniform(0, 2.5), lerp(ya, yb, u) + random.uniform(-1, 1)
+        cone(bm, (rx, ry, height(rx, ry)),
              random.uniform(.05, .12), 0.0, random.uniform(1.5, 3.2), 4)       # reeds and papyrus
 for y in range(int(Y_DRY) - 1, int(Y_DRY) + 139, 9):
-    tree_mesh(bm, (random.uniform(7.5, 9.5), y + random.uniform(-3, 3), 0), random.uniform(6, 11), .25)
-    tree_mesh(bm, (84 + random.uniform(0, 5), y + random.uniform(-3, 3), 0), random.uniform(6, 11), .25)
+    for bx in (random.uniform(7.5, 9.5), 84 + random.uniform(0, 5)):
+        by = y + random.uniform(-3, 3)
+        tree_mesh(bm, (bx, by, height(bx, by) - 0.1), random.uniform(6, 11), .25)
 reeds = obj_from_bm("Reeds and bank trees", bm, 0.3)
 bm = bmesh.new()
 for x, y in ((14.5, Y_DRY + 7), (16, Y_DRY + 10), (15, Y_DRY + 17), (18, Y_DRY + 23)):
-    ball(bm, (x, y, 0.0), (0.75, 1.9, 0.75), 10)                             # hippos, 3.8 m
+    ball(bm, (x, y, WATER), (0.75, 1.9, 0.75), 10)                             # hippos, 3.8 m
 hippos = obj_from_bm("Hippos", bm, 0.2)
 
 # ---------------------------------------------------------------- the trunks that wipe the frame
@@ -907,7 +972,8 @@ for t, rel in WIPES:
     bm = bmesh.new()
     cone(bm, (0, 0, 0), 0.5, 0.42, 22, 10)
     trunk = obj_from_bm("Trunk that crosses the lens", bm, 0.12)
-    trunk.location = (LANE_X - CAM_DIST + 1.2 * curve(CAM_LENS, t, ease=True) / 35.0, CAM_Y[f] + rel, 0)
+    tx, ty = LANE_X - CAM_DIST + 1.2 * curve(CAM_LENS, t, ease=True) / 35.0, CAM_Y[f] + rel
+    trunk.location = (tx, ty, height(tx, ty) - 0.1)
 
 
 # ---------------------------------------------------------------- cameras
@@ -955,7 +1021,7 @@ for f in f1:
         k = f - PF[0]
         d = Vector((lead_x[k] - CAM_FIXED.x, lead_y[k] + 0.4 * smooth(0.1, 0.6, t) - CAM_FIXED.y))
         yaw = math.atan2(d.y, d.x) * smooth(0, TRACK_IN, t)
-        pitch = lerp(pitch, math.atan2(0.45 - CAM_FIXED.z, d.length), smooth(0, 0.4, t))
+        pitch = lerp(pitch, math.atan2(0.45 + height(lead_x[k], lead_y[k]) - CAM_FIXED.z, d.length), smooth(0, 0.4, t))
     pos.append(CAM_FIXED)
     tgt.append(CAM_FIXED + Vector((math.cos(pitch) * math.cos(yaw), math.cos(pitch) * math.sin(yaw), math.sin(pitch))) * 4.0)
 key_camera(cam1, f1, pos, tgt)
@@ -990,11 +1056,14 @@ for sh in O.shots():
         d = Vector((stand.x - tr.location.x, stand.y - tr.location.y))
         if d.length < 1.0:
             stand.y += (1.0 - d.length) * (1 if d.y >= 0 else -1) + 0.2
+    stand.z = off[2] + height(stand.x, stand.y)                # its height is above the ground where it stands
     for f in range(sh["start"], sh["end"]):
         i = f - PF[0]
         f2.append(f)
-        pos.append(stand if when is not None else Vector((xs[i] + off[0], ys[i] + off[1], off[2])))
-        tgt.append(Vector((xs[k] + hold[0], ys[k] + hold[1], look_z)) if hold else Vector((xs[i], ys[i], look_z)))
+        pos.append(stand if when is not None else
+                   Vector((xs[i] + off[0], ys[i] + off[1], off[2] + ground_along(xs[i] + off[0], ys[i] + off[1], 1.0))))
+        tgt.append(Vector((xs[k] + hold[0], ys[k] + hold[1], look_z + height(xs[k] + hold[0], ys[k] + hold[1]))) if hold
+                   else Vector((xs[i], ys[i], look_z + height(xs[i], ys[i]))))
         lens.append(mm)
 key_camera(cam2, f2, pos, tgt)
 key_lens(cam2, f2, lens)
@@ -1014,8 +1083,8 @@ pos, tgt = [], []
 for f in f3:
     t = (f - T0) / O.FPS
     y = CAM_Y[f]
-    pos.append(Vector((LANE_X - CAM_DIST, y, CAM_HEIGHT)))
-    tgt.append(Vector((LANE_X, y, 1.3)))
+    pos.append(Vector((LANE_X - CAM_DIST, y, CAM_HEIGHT + ground_along(LANE_X - CAM_DIST, y))))   # 1.5 m above its ground
+    tgt.append(Vector((LANE_X, y, 1.3 + ground_along(LANE_X, y))))
 key_camera(cam3, f3, pos, tgt)
 key_lens(cam3, f3, [curve(CAM_LENS, (f - T0) / O.FPS, ease=True) for f in f3])
 
@@ -1049,7 +1118,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, thirteenth pass"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, fourteenth pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)

@@ -8,6 +8,9 @@ bodies running with real motion capture, in the travelling shot, lit, in EEVEE.
                                                                     leather hides, Cycles at 1920x1080
     blender -b --factory-startup -P band_mocap_test.py -- real still     one frame of that, timed: the estimate
     blender -b --factory-startup -P band_mocap_test.py -- real build     build and save the .blend only
+    blender -b --factory-startup -P band_mocap_test.py -- painted   the series' painted look (painted.py, Discussion
+                                                                    006 round 4): the style test of the run, to
+                                                                    work/styletest/run-<shot>.mp4 and its sheet
 
 The shot is the AI test's (ai_video_test.py's TAG, now 04:15:00-04:18:12): the travelling camera,
 the band running left through the forest, the cat coming up behind them.
@@ -37,23 +40,26 @@ import bpy
 import bmesh
 import numpy as np
 from mathutils import Matrix, Vector
+from mathutils.bvhtree import BVHTree
 from bpy_extras import anim_utils
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import opening as O  # noqa: E402
 import humans as H  # noqa: E402
 import forest as FO  # noqa: E402
+import painted as P  # noqa: E402
 from ai_video_test import TAG  # noqa: E402
 
 ARGS = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 STILL, REAL, BUILD = "still" in ARGS, "real" in ARGS, "build" in ARGS     # build: save the .blend, render nothing
+PAINTED = "painted" in ARGS
 KIND = "-real" if REAL else ""
 random.seed(13)
 
 A, B = (O.frame("%s:%s:%s" % (t[:2], t[2:4], t[4:])) for t in TAG.split("-"))   # the shot, end exclusive
 PAD = 24                                             # frames of path either side of it
 FRAMES = list(range(A - PAD, B + PAD))
-OUT = O.WORK / "aitest"
+OUT = O.WORK / ("styletest" if PAINTED else "aitest")
 SHEET = [A + round(i * (B - 1 - A) / 5) for i in range(6)]
 
 t_start = time.time()
@@ -64,6 +70,18 @@ cam = bpy.data.objects["CAM travelling"]
 scene.camera = cam
 for m in list(scene.timeline_markers):          # one camera only: the layout's markers switch cameras
     scene.timeline_markers.remove(m)
+
+# The layout's ground rolls (layout_b12_13.py's height()): read off its mesh, straight down.
+_BVH = BVHTree.FromObject(bpy.data.objects["Ground"], bpy.context.evaluated_depsgraph_get())
+
+
+def ground_z(x, y):
+    hit = _BVH.ray_cast(Vector((x, y, 50.0)), Vector((0, 0, -1)))[0]
+    return hit.z if hit is not None else 0.0
+
+
+def ground_many(xy):
+    return np.array([ground_z(x, y) for x, y in xy])
 
 
 # ---------------------------------------------------------------- the layout's runners
@@ -110,7 +128,7 @@ rng = random.Random(5)
 for r in runners:
     rig = r["parts"]["rig"]
     rt = H.Retarget(strides[r["clip"]], r["parts"]["rest"])
-    info = H.run(rig, rt, FRAMES, r["xs"], r["ys"], phase0=rng.random(), fps=O.FPS)
+    info = H.run(rig, rt, FRAMES, r["xs"], r["ys"], phase0=rng.random(), fps=O.FPS, ground=ground_many)
     if r["spear"]:
         r["parts"]["spear"] = H.spear(rig, rt, "Mocap " + r["name"] + " spear")
     v, st, sx = (info[k][inshot] for k in ("speed", "steps", "stretch"))
@@ -325,7 +343,7 @@ def quick_dress():
         if y > 47 and random.random() < 0.6:              # thinner in the open woodland
             continue
         ob = bpy.data.objects.new("Fern", random.choice(variants))
-        ob.location = (x, y, 0)
+        ob.location = (x, y, ground_z(x, y))
         ob.rotation_euler = (0, 0, random.uniform(0, 2 * math.pi))
         s = random.uniform(0.5, 0.8) if near else random.uniform(0.7, 1.4)
         ob.scale = (s, s, s)
@@ -339,7 +357,7 @@ def quick_dress():
     for _ in range(40000):
         x, y = random.uniform(CX + 0.5, LANE_X + 12), random.uniform(Y0 - 12, Y1 + 12)
         L, W, a = random.uniform(0.05, 0.11), random.uniform(0.02, 0.04), random.uniform(0, 2 * math.pi)
-        m = Matrix.Translation((x, y, 0.004)) @ Matrix.Rotation(a, 4, 'Z') @ Matrix.Rotation(random.uniform(-0.3, 0.3), 4, 'X')
+        m = Matrix.Translation((x, y, 0.004 + ground_z(x, y))) @ Matrix.Rotation(a, 4, 'Z') @ Matrix.Rotation(random.uniform(-0.3, 0.3), 4, 'X')
         q = [lit.verts.new(m @ Vector(v)) for v in ((-L / 2, 0, 0.003), (0, -W / 2, 0.0), (L / 2, 0, 0.004), (0, W / 2, 0.0))]
         lit.faces.new(q)
     litter_me = bpy.data.meshes.new("Leaf litter")
@@ -354,7 +372,7 @@ def quick_dress():
         x, y = random.uniform(CX + 14, CX + 110), random.uniform(Y0 - 70, Y1 + 70)
         r_ = random.uniform(0.5, 1.4)
         bmesh.ops.create_icosphere(shrub, subdivisions=2, radius=1.0,
-                                   matrix=Matrix.Translation((x, y, r_ * 0.55)) @ Matrix.Diagonal((r_ * random.uniform(0.9, 1.6), r_, r_ * 0.8, 1)))
+                                   matrix=Matrix.Translation((x, y, r_ * 0.55 + ground_z(x, y))) @ Matrix.Diagonal((r_ * random.uniform(0.9, 1.6), r_, r_ * 0.8, 1)))
     shrubs_me = bpy.data.meshes.new("Understory")
     shrub.to_mesh(shrubs_me)
     shrub.free()
@@ -417,11 +435,90 @@ def real_dress():
     bpy.data.objects["Big cat"].hide_render = True
 
 
+def painted_dress():
+    """The series' painted look (painted.py) over the quick dressing: every material repainted in
+    its own colour, a painted sky, a thin line round the people; the haze and the brush strokes
+    over the frame come at the render (P.finish)."""
+    def tone(m):
+        """A material's middle colour, back on screen (sRGB): its colour ramp's, or its base colour."""
+        ramps = [n for n in m.node_tree.nodes if n.type == 'VALTORGB']
+        if ramps:
+            els = ramps[0].color_ramp.elements
+            c = [sum(e.color[i] for e in els) / len(els) for i in range(3)]
+        else:
+            c = list(next(n for n in m.node_tree.nodes if n.type == 'BSDF_PRINCIPLED').inputs["Base Color"].default_value)[:3]
+        return tuple(1.055 * v ** (1 / 2.4) - 0.055 if v > 0.0031308 else 12.92 * v for v in c)
+
+    world = dict(coords='Object', rim_amount=0.0)
+
+    def floor_colour(g, vec):
+        """Earth with moss in it: brown, and olive in big soft patches."""
+        patch = g.remap(g.noise(g.scale(vec, 0.07), 1.0, 3.0, 0.55, 0.3), 0.45, 0.62, 0.0, 1.0)
+        return g.mix(patch, (*P.srgb((0.42, 0.29, 0.17)), 1.0), (*P.srgb((0.36, 0.38, 0.17)), 1.0))
+
+    swaps = [
+        ("Forest floor", lambda m: P.paint("Painted floor", (0.4, 0.28, 0.17), colour=floor_colour, scale=0.25, vary=0.2,
+                                           shadow=(0.42, 0.38, 0.55), light=(1.12, 1.0, 0.82), edge=(0.1, 0.28), ao=0.3,
+                                           ao_distance=0.8, **world)),
+        ("Bark", lambda m: P.paint("Painted bark", (0.3, 0.22, 0.16), scale=1.2, vary=0.16, stroke=(30.0, 30.0, 3.0),
+                                   shadow=(0.42, 0.38, 0.55), light=(1.15, 1.02, 0.85), edge=(0.1, 0.3), ao=0.35, **world)),
+        ("Crown", lambda m: P.paint("Painted crown", (0.2, 0.34, 0.11), scale=0.5, vary=0.22, shadow=(0.32, 0.42, 0.55),
+                                    light=(1.22, 1.12, 0.78), edge=(0.08, 0.26), ao=0.4, ao_distance=1.0, coords='Object',
+                                    rim=(0.75, 0.9, 0.6), rim_amount=0.25)),
+        ("Fern", lambda m: P.paint("Painted fern", (0.24, 0.42, 0.12), scale=3.0, vary=0.18, shadow=(0.35, 0.45, 0.55),
+                                   light=(1.2, 1.1, 0.78), edge=(0.08, 0.26), **world)),
+        ("Leaf litter", lambda m: P.paint("Painted litter", (0.48, 0.3, 0.15), scale=3.0, vary=0.2, **world)),
+        ("Understory", lambda m: m),
+        ("Fur", lambda m: P.paint("Painted fur", (0.62, 0.45, 0.26), scale=3.0, coords='Object')),
+        ("Skin", lambda m: P.paint("Painted skin", tone(m), shadow=(0.55, 0.4, 0.5), light=(1.1, 1.0, 0.9), scale=3.0,
+                                   vary=0.08, edge=(0.14, 0.32), spec=0.05, ao=0.4, ao_distance=0.05, rim_amount=0.25)),
+        ("Hide", lambda m: P.paint("Painted hide", tone(m), shadow=(0.5, 0.42, 0.52), light=(1.1, 1.0, 0.88), scale=4.0,
+                                   vary=0.15, ao=0.35, ao_distance=0.05)),
+        ("Hair", lambda m: P.paint("Painted hair", (0.06, 0.045, 0.04), shadow=(0.6, 0.6, 0.8), light=(1.6, 1.4, 1.2),
+                                   scale=6.0, vary=0.2, rim_amount=0.3)),
+        ("Eye", lambda m: P.flat("Painted eye", (0.75, 0.7, 0.65))),
+        ("Spear shaft", lambda m: P.paint("Painted shaft", (0.42, 0.3, 0.18), scale=3.0)),
+        ("Stone point", lambda m: P.paint("Painted point", (0.28, 0.27, 0.26), scale=3.0)),
+    ]
+    for m in list(bpy.data.materials):
+        for prefix, make in swaps:
+            if m.name.startswith(prefix):
+                new = make(m)
+                if new is not m:
+                    m.user_remap(new)
+                break
+    P.sky(scene, zenith=(0.38, 0.56, 0.8), horizon=(0.92, 0.86, 0.72), below=(0.3, 0.33, 0.25),
+          clouds=(0.98, 0.95, 0.9), fill=(0.6, 0.7, 0.85), fill_strength=0.4)
+    for r_ in runners:
+        P.outline(r_["parts"]["body"], 0.008, (0.1, 0.06, 0.05))
+    bpy.data.objects["Big cat"].hide_render = True        # the layout's blob, until there's a cat
+    # The layout's crowns are faceted balls: rounded, and pushed into lumps, as painted foliage is.
+    cloud = bpy.data.textures.new("Foliage lumps", 'CLOUDS')
+    cloud.noise_scale, cloud.noise_depth = 1.4, 2
+    for ob in bpy.data.objects:
+        if ob.type != 'MESH' or not ob.name.startswith(("Tree", "The tree")) or ob.hide_render:
+            continue
+        vg = ob.vertex_groups.new(name="crown")
+        crown = {v for p in ob.data.polygons if p.material_index == 1 for v in p.vertices}
+        if not crown:
+            continue
+        vg.add(list(crown), 1.0, 'REPLACE')
+        trunk = {k for p in ob.data.polygons if p.material_index == 0 for k in p.edge_keys}
+        cr = ob.data.attributes.get("crease_edge") or ob.data.attributes.new("crease_edge", 'FLOAT', 'EDGE')
+        cr.data.foreach_set("value", [1.0 if e.key in trunk else 0.0 for e in ob.data.edges])   # the trunks keep their shape
+        sub = ob.modifiers.new("Round", 'SUBSURF')
+        sub.levels = sub.render_levels = 2
+        dp = ob.modifiers.new("Lumps", 'DISPLACE')
+        dp.texture, dp.texture_coords, dp.strength, dp.mid_level, dp.vertex_group = cloud, 'GLOBAL', 1.6, 0.5, "crown"
+
+
 t_dress = time.time()
 if REAL:
     real_dress()
 else:
     quick_dress()
+    if PAINTED:
+        painted_dress()
 print("dressed in %.0fs" % (time.time() - t_dress))
 
 
@@ -432,7 +529,8 @@ cd.dof.aperture_fstop = 4.0
 for f in range(A - 2, B + 2):
     scene.frame_set(f)
     i = f - FRAMES[0]
-    centre = Vector((LANE_X, float(np.mean([r["ys"][i] for r in runners])), 1.0))
+    cy = float(np.mean([r["ys"][i] for r in runners]))
+    centre = Vector((LANE_X, cy, 1.0 + ground_z(LANE_X, cy)))
     view = cam.matrix_world.to_3x3() @ Vector((0, 0, -1))
     cd.dof.focus_distance = max(1.0, (centre - cam.matrix_world.translation).dot(view))
     cd.dof.keyframe_insert("focus_distance", frame=f)
@@ -471,17 +569,22 @@ else:
     e.volumetric_tile_size = '4'
     e.volumetric_end = 80.0
     e.use_fast_gi = True
-scene.view_settings.view_transform = 'AgX'
-for look in ('AgX - Medium High Contrast', 'None'):
-    try:
-        scene.view_settings.look = look
-        break
-    except TypeError:
-        continue
+if PAINTED:
+    P.eevee(scene, 32)
+    scene.eevee.use_volumetric_shadows = True
+    P.finish(scene, brush=4, haze=(0.72, 0.8, 0.8), mist=(14.0, 110.0), haze_amount=0.35, bloom=0.2)
+else:
+    scene.view_settings.view_transform = 'AgX'
+    for look in ('AgX - Medium High Contrast', 'None'):
+        try:
+            scene.view_settings.look = look
+            break
+        except TypeError:
+            continue
 OUT.mkdir(parents=True, exist_ok=True)
 scene.frame_start, scene.frame_end = A, B - 1
 scene.frame_set(A)
-name = "mocap-%s%s" % (TAG, KIND)
+name = ("run-%s" % TAG) if PAINTED else ("mocap-%s%s" % (TAG, KIND))
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT / (name + ".blend")))
 print("built in %.0fs; saved %s" % (time.time() - t_start, OUT / (name + ".blend")))
 
@@ -492,7 +595,8 @@ elif STILL:
     scene.frame_set(mid)
     r.image_settings.media_type = 'IMAGE'
     r.image_settings.file_format = 'PNG'
-    r.filepath = str(OUT / ("mocap-still-%s%s.png" % (O.timecode(mid).replace(":", ""), KIND)))
+    tc = O.timecode(mid).replace(":", "")
+    r.filepath = str(OUT / (("run-still-%s.png" % tc) if PAINTED else ("mocap-still-%s%s.png" % (tc, KIND))))
     t = time.time()
     bpy.ops.render.render(write_still=True)
     took = time.time() - t

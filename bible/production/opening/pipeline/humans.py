@@ -927,17 +927,20 @@ def step_rate(v, rt, bend=0.3):
     return native * (np.maximum(v, 0.3) / (rt.length * native)) ** bend
 
 
-def plant(world, heads, tails, rest, n, ground=0.025, ease=6):
+def plant(world, heads, tails, rest, n, ground=0.025, ease=6, floor=None, base=None):
     """Keep each foot still while it's on the ground. While the ball of the foot is down it's
     held where it was halfway through the contact, the leg reaching it by two-bone IK in the
     plane its knee already bends in; in the air the hold eases off and on again. world: bone ->
-    (n,3,3) turns from rest, armature space; heads, tails: bone -> (n,3). Changes world in place
-    and returns the largest drift left in a planted foot, in cm."""
+    (n,3,3) turns from rest, armature space; heads, tails: bone -> (n,3). floor: the ground's
+    height under points (a function of an (m,2) array of xy), where it isn't flat, and base: the
+    height (n,) the body was raised by to ride it; a held foot is then put down on the ground
+    where it's held. Changes world in place and returns the largest drift left in a planted foot,
+    in cm."""
     worst = 0.0
     for side in ("Left", "Right"):
         thigh, shin, foot = side + "UpLeg", side + "Leg", side + "Foot"
         ball = tails[foot]
-        down = ball[:, 2] - rest[foot]["tail"][2] < ground
+        down = ball[:, 2] - (0.0 if base is None else base) - rest[foot]["tail"][2] < ground
         shift = np.zeros((n, 3))
         runs, i = [], 0
         while i < n:
@@ -952,6 +955,8 @@ def plant(world, heads, tails, rest, n, ground=0.025, ease=6):
         for a, b in runs:
             hold = ball[(a + b) // 2, :2]
             shift[a:b + 1, :2] = hold - ball[a:b + 1, :2]
+            if floor is not None:                                  # down on the ground where it's held
+                shift[a:b + 1, 2] = floor(hold[None, :])[0] - base[a:b + 1]
         for (a0, b0), (a1, b1) in zip([(None, -1)] + runs, runs + [(n, None)]):   # ease across each flight
             lo, hi = b0 + 1, a1
             if hi <= lo:
@@ -984,9 +989,11 @@ def plant(world, heads, tails, rest, n, ground=0.025, ease=6):
     return 100 * worst
 
 
-def run(rig, rt, frames, xs, ys, phase0=0.0, fps=24):
+def run(rig, rt, frames, xs, ys, phase0=0.0, fps=24, ground=None):
     """Key the rig running along the path (xs, ys), one point per frame, turned to face along
-    it, its stride advanced by `step_rate` and its feet held still on the ground by `plant`."""
+    it, its stride advanced by `step_rate` and its feet held still on the ground by `plant`.
+    ground: the ground's height under points (a function of an (m,2) array of xy), when it isn't
+    flat: the body rides it (smoothed over seven frames), and each planted foot is put down on it."""
     from bpy_extras import anim_utils
     rest = rt.rest
     p = np.stack([np.asarray(xs, float), np.asarray(ys, float)], 1)
@@ -1011,6 +1018,10 @@ def run(rig, rt, frames, xs, ys, phase0=0.0, fps=24):
         world[name] = h @ qmat(qslerp(dq[a], dq[b], w))
     off = (1 - w)[:, None] * rt.offset[a] + w[:, None] * rt.offset[b]
     hips = np.concatenate([p, np.zeros((n, 1))], 1) + np.einsum("nij,nj->ni", h, off)
+    base = np.zeros(n)
+    if ground is not None:
+        base = np.convolve(np.pad(ground(p), 3, mode="edge"), np.ones(7) / 7, mode="valid")
+        hips[:, 2] += base
     heads, tails = {}, {}
     for s in rt.stride.mo.order:
         name = BONES[s]
@@ -1018,7 +1029,7 @@ def run(rig, rt, frames, xs, ys, phase0=0.0, fps=24):
         par = t["parent"]
         heads[name] = hips if par is None else heads[par] + np.einsum("nij,j->ni", world[par], t["head"] - rest[par]["head"])
         tails[name] = heads[name] + np.einsum("nij,j->ni", world[name], t["tail"] - t["head"])
-    slide = plant(world, heads, tails, rest, n)
+    slide = plant(world, heads, tails, rest, n, floor=ground, base=base)
     keys = {}
     for name in rt.local:                                                   # back to each bone's own turn
         t = rest[name]
