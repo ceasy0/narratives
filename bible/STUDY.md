@@ -2,7 +2,7 @@
 
 > Films, series, books and anything else worth watching or studying for *Adonai*. **Add titles to the inbox below, any way you like.** Each session I fold them into the list: what the work is in a line, what to study it for, a link, in the section where it belongs. Then I clear the inbox and keep the list tidy. Started 2026-10-15 at your request, with the titles the project already points you to. Where a title is a visual reference for a shot of the Opening, the full note on what to take from it is in the Opening's [look book](./production/opening/REFERENCES.md); this list says why to watch it at all.
 
-**Status:** 2026-10-15: 22 entries, none watched yet.
+**Status:** 2026-10-15: 25 entries, none watched yet.
 
 ## Inbox
 
@@ -21,6 +21,8 @@ My picks if you watch only four, in this order:
 
 ## The Opening: from the deep to the land (beats 1–11)
 
+How everyone else has pictured Gen 1:1–2:7, in every medium from the Cotton Genesis to VR, with the ten I think matter most for us, is in the [catalogue of depictions](./production/opening/DEPICTIONS.md). The three films from it at the end of this section are worth watching for themselves.
+
 - **The Tree of Life** (2011) · film · Terrence Malick · [Wikipedia](https://en.wikipedia.org/wiki/The_Tree_of_Life_(film))
   A family in 1950s Texas, set against the making of the universe. *Study:* the creation sequence early in the film, made by Douglas Trumbull with dyes, milk and paint in tanks shot at up to 1,000 frames a second. It's the benchmark for cosmic images that never look computer-made.
 - **Voyage of Time** (2016) · documentary · Terrence Malick · [Wikipedia](https://en.wikipedia.org/wiki/Voyage_of_Time)
@@ -29,6 +31,12 @@ My picks if you watch only four, in this order:
   A wordless 90-minute film that runs from physics through the origins of life to people. *Study:* music and picture built as one thing, the Opening's rule for sound.
 - **Fractal Time** (2019) and **Recombination** (2023) · fulldome shorts · Julius Horsthuis · [Fractal Time](https://www.idfa.nl/en/film/873bf445-df4a-42e2-8eb9-73e7efe380c6/fractal-time), [Recombination](https://www.nordische-filmtage.de/en/festival/movie/view/2175)
   Fractal landscapes that grow and fold without end. *Study:* the vault (beat 5) and the fractal feel you liked in the middle beats.
+- **Fantasia** (1940) · animated film · Walt Disney Productions · [Wikipedia](https://en.wikipedia.org/wiki/Fantasia_(1940_film))
+  Eight pieces of concert music, each animated. *Study:* *The Rite of Spring*, a wordless history of the Earth from its forming to the dinosaurs, cut to Stravinsky: the creation sequence every animator knows, carried by music, and a test of whether the picture means anything beyond the score.
+- **The Creation** (1981) · short animated film · Will Vinton and Joan C. Gratz · [Wikipedia](https://en.wikipedia.org/wiki/Will_Vinton)
+  James Weldon Johnson's sermon-poem of the creation, read by James Earl Jones. *Study:* Gratz's clay painting, oil clay pushed and repainted frame by frame so each image melts into the next: paint that moves like paint, for the painted look.
+- **The Bible: In the Beginning…** (1966) · film · John Huston · [Wikipedia](https://en.wikipedia.org/wiki/The_Bible:_In_the_Beginning...)
+  Genesis 1–22 as a studio epic. *Study:* the opening creation, directed by the photographer Ernst Haas: nature footage under Huston reading the verses, the big-screen version our wordless Opening sets itself against.
 
 ## The Opening: the people and the run (beat 13)
 

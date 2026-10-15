@@ -10,6 +10,8 @@
 3. **Julius Horsthuis, *Fractal Time* (2019) and *Recombination* (2023)**: fractal landscapes that grow and fold without end. They're the reference for the vault (beat 5) and the "nicer fractal feel" you liked in the middle beats.
 4. **Malick, *Voyage of Time* (2016)**: the same team's IMAX follow-up, from the cosmos to early life. It's the closest film to beats 6–11.
 
+**How others have pictured it.** Every notable depiction of Gen 1:1–2:7, from the Cotton Genesis to VR, with the ten I think matter most for this sequence, is in the [catalogue of depictions](./DEPICTIONS.md). This book keeps to what each shot takes.
+
 **Images.** The open-licence images chosen for this book are in `references/img/`, each at most 1600 px on the long side, JPEG quality 85, with its credit and licence in the table at the end. [`references/fetch_refs.py`](./references/fetch_refs.py) holds each one's direct URL and downloads any that are missing (`py references/fetch_refs.py`). One isn't there: Bentley's snowflake, because the Smithsonian's server refuses scripted downloads (HTTP 403), so save it by hand from its page if it's wanted. The Mandelbrot boundary for beat 5 was rendered for this book and needs no licence. Wikimedia Commons pages couldn't be read when the book was written, so no Commons images are included; those licences aren't verified.
 
 ---
