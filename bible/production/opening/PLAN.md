@@ -142,7 +142,7 @@ The brief (2026-10-03) says the sequence "should feel very fast," and you've fou
 - **The face, only if MetaHuman fails:** about $500 for Character Creator 5 and Headshot 3.
 - Optional add-ons (Faceit, about $80–100).
 
-**Render time on your card** (estimates; the first test will correct them): EEVEE at 2–10 seconds a frame is 4–20 hours for all 7,200 frames; Cycles at 30–60 seconds a frame would be 60–120 hours, so it's used only for the beats that need it. GPU shader passes take minutes. Renders run overnight, in ten-second parts that pick up where they stopped.
+**Render time on your card,** measured: the leaf look test, with simple procedural assets, took about 2 seconds a frame at 1280×720 in EEVEE; the realistic test of the run, with rigged people on motion capture, took about 5⅓ minutes a frame at 1920×1080 (84 frames in 7½ hours), so the 36-second run alone would be about 3 days. GPU shader passes take minutes. **A faster PC is coming, and the aim is truly realistic** (you, 2026-10-15), so full-quality rendering waits for it. Until then the work is what the 2060 Super does quickly: the layout (Workbench playblasts, minutes), the look decided in single frames and short tests, the face, the assets, and the cloud tests (Aleph), none of which needs the new card. Renders, when they come, run overnight, in ten-second parts that pick up where they stopped.
 
 **Your time.** The sessions need you for the review gates, your photos for the face (the expressions are made in software, 2026-10-14), and the AI video account. Most of the building I can do while you're away from the machine, once the session is set up.
 
@@ -209,6 +209,6 @@ Decided 2026-10-13, and folded in above: the live-action look for beats 10–14 
 2. **Next on your desktop:** your notes on the twelfth pass of the beats 12–13 layout. The face test (MetaHuman in Unreal 5.7, or a head from your photos, brought into Blender, one frame rendered with one keyed expression) comes after those notes: the story reel has to be right first (you, 2026-10-13).
 3. **The shot list and tempo map** for all fourteen beats (stage A), the cut list is [`pipeline/shots.csv`](./pipeline/shots.csv), drafted from the script; each shot still needs its camera, screen direction, speed and sound hits, and your corrections.
 4. **Layout of every beat** (stage B), reviewed in batches, to layout lock.
-5. **Style frames** (stage C), one per beat.
-6. **Build** (stage D) in this order: beats 1–3 (the face and the sand, the heart of it), 4–5 (the shaders), 6–9, then 10–14 with the AI video.
+5. **Style frames** (stage C), one per beat; single frames, so they can start before the new PC.
+6. **Build** (stage D), on the new PC, in this order: beats 1–3 (the face and the sand, the heart of it), 4–5 (the shaders), 6–9, then 10–14 with the AI video.
 7. **Picture lock,** your score, the finish.
