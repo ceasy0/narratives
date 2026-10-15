@@ -36,9 +36,9 @@ PALETTES = {
     "skin": dict(shadow=(0.6, 0.54, 0.53), light=(1.02, 1.0, 0.97), soft=(0.15, 0.8),
                  warm=((1.05, 0.92, 0.88), 0.12), highlight=None,
                  crease=((0.45, 0.36, 0.36), 0.45), crease_at=(0.62, 0.32), wet=0.35),
-    "hair": dict(shadow=(0.5, 0.46, 0.52), light=(1.05, 1.0, 0.94), soft=(0.04, 0.5),
-                 warm=((1.1, 0.9, 0.8), 0.15), highlight=((0.6, 0.45, 0.3), 0.7),
-                 crease=((0.14, 0.1, 0.08), 0.8), crease_at=(0.9, 0.5), wet=0.0),
+    "hair": dict(shadow=(0.45, 0.42, 0.5), light=(1.05, 1.0, 0.94), soft=(0.04, 0.5),
+                 warm=((1.1, 0.9, 0.8), 0.15), highlight=((0.68, 0.52, 0.36), 0.55),
+                 crease=((0.3, 0.22, 0.18), 0.5), crease_at=(0.72, 0.36), wet=0.15, strands=True),
 }
 
 
@@ -55,14 +55,17 @@ def smoothstep(a, b, x):
 def blur(a, r):
     """A box blur, r pixels each way, twice (near enough a Gaussian)."""
     for _ in range(2):
-        for axis in (0, 1):
+        for axis in range(min(2, a.ndim)):
             c = np.cumsum(np.pad(a, [(r + 1, r) if i == axis else (0, 0) for i in range(a.ndim)], mode="edge"), axis=axis)
             a = (np.take(c, range(2 * r + 1, c.shape[axis]), axis=axis) - np.take(c, range(0, c.shape[axis] - 2 * r - 1), axis=axis)) / (2 * r + 1)
     return a
 
 
-def compose(base, light, mask, palette, ao=None, lift=None):
-    """The picture to paint, 0-255 sRGB: the colour in its painted light, the creases dark."""
+def compose(base, light, mask, palette, ao=None, masks=None):
+    """The picture to paint, 0-255 sRGB: the colour in its painted light, the creases dark. masks
+    (from face_test.py): red, where to leave it light; green, the ridges, for highlights where the
+    light falls; blue, the line of the closed lids, painted dark."""
+    lift = masks[..., 0] if masks is not None else None
     p = PALETTES[palette]
     L = blur(light[..., :3].mean(-1), 3)          # the bake's noise out, so it isn't painted as grit
     top = np.percentile(L[mask > 0], 99) if mask is not None and mask.any() else np.percentile(L, 99)
@@ -76,12 +79,20 @@ def compose(base, light, mask, palette, ao=None, lift=None):
     out = out * (1 + w * (np.array(p["warm"][0]) - 1))
     if p["highlight"]:
         h = smoothstep(p["highlight"][1], p["highlight"][1] + 0.12, L)[..., None]
+        if p.get("strands"):                        # the sheen in strands across each lock, not in patches, as on Vi
+            n = blur(np.random.default_rng(3).random(L.shape[1]), 2)
+            h = h * (0.15 + 0.85 * smoothstep(0.5, 0.62, n))[None, :, None]
         out = out * (1 - h) + np.array(p["highlight"][0]) * h
     if ao is not None and p.get("crease"):
-        c = (smoothstep(p["crease_at"][0], p["crease_at"][1], ao[..., :3].mean(-1)) * p["crease"][1])[..., None]
+        c = (smoothstep(p["crease_at"][0], p["crease_at"][1], blur(ao[..., :3].mean(-1), 2)) * p["crease"][1])[..., None]
         if lift is not None:
             c = c * (1 - 0.7 * blur(lift, 4)[..., None])
         out = out * (1 - c) + out * np.array(p["crease"][0]) * c
+    if masks is not None:
+        h = (blur(masks[..., 1], 2) * smoothstep(0.55, 0.95, L) * 0.7)[..., None]     # highlights on the lit ridges
+        out = out * (1 - h) + np.minimum(out * np.array((1.14, 1.1, 1.05)) + 0.03, 1.0) * h
+        lid = (blur(masks[..., 2], 1) * 0.9)[..., None]                               # the lids' line, bold
+        out = out * (1 - lid) + out * np.array((0.3, 0.23, 0.23)) * lid
     return np.clip(out * 255, 0, 255).astype(np.float32)
 
 
@@ -206,8 +217,8 @@ if __name__ == "__main__":
     size = base.shape[0]
     fine = region_mask(a.region, size) if a.region else None
     ao = np.load(a.ao).astype(np.float32)[::-1] if a.ao else None
-    lift = np.load(a.masks).astype(np.float32)[::-1][..., 0] if a.masks else None
-    ref = compose(base, light, fine, a.palette, ao, lift)
+    masks = np.load(a.masks).astype(np.float32)[::-1] if a.masks else None
+    ref = compose(base, light, fine, a.palette, ao, masks)
     Image.fromarray(np.uint8(ref)).save(a.out.replace(".png", "-ref.png"))
     canvas = paint(ref, [int(r) for r in a.radii.split(",")], fine, a.along, a.threshold, bristles=bool(a.bristles))
     wet = PALETTES[a.palette]["wet"]

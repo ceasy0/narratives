@@ -129,14 +129,19 @@ def define(k, iters):
         has = deg > 0
         sm[has] += 0.5 * (acc[has] / deg[has, None] - sm[has])
     eyes = [sum((pts[i] for i in sets[g]), Vector()) / len(sets[g]) for g in ("helper-l-eye", "helper-r-eye")]
-    w = np.array([ramp01(-0.2, -0.13, (p - E).z) * min(ramp01(0.02, 0.034, (p - c).length) for c in eyes)
-                  for p in pts]) * body                 # not round the eyes, where the lids would part from them
+    w = np.array([ramp01(-0.2, -0.13, (p - E).z) * min(ramp01(0.015, 0.05, (p - c).length) for c in eyes)
+                  for p in pts]) * body                 # fading out round the eyes, where the lids would part from them
     me.vertices.foreach_set("co", (co + k * w[:, None] * (co - sm)).ravel())
     me.update()
+    nrm = np.empty(n * 3)
+    me.vertices.foreach_get("normal", nrm)
+    ridge = np.sum((co - sm) * nrm.reshape(-1, 3), axis=1)               # how far each point stands out of the smoothed form
+    face = np.array([ramp01(-0.15, -0.12, (p - E).z) * ramp01(0.03, 0.0, (p - E).y) for p in pts]) * body
+    top = np.percentile(ridge[face > 0.5], 97) if (face > 0.5).any() else 1.0
+    return np.clip(ridge / max(top, 1e-6), 0, 1) * face
 
 
-if not CHECK or "define" in ARGS:
-    define(*DEFINE)
+RIDGE = define(*DEFINE) if (not CHECK or "define" in ARGS) else np.zeros(len(human.data.vertices))
 pts = [MW @ v.co for v in human.data.vertices]
 
 # Stubble, as in the photos: a soft mask over the jaw, the chin and the upper lip, kept off the
@@ -154,6 +159,8 @@ human.data.attributes.new("stubble", 'FLOAT', 'POINT').data.foreach_set("value",
 lips = [ramp01(1.15, 0.8, (((p - E).x / 0.028) ** 2 + (((p - E).z + 0.078) / 0.011) ** 2) ** 0.5) * ramp01(-0.01, -0.03, (p - E).y)
         for p in pts]                                                    # the lips, for their own colour
 human.data.attributes.new("lip_tint", 'FLOAT', 'POINT').data.foreach_set("value", lips)
+upper = [l * ramp01(-0.08, -0.074, (p - E).z) for l, p in zip(lips, pts)]
+human.data.attributes.new("upper_lip", 'FLOAT', 'POINT').data.foreach_set("value", upper)
 EYES = [sum((pts[i] for i in sets[g]), Vector()) / len(sets[g]) for g in ("helper-l-eye", "helper-r-eye")]
 
 
@@ -186,6 +193,28 @@ for kind, what in (("eyes", "high-poly"), ("eyebrows", BROWS), ("eyelashes", LAS
     fitted[kind] = ob
 for t, w in BREATH_IN.items():
     TS.load_target(human, str(SYSTEM / "expression" / "units" / "caucasian" / (t + ".target.gz")), weight=0.0, name=t)
+
+
+def painter_masks():
+    """One colour per point for the painter: red, the shade under the eyes to leave light; green,
+    the ridges of the forms, where highlights go; blue, the line of the closed lids, where the lashes
+    meet the skin, painted bold and dark, as Vi's lids are."""
+    from mathutils.kdtree import KDTree
+    lash = fitted["eyelashes"]
+    lv = [lash.matrix_world @ v.co for v in lash.data.vertices]
+    kd = KDTree(len(lv))
+    for i, v in enumerate(lv):
+        kd.insert(v, i)
+    kd.balance()
+    cols = []
+    for i, p in enumerate(pts):
+        lid = ramp01(0.0028, 0.0008, kd.find(p)[2])
+        near_eye = min((p - c).length for c in EYES)
+        cols.extend((under_eye(p), float(RIDGE[i]) * ramp01(0.016, 0.026, near_eye), lid, 1.0))
+    human.data.attributes.new("paint_masks", 'FLOAT_COLOR', 'POINT').data.foreach_set("color", cols)
+
+
+painter_masks()
 for p in human.data.polygons:
     p.use_smooth = True
 sd = human.modifiers.new("Smooth", 'SUBSURF')
@@ -193,7 +222,7 @@ sd.levels, sd.render_levels = 1, 1
 
 
 # ---------------------------------------------------------------- the hair, in locks
-def hair(n_locks=120, seed=3):
+def hair(n_locks=75, seed=3):
     """Locks of hair grown over the scalp: parted on his left, those right of the part swept
     across the forehead and down past the temple, the rest falling to the jaw at the sides and the
     nape at the back, each lying on the ones beneath; every lock a tapered band, thick at the
@@ -213,7 +242,7 @@ def hair(n_locks=120, seed=3):
     roots = []
     for i in rng.sample(scalp, len(scalp)):
         p = pts[i]
-        if all((p - q).length > 0.012 for q in roots):
+        if all((p - q).length > 0.016 for q in roots):
             roots.append(p)
         if len(roots) >= n_locks:
             break
@@ -244,6 +273,8 @@ def hair(n_locks=120, seed=3):
             d = (d - nq * d.dot(nq) * 0.8).normalized()                      # along the head, not into it
             d = (d + Vector((0, 0, -1)) * (0.015 + 0.012 * i)).normalized()  # falling more as it goes
             d = (d + d.cross(nq).normalized() * 0.07 * math.sin(0.28 * i + wave)).normalized()   # a slight wave
+            if p.z < end_z + 0.025:                                          # the ends flick out, as in the photos
+                d = (d + nq * 0.35 * ramp01(end_z + 0.025, end_z, p.z)).normalized()
             p = p + d * 0.008
             q, nq, _ = nearest(p)
             if (p - q).dot(nq) < lift:
@@ -254,19 +285,23 @@ def hair(n_locks=120, seed=3):
             norms.append(nq)
             if p.z < end_z and i > 6:
                 break
-        width = rng.uniform(0.02, 0.034)
+        width = rng.uniform(0.032, 0.05)            # big locks, as Vi's
         cx, cy = k % cols, k // cols
         n = len(path)
         base = len(verts)
         tone = rng.uniform(0.85, 1.15)
+        s_prev = None
         for j, (c, nq) in enumerate(zip(path, norms)):
             u = j / (n - 1)
             t = (path[min(j + 1, n - 1)] - path[max(j - 1, 0)]).normalized()
             s = t.cross(nq).normalized()
+            if s_prev is not None and s.dot(s_prev) < 0:                # no twist where the lock bends
+                s = -s
+            s_prev = s
             w = width * (1 - u ** 1.6) * (0.75 + 0.25 * min(1.0, u * 6)) + 0.0004
             for a in range(seg + 1):
                 ang = 2 * math.pi * a / seg
-                verts.append(tuple(c + s * (0.5 * w * math.cos(ang)) + nq * (0.33 * w * math.sin(ang))))
+                verts.append(tuple(c + s * (0.5 * w * math.cos(ang)) + nq * (0.5 * w * math.sin(ang))))
                 uvs.append(((cx + 0.05 + 0.9 * a / seg) / cols, (cy + 0.03 + 0.94 * u) / rows))
                 along.append(u)
                 shade.append(tone)
@@ -388,13 +423,15 @@ def skin_colour(g, uv):
     warm = g.new("ShaderNodeAttribute", attribute_name="warmth").outputs["Fac"]
     col = g.mix(g.math('MULTIPLY', warm, 0.55), col, g.scale(col, (1.0, 0.82, 0.8)))   # warmer, rosier, as Vi's cheeks and nose
     lip = g.new("ShaderNodeAttribute", attribute_name="lip_tint").outputs["Fac"]
-    return g.mix(g.math('MULTIPLY', lip, 0.8), col, g.scale(col, (0.8, 0.58, 0.56)))   # lips their own, darker rose, as Vi's
+    col = g.mix(g.math('MULTIPLY', lip, 0.8), col, g.scale(col, (0.8, 0.58, 0.56)))   # lips their own, darker rose, as Vi's
+    up = g.new("ShaderNodeAttribute", attribute_name="upper_lip").outputs["Fac"]
+    return g.mix(g.math('MULTIPLY', up, 0.7), col, g.scale(col, (0.8, 0.74, 0.75)))   # the upper lip in its own shade
 
 
 def hair_colour(g, uv):
     a = g.new("ShaderNodeAttribute", attribute_name="along").outputs["Fac"]
     sh = g.new("ShaderNodeAttribute", attribute_name="shade").outputs["Fac"]
-    col = g.mix(g.remap(a, 0.2, 1.0, 0.0, 1.0), (*P.srgb((0.24, 0.15, 0.09)), 1.0), (*P.srgb((0.44, 0.31, 0.19)), 1.0))
+    col = g.mix(g.remap(a, 0.2, 1.0, 0.0, 1.0), (*P.srgb((0.21, 0.13, 0.08)), 1.0), (*P.srgb((0.4, 0.28, 0.17)), 1.0))
     return g.scale(col, sh)                         # darker at the root, lighter to the ends, as in the photos
 
 
@@ -478,11 +515,15 @@ else:
     if not (REUSE and skin_png.exists() and hair_png.exists()):
         for ob in [human, locks] + list(fitted.values()):          # something to cast shadows while baking
             wear(ob, P.flat("Bake stand-in", (0.8, 0.8, 0.8)))
-        sk = bake(human, skin_colour, SKIN_RES, "skin", 0.012, masks="under_eye")
+        for kind in ("eyebrows", "eyelashes", "eyes"):    # their shadows on the skin read as eyeshadow
+            fitted[kind].hide_render = True
+        sk = bake(human, skin_colour, SKIN_RES, "skin", 0.012, masks="paint_masks")
+        for kind in ("eyebrows", "eyelashes", "eyes"):
+            fitted[kind].hide_render = False
         hb = bake(locks, hair_colour, HAIR_RES, "hair", 0.02)
         reg = region()
         for (src, png, pal, radii, extra) in ((sk, skin_png, "skin", "10,5,3,2", ["--region", str(reg), "--bristles", "0", "--threshold", "10"]),
-                                              (hb, hair_png, "hair", "8,4,2", ["--along", "v"])):
+                                              (hb, hair_png, "hair", "10,5,3", ["--along", "v"])):
             t = time.time()
             subprocess.run(["py", str(BRUSH), str(src["base"]), str(src["light"]), str(png), "--palette", pal,
                             "--radii", radii, "--ao", str(src["ao"])] + extra
