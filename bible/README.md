@@ -20,6 +20,7 @@ This directory holds the planning documents, the Opening's research, treatment, 
 | [`story/arcs/07-ruth/`](./story/arcs/07-ruth/README.md) | The Ruth pilot: the plan, the research dossier, the treatment, the beat sheet and a [storyboard](./story/arcs/07-ruth/STORYBOARD.md) of sixteen key frames, drawn as sketches |
 | [`scripts/ruth/`](./scripts/ruth/ruth.fountain) | The first-draft Ruth screenplay, with every line tagged |
 | [`style/`](./style/STORYTELLING.md) | Your notes on how scenes should play ([`STORYTELLING`](./style/STORYTELLING.md)), how each character speaks ([`VOICES`](./style/VOICES.md)), and the word list ([`LEXICON`](./style/LEXICON.md)) |
+| [`STUDY.md`](./STUDY.md) | Films, series, books and anything else to watch and study for the project, each with what to study it for. Add titles to its inbox; they're folded in each session |
 | [`CLAUDE.md`](./CLAUDE.md) | The working rules Claude loads in every session, so nothing depends on memory. |
 | [`archive/`](./archive/) | Dated records kept for reference: the founding [roadmap](./archive/ROADMAP.md), the [project review](./archive/REVIEW.md) of 2026-10-07 and the [project audit](./archive/AUDIT.md) of 2026-10-10. Their open calls are in the list below. |
 

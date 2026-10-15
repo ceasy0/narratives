@@ -26,6 +26,7 @@
 | Past reviews and audits | `archive/` (dated records; their open calls are README items) | — |
 | What changed, and when | git history (`git log -p <file>`) and the discussions' rounds | nowhere in the documents |
 | The series as episodes | `story/ARCHITECTURE.md` | arc plans link to their section |
+| Films, series, books and more to watch and study | `STUDY.md` | a shot's visual references stay in `production/opening/REFERENCES.md`, linked from it |
 
 Record a decision once, in its home, and link from the rest. Don't paste it into a second file.
 
@@ -41,6 +42,7 @@ Where every piece stands (versions, what's next) is `README.md`'s "Status"; read
 - **The Garden (Gen 2:8–3:24)** is the rest of Episode 1, and its treatment is the next writing deliverable. Everything decided about it is in `story/arcs/01-beginnings/garden/DOSSIER.md`, with the research behind the look in `garden/LAYOUT.md`.
 - **Sessions run on the author's computer when they can** (the RTX 2060 Super desktop, 32 GB RAM, Blender 5.0, FL Studio 2024 and 2025 installed; Python 3.14 with numpy and Pillow, run as `py`, since bare `python` is only the Store's placeholder; ffmpeg 9.0.2, installed with winget on 2026-10-08). Cloud sessions can't reach the prototype at `C:\Users\corbi\Personal\Current\Projects\Agentic\Biblical Story Concept`, Blender or FL Studio. The author has allowed installing video tools and anything else needed (2026-10-05). The animatic needs only Python, numpy, Pillow and ffmpeg.
 - **Keep `README.md`'s "What I need from you" list current.** It is the one place the author tracks every open question, and everything open or needing the author goes there, including questions for later arcs (the author, 2026-10-11). **When a question is answered, delete it from the list; never strike it through** (the author, 2026-10-10). First record the answer where it belongs (FOUNDATIONS §4, the arc's dossier, ARCHITECTURE, the discussion), then remove the item, renumber the list, and fix every `README item N` reference elsewhere in `bible/`.
+- **Fold in `STUDY.md`'s inbox at the start of every session** (the author, 2026-10-15). The author adds titles there as bullets; give each a place in the list (a line on what it is, what to study it for, one link, in the section it's for), clear the inbox, and keep the list tidy by its own "How the list is kept". When the author has watched something, move it to "Watched" and put what's worth keeping where it belongs.
 - **Commit and push after every round of edits** (the author's instruction, 2026-10-03), to `main` (the author, 2026-10-14). Git works in the projects folder on the author's SSD (`C:\Users\corbi\Personal\Current\Projects`) without extra flags.
 
 ## Rules
