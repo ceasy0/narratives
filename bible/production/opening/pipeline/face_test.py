@@ -112,7 +112,7 @@ for t, w in BREATH_IN.items():
 for p in human.data.polygons:
     p.use_smooth = True
 sd = human.modifiers.new("Smooth", 'SUBSURF')
-sd.levels, sd.render_levels = 1, 2
+sd.levels, sd.render_levels = 1, 1           # once: twice smooths the planes away
 print("head built in %.0fs" % (time.time() - t_start))
 
 
@@ -140,19 +140,20 @@ if not CHECK:
         amt = g.math('MULTIPLY', g.new("ShaderNodeAttribute", attribute_name="stubble").outputs["Fac"], 0.42)
         return g.mix(amt, col, g.scale(col, (0.68, 0.66, 0.72)))     # painted as a soft cool tone, as stubble reads
 
-    skin = P.paint("Painted skin", (0.9, 0.72, 0.64), colour=skin_colour, shadow=(0.55, 0.38, 0.48),
-                   light=(1.04, 0.99, 0.93), scale=3.0, vary=0.06, strokes=0.6, edge=(0.2, 0.36), spec=0.04, ao=0.45,
-                   ao_distance=0.04, rim=(0.62, 0.74, 1.0), rim_amount=0.22)
+    skin = P.paint("Painted skin", (0.9, 0.72, 0.64), colour=skin_colour, shadow=(0.46, 0.35, 0.36),
+                   light=(1.04, 0.99, 0.93), scale=3.0, vary=0.08, strokes=0.8, edge=(0.2, 0.36), hard=0.03,
+                   half=0.2, ao=0.45, ao_distance=0.04, crease=0.55, crease_distance=0.012, grain=0.03,
+                   rim=(0.62, 0.74, 1.0), rim_amount=0.06)
     wear(human, skin)
     hair_img = picture(fitted["hair"])
     wear(fitted["hair"], P.paint("Painted hair", (0.24, 0.155, 0.1), shadow=(0.42, 0.36, 0.5),
                                  light=(1.25, 1.12, 0.98), scale=2.5, vary=0.12, edge=(0.12, 0.32),
-                                 spec=0.12, spec_color=(0.85, 0.66, 0.46), ao=0.3, ao_distance=0.05,
-                                 alpha_image=hair_img, alpha_cut=0.5, rim_amount=0.25, streaks=(70.0, 3.0)))
+                                 ao=0.3, ao_distance=0.05, crease=0.3, crease_distance=0.01,
+                                 alpha_image=hair_img, alpha_cut=0.5, rim_amount=0.1, streaks=(70.0, 3.0)))
     for kind in ("eyebrows", "eyelashes"):
         wear(fitted[kind], P.paint("Painted " + kind, (0.22, 0.14, 0.09), shadow=(0.6, 0.55, 0.65),
                                    light=(1.1, 1.05, 1.0), vary=0.05, alpha_image=picture(fitted[kind]),
-                                   alpha_cut=0.45, rim_amount=0.0, ao=0.0))
+                                   alpha_cut=0.45, rim_amount=0.0, ao=0.0, crease=0.0, grain=0.0))
     wear(fitted["eyes"], P.flat("Eye", (0.85, 0.82, 0.78)))
     P.outline(human, 0.0006, (0.22, 0.11, 0.1))
 else:
@@ -206,12 +207,14 @@ def sun(name, energy, colour, elevation, azimuth, angle=2.0):
 
 
 # Azimuth from +X (the head's left), counter-clockwise; the face looks toward -Y (270), and the
-# camera is on the head's left. The key is on the far side, so the near cheek turns into shadow.
-sun("Morning sun", 4.0, (1.0, 0.86, 0.68), 20, 235)       # low, warm, from the front and the face's right
-sun("Sky fill", 0.5, (0.62, 0.72, 1.0), 15, 320)          # cool and dim, from the camera's side
-sun("Rim", 2.2, (1.0, 0.9, 0.78), 25, 60)                 # from behind on the camera's side, along the edge
-P.sky(scene, zenith=(0.42, 0.5, 0.66), horizon=(0.88, 0.74, 0.6), below=(0.78, 0.66, 0.56),
-      clouds=(0.93, 0.83, 0.72), fill=(0.6, 0.66, 0.8), fill_strength=0.3, soft=0.35)
+# camera is on the head's left. The key is high, in front and across the nose from the camera,
+# so the shadows carve the form toward us: under the brow, beside the nose, under the cheekbones
+# and the jaw, as on Vi.
+sun("Morning sun", 3.6, (1.0, 0.87, 0.7), 42, 250)        # warm, from in front, above, and the face's right
+sun("Sky fill", 0.45, (0.62, 0.72, 1.0), 10, 215)         # cool and dim, from the other side
+sun("Rim", 2.0, (1.0, 0.9, 0.78), 25, 120)                # from behind on the far side, along the edge
+P.sky(scene, zenith=(0.2, 0.24, 0.32), horizon=(0.44, 0.38, 0.36), below=(0.3, 0.27, 0.27),   # dark and cool behind,
+      clouds=(0.5, 0.45, 0.42), fill=(0.6, 0.66, 0.8), fill_strength=0.3, soft=0.35)          # as behind Vi
 
 r = scene.render
 r.resolution_x, r.resolution_y, r.resolution_percentage = (900, 1200, 100) if CHECK else (1920, 1080, 100)
@@ -219,7 +222,7 @@ P.eevee(scene, 64)
 if CHECK:
     r.use_compositing = False
 else:
-    P.finish(scene, brush=5, uniformity=4, sharpness=0.5, bloom=0.2)
+    P.finish(scene)
 r.use_stamp = False
 scene.frame_start, scene.frame_end = F0, F1
 OUT.mkdir(parents=True, exist_ok=True)

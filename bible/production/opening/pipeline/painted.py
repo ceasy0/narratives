@@ -3,19 +3,20 @@ Blender's EEVEE. Imported by the style tests (face_test.py, band_mocap_test.py -
 
 What makes the look, and where each part of it is here:
 
-- Light painted in bands, not rendered smoothly. Each material reads how much light reaches it
-  (a white diffuse surface, through Shader to RGB), breaks the line between light and shadow
-  with brush-shaped noise, and paints its own colours either side of it: warm in the light, a
-  cooler, richer colour in the shadow, never grey. paint()
-- Texture that looks hand-painted: the colour drifts in value and hue in large soft patches and
-  in smaller strokes, laid on the mesh's own UVs (so it stays put on a moving body) or on its
-  object space. paint(coords=...)
-- A rim of cool light along the edges, and a small sharp highlight where a surface has one.
+- Light painted, not rendered smoothly. Each material reads how much light reaches it (a white
+  diffuse surface, through Shader to RGB) and turns from shadow to half-tone to light in three
+  painted values, each turn a sharp edge broken by the brushstrokes; it paints its own colours
+  either side: warm in the light, a cooler, richer colour in the shadow, never grey. paint()
+- Paint that's dry and matte, defined rather than smooth (your notes, 2026-10-15): the colour
+  drifts in big soft patches, then lies in flat dabs of a few values with edges, under a fine
+  dry grain; creases are painted dark; nothing shines but what's wet. On the mesh's own UVs (so
+  it stays put on a moving body) or its object space. paint(coords=..., dabs=..., crease=...)
+- A faint cool edge on the lit side, and a small hard highlight where something is wet.
   paint(rim=..., spec=...)
 - A thin dark line round the characters. outline()
 - A painted sky, seen only by the camera; the light it gives the scene is a dim, even fill. sky()
-- Air and brushwork over the whole frame: distance fades toward the haze colour, an anisotropic
-  Kuwahara filter turns the image into strokes that follow its forms, and a little bloom. finish()
+- Air over the whole frame: distance fades toward the haze colour, and a light anisotropic
+  Kuwahara filter ties the strokes together without smoothing the shapes away. finish()
 
 Colours are given as they'd be picked on screen (sRGB) and converted here.
 """
@@ -91,24 +92,34 @@ def material(name):
     return m, Nodes(nt), nt.nodes.new("ShaderNodeOutputMaterial")
 
 
-def paint(name, base, *, shadow=(0.52, 0.42, 0.56), light=(1.0, 0.97, 0.9), coords='UV', scale=1.0,
-          vary=0.1, strokes=1.0, edge=(0.16, 0.34), lit_range=(0.34, 1.6), rim=(0.58, 0.72, 1.0),
-          rim_amount=0.18, spec=0.0, spec_color=(1.0, 0.95, 0.88), ao=0.35, ao_distance=0.2,
-          image=None, image_mix=1.0, alpha_image=None, alpha_cut=None, colour=None, streaks=None,
-          stroke=(14.0, 14.0, 46.0)):
-    """A painted material. base: its colour (sRGB). shadow and light: what that colour is
-    multiplied by in shadow and in light. coords: 'UV' (bodies, which move) or 'Object' (the
-    world). scale: how big the brushwork is (bigger number, smaller strokes). edge: where in the
-    light (0 dark, about 1 in full sun) the shadow turns to light. image: a picture to take the
-    base colour from (a skin's), mixed in by image_mix. alpha_image: a picture whose alpha cuts the
-    surface out (hair cards, brows). colour: a socket function (Nodes -> colour socket) to use for
-    the base instead. streaks: (across, along) scales for strands drawn along the UVs (hair).
-    stroke: how the strokes are stretched, as noise scales along x, y and z (a small number is a
-    long stroke that way: bark wants its strokes up the trunk)."""
+def paint(name, base, *, shadow=(0.5, 0.4, 0.55), light=(1.0, 0.97, 0.9), coords='UV', scale=1.0,
+          vary=0.1, strokes=1.0, edge=(0.16, 0.34), hard=0.035, half=0.22, half_mix=0.55,
+          lit_range=(0.34, 1.6), rim=(0.58, 0.72, 1.0), rim_amount=0.08, spec=0.0,
+          spec_color=(1.0, 0.95, 0.88), ao=0.35, ao_distance=0.2, crease=0.45, crease_distance=None,
+          grain=0.035, dabs=4, image=None, image_mix=1.0, alpha_image=None, alpha_cut=None,
+          colour=None, streaks=None, stroke=(14.0, 14.0, 46.0)):
+    """A painted material, dry and matte, its shapes defined (your notes, 2026-10-15, with the
+    frame of Vi from Arcane: painted, but defined).
+
+    base: its colour (sRGB). shadow and light: what that colour is multiplied by in shadow and in
+    full light; between them is a half-tone, half_mix of the way from one to the other, so a form
+    turns in three painted values, not a smooth gradient. edge: where in the light (0 dark, about
+    1 in full sun) the shadow turns; hard: how sharply it turns (the strokes still break the line,
+    so it's a brushed edge, not a cartoon one); half: how much more light the full light needs
+    (None: two values only). coords: 'UV' (bodies, which move) or 'Object' (the world). scale:
+    how big the brushwork is (bigger number, smaller strokes); stroke: how the strokes stretch,
+    as noise scales along x, y and z (bark wants them up the trunk); dabs: how many flat values
+    the strokes come in, so they read as dabs of paint with edges; grain: a fine dry grain over
+    all, as of paint on a rough ground. crease: how dark the creases are painted (eyelids,
+    nostrils, the line of the lips), found by occlusion within crease_distance. image: a picture
+    to take the base colour from (a skin's), mixed in by image_mix; alpha_image: one whose alpha
+    cuts the surface out (hair cards, brows); colour: a function (Nodes, coords) -> colour socket
+    for the base instead; streaks: (across, along) scales for strands along the UVs (hair).
+    rim: a faint cool edge on the lit side; spec: a small hard highlight, for what's wet."""
     m, g, out = material(name)
     tc = g.new("ShaderNodeTexCoord")
     vec = tc.outputs[coords]
-    # The base colour, drifting as paint does: big soft patches of value, a little hue, strokes.
+    # The base colour, drifting as paint does: big soft patches of value and a little hue...
     b = srgb(base)
     col = (*b, 1.0)
     if image is not None:
@@ -119,32 +130,51 @@ def paint(name, base, *, shadow=(0.52, 0.42, 0.56), light=(1.0, 0.97, 0.9), coor
     patch = g.noise(g.scale(vec, scale), 3.0, 2.0, 0.5, 0.4)
     hue = g.noise(g.scale(vec, scale), 1.6, 1.0, 0.4, 0.2)
     col = g.mix(hue, g.scale(col, (1.04, 1.0, 0.94)), g.scale(col, (0.95, 1.0, 1.06)))
-    col = g.scale(col, g.remap(patch, 0.3, 0.7, 1 - vary, 1 + vary))
+    col = g.scale(col, g.remap(patch, 0.3, 0.7, 1 - 0.6 * vary, 1 + 0.6 * vary))
+    # ...then strokes laid in flat dabs with edges, and a fine dry grain.
     sv = g.new("ShaderNodeMapping", {"Vector": vec, "Scale": tuple(v * scale for v in stroke)})
-    stroke = g.noise(sv.outputs[0], 1.0, 1.5, 0.45, 1.1)
-    col = g.scale(col, g.remap(stroke, 0.35, 0.65, 1 - 0.6 * vary, 1 + 0.6 * vary))
+    stroke_n = g.noise(sv.outputs[0], 1.0, 1.5, 0.45, 1.1)
+    edge_n = g.noise(g.scale(sv.outputs[0], 3.0), 1.0, 2.0, 0.55, 0.6)       # finer, for the brushed edge of a shadow
+    dab = g.math('SNAP', g.remap(stroke_n, 0.3, 0.7, 0.0, 0.999, smooth=False), 1.0 / dabs)
+    col = g.scale(col, g.remap(dab, 0.0, 1.0, 1 - vary, 1 + vary, smooth=False))
     if streaks:
         st = g.new("ShaderNodeMapping", {"Vector": tc.outputs["UV"], "Scale": (streaks[0], streaks[1], 1.0)})
-        col = g.scale(col, g.remap(g.noise(st.outputs[0], 1.0, 2.0, 0.6, 0.3), 0.3, 0.7, 0.72, 1.22))
-    # How much light reaches it, with the line between light and shadow broken by the strokes.
+        strand = g.math('SNAP', g.remap(g.noise(st.outputs[0], 1.0, 2.0, 0.6, 0.3), 0.3, 0.7, 0.0, 0.999, smooth=False), 0.25)
+        col = g.scale(col, g.remap(strand, 0.0, 1.0, 0.7, 1.2, smooth=False))
+    if grain:
+        fine = g.noise(g.scale(vec, 220.0 * scale), 1.0, 0.0, 0.5, 0.0)
+        col = g.scale(col, g.remap(fine, 0.35, 0.65, 1 - grain, 1 + grain, smooth=False))
+    # How much light reaches it; the turn from shadow to half-tone to light, each a brushed edge.
     dif = g.new("ShaderNodeBsdfDiffuse", {"Color": (1, 1, 1, 1)})
     lum = g.bw(g.new("ShaderNodeShaderToRGB", [dif.outputs[0]]).outputs[0])
-    wob = g.math('MULTIPLY_ADD', g.math('SUBTRACT', stroke, 0.5), 0.32 * strokes, lum)
-    band = g.remap(wob, edge[0], edge[1], 0.0, 1.0)
+    wob = g.math('MULTIPLY_ADD', g.math('SUBTRACT', edge_n, 0.5), 0.14 * strokes, lum)
+    c0 = 0.5 * (edge[0] + edge[1])
+    band = g.remap(wob, c0 - hard / 2, c0 + hard / 2, 0.0, 1.0, smooth=False)
     occ = g.new("ShaderNodeAmbientOcclusion", {"Distance": ao_distance}).outputs["AO"]
     occ = g.remap(occ, 0.0, 1.0, 1 - ao, 1.0, smooth=False)
     dark = g.scale(g.scale(col, shadow), occ)
-    lit = g.scale(g.scale(col, light), g.remap(lum, lit_range[0], lit_range[1], 0.9, 1.12))
-    lit = g.scale(lit, g.remap(occ, 1 - ao, 1.0, 1 - 0.5 * ao, 1.0, smooth=False))
+    full = g.scale(g.scale(col, light), g.remap(lum, lit_range[0], lit_range[1], 0.95, 1.08))
+    full = g.scale(full, g.remap(occ, 1 - ao, 1.0, 1 - 0.5 * ao, 1.0, smooth=False))
+    if half is not None:
+        lit = g.mix(g.remap(wob, c0 + half - hard / 2, c0 + half + hard / 2, 0.0, 1.0, smooth=False),
+                    g.mix(half_mix, dark, full), full)
+    else:
+        lit = full
     c = g.mix(band, dark, lit)
-    # A cool rim on the edges, stronger on the lit side; a small sharp highlight.
-    face = g.new("ShaderNodeLayerWeight", {"Blend": 0.25}).outputs["Facing"]
-    rimf = g.math('MULTIPLY', g.remap(face, 0.62, 0.95, 0.0, rim_amount), g.remap(band, 0.0, 1.0, 0.45, 1.0, False))
-    c = g.mix(rimf, c, (*srgb(rim), 1.0), 'SCREEN')
+    # Creases painted dark, as a painter accents them.
+    if crease:
+        near = g.new("ShaderNodeAmbientOcclusion", {"Distance": crease_distance or 0.35 * ao_distance}).outputs["AO"]
+        cf = g.remap(near, 0.45, 0.75, crease, 0.0, smooth=False)
+        c = g.mix(cf, c, g.scale(dark, 0.7))
+    # A faint cool edge on the lit side only; a small hard highlight where something is wet.
+    if rim_amount:
+        face = g.new("ShaderNodeLayerWeight", {"Blend": 0.25}).outputs["Facing"]
+        rimf = g.math('MULTIPLY', g.remap(face, 0.72, 0.8, 0.0, rim_amount, smooth=False), band)
+        c = g.mix(rimf, c, (*srgb(rim), 1.0))
     if spec:
-        gl = g.new("ShaderNodeBsdfGlossy", {"Color": (1, 1, 1, 1), "Roughness": 0.28})
-        hi = g.remap(g.bw(g.new("ShaderNodeShaderToRGB", [gl.outputs[0]]).outputs[0]), 0.55, 0.9, 0.0, spec)
-        c = g.mix(hi, c, (*srgb(spec_color), 1.0), 'SCREEN')
+        gl = g.new("ShaderNodeBsdfGlossy", {"Color": (1, 1, 1, 1), "Roughness": 0.25})
+        hi = g.remap(g.bw(g.new("ShaderNodeShaderToRGB", [gl.outputs[0]]).outputs[0]), 0.78, 0.82, 0.0, spec, smooth=False)
+        c = g.mix(hi, c, (*srgb(spec_color), 1.0))
     em = g.new("ShaderNodeEmission", {"Color": c, "Strength": 1.0})
     shader = em.outputs[0]
     if alpha_image is not None:
@@ -216,10 +246,12 @@ def sky(scene, zenith=(0.36, 0.55, 0.78), horizon=(0.93, 0.84, 0.7), below=(0.45
     return w
 
 
-def finish(scene, *, brush=5, uniformity=4, sharpness=0.55, eccentricity=1.0, haze=None,
-           mist=(10.0, 120.0), haze_amount=0.6, bloom=0.25):
-    """The whole frame: haze with distance (haze: its colour, or None), brush strokes (brush: the
-    Kuwahara filter's size in pixels at 1280 wide; scaled with the resolution), and bloom."""
+def finish(scene, *, brush=2, uniformity=4, sharpness=1.0, eccentricity=1.0, haze=None,
+           mist=(10.0, 120.0), haze_amount=0.6, bloom=0.0):
+    """The whole frame: haze with distance (haze: its colour, or None), the brush filter (brush:
+    the Kuwahara filter's size in pixels at 1280 wide, scaled with the resolution; kept small, as
+    a bigger one smooths everything into the soft, glossy look of your note of 2026-10-15), and
+    bloom (none by default: the look is matte)."""
     r = scene.render
     size = max(2, round(brush * r.resolution_x * r.resolution_percentage / 100 / 1280))
     vl = scene.view_layers[0]

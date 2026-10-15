@@ -572,7 +572,7 @@ else:
 if PAINTED:
     P.eevee(scene, 32)
     scene.eevee.use_volumetric_shadows = True
-    P.finish(scene, brush=4, haze=(0.72, 0.8, 0.8), mist=(14.0, 110.0), haze_amount=0.35, bloom=0.2)
+    P.finish(scene, haze=(0.72, 0.8, 0.8), mist=(14.0, 110.0), haze_amount=0.35)
 else:
     scene.view_settings.view_transform = 'AgX'
     for look in ('AgX - Medium High Contrast', 'None'):
