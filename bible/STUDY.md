@@ -16,7 +16,7 @@ My picks if you watch only four, in this order:
 
 1. **The Tree of Life**, the creation sequence: the closest thing on film to the Opening's first eleven beats.
 2. **Apocalypto**, the chase: the run you're laying out now.
-3. **Arcane**, season 1: the series' base look.
+3. **Arcane**, season 1: the series' base look, or its fallback (README item 15).
 4. **The Chosen**, season 1: biblical people in modern speech, the series' register, with its risks.
 
 ## The Opening: from the deep to the land (beats 1–11)
@@ -58,7 +58,7 @@ The scene notes for these are from my memory of the films; check each scene befo
 ## The series' look
 
 - **Arcane** (2021–24) · animated series · Fortiche, for Riot Games · [Wikipedia](https://en.wikipedia.org/wiki/Arcane_(TV_series))
-  Two sisters on opposite sides of a city split between rich and poor. *Study:* the series' base style ([Discussion 006](./discussions/006-2d-or-3d.md)): 3D underneath with a painted surface, real space and light.
+  Two sisters on opposite sides of a city split between rich and poor. *Study:* 3D underneath with a painted surface, real space and light. It's the look [Discussion 006](./discussions/006-2d-or-3d.md) chose for the series' base style; whether it stays the base or becomes the fallback to realism is open ([README](./README.md#what-i-need-from-you), item 15).
 - **Spider-Man: Into the Spider-Verse** (2018) · animated film · Bob Persichetti, Peter Ramsey, Rodney Rothman · [Wikipedia](https://en.wikipedia.org/wiki/Spider-Man:_Into_the_Spider-Verse)
   A Brooklyn teenager becomes Spider-Man and meets others from other worlds. *Study:* the register for visions and the spiritual (Discussion 006): vibrant, graphic, free to break the frame.
 
