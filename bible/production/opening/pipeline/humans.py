@@ -18,6 +18,11 @@ skin and are weighted to the skeleton), so it moves with the body without a clot
 a hide wrap at the hips for everyone, a band over the chest for the women, a top to the waist
 for the girl. No nudity.
 
+In real mode (person(..., real=True)) the bodies wear MakeHuman's scanned African skins, its
+coiled hair, brows and lashes, all from its asset pack (CC0, files.makehumancommunity.org,
+unpacked into MPFB's user data), and the hides are a scanned leather from Poly Haven (CC0)
+with ragged edges.
+
 Motion. The CMU Graphics Lab Motion Capture Database (mocap.cs.cmu.edu), its run and jog
 trials. Its terms: free for all uses; it may go into commercially sold products, but the data
 itself may not be resold, even converted; and it asks for this line in the acknowledgments:
@@ -527,6 +532,88 @@ def hide(rng):
     return material("Hide", build)
 
 
+def image(nt, path, data=False):
+    tex = nt.nodes.new("ShaderNodeTexImage")
+    tex.image = bpy.data.images.load(str(path), check_existing=True)
+    if data:
+        tex.image.colorspace_settings.name = 'Non-Color'
+    return tex
+
+
+def skin_scan(path, rng):
+    """Skin on MakeHuman's scanned texture (CC0): its colour a little darker or lighter person to
+    person, a shallow scatter (a few mm, as in skin), rough, with pores."""
+    def build(nt, p):
+        t = image(nt, path)
+        hsv = nt.nodes.new("ShaderNodeHueSaturation")
+        hsv.inputs["Saturation"].default_value = 0.95
+        hsv.inputs["Value"].default_value = rng.uniform(0.45, 0.62)
+        nt.links.new(t.outputs["Color"], hsv.inputs["Color"])
+        nt.links.new(hsv.outputs["Color"], p.inputs["Base Color"])
+        p.inputs["Subsurface Weight"].default_value = 0.12
+        p.inputs["Subsurface Radius"].default_value = (1.0, 0.35, 0.2)
+        p.inputs["Subsurface Scale"].default_value = 0.006
+        p.inputs["Roughness"].default_value = rng.uniform(0.36, 0.46)       # a sheen of sweat: they're running
+        p.inputs["Specular IOR Level"].default_value = 0.5
+        bump(nt, noise(nt, 900.0, 2.0).outputs["Fac"], 0.05, p)
+    return material("Skin, scanned", build)
+
+
+def leather(rng, maps):
+    """Hide: a scanned leather (Poly Haven, CC0) in patches lighter and darker, mapped by the
+    wrap's rest shape so it doesn't swim, its edge ragged: where the `hem` attribute (0 at the
+    cut, 1 a few cm in) is low, noise eats it away."""
+    warm = (rng.uniform(1.25, 1.5), rng.uniform(1.15, 1.35), rng.uniform(0.95, 1.1))    # raw hide: paler than skin
+
+    def build(nt, p):
+        uv = nt.nodes.new("ShaderNodeUVMap")
+        uv.uv_map = "rest"
+        mp = nt.nodes.new("ShaderNodeMapping")
+        mp.inputs["Scale"].default_value = (2.0, 2.0, 2.0)
+        mp.inputs["Location"].default_value = (rng.random(), rng.random(), 0)
+        nt.links.new(uv.outputs["UV"], mp.inputs["Vector"])
+        tex = {k: image(nt, v, k != "Diffuse") for k, v in maps.items() if k in ("Diffuse", "Rough", "nor_gl")}
+        for t in tex.values():
+            nt.links.new(mp.outputs["Vector"], t.inputs["Vector"])
+        patch = ramp(nt, noise(nt, 6.0, 4.0).outputs["Fac"], [(0.35, [v * 0.7 for v in warm]), (0.65, [v * 1.15 for v in warm])])
+        col = nt.nodes.new("ShaderNodeMix")
+        col.data_type, col.blend_type = 'RGBA', 'MULTIPLY'
+        col.inputs[0].default_value = 1.0
+        a, b = [i for i in col.inputs if i.type == 'RGBA'][:2]
+        dull = nt.nodes.new("ShaderNodeHueSaturation")
+        dull.inputs["Saturation"].default_value = 0.45
+        nt.links.new(tex["Diffuse"].outputs["Color"], dull.inputs["Color"])
+        nt.links.new(dull.outputs["Color"], a)
+        nt.links.new(patch.outputs["Color"], b)
+        nt.links.new([o for o in col.outputs if o.type == 'RGBA'][0], p.inputs["Base Color"])
+        nt.links.new(tex["Rough"].outputs["Color"], p.inputs["Roughness"])
+        nm = nt.nodes.new("ShaderNodeNormalMap")
+        nm.uv_map = "rest"
+        nt.links.new(tex["nor_gl"].outputs["Color"], nm.inputs["Color"])
+        nt.links.new(nm.outputs["Normal"], p.inputs["Normal"])
+        # The ragged edge: hem minus noise, sharpened; below zero is gone.
+        hem = nt.nodes.new("ShaderNodeAttribute")
+        hem.attribute_name = "hem"
+        n = noise(nt, 40.0, 3.0)
+        cut = nt.nodes.new("ShaderNodeMath")
+        cut.operation = 'SUBTRACT'
+        nt.links.new(hem.outputs["Fac"], cut.inputs[0])
+        nt.links.new(n.outputs["Fac"], cut.inputs[1])
+        sharp = nt.nodes.new("ShaderNodeMath")
+        sharp.operation, sharp.use_clamp = 'MULTIPLY_ADD', True
+        sharp.inputs[1].default_value = 12.0
+        sharp.inputs[2].default_value = 0.5
+        nt.links.new(cut.outputs[0], sharp.inputs[0])
+        clear = nt.nodes.new("ShaderNodeBsdfTransparent")
+        mix = nt.nodes.new("ShaderNodeMixShader")
+        out = [x for x in nt.nodes if x.type == 'OUTPUT_MATERIAL'][0]
+        nt.links.new(sharp.outputs[0], mix.inputs["Fac"])
+        nt.links.new(clear.outputs[0], mix.inputs[1])
+        nt.links.new(p.outputs[0], mix.inputs[2])
+        nt.links.new(mix.outputs[0], out.inputs["Surface"])
+    return material("Hide", build)
+
+
 def hair(rng):
     def build(nt, p):
         p.inputs["Base Color"].default_value = (*srgb((0.035, 0.028, 0.022)), 1)
@@ -613,8 +700,10 @@ def rest_of(rig):
     return out
 
 
-def piece(src, name, keep, mats, solid=0.0, subsurf=1):
-    """A copy of the body with only the vertices in `keep`, still weighted to the rig."""
+def piece(src, name, keep, mats, solid=0.0, subsurf=1, hem=None):
+    """A copy of the body with only the vertices in `keep`, still weighted to the rig. hem: the
+    heights of its cut edges, for a wrap: then it gets UVs from its rest shape (metres round and
+    up) and a `hem` attribute, 0 at a cut edge and 1 from 6 cm in."""
     ob = src.copy()
     ob.data = src.data.copy()
     ob.name = ob.data.name = name
@@ -630,6 +719,19 @@ def piece(src, name, keep, mats, solid=0.0, subsurf=1):
         ob.data.materials.append(m)
     for p in ob.data.polygons:
         p.use_smooth = True
+    if hem is not None:
+        me = ob.data
+        co = np.empty(len(me.vertices) * 3)
+        me.vertices.foreach_get("co", co)
+        co = co.reshape(-1, 3)
+        d = np.min([np.abs(co[:, 2] - h) for h in hem], axis=0)
+        me.attributes.new("hem", 'FLOAT', 'POINT').data.foreach_set("value", np.clip(d / 0.06, 0, 1))
+        uv = me.uv_layers.new(name="rest")
+        loops = np.empty(len(me.loops), dtype=np.int32)
+        me.loops.foreach_get("vertex_index", loops)
+        c = co[loops]
+        ang = np.arctan2(c[:, 0], -c[:, 1])
+        uv.data.foreach_set("uv", np.stack([ang * 0.16, c[:, 2]], 1).ravel())
     if solid:
         so = ob.modifiers.new("Thickness", 'SOLIDIFY')
         so.thickness, so.offset, so.use_even_offset = solid, 1.0, True
@@ -639,9 +741,21 @@ def piece(src, name, keep, mats, solid=0.0, subsurf=1):
     return ob
 
 
-def person(name, sex, height, seed):
+def mpfb_data(kind):
+    """A folder of MPFB's user data (where the MakeHuman asset pack is unpacked)."""
+    import importlib
+    return pathlib.Path(importlib.import_module(MPFB + ".services.locationservice").LocationService.get_user_data(kind))
+
+
+# Real mode: MakeHuman's CC0 asset pack (makehuman_system_assets_cc0.zip, from
+# files.makehumancommunity.org, unpacked into mpfb_data): scanned skins, hair, brows and lashes.
+HAIR = {"man": ["afro01"], "woman": ["afro01"], "girl": ["afro01"]}     # short, tightly coiled
+
+
+def person(name, sex, height, seed, real=False, leather_maps=None):
     """A rigged person `height` m tall, feet at the origin, facing -Y: sex is 'man', 'woman' or
-    'girl'. Returns the rig, its parts, and the rig at rest."""
+    'girl'. Returns the rig, its parts, and the rig at rest. real: MakeHuman's textured skin,
+    hair, brows and lashes, fitted by MPFB, and hides of scanned leather (leather_maps)."""
     HS, TS = mpfb()
     rng = random.Random(seed)
     girl = sex == "girl"
@@ -673,27 +787,44 @@ def person(name, sex, height, seed):
     for pb in rig.pose.bones:
         pb.rotation_mode = 'QUATERNION'
     rest = rest_of(rig)
+    hair_style = rng.choice(HAIR[sex]) if real else None
+    fitted = {}
+    if real:                              # fitted to the whole mesh, so before the shells are cut off
+        for kind, what in (("eyebrows", "eyebrow%03d" % rng.randint(1, 12)), ("eyelashes", "eyelashes0%d" % rng.randint(1, 4)),
+                           ("hair", hair_style)):
+            if what:
+                ob = HS.add_mhclo_asset(str(mpfb_data(kind) / what / (what + ".mhclo")), human,
+                                        asset_type=kind.capitalize(), subdiv_levels=0)
+                ob.name = name + " " + kind
+                fitted[kind] = ob
+        age = "young" if girl or md["age"] < 0.52 else "middleage"
+        skin_dir = mpfb_data("skins") / ("%s_african_%s" % (age, "male" if sex == "man" else "female"))
+        mhmat = next(skin_dir.glob("*.mhmat"))
+        tex = next(l.split()[1] for l in open(mhmat, encoding="utf-8") if l.startswith("diffuseTexture"))
+        scanned = skin_scan(skin_dir / tex, rng)
     z = co[:, 2]
     hip, knee = rest["LeftUpLeg"]["head"][2], rest["LeftLeg"]["head"][2]
     shoulder = rest["LeftArm"]["head"][2]
     waist = rest["LowerBack"]["head"][2]
     tone = SKIN[seed % len(SKIN)]
     torso = strongest(human, ("Hips", "LowerBack", "Spine", "Spine1"))         # not the arms
-    parts = {"rig": rig}
+    parts = {"rig": rig, **fitted}
+    wrap = (lambda: leather(rng, leather_maps)) if real and leather_maps else (lambda: hide(rng))
     # The hide wrap: MPFB's skirt shell, cut off part way down the thigh.
     cut = knee + (hip - knee) * {"man": 0.55, "woman": 0.42, "girl": 0.38}[sex]
     parts["wrap"] = piece(human, name + " wrap", {i for i in sets["helper-skirt"] if z[i] >= cut},
-                          [hide(rng)], solid=0.004)
+                          [wrap()], solid=0.004, hem=[cut])
     if sex == "woman":                    # a band of hide over the breasts, from the tights shell
         zn = co[list(sets["nipple"]), 2].mean()
         lo, hi = zn - 0.055 * height / 1.6, zn + 0.075 * height / 1.6
         parts["top"] = piece(human, name + " top", {i for i in sets["helper-tights"] & torso if lo <= z[i] <= hi},
-                             [hide(rng)], solid=0.004)
+                             [wrap()], solid=0.004, hem=[lo, hi])
     elif girl:                            # a top of hide from under the arms to the waist
         hi = shoulder - 0.07 * height / 1.3
         parts["top"] = piece(human, name + " top", {i for i in sets["helper-tights"] & torso if waist - 0.04 <= z[i] <= hi},
-                             [hide(rng)], solid=0.004)
-    parts["hair"] = piece(human, name + " hair", sets["scalp"], [hair(rng)], solid=0.007)
+                             [wrap()], solid=0.004, hem=[waist - 0.04, hi])
+    if "hair" not in fitted:              # close-cropped: a shell over the scalp
+        parts["hair"] = piece(human, name + " hair", sets["scalp"], [hair(rng)], solid=0.007)
     eyes = piece(human, name + " eyes", sets["helper-l-eye"] | sets["helper-r-eye"], [eye(rng)], subsurf=0)
     me = eyes.data
     ec = np.empty(len(me.vertices) * 3)
@@ -714,7 +845,7 @@ def person(name, sex, height, seed):
     bm.free()
     human.name = human.data.name = name + " body"
     human.data.materials.clear()
-    human.data.materials.append(skin(tone, rng))
+    human.data.materials.append(scanned if real else skin(tone, rng))
     for p in human.data.polygons:
         p.use_smooth = True
     sd = human.modifiers.new("Smooth", 'SUBSURF')
