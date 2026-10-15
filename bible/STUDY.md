@@ -2,13 +2,13 @@
 
 > Films, series, books and anything else worth watching or studying for *Adonai*. **Add titles to the inbox below, any way you like.** Each session I fold them into the list: what the work is in a line, what to study it for, a link, in the section where it belongs. Then I clear the inbox and keep the list tidy. Started 2026-10-15 at your request, with the titles the project already points you to. Where a title is a visual reference for a shot of the Opening, the full note on what to take from it is in the Opening's [look book](./production/opening/REFERENCES.md); this list says why to watch it at all.
 
-**Status:** 2026-10-15: 21 entries, none watched yet.
+**Status:** 2026-10-15: 22 entries, none watched yet.
 
 ## Inbox
 
 *One title per bullet. The title alone is enough; a link or a word on why helps.*
 
-- The Chronicles of Narnia
+-
 
 ## Start here
 
@@ -16,7 +16,7 @@ My picks if you watch only four, in this order:
 
 1. **The Tree of Life**, the creation sequence: the closest thing on film to the Opening's first eleven beats.
 2. **Apocalypto**, the chase: the run you're laying out now.
-3. **Arcane**, season 1: the series' base look, or its fallback (README item 15).
+3. **Arcane**, season 1: the series' base look.
 4. **The Chosen**, season 1: biblical people in modern speech, the series' register, with its risks.
 
 ## The Opening: from the deep to the land (beats 1–11)
@@ -58,7 +58,7 @@ The scene notes for these are from my memory of the films; check each scene befo
 ## The series' look
 
 - **Arcane** (2021–24) · animated series · Fortiche, for Riot Games · [Wikipedia](https://en.wikipedia.org/wiki/Arcane_(TV_series))
-  Two sisters on opposite sides of a city split between rich and poor. *Study:* 3D underneath with a painted surface, real space and light. It's the look [Discussion 006](./discussions/006-2d-or-3d.md) chose for the series' base style; whether it stays the base or becomes the fallback to realism is open ([README](./README.md#what-i-need-from-you), item 15).
+  Two sisters on opposite sides of a city split between rich and poor. *Study:* the series' base look ([Discussion 006](./discussions/006-2d-or-3d.md), round 4): watch for the method we're copying, hand-painted texture over 3D, painterly light, hand-drawn effects and painted backgrounds. Its designs stay its own; ours are our own.
 - **Spider-Man: Into the Spider-Verse** (2018) · animated film · Bob Persichetti, Peter Ramsey, Rodney Rothman · [Wikipedia](https://en.wikipedia.org/wiki/Spider-Man:_Into_the_Spider-Verse)
   A Brooklyn teenager becomes Spider-Man and meets others from other worlds. *Study:* the register for visions and the spiritual (Discussion 006): vibrant, graphic, free to break the frame.
 
@@ -76,6 +76,11 @@ How others have told these stories. What each gets right and wrong for us is in 
   The life of Moses as a Hollywood epic. *Study:* scale and awe; and the stiff, archaic dialogue that turns people into a museum piece ([RULES §2.4](./canon/RULES.md#24-three-ways-to-fail)).
 - **The King of Kings** (2025) · animated film · Seong-ho Jang · [Wikipedia](https://en.wikipedia.org/wiki/The_King_of_Kings_(2025_film))
   Charles Dickens tells his young son the life of Jesus. *Study:* a recent animated Gospel, and its frame story ([RULES §10.2](./canon/RULES.md#102-how-to-structure-it)).
+
+## Christian story in fiction
+
+- **The Chronicles of Narnia** (1950–56) · seven novels · C. S. Lewis · [Wikipedia](https://en.wikipedia.org/wiki/The_Chronicles_of_Narnia)
+  Children cross into Narnia, a world made and kept by the lion Aslan. *Study:* how a Christian writer carries the shape of the gospel in an invented story without preaching (Lewis called it a "supposal", not an allegory). Two books above all: *The Magician's Nephew*, where Aslan sings Narnia into being, which is the Opening's creation told as music, our rule that sound and picture are one; and *The Lion, the Witch and the Wardrobe*, the sacrifice. On screen there are the BBC series (1988–90), the three films (2005–10), and Greta Gerwig's *The Magician's Nephew*, in cinemas on 12 February 2027 and on Netflix on 2 April 2027.
 
 ## Watched
 

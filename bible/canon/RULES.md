@@ -12,7 +12,7 @@
 
 - A **multi-part dramatized series** covering the biblical narrative from creation to Revelation. It is organized into arcs such as Joseph, the Exodus, David and the Gospels, and each arc stands on its own.
 - It is written first as **screenplays**. A **series bible** (world, characters, timeline) and a **research dossier** for every passage support the scripts.
-- It is produced, for now, as an **AI-made placeholder that looks like live action**, with *Arcane* as the base style and visions in a more vibrant, abstract style, on the way to an eventual **live-action series or films** ([Discussion 006](../discussions/006-2d-or-3d.md#decision)).
+- It is produced, for now, as a **3D animated placeholder in a painted style**, built in Blender on *Arcane*'s method with our own designs, and visions in a more vibrant, abstract style, on the way to an eventual **live-action series or films** ([Discussion 006](../discussions/006-2d-or-3d.md#decision)).
 - **Its purpose is an accurate and powerful expression of Christianity, as you understand it.** It is a creative project, not a historical one. It stays bound to the texts, but not to convention. It doesn't need to match any denomination's framework.
 - **Its audience, for now, is you.** The test is whether you think it's right, true and good. There's no rating to aim at.
 
