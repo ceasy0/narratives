@@ -12,7 +12,11 @@
 
 **How others have pictured it.** Every notable depiction of Gen 1:1–2:7, from the Cotton Genesis to VR, with the ten I think matter most for this sequence, is in the [catalogue of depictions](./DEPICTIONS.md). This book keeps to what each shot takes.
 
-**Images.** The open-licence images chosen for this book are in `references/img/`, each at most 1600 px on the long side, JPEG quality 85, with its credit and licence in the table at the end. [`references/fetch_refs.py`](./references/fetch_refs.py) holds each one's direct URL and downloads any that are missing (`py references/fetch_refs.py`). One isn't there: Bentley's snowflake, because the Smithsonian's server refuses scripted downloads (HTTP 403), so save it by hand from its page if it's wanted. The Mandelbrot boundary for beat 5 was rendered for this book and needs no licence. Wikimedia Commons pages couldn't be read when the book was written, so no Commons images are included; those licences aren't verified.
+**The two looks for the abstract beats, side by side.** Beats 1–9 can take their look from either of two families in that tradition. The top row is the graphic one, flat black and white with cut edges: Fludd's darkness, Nash's woodcuts, Muller's engraving (Sarajevo's split and Newman's fields belong here too, link only). The bottom row is the luminous one, light glowing out of the dark: Fludd's first light, Aivazovsky, Michelangelo, Giovanni di Paolo. Each picture is in its beat below, with its credit.
+
+![The graphic and luminous families, side by side](references/img/00-two-looks-board.jpg)
+
+**Images.** The open-licence images chosen for this book are in `references/img/`, each at most 1600 px on the long side, JPEG quality 85, with its credit and licence in the table at the end. [`references/fetch_refs.py`](./references/fetch_refs.py) holds each one's direct URL and downloads any that are missing (`py references/fetch_refs.py`). One isn't there: Bentley's snowflake, because the Smithsonian's server refuses scripted downloads (HTTP 403), so save it by hand from its page if it's wanted. The Mandelbrot boundary for beat 5 was rendered for this book and needs no licence. Images from Wikimedia Commons are used where the file page states the licence. For photographs of public-domain paintings Commons applies [PD-Art](https://commons.wikimedia.org/wiki/Commons:When_to_use_the_PD-Art_tag): in the US a faithful photograph of a flat public-domain work isn't a new work. They're fine on the mood board; check the photographer's terms before using one anywhere public.
 
 ---
 
@@ -32,6 +36,12 @@
   *Take:* from orbit, dunes read as a single flowing grain field, which is the scale-free "sea" texture before the face. **Open (NASA, PD).** → `references/img/01-namib-sand-sea-nasa.jpg`
 - **Aeolian Features, Large and Small** (PSP_010221_1420), HiRISE, NASA/JPL/University of Arizona, 2008. <https://www.uahirise.org/PSP_010221_1420>
   *Take:* ripples riding on dunes, two scales of wind-sorted grain at once. Use it for the flow pattern around the brow and nose. **Open (HiRISE images are public domain, credit requested; <https://uahirise.org/media/usage.php>).** No direct file URL was confirmed, so download it from the page.
+- **Darkness** (*Et sic in infinitum*), Robert Fludd, *Utriusque Cosmi … Historia*, vol. 1 (Oppenheim, 1617), engraving. <https://commons.wikimedia.org/wiki/File:Darkness,_%22De_metaphysico_macrosmi...ortu%22,_Fludd,_1617_Wellcome_L0016156.jpg>
+  *Take:* the black before anything: a square of black with "and so to infinity" written on its four sides. It's frame 0 as a material rather than an absence, and the graphic family at its purest. **Open (CC BY 4.0, Wellcome Collection).** → `references/img/01-fludd-darkness-1617-wellcome.jpg`
+- **The Face of the Waters**, Paul Nash, *Genesis* (Nonesuch Press, 1924), woodcut. <https://commons.wikimedia.org/wiki/File:The_face_of_the_Waters._Wellcome_M0005778.jpg>
+  *Take:* 1:2 with no figure in it: swells cut white out of the black, and a faint tall shape standing over them. Every mark is a cut line with a direction, one way the static could look before it flows. **Open (CC BY 4.0, Wellcome Collection).** → `references/img/01-nash-face-of-the-waters-wellcome.jpg`
+- **Chaos. The Creation of the World**, Ivan Aivazovsky, 1841 (oil on canvas; San Lazzaro degli Armeni, Venice). <https://commons.wikimedia.org/wiki/File:Aivazovsky_Chaos_1841.jpg>
+  *Take:* a shape made only of light rises out of a torn storm cloud over the sea: the luminous family's beat 1. The light-only figure is right; that it reads at once as a robed man is what to avoid, since ours is a face seen only in the grain. **Open (public domain; Commons' photograph is PD-Art).** → `references/img/01-aivazovsky-chaos-1841.jpg`
 
 ## 2. Light (0:38–0:46)
 
@@ -45,6 +55,12 @@
   *Take:* the violence of a cut-to-white on a beat, at the edge of what the eye can take. Use it for the single-frame impact, *not* for duration, because it strobes far harder than the treatment allows (photosensitivity, §5 problem 1). **Link only.**
 - **Under the Skin**, Jonathan Glazer (DP Daniel Landin), 2013. <https://en.wikipedia.org/wiki/Under_the_Skin_(2013_film)>
   *Take:* the black void scenes, where figures sit in a black that has no floor and reads as a material. It's the "Black. Silence. The white face, alone" frame. **Link only.**
+- **The first appearance of created light** (*Lucis creatae primariae apparitio*), Robert Fludd, *Utriusque Cosmi*, 1617, engraving. <https://commons.wikimedia.org/wiki/File:%22De_metaphysico_macrosmi...ortu%22,_Fludd,_1617_Wellcome_L0016162.jpg>
+  *Take:* a ring of flame-shaped light around a dark, clouded core: light arriving all at once, from one centre outward, which is the blast seen from in front. The luminous family's beat 2. **Open (CC BY 4.0, Wellcome Collection).** → `references/img/02-fludd-first-light-1617-wellcome.jpg`
+- **The Separation of Light from Darkness**, Paul Nash, *Genesis*, 1924, woodcut. <https://commons.wikimedia.org/wiki/File:The_separation_of_Light_from_Darkness._Wellcome_M0005781.jpg>
+  *Take:* a diagonal edge between a black field and one ruled with white light: the separation as an edge crossing the frame, the graphic family's beats 2–3. **Open (CC BY 4.0, Wellcome Collection).** → `references/img/02-nash-light-from-darkness-wellcome.jpg`
+- **The First Day: The Separation of Darkness and Light**, Jan Muller after Hendrick Goltzius, 1589 (engraving, plate 1 of *The Creation of the World*; the Met). <https://www.metmuseum.org/art/collection/search/374000>
+  *Take:* winged figures out of Ovid push darkness and light apart with staves, all in engraved line. It's one way to draw the turn-over front: as lines of force, not a soft wipe. **Open (CC0, the Met's Open Access).** → `references/img/02-muller-first-day-1589-met.jpg`
 
 ## 3. The separation (0:46–1:08)
 
@@ -59,6 +75,12 @@
 - **Spider-Man: Across the Spider-Verse**, Sony Pictures Imageworks, 2023; on its 2D effects, Toon Boom (9 Dec 2023) <https://www.toonboom.com/?p=16859>. On *Into the Spider-Verse* (2018): Creative Bloq (4 Mar 2019) <https://www.creativebloq.com/features/how-into-the-spider-verse-got-its-mind-blowing-look>
   *Take:* animation on twos with stepped "echo" frames instead of motion blur, light drawn as dots, and, in Gwen's world, colour that changes with emotion. Use it for the turn-over front of light: drawn, fast and graphic, but not a cut. **Link only.**
 - **Under the Skin** (as in beat 2). *Take:* black on black, a figure seen only where light catches it. That's how the large dark face should read. **Link only.**
+- **The Separation of Light from Darkness**, Michelangelo, 1511–12 (fresco, Sistine Chapel ceiling). <https://commons.wikimedia.org/wiki/File:Michelangelo,_Separation_of_Light_from_Darkness_00.jpg>
+  *Take:* the picture of this moment that the audience brings: God as a twisting body seen from below, his face almost hidden, dividing the light with his arms. Ours is all face and no body, and the turn is a front of light rather than a gesture; look at it to answer it, not to echo it. **Open (public domain; Commons' photograph is PD-Art).** → `references/img/03-michelangelo-light-from-darkness.jpg`
+- **The first day, the Sarajevo Haggadah**, Crown of Aragon, c. 1350 (National Museum of Bosnia and Herzegovina, Sarajevo). <https://talivisualmidrash.org.il/en/creations/sarajevo-haggadah-the-seven-days-of-creation/>
+  *Take:* the frame divided into a black half and a white half, just after the Spirit as dark waves over white water: our turn-over held still, from a tradition that never draws God. It's a hard split, so it's the instant of the front crossing, not the patches of beat 4 (your note: never like a screen split into screens). **The work is public domain; no open photograph of these pages was found. Link only.**
+- **Day One**, Barnett Newman, 1951–52 (oil on canvas; Whitney Museum of American Art); with *Genesis—The Break* (1946). <https://whitney.org/collection/works/163>
+  *Take:* one field divided by one narrow band: the first separation as the whole picture, the graphic family at its limit. **Link only.**
 
 ## 4. Evening and morning (1:08–1:24)
 
@@ -93,6 +115,10 @@
   ![Mandelbrot boundary render, beat 5](references/img/05-mandelbrot-seahorse-render.jpg)
 
   *Take:* the filament shape the treatment names: light curling into spirals that carry smaller spirals. In the animatic the black would be the sea of pairs and the filaments would glow behind them. **Self-made; no licence needed.**
+- **The Creation of the World and the Expulsion from Paradise**, Giovanni di Paolo, 1445 (tempera and gold on panel; the Met). <https://www.metmuseum.org/art/collection/search/458971>
+  *Take:* the universe as rings around one centre (the earth, the elements, the planets, the zodiac), pushed into being by God. Not our look, but the oldest form of "the picture gains depth": space as layer after layer around the thing we're watching. **Open (CC0, the Met's Open Access).** → `references/img/05-giovanni-di-paolo-creation-met.jpg`
+- **The Creation of the Firmament**, Paul Nash, *Genesis*, 1924, woodcut. <https://commons.wikimedia.org/wiki/File:The_creation_of_the_Firmament._Wellcome_M0005782.jpg>
+  *Take:* tall bowed forms opening into curved space: the vault cut and bent rather than painted, a depth made only of edges. The graphic family's beat 5. **Open (CC BY 4.0, Wellcome Collection).** → `references/img/05-nash-firmament-wellcome.jpg`
 
 ## 6. Land and seas (1:44–2:02)
 
@@ -121,6 +147,8 @@
   *Take:* the classic dark-matter web and its zoom movie into a cluster, the iconic look of the web at full scale. **No usage statement; link only.**
 - **EAGLE simulations**, Virgo Consortium (Durham/Leiden). <https://astro.dur.ac.uk/ICC/Eagle/>; gas-temperature movie <https://vimeo.com/72220338>
   *Take:* gas colour-coded by temperature, the web's blue-to-orange heat. **No usage statement; link only.**
+- **The Garden of Earthly Delights, the outer wings**, Hieronymus Bosch, c. 1490–1510 (oil in grisaille on oak; Museo del Prado). <https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_-_Triptych_of_Garden_of_Earthly_Delights_(outer_wings)_-_WGA2506.jpg>
+  *Take:* the world on the third day inside a clear sphere, the land just sprouting and no sun or moon yet, all in grey: 1:11–13 as growth before colour. Ours is the gas sprouting threads, but the mood is the same, a world making itself in half-light. **Open (public domain; Commons' photograph is PD-Art).** → `references/img/07-bosch-third-day-grisaille.jpg`
 
 ## 8. Lights (2:12–2:32)
 
@@ -197,6 +225,8 @@
   *Take:* a gust that "rises out of nowhere" and crosses a still field. It's the model for the stillness after the leaf and for the moment the stillness is broken. **Link only.**
 - **Weighing the Evidence for a Mass Extinction: On Land**, HHMI BioInteractive, 2012. <https://www.biointeractive.org/classroom-resources/weighing-evidence-mass-extinction-land>
   *Take:* the fern spike in the pollen record (data above and below the boundary). It's the evidence behind "the first green to come back is ferns". **Reference.**
+- **Homo ex humo**, Johann Jakob Scheuchzer, *Physica Sacra* (Augsburg and Ulm, 1731), etching by J. A. Fridrich after J. D. Preissler and J. M. Füssli. <https://wellcomecollection.org/works/twbrjsc2>
+  *Take:* Adam framed by eleven human embryos and foetal skeletons, from one the size of a seed to a weeping four-month foetus: "man from the dust" told through the science of its day, growth and death in one plate. It's the precedent for this beat, where a body goes back into the ground and something grows from it. **Open (Public Domain Mark, Wellcome Collection).** → `references/img/12-scheuchzer-homo-ex-humo-wellcome.jpg`
 
 ## 13. Fill the earth (4:07–4:43)
 
@@ -261,12 +291,23 @@ You asked for scenes of people running through dense growth in an action scene (
 | File | Beat | Source page | Credit | Licence | Status |
 |---|---|---|---|---|---|
 | `references/img/05-mandelbrot-seahorse-render.jpg` | 5 | rendered locally (z² + c, centre −0.7435 + 0.1314i) | rendered for this book | none needed | **in `references/img/`** |
+| `references/img/00-two-looks-board.jpg` | 1–5 | made for this book from the images below | as for each image below | as for each image below | **in `references/img/`** |
 | `references/img/01-namib-sand-sea-nasa.jpg` | 1 | https://science.nasa.gov/earth/earth-observatory/namib-sand-sea-149130/ | NASA Earth Observatory / Alan Holmes (SeaHawk/HawkEye) | Public domain (NASA) | **in `references/img/`** |
+| `references/img/01-fludd-darkness-1617-wellcome.jpg` | 1 | https://commons.wikimedia.org/wiki/File:Darkness,_%22De_metaphysico_macrosmi...ortu%22,_Fludd,_1617_Wellcome_L0016156.jpg | Robert Fludd, *Utriusque Cosmi* (1617); Wellcome Collection, L0016156 | CC BY 4.0 | **in `references/img/`** |
+| `references/img/01-nash-face-of-the-waters-wellcome.jpg` | 1 | https://commons.wikimedia.org/wiki/File:The_face_of_the_Waters._Wellcome_M0005778.jpg | Paul Nash, *Genesis* (1924); Wellcome Collection, M0005778 | CC BY 4.0 | **in `references/img/`** |
+| `references/img/01-aivazovsky-chaos-1841.jpg` | 1 | https://commons.wikimedia.org/wiki/File:Aivazovsky_Chaos_1841.jpg | Ivan Aivazovsky, 1841; San Lazzaro degli Armeni, Venice | Public domain (PD-Art) | **in `references/img/`** |
 | `references/img/02-schlieren-shockwaves-nasa.jpg` | 2 | https://www.nasa.gov/image-article/nasa-captures-supersonic-shock-interaction-7 | NASA | Public domain (NASA) | **in `references/img/`** |
+| `references/img/02-fludd-first-light-1617-wellcome.jpg` | 2 | https://commons.wikimedia.org/wiki/File:%22De_metaphysico_macrosmi...ortu%22,_Fludd,_1617_Wellcome_L0016162.jpg | Robert Fludd, *Utriusque Cosmi* (1617); Wellcome Collection, L0016162 | CC BY 4.0 | **in `references/img/`** |
+| `references/img/02-nash-light-from-darkness-wellcome.jpg` | 2 | https://commons.wikimedia.org/wiki/File:The_separation_of_Light_from_Darkness._Wellcome_M0005781.jpg | Paul Nash, *Genesis* (1924); Wellcome Collection, M0005781 | CC BY 4.0 | **in `references/img/`** |
+| `references/img/02-muller-first-day-1589-met.jpg` | 2 | https://www.metmuseum.org/art/collection/search/374000 | Jan Muller after Hendrick Goltzius, 1589; The Metropolitan Museum of Art | CC0 (Met Open Access) | **in `references/img/`** |
+| `references/img/03-michelangelo-light-from-darkness.jpg` | 3 | https://commons.wikimedia.org/wiki/File:Michelangelo,_Separation_of_Light_from_Darkness_00.jpg | Michelangelo, 1511–12, Sistine Chapel (photograph via the Web Gallery of Art) | Public domain (PD-Art) | **in `references/img/`** |
 | `references/img/04-mud-cracks-mars-pia21261.jpg` | 4 | https://www.jpl.nasa.gov/images/pia21261-possible-mud-cracks-preserved-in-martian-rock/ | NASA/JPL-Caltech/MSSS | Public domain (NASA) | **in `references/img/`** |
 | `references/img/04-bentley-snowflake-382.jpg` | 4 | https://siarchives.si.edu/collections/siris_arc_403534 | Wilson A. Bentley, c. 1890; Smithsonian Institution Archives | CC0 | not downloaded (the server refuses scripts; by hand) |
+| `references/img/05-giovanni-di-paolo-creation-met.jpg` | 5 | https://www.metmuseum.org/art/collection/search/458971 | Giovanni di Paolo, 1445; The Metropolitan Museum of Art, Robert Lehman Collection | CC0 (Met Open Access) | **in `references/img/`** |
+| `references/img/05-nash-firmament-wellcome.jpg` | 5 | https://commons.wikimedia.org/wiki/File:The_creation_of_the_Firmament._Wellcome_M0005782.jpg | Paul Nash, *Genesis* (1924); Wellcome Collection, M0005782 | CC BY 4.0 | **in `references/img/`** |
 | `references/img/07-cosmic-web-slime-mould-heic2003a.jpg` | 7 | https://esahubble.org/images/heic2003a/ | NASA, ESA, and J. Burchett and O. Elek (UC Santa Cruz) | CC BY 4.0 | **in `references/img/`** |
 | `references/img/07-cosmic-web-sim-eso0120a.jpg` | 7 | https://www.eso.org/public/images/eso0120a/ | ESO | CC BY 4.0 | **in `references/img/`** |
+| `references/img/07-bosch-third-day-grisaille.jpg` | 7 | https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_-_Triptych_of_Garden_of_Earthly_Delights_(outer_wings)_-_WGA2506.jpg | Hieronymus Bosch, c. 1490–1510; Museo del Prado (photograph via the Web Gallery of Art) | Public domain (PD-Art) | **in `references/img/`** |
 | `references/img/08-pillars-of-creation-webb-weic2216a.jpg` | 8 | https://esawebb.org/images/weic2216a/ | NASA, ESA, CSA, STScI; J. DePasquale, A. Koekemoer, A. Pagan (STScI) | CC BY 4.0 | **in `references/img/`** |
 | `references/img/08-cosmic-cliffs-webb-weic2205a.jpg` | 8 | https://esawebb.org/images/weic2205a/ | NASA, ESA, CSA, and STScI | CC BY 4.0 | **in `references/img/`** |
 | `references/img/08-crab-nebula-webb-weic2326a.jpg` | 8 | https://esawebb.org/images/weic2326a/ | NASA, ESA, CSA, STScI, T. Temim (Princeton University) | CC BY 4.0 | **in `references/img/`** |
@@ -275,10 +316,11 @@ You asked for scenes of people running through dense growth in an action scene (
 | `references/img/09-blue-marble-apollo17.jpg` | 9 | https://www.nasa.gov/image-article/blue-marble-view-from-apollo-17/ | NASA (AS17-148-22727) | Public domain (NASA) | **in `references/img/`** |
 | `references/img/09-sunglint-clouds-iss.jpg` | 9 | https://science.nasa.gov/earth/earth-observatory/sunglint-and-clouds-off-western-south-america-78107/ | ISS Crew Earth Observations, NASA JSC | Public domain (NASA) | **in `references/img/`** |
 | `references/img/11-yucatan-relief-pia03381.jpg` | 11 | https://www.jpl.nasa.gov/images/pia03381-shaded-relief-with-height-as-color-and-landsat-yucatan-peninsula-mexico | NASA/JPL | Public domain (NASA) | **in `references/img/`** |
+| `references/img/12-scheuchzer-homo-ex-humo-wellcome.jpg` | 12 | https://wellcomecollection.org/works/twbrjsc2 | J. J. Scheuchzer, *Physica Sacra* (1731), etching by J. A. Fridrich; Wellcome Collection, V0034174 | Public Domain Mark | **in `references/img/`** |
 | `references/img/14-nile-delta-night-iss.jpg` | 14 | https://science.nasa.gov/earth/earth-observatory/nile-river-delta-at-night-46820/ | ISS Crew Earth Observations, NASA JSC | Public domain (NASA) | **in `references/img/`** |
 | `references/img/14-okavango-delta-iss.jpg` | 14 | https://science.nasa.gov/earth/earth-observatory/okavango-delta-84078/ | ISS Crew Earth Observations, NASA JSC | Public domain (NASA) | **in `references/img/`** |
 | `references/img/14-snow-geese-liftoff-usfws.jpg` | 14 | https://www.fws.gov/media/afternoon-liftoff-snow-geese-loess-bluffs-national-wildlife-refuge | Robert L. Keyser III / USFWS | Public domain | **in `references/img/`** |
 
-Licence terms checked: ESA/Webb CC BY 4.0, credit in full (<https://esawebb.org/copyright/>); ESO CC BY 4.0 (<https://www.eso.org/public/copyright/>); NOIRLab/NSO CC BY 4.0 unless noted (<https://noirlab.edu/public/copyright/>); NASA images generally not copyrighted, credit NASA, no implied endorsement (<https://www.nasa.gov/nasa-brand-center/images-and-media/>); HiRISE public domain (<https://uahirise.org/media/usage.php>). ESA/Hubble uses the same CC BY 4.0 terms as ESA/Webb.
+Licence terms checked: ESA/Webb CC BY 4.0, credit in full (<https://esawebb.org/copyright/>); ESO CC BY 4.0 (<https://www.eso.org/public/copyright/>); NOIRLab/NSO CC BY 4.0 unless noted (<https://noirlab.edu/public/copyright/>); NASA images generally not copyrighted, credit NASA, no implied endorsement (<https://www.nasa.gov/nasa-brand-center/images-and-media/>); HiRISE public domain (<https://uahirise.org/media/usage.php>). ESA/Hubble uses the same CC BY 4.0 terms as ESA/Webb. Wellcome Collection images carry CC BY 4.0 or the Public Domain Mark, as each record states; the Met's Open Access images are CC0 (its collection API marks each one public domain); Commons photographs of public-domain paintings are PD-Art, as above.
 
 **Open-licence, page only** (no direct file confirmed; download by hand if wanted): HiRISE PSP_010221_1420 (PD), Duchenne plates at the Met (PD), Dunkleosteus figures in Engelman 2024 (CC BY 4.0), Don Davis's *Chicxulub Impact* (NASA, no restrictions).

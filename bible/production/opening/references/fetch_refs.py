@@ -8,6 +8,7 @@ the long side. Licences and credits are listed below and in REFERENCES.md (one f
 """
 import io
 import pathlib
+import time
 import urllib.request
 
 from PIL import Image
@@ -86,11 +87,58 @@ IMAGES = [
      "https://www.fws.gov/sites/default/files/2021-06/Afternoon_Liftoff_of_Snow_Geese_Loess_Bluffs_nwr_Robert_L_Keyser_III.jpg",
      "Robert L. Keyser III / USFWS", "Public domain (USFWS)",
      "https://www.fws.gov/media/afternoon-liftoff-snow-geese-loess-bluffs-national-wildlife-refuge"),
+    # Historical pictures of the beginning (catalogue: ../DEPICTIONS.md)
+    ("01-fludd-darkness-1617-wellcome.jpg",
+     "https://upload.wikimedia.org/wikipedia/commons/0/01/Darkness%2C_%22De_metaphysico_macrosmi...ortu%22%2C_Fludd%2C_1617_Wellcome_L0016156.jpg",
+     "Robert Fludd, Utriusque Cosmi (Oppenheim, 1617); Wellcome Collection, L0016156", "CC BY 4.0",
+     "https://commons.wikimedia.org/wiki/File:Darkness,_%22De_metaphysico_macrosmi...ortu%22,_Fludd,_1617_Wellcome_L0016156.jpg"),
+    ("01-nash-face-of-the-waters-wellcome.jpg",
+     "https://upload.wikimedia.org/wikipedia/commons/f/fc/The_face_of_the_Waters._Wellcome_M0005778.jpg",
+     "Paul Nash, Genesis (Nonesuch Press, 1924); Wellcome Collection, M0005778", "CC BY 4.0",
+     "https://commons.wikimedia.org/wiki/File:The_face_of_the_Waters._Wellcome_M0005778.jpg"),
+    ("01-aivazovsky-chaos-1841.jpg",
+     "https://upload.wikimedia.org/wikipedia/commons/6/63/Aivazovsky_Chaos_1841.jpg",
+     "Ivan Aivazovsky, Chaos. The Creation of the World, 1841; San Lazzaro degli Armeni, Venice", "Public domain (PD-Art)",
+     "https://commons.wikimedia.org/wiki/File:Aivazovsky_Chaos_1841.jpg"),
+    ("02-fludd-first-light-1617-wellcome.jpg",
+     "https://upload.wikimedia.org/wikipedia/commons/b/bb/%22De_metaphysico_macrosmi...ortu%22%2C_Fludd%2C_1617_Wellcome_L0016162.jpg",
+     "Robert Fludd, Utriusque Cosmi (Oppenheim, 1617); Wellcome Collection, L0016162", "CC BY 4.0",
+     "https://commons.wikimedia.org/wiki/File:%22De_metaphysico_macrosmi...ortu%22,_Fludd,_1617_Wellcome_L0016162.jpg"),
+    ("02-nash-light-from-darkness-wellcome.jpg",
+     "https://upload.wikimedia.org/wikipedia/commons/6/6d/The_separation_of_Light_from_Darkness._Wellcome_M0005781.jpg",
+     "Paul Nash, Genesis (Nonesuch Press, 1924); Wellcome Collection, M0005781", "CC BY 4.0",
+     "https://commons.wikimedia.org/wiki/File:The_separation_of_Light_from_Darkness._Wellcome_M0005781.jpg"),
+    ("02-muller-first-day-1589-met.jpg",
+     "https://images.metmuseum.org/CRDImages/dp/original/DP261963.jpg",
+     "Jan Muller after Hendrick Goltzius, The First Day, 1589; The Metropolitan Museum of Art", "CC0 (Met Open Access)",
+     "https://www.metmuseum.org/art/collection/search/374000"),
+    ("03-michelangelo-light-from-darkness.jpg",
+     "https://upload.wikimedia.org/wikipedia/commons/b/b8/Michelangelo%2C_Separation_of_Light_from_Darkness_00.jpg",
+     "Michelangelo, The Separation of Light from Darkness, 1511-12; Sistine Chapel (photograph via Web Gallery of Art)", "Public domain (PD-Art)",
+     "https://commons.wikimedia.org/wiki/File:Michelangelo,_Separation_of_Light_from_Darkness_00.jpg"),
+    ("05-giovanni-di-paolo-creation-met.jpg",
+     "https://images.metmuseum.org/CRDImages/rl/original/DP-40104-001.jpg",
+     "Giovanni di Paolo, The Creation of the World and the Expulsion from Paradise, 1445; The Metropolitan Museum of Art", "CC0 (Met Open Access)",
+     "https://www.metmuseum.org/art/collection/search/458971"),
+    ("05-nash-firmament-wellcome.jpg",
+     "https://upload.wikimedia.org/wikipedia/commons/6/64/The_creation_of_the_Firmament._Wellcome_M0005782.jpg",
+     "Paul Nash, Genesis (Nonesuch Press, 1924); Wellcome Collection, M0005782", "CC BY 4.0",
+     "https://commons.wikimedia.org/wiki/File:The_creation_of_the_Firmament._Wellcome_M0005782.jpg"),
+    ("07-bosch-third-day-grisaille.jpg",
+     "https://upload.wikimedia.org/wikipedia/commons/a/af/Hieronymus_Bosch_-_Triptych_of_Garden_of_Earthly_Delights_%28outer_wings%29_-_WGA2506.jpg",
+     "Hieronymus Bosch, The Garden of Earthly Delights, outer wings, c. 1490-1510; Museo del Prado (photograph via Web Gallery of Art)", "Public domain (PD-Art)",
+     "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_-_Triptych_of_Garden_of_Earthly_Delights_(outer_wings)_-_WGA2506.jpg"),
+    ("12-scheuchzer-homo-ex-humo-wellcome.jpg",
+     "https://iiif.wellcomecollection.org/image/V0034174/full/!1600,1600/0/default.jpg",
+     "J. J. Scheuchzer, Physica Sacra (1731), Homo ex humo, etching by J. A. Fridrich; Wellcome Collection, V0034174", "Public Domain Mark",
+     "https://wellcomecollection.org/works/twbrjsc2"),
 ]
 
 
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "lookbook-fetch/1.0"})
+    # Wikimedia rate-limits anonymous agents; its policy asks for a name and a contact.
+    req = urllib.request.Request(url, headers={
+        "User-Agent": "lookbook-fetch/1.1 (Adonai look book; noreply@anthropic.com)"})
     with urllib.request.urlopen(req, timeout=60) as r:
         return r.read()
 
@@ -103,6 +151,7 @@ def main():
             print("have  ", name)
             continue
         try:
+            time.sleep(2)  # be gentle with the image hosts
             im = Image.open(io.BytesIO(fetch(url))).convert("RGB")
             im.thumbnail((LONG_SIDE, LONG_SIDE), Image.LANCZOS)
             im.save(dest, "JPEG", quality=85)
