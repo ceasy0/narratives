@@ -42,7 +42,7 @@ PALETTES = {
     # light to a cooler shadow, the light warm.
     "skin": dict(shadow=(0.54, 0.49, 0.5), light=(1.0, 0.97, 0.92), soft=(0.22, 0.36), steps=(0.62, 0.9, 0.45),
                  warm=((1.08, 0.9, 0.84), 0.15), highlight=None,
-                 crease=((0.45, 0.36, 0.36), 0.45), crease_at=(0.62, 0.32), wet=0.06, smooth_base=2),
+                 crease=((0.45, 0.36, 0.36), 0.45), crease_at=(0.62, 0.32), wet=0.45, smooth_base=2),
     "hair": dict(shadow=(0.45, 0.42, 0.5), light=(1.05, 1.0, 0.94), soft=(0.04, 0.5),
                  warm=((1.1, 0.9, 0.8), 0.15), highlight=((0.6, 0.43, 0.27), 0.55),
                  crease=((0.35, 0.28, 0.24), 0.35), crease_at=(0.72, 0.36), wet=0.3, strands=True),
@@ -124,8 +124,8 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
     shade = np.array(p["shadow"]) * (1 - t) + np.array(p["light"]) * t
     out = col * shade
     if not p.get("strands"):                        # skin isn't one flat colour (your note: too smooth): warmer and cooler patches
-        out = out * (1 + 0.018 * field(L.shape, 40, 11)[..., None] * np.array((1.0, 0.4, -0.3)))
-        out = out * (1 + 0.012 * field(L.shape, 10, 12)[..., None])
+        out = out * (1 + 0.007 * field(L.shape, 40, 11)[..., None] * np.array((1.0, 0.4, -0.3)))   # faint: the skin smooth to paint over by hand
+        out = out * (1 + 0.004 * field(L.shape, 10, 12)[..., None])
     w = np.exp(-((L - 0.5 * (p["soft"][0] + p["soft"][1])) / 0.12) ** 2)[..., None] * p["warm"][1]
     out = out * (1 + w * (np.array(p["warm"][0]) - 1))
     if p["highlight"] and not unlit:

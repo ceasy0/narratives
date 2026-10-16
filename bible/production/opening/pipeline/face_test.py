@@ -655,7 +655,8 @@ def sun(name, energy, colour, elevation, azimuth, angle=2.0):
 # (your note: sunlight on the face, and shadows): the sun high on his right and in front, so his
 # left side turns into shadow and the brow, the nose, the lips and the hair cast theirs onto the
 # face; a cool fill from the sky on his left; a rim from behind on his left, along the shadow side.
-def window(elevation, azimuth, dist=1.3, opening=(0.8, 1.0), bar=0.04, mullion=-0.16, transom=-0.15):
+def window(elevation, azimuth, dist=1.3, opening=(0.8, 1.2), bar=0.04, mullion=-0.16, transom=-0.15,
+           slats=()):
     """A wall with a window in it, between the sun and the head (your note): the light comes in
     only through the window, so one side of his face is lit and the other is in its own shadow, and
     the window's bars throw theirs, the cross-bar's across his neck. Out of the camera's sight."""
@@ -668,7 +669,8 @@ def window(elevation, azimuth, dist=1.3, opening=(0.8, 1.0), bar=0.04, mullion=-
     ow, oh = opening[0] / 2, opening[1] / 2
     boxes = [(-(1.5 + ow) / 2, 0.0, (1.5 - ow) / 2, 1.5), ((1.5 + ow) / 2, 0.0, (1.5 - ow) / 2, 1.5),
              (0.0, (1.5 + oh) / 2, ow, (1.5 - oh) / 2), (0.0, -(1.5 + oh) / 2, ow, (1.5 - oh) / 2),
-             (mullion, 0.0, bar / 2, oh), (0.0, transom, ow, bar / 2)]
+             (mullion, 0.0, bar / 2, oh), (0.0, transom, ow, bar / 2)] \
+        + [(0.0, s_, ow, 0.018) for s_ in slats]     # a blind, clear across the band that lights his face: the slats' shadows cut the air into rays
     verts, faces = [], []
     for a, b, hu, hv in boxes:
         k = len(verts)
@@ -688,15 +690,71 @@ def window(elevation, azimuth, dist=1.3, opening=(0.8, 1.0), bar=0.04, mullion=-
 
 if LIVE:
     KEY = (40, 210)                                # elevation, azimuth: the sun high on his right, as in your frame of Vi: the brow shades the eyes, the nose casts across
-    key = sun("Sun", 4.0, (1.0, 0.9, 0.76), *KEY, angle=0.3)    # crisp shadows, as Vi's; the stroke map breaks their edges
-    try:                                           # not sampled soft: the turn to shadow magnified the sampling into a speckle
-        key.data.use_shadow_jitter = False
-        key.data.shadow_filter_radius = 0.5
-    except AttributeError:
-        pass
+    key = sun("Sun", 4.0, (1.0, 0.9, 0.76), *KEY, angle=2.5)    # shadows smoother (your note), sampled clean below
+    for k, v in (("use_shadow_jitter", False), ("shadow_filter_radius", 3.0), ("shadow_maximum_resolution", 0.0005)):
+        try:                                       # soft edges traced and filtered, which came out cleanest
+            setattr(key.data, k, v)
+        except (AttributeError, TypeError):
+            pass
+    for k, v in (("shadow_ray_count", 4), ("shadow_step_count", 32)):
+        try:
+            setattr(scene.eevee, k, v)
+        except (AttributeError, TypeError):
+            pass
     sun("Sky fill", 0.07, (0.62, 0.74, 0.86), 12, 330, angle=25.0)
     sun("Rim", 0.6, (0.96, 0.9, 0.82), 20, 85, angle=6.0)    # from behind, only along the edge of the shadow side
     window(*KEY)
+
+    def air(density=0.12, size=3.0):
+        """Air in the room (your note, 2026-10-16: atmospheric shading, light rays): a faint haze, so
+        the sun through the window shows in it as shafts, cut into rays by the slats, with his head's
+        own shadow running back through it."""
+        h = size / 2                                # only behind his face, so it doesn't veil it
+        verts = [tuple(E + Vector((sx * h, 0.02 + (sy + 1) * h, sz * h))) for sx in (-1, 1) for sy in (-1, 1) for sz in (-1, 1)]
+        faces = [(0, 1, 3, 2), (4, 6, 7, 5), (0, 4, 5, 1), (2, 3, 7, 6), (0, 2, 6, 4), (1, 5, 7, 3)]
+        me = bpy.data.meshes.new("Air")
+        me.from_pydata(verts, [], faces)
+        ob = bpy.data.objects.new("Air", me)
+        scene.collection.objects.link(ob)
+        m, g, out = P.material("Air")
+        vol = g.new("ShaderNodeVolumePrincipled", {"Density": density, "Anisotropy": 0.15, "Color": (*P.srgb((0.9, 0.88, 0.85)), 1.0)})
+        g.nt.links.new(vol.outputs[0], out.inputs["Volume"])
+        me.materials.append(m)
+        e = scene.eevee
+        for k, v in (("volumetric_tile_size", '2'), ("volumetric_samples", 128), ("volumetric_start", 0.1),
+                     ("volumetric_end", 8.0), ("use_volumetric_shadows", True), ("volumetric_shadow_samples", 32)):
+            try:
+                setattr(e, k, v)
+            except (AttributeError, TypeError):
+                pass
+        return ob
+
+    air()
+    # The rays (your note: light rays): a second sun that lights only the air, not him, through slats
+    # set edge-on to the camera, so their shadows read as rays across the air behind him; the key's
+    # own glow in the air kept low, so it doesn't veil the background.
+    key.data.volume_factor = 0.1
+    RAYS = (40, 182)
+    rays = sun("Rays", 3.5, (1.0, 0.88, 0.72), *RAYS, angle=0.5)
+    rays.data.diffuse_factor = rays.data.specular_factor = 0.0
+    rays.data.volume_factor = 1.0
+    d = Vector((math.cos(math.radians(RAYS[0])) * math.cos(math.radians(RAYS[1])),
+                math.cos(math.radians(RAYS[0])) * math.sin(math.radians(RAYS[1])), math.sin(math.radians(RAYS[0]))))
+    u = Vector((0, 0, 1)).cross(d).normalized()
+    v = d.cross(u).normalized()
+    c = E + d * 1.6
+    verts, faces = [], []
+    for i in range(-8, 9):                           # slats 4 cm deep, 7 cm apart; only behind the line to his face, so the key isn't crossed
+        k = len(verts)
+        for a in (-1.6, -0.05):                     # u runs toward the camera: these lie behind his face, over the air
+            for b in (0.07 * i - 0.02, 0.07 * i + 0.02):
+                verts.append(tuple(c + u * a + v * b))
+        faces.append((k, k + 1, k + 3, k + 2))
+    me = bpy.data.meshes.new("Slats")
+    me.from_pydata(verts, [], faces)
+    sl = bpy.data.objects.new("Slats", me)
+    scene.collection.objects.link(sl)
+    sl.visible_camera = False
 else:
     sun("Sun", 3.6, (1.0, 0.9, 0.76), 42, 232, angle=6.0)
     sun("Sky fill", 0.26, (0.62, 0.74, 0.86), 12, 320, angle=25.0)
@@ -979,7 +1037,7 @@ else:
         sk["brows"] = bake_brows(SKIN_RES)
         hb = bake(locks, hair_colour, HAIR_RES, "hair", 0.01, extra=(("masks", attr_colour("hair_masks")),))
         reg = region()
-        for (src, png, pal, radii, extra) in ((sk, skin_png, "skin", "24,12,6,3", ["--region", str(reg), "--bristles", "0.05", "--threshold", "8"]),
+        for (src, png, pal, radii, extra) in ((sk, skin_png, "skin", "24,12,6,3", ["--region", str(reg), "--bristles", "0", "--threshold", "12"]),
                                               (hb, hair_png, "hair", "10,5,3", ["--along", "v"])):
             t = time.time()
             subprocess.run(["py", str(BRUSH), str(src["base"]), str(src.get("light", src["base"])), str(png), "--palette", pal,
@@ -991,11 +1049,11 @@ else:
         strokes = PAINT / "strokes.png"
         if not strokes.exists():
             subprocess.run(["py", str(BRUSH), "strokes", str(strokes), "2048"], check=True)
-        wear(human, live_mat("Painted skin", skin_png, (0.32, 0.23, 0.22), (1.03, 0.98, 0.9), (0.16, 0.26),
-                             steps=(0.42, 0.8, 0.8), warm=((1.12, 0.82, 0.74), 0.3), sheen=0.1, roughness=0.3,
-                             quiet="lid_region", cool=((0.27, 0.27, 0.3), 0.05, 0.15), edge=(strokes, 0.7)))
+        wear(human, live_mat("Painted skin", skin_png, (0.36, 0.25, 0.21), (1.03, 0.98, 0.9), (0.06, 0.4),
+                             steps=(0.36, 0.9, 0.8), warm=((1.12, 0.84, 0.74), 0.3), sheen=0.1, roughness=0.3,
+                             quiet="lid_region", cool=((0.3, 0.28, 0.28), 0.05, 0.15), edge=None))   # smooth shadows (your note); edge=(strokes, 0.3) breaks them along strokes
         wear(locks, live_mat("Painted hair", hair_png, (0.4, 0.34, 0.36), (1.0, 0.97, 0.92), (0.08, 0.3),
-                             edge=(strokes, 0.6)))
+                             edge=(strokes, 0.3)))
     else:
         wear(human, painted_mat("Painted skin", skin_png, sheen=0.07, rim=0.12, quiet="lid_region"))
         wear(locks, painted_mat("Painted hair", hair_png))
@@ -1014,13 +1072,13 @@ else:
 
 r = scene.render
 r.resolution_x, r.resolution_y, r.resolution_percentage = (900, 1200, 100) if CHECK else (1920, 1080, 100)
-P.eevee(scene, 64)
+P.eevee(scene, 64 if not LIVE else 128)            # live: enough samples for the soft shadows and the air
 r.filter_size = 0.75                               # a tighter pixel filter: crisp, not soft (your note)
 bpy.context.preferences.system.anisotropic_filter = 'FILTER_16'   # the paint sharp where the face turns away
 if CHECK:
     r.use_compositing = False
 else:                                              # the whole look: glow, grade, vignette, a touch of the lens, grain
-    P.final_look(scene, F0, F1, **(dict(shadows=(0.82, 0.95, 1.0), glow=0.12, glow_threshold=1.0, dispersion=0.002, sharpen=0.15)
+    P.final_look(scene, F0, F1, **(dict(shadows=(0.9, 0.97, 1.0), glow=0.12, glow_threshold=1.0, dispersion=0.002, sharpen=0.15)
                                    if LIVE else {}))
 r.use_stamp = False
 scene.frame_start, scene.frame_end = F0, F1
