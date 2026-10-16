@@ -404,7 +404,7 @@ c. 6 BC–AD 33. The order follows a standard harmony with John's feasts as the 
 | 177 | Olivet | Mark 13; Matt 24–25 | "Not one stone"; the signs; the ten virgins; the talents; the sheep and the goats, "I was a stranger." *Could fold into 176.* | Position 19's kind of question |
 | 178 | The Upper Room | Mark 14:12–31; John 13–17 | A towel; the bread and the cup; "one of you"; Judas into the night; "I will not leave you orphans"; the prayer. | Position 18; FR-05 |
 | 179 | Gethsemane | Mark 14:32–72; John 18:1–27 | "Let this cup pass"; sweat like blood; the kiss; Malchus's ear; the young man who ran naked; Annas; the rooster. | 002; 007 |
-| 180 | Pilate | Mark 15:1–20; Luke 23:1–25; John 18:28–19:16 | Judas's rope; "are you the king?"; Herod's robe; Procula's dream; Barabbas; the scourging; "Behold the man"; the bowl of water. | RULES §8.7 |
+| 180 | Pilate | Mark 15:1–20; Luke 23:1–25; John 18:28–19:16 | Judas's rope; "are you the king?"; Herod's robe; Procula's dream; Barabbas; the scourging; "Behold the man"; the bowl of water. | RULES §8.7; [013](../discussions/013-rome-and-the-passion.md) |
 | 181 | Golgotha | Mark 15:21–47; Luke 23:26–56; John 19:17–42 | Simon of Cyrene; the seven words; darkness at noon; the veil torn; "it is finished"; the spear; the linen; the stone. 3 April 33. | 002 (what the cross accomplishes); 007 |
 | 182 | The Third Day | John 20; Luke 24:1–49; Matt 28:1–15 | The women; the stone gone; "Mary," and a face recognized; Emmaus, the long walk and the broken bread; the locked room; Thomas's hand. | FR-10 (the resurrection, decided) |
 | 183 | Galilee | John 21; Matt 28:16–20; Acts 1:1–11 | Breakfast on the shore; "do you love me?" three times; "feed my sheep"; the mountain; the cloud. | Position 18 (Peter) |
