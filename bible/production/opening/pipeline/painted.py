@@ -17,10 +17,18 @@ What makes the look, and where each part of it is here:
 - A painted sky, seen only by the camera; the light it gives the scene is a dim, even fill. sky()
 - Air over the whole frame: distance fades toward the haze colour, and a light anisotropic
   Kuwahara filter ties the strokes together without smoothing the shapes away. finish()
+- Real brush strokes, for the characters (the style test's face, accepted 2026-10-16): each
+  surface's colour, its creases and its form's hollows baked into its own texture (bake), painted
+  over stroke by stroke by brush.py, and the paint lit live by the renderer, its light turned into
+  the painter's colours, cast shadows and all (live_mat). The strokes stay on the surface as it
+  moves. Used by face_test.py and band_mocap_test.py -- painted.
 
 Colours are given as they'd be picked on screen (sRGB) and converted here.
 """
+import time
+
 import bpy
+import numpy as np
 
 
 def srgb(c):
@@ -193,6 +201,118 @@ def flat(name, colour):
     m, g, out = material(name)
     em = g.new("ShaderNodeEmission", {"Color": (*srgb(colour), 1.0), "Strength": 1.0})
     g.nt.links.new(em.outputs[0], out.inputs["Surface"])
+    return m
+
+
+def wear(ob, m):
+    """The one material on a mesh."""
+    ob.data.materials.clear()
+    ob.data.materials.append(m)
+
+
+def node_mat(name, build):
+    """A material whose surface is the shader build(Nodes) returns."""
+    m, g, out = material(name)
+    g.nt.links.new(build(g), out.inputs["Surface"])
+    return m, g
+
+
+# ---------------------------------------------------------------- real brush strokes
+def bake(scene, ob, colour, size, name, folder, ao_distance=0.015, extra=(), form_distance=None, light=False,
+         margin=24, samples=48):
+    """Bake ob's colour (EMIT) into its UVs, with the occlusion close in (AO within ao_distance: the
+    creases) and, with form_distance, wide (the form's hollows, for its painted shading); light:
+    the light that reaches it too (DIFFUSE, light only), when the light is to be painted in rather
+    than live. colour: a function (Nodes, uv socket) -> colour socket. extra: (kind, builder)
+    pairs, more for the painter (masks, marks), each baked as the colour is. Each bake is saved in
+    folder as half floats for brush.py, as name-kind.npy; returns {kind: path}. Cycles on the GPU
+    (OptiX), which the scene is left set to."""
+    builders = dict(extra)
+    scene.render.engine = 'CYCLES'
+    prefs = bpy.context.preferences.addons["cycles"].preferences
+    prefs.compute_device_type = 'OPTIX'
+    prefs.get_devices()
+    for dv in prefs.devices:
+        dv.use = dv.type == 'OPTIX'
+    scene.cycles.device = 'GPU'
+    scene.cycles.samples = samples
+    img = bpy.data.images.new(name + " bake", size, size, float_buffer=True, alpha=False)
+    out = {}
+    scene.world.light_settings.distance = ao_distance
+    for kind in ("base",) + (("light",) if light else ()) + ("ao",) + (("form",) if form_distance else ()) + tuple(builders):
+        if kind == "base":
+            m, g = node_mat(name + " base", lambda g: g.new("ShaderNodeEmission", {"Color": colour(g, g.new("ShaderNodeTexCoord").outputs["UV"]), "Strength": 1.0}).outputs[0])
+        elif kind in builders:                      # the painter's masks and marks
+            m, g = node_mat(name + " " + kind, lambda g: g.new("ShaderNodeEmission", {"Color": builders[kind](g), "Strength": 1.0}).outputs[0])
+        else:
+            m, g = node_mat(name + " " + kind, lambda g: g.new("ShaderNodeBsdfDiffuse", {"Color": (1, 1, 1, 1)}).outputs[0])
+        tn = g.new("ShaderNodeTexImage", image=img)
+        g.nt.nodes.active = tn
+        keep = list(ob.data.materials)
+        wear(ob, m)
+        bpy.ops.object.select_all(action='DESELECT')
+        ob.select_set(True)
+        bpy.context.view_layer.objects.active = ob
+        t = time.time()
+        if kind == "base" or kind in builders:
+            bpy.ops.object.bake(type='EMIT', margin=margin, use_clear=True)
+        elif kind in ("ao", "form"):                # occlusion close in: the creases; wide: the form's hollows, for its painted shading
+            scene.world.light_settings.distance = ao_distance if kind == "ao" else form_distance
+            bpy.ops.object.bake(type='AO', margin=margin, use_clear=True)
+        else:
+            bpy.ops.object.bake(type='DIFFUSE', pass_filter={'DIRECT', 'INDIRECT'}, margin=margin, use_clear=True)
+        a = np.empty(size * size * 4, np.float32)
+        img.pixels.foreach_get(a)
+        np.save(folder / ("%s-%s.npy" % (name, kind)), a.reshape(size, size, 4).astype(np.float16))
+        out[kind] = folder / ("%s-%s.npy" % (name, kind))
+        ob.data.materials.clear()
+        for mm in keep:
+            ob.data.materials.append(mm)
+        print("baked %s %s in %.0fs" % (name, kind, time.time() - t))
+    bpy.data.images.remove(img)
+    return out
+
+
+def live_mat(name, png, shadow, light, soft, steps=None, warm=None, sheen=0.0, quiet=None, cool=None, edge=None,
+             roughness=0.42, albedo=None):
+    """The paint lit live (your note, 2026-10-15: the real shadows): the renderer's own light on the
+    surface, its cast shadows included, read as a value and turned into the painter's colours, as
+    in your frame of Vi: the paint as it is in full light; deep and warm in shadow, cooler where the
+    sky's fill reaches into it (cool); a short turn between (soft), warm and reddish (warm), its edge
+    broken along brush strokes (edge: the stroke map and how far it moves the edge); and a second,
+    gentler turn (steps), so the planes of a form facing the light less take a half-tone. sheen: a
+    faint live sheen where the light catches it, none where the attribute `quiet` says. albedo: a
+    colour built in nodes, (Nodes, uv) -> colour socket, instead of the painted png."""
+    m, g, out = material(name)
+    uv = g.new("ShaderNodeTexCoord").outputs["UV"]
+    if albedo:                                      # a colour built in nodes instead of a painted image
+        alb = albedo(g, uv)
+    else:
+        alb = g.new("ShaderNodeTexImage", {"Vector": uv}, image=bpy.data.images.load(str(png))).outputs["Color"]
+    lum = g.bw(g.new("ShaderNodeShaderToRGB", [g.new("ShaderNodeBsdfDiffuse", {"Color": (1, 1, 1, 1)}).outputs[0]]).outputs[0])
+    raw = lum
+    if edge:
+        st = bpy.data.images.load(str(edge[0]), check_existing=True)
+        st.colorspace_settings.name = 'Non-Color'
+        n = g.bw(g.new("ShaderNodeTexImage", {"Vector": g.scale(uv, 0.5)}, image=st).outputs["Color"])   # strokes the size of a brush on screen
+        lum = g.math('MULTIPLY', lum, g.math('MULTIPLY_ADD', g.math('SUBTRACT', n, 0.5), edge[1], 1.0))   # at the edge, not inside the shadow
+    t = g.remap(lum, soft[0], soft[1], 0.0, 1.0)
+    if steps:                                       # full light only on the planes facing it; a half-tone on the rest
+        t = g.math('MULTIPLY', t, g.math('MULTIPLY_ADD', g.remap(lum, steps[0], steps[1], 0.0, 1.0), 1 - steps[2], steps[2]))
+    sh = (*srgb(shadow), 1.0)
+    if cool:
+        sh = g.mix(g.remap(raw, cool[1], cool[2], 0.0, 1.0), sh, (*srgb(cool[0]), 1.0))
+    c = g.scale(alb, g.mix(t, sh, (*srgb(light), 1.0)))
+    if warm:                                        # the painter's warm note where light turns to shadow
+        band = g.math('SUBTRACT', 1.0, g.math('ABSOLUTE', g.math('MULTIPLY_ADD', t, 2.0, -1.0)))
+        c = g.mix(g.math('MULTIPLY', band, warm[1]), c, g.scale(c, srgb(warm[0])))
+    if sheen:
+        gl = g.new("ShaderNodeBsdfGlossy", {"Color": (1, 1, 1, 1), "Roughness": roughness})
+        hi = g.math('MULTIPLY', g.remap(g.bw(g.new("ShaderNodeShaderToRGB", [gl.outputs[0]]).outputs[0]), 0.25, 1.2, 0.0, sheen), t)
+        if quiet:
+            hi = g.math('MULTIPLY', hi, g.math('SUBTRACT', 1.0, g.new("ShaderNodeAttribute", attribute_name=quiet).outputs["Fac"]))
+        c = g.mix(hi, c, (*srgb((1.0, 0.95, 0.9)), 1.0), 'SCREEN')
+    g.nt.links.new(g.new("ShaderNodeEmission", {"Color": c, "Strength": 1.0}).outputs[0], out.inputs["Surface"])
     return m
 
 

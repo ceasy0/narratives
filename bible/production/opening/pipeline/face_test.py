@@ -20,11 +20,11 @@ expression is the Opening's last, which you've called right for it: one breath d
 the nostrils widening, the lips parting a little, the chin lifting.
 
 It's painted with real brush strokes (your note, 2026-10-15: genuinely painted): Blender bakes
-each surface's colour into the surface's own texture (Cycles), and brush.py paints that over with
+each surface's colour into the surface's own texture (Cycles, painted.bake), and brush.py paints that over with
 strokes that follow the form, big brushes then small. The light isn't in the paint (your note,
 2026-10-15: the shadows real, not painted): the renderer lights the head live, and its light, cast
 shadows and all, is turned into the painter's colours, a cooler, darker paint in shadow and a
-short soft turn between (live_mat). The sun comes in through a window on his right, so one side
+short soft turn between (painted.live_mat). The sun comes in through a window on his right, so one side
 of his face is lit and the other is in its own shadow, and the window's bars cast theirs; a weak
 cool fill; a rim from behind. face-front-raw.png is the same light shaded plainly, for comparison.
 -- baked: the earlier way, the light baked into the paint as a painter fixes it.
@@ -585,11 +585,6 @@ locks, beneath = hair()
 print("head built in %.0fs" % (time.time() - t_start))
 
 
-def wear(ob, m):
-    ob.data.materials.clear()
-    ob.data.materials.append(m)
-
-
 def picture(ob):
     """The image texture a fitted asset's own material uses (for its cut-out)."""
     for m in ob.data.materials:
@@ -769,13 +764,6 @@ P.sky(scene, zenith=(0.06, 0.1, 0.12), horizon=(0.15, 0.2, 0.21), below=(0.08, 0
 
 
 # ---------------------------------------------------------------- bake and paint
-def node_mat(name, build):
-    m, g, out = P.material(name)
-    shader = build(g)
-    g.nt.links.new(shader, out.inputs["Surface"])
-    return m, g
-
-
 def skin_colour(g, uv):
     skin_img = bpy.data.images.get("skin scan") or bpy.data.images.load(
         str(H.mpfb_data("skins") / "young_caucasian_male" / "young_lightskinned_male_diffuse.png"))
@@ -862,68 +850,19 @@ def attr_colour(name):
     return lambda g: g.new("ShaderNodeAttribute", attribute_name=name).outputs["Color"]
 
 
-def bake(ob, colour, size, name, ao_distance=0.015, extra=(), form_distance=None):
-    """Bake ob's colour (EMIT) and the light that reaches it (DIFFUSE, light only) into its UVs;
-    save both as half floats for the painter. extra: (kind, colour) pairs, more for the painter,
-    each baked as the colour is."""
-    builders = dict(extra)
-    scene.render.engine = 'CYCLES'
-    prefs = bpy.context.preferences.addons["cycles"].preferences
-    prefs.compute_device_type = 'OPTIX'
-    prefs.get_devices()
-    for dv in prefs.devices:
-        dv.use = dv.type == 'OPTIX'
-    scene.cycles.device = 'GPU'
-    scene.cycles.samples = 48
-    img = bpy.data.images.new(name + " bake", size, size, float_buffer=True, alpha=False)
-    out = {}
-    scene.world.light_settings.distance = ao_distance
-    for kind in ("base",) + (() if LIVE else ("light",)) + ("ao",) + (("form",) if form_distance else ()) + tuple(builders):
-        if kind == "base":
-            m, g = node_mat(name + " base", lambda g: g.new("ShaderNodeEmission", {"Color": colour(g, g.new("ShaderNodeTexCoord").outputs["UV"]), "Strength": 1.0}).outputs[0])
-        elif kind in builders:                      # the painter's masks and marks
-            m, g = node_mat(name + " " + kind, lambda g: g.new("ShaderNodeEmission", {"Color": builders[kind](g), "Strength": 1.0}).outputs[0])
-        else:
-            m, g = node_mat(name + " " + kind, lambda g: g.new("ShaderNodeBsdfDiffuse", {"Color": (1, 1, 1, 1)}).outputs[0])
-        tn = g.new("ShaderNodeTexImage", image=img)
-        g.nt.nodes.active = tn
-        keep = list(ob.data.materials)
-        wear(ob, m)
-        bpy.ops.object.select_all(action='DESELECT')
-        ob.select_set(True)
-        bpy.context.view_layer.objects.active = ob
-        t = time.time()
-        if kind == "base" or kind in builders:
-            bpy.ops.object.bake(type='EMIT', margin=24, use_clear=True)
-        elif kind in ("ao", "form"):                # occlusion close in: the creases; wide: the form's hollows, for its painted shading
-            scene.world.light_settings.distance = ao_distance if kind == "ao" else form_distance
-            bpy.ops.object.bake(type='AO', margin=24, use_clear=True)
-        else:
-            bpy.ops.object.bake(type='DIFFUSE', pass_filter={'DIRECT', 'INDIRECT'}, margin=24, use_clear=True)
-        a = np.empty(size * size * 4, np.float32)
-        img.pixels.foreach_get(a)
-        np.save(PAINT / ("%s-%s.npy" % (name, kind)), a.reshape(size, size, 4).astype(np.float16))
-        out[kind] = PAINT / ("%s-%s.npy" % (name, kind))
-        ob.data.materials.clear()
-        for mm in keep:
-            ob.data.materials.append(mm)
-        print("baked %s %s in %.0fs" % (name, kind, time.time() - t))
-    return out
-
-
 def bake_brows(size):
     """The brows' shape, cast onto the skin's texture (Cycles, selected to active), so the painter
     can paint them full underneath their hairs (your note: fuller, thicker brows)."""
     brow = fitted["eyebrows"]
     img = bpy.data.images.new("brows bake", size, size, float_buffer=True, alpha=False)
-    mb, gb = node_mat("Brow shape", lambda g: g.new("ShaderNodeEmission", {"Color": g.new(
+    mb, gb = P.node_mat("Brow shape", lambda g: g.new("ShaderNodeEmission", {"Color": g.new(
         "ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]}, image=cutouts["eyebrows"]).outputs["Alpha"],
         "Strength": 1.0}).outputs[0])
-    ms, gs = node_mat("Brow target", lambda g: g.new("ShaderNodeEmission", {"Color": (0, 0, 0, 1)}).outputs[0])
+    ms, gs = P.node_mat("Brow target", lambda g: g.new("ShaderNodeEmission", {"Color": (0, 0, 0, 1)}).outputs[0])
     gs.nt.nodes.active = gs.new("ShaderNodeTexImage", image=img)
     keep_b, keep_s = list(brow.data.materials), list(human.data.materials)
-    wear(brow, mb)
-    wear(human, ms)
+    P.wear(brow, mb)
+    P.wear(human, ms)
     bpy.ops.object.select_all(action='DESELECT')
     brow.select_set(True)
     human.select_set(True)
@@ -977,47 +916,6 @@ def painted_mat(name, png, sheen=0.0, rim=0.0, quiet=None):
     return m
 
 
-def live_mat(name, png, shadow, light, soft, steps=None, warm=None, sheen=0.0, quiet=None, cool=None, edge=None,
-             roughness=0.42, albedo=None):
-    """The paint lit live (your note, 2026-10-15: the real shadows): the renderer's own light on the
-    surface, its cast shadows included, read as a value and turned into the painter's colours, as
-    in your frame of Vi: the paint as it is in full light; deep and warm in shadow, cooler where the
-    sky's fill reaches into it (cool); a short turn between (soft), warm and reddish (warm), its edge
-    broken along brush strokes (edge: the stroke map and how far it moves the edge); and a second,
-    gentler turn (steps), so the planes of a form facing the light less take a half-tone."""
-    m, g, out = P.material(name)
-    uv = g.new("ShaderNodeTexCoord").outputs["UV"]
-    if albedo:                                      # a colour built in nodes instead of a painted image
-        alb = albedo(g, uv)
-    else:
-        alb = g.new("ShaderNodeTexImage", {"Vector": uv}, image=bpy.data.images.load(str(png))).outputs["Color"]
-    lum = g.bw(g.new("ShaderNodeShaderToRGB", [g.new("ShaderNodeBsdfDiffuse", {"Color": (1, 1, 1, 1)}).outputs[0]]).outputs[0])
-    raw = lum
-    if edge:
-        st = bpy.data.images.load(str(edge[0]), check_existing=True)
-        st.colorspace_settings.name = 'Non-Color'
-        n = g.bw(g.new("ShaderNodeTexImage", {"Vector": g.scale(uv, 0.5)}, image=st).outputs["Color"])   # strokes the size of a brush on screen
-        lum = g.math('MULTIPLY', lum, g.math('MULTIPLY_ADD', g.math('SUBTRACT', n, 0.5), edge[1], 1.0))   # at the edge, not inside the shadow
-    t = g.remap(lum, soft[0], soft[1], 0.0, 1.0)
-    if steps:                                       # full light only on the planes facing it; a half-tone on the rest
-        t = g.math('MULTIPLY', t, g.math('MULTIPLY_ADD', g.remap(lum, steps[0], steps[1], 0.0, 1.0), 1 - steps[2], steps[2]))
-    sh = (*P.srgb(shadow), 1.0)
-    if cool:
-        sh = g.mix(g.remap(raw, cool[1], cool[2], 0.0, 1.0), sh, (*P.srgb(cool[0]), 1.0))
-    c = g.scale(alb, g.mix(t, sh, (*P.srgb(light), 1.0)))
-    if warm:                                        # the painter's warm note where light turns to shadow
-        band = g.math('SUBTRACT', 1.0, g.math('ABSOLUTE', g.math('MULTIPLY_ADD', t, 2.0, -1.0)))
-        c = g.mix(g.math('MULTIPLY', band, warm[1]), c, g.scale(c, P.srgb(warm[0])))
-    if sheen:
-        gl = g.new("ShaderNodeBsdfGlossy", {"Color": (1, 1, 1, 1), "Roughness": roughness})
-        hi = g.math('MULTIPLY', g.remap(g.bw(g.new("ShaderNodeShaderToRGB", [gl.outputs[0]]).outputs[0]), 0.25, 1.2, 0.0, sheen), t)
-        if quiet:
-            hi = g.math('MULTIPLY', hi, g.math('SUBTRACT', 1.0, g.new("ShaderNodeAttribute", attribute_name=quiet).outputs["Fac"]))
-        c = g.mix(hi, c, (*P.srgb((1.0, 0.95, 0.9)), 1.0), 'SCREEN')
-    g.nt.links.new(g.new("ShaderNodeEmission", {"Color": c, "Strength": 1.0}).outputs[0], out.inputs["Surface"])
-    return m
-
-
 def eye_mat(iris=EYE_COLOUR):
     """The eyes painted, from where each point of the eyeball faces (no texture needed): an off-white;
     the iris a disc of colour, darker at its rim and lighter toward the pupil; the pupil black; a
@@ -1061,24 +959,24 @@ if CHECK:
     clay = P.paint("Clay", (0.75, 0.72, 0.7), shadow=(0.45, 0.45, 0.5), vary=0.0, strokes=0.0, rim_amount=0.0,
                    crease=0.0, grain=0.0, half=None, hard=0.25)
     for ob in [human, locks, beneath] + list(fitted.values()):
-        wear(ob, clay)
+        P.wear(ob, clay)
 else:
     PAINT.mkdir(parents=True, exist_ok=True)
     skin_png, hair_png = (PAINT / "skin-colour.png", PAINT / "hair-colour.png") if LIVE else (PAINT / "skin-painted.png", PAINT / "hair-painted.png")
     cutouts = {kind: picture(fitted[kind]) for kind in ("eyebrows", "eyelashes")}   # before the bake's stand-ins replace them
     if not (REUSE and skin_png.exists() and hair_png.exists()):
         for ob in [human, locks, beneath] + list(fitted.values()):  # something to cast shadows while baking
-            wear(ob, P.flat("Bake stand-in", (0.8, 0.8, 0.8)))
+            P.wear(ob, P.flat("Bake stand-in", (0.8, 0.8, 0.8)))
         for kind in ("eyebrows", "eyelashes", "eyes"):    # their shadows on the skin read as eyeshadow
             fitted[kind].hide_render = True
-        sk = bake(human, skin_colour, SKIN_RES, "skin", 0.012, form_distance=0.07,
+        sk = P.bake(scene, human, skin_colour, SKIN_RES, "skin", PAINT, 0.012, form_distance=0.07, light=not LIVE,
                   extra=(("masks", attr_colour("paint_masks")), ("masks2", attr_colour("paint_masks2")), ("marks", marks),
                          ("scan", lambda g: g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeUVMap", uv_map=SCAN_UV).outputs["UV"]},
                                                   image=bpy.data.images["skin scan"]).outputs["Color"])))
         for kind in ("eyebrows", "eyelashes", "eyes"):
             fitted[kind].hide_render = False
         sk["brows"] = bake_brows(SKIN_RES)
-        hb = bake(locks, hair_colour, HAIR_RES, "hair", 0.01, extra=(("masks", attr_colour("hair_masks")),))
+        hb = P.bake(scene, locks, hair_colour, HAIR_RES, "hair", PAINT, 0.01, light=not LIVE, extra=(("masks", attr_colour("hair_masks")),))
         reg = region()
         for (src, png, pal, radii, extra) in ((sk, skin_png, "skin", "24,12,6,3", ["--region", str(reg), "--bristles", "0.05", "--threshold", "8"]),
                                               (hb, hair_png, "hair", "10,5,3", ["--along", "v"])):
@@ -1092,17 +990,17 @@ else:
         strokes = PAINT / "strokes.png"
         if not strokes.exists():
             subprocess.run(["py", str(BRUSH), "strokes", str(strokes), "2048"], check=True)
-        wear(human, live_mat("Painted skin", skin_png, (0.34, 0.22, 0.2), (0.98, 0.97, 0.96), (0.15, 0.3),
+        P.wear(human, P.live_mat("Painted skin", skin_png, (0.34, 0.22, 0.2), (0.98, 0.97, 0.96), (0.15, 0.3),
                              steps=(0.4, 0.9, 0.5), warm=((1.15, 0.8, 0.7), 0.35), sheen=0.0, roughness=0.3,
                              quiet="lid_region", cool=((0.52, 0.36, 0.32), 0.03, 0.1), edge=(strokes, 0.25)))   # deep warm shadow, lifted where the sky and the floor reach it; the edge a little broken, as Vi's
-        wear(locks, live_mat("Painted hair", hair_png, (0.4, 0.34, 0.36), (1.0, 0.97, 0.92), (0.08, 0.3),
+        P.wear(locks, P.live_mat("Painted hair", hair_png, (0.4, 0.34, 0.36), (1.0, 0.97, 0.92), (0.08, 0.3),
                              edge=(strokes, 0.3)))
-        wear(beneath, live_mat("Hair mass", None, (0.4, 0.34, 0.36), (1.0, 0.97, 0.92), (0.08, 0.3), albedo=hair_mass_colour))
+        P.wear(beneath, P.live_mat("Hair mass", None, (0.4, 0.34, 0.36), (1.0, 0.97, 0.92), (0.08, 0.3), albedo=hair_mass_colour))
     else:
-        wear(human, painted_mat("Painted skin", skin_png, sheen=0.07, rim=0.12, quiet="lid_region"))
-        wear(locks, painted_mat("Painted hair", hair_png))
+        P.wear(human, painted_mat("Painted skin", skin_png, sheen=0.07, rim=0.12, quiet="lid_region"))
+        P.wear(locks, painted_mat("Painted hair", hair_png))
     if not LIVE:
-        wear(beneath, P.flat("Hair beneath", (0.13, 0.085, 0.055)))
+        P.wear(beneath, P.flat("Hair beneath", (0.13, 0.085, 0.055)))
     for kind, col in (("eyebrows", (0.17, 0.12, 0.1)), ("eyelashes", (0.1, 0.07, 0.06))):
         m, g, out = P.material("Painted " + kind)
         tex = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]}, image=cutouts[kind])
@@ -1111,9 +1009,9 @@ else:
         a = g.remap(tex.outputs["Alpha"], 0.03 if kind == "eyelashes" else 0.06, 0.3 if kind == "eyelashes" else 0.4, 0.0, 1.0,
                     smooth=False)   # a bold lid line; the brows' hairs full over their soft painted shape
         g.nt.links.new(g.new("ShaderNodeMixShader", [a, tr.outputs[0], em.outputs[0]]).outputs[0], out.inputs["Surface"])
-        wear(fitted[kind], m)
+        P.wear(fitted[kind], m)
         fitted[kind].visible_shadow = False        # their cards' shadows smeared the cheeks
-    wear(fitted["eyes"], eye_mat() if all(v < 1.0 for v in CLOSED.values()) else P.flat("Eye", (0.85, 0.82, 0.78)))
+    P.wear(fitted["eyes"], eye_mat() if all(v < 1.0 for v in CLOSED.values()) else P.flat("Eye", (0.85, 0.82, 0.78)))
 
 r = scene.render
 r.resolution_x, r.resolution_y, r.resolution_percentage = (900, 1200, 100) if CHECK else (1920, 1080, 100)
@@ -1149,8 +1047,8 @@ for name, f, view in (("front", F0, "front"), ("neutral", F0, "three-quarter"), 
     print("still", r.filepath, "%.1fs" % (time.time() - t))
     if LIVE and name == "front":                   # the same light, shaded plainly, for comparison
         keep = {ob: list(ob.data.materials) for ob in (human, locks)}
-        wear(human, raw_mat("Plain skin", skin_png))
-        wear(locks, raw_mat("Plain hair", hair_png))
+        P.wear(human, raw_mat("Plain skin", skin_png))
+        P.wear(locks, raw_mat("Plain hair", hair_png))
         r.filepath = str(OUT / "face-front-raw.png")
         bpy.ops.render.render(write_still=True)
         for ob, ms in keep.items():

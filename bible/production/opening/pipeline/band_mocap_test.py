@@ -11,6 +11,9 @@ bodies running with real motion capture, in the travelling shot, lit, in EEVEE.
     blender -b --factory-startup -P band_mocap_test.py -- painted   the series' painted look (painted.py, Discussion
                                                                     006 round 4): the style test of the run, to
                                                                     work/styletest/run-<shot>.mp4 and its sheet
+    blender -b --factory-startup -P band_mocap_test.py -- painted still      its middle frame only
+    blender -b --factory-startup -P band_mocap_test.py -- painted reuse      from the people's paint already made
+                                                                    (work/styletest/paint/run/)
 
 The shot is the AI test's (ai_video_test.py's TAG, now 04:15:00-04:18:12): the travelling camera,
 the band running left through the forest, the cat coming up behind them.
@@ -28,6 +31,12 @@ Writes work/aitest/mocap-<shot>.mp4 (1280x720, clean, the same frames as the lay
 clean-<shot>.mp4), mocap-<shot>-sheet.png (six frames) and the .blend it rendered.
 The clip is also meant as input for Runway's Aleph (ai_video_test.py): bodies with real weight,
 in our camera and timing, give it far more to keep than stick figures.
+
+In the painted look the people are painted as the style test's face is (face_test.py, accepted
+2026-10-16): each body's skin, hide and hair baked into its own texture, its colour, its creases
+and its form's hollows (painted.bake), painted over with real brush strokes by brush.py, and lit
+live, the renderer's light turned into the painter's colours (painted.live_mat). The forest and
+the ground stay shader-painted: the layout's trees have no texture layout for the brush.
 """
 import math
 import random
@@ -52,7 +61,7 @@ from ai_video_test import TAG  # noqa: E402
 
 ARGS = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 STILL, REAL, BUILD = "still" in ARGS, "real" in ARGS, "build" in ARGS     # build: save the .blend, render nothing
-PAINTED = "painted" in ARGS
+PAINTED, REUSE = "painted" in ARGS, "reuse" in ARGS
 KIND = "-real" if REAL else ""
 random.seed(13)
 
@@ -60,6 +69,8 @@ A, B = (O.frame("%s:%s:%s" % (t[:2], t[2:4], t[4:])) for t in TAG.split("-"))   
 PAD = 24                                             # frames of path either side of it
 FRAMES = list(range(A - PAD, B + PAD))
 OUT = O.WORK / ("styletest" if PAINTED else "aitest")
+PAINT = OUT / "paint" / "run"                        # the people's bakes and paint
+BRUSH = pathlib.Path(__file__).resolve().parent / "brush.py"
 SHEET = [A + round(i * (B - 1 - A) / 5) for i in range(6)]
 
 t_start = time.time()
@@ -435,20 +446,22 @@ def real_dress():
     bpy.data.objects["Big cat"].hide_render = True
 
 
-def painted_dress():
-    """The series' painted look (painted.py) over the quick dressing: every material repainted in
-    its own colour, a painted sky, a thin line round the people; the haze and the brush strokes
-    over the frame come at the render (P.finish)."""
-    def tone(m):
-        """A material's middle colour, back on screen (sRGB): its colour ramp's, or its base colour."""
-        ramps = [n for n in m.node_tree.nodes if n.type == 'VALTORGB']
-        if ramps:
-            els = ramps[0].color_ramp.elements
-            c = [sum(e.color[i] for e in els) / len(els) for i in range(3)]
-        else:
-            c = list(next(n for n in m.node_tree.nodes if n.type == 'BSDF_PRINCIPLED').inputs["Base Color"].default_value)[:3]
-        return tuple(1.055 * v ** (1 / 2.4) - 0.055 if v > 0.0031308 else 12.92 * v for v in c)
+def tone(m):
+    """A material's middle colour, back on screen (sRGB): its colour ramp's, or its base colour."""
+    ramps = [n for n in m.node_tree.nodes if n.type == 'VALTORGB']
+    if ramps:
+        els = ramps[0].color_ramp.elements
+        c = [sum(e.color[i] for e in els) / len(els) for i in range(3)]
+    else:
+        c = list(next(n for n in m.node_tree.nodes if n.type == 'BSDF_PRINCIPLED').inputs["Base Color"].default_value)[:3]
+    return tuple(1.055 * v ** (1 / 2.4) - 0.055 if v > 0.0031308 else 12.92 * v for v in c)
 
+
+def painted_dress():
+    """The series' painted look (painted.py) over the quick dressing: the world's materials
+    repainted in their own colours, a painted sky, a thin line round the people; the people
+    themselves are painted with the brush (paint_people); the haze and the brush filter over the
+    frame come at the render (P.finish)."""
     world = dict(coords='Object', rim_amount=0.0)
 
     def floor_colour(g, vec):
@@ -470,12 +483,6 @@ def painted_dress():
         ("Leaf litter", lambda m: P.paint("Painted litter", (0.48, 0.3, 0.15), scale=3.0, vary=0.2, **world)),
         ("Understory", lambda m: m),
         ("Fur", lambda m: P.paint("Painted fur", (0.62, 0.45, 0.26), scale=3.0, coords='Object')),
-        ("Skin", lambda m: P.paint("Painted skin", tone(m), shadow=(0.55, 0.4, 0.5), light=(1.1, 1.0, 0.9), scale=3.0,
-                                   vary=0.08, edge=(0.14, 0.32), spec=0.05, ao=0.4, ao_distance=0.05, rim_amount=0.25)),
-        ("Hide", lambda m: P.paint("Painted hide", tone(m), shadow=(0.5, 0.42, 0.52), light=(1.1, 1.0, 0.88), scale=4.0,
-                                   vary=0.15, ao=0.35, ao_distance=0.05)),
-        ("Hair", lambda m: P.paint("Painted hair", (0.06, 0.045, 0.04), shadow=(0.6, 0.6, 0.8), light=(1.6, 1.4, 1.2),
-                                   scale=6.0, vary=0.2, rim_amount=0.3)),
         ("Eye", lambda m: P.flat("Painted eye", (0.75, 0.7, 0.65))),
         ("Spear shaft", lambda m: P.paint("Painted shaft", (0.42, 0.3, 0.18), scale=3.0)),
         ("Stone point", lambda m: P.paint("Painted point", (0.28, 0.27, 0.26), scale=3.0)),
@@ -489,6 +496,15 @@ def painted_dress():
                 break
     P.sky(scene, zenith=(0.38, 0.56, 0.8), horizon=(0.92, 0.86, 0.72), below=(0.3, 0.33, 0.25),
           clouds=(0.98, 0.95, 0.9), fill=(0.6, 0.7, 0.85), fill_strength=0.4)
+    # Warm light up from the sunlit floor, soft and weak, as the face's rig has: the camera sees
+    # the band's shadow side, and this models it instead of leaving it one flat value of the sky's
+    # fill. It casts no shadow (the ground would block a light from below).
+    bd = bpy.data.lights.new("Bounce", 'SUN')
+    bd.energy, bd.color, bd.angle, bd.use_shadow = 0.6, P.srgb((1.0, 0.86, 0.72)), math.radians(40), False
+    bounce = bpy.data.objects.new("Bounce", bd)
+    el, az = math.radians(-25), math.radians(180)      # from below, on the camera's side
+    bounce.rotation_euler = Vector((math.cos(el) * math.cos(az), math.cos(el) * math.sin(az), math.sin(el))).to_track_quat('Z', 'Y').to_euler()
+    col.objects.link(bounce)
     for r_ in runners:
         P.outline(r_["parts"]["body"], 0.008, (0.1, 0.06, 0.05))
     bpy.data.objects["Big cat"].hide_render = True        # the layout's blob, until there's a cat
@@ -512,6 +528,119 @@ def painted_dress():
         dp.texture, dp.texture_coords, dp.strength, dp.mid_level, dp.vertex_group = cloud, 'GLOBAL', 1.6, 0.5, "crown"
 
 
+# ---------------------------------------------------------------- the people, painted with the brush
+def fit_uv(ob, source, wrap=None):
+    """A layout for the paint from one of the mesh's UV layers, filling the texture: a face
+    across the layer's seam (the back of a wrap, whose u runs round it) is brought together by
+    `wrap`, the layer's width, and the whole is scaled to fit, its shape kept so the strokes
+    aren't stretched."""
+    me = ob.data
+    uv = np.empty(len(me.loops) * 2)
+    me.uv_layers[source].data.foreach_get("uv", uv)
+    uv = uv.reshape(-1, 2)
+    if wrap:
+        for p in me.polygons:
+            li = list(p.loop_indices)
+            u = uv[li, 0]
+            if u.max() - u.min() > wrap / 2:
+                for i in li:
+                    if uv[i, 0] < (u.max() + u.min()) / 2:
+                        uv[i, 0] += wrap
+    lo, hi = uv.min(0), uv.max(0)
+    s = 0.98 / max(hi - lo)
+    layer = me.uv_layers.new(name="Paint")
+    layer.data.foreach_set("uv", ((uv - lo) * s + 0.01).ravel())
+    me.uv_layers.active = layer
+    layer.active_render = True
+
+
+def skin_colour(base):
+    """The skin's colour (sRGB) drifting as skin does: big soft patches of value, and a little
+    warmer and cooler; no strokes, which the brush makes."""
+    def build(g, uv):
+        c = (*P.srgb(base), 1.0)
+        hue = g.noise(uv, 5.0, 1.0, 0.4, 0.2)
+        c = g.mix(hue, g.scale(c, (1.05, 1.0, 0.94)), g.scale(c, (0.95, 1.0, 1.05)))
+        return g.scale(c, g.remap(g.noise(uv, 14.0, 2.0, 0.5, 0.3), 0.3, 0.7, 0.86, 1.12))
+    return build
+
+
+def hide_colour(base):
+    """A hide: its colour in patches, worn lighter and darker (as humans.hide has it)."""
+    def build(g, uv):
+        c = (*P.srgb(base), 1.0)
+        return g.scale(c, g.remap(g.noise(uv, 12.0, 4.0, 0.55, 0.2), 0.35, 0.68, 0.72, 1.18))
+    return build
+
+
+def hair_colour(base):
+    """Close-cropped, tightly coiled hair: near black, a fine grain of lighter coils over it."""
+    def build(g, uv):
+        c = (*P.srgb(base), 1.0)
+        return g.scale(c, g.remap(g.noise(uv, 40.0, 3.0, 0.6, 0.0), 0.35, 0.65, 0.75, 1.45))
+    return build
+
+
+# Each piece of a person: its colour, the texture's size, the occlusion distances (the creases;
+# the form's hollows, for the body), and the brushes (radii in pixels, big to small).
+PIECES = (("body", skin_colour, 1024, 0.012, 0.07, "20,10,5"),
+          ("wrap", hide_colour, 512, 0.012, None, "14,7,4"),
+          ("top", hide_colour, 512, 0.012, None, "14,7,4"),
+          ("hair", hair_colour, 256, 0.008, None, "8,4,2"))
+# The paint lit live (painted.live_mat), set to this scene's light as measured on the bodies in the
+# middle frame (a white diffuse read through Shader to RGB): the sun is on the far side of the band,
+# so the camera sees their shadow side, lit by the sky's even fill at about 0.18 over most of each
+# body and by the warm bounce below, with the sun on the tops and the fronts from about 0.45 up to
+# 1.4. So: the shadow in the sky's fill a lifted cool value, readable, deep only where nothing
+# reaches; the turn to light through the bounce-lit planes, with the painter's warm note in it; a
+# half-tone on the planes the sun grazes and full light, lightened well, only on those facing it.
+LIVE = dict(shadow=(0.5, 0.38, 0.45), cool=((0.86, 0.77, 0.84), 0.05, 0.15), soft=(0.25, 0.55),
+            steps=(0.6, 1.1, 0.6), light=(1.3, 1.18, 1.02), warm=((1.2, 0.9, 0.78), 0.35))
+
+
+def paint_people():
+    """Each runner's skin, hide and hair baked (the colour, the creases, the form's hollows),
+    painted with brush strokes by brush.py and lit live, as the face is. Baked standing (the
+    rig at rest) and alone, the forest and the others hidden, so nothing of the pose or the
+    scene is in the paint; -- reuse takes the paint already made."""
+    PAINT.mkdir(parents=True, exist_ok=True)
+    strokes = OUT / "paint" / "strokes.png"       # the face's stroke map, which breaks a shadow's edge along strokes
+    if not strokes.exists():
+        subprocess.run(["py", str(BRUSH), "strokes", str(strokes), "2048"], check=True)
+    shown = [ob for ob in bpy.data.objects if ob.type == 'MESH' and not ob.hide_render]
+    t0 = time.time()
+    for r_ in runners:
+        tag = r_["name"].lower().replace(" ", "-")
+        parts = r_["parts"]
+        mine = {parts[k] for k, _, _, _, _, _ in PIECES if k in parts}
+        for ob in shown:
+            ob.hide_render = ob not in mine
+        parts["rig"].data.pose_position = 'REST'
+        for part, colour, size, ao_d, form_d, radii in PIECES:
+            if part not in parts:
+                continue
+            ob = parts[part]
+            base = tone(ob.data.materials[0])
+            if "Paint" not in ob.data.uv_layers:
+                if part == "hair":
+                    fit_uv(ob, 0)                                   # the scalp's corner of MPFB's layout, filling its texture
+                elif part in ("wrap", "top"):
+                    fit_uv(ob, "rest", wrap=2 * math.pi * 0.16)     # the wrap's own layout: round it and up it (humans.piece)
+            png = PAINT / ("%s-%s.png" % (tag, part))
+            if not (REUSE and png.exists()):
+                src = P.bake(scene, ob, colour(base), size, "%s-%s" % (tag, part), PAINT, ao_d, form_distance=form_d, margin=16)
+                t = time.time()
+                subprocess.run(["py", str(BRUSH), str(src["base"]), str(src["base"]), str(png), "--palette", "skin", "--radii", radii,
+                                "--ao", str(src["ao"]), "--unlit", "--bristles", "0.05", "--threshold", "8"]
+                               + (["--form", str(src["form"])] if "form" in src else []), check=True)
+                print("painted %s in %.0fs" % (png.name, time.time() - t))
+            ob.data.materials[0] = P.live_mat("Painted %s %s" % (r_["name"], part), png, edge=(strokes, 0.2), **LIVE)   # the outline's slot kept
+        parts["rig"].data.pose_position = 'POSE'
+    for ob in shown:
+        ob.hide_render = False
+    print("people painted in %.0fs" % (time.time() - t0))
+
+
 t_dress = time.time()
 if REAL:
     real_dress()
@@ -519,6 +648,7 @@ else:
     quick_dress()
     if PAINTED:
         painted_dress()
+        paint_people()
 print("dressed in %.0fs" % (time.time() - t_dress))
 
 
