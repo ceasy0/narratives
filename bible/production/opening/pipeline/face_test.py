@@ -1035,12 +1035,12 @@ def eye_mat(iris=EYE_COLOUR):
                   operation='DOT_PRODUCT').outputs["Value"]
         facing = f if facing is None else g.math('MAXIMUM', facing, f)
     hazel, ring = (*P.srgb(iris[0]), 1.0), (*P.srgb(iris[1]), 1.0)
-    rim = g.remap(facing, 0.79, 0.83, 0.0, 1.0)                     # inside the limbus: a large iris, as Vi's (your note: it looked small)
+    rim = g.remap(facing, 0.72, 0.76, 0.0, 1.0)                     # inside the limbus: a big iris (your note, twice: bigger)
     col = g.mix(rim, (*P.srgb((0.8, 0.77, 0.75)), 1.0), g.scale(hazel, 0.5))
-    inner = g.remap(facing, 0.83, 0.94, 0.0, 1.0)                   # lighter toward the middle
+    inner = g.remap(facing, 0.76, 0.93, 0.0, 1.0)                   # lighter toward the middle
     col = g.mix(g.math('MULTIPLY', inner, rim), col, g.scale(hazel, 1.15))
-    col = g.mix(g.remap(facing, 0.93, 0.962, 0.0, 1.0), col, ring)  # the brown ring round the pupil
-    col = g.mix(g.remap(facing, 0.962, 0.972, 0.0, 1.0), col, (0.02, 0.015, 0.015, 1.0))   # the pupil
+    col = g.mix(g.remap(facing, 0.92, 0.955, 0.0, 1.0), col, ring)  # the brown ring round the pupil
+    col = g.mix(g.remap(facing, 0.955, 0.965, 0.0, 1.0), col, (0.02, 0.015, 0.015, 1.0))   # the pupil
     h = Vector((-0.4, -0.84, 0.39))                                  # halfway between the sun and the camera
     spec = g.new("ShaderNodeVectorMath", [n, tuple(h)], operation='DOT_PRODUCT').outputs["Value"]
     col = g.mix(g.remap(spec, 0.985, 0.995, 0.0, 1.0), col, (1.0, 1.0, 1.0, 1.0))
