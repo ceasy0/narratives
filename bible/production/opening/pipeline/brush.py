@@ -44,7 +44,7 @@ PALETTES = {
                  crease=((0.45, 0.36, 0.36), 0.45), crease_at=(0.62, 0.32), wet=0.06, smooth_base=2),
     "hair": dict(shadow=(0.45, 0.42, 0.5), light=(1.05, 1.0, 0.94), soft=(0.04, 0.5),
                  warm=((1.1, 0.9, 0.8), 0.15), highlight=((0.6, 0.43, 0.27), 0.55),
-                 crease=((0.45, 0.36, 0.3), 0.22), crease_at=(0.72, 0.36), wet=0.3, strands=True),
+                 crease=((0.35, 0.28, 0.24), 0.35), crease_at=(0.72, 0.36), wet=0.3, strands=True),
 }
 
 
@@ -88,16 +88,18 @@ def lip_shape(scan, lips):
     if not near.any():
         return np.zeros_like(lips)
     lo, hi = np.percentile(red[near], 35), np.percentile(red[near], 90)
-    return smoothstep(lo + 0.35 * (hi - lo), lo + 0.6 * (hi - lo), red) * smoothstep(0.02, 0.15, blur(lips, 4))
+    return smoothstep(lo + 0.18 * (hi - lo), lo + 0.42 * (hi - lo), red) * smoothstep(0.01, 0.08, blur(lips, 8))
 
 
-def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=None, brows=None):
+def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=None, brows=None, unlit=False):
     """The picture to paint, 0-255 sRGB: the colour in its painted light, the creases dark. masks
     (from face_test.py): red, where to leave it light; green, the ridges, for highlights where the
     light falls; blue, the line of the closed lids, painted dark. masks2: red, near the lips (their
     edge is found in the scan); green, the closed lids, painted smooth; blue, the nose, where the
     light turns more sharply. brows: the brows' shape, painted full beneath their hairs."""
     p = PALETTES[palette]
+    if unlit:                                       # the colour only: the renderer lights it (your note: the real shadows)
+        light = np.ones_like(base)
     lift = masks[..., 0] if masks is not None and not p.get("strands") else None
     L = blur(light[..., :3].mean(-1), 3)          # the bake's noise out, so it isn't painted as grit
     top = np.percentile(L[mask > 0], 99) if mask is not None and mask.any() else np.percentile(L, 99)
@@ -125,7 +127,7 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
         out = out * (1 + 0.012 * field(L.shape, 10, 12)[..., None])
     w = np.exp(-((L - 0.5 * (p["soft"][0] + p["soft"][1])) / 0.12) ** 2)[..., None] * p["warm"][1]
     out = out * (1 + w * (np.array(p["warm"][0]) - 1))
-    if p["highlight"]:
+    if p["highlight"] and not unlit:
         h = smoothstep(p["highlight"][1], p["highlight"][1] + 0.12, L)[..., None]
         if p.get("strands"):                        # the sheen in strands across each lock, not in patches, as on Vi
             n = blur(np.random.default_rng(3).random(L.shape[1]), 2)
@@ -158,8 +160,9 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
         fill = (smoothstep(0.2, 0.55, blur(bm, 3)) * 0.7)[..., None]
         out = out * (1 - fill) + np.array((0.23, 0.16, 0.12)) * shade * fill
     if masks is not None and not p.get("strands"):
-        h = (blur(masks[..., 1], 2) * smoothstep(0.55, 0.95, L) * 0.7)[..., None]     # highlights on the lit ridges
-        out = out * (1 - h) + np.minimum(out * np.array((1.14, 1.1, 1.05)) + 0.03, 1.0) * h
+        if not unlit:
+            h = (blur(masks[..., 1], 2) * smoothstep(0.55, 0.95, L) * 0.7)[..., None]     # highlights on the lit ridges
+            out = out * (1 - h) + np.minimum(out * np.array((1.14, 1.1, 1.05)) + 0.03, 1.0) * h
         lid = (blur(masks[..., 2], 1) * 0.9)[..., None]                               # the lids' line, bold
         out = out * (1 - lid) + out * np.array((0.3, 0.23, 0.23)) * lid
     return np.clip(out * 255, 0, 255).astype(np.float32)
@@ -281,16 +284,16 @@ def lay_marks(canvas, marks):
     return Image.fromarray(np.uint8(np.clip(a, 0, 1) * 255))
 
 
-def strands(canvas, seed=5):
+def strands(canvas, seed=5, unlit=False):
     """Strands over painted hair: long streaks along each lock (the texture's v), fine across,
     lighter where the lock is lit and darker between, as Vi's hair is drawn."""
     a = np.asarray(canvas).astype(np.float32) / 255
     n = blur_axis(blur_axis(np.random.default_rng(seed).random(a.shape[:2]).astype(np.float32), 70, 0), 1, 1)
     n = (n - n.mean()) / (n.std() + 1e-6)
     lit = smoothstep(0.22, 0.45, a.mean(-1))[..., None]
-    light = smoothstep(0.9, 1.7, n)[..., None] * lit * 0.2
-    dark = smoothstep(-0.9, -1.7, n)[..., None] * 0.3
-    a = a * (1 - dark) + a * np.array((0.55, 0.5, 0.48)) * dark
+    light = smoothstep(0.9, 1.7, n)[..., None] * lit * (0.0 if unlit else 0.2)
+    dark = smoothstep(-0.5, -1.3, n)[..., None] * 0.65 if unlit else smoothstep(-0.9, -1.7, n)[..., None] * 0.3
+    a = a * (1 - dark) + a * np.array((0.3, 0.26, 0.24) if unlit else (0.55, 0.5, 0.48)) * dark   # near black, as Vi's
     a = a + (np.minimum(a * np.array((1.22, 1.14, 1.06)) + 0.03, 1.0) - a) * light
     return Image.fromarray(np.uint8(np.clip(a, 0, 1) * 255))
 
@@ -313,6 +316,7 @@ if __name__ == "__main__":
     ap.add_argument("--brows")
     ap.add_argument("--marks")
     ap.add_argument("--bristles", type=float, default=0.06)
+    ap.add_argument("--unlit", action="store_true")
     ap.add_argument("--threshold", type=float, default=14.0)
     a = ap.parse_args()
     base = np.load(a.base).astype(np.float32)[::-1]       # Blender's rows run bottom up
@@ -322,7 +326,7 @@ if __name__ == "__main__":
     ao = np.load(a.ao).astype(np.float32)[::-1] if a.ao else None
     load = lambda f: np.load(f).astype(np.float32)[::-1] if f else None   # noqa: E731
     DEBUG = a.out.replace(".png", "")
-    ref = compose(base, light, fine, a.palette, ao, load(a.masks), load(a.masks2), load(a.scan), load(a.brows))
+    ref = compose(base, light, fine, a.palette, ao, load(a.masks), load(a.masks2), load(a.scan), load(a.brows), a.unlit)
     Image.fromarray(np.uint8(ref)).save(a.out.replace(".png", "-ref.png"))
     canvas = paint(ref, [int(r) for r in a.radii.split(",")], fine, a.along, a.threshold, bristles=a.bristles)
     wet = PALETTES[a.palette]["wet"]
@@ -334,7 +338,7 @@ if __name__ == "__main__":
         smooth = np.asarray(Image.fromarray(np.uint8(ref)).filter(ImageFilter.GaussianBlur(3))).astype(np.float32)
         canvas = Image.fromarray(np.uint8(np.asarray(canvas).astype(np.float32) * (1 - lm) + smooth * lm))
     if PALETTES[a.palette].get("strands"):
-        canvas = strands(canvas)
+        canvas = strands(canvas, unlit=a.unlit)
     if a.marks:
         canvas = lay_marks(canvas, load(a.marks))
     canvas.save(a.out)

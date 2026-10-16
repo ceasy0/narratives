@@ -5,6 +5,7 @@ item 3; Discussion 006, round 4).
     blender -b --factory-startup -P face_test.py -- still      the two stills only
     blender -b --factory-startup -P face_test.py -- reuse      the paint already made (work/styletest/paint/)
     blender -b --factory-startup -P face_test.py -- check      grey front and side views, to set the shape
+    blender -b --factory-startup -P face_test.py -- baked      the light painted into the textures, as before
 
 The head is MPFB2's, shaped after Corbin's photos (work/face/, out of git) with its own sliders
 (FACE below): long and lean, a narrow head, high cheekbones over hollow cheeks, a low straight
@@ -18,12 +19,15 @@ It's a likeness to judge the look by, not the design of the recurring face, whic
 expression is the Opening's last, which you've called right for it: one breath drawn in (05:00),
 the nostrils widening, the lips parting a little, the chin lifting.
 
-It's painted with real brush strokes (your note, 2026-10-15: genuinely painted, the shadows
-painted on and soft): Blender bakes each surface's colour and the light that reaches it into the
-surface's own texture (Cycles), brush.py paints that over with strokes that follow the form, big
-brushes then small, and the camera sees the paint as it is. The light is fixed in the paint, as
-a painter fixes it, and set as on Vi: a warm sun high on his right, so the left of his face turns
-into soft shadow and the brow, the nose and the lips cast theirs; a cool fill; a rim from behind.
+It's painted with real brush strokes (your note, 2026-10-15: genuinely painted): Blender bakes
+each surface's colour into the surface's own texture (Cycles), and brush.py paints that over with
+strokes that follow the form, big brushes then small. The light isn't in the paint (your note,
+2026-10-15: the shadows real, not painted): the renderer lights the head live, and its light, cast
+shadows and all, is turned into the painter's colours, a cooler, darker paint in shadow and a
+short soft turn between (live_mat). The sun comes in through a window on his right, so one side
+of his face is lit and the other is in its own shadow, and the window's bars cast theirs; a weak
+cool fill; a rim from behind. face-front-raw.png is the same light shaded plainly, for comparison.
+-- baked: the earlier way, the light baked into the paint as a painter fixes it.
 No outline. Against a dark, cool backdrop. Over the paint, as a face has (your note, 2026-10-15),
 very light marks: freckles, two small moles, a faint birthmark, a thin pale scar.
 
@@ -52,6 +56,7 @@ import painted as P  # noqa: E402
 
 ARGS = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 STILL, CHECK, REUSE = "still" in ARGS, "check" in ARGS, "reuse" in ARGS
+LIVE = "baked" not in ARGS                         # the light from the renderer, not painted in (your note, 2026-10-15)
 OUT = O.WORK / "styletest"
 PAINT = OUT / "paint"
 BRUSH = pathlib.Path(__file__).resolve().parent / "brush.py"
@@ -599,10 +604,52 @@ def sun(name, energy, colour, elevation, azimuth, angle=2.0):
 # (your note: sunlight on the face, and shadows): the sun high on his right and in front, so his
 # left side turns into shadow and the brow, the nose, the lips and the hair cast theirs onto the
 # face; a cool fill from the sky on his left; a rim from behind on his left, along the shadow side.
-sun("Sun", 3.6, (1.0, 0.9, 0.76), 42, 232, angle=6.0)
-sun("Sky fill", 0.26, (0.62, 0.74, 0.86), 12, 320, angle=25.0)
-sun("Rim", 2.2, (0.96, 0.9, 0.82), 28, 70, angle=6.0)
-sun("Bounce", 0.3, (1.0, 0.9, 0.8), -12, 275, angle=30.0)       # warm light up from below, lifting the shadow under the eyes
+def window(elevation, azimuth, dist=1.3, opening=(0.8, 1.0), bar=0.04, mullion=-0.16, transom=-0.15):
+    """A wall with a window in it, between the sun and the head (your note): the light comes in
+    only through the window, so one side of his face is lit and the other is in its own shadow, and
+    the window's bars throw theirs, the cross-bar's across his neck. Out of the camera's sight."""
+    d = Vector((math.cos(math.radians(elevation)) * math.cos(math.radians(azimuth)),
+                math.cos(math.radians(elevation)) * math.sin(math.radians(azimuth)),
+                math.sin(math.radians(elevation))))
+    c = E + d * dist
+    u = Vector((0, 0, 1)).cross(d).normalized()     # across the window, level
+    v = d.cross(u).normalized()                     # up the window
+    ow, oh = opening[0] / 2, opening[1] / 2
+    boxes = [(-(1.5 + ow) / 2, 0.0, (1.5 - ow) / 2, 1.5), ((1.5 + ow) / 2, 0.0, (1.5 - ow) / 2, 1.5),
+             (0.0, (1.5 + oh) / 2, ow, (1.5 - oh) / 2), (0.0, -(1.5 + oh) / 2, ow, (1.5 - oh) / 2),
+             (mullion, 0.0, bar / 2, oh), (0.0, transom, ow, bar / 2)]
+    verts, faces = [], []
+    for a, b, hu, hv in boxes:
+        k = len(verts)
+        for su in (-1, 1):
+            for sv in (-1, 1):
+                for sd in (-1, 1):
+                    verts.append(tuple(c + u * (a + su * hu) + v * (b + sv * hv) + d * (0.02 * sd)))
+        faces += [(k + i0, k + i1, k + i3, k + i2) for i0, i1, i2, i3 in
+                  ((0, 1, 2, 3), (4, 6, 5, 7), (0, 4, 1, 5), (2, 3, 6, 7), (0, 2, 4, 6), (1, 5, 3, 7))]
+    me = bpy.data.meshes.new("Window")
+    me.from_pydata(verts, [], faces)
+    ob = bpy.data.objects.new("Window", me)
+    scene.collection.objects.link(ob)
+    ob.visible_camera = False
+    return ob
+
+
+if LIVE:
+    KEY = (22, 186)                                # elevation, azimuth: the sun from his right side, so the light turns down the middle of his face
+    key = sun("Sun", 4.0, (1.0, 0.9, 0.76), *KEY, angle=2.0)
+    try:
+        key.data.use_shadow_jitter = True          # the shadows' edges soft as the sun's size makes them
+    except AttributeError:
+        pass
+    sun("Sky fill", 0.07, (0.62, 0.74, 0.86), 12, 330, angle=25.0)
+    sun("Rim", 0.6, (0.96, 0.9, 0.82), 20, 85, angle=6.0)    # from behind, only along the edge of the shadow side
+    window(*KEY)
+else:
+    sun("Sun", 3.6, (1.0, 0.9, 0.76), 42, 232, angle=6.0)
+    sun("Sky fill", 0.26, (0.62, 0.74, 0.86), 12, 320, angle=25.0)
+    sun("Rim", 2.2, (0.96, 0.9, 0.82), 28, 70, angle=6.0)
+    sun("Bounce", 0.3, (1.0, 0.9, 0.8), -12, 275, angle=30.0)   # warm light up from below, lifting the shadow under the eyes
 P.sky(scene, zenith=(0.06, 0.1, 0.12), horizon=(0.15, 0.2, 0.21), below=(0.08, 0.11, 0.12),   # dark teal, as behind Vi
       clouds=(0.2, 0.26, 0.27), fill=(0.6, 0.7, 0.78), fill_strength=0.3, soft=0.35)
 
@@ -636,7 +683,7 @@ def skin_colour(g, uv):
 def hair_colour(g, uv):
     a = g.new("ShaderNodeAttribute", attribute_name="along").outputs["Fac"]
     sh = g.new("ShaderNodeAttribute", attribute_name="shade").outputs["Fac"]
-    col = g.mix(g.remap(a, 0.2, 1.0, 0.0, 1.0), (*P.srgb((0.17, 0.1, 0.06)), 1.0), (*P.srgb((0.33, 0.22, 0.13)), 1.0))
+    col = g.mix(g.remap(a, 0.2, 1.0, 0.0, 1.0), (*P.srgb((0.24, 0.15, 0.09)), 1.0), (*P.srgb((0.29, 0.18, 0.105)), 1.0))   # almost one colour, as Vi's
     return g.scale(col, sh)                         # darker at the root, lighter to the ends, as in the photos
 
 
@@ -711,7 +758,7 @@ def bake(ob, colour, size, name, ao_distance=0.015, extra=()):
     img = bpy.data.images.new(name + " bake", size, size, float_buffer=True, alpha=False)
     out = {}
     scene.world.light_settings.distance = ao_distance
-    for kind in ("base", "light", "ao") + tuple(builders):
+    for kind in ("base",) + (() if LIVE else ("light",)) + ("ao",) + tuple(builders):
         if kind == "base":
             m, g = node_mat(name + " base", lambda g: g.new("ShaderNodeEmission", {"Color": colour(g, g.new("ShaderNodeTexCoord").outputs["UV"]), "Strength": 1.0}).outputs[0])
         elif kind in builders:                      # the painter's masks and marks
@@ -809,6 +856,41 @@ def painted_mat(name, png, sheen=0.0, rim=0.0, quiet=None):
     return m
 
 
+def live_mat(name, png, shadow, light, soft, steps=None, warm=None, sheen=0.0, quiet=None):
+    """The paint lit live (your note, 2026-10-15: the real shadows): the renderer's own light on the
+    surface, its cast shadows included, read as a value and turned into the painter's colours: the
+    paint as it is in full light, cooler and darker in shadow, a short soft turn between (soft, and
+    steps: a second turn, so the planes of a form take their own values), warm where it turns."""
+    img = bpy.data.images.load(str(png))
+    m, g, out = P.material(name)
+    alb = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]}, image=img).outputs["Color"]
+    lum = g.bw(g.new("ShaderNodeShaderToRGB", [g.new("ShaderNodeBsdfDiffuse", {"Color": (1, 1, 1, 1)}).outputs[0]]).outputs[0])
+    t = g.remap(lum, soft[0], soft[1], 0.0, 1.0)
+    if steps:
+        t = g.math('MULTIPLY_ADD', g.remap(lum, steps[0], steps[1], 0.0, 1.0), steps[2], g.math('MULTIPLY', t, 1 - steps[2]))
+    c = g.scale(alb, g.mix(t, (*P.srgb(shadow), 1.0), (*P.srgb(light), 1.0)))
+    if warm:                                        # the painter's warm note where light turns to shadow
+        band = g.math('SUBTRACT', 1.0, g.math('ABSOLUTE', g.math('MULTIPLY_ADD', t, 2.0, -1.0)))
+        c = g.mix(g.math('MULTIPLY', band, warm[1]), c, g.scale(c, P.srgb(warm[0])))
+    if sheen:
+        gl = g.new("ShaderNodeBsdfGlossy", {"Color": (1, 1, 1, 1), "Roughness": 0.42})
+        hi = g.math('MULTIPLY', g.remap(g.bw(g.new("ShaderNodeShaderToRGB", [gl.outputs[0]]).outputs[0]), 0.25, 1.2, 0.0, sheen), t)
+        if quiet:
+            hi = g.math('MULTIPLY', hi, g.math('SUBTRACT', 1.0, g.new("ShaderNodeAttribute", attribute_name=quiet).outputs["Fac"]))
+        c = g.mix(hi, c, (*P.srgb((1.0, 0.95, 0.9)), 1.0), 'SCREEN')
+    g.nt.links.new(g.new("ShaderNodeEmission", {"Color": c, "Strength": 1.0}).outputs[0], out.inputs["Surface"])
+    return m
+
+
+def raw_mat(name, png):
+    """The same paint shaded plainly by the renderer, for comparison."""
+    m, g, out = P.material(name)
+    alb = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]},
+                image=bpy.data.images.load(str(png), check_existing=True)).outputs["Color"]
+    g.nt.links.new(g.new("ShaderNodeBsdfDiffuse", {"Color": alb}).outputs[0], out.inputs["Surface"])
+    return m
+
+
 if CHECK:
     clay = P.paint("Clay", (0.75, 0.72, 0.7), shadow=(0.45, 0.45, 0.5), vary=0.0, strokes=0.0, rim_amount=0.0,
                    crease=0.0, grain=0.0, half=None, hard=0.25)
@@ -816,7 +898,7 @@ if CHECK:
         wear(ob, clay)
 else:
     PAINT.mkdir(parents=True, exist_ok=True)
-    skin_png, hair_png = PAINT / "skin-painted.png", PAINT / "hair-painted.png"
+    skin_png, hair_png = (PAINT / "skin-colour.png", PAINT / "hair-colour.png") if LIVE else (PAINT / "skin-painted.png", PAINT / "hair-painted.png")
     cutouts = {kind: picture(fitted[kind]) for kind in ("eyebrows", "eyelashes")}   # before the bake's stand-ins replace them
     if not (REUSE and skin_png.exists() and hair_png.exists()):
         for ob in [human, locks, beneath] + list(fitted.values()):  # something to cast shadows while baking
@@ -835,13 +917,18 @@ else:
         for (src, png, pal, radii, extra) in ((sk, skin_png, "skin", "10,5,3,2", ["--region", str(reg), "--bristles", "0.05", "--threshold", "8"]),
                                               (hb, hair_png, "hair", "10,5,3", ["--along", "v"])):
             t = time.time()
-            subprocess.run(["py", str(BRUSH), str(src["base"]), str(src["light"]), str(png), "--palette", pal,
-                            "--radii", radii, "--ao", str(src["ao"])] + extra
+            subprocess.run(["py", str(BRUSH), str(src["base"]), str(src.get("light", src["base"])), str(png), "--palette", pal,
+                            "--radii", radii, "--ao", str(src["ao"])] + extra + (["--unlit"] if LIVE else [])
                            + [x for k in ("masks", "masks2", "marks", "scan", "brows") if k in src for x in ("--" + k, str(src[k]))],
                            check=True)
             print("painted %s in %.0fs" % (png.name, time.time() - t))
-    wear(human, painted_mat("Painted skin", skin_png, sheen=0.07, rim=0.12, quiet="lid_region"))
-    wear(locks, painted_mat("Painted hair", hair_png))
+    if LIVE:
+        wear(human, live_mat("Painted skin", skin_png, (0.54, 0.49, 0.53), (1.0, 0.97, 0.92), (0.1, 0.24),
+                             steps=(0.45, 0.85, 0.4), warm=((1.08, 0.9, 0.84), 0.15), sheen=0.07, quiet="lid_region"))
+        wear(locks, live_mat("Painted hair", hair_png, (0.62, 0.58, 0.64), (1.0, 0.97, 0.92), (0.08, 0.35)))
+    else:
+        wear(human, painted_mat("Painted skin", skin_png, sheen=0.07, rim=0.12, quiet="lid_region"))
+        wear(locks, painted_mat("Painted hair", hair_png))
     wear(beneath, P.flat("Hair beneath", (0.13, 0.085, 0.055)))   # the hair's mass in its own shadow, not a hole
     for kind, col in (("eyebrows", (0.17, 0.12, 0.1)), ("eyelashes", (0.1, 0.07, 0.06))):
         m, g, out = P.material("Painted " + kind)
@@ -883,6 +970,16 @@ for name, f, view in (("front", F0, "front"), ("neutral", F0, "three-quarter"), 
     t = time.time()
     bpy.ops.render.render(write_still=True)
     print("still", r.filepath, "%.1fs" % (time.time() - t))
+    if LIVE and name == "front":                   # the same light, shaded plainly, for comparison
+        keep = {ob: list(ob.data.materials) for ob in (human, locks)}
+        wear(human, raw_mat("Plain skin", skin_png))
+        wear(locks, raw_mat("Plain hair", hair_png))
+        r.filepath = str(OUT / "face-front-raw.png")
+        bpy.ops.render.render(write_still=True)
+        for ob, ms in keep.items():
+            ob.data.materials.clear()
+            for mm in ms:
+                ob.data.materials.append(mm)
 if not STILL:
     frames = OUT / "face-breath"
     frames.mkdir(exist_ok=True)
