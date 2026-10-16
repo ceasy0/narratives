@@ -42,7 +42,8 @@ PALETTES = {
     # light to a cooler shadow, the light warm.
     "skin": dict(shadow=(0.54, 0.49, 0.5), light=(1.0, 0.97, 0.92), soft=(0.22, 0.36), steps=(0.62, 0.9, 0.45),
                  warm=((1.08, 0.9, 0.84), 0.15), highlight=None,
-                 crease=((0.45, 0.36, 0.36), 0.45), crease_at=(0.62, 0.32), wet=0.45, smooth_base=2),
+                 crease=((0.4, 0.3, 0.3), 0.55), crease_at=(0.62, 0.32), wet=0.2, smooth_base=2,
+                 form=((0.6, 0.4, 0.36), 0.55, (0.82, 0.42)), ridge=0.5),
     "hair": dict(shadow=(0.45, 0.42, 0.5), light=(1.05, 1.0, 0.94), soft=(0.04, 0.5),
                  warm=((1.1, 0.9, 0.8), 0.15), highlight=((0.6, 0.43, 0.27), 0.55),
                  crease=((0.35, 0.28, 0.24), 0.35), crease_at=(0.72, 0.36), wet=0.3, strands=True),
@@ -92,7 +93,7 @@ def lip_shape(scan, lips):
     return smoothstep(lo + 0.18 * (hi - lo), lo + 0.42 * (hi - lo), red) * smoothstep(0.01, 0.08, blur(lips, 8))
 
 
-def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=None, brows=None, unlit=False):
+def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=None, brows=None, unlit=False, form=None):
     """The picture to paint, 0-255 sRGB: the colour in its painted light, the creases dark. masks
     (from face_test.py): red, where to leave it light; green, the ridges, for highlights where the
     light falls; blue, the line of the closed lids, painted dark. masks2: red, near the lips (their
@@ -124,8 +125,12 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
     shade = np.array(p["shadow"]) * (1 - t) + np.array(p["light"]) * t
     out = col * shade
     if not p.get("strands"):                        # skin isn't one flat colour (your note: too smooth): warmer and cooler patches
-        out = out * (1 + 0.007 * field(L.shape, 40, 11)[..., None] * np.array((1.0, 0.4, -0.3)))   # faint: the skin smooth to paint over by hand
-        out = out * (1 + 0.004 * field(L.shape, 10, 12)[..., None])
+        out = out * (1 + 0.01 * field(L.shape, 40, 11)[..., None] * np.array((1.0, 0.4, -0.3)))   # faint
+        out = out * (1 + 0.006 * field(L.shape, 10, 12)[..., None])
+    if form is not None and p.get("form"):          # the form's own shading, painted in whatever the light (as Vi's is): the eye
+        fa = blur(form[..., :3].mean(-1), 5)        # sockets, the sides of the nose, under the cheekbones, the lip, the chin, the neck
+        s = (smoothstep(p["form"][2][0], p["form"][2][1], fa) * p["form"][1])[..., None]
+        out = out * (1 - s) + out * np.array(p["form"][0]) * s
     w = np.exp(-((L - 0.5 * (p["soft"][0] + p["soft"][1])) / 0.12) ** 2)[..., None] * p["warm"][1]
     out = out * (1 + w * (np.array(p["warm"][0]) - 1))
     if p["highlight"] and not unlit:
@@ -152,9 +157,7 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
             if DEBUG:
                 Image.fromarray(np.uint8(lip * 255)).save(DEBUG + "-lips.png")
             inside = lip[..., None]
-            edge = (4 * lip * (1 - lip))[..., None]
             out = out * (1 - 0.6 * inside) + out * np.array((0.9, 0.78, 0.78)) * 0.6 * inside
-            out = out * (1 - 0.3 * edge) + out * np.array((0.7, 0.56, 0.56)) * 0.3 * edge
     if brows is not None:                                                              # the brows full (your note)
         bm = np.clip(brows[..., :3].mean(-1), 0, 1)
         bm = np.asarray(Image.fromarray(np.uint8(bm * 255)).filter(ImageFilter.MaxFilter(5))).astype(np.float32) / 255
@@ -164,6 +167,9 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
         if not unlit:
             h = (blur(masks[..., 1], 2) * smoothstep(0.55, 0.95, L) * 0.7)[..., None]     # highlights on the lit ridges
             out = out * (1 - h) + np.minimum(out * np.array((1.14, 1.1, 1.05)) + 0.03, 1.0) * h
+        elif p.get("ridge"):                        # painted highlights on the ridges whatever the light, as Vi's nose and lip have
+            h = (smoothstep(0.25, 0.8, blur(masks[..., 1], 2)) * p["ridge"])[..., None]
+            out = out * (1 - h) + np.minimum(out * np.array((1.12, 1.09, 1.06)) + 0.05, 1.0) * h
         lid = (blur(masks[..., 2], 1) * 0.9)[..., None]                               # the lids' line, bold
         out = out * (1 - lid) + out * np.array((0.3, 0.23, 0.23)) * lid
     return np.clip(out * 255, 0, 255).astype(np.float32)
@@ -276,8 +282,8 @@ def lay_marks(canvas, marks):
     blue (the forms' hollows: under the nose, the lips' corners, under the lower lip) takes a light
     painted line, as Arcane's faces have."""
     a = np.asarray(canvas).astype(np.float32) / 255
-    h = (smoothstep(0.3, 0.9, blur(marks[..., 2], 1)) * 0.2)[..., None]
-    a = a * (1 - h) + a * np.array((0.66, 0.55, 0.55)) * h
+    h = (smoothstep(0.3, 0.9, blur(marks[..., 2], 1)) * 0.35)[..., None]
+    a = a * (1 - h) + a * np.array((0.6, 0.46, 0.44)) * h
     d = np.clip(marks[..., 0], 0, 1)[..., None]
     s = np.clip(marks[..., 1], 0, 1)[..., None]
     a = a * (1 - d) + a * np.array((0.62, 0.47, 0.38)) * d
@@ -330,6 +336,7 @@ if __name__ == "__main__":
     ap.add_argument("--scan")
     ap.add_argument("--brows")
     ap.add_argument("--marks")
+    ap.add_argument("--form")
     ap.add_argument("--bristles", type=float, default=0.06)
     ap.add_argument("--unlit", action="store_true")
     ap.add_argument("--threshold", type=float, default=14.0)
@@ -341,7 +348,7 @@ if __name__ == "__main__":
     ao = np.load(a.ao).astype(np.float32)[::-1] if a.ao else None
     load = lambda f: np.load(f).astype(np.float32)[::-1] if f else None   # noqa: E731
     DEBUG = a.out.replace(".png", "")
-    ref = compose(base, light, fine, a.palette, ao, load(a.masks), load(a.masks2), load(a.scan), load(a.brows), a.unlit)
+    ref = compose(base, light, fine, a.palette, ao, load(a.masks), load(a.masks2), load(a.scan), load(a.brows), a.unlit, load(a.form))
     Image.fromarray(np.uint8(ref)).save(a.out.replace(".png", "-ref.png"))
     canvas = paint(ref, [int(r) for r in a.radii.split(",")], fine, a.along, a.threshold, bristles=a.bristles)
     wet = PALETTES[a.palette]["wet"]
