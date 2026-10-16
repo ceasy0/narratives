@@ -77,13 +77,14 @@ FACE = {"head-oval": 0.6, "head-scale-horiz-decr": 0.3, "head-scale-vert-incr": 
         "l-cheek-volume-decr": 0.45, "r-cheek-volume-decr": 0.45,
         "l-cheek-inner-decr": 0.25, "r-cheek-inner-decr": 0.25,
         "neck-scale-vert-incr": 0.25, "neck-scale-horiz-decr": 0.15}
-CLOSED = {"eye-left-closure": 0.0, "eye-right-closure": 0.0}       # open for the test (your call, 2026-10-16); 1.0 shuts them, as the Opening's face is
-EYE_COLOUR = (0.32, 0.2, 0.11)                     # the iris: brown, after the photos
+CLOSED = {"eye-left-closure": 0.2, "eye-right-closure": 0.2}       # open for the test (your call, 2026-10-16), the lids a little lowered, as Vi's; 1.0 shuts them, as the Opening's face is
+EYE_COLOUR = ((0.42, 0.33, 0.16), (0.3, 0.17, 0.08))   # the iris: hazel, with a brown ring round the pupil (yours, 2026-10-16)
 BREATH_IN = {"nose-left-dilatation": 0.8, "nose-right-dilatation": 0.8, "mouth-open": 0.09}
 LIFT = {"Neck1": -4.0, "Head": -5.0}              # degrees about each bone's x: the chin up
 DEFINE = (0.25, 10)                                # how far the forms are pushed from their smoothed copy; how smooth
 PLANES = (0.5, 0.75, 0.018)                        # how far the forms are flattened onto their planes; how much the shading follows them; their size (m)
 BROWS, LASHES = "eyebrow012", "eyelashes01"
+STUBBLE = 0.0                                      # how much stubble shows (0.3 for the photos' light stubble; 0: clean-shaven, your call, 2026-10-16)
 
 t_start = time.time()
 bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -781,12 +782,12 @@ def skin_colour(g, uv):
     skin_img.name = "skin scan"
     tex = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeUVMap", uv_map=SCAN_UV).outputs["UV"]}, image=skin_img).outputs["Color"]
     col = g.mix(0.45, (*P.srgb((0.86, 0.8, 0.78)), 1.0), tex)     # pale and muted, as Vi, with the scan's own variation (its pores blurred out by the painter)
-    amt = g.math('MULTIPLY', g.new("ShaderNodeAttribute", attribute_name="stubble").outputs["Fac"], 0.3)
-    col = g.mix(amt, col, g.scale(col, (0.72, 0.7, 0.75)))        # stubble, a soft cool tone
+    amt = g.math('MULTIPLY', g.new("ShaderNodeAttribute", attribute_name="stubble").outputs["Fac"], STUBBLE)
+    col = g.mix(amt, col, g.scale(col, (0.72, 0.7, 0.75)))        # stubble, a soft cool tone (none: clean-shaven, your call)
     warm = g.new("ShaderNodeAttribute", attribute_name="warmth").outputs["Fac"]
     col = g.mix(g.math('MULTIPLY', warm, 0.55), col, g.scale(col, (1.0, 0.82, 0.8)))   # warmer, rosier, as Vi's cheeks and nose
     lip = g.new("ShaderNodeAttribute", attribute_name="lip_tint").outputs["Fac"]
-    col = g.mix(g.math('MULTIPLY', lip, 0.5), col, g.scale(col, (0.8, 0.58, 0.56)))   # lips their own, darker rose, as Vi's (their edge painted)
+    col = g.mix(g.math('MULTIPLY', lip, 0.6), col, g.scale(col, (0.76, 0.52, 0.5)))   # lips their own, a muted rose, as Vi's (their shape painted)
     up = g.new("ShaderNodeAttribute", attribute_name="upper_lip").outputs["Fac"]
     return g.mix(g.math('MULTIPLY', up, 0.7), col, g.scale(col, (0.8, 0.74, 0.75)))   # the upper lip in its own shade
 
@@ -1024,12 +1025,13 @@ def eye_mat(iris=EYE_COLOUR):
     m, g, out = P.material("Painted eye")
     n = g.new("ShaderNodeNewGeometry").outputs["Normal"]
     facing = g.math('MULTIPLY', g.new("ShaderNodeSeparateXYZ", [n]).outputs["Y"], -1.0)   # 1 at the front of the eye
-    iris_c = (*P.srgb(iris), 1.0)
-    rim = g.remap(facing, 0.83, 0.87, 0.0, 1.0)                     # inside the limbus
-    col = g.mix(rim, (*P.srgb((0.8, 0.77, 0.75)), 1.0), g.scale(iris_c, 0.55))
-    inner = g.remap(facing, 0.87, 0.975, 0.0, 1.0)                  # lighter toward the pupil
-    col = g.mix(g.math('MULTIPLY', inner, rim), col, g.scale(iris_c, 1.2))
-    col = g.mix(g.remap(facing, 0.975, 0.985, 0.0, 1.0), col, (0.02, 0.015, 0.015, 1.0))   # the pupil
+    hazel, ring = (*P.srgb(iris[0]), 1.0), (*P.srgb(iris[1]), 1.0)
+    rim = g.remap(facing, 0.79, 0.83, 0.0, 1.0)                     # inside the limbus: a large iris, as Vi's (your note: it looked small)
+    col = g.mix(rim, (*P.srgb((0.8, 0.77, 0.75)), 1.0), g.scale(hazel, 0.5))
+    inner = g.remap(facing, 0.83, 0.94, 0.0, 1.0)                   # lighter toward the middle
+    col = g.mix(g.math('MULTIPLY', inner, rim), col, g.scale(hazel, 1.15))
+    col = g.mix(g.remap(facing, 0.93, 0.962, 0.0, 1.0), col, ring)  # the brown ring round the pupil
+    col = g.mix(g.remap(facing, 0.962, 0.972, 0.0, 1.0), col, (0.02, 0.015, 0.015, 1.0))   # the pupil
     h = Vector((-0.4, -0.84, 0.39))                                  # halfway between the sun and the camera
     spec = g.new("ShaderNodeVectorMath", [n, tuple(h)], operation='DOT_PRODUCT').outputs["Value"]
     col = g.mix(g.remap(spec, 0.985, 0.995, 0.0, 1.0), col, (1.0, 1.0, 1.0, 1.0))
@@ -1081,7 +1083,7 @@ else:
         strokes = PAINT / "strokes.png"
         if not strokes.exists():
             subprocess.run(["py", str(BRUSH), "strokes", str(strokes), "2048"], check=True)
-        wear(human, live_mat("Painted skin", skin_png, (0.34, 0.22, 0.2), (0.98, 0.97, 0.96), (0.14, 0.34),
+        wear(human, live_mat("Painted skin", skin_png, (0.34, 0.22, 0.2), (0.98, 0.97, 0.96), (0.15, 0.3),
                              steps=(0.4, 0.9, 0.5), warm=((1.15, 0.8, 0.7), 0.35), sheen=0.0, roughness=0.3,
                              quiet="lid_region", cool=((0.52, 0.36, 0.32), 0.03, 0.1), edge=(strokes, 0.25)))   # deep warm shadow, lifted where the sky and the floor reach it; the edge a little broken, as Vi's
         wear(locks, live_mat("Painted hair", hair_png, (0.4, 0.34, 0.36), (1.0, 0.97, 0.92), (0.08, 0.3),
@@ -1102,7 +1104,7 @@ else:
         g.nt.links.new(g.new("ShaderNodeMixShader", [a, tr.outputs[0], em.outputs[0]]).outputs[0], out.inputs["Surface"])
         wear(fitted[kind], m)
         fitted[kind].visible_shadow = False        # their cards' shadows smeared the cheeks
-    wear(fitted["eyes"], eye_mat() if not any(CLOSED.values()) else P.flat("Eye", (0.85, 0.82, 0.78)))
+    wear(fitted["eyes"], eye_mat() if all(v < 1.0 for v in CLOSED.values()) else P.flat("Eye", (0.85, 0.82, 0.78)))
 
 r = scene.render
 r.resolution_x, r.resolution_y, r.resolution_percentage = (900, 1200, 100) if CHECK else (1920, 1080, 100)

@@ -161,8 +161,8 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
     if brows is not None:                                                              # the brows full (your note)
         bm = np.clip(brows[..., :3].mean(-1), 0, 1)
         bm = np.asarray(Image.fromarray(np.uint8(bm * 255)).filter(ImageFilter.MaxFilter(5))).astype(np.float32) / 255
-        fill = (smoothstep(0.2, 0.55, blur(bm, 3)) * 0.7)[..., None]
-        out = out * (1 - fill) + np.array((0.23, 0.16, 0.12)) * shade * fill
+        fill = (smoothstep(0.3, 0.5, blur(bm, 2)) * 0.8)[..., None]                    # crisp-edged and dark, as Vi's
+        out = out * (1 - fill) + np.array((0.2, 0.14, 0.11)) * shade * fill
     if masks is not None and not p.get("strands"):
         if not unlit:
             h = (blur(masks[..., 1], 2) * smoothstep(0.55, 0.95, L) * 0.7)[..., None]     # highlights on the lit ridges
