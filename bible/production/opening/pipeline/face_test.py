@@ -77,7 +77,7 @@ FACE = {"head-oval": 0.6, "head-scale-horiz-decr": 0.3, "head-scale-vert-incr": 
         "l-cheek-volume-decr": 0.45, "r-cheek-volume-decr": 0.45,
         "l-cheek-inner-decr": 0.25, "r-cheek-inner-decr": 0.25,
         "neck-scale-vert-incr": 0.25, "neck-scale-horiz-decr": 0.15}
-CLOSED = {"eye-left-closure": 0.2, "eye-right-closure": 0.2}       # open for the test (your call, 2026-10-16), the lids a little lowered, as Vi's; 1.0 shuts them, as the Opening's face is
+CLOSED = {"eye-left-closure": 0.08, "eye-right-closure": 0.08}     # open naturally for the test (your call, 2026-10-16); 1.0 shuts them, as the Opening's face is
 EYE_COLOUR = ((0.42, 0.33, 0.16), (0.3, 0.17, 0.08))   # the iris: hazel, with a brown ring round the pupil (yours, 2026-10-16)
 BREATH_IN = {"nose-left-dilatation": 0.8, "nose-right-dilatation": 0.8, "mouth-open": 0.09}
 LIFT = {"Neck1": -4.0, "Head": -5.0}              # degrees about each bone's x: the chin up
@@ -1023,8 +1023,17 @@ def eye_mat(iris=EYE_COLOUR):
     the iris a disc of colour, darker at its rim and lighter toward the pupil; the pupil black; a
     small highlight toward the sun."""
     m, g, out = P.material("Painted eye")
-    n = g.new("ShaderNodeNewGeometry").outputs["Normal"]
-    facing = g.math('MULTIPLY', g.new("ShaderNodeSeparateXYZ", [n]).outputs["Y"], -1.0)   # 1 at the front of the eye
+    geo = g.new("ShaderNodeNewGeometry")
+    n = geo.outputs["Normal"]
+    eye = fitted["eyes"]
+    cos = [eye.matrix_world @ v.co for v in eye.data.vertices]
+    centres = [sum((c for c in cos if (c.x > E.x) == side), Vector()) / sum(1 for c in cos if (c.x > E.x) == side) for side in (True, False)]
+    facing = None
+    for c in centres:                               # 1 at the front of each eye, from where the point lies round its centre
+        v = g.new("ShaderNodeVectorMath", [geo.outputs["Position"], tuple(c)], operation='SUBTRACT').outputs[0]
+        f = g.new("ShaderNodeVectorMath", [g.new("ShaderNodeVectorMath", [v], operation='NORMALIZE').outputs[0], (0.0, -1.0, 0.0)],
+                  operation='DOT_PRODUCT').outputs["Value"]
+        facing = f if facing is None else g.math('MAXIMUM', facing, f)
     hazel, ring = (*P.srgb(iris[0]), 1.0), (*P.srgb(iris[1]), 1.0)
     rim = g.remap(facing, 0.79, 0.83, 0.0, 1.0)                     # inside the limbus: a large iris, as Vi's (your note: it looked small)
     col = g.mix(rim, (*P.srgb((0.8, 0.77, 0.75)), 1.0), g.scale(hazel, 0.5))
@@ -1099,8 +1108,8 @@ else:
         tex = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]}, image=cutouts[kind])
         em = g.new("ShaderNodeEmission", {"Color": (*P.srgb(col), 1.0), "Strength": 1.0})
         tr = g.new("ShaderNodeBsdfTransparent")
-        a = g.remap(tex.outputs["Alpha"], 0.03 if kind == "eyelashes" else 0.12, 0.3 if kind == "eyelashes" else 0.55, 0.0, 1.0,
-                    smooth=False)   # a bold lid line, as Vi's; the brows' hairs over their painted shape, no stray ones
+        a = g.remap(tex.outputs["Alpha"], 0.03 if kind == "eyelashes" else 0.06, 0.3 if kind == "eyelashes" else 0.4, 0.0, 1.0,
+                    smooth=False)   # a bold lid line; the brows' hairs full over their soft painted shape
         g.nt.links.new(g.new("ShaderNodeMixShader", [a, tr.outputs[0], em.outputs[0]]).outputs[0], out.inputs["Surface"])
         wear(fitted[kind], m)
         fitted[kind].visible_shadow = False        # their cards' shadows smeared the cheeks
