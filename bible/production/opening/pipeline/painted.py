@@ -289,7 +289,7 @@ def finish(scene, *, brush=2, uniformity=4, sharpness=1.0, eccentricity=1.0, haz
 
 
 def final_look(scene, f0, f1, *, glow=0.25, shadows=(0.86, 0.97, 1.0), highlights=(1.04, 1.0, 0.95),
-               vignette=0.3, dispersion=0.006, grain=0.05, contrast=0.0, brush=0):
+               vignette=0.3, dispersion=0.006, grain=0.05, contrast=0.0, brush=0, glow_threshold=0.75, sharpen=0.0):
     """The whole frame finished as a film's would be: a soft glow off the lights; a grade, the
     shadows a little teal and the lights a little warm, and contrast; a vignette; a touch of the
     lens's colour fringing at the edges; a fine film grain, new every frame. brush: a light brush
@@ -306,7 +306,7 @@ def final_look(scene, f0, f1, *, glow=0.25, shadows=(0.86, 0.97, 1.0), highlight
         except (TypeError, ValueError):
             pass
         img = k.outputs[0]
-    gl = g.new("CompositorNodeGlare", {"Image": img, "Threshold": 0.75, "Strength": glow})
+    gl = g.new("CompositorNodeGlare", {"Image": img, "Threshold": glow_threshold, "Strength": glow})
     try:
         gl.inputs["Type"].default_value = 'Fog Glow'
     except (TypeError, ValueError):
@@ -321,6 +321,15 @@ def final_look(scene, f0, f1, *, glow=0.25, shadows=(0.86, 0.97, 1.0), highlight
     img = g.mix(g.math('MULTIPLY', lum, 0.6), img, g.scale(img, highlights))
     if contrast:
         img = g.new("CompositorNodeBrightContrast", {"Image": img, "Contrast": contrast}).outputs[0]
+    if sharpen:                                     # a light sharpen, as a film's frame is crisp
+        sh = g.new("CompositorNodeFilter", {"Image": img, "Factor": sharpen})
+        for name in ('Sharpen Diamond', 'Sharpen'):
+            try:
+                sh.inputs["Type"].default_value = name
+                break
+            except (TypeError, ValueError):
+                pass
+        img = sh.outputs[0]
     el = g.new("CompositorNodeEllipseMask", {"Size": (0.95, 0.9), "Value": 1.0})
     soft = g.new("CompositorNodeBlur", {"Image": el.outputs[0], "Size": (300, 300)})
     img = g.scale(img, g.remap(soft.outputs[0], 0.0, 1.0, 1.0 - vignette, 1.0, smooth=False))

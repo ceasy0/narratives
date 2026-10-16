@@ -352,6 +352,57 @@ if PLANE_OF:
 sd = human.modifiers.new("Smooth", 'SUBSURF')
 sd.levels, sd.render_levels = 1, 1
 sd.use_custom_normals = True                       # the planes' shading kept through the smoothing
+SCAN_UV = human.data.uv_layers[0].name             # MPFB's own layout, which the skin scan is painted in
+
+
+def head_uv():
+    """A layout for the paint that gives the head most of the texture (your note, 2026-10-16: the
+    skin looked blurry, not in focus). MPFB's own gives the whole face about 450 pixels of 4096,
+    one to each pixel of a close-up, so the finest brushwork lands as a smear; here the head's
+    island (the face, the scalp, the ears, the neck) fills the texture from a sixth of the way
+    across, three to four times as fine, and the rest of the body shrinks into the corner."""
+    me = human.data
+    n = len(me.loops)
+    src = np.empty(n * 2)
+    me.uv_layers[SCAN_UV].data.foreach_get("uv", src)
+    src = src.reshape(-1, 2)
+    lv = np.empty(n, np.int64)
+    me.loops.foreach_get("vertex_index", lv)
+    parent = list(range(len(me.polygons)))
+
+    def find(a):
+        while parent[a] != a:
+            parent[a] = parent[parent[a]]
+            a = parent[a]
+        return a
+    seen = {}
+    for pl in me.polygons:                          # faces joined where they share an edge and its place in the layout
+        li = list(pl.loop_indices)
+        for j in range(len(li)):
+            a, b = li[j], li[(j + 1) % len(li)]
+            key = tuple(sorted(((int(lv[a]), tuple(np.round(src[a], 5))), (int(lv[b]), tuple(np.round(src[b], 5))))))
+            if key in seen:
+                parent[find(pl.index)] = find(seen[key])
+            else:
+                seen[key] = pl.index
+    nose = min(range(len(pts)), key=lambda i: (pts[i] - (E + Vector((0.0, -0.06, -0.045)))).length)
+    island = find(next(pl.index for pl in me.polygons if nose in pl.vertices))
+    head = np.zeros(n, bool)
+    for pl in me.polygons:
+        if find(pl.index) == island:
+            head[list(pl.loop_indices)] = True
+    lo, hi = src[head].min(0), src[head].max(0)
+    s = min(0.815 / (hi[0] - lo[0]), 0.99 / (hi[1] - lo[1]))
+    out = src * 0.17                                # the body, small, in the corner
+    out[head] = (src[head] - lo) * s + np.array((0.18, 0.005))
+    layer = me.uv_layers.new(name="Paint")
+    layer.data.foreach_set("uv", out.ravel())
+    me.uv_layers.active = layer
+    layer.active_render = True
+    print("head layout: %.1f times as fine" % (s / 1.0))
+
+
+head_uv()
 
 
 # ---------------------------------------------------------------- the hair, in locks
@@ -571,7 +622,7 @@ if CHECK:
 else:
     cd.lens, cd.sensor_width = 85.0, 36.0
     cd.dof.use_dof = True
-    cd.dof.aperture_fstop = 2.8
+    cd.dof.aperture_fstop = 8.0                    # the whole face in focus, as Vi's is (your note: it looked out of focus)
 
 
 def aim(view):
@@ -637,9 +688,10 @@ def window(elevation, azimuth, dist=1.3, opening=(0.8, 1.0), bar=0.04, mullion=-
 
 if LIVE:
     KEY = (40, 210)                                # elevation, azimuth: the sun high on his right, as in your frame of Vi: the brow shades the eyes, the nose casts across
-    key = sun("Sun", 4.0, (1.0, 0.9, 0.76), *KEY, angle=2.0)
-    try:
-        key.data.use_shadow_jitter = True          # the shadows' edges soft as the sun's size makes them
+    key = sun("Sun", 4.0, (1.0, 0.9, 0.76), *KEY, angle=0.3)    # crisp shadows, as Vi's; the stroke map breaks their edges
+    try:                                           # not sampled soft: the turn to shadow magnified the sampling into a speckle
+        key.data.use_shadow_jitter = False
+        key.data.shadow_filter_radius = 0.5
     except AttributeError:
         pass
     sun("Sky fill", 0.07, (0.62, 0.74, 0.86), 12, 330, angle=25.0)
@@ -666,7 +718,7 @@ def skin_colour(g, uv):
     skin_img = bpy.data.images.get("skin scan") or bpy.data.images.load(
         str(H.mpfb_data("skins") / "young_caucasian_male" / "young_lightskinned_male_diffuse.png"))
     skin_img.name = "skin scan"
-    tex = g.new("ShaderNodeTexImage", {"Vector": uv}, image=skin_img).outputs["Color"]
+    tex = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeUVMap", uv_map=SCAN_UV).outputs["UV"]}, image=skin_img).outputs["Color"]
     col = g.mix(0.35, (*P.srgb((0.88, 0.79, 0.73)), 1.0), tex)     # pale and muted, as Vi, with the scan's own variation (its pores blurred out by the painter)
     amt = g.math('MULTIPLY', g.new("ShaderNodeAttribute", attribute_name="stubble").outputs["Fac"], 0.3)
     col = g.mix(amt, col, g.scale(col, (0.72, 0.7, 0.75)))        # stubble, a soft cool tone
@@ -873,7 +925,7 @@ def live_mat(name, png, shadow, light, soft, steps=None, warm=None, sheen=0.0, q
     if edge:
         st = bpy.data.images.load(str(edge[0]), check_existing=True)
         st.colorspace_settings.name = 'Non-Color'
-        n = g.bw(g.new("ShaderNodeTexImage", {"Vector": uv}, image=st).outputs["Color"])
+        n = g.bw(g.new("ShaderNodeTexImage", {"Vector": g.scale(uv, 0.5)}, image=st).outputs["Color"])   # strokes the size of a brush on screen
         lum = g.math('MULTIPLY', lum, g.math('MULTIPLY_ADD', g.math('SUBTRACT', n, 0.5), edge[1], 1.0))   # at the edge, not inside the shadow
     t = g.remap(lum, soft[0], soft[1], 0.0, 1.0)
     if steps:                                       # full light only on the planes facing it; a half-tone on the rest
@@ -920,14 +972,14 @@ else:
             fitted[kind].hide_render = True
         sk = bake(human, skin_colour, SKIN_RES, "skin", 0.012,
                   extra=(("masks", attr_colour("paint_masks")), ("masks2", attr_colour("paint_masks2")), ("marks", marks),
-                         ("scan", lambda g: g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]},
+                         ("scan", lambda g: g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeUVMap", uv_map=SCAN_UV).outputs["UV"]},
                                                   image=bpy.data.images["skin scan"]).outputs["Color"])))
         for kind in ("eyebrows", "eyelashes", "eyes"):
             fitted[kind].hide_render = False
         sk["brows"] = bake_brows(SKIN_RES)
         hb = bake(locks, hair_colour, HAIR_RES, "hair", 0.01, extra=(("masks", attr_colour("hair_masks")),))
         reg = region()
-        for (src, png, pal, radii, extra) in ((sk, skin_png, "skin", "10,5,3,2", ["--region", str(reg), "--bristles", "0.05", "--threshold", "8"]),
+        for (src, png, pal, radii, extra) in ((sk, skin_png, "skin", "24,12,6,3", ["--region", str(reg), "--bristles", "0.05", "--threshold", "8"]),
                                               (hb, hair_png, "hair", "10,5,3", ["--along", "v"])):
             t = time.time()
             subprocess.run(["py", str(BRUSH), str(src["base"]), str(src.get("light", src["base"])), str(png), "--palette", pal,
@@ -957,15 +1009,19 @@ else:
                     smooth=False)   # a bold lid line, as Vi's; the brows' hairs over their painted shape, no stray ones
         g.nt.links.new(g.new("ShaderNodeMixShader", [a, tr.outputs[0], em.outputs[0]]).outputs[0], out.inputs["Surface"])
         wear(fitted[kind], m)
+        fitted[kind].visible_shadow = False        # their cards' shadows smeared the cheeks
     wear(fitted["eyes"], P.flat("Eye", (0.85, 0.82, 0.78)))
 
 r = scene.render
 r.resolution_x, r.resolution_y, r.resolution_percentage = (900, 1200, 100) if CHECK else (1920, 1080, 100)
 P.eevee(scene, 64)
+r.filter_size = 0.75                               # a tighter pixel filter: crisp, not soft (your note)
+bpy.context.preferences.system.anisotropic_filter = 'FILTER_16'   # the paint sharp where the face turns away
 if CHECK:
     r.use_compositing = False
 else:                                              # the whole look: glow, grade, vignette, a touch of the lens, grain
-    P.final_look(scene, F0, F1, **(dict(shadows=(0.82, 0.95, 1.0)) if LIVE else {}))
+    P.final_look(scene, F0, F1, **(dict(shadows=(0.82, 0.95, 1.0), glow=0.12, glow_threshold=1.0, dispersion=0.002, sharpen=0.15)
+                                   if LIVE else {}))
 r.use_stamp = False
 scene.frame_start, scene.frame_end = F0, F1
 OUT.mkdir(parents=True, exist_ok=True)
