@@ -2,7 +2,7 @@
 
 > Your unconventional framings of ideas and passages: what each one says, which texts support it and which pull against it, a first-pass fit grade, and what it would change on screen. These grades are starting points for discussion, not verdicts.
 
-**Status:** v1.5, 2026-10-13. Twenty-one framings (FR-01 to FR-21), each with what it says, the texts for and against it, and its fit grade. Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes on each round since.
+**Status:** v1.6, 2026-10-15. Twenty-one framings (FR-01 to FR-21), each with what it says, the texts for and against it, and its fit grade. Built from what you've shared: your study notes, your draft of the Genesis opening scene, your conversations about consciousness and Christology, and your notes on each round since.
 **Fit grades** (defined in RULES §8.8):
 - **Supported:** the text points this way.
 - **Compatible:** the text is silent or open, and the framing fills a gap without strain.
@@ -23,7 +23,7 @@
 | [FR-06](#fr-06--the-beatitudes-through-water-and-the-tao) | The Beatitudes read through water and the Tao | 16 | Compatible as an interpretive layer | The Gospels |
 | [FR-07](#fr-07--salt-and-light-every-part-necessary) | Salt and light: every part is necessary | 16 | Compatible if the warning stays | The Gospels |
 | [FR-08](#fr-08--marriage-to-ones-relative-opposite) | Marriage to one's "relative opposite" (a working theory) | **7 (Ruth)**, 2, 9, 16 | Supported (a corresponding partner); Tension ("only one"). **Confirmed for Ruth:** Boaz, unspoken. | Done for Ruth |
-| [FR-09](#fr-09--children-as-the-parents-next-life-hell-as-a-long-mindset) | Children as the parents' next life; hell as a long mindset | 16, 18 | Ranges from Supported to Contradiction depending on the reading | The Gospels |
+| [FR-09](#fr-09--children-as-the-parents-next-life-hell-as-a-long-mindset) | Children as the parents' next life; hell as a long mindset; heaven and hell as states of mind (2026-10-15) | 16, 18 | Ranges from Supported to Contradiction depending on the reading; heaven and hell as states of mind Supported as shown, Tension if only that | The Gospels |
 | [FR-10](#fr-10--christ-as-a-bloodline-the-rainbow-widening-comings) | Christ as a bloodline; the rainbow; comings in widening stages; the resurrection "through his children" | 16, 18 | Compatible (the text is silent on children); Tension overall. **The resurrection decided 2026-10-07:** in addition to the body, "because his children are his body": Supported. | The Gospels (the bloodline) |
 | [FR-11](#fr-11--christ-as-integration-the-kingdom-as-christ) | Christ as integration; the kingdom *is* Christ | 16 | Supported | [Discussion 002](../discussions/002-jesus-humanity.md) |
 | [FR-12](#fr-12--the-messianic-prophecies) | The messianic prophecies | 2–16 | Supported (traditional reading) | — |
@@ -333,26 +333,34 @@ If the theory is true, **Boaz is much the likelier candidate.** Ruth is also one
 
 ## FR-09 — Children as the parents' next life; hell as a long mindset
 
-**Source:** your study notes.
+**Source:** your study notes, and your note of 2026-10-15 on Bosch's *Garden of Earthly Delights*.
 
 **Your framing:**
 - A child's mind is composed of both parents' minds. If the parents truly love each other, "their next life as their children" will be better.
 - Hell isn't eternal damnation. It's a mindset someone can stay in for a long time.
+- Heaven and Hell are states of mind, happiness and suffering. Hell is "a place where things don't make sense," heaven "a place where things do make sense." It's a different pair from heaven and earth, which are "the mental/spiritual and the physical nature of things" ([FOUNDATIONS §9](./FOUNDATIONS.md#9-how-you-read-genesis-1)).
 
 **What fits:**
 - **Consequences that pass through generations** (Exod 20:5–6, and the family histories of Genesis).
 - **Texts about the restoration of all things** (Acts 3:21; 1 Cor 15:28; Col 1:20; 1 Tim 2:4). This is an ancient minority view, held by Origen and Gregory of Nyssa, and defended by some theologians today.
+- **Judgment as sense undone.** Jeremiah sees the land "without form and void," Gen 1:2's own words, and the heavens without light (Jer 4:23–26): judgment as creation run backward. Jesus's "outer darkness," with weeping and gnashing of teeth (Matt 8:12; 22:13; 25:30), is anguish, not geography.
+- **Heaven as sense made whole:** knowing fully, as we are known (1 Cor 13:12); every tear wiped away (Rev 21:4); no more night (Rev 22:5); eternal life as knowing God (John 17:3); the kingdom of God "in your midst" (Luke 17:21).
+- **It's already in the Opening.** Beat 3's two experiences are this pair in small: the small face's terror before a malice that isn't in God, an ego seeing itself where God is, is suffering where nothing makes sense; compassion settling into sleep is the other ([Discussion 007](../discussions/007-the-faces-of-god.md#decision)).
 
 **What pulls against it:**
 - **If "next life" literally means reincarnation:** "It is appointed for man to die once, and after that comes judgment" (Heb 9:27). See also John 9:2–3 and Ezek 18:20.
-- **On hell:** Matt 25:46 and Mark 9:43–48. Jesus speaks of Gehenna often, and those are Tier A lines that stay.
+- **On hell:** Matt 25:46 and Mark 9:43–48. Jesus speaks of Gehenna often, and those are Tier A lines that stay. It's a judgment, by God (Matt 25:31–46), that takes in the body too (Matt 10:28); the rich man is in a place, with a chasm fixed (Luke 16:23–26); and there's the lake of fire (Rev 20:10–15).
+- **On heaven:** it's also where God is (Matt 6:9), and the hope at the end is bodily: a new heaven and a new earth (Isa 65:17; Rev 21:1–3), with the body raised. Your decision on the resurrection already holds this: "also spiritual," in addition to the body ([FOUNDATIONS §4](./FOUNDATIONS.md#god-christ-and-the-reading-of-the-text)).
 
 **First-pass grade:**
 - **Supported** if "next life" means what passes from parents to children.
 - **Contradiction** if it means literal reincarnation.
-- **Tension** on hell.
+- **Supported** for heaven and hell as states of mind, as what they're like from inside and how we show them; **Tension** if they're only that, with no judgment and no new creation.
+- **Tension** on hell as a mindset that ends.
 
-**Question:** do you mean "next life" literally or metaphorically?
+**On screen:** Old Testament characters speak of Sheol, not of heaven and hell ([RULES §7.3](./RULES.md#73-what-we-know-that-they-didnt)); the pair comes in with the Gospels (Luke 16:19–31 in hour 172) and Revelation. When hell is shown, Bosch's hell wing of *The Garden of Earthly Delights* (c. 1490–1510) is the look (your note): ordinary things used for what they aren't for, scale broken, nothing making sense. The Opening's deep isn't hell: it's before sense, with the Spirit over it (Gen 1:2); hell is sense undone.
+
+**Questions:** do you mean "next life" literally or metaphorically? And are heaven and hell only states of mind, or also a judgment and a new creation, with the states as what they're like from inside? My reading is the second.
 
 ---
 

@@ -24,7 +24,7 @@ Eight hours, as mapped in [ARCHITECTURE](../../ARCHITECTURE.md#arc-1--genesis-ge
 | # | Episode | Text | Status |
 |---|---|---|---|
 | 1 | In the Beginning | Gen 1:1–3:24 | Under way: the Opening built as an animatic, the Garden's treatment next |
-| 2 | Cain and Abel | Gen 4 | Not started. Opens on the sentence lived: thorns, heat, the lion closer. |
+| 2 | Cain and Abel | Gen 4 | Not started. Opens on the sentence lived: thorns, heat, the lion closer. A model for the brothers, and for God reaching into the scene, is the Salerno ivory of Cain and Abel (your note, 2026-10-15; [STORYTELLING](../../../style/STORYTELLING.md#how-god-is-present)). |
 | 3 | The Days of Noah | Gen 5:1–6:8 | Not started. Needs Position 6. The why for the flood. |
 | 4 | The Ark | Gen 6:9–7:16 | Not started. Needs Position 7. |
 | 5 | The Flood | Gen 7:17–9:17 | Not started. Needs Position 7. |

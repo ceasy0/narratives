@@ -2,7 +2,7 @@
 
 > Films, series, books and anything else worth watching or studying for *Adonai*. **Add titles to the inbox below, any way you like.** Each session I fold them into the list: what the work is in a line, what to study it for, a link, in the section where it belongs. Then I clear the inbox and keep the list tidy. Started 2026-10-15 at your request, with the titles the project already points you to. Where a title is a visual reference for a shot of the Opening, the full note on what to take from it is in the Opening's [look book](./production/opening/REFERENCES.md); this list says why to watch it at all.
 
-**Status:** 2026-10-15: 25 entries, none watched yet.
+**Status:** 2026-10-15: 33 entries, none watched yet.
 
 ## Inbox
 
@@ -69,6 +69,14 @@ The scene notes for these are from my memory of the films; check each scene befo
   Two sisters on opposite sides of a city split between rich and poor. *Study:* the series' base look ([Discussion 006](./discussions/006-2d-or-3d.md), round 4): watch for the method we're copying, hand-painted texture over 3D, painterly light, hand-drawn effects and painted backgrounds. Its designs stay its own; ours are our own.
 - **Spider-Man: Into the Spider-Verse** (2018) · animated film · Bob Persichetti, Peter Ramsey, Rodney Rothman · [Wikipedia](https://en.wikipedia.org/wiki/Spider-Man:_Into_the_Spider-Verse)
   A Brooklyn teenager becomes Spider-Man and meets others from other worlds. *Study:* the register for visions and the spiritual (Discussion 006): vibrant, graphic, free to break the frame.
+- **John Martin's biblical paintings** (1816–53) · paintings and mezzotints · John Martin · [Wikipedia](https://en.wikipedia.org/wiki/John_Martin_(painter))
+  Vast scenes of the Bible's catastrophes, with people tiny under them. *Study:* how to make a scene larger than life (your note, 2026-10-15): scale, crowds, and light breaking through. Many are our hours: *The Deluge* (hour 4), *The Destruction of Sodom and Gomorrah* (Gen 19), *The Seventh Plague of Egypt*, *Belshazzar's Feast* (Daniel 5, whose colonnades run on for ever, the look you want for Rome), and the *Last Judgement* triptych at Tate, whose *The Great Day of His Wrath* and *The Plains of Heaven* are a hell and a heaven ([FR-09](./canon/FRAMINGS.md#fr-09--children-as-the-parents-next-life-hell-as-a-long-mindset)).
+- **The Ninth Wave** (1850) · painting · Ivan Aivazovsky · [Wikipedia](https://en.wikipedia.org/wiki/The_Ninth_Wave)
+  Survivors clinging to a mast after a shipwreck, the storm breaking under a gold sky. *Study:* the other half of larger than life: the sea itself as the event, light through water. It's the wave for the flood (hour 4), as his *Chaos* is a reference for the Opening's beat 1.
+- **The Imaginary Prisons** (*Carceri d'invenzione*, 1750, reworked 1761) · sixteen etchings · Giovanni Battista Piranesi · [Wikipedia](https://en.wikipedia.org/wiki/Imaginary_Prisons)
+  Stone vaults, stairs and arches going on past the edge of the page. *Study:* Rome's look (your note, 2026-10-15; [Position 26](./canon/POSITIONS.md)): massive stone that no person can fill, by the man who drew Rome's ruins all his life.
+- **The Course of Empire** (1833–36) · five paintings · Thomas Cole · [Wikipedia](https://en.wikipedia.org/wiki/The_Course_of_Empire_(paintings))
+  One valley seen five times, from wilderness to a marble empire to its ruins. *Study:* Rome's look, above all *The Consummation of Empire*, colonnades on colonnades; and the arc of an empire as the series will see Rome's.
 
 ## The Bible on screen
 
