@@ -636,7 +636,7 @@ def window(elevation, azimuth, dist=1.3, opening=(0.8, 1.0), bar=0.04, mullion=-
 
 
 if LIVE:
-    KEY = (22, 186)                                # elevation, azimuth: the sun from his right side, so the light turns down the middle of his face
+    KEY = (40, 210)                                # elevation, azimuth: the sun high on his right, as in your frame of Vi: the brow shades the eyes, the nose casts across
     key = sun("Sun", 4.0, (1.0, 0.9, 0.76), *KEY, angle=2.0)
     try:
         key.data.use_shadow_jitter = True          # the shadows' edges soft as the sun's size makes them
@@ -856,24 +856,37 @@ def painted_mat(name, png, sheen=0.0, rim=0.0, quiet=None):
     return m
 
 
-def live_mat(name, png, shadow, light, soft, steps=None, warm=None, sheen=0.0, quiet=None):
+def live_mat(name, png, shadow, light, soft, steps=None, warm=None, sheen=0.0, quiet=None, cool=None, edge=None,
+             roughness=0.42):
     """The paint lit live (your note, 2026-10-15: the real shadows): the renderer's own light on the
-    surface, its cast shadows included, read as a value and turned into the painter's colours: the
-    paint as it is in full light, cooler and darker in shadow, a short soft turn between (soft, and
-    steps: a second turn, so the planes of a form take their own values), warm where it turns."""
+    surface, its cast shadows included, read as a value and turned into the painter's colours, as
+    in your frame of Vi: the paint as it is in full light; deep and warm in shadow, cooler where the
+    sky's fill reaches into it (cool); a short turn between (soft), warm and reddish (warm), its edge
+    broken along brush strokes (edge: the stroke map and how far it moves the edge); and a second,
+    gentler turn (steps), so the planes of a form facing the light less take a half-tone."""
     img = bpy.data.images.load(str(png))
     m, g, out = P.material(name)
-    alb = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]}, image=img).outputs["Color"]
+    uv = g.new("ShaderNodeTexCoord").outputs["UV"]
+    alb = g.new("ShaderNodeTexImage", {"Vector": uv}, image=img).outputs["Color"]
     lum = g.bw(g.new("ShaderNodeShaderToRGB", [g.new("ShaderNodeBsdfDiffuse", {"Color": (1, 1, 1, 1)}).outputs[0]]).outputs[0])
+    raw = lum
+    if edge:
+        st = bpy.data.images.load(str(edge[0]), check_existing=True)
+        st.colorspace_settings.name = 'Non-Color'
+        n = g.bw(g.new("ShaderNodeTexImage", {"Vector": uv}, image=st).outputs["Color"])
+        lum = g.math('MULTIPLY', lum, g.math('MULTIPLY_ADD', g.math('SUBTRACT', n, 0.5), edge[1], 1.0))   # at the edge, not inside the shadow
     t = g.remap(lum, soft[0], soft[1], 0.0, 1.0)
-    if steps:
-        t = g.math('MULTIPLY_ADD', g.remap(lum, steps[0], steps[1], 0.0, 1.0), steps[2], g.math('MULTIPLY', t, 1 - steps[2]))
-    c = g.scale(alb, g.mix(t, (*P.srgb(shadow), 1.0), (*P.srgb(light), 1.0)))
+    if steps:                                       # full light only on the planes facing it; a half-tone on the rest
+        t = g.math('MULTIPLY', t, g.math('MULTIPLY_ADD', g.remap(lum, steps[0], steps[1], 0.0, 1.0), 1 - steps[2], steps[2]))
+    sh = (*P.srgb(shadow), 1.0)
+    if cool:
+        sh = g.mix(g.remap(raw, cool[1], cool[2], 0.0, 1.0), sh, (*P.srgb(cool[0]), 1.0))
+    c = g.scale(alb, g.mix(t, sh, (*P.srgb(light), 1.0)))
     if warm:                                        # the painter's warm note where light turns to shadow
         band = g.math('SUBTRACT', 1.0, g.math('ABSOLUTE', g.math('MULTIPLY_ADD', t, 2.0, -1.0)))
         c = g.mix(g.math('MULTIPLY', band, warm[1]), c, g.scale(c, P.srgb(warm[0])))
     if sheen:
-        gl = g.new("ShaderNodeBsdfGlossy", {"Color": (1, 1, 1, 1), "Roughness": 0.42})
+        gl = g.new("ShaderNodeBsdfGlossy", {"Color": (1, 1, 1, 1), "Roughness": roughness})
         hi = g.math('MULTIPLY', g.remap(g.bw(g.new("ShaderNodeShaderToRGB", [gl.outputs[0]]).outputs[0]), 0.25, 1.2, 0.0, sheen), t)
         if quiet:
             hi = g.math('MULTIPLY', hi, g.math('SUBTRACT', 1.0, g.new("ShaderNodeAttribute", attribute_name=quiet).outputs["Fac"]))
@@ -923,9 +936,14 @@ else:
                            check=True)
             print("painted %s in %.0fs" % (png.name, time.time() - t))
     if LIVE:
-        wear(human, live_mat("Painted skin", skin_png, (0.54, 0.49, 0.53), (1.0, 0.97, 0.92), (0.1, 0.24),
-                             steps=(0.45, 0.85, 0.4), warm=((1.08, 0.9, 0.84), 0.15), sheen=0.07, quiet="lid_region"))
-        wear(locks, live_mat("Painted hair", hair_png, (0.62, 0.58, 0.64), (1.0, 0.97, 0.92), (0.08, 0.35)))
+        strokes = PAINT / "strokes.png"
+        if not strokes.exists():
+            subprocess.run(["py", str(BRUSH), "strokes", str(strokes), "2048"], check=True)
+        wear(human, live_mat("Painted skin", skin_png, (0.32, 0.23, 0.22), (1.03, 0.98, 0.9), (0.16, 0.26),
+                             steps=(0.42, 0.8, 0.8), warm=((1.12, 0.82, 0.74), 0.3), sheen=0.1, roughness=0.3,
+                             quiet="lid_region", cool=((0.27, 0.27, 0.3), 0.05, 0.15), edge=(strokes, 0.7)))
+        wear(locks, live_mat("Painted hair", hair_png, (0.4, 0.34, 0.36), (1.0, 0.97, 0.92), (0.08, 0.3),
+                             edge=(strokes, 0.6)))
     else:
         wear(human, painted_mat("Painted skin", skin_png, sheen=0.07, rim=0.12, quiet="lid_region"))
         wear(locks, painted_mat("Painted hair", hair_png))
@@ -947,7 +965,7 @@ P.eevee(scene, 64)
 if CHECK:
     r.use_compositing = False
 else:                                              # the whole look: glow, grade, vignette, a touch of the lens, grain
-    P.final_look(scene, F0, F1)
+    P.final_look(scene, F0, F1, **(dict(shadows=(0.82, 0.95, 1.0)) if LIVE else {}))
 r.use_stamp = False
 scene.frame_start, scene.frame_end = F0, F1
 OUT.mkdir(parents=True, exist_ok=True)

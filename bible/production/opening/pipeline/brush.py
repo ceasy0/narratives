@@ -26,6 +26,7 @@ import argparse
 import json
 import math
 import random
+import sys
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
@@ -298,7 +299,21 @@ def strands(canvas, seed=5, unlit=False):
     return Image.fromarray(np.uint8(np.clip(a, 0, 1) * 255))
 
 
+def stroke_map(size, seed=9):
+    """A field of brush strokes in grey: strokes laid over smooth noise, along its contours. The
+    renderer adds it to the light before deciding light from shadow, so a shadow's edge breaks as
+    a painter's does, along strokes, instead of running clean round the form."""
+    n = blur(np.random.default_rng(seed).random((size, size)).astype(np.float32), max(2, size // 200))
+    n = (n - n.min()) / (n.max() - n.min() + 1e-6)
+    ref = np.repeat((n * 255)[..., None], 3, -1).astype(np.float32)
+    return paint(ref, [max(3, size // 256), max(2, size // 512)], threshold=8.0, seed=seed, bristles=0.15).convert("L")
+
+
 DEBUG = None
+
+if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "strokes":   # py brush.py strokes OUT.png [SIZE]
+    stroke_map(int(sys.argv[3]) if len(sys.argv) > 3 else 2048).save(sys.argv[2])
+    sys.exit(0)
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
