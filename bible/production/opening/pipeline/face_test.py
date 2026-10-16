@@ -76,6 +76,7 @@ CLOSED = {"eye-left-closure": 1.0, "eye-right-closure": 1.0}       # baked in: t
 BREATH_IN = {"nose-left-dilatation": 0.8, "nose-right-dilatation": 0.8, "mouth-open": 0.09}
 LIFT = {"Neck1": -4.0, "Head": -5.0}              # degrees about each bone's x: the chin up
 DEFINE = (0.25, 10)                                # how far the forms are pushed from their smoothed copy; how smooth
+PLANES = (0.5, 0.75, 0.018)                        # how far the forms are flattened onto their planes; how much the shading follows them; their size (m)
 BROWS, LASHES = "eyebrow012", "eyelashes01"
 
 t_start = time.time()
@@ -152,6 +153,93 @@ def define(k, iters):
 
 
 RIDGE, HOLLOW = define(*DEFINE) if (not CHECK or "define" in ARGS) else (np.zeros(len(human.data.vertices)),) * 2
+
+
+def planes(flatten, size, lam=1.0, seed=1):
+    """Vi's face is built in planes (your note, 2026-10-15: a slightly blocky look in the nose's ridge,
+    the lips, the chin, under the eyes, the ears). The head's surface is grouped into small flat
+    patches, by where each face is and which way it faces (k-means), the forms flattened part way
+    onto them, so they meet in soft creases as a sculptor's planes do. Not round the eyes, and
+    fading out down the neck. Returns each face's plane, for the shading."""
+    me = human.data
+    n = len(me.vertices)
+    co = np.empty(n * 3)
+    me.vertices.foreach_get("co", co)
+    co = co.reshape(-1, 3)
+    eyes = [sum((pts[i] for i in sets[g]), Vector()) / len(sets[g]) for g in ("helper-l-eye", "helper-r-eye")]
+    def gentle(p):                                  # the lips and the nose's tip and wings keep most of their roundness
+        d = p - E
+        lips = ramp01(1.4, 0.9, ((d.x / 0.028) ** 2 + ((d.z + 0.078) / 0.011) ** 2) ** 0.5)
+        tip = ramp01(0.03, 0.018, abs(d.x)) * ramp01(-0.042, -0.05, d.z) * ramp01(-0.075, -0.066, d.z)
+        return 1 - 0.7 * max(lips, tip)
+
+    w = np.array([ramp01(E.z - 0.2, E.z - 0.15, p.z) * min(ramp01(0.014, 0.024, (p - c).length) for c in eyes) * gentle(p)
+                  for p in pts])
+    body = np.zeros(n, bool)
+    body[list(sets["body"])] = True
+    w *= body
+    sel = [pl.index for pl in me.polygons if all(body[v] for v in pl.vertices) and max(w[v] for v in pl.vertices) > 0]
+    C = np.array([tuple(me.polygons[f].center) for f in sel])
+    N = np.array([tuple(me.polygons[f].normal) for f in sel])
+    A = np.array([me.polygons[f].area for f in sel])
+    X = np.hstack([C / size, N * lam])
+    rng = np.random.default_rng(seed)
+    seeds, d = [int(rng.integers(len(C)))], np.full(len(C), np.inf)
+    while True:                                     # seeds about one plane's size apart
+        d = np.minimum(d, np.linalg.norm(C - C[seeds[-1]], axis=1))
+        j = int(d.argmax())
+        if d[j] < size:
+            break
+        seeds.append(j)
+    K = X[seeds].copy()
+    for _ in range(15):
+        lab = ((X[:, None, :] - K[None, :, :]) ** 2).sum(-1).argmin(1)
+        for k in range(len(K)):
+            m = lab == k
+            if m.any():
+                a = A[m][:, None]
+                nk = (N[m] * a).sum(0)
+                K[k] = np.concatenate([(C[m] * a).sum(0) / a.sum() / size, nk / (np.linalg.norm(nk) + 1e-12) * lam])
+    Ck, Nk = K[:, :3] * size, K[:, 3:] / lam
+    Nk /= np.linalg.norm(Nk, axis=1, keepdims=True) + 1e-12
+    V = np.concatenate([np.array(me.polygons[f].vertices) for f in sel])
+    L = np.concatenate([np.full(len(me.polygons[f].vertices), lab[i]) for i, f in enumerate(sel)])
+    for _ in range(2):                              # each point toward the planes of the faces round it
+        proj = co[V] - Nk[L] * ((co[V] - Ck[L]) * Nk[L]).sum(1)[:, None]
+        tgt, cnt = np.zeros_like(co), np.zeros(n)
+        np.add.at(tgt, V, proj)
+        np.add.at(cnt, V, 1.0)
+        has = cnt > 0
+        co[has] += flatten * w[has, None] * (tgt[has] / cnt[has, None] - co[has])
+    me.vertices.foreach_set("co", co.ravel())
+    me.update()
+    print("planes: %d faces in %d planes" % (len(sel), len(K)))
+    return {f: Nk[lab[i]] for i, f in enumerate(sel)}, w
+
+
+def plane_shading(face_plane, w, amount):
+    """The shading follows the planes: each point's normal turned toward the planes round it, so
+    across a plane the light is even and it turns where the planes meet, in a short soft crease, as
+    on Vi, instead of rolling round the whole form."""
+    me = human.data
+    n = len(me.vertices)
+    vn = np.empty(n * 3)
+    me.vertices.foreach_get("normal", vn)
+    vn = vn.reshape(-1, 3)
+    acc, cnt = np.zeros((n, 3)), np.zeros(n)
+    for f, nk in face_plane.items():
+        for v in me.polygons[f].vertices:
+            acc[v] += nk
+            cnt[v] += 1
+    has = cnt > 0
+    pn = acc[has] / np.linalg.norm(acc[has], axis=1, keepdims=True).clip(1e-12)
+    a = (amount * w[has])[:, None]
+    vn[has] = (1 - a) * vn[has] + a * pn
+    vn /= np.linalg.norm(vn, axis=1, keepdims=True).clip(1e-12)
+    me.normals_split_custom_set_from_vertices([tuple(v) for v in vn])
+
+
+PLANE_OF, PLANE_W = planes(PLANES[0], PLANES[2]) if (not CHECK or "define" in ARGS) else ({}, None)
 pts = [MW @ v.co for v in human.data.vertices]
 
 # Stubble, as in the photos: a soft mask over the jaw, the chin and the upper lip, kept off the
@@ -254,12 +342,15 @@ def painter_masks():
 painter_masks()
 for p in human.data.polygons:
     p.use_smooth = True
+if PLANE_OF:
+    plane_shading(PLANE_OF, PLANE_W, PLANES[1])
 sd = human.modifiers.new("Smooth", 'SUBSURF')
 sd.levels, sd.render_levels = 1, 1
+sd.use_custom_normals = True                       # the planes' shading kept through the smoothing
 
 
 # ---------------------------------------------------------------- the hair, in locks
-def hair(n_locks=90, seed=3):
+def hair(n_locks=130, seed=3):
     """Locks of hair grown over the scalp: parted on his left, those right of the part swept
     across the forehead and down past the temple, the rest falling to the jaw at the sides and the
     nape at the back, each lying on the ones beneath; every lock a tapered band, thick at the
@@ -295,7 +386,7 @@ def hair(n_locks=90, seed=3):
     roots = []
     for i in rng.sample(scalp, len(scalp)):
         p = pts[i]
-        if all((p - q).length > 0.013 for q in roots):
+        if all((p - q).length > 0.011 for q in roots):
             roots.append(p)
         if len(roots) >= n_locks:
             break
@@ -353,7 +444,7 @@ def hair(n_locks=90, seed=3):
             norms.append(nq)
             if p.z < end_z and i > 6:
                 break
-        width = rng.uniform(0.005, 0.01) if wisp else rng.uniform(0.04, 0.06)   # big locks that merge into one mass, as Vi's; wisps fine
+        width = rng.uniform(0.005, 0.01) if wisp else rng.uniform(0.045, 0.065)   # big locks that merge into one mass, as Vi's; wisps fine
         width *= 0.45 + 0.55 * ramp01(0.04, 0.1, 0.008 * (len(path) - 1))           # short ones narrower, not lumps
         taper = 1.8 if fringe > 0.2 else 3.0                                         # the fringe's ends to points
         cx, cy = k % cols, k // cols
@@ -751,13 +842,14 @@ else:
             print("painted %s in %.0fs" % (png.name, time.time() - t))
     wear(human, painted_mat("Painted skin", skin_png, sheen=0.07, rim=0.12, quiet="lid_region"))
     wear(locks, painted_mat("Painted hair", hair_png))
-    wear(beneath, P.flat("Hair beneath", (0.09, 0.055, 0.035)))   # the hair's mass in its own shadow
+    wear(beneath, P.flat("Hair beneath", (0.13, 0.085, 0.055)))   # the hair's mass in its own shadow, not a hole
     for kind, col in (("eyebrows", (0.17, 0.12, 0.1)), ("eyelashes", (0.1, 0.07, 0.06))):
         m, g, out = P.material("Painted " + kind)
         tex = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]}, image=cutouts[kind])
         em = g.new("ShaderNodeEmission", {"Color": (*P.srgb(col), 1.0), "Strength": 1.0})
         tr = g.new("ShaderNodeBsdfTransparent")
-        a = g.remap(tex.outputs["Alpha"], 0.03, 0.3 if kind == "eyelashes" else 0.45, 0.0, 1.0, smooth=False)   # full: his brows; a bold lid line, as Vi's
+        a = g.remap(tex.outputs["Alpha"], 0.03 if kind == "eyelashes" else 0.12, 0.3 if kind == "eyelashes" else 0.55, 0.0, 1.0,
+                    smooth=False)   # a bold lid line, as Vi's; the brows' hairs over their painted shape, no stray ones
         g.nt.links.new(g.new("ShaderNodeMixShader", [a, tr.outputs[0], em.outputs[0]]).outputs[0], out.inputs["Surface"])
         wear(fitted[kind], m)
     wear(fitted["eyes"], P.flat("Eye", (0.85, 0.82, 0.78)))

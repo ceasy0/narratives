@@ -39,12 +39,12 @@ PALETTES = {
     # locks parted by dark and lit with strong painted highlights.
     # With the sun as on Vi (your note: sunlight and shadows on the face): a clearer turn from
     # light to a cooler shadow, the light warm.
-    "skin": dict(shadow=(0.54, 0.49, 0.5), light=(1.0, 0.97, 0.92), soft=(0.2, 0.62),
+    "skin": dict(shadow=(0.54, 0.49, 0.5), light=(1.0, 0.97, 0.92), soft=(0.22, 0.36), steps=(0.62, 0.9, 0.45),
                  warm=((1.08, 0.9, 0.84), 0.15), highlight=None,
                  crease=((0.45, 0.36, 0.36), 0.45), crease_at=(0.62, 0.32), wet=0.06, smooth_base=2),
     "hair": dict(shadow=(0.45, 0.42, 0.5), light=(1.05, 1.0, 0.94), soft=(0.04, 0.5),
                  warm=((1.1, 0.9, 0.8), 0.15), highlight=((0.6, 0.43, 0.27), 0.55),
-                 crease=((0.4, 0.3, 0.25), 0.3), crease_at=(0.72, 0.36), wet=0.3, strands=True),
+                 crease=((0.45, 0.36, 0.3), 0.22), crease_at=(0.72, 0.36), wet=0.3, strands=True),
 }
 
 
@@ -103,10 +103,15 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
     top = np.percentile(L[mask > 0], 99) if mask is not None and mask.any() else np.percentile(L, 99)
     L = L / max(top, 1e-6)
     a, b = p["soft"]
+    if masks2 is not None:                          # the closed lids' light smooth (your note: jagged), so no hard edge is painted there
+        lm = blur(masks2[..., 1], 6)
+        L = L * (1 - lm) + blur(L, 10) * lm
     if masks2 is not None:                          # the nose more defined (your note): its light turns sharper
         nz = blur(masks2[..., 2], 4)
         a, b = a + (0.32 - a) * nz, b + (0.5 - b) * nz
     t = smoothstep(a, b, L)[..., None]
+    if p.get("steps"):                              # the light in two steps, shadow to half-tone to light, so each plane of a form takes its own value, as on Vi
+        t = (1 - p["steps"][2]) * t + p["steps"][2] * smoothstep(p["steps"][0], p["steps"][1], L)[..., None]
     if lift is not None:                            # where a painter leaves it light (under the eyes)
         t = np.maximum(t, 0.6 * blur(lift, 4)[..., None])
     b = base[..., :3]
@@ -124,7 +129,7 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
         h = smoothstep(p["highlight"][1], p["highlight"][1] + 0.12, L)[..., None]
         if p.get("strands"):                        # the sheen in strands across each lock, not in patches, as on Vi
             n = blur(np.random.default_rng(3).random(L.shape[1]), 2)
-            h = h * (0.15 + 0.85 * smoothstep(0.5, 0.62, n))[None, :, None]
+            h = h * (0.15 + 0.85 * smoothstep(0.5, 0.62, n))[None, :, None] * 0.6
         out = out * (1 - h) + np.array(p["highlight"][0]) * h
     if ao is not None and p.get("crease"):
         c = (smoothstep(p["crease_at"][0], p["crease_at"][1], blur(ao[..., :3].mean(-1), 2)) * p["crease"][1])[..., None]
@@ -150,7 +155,7 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
     if brows is not None:                                                              # the brows full (your note)
         bm = np.clip(brows[..., :3].mean(-1), 0, 1)
         bm = np.asarray(Image.fromarray(np.uint8(bm * 255)).filter(ImageFilter.MaxFilter(5))).astype(np.float32) / 255
-        fill = (smoothstep(0.15, 0.6, blur(bm, 2)) * 0.6)[..., None]
+        fill = (smoothstep(0.2, 0.55, blur(bm, 3)) * 0.7)[..., None]
         out = out * (1 - fill) + np.array((0.23, 0.16, 0.12)) * shade * fill
     if masks is not None and not p.get("strands"):
         h = (blur(masks[..., 1], 2) * smoothstep(0.55, 0.95, L) * 0.7)[..., None]     # highlights on the lit ridges
@@ -324,6 +329,10 @@ if __name__ == "__main__":
     if wet:                                         # some of the smooth picture back in, as wet paint is blended
         soft = Image.fromarray(np.uint8(ref)).filter(ImageFilter.GaussianBlur(1.5))
         canvas = Image.blend(canvas, soft, wet)
+    if a.masks2:                                    # the closed lids smooth, no stroke edges (your note)
+        lm = blur(load(a.masks2)[..., 1], 6)[..., None]
+        smooth = np.asarray(Image.fromarray(np.uint8(ref)).filter(ImageFilter.GaussianBlur(3))).astype(np.float32)
+        canvas = Image.fromarray(np.uint8(np.asarray(canvas).astype(np.float32) * (1 - lm) + smooth * lm))
     if PALETTES[a.palette].get("strands"):
         canvas = strands(canvas)
     if a.marks:
