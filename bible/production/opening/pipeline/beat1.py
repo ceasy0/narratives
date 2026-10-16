@@ -3,7 +3,7 @@
 
     blender -b --factory-startup -P beat1.py -- keys          key frames, small, on one sheet, to check the timeline
     blender -b --factory-startup -P beat1.py -- frames A B    film frames A to B-1 (any already done are skipped,
-                                                              so several can run at once on different ranges)
+                                                              so several can run at once, and one can take the end of another's range)
     blender -b --factory-startup -P beat1.py -- assemble      the mp4 from the frames, and the flash check
     blender -b --factory-startup -P beat1.py -- check TC ...  single frames at full size, to look at (work/beat1/check/)
 
@@ -224,10 +224,15 @@ def run_frames(a, b):
     ctx = build()
     drawn, t0 = {}, time.time()
     for n, f in enumerate(todo):
+        path = FRAMES_DIR / ("%04d.png" % f)
+        if path.exists():                                          # another worker has done it since
+            continue
         t = time.time()
-        WC.write_png(FRAMES_DIR / ("%04d.png" % f), frame(f, ctx, drawn))
+        part = path.with_suffix(".%d.part" % os.getpid())          # written whole, then renamed: never half a frame
+        WC.write_png(part, frame(f, ctx, drawn))
+        os.replace(part, path)
         print("frame %d (%s) in %.0fs; %d of %d, %.0f min left" % (f, O.timecode(f), time.time() - t, n + 1, len(todo),
-              (time.time() - t0) / (n + 1) * (len(todo) - n - 1) / 60))
+              (time.time() - t0) / (n + 1) * (len(todo) - n - 1) / 60), flush=True)
 
 
 KEYS = ["00:01", "00:05", "00:09", "00:12", "00:15", "00:17", "00:20", "00:23", "00:26", "00:32", "00:37:23",
