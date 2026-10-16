@@ -288,6 +288,50 @@ def finish(scene, *, brush=2, uniformity=4, sharpness=1.0, eccentricity=1.0, haz
     return ng
 
 
+def final_look(scene, f0, f1, *, glow=0.25, shadows=(0.86, 0.97, 1.0), highlights=(1.04, 1.0, 0.95),
+               vignette=0.3, dispersion=0.006, grain=0.05):
+    """The whole frame finished as a film's would be: a soft glow off the lights; a grade, the
+    shadows a little teal and the lights a little warm; a vignette; a touch of the lens's colour
+    fringing at the edges; a fine film grain, new every frame."""
+    ng = bpy.data.node_groups.new("Final look", 'CompositorNodeTree')
+    ng.interface.new_socket("Image", in_out='OUTPUT', socket_type='NodeSocketColor')
+    g = Nodes(ng)
+    img = g.new("CompositorNodeRLayers").outputs["Image"]
+    gl = g.new("CompositorNodeGlare", {"Image": img, "Threshold": 0.75, "Strength": glow})
+    try:
+        gl.inputs["Type"].default_value = 'Fog Glow'
+    except (TypeError, ValueError):
+        pass
+    img = gl.outputs["Image"]
+    try:
+        lum = g.new("CompositorNodeRGBToBW", [img]).outputs[0]
+    except RuntimeError:
+        sep = g.new("CompositorNodeSeparateColor", [img])
+        lum = g.math('MULTIPLY_ADD', sep.outputs[0], 0.3, g.math('MULTIPLY_ADD', sep.outputs[1], 0.59, g.math('MULTIPLY', sep.outputs[2], 0.11)))
+    img = g.mix(g.math('MULTIPLY', g.math('SUBTRACT', 1.0, lum), 0.6), img, g.scale(img, shadows))
+    img = g.mix(g.math('MULTIPLY', lum, 0.6), img, g.scale(img, highlights))
+    el = g.new("CompositorNodeEllipseMask", {"Size": (0.95, 0.9), "Value": 1.0})
+    soft = g.new("CompositorNodeBlur", {"Image": el.outputs[0], "Size": (300, 300)})
+    img = g.scale(img, g.remap(soft.outputs[0], 0.0, 1.0, 1.0 - vignette, 1.0, smooth=False))
+    ld = g.new("CompositorNodeLensdist", {"Image": img, "Distortion": 0.0, "Dispersion": dispersion})
+    img = ld.outputs[0]
+    nz = g.new("ShaderNodeTexNoise", {"Scale": 900.0, "Detail": 0.0, "Roughness": 0.5})
+    try:
+        nz.noise_dimensions = '4D'
+        for f, w in ((f0, 0.0), (f1, (f1 - f0) * 3.7)):
+            nz.inputs["W"].default_value = w
+            nz.inputs["W"].keyframe_insert("default_value", frame=f)
+    except Exception:
+        pass
+    img = g.mix(grain, img, nz.outputs["Fac"], "OVERLAY")
+    go = g.new("NodeGroupOutput")
+    ng.links.new(img, go.inputs[0])
+    scene.compositing_node_group = ng
+    scene.render.use_compositing = True
+    scene.render.compositor_device = 'GPU'          # the same frame, 2.6 s instead of 6.5 at 1080p
+    return ng
+
+
 def eevee(scene, samples=48):
     """EEVEE for the painted look: soft shadows, AO for the paint's own occlusion, the view
     transform left Standard, so the colours are the ones painted."""

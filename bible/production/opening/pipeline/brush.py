@@ -35,10 +35,10 @@ PALETTES = {
     # locks parted by dark and lit with strong painted highlights.
     "skin": dict(shadow=(0.6, 0.54, 0.53), light=(1.02, 1.0, 0.97), soft=(0.15, 0.8),
                  warm=((1.05, 0.92, 0.88), 0.12), highlight=None,
-                 crease=((0.45, 0.36, 0.36), 0.45), crease_at=(0.62, 0.32), wet=0.35),
+                 crease=((0.45, 0.36, 0.36), 0.45), crease_at=(0.62, 0.32), wet=0.22, smooth_base=3),
     "hair": dict(shadow=(0.45, 0.42, 0.5), light=(1.05, 1.0, 0.94), soft=(0.04, 0.5),
                  warm=((1.1, 0.9, 0.8), 0.15), highlight=((0.68, 0.52, 0.36), 0.55),
-                 crease=((0.3, 0.22, 0.18), 0.5), crease_at=(0.72, 0.36), wet=0.15, strands=True),
+                 crease=((0.4, 0.3, 0.25), 0.3), crease_at=(0.72, 0.36), wet=0.3, strands=True),
 }
 
 
@@ -65,15 +65,18 @@ def compose(base, light, mask, palette, ao=None, masks=None):
     """The picture to paint, 0-255 sRGB: the colour in its painted light, the creases dark. masks
     (from face_test.py): red, where to leave it light; green, the ridges, for highlights where the
     light falls; blue, the line of the closed lids, painted dark."""
-    lift = masks[..., 0] if masks is not None else None
     p = PALETTES[palette]
+    lift = masks[..., 0] if masks is not None and not p.get("strands") else None
     L = blur(light[..., :3].mean(-1), 3)          # the bake's noise out, so it isn't painted as grit
     top = np.percentile(L[mask > 0], 99) if mask is not None and mask.any() else np.percentile(L, 99)
     L = L / max(top, 1e-6)
     t = smoothstep(p["soft"][0], p["soft"][1], L)[..., None]
     if lift is not None:                            # where a painter leaves it light (under the eyes)
         t = np.maximum(t, 0.85 * blur(lift, 4)[..., None])
-    col = srgb(base[..., :3])
+    b = base[..., :3]
+    if p.get("smooth_base"):                        # the scan's colour drifts kept, its pores out
+        b = np.stack([blur(b[..., i], p["smooth_base"]) for i in range(3)], -1)
+    col = srgb(b)
     out = col * (np.array(p["shadow"]) * (1 - t) + np.array(p["light"]) * t)
     w = np.exp(-((L - 0.5 * (p["soft"][0] + p["soft"][1])) / 0.12) ** 2)[..., None] * p["warm"][1]
     out = out * (1 + w * (np.array(p["warm"][0]) - 1))
@@ -87,8 +90,10 @@ def compose(base, light, mask, palette, ao=None, masks=None):
         c = (smoothstep(p["crease_at"][0], p["crease_at"][1], blur(ao[..., :3].mean(-1), 2)) * p["crease"][1])[..., None]
         if lift is not None:
             c = c * (1 - 0.7 * blur(lift, 4)[..., None])
+        if masks is not None and p.get("strands"):  # hair: no dark knot where the locks start
+            c = c * smoothstep(0.0, 0.3, masks[..., 0])[..., None]
         out = out * (1 - c) + out * np.array(p["crease"][0]) * c
-    if masks is not None:
+    if masks is not None and not p.get("strands"):
         h = (blur(masks[..., 1], 2) * smoothstep(0.55, 0.95, L) * 0.7)[..., None]     # highlights on the lit ridges
         out = out * (1 - h) + np.minimum(out * np.array((1.14, 1.1, 1.05)) + 0.03, 1.0) * h
         lid = (blur(masks[..., 2], 1) * 0.9)[..., None]                               # the lids' line, bold
@@ -162,7 +167,7 @@ def lay(draw, pts, col, R, rng, bristles=True):
         draw.ellipse((x - R, y - R, x + R, y + R), fill=c)
     if bristles and R >= 3 and len(pts) > 1:
         for _ in range(2):
-            k = rng.uniform(0.9, 1.1)
+            k = rng.uniform(0.94, 1.06)
             cc = tuple(int(min(255, max(0, v * k))) for v in c)
             draw.line(offset(pts, rng.uniform(-0.55, 0.55) * R), fill=cc, width=max(1, w // 5), joint="curve")
 
