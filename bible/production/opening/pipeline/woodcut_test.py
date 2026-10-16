@@ -20,9 +20,9 @@ Blender gives the cut its two inputs (Cycles, one sample a point, so every value
 - how much light reaches it: the raking sun on the static's own grain, with a little of the
   grain's own light, so the shadows are black and the lit planes white.
 The cut (numpy, here) turns those into white lines: as wide as the light, tapering at each end
-like a graver's stroke, short in the static and long over the face, with gouged, uneven edges.
+like a graver's stroke, short in the static and long over the face, each edge gouged on its own.
 Nothing outlines the face; it's seen by how the lines bend over it and how wide the light makes
-them. Where the lines would crowd closer than the hand could cut, they're left black.
+them. Where they'd crowd closer than a hand could cut, every other line gives way.
 
 On twos: the sheet, the flow, the rise and the cut change twelve times a second, and each
 drawing is re-cut with a new seed, so the lines boil a little at their edges, like hand-drawn
@@ -63,7 +63,7 @@ FPS = O.FPS
 FRAMES, TWOS = 2 * FPS, 2                         # two seconds, a new drawing every second frame
 STILL_AT = FPS                                    # the still is the clip's middle drawing
 W, H = (960, 540) if PREVIEW else (1920, 1080)
-K_CLIP, K_STILL = (2, 2) if PREVIEW else (3, 4)   # samples a side in each pixel, for the cut's edges
+K_CLIP, K_STILL = (2, 2) if PREVIEW else (4, 4)   # samples a side in each pixel, for the cut's edges
 
 # The block (metres; the face is about 0.24 m from chin to hairline)
 SP = 0.0021                                       # the cuts' spacing: about eight pixels at this framing
@@ -73,10 +73,12 @@ GLOW = 0.10                                       # the static's own light, unde
 V_GRAIN, V_SWELL, V_EDDY = 0.05, 0.015, 0.03      # how fast the flow carries each (m/s), left to right
 SWELL = (0.010, 0.12, 0.024)                      # the static's swells: height, length, breadth (m)
 RISE = (0.048, 0.0025)                            # the nose's height above the sand, and how much it rises a second
-SKIRT = (16, 0.6)                                 # the sand piled round the face: how far (cells of 0.5 mm), how high
+SKIRT = (24, 0.75)                                # the sand piled round the face: how far (cells of 0.5 mm), how high
+WIDEN = 1.08                                      # the face a little wider than face_test's (your note, 2026-10-15)
 # The cut
 WIDTH = 0.42                                      # half-width of a line in full light, in spacings
 THINNEST = 1.1                                    # the finest line a graver cuts, in pixels at 1920; thinner isn't cut
+CROWD = 5.0                                       # lines closer than this on screen (pixels at 1920) give way to fewer
 TONE = (0.38, 0.92)                               # light below the first is black; above the second, the widest cut
 STROKE, STROKE_FACE = (5.0, 24.0), 2.5            # stroke lengths in spacings; how much longer over the face
 INK, PAPER = 0.035, 0.92                          # the print's black and white, as on screen
@@ -197,21 +199,23 @@ def drawing(t, face):
     level = D.max() - (RISE[0] + RISE[1] * t)
     v = v0 + dx * np.arange(D.shape[0])[:, None]
     u = u0 + dx * np.arange(D.shape[1])[None, :]
-    D = D - 0.035 * ramp01(0.04, 0.10, v) - 0.02 * ramp01(0.055, 0.075, np.abs(u))   # the skull and the sides sink: the face's mask comes up
+    oval = np.hypot(u / 0.075, (v + 0.02) / np.where(v > -0.02, 0.095, 0.125))   # round the face, hairline to chin
+    D = D - 0.04 * ramp01(0.8, 1.15, oval)                         # outside it the head sinks: the face's mask comes up, with no straight edge
     r = 0.0025                                                     # the sand rounds the face's edges
     F = r * np.log1p(np.exp(np.clip((D - level) / r, -60, 60)))
     F = blur(F, 2.0)                                               # and smooths its small forms
     F = np.maximum(F, SKIRT[1] * blur(F, SKIRT[0]))                # and piles against it
-    Fs = sample(F, dx, u0, v0, X, Y)
+    Fs = sample(F, dx, u0, v0, X / WIDEN, Y)
+    mound = sample(blur(F, 30.0), dx, u0, v0, X / WIDEN, Y)        # the face's mass, without its forms
     out = ramp01(0.0, 0.006, Fs)                                   # where the face is out of the sand
     swell = SWELL[0] * (noise2((X - V_SWELL * t) / SWELL[1], Y / SWELL[2], 1) - 0.5) * (1 - 0.75 * out)
     Z = Fs + swell
     eddy = 0.008 * (noise2((X - V_EDDY * t) / 0.09, Y / 0.07, 2) - 0.5) * (1 - 0.6 * out)
-    phi = (Y - BEND * Z + eddy) / SP
+    phi = (Y - BEND * (Z - 0.6 * mound) + eddy) / SP              # bent by the forms more than by the mass, so no band of crowded lines rings the face
     s = (X - V_GRAIN * t) / SP / (1 + (STROKE_FACE - 1) * out)
     g = noise2((X - V_GRAIN * t) / 0.03, Y / 0.011, 3)
     grain = (0.66 + 0.45 * g) * (1 - out) + (0.95 + 0.15 * g) * out
-    return Z, np.stack([phi, s, np.zeros_like(s)], -1), grain
+    return Z, np.stack([phi, s, grain], -1), grain
 
 
 def build_sheet():
@@ -238,14 +242,14 @@ def build_sheet():
 def set_drawing(ob, Z, cut, grain):
     me = ob.data
     me.vertices.foreach_set("co", np.stack([X, Y, Z], -1).ravel())
-    me.attributes["cut"].data.foreach_set("vector", cut.reshape(-1).astype(np.float32) + 4000.0)   # kept positive
+    me.attributes["cut"].data.foreach_set("vector", (cut + np.array([4000.0, 4000.0, 0.0])).reshape(-1).astype(np.float32))   # kept positive
     g = grain.reshape(-1)
     me.attributes["grain"].data.foreach_set("color", np.stack([g, g, g, np.ones_like(g)], -1).ravel())
     me.update()
 
 
 def materials():
-    """Two looks at the block: its cut coordinates as light (exact, unlit), and the light on its grain."""
+    """Two looks at the block: its cut coordinates and grain as light (exact, unlit), and the sun on its grain."""
     data = bpy.data.materials.new("Cut data")
     lit = bpy.data.materials.new("Lit grain")
     for m in (data, lit):
@@ -263,13 +267,7 @@ def materials():
     a.attribute_name = "grain"
     di = nt.nodes.new("ShaderNodeBsdfDiffuse")
     nt.links.new(a.outputs["Color"], di.inputs["Color"])
-    em = nt.nodes.new("ShaderNodeEmission")                        # the static's own faint light
-    nt.links.new(a.outputs["Color"], em.inputs["Color"])
-    em.inputs["Strength"].default_value = GLOW
-    add = nt.nodes.new("ShaderNodeAddShader")
-    nt.links.new(di.outputs[0], add.inputs[0])
-    nt.links.new(em.outputs[0], add.inputs[1])
-    nt.links.new(add.outputs[0], nt.nodes.new("ShaderNodeOutputMaterial").inputs["Surface"])
+    nt.links.new(di.outputs[0], nt.nodes.new("ShaderNodeOutputMaterial").inputs["Surface"])
     return data, lit
 
 
@@ -331,19 +329,19 @@ def render_exr(scene, path):
 
 # ---------------------------------------------------------------- the cut
 N0, NN = -600, 1200                    # the line numbers the tables cover
-A0, NA = -6000, 12000                  # and the cells along each line
-S0, NS = -2000, 4000                   # and the strokes along each line
+A0, NA = -2000, 4000                   # and the cells along each line
 
 
 class Hand:
     """The cutter. For the block, fixed: each line's small offset from even spacing, each
     stroke's length, start and weight. For each drawing, new: the wobble of the hand along a line,
-    where each stroke ends to within a little, and the gouged edges."""
+    where each stroke ends to within a little, and the gouge on each edge of each line."""
 
     def __init__(self, seed):
         r = np.random.default_rng(seed)
         self.jit, self.len, self.off = r.random(NN, np.float32), r.random(NN, np.float32), r.random(NN, np.float32)
         self.wgt = r.random((NN, 64), np.float32)
+        self.gate = r.random((NN, NA), np.float32)
         self.seed = seed
 
     def recut(self, drawing):
@@ -351,7 +349,7 @@ class Hand:
             return
         self.drawing = drawing
         r = np.random.default_rng((self.seed, drawing))
-        self.wob, self.edge, self.nick = (r.random((NN, NA), np.float32) for _ in range(3))
+        self.wob, self.up, self.up2, self.down, self.down2 = (r.random((NN, NA), np.float32) for _ in range(5))
         self.shift = r.random(NN, np.float32)
 
 
@@ -364,44 +362,74 @@ def along(tab, row, x):
     return a + (b - a) * f
 
 
-def cut_set(phi, s, tone, thin, width, hand, stroke):
-    """White where a cut is: lines along phi's level sets, strokes along s, each line checked
-    against the three nearest."""
+def cut_set(phi, s, tone, thin, level, width, hand, stroke):
+    """White where a cut is: lines along phi's level sets, strokes along s.
+
+    Where the lines crowd on screen (level > 0), every other line gives way, fading out as the
+    next level takes over, and those left widen to keep the tone, as an engraver cuts fewer lines
+    in a foreshortened plane; so nothing goes black that's lit, and no band of black outlines a
+    form. A line is cut at least `thin` wide or not at all (where its light runs low it breaks into
+    pieces rather than thinning to a hair), to a point at each end of a stroke, and never so wide
+    that it runs into the next. Each edge has its own gouge."""
     white = np.zeros(phi.shape, bool)
-    base = np.floor(phi).astype(np.int64)
+    m0 = np.floor(level)
+    f = level - m0
+    step = 2.0 ** m0                                               # the spacing of the lines left, in spacings
+    scale = 2.0 ** level
+    base = np.floor(phi / step)
     for k in (-1, 0, 1):
-        n = base + k
+        nl = base + k
+        n = (nl * step).astype(np.int64)                           # each line keeps its own number at every level
         row = np.clip(n - N0, 0, NN - 1)
         centre = n + 0.5 + (hand.jit[row] - 0.5) * 0.45 + (along(hand.wob, row, s / 7.0) - 0.5) * 0.12
-        d = np.abs(phi - centre)
+        sd = phi - centre
         L = stroke[0] + (stroke[1] - stroke[0]) * hand.len[row]
         x = s / L + hand.off[row] * 7.0 + (hand.shift[row] - 0.5) * 0.08
         seg = np.floor(x)
         u = (x - seg) / 0.88                                       # the last eighth of each stroke's room is a gap
         prof = np.where(u < 0.18, np.sqrt(np.clip(u / 0.18, 0, 1)), np.clip((1 - u) / 0.82, 0, 1) ** 0.7)
-        wgt = 0.7 + 0.6 * hand.wgt[row, seg.astype(np.int64) % 64]
-        edge = (1 + 0.32 * (along(hand.edge, row, s * 1.6) * 2 - 1)
-                + 0.28 * (along(hand.nick, row, s * 5.0) * 2 - 1))
-        w = width * tone * prof * wgt * edge
-        white |= d < np.where(w > 0.6 * thin, np.maximum(w, thin), 0.0)
+        odd = np.mod(nl, 2) != 0
+        keep = np.where(odd, 1 - f, 1.0)                           # giving way to the next level
+        cap = 0.36 * step * np.where(odd, 1.0, 1.0 + f)            # black always left between lines
+        w = np.minimum(width * tone * scale * keep * (0.7 + 0.6 * hand.wgt[row, seg.astype(np.int64) % 64]), cap)
+        cut_here = w > thin * (0.6 + 0.4 * along(hand.gate, row, s / 2.5))   # near its threshold a line breaks up, not to a hair
+        body = np.where(cut_here, np.maximum(w * prof, thin * ramp01(0.0, 0.12, prof)), 0.0)   # tapering, but no hairline tail
+        up = 1 + 0.25 * (along(hand.up, row, s * 1.6) * 2 - 1) + 0.12 * (along(hand.up2, row, s * 3.5) * 2 - 1)
+        down = 1 + 0.25 * (along(hand.down, row, s * 1.6) * 2 - 1) + 0.12 * (along(hand.down2, row, s * 3.5) * 2 - 1)
+        white |= (sd < body * up) & (-sd < body * down)
     return white
 
 
 HAND = Hand(1)
 
 
+def box(a, r):
+    """Mean over a (2r+1)-square, by summed areas."""
+    c = np.pad(np.pad(a.astype(np.float64), r, mode='edge'), ((1, 0), (1, 0))).cumsum(0).cumsum(1)
+    n = 2 * r + 1
+    return (c[n:, n:] - c[:-n, n:] - c[n:, :-n] + c[:-n, :-n]) / (n * n)
+
+
 def cut(data, light, drawing, K):
     """The print, at W x H, from the passes at K samples a side."""
     t0 = time.time()
     phi, s = data[..., 0] - 4000.0, data[..., 1] - 4000.0
-    tone = ramp01(TONE[0], TONE[1], light[..., 0])
+    tone = ramp01(TONE[0], TONE[1], light[..., 0] + GLOW * data[..., 2])   # the sun on the grain, and the grain's own light
     gy, gx = np.gradient(phi)
-    per = 1920 / W / (np.hypot(gx, gy) * K + 1e-6)                 # the spacing on screen, in pixels at 1920
-    tone *= np.where(per > 0.8 / K, ramp01(2.2, 3.4, per), 1.0)    # too close to cut: left black (not at a fold)
+    g = np.hypot(gx, gy)
+    slope = g < 0.5                                                # not a fold, where the sheet hides itself
+    per = 1920 / W / (np.where(slope, g, 0.0) * K + 1e-6)          # the spacing on screen, in pixels at 1920
+    level = np.where(slope, np.clip(np.log2(CROWD / per), 0, 4), 0.0)
+    level = (box(level, K) / np.maximum(box(slope.astype(np.float32), K), 1e-3)).astype(np.float32)   # across the folds
+    per = np.maximum(per, CROWD / 16)
     HAND.recut(drawing)
-    lit = tone > 1e-3
-    white = np.zeros(phi.shape, bool)
-    white[lit] = cut_set(phi[lit], s[lit], tone[lit], 0.5 * THINNEST / per[lit], WIDTH, HAND, STROKE)
+    lit = tone * WIDTH * 2.0 ** level * 1.3 > 0.7 * 0.5 * THINNEST / per   # anywhere a line could be cut
+    phi, s, tone, per, level = (np.ascontiguousarray(a).ravel() for a in (phi, s, tone, per, level))
+    idx = np.flatnonzero(lit)
+    white = np.zeros(phi.size, bool)
+    for a in range(0, len(idx), 1 << 22):                          # in pieces, to keep the memory down
+        i = idx[a:a + (1 << 22)]
+        white[i] = cut_set(phi[i], s[i], tone[i], 0.5 * THINNEST / per[i], level[i], WIDTH, HAND, STROKE)
     cov = white.reshape(H, K, W, K).mean(axis=(1, 3))
     print("  cut in %.1fs (%.0f%% lit)" % (time.time() - t0, 100 * lit.mean()))
     return INK + (PAPER - INK) * cov
