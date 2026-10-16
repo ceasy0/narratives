@@ -127,10 +127,9 @@ My proposals, built on the decision; each is P2 or P4 (history and scholarly inf
 8. **Pharisees argue with him through the ministry, but take almost no part in his death,** as in the texts.
 9. **Barabbas stays,** as the text tells it, without explaining the custom.
 
-**Still open, for before the Gospels:**
+**Matthew 27:25,** "His blood be on us and on our children," the line most used against Jews for two thousand years, recorded in Matthew only. **Kept as Matthew has it** (your decision, 2026-10-15): spoken by the small crowd at the palace, framed by everything above, and answered by the women weeping on the road. The text gives the answer its words: Jesus turns to them and says, "Daughters of Jerusalem, do not weep for me, but weep for yourselves and for your children" (Luke 23:28). The crowd claims the children for the blood; he grieves for the children. It joins Matthew's scene to Luke's, which is Position 11's kind of choice (the bishops warn against mixing Gospels carelessly; this mix is made on purpose, and says so).
 
-- **Matthew 27:25,** "His blood be on us and on our children." It's recorded speech in one Gospel, and the line most used against Jews for two thousand years. The bishops advise against it; Oberammergau cut it. Under our rules a recorded line stays unless we decide otherwise. My pick is to keep it as Matthew has it, spoken by the small crowd at the palace, framed by everything above, and answered on screen by the Jerusalem women weeping on the road. Or leave it out, as Mark, Luke and John do.
-- **The soldiers' language** (point 7).
+**Still open, for before the Gospels:** the soldiers' language (point 7).
 
 ## Conversation notes
 
@@ -138,9 +137,13 @@ My proposals, built on the decision; each is P2 or P4 (history and scholarly inf
 
 Your note (above) and my reply: Supported for the empire, with the condition. You asked whether that's how it actually went; if so, yes, and to research it as fully as I could. This file is that research.
 
+### Round 2 — 2026-10-15
+
+> Keep Matthew 27:25 as Matthew has it: spoken by the small crowd at the palace and answered by the women weeping on the road.
+
 ## Decision
 
-**Decided 2026-10-15** ("If thats the case, then yes"): the Roman Empire is the series' general antagonist, at least in the Gospels, shown as massive stone and endless colonnades: an empire, a system, not a people, with Romans as layered as anyone (the centurion of Luke 7, the one at the cross, Cornelius). In the Passion the texts' parts stand: the high priests, Rome's appointees, hand him over; Herod mocks him; Pilate, hard and in charge, sentences him; the soldiers crucify him. The research confirms that this is how it went, as far as history can tell. Recorded in [FOUNDATIONS §4](../canon/FOUNDATIONS.md#story-and-structure) and [Position 26](../canon/POSITIONS.md).
+**Decided 2026-10-15** ("If thats the case, then yes"): the Roman Empire is the series' general antagonist, at least in the Gospels, shown as massive stone and endless colonnades: an empire, a system, not a people, with Romans as layered as anyone (the centurion of Luke 7, the one at the cross, Cornelius). In the Passion the texts' parts stand: the high priests, Rome's appointees, hand him over; Herod mocks him; Pilate, hard and in charge, sentences him; the soldiers crucify him. The research confirms that this is how it went, as far as history can tell. Matthew 27:25 is kept as Matthew has it, spoken by the small crowd at the palace and answered by the women weeping on the road, where Jesus grieves for their children (Luke 23:27–28; round 2). Recorded in [FOUNDATIONS §4](../canon/FOUNDATIONS.md#story-and-structure) and [Position 26](../canon/POSITIONS.md).
 
 ## Sources
 
