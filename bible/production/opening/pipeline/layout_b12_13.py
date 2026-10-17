@@ -1,9 +1,9 @@
-"""Layout of beat 12 into beat 13 (03:42-04:51), in grey, at true scale.
+"""Layout of beat 12 into beat 13 (03:42-05:51), in grey, at true scale.
 
     blender -b --factory-startup -P layout_b12_13.py            build the scene and save it
     blender -b --factory-startup -P layout_b12_13.py -- render  build, save, and render the playblast
 
-Writes work/layout/b12-13-layout.blend and work/playblast/1200-1395-layout.mp4
+Writes work/layout/b12-13-layout.blend and work/playblast/1200-1398-layout.mp4
 (960x540, Workbench, with the timecode, shot number, camera and lens burned in).
 
 The world, in metres, Z up. The camera always faces east (+X), so north (+Y) is
@@ -26,7 +26,7 @@ import opening as O  # noqa: E402
 RENDER = "render" in sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else False
 random.seed(12)
 
-F0, F1 = O.frame("03:42"), O.frame("04:51")       # 5328 .. 6984 (end exclusive)
+F0, F1 = O.frame("03:42"), O.frame("05:51")       # 5328 .. 8424 (end exclusive): the walk goes on past the river to the cliff (your note, 2026-10-17)
 T0 = O.frame("04:09")                             # the first footfall: t = 0
 FR = list(range(F0, F1 + 1))
 
@@ -83,7 +83,7 @@ TRAVEL = T("04:23")                               # cut to the travelling camera
 CHARGE = T("04:32")            # they charge: flat out again by CHARGE + 0.4
 MEET = T("04:33:12")           # the clash
 SPEED = [(-3, 7.0), (19, 7.0), (20.5, 4.5), (CHARGE - 0.2, 4.5), (CHARGE + 0.4, 7.0), (MEET - 0.2, 7.0),
-         (MEET + 0.6, 3.0), (26, 3.0), (28, 2.0), (42, 1.5)]
+         (MEET + 0.6, 3.0), (26, 3.0), (28, 2.0), (42, 1.5), (102, 1.2)]   # and a little slower still down the Nile
 OTHER_SPEED = 5.5              # m/s: the other band charges too, and slows as they meet
 CATCH_SPEED = 9.0              # m/s: the two from the cat, running the band down again
 # The travelling camera stays this far from the band's path. In these shots it only ever moves
@@ -94,11 +94,12 @@ CAM_DIST = 9.5
 # (9 m for the cat, 6.5 m after it, 8.5 m for the clash, 10 m at the river), the small zoom in
 # SH1360 once the trunk has passed, and a little more at the grave.
 CAM_LENS = [(12, 35), (15.5, 35), (17, 37), (19.5, 37), (21, 51), (22.5, 51), (23.5, 39), (26.4, 39), (27.6, 43),
-            (32.5, 43), (33.5, 48), (36.5, 48), (39, 33), (42, 33)]
+            (32.5, 43), (33.5, 48), (36.5, 48), (39, 33), (46, 33), (56, 42), (62, 42), (66, 36), (80, 36), (86, 44), (96, 44), (102, 38)]   # down the Nile: closer in the valley, wider at the delta's head
 CAM_MIN_SPEED = 0.5            # m/s: it never stops or goes back, however slowly it goes
 # How far ahead of the band's centre the camera looks, m: it drops back to the rear for the
 # cat (04:26-04:29), then up the line with the newborn (04:37-04:41), lets the line walk through the frame past the grave, then catches up.
-CAM_AHEAD = [(9.5, 1.0), (15.5, 1.0), (17, -2.0), (18.6, -5.0), (19.6, -5.5), (21.6, 0.0), (22.5, 1.0), (26, 1.0), (28, -3.4), (32, 3.2), (36.5, -1.0), (39, 1.0), (42, 1.0)]
+CAM_AHEAD = [(9.5, 1.0), (15.5, 1.0), (17, -2.0), (18.6, -5.0), (19.6, -5.5), (21.6, 0.0), (22.5, 1.0), (26, 1.0), (28, -3.4), (32, 3.2), (36.5, -1.0), (39, 1.0), (48, 1.0),
+             (56, -2.5), (62, 1.0), (72, 1.0), (78, -3.0), (84, 1.5), (102, 1.0)]   # down the Nile it lets the line walk through twice more
 CAM_HEIGHT = 1.5
 # The trunks that cross the lens, each a generation passing: (seconds from 04:07, where it stands
 # along the path from the camera's own place then). Each stands in front of the camera at a depth
@@ -108,8 +109,13 @@ CAM_HEIGHT = 1.5
 # fall inside the chase, so the land can't jump there: they're plain trees. At the third the
 # country jumps 700 km north, and at the fourth 900 km more (the route, DOSSIER): the third and
 # fourth are old trees, wide enough to cover the whole frame as they cross it, and the set beyond
-# them switches on the frame they cover it (JUMPS, below).
-WIPES = [(14.8, -0.5), (21.5, 0.54), (25.4, -0.3), (32.0, -0.3)]
+# them switches on the frame they cover it (JUMPS, below). At the lone tree the land jumps but no
+# generation passes: the woman carrying the newborn (04:37) is the one who kneels at its grave
+# (04:42), so the tree hides the days between (your note, 2026-10-17: the newborn stays in her hands).
+# Past the river the walk goes on down the Nile for a minute (your note, 2026-10-17), and the
+# generations pass at three more wipes, each the start of a shot: a rock pillar at the cataracts
+# (04:51), and two old sycamore figs, in Egypt's valley (05:09) and at the head of the delta (05:29).
+WIPES = [(14.8, -0.5), (21.5, 0.54), (25.4, -0.3), (32.0, -0.3), (44.0, -0.3), (62.0, 0.5), (82.0, -0.3)]
 # Split up (your note, 2026-10-15): once past the leaf, each runner takes their own line through
 # the trees, cutting round the trunks, the band spread 7 m across and 10 m along; they close up
 # again as they charge (SPREAD_T). Per runner in BAND: (across, along) from the band's centre.
@@ -163,8 +169,15 @@ def Y(t):
 # grave; and the White Nile alongside (SH1395 at 04:45:12). Where the land jumps, the set beyond
 # the trunk switches on the frame it covers the lens (JUMPS): what's seen after is another country.
 Y_WOOD, Y_GRASS, Y_DRY, Y_RIVER = Y(T("04:25")) + 2.4, Y(T("04:37")) + 1.3, Y(T("04:41")) + 1.0, Y(T("04:45:12")) + 1.8
-JUMPS = [int(fr(WIPES[2][0])), int(fr(WIPES[3][0]))]     # the frames the third and fourth trunks cover the lens
-ZONES = {"forest": (-25, Y_WOOD), "woodland": (Y_WOOD, Y_GRASS), "grassland": (Y_GRASS, Y_DRY + 60), "dry": (Y_DRY - 50, Y_RIVER + 34)}
+# Then down the Nile (the DOSSIER's route, past the river): at the rock pillar (04:51), Nubia's
+# desert, bare rock and sand to the water and the cataract's black granite in the river (SH1396); at
+# the first fig (05:09), Egypt's limestone valley, cliffs either side and the green strip along the
+# river (SH1397); at the second (05:29), the valley opening toward the head of the delta, the
+# Mokattam's escarpment ahead (SH1398); the band stops on it at 05:51 (SH1400).
+Y_NUBIA, Y_VALLEY, Y_DELTA, Y_END = Y(T("04:51")) + 1.2, Y(T("05:09")) + 1.2, Y(T("05:29")) + 1.2, Y(T("05:51"))
+JUMPS = [int(fr(WIPES[i][0])) for i in range(2, len(WIPES))]     # the frames the jumps' trunks cover the lens
+ZONES = {"forest": (-25, Y_WOOD), "woodland": (Y_WOOD, Y_GRASS), "grassland": (Y_GRASS, Y_DRY + 60), "dry": (Y_DRY - 50, Y_NUBIA + 30),
+         "nubia": (Y_NUBIA - 30, Y_VALLEY + 30), "valley": (Y_VALLEY - 30, Y_DELTA + 30), "delta": (Y_DELTA - 30, Y_END + 40)}
 print("zones", {k: (round(a), round(b)) for k, (a, b) in ZONES.items()}, "| jumps", [O.timecode(f) for f in JUMPS])
 
 # The lie of the land (your note, 2026-10-15: the ground was too flat). Long swells up to about
@@ -172,7 +185,7 @@ print("zones", {k: (round(a), round(b)) for k, (a, b) in ZONES.items()}, "| jump
 # leaf lands, easing into the swells from 3 m to 14 m off, so the low camera there still sees it
 # (and everything there stays at 0); and falling
 # to the river, which runs north east of the path in the dry country (its near bank, RIVER_NEAR).
-RIVER_NEAR = [(75, Y_RIVER - 13), (34, Y_RIVER - 5), (15, Y_RIVER + 2), (12, Y_RIVER + 11), (12, Y_RIVER + 139)]
+RIVER_NEAR = [(75, Y_RIVER - 13), (34, Y_RIVER - 5), (15, Y_RIVER + 2), (12, Y_RIVER + 11), (12, Y_END + 80)]   # and alongside all the way to the cliff
 RIVER_WIDTH = 220.0                            # the White Nile above the meeting of the rivers, running high
 WATER = -1.0                                   # the river's level, m
 
@@ -204,8 +217,12 @@ def height(x, y, river=True):
     ground seen before the lone tree, where the country is still the plain)."""
     flat = smooth(Y_GRASS - 15, Y_GRASS + 5, y)
     dune = smooth(Y_DRY - 15, Y_DRY + 10, y)
+    rock = smooth(Y_NUBIA - 12, Y_NUBIA + 8, y)                   # Nubia: bare rock knolls under the sand
+    flood = smooth(Y_VALLEY - 12, Y_VALLEY + 8, y)                # Egypt's valley: the floodplain, flat
     h = (_swells(x, y) - _AT_LEAF) * smooth(3.0, 14.0, math.hypot(x - LEAF.x, y - LEAF.y)) * (1 - 0.85 * flat * (1 - dune) - 0.6 * dune)
-    h += dune * _dunes(x, y)
+    h += dune * (1 - flood) * _dunes(x, y)
+    h += rock * (1 - flood) * 2.2 * noise.noise(Vector((x / 22.0, y / 22.0, 5.5)))
+    h *= 1 - 0.7 * flood
     bank = river_x(y) if river else None
     if bank is not None:                       # down a bank 6 m wide to the water, and up the far side
         h = lerp(h, WATER - 0.4, smooth(5.0, -1.0, bank - x) * (1 - smooth(-1.0, 5.0, x - bank - RIVER_WIDTH)))
@@ -308,7 +325,7 @@ def in_view(x, y):
     return d.length < 6.0 and d.length > 0 and d.angle(a) < math.radians(45)
 
 
-GX, GY = (-120, 340), (-120, 320)               # the ground modelled at 1 m, out past the river's far bank; flat and low beyond
+GX, GY = (-120, 340), (-120, int(Y_END) + 60)   # the ground modelled at 1 m, out past the river's far bank and on to the cliff; flat and low beyond
 _w = GX[1] - GX[0] + 1
 _fs = [(j * _w + i, j * _w + i + 1, (j + 1) * _w + i + 1, (j + 1) * _w + i)
        for j in range(GY[1] - GY[0]) for i in range(GX[1] - GX[0])]
@@ -326,6 +343,16 @@ bm = bmesh.new()
 bmesh.ops.create_grid(bm, x_segments=1, y_segments=1, size=70000, matrix=Matrix.Translation((0, 0, WATER - 0.5)))
 obj_from_bm("Ground beyond", bm, 0.42)
 
+def switch(ob, jump, on, off_at=None):
+    """Scale an object to nothing, or up from nothing, on the frame a jump's trunk covers the lens
+    (and, with off_at, to nothing again on that later frame)."""
+    pairs = [((jump - 1 - T0) / O.FPS, 0.0 if on else 1.0), ((jump - T0) / O.FPS, 1.0 if on else 0.0)]
+    if off_at is not None:
+        pairs += [((off_at - 1 - T0) / O.FPS, 1.0), ((off_at - T0) / O.FPS, 0.0)]
+    key_scale(ob, pairs)
+
+
+
 # Small things on the ground, so the travelling camera has something to travel past: in the forest,
 # broad-leaved plants, low and wide (they had been cones, and read as small trees the runners ran
 # through: your note, 2026-10-16); in the woodland, brush and stones; on the plain, grass to the
@@ -333,7 +360,7 @@ obj_from_bm("Ground beyond", bm, 0.42)
 # Sahel's cover overlap along the path and switch at the lone tree, where the land jumps.
 for zone, (y0, y1) in ZONES.items():
     bm = bmesh.new()
-    n = int((y1 - y0) * {"forest": 15, "woodland": 60, "grassland": 100, "dry": 30}[zone])   # per metre of path
+    n = int((y1 - y0) * {"forest": 15, "woodland": 60, "grassland": 100, "dry": 30, "nubia": 14, "valley": 80, "delta": 60}[zone])   # per metre of path
     for _ in range(n):
         x, y = random.uniform(-4, 45), random.uniform(y0, y1)
         if abs(x - LANE_X) < 1.5 and random.random() < 0.8:
@@ -351,29 +378,24 @@ for zone, (y0, y1) in ZONES.items():
         elif zone == "woodland":   # and stones
             r = random.uniform(.15, .45)
             ball(bm, (x, y, height(x, y)), (r, r * random.uniform(.6, 1.0), 0.4 * r), 6)
-        elif zone == "grassland":  # grass to the knee or the waist
+        elif zone in ("grassland", "valley", "delta"):  # grass to the knee or the waist; the valley's and the delta's green strip
             cone(bm, (x, y, height(x, y)), random.uniform(.12, .28), 0.0, random.uniform(.25, .6), 5)
+        elif zone == "nubia":      # bare rock and sand: stones and boulders, dark
+            r = random.uniform(.2, .9)
+            ball(bm, (x, y, height(x, y)), (r, r * random.uniform(.6, 1.0), 0.5 * r), 6)
         elif random.random() < 0.7:  # the Sahel: tussocks of short pale grass
             cone(bm, (x, y, height(x, y)), random.uniform(.12, .25), 0.03, random.uniform(.15, .35), 5)
         else:                      # and stones
             cone(bm, (x, y, height(x, y)), random.uniform(.15, .6), random.uniform(.1, .3), random.uniform(.1, .35), 5)
-    cover = obj_from_bm("Ground cover, " + zone, bm, 0.33 if zone != "dry" else 0.45)
+    cover = obj_from_bm("Ground cover, " + zone, bm, {"dry": 0.45, "nubia": 0.2}.get(zone, 0.33))
     if zone == "forest":           # bare until the green comes back at 03:51, up out of the ground
         a, b = fr(T("03:51")), fr(T("03:52:12"))
         key(cover, "location", [a, b], [-0.8, 0.0], index=2)
     elif zone in ("grassland", "woodland"):   # gone at the lone tree, where the country is the Sahel's behind the band too
         key_scale(cover, [((JUMPS[1] - 1 - T0) / O.FPS, 1.0), ((JUMPS[1] - T0) / O.FPS, 0.0)])
-    elif zone == "dry":            # there from the lone tree
-        key_scale(cover, [((JUMPS[1] - 1 - T0) / O.FPS, 0.0), ((JUMPS[1] - T0) / O.FPS, 1.0)])
-
-
-def switch(ob, jump, on, off_at=None):
-    """Scale an object to nothing, or up from nothing, on the frame a jump's trunk covers the lens
-    (and, with off_at, to nothing again on that later frame)."""
-    pairs = [((jump - 1 - T0) / O.FPS, 0.0 if on else 1.0), ((jump - T0) / O.FPS, 1.0 if on else 0.0)]
-    if off_at is not None:
-        pairs += [((off_at - 1 - T0) / O.FPS, 1.0), ((off_at - T0) / O.FPS, 0.0)]
-    key_scale(ob, pairs)
+    else:                          # each country's cover from its jump to the next
+        on = {"dry": 1, "nubia": 2, "valley": 3, "delta": 4}[zone]
+        switch(cover, JUMPS[on], on=True, off_at=JUMPS[on + 1] if on + 1 < len(JUMPS) else None)
 
 
 switch(grounds[0], JUMPS[1], on=False)         # the plain's ground, with no river in it, until the lone tree
@@ -479,7 +501,7 @@ for x, y in spaced(40, (4.5, 220), (Y_DRY - 50, Y_RIVER + 60), 12.0):
         continue
     tree_mesh(bm, (x, y, height(x, y) - 0.1), random.uniform(3, 6), .18, "thorn")
 thorns = obj_from_bm("Thorn trees", bm, 0.28)
-switch(thorns, JUMPS[1], on=True)
+switch(thorns, JUMPS[1], on=True, off_at=JUMPS[2])
 bm = bmesh.new()
 for x, y, h, r in ((4800, Y_DRY - 900, 180, 900), (6500, Y_DRY + 400, 260, 1400), (8200, Y_DRY + 1900, 150, 1100),
                    (5600, Y_RIVER + 2600, 220, 1300), (9000, Y_RIVER - 1500, 300, 1700)):
@@ -839,7 +861,7 @@ GRAB = CAT_T[0] + 1.6                      # the leap lands
 KILL = GRAB + 0.7                          # the spear
 UP = KILL + 0.3                            # the hand up
 CLASH_T = (T("04:32"), T("04:35"))
-BABY_T = (T("04:37"), T("04:41"))
+BABY_T = (T("04:37"), WIPES[3][0])          # in her hands to the lone tree
 GRAVE_T = (T("04:42"), T("04:45:12"))
 GRAVE_WHO = 2
 GRAVE_PULLER = 7               # Man F, walking up the line behind her, takes her arm and pulls her up and on
@@ -904,8 +926,8 @@ for i, (name, h, dx, dy, spear) in enumerate(BAND):
         x = LANE_X + lerp(lerp(dx, SPREAD[i][0], s), 0.12 * (i % 2) - 0.06, u)
         y = YC[f] + lerp(lerp(dy, SPREAD[i][1], s), LINE.get(i, dy), u)
         ph, w = WANDER[i], (1.0 - 0.75 * u) * (1.0 + s)
-        if i == 0:                                                    # the lead runner keeps to the leaf
-            w *= smooth(0.5, 3.0, t)
+        if i == 0:                                                    # the lead runner keeps to the leaf, and holds his line while the view follows him (SH1300: your note, 2026-10-17, a nudge at its end)
+            w *= smooth(1.0, 3.5, t)
         x += w * (0.3 * math.sin(0.8 * t + ph[0]) + 0.15 * math.sin(2.1 * t + ph[1]))
         y += w * (0.7 * math.sin(0.5 * t + ph[2]) + 0.3 * math.sin(1.4 * t + ph[3]))
         x = dodge(dodge(x, y, i), y, i)                                                 # round the trees, the stump and the camera at the leaf (twice: a swerve round one can't end in another)
@@ -1055,25 +1077,22 @@ for j, (dx, dy, falls) in enumerate([(0.9, 0.0, False), (-0.5, 1.2, True), (0.3,
     animate(fig, PF, xs, ys, face, pose, visible=[(CLASH_T[0] - 4, 0), (CLASH_T[0] - 3.5, 1)])
     other_paths.append((xs, ys))
 
-# The newborn, passed up the line from the rear to the front, 04:37-04:41.
+# The newborn, in one woman's hands the whole way, 04:37 to the lone tree (your note, 2026-10-17:
+# not passed along): the woman who kneels at its grave after the tree.
 bm = bmesh.new()
 ball(bm, (0, 0, 0), (0.11, 0.24, 0.1), 8)
 baby = obj_from_bm("Newborn", bm, 0.9)
-order = sorted(LINE, key=lambda i: LINE[i])            # rear to front
 bf, bl = [], [[], [], []]
 for f, t in zip(PF, PT):
-    if not (BABY_T[0] - 0.2 <= t <= BABY_T[1] + 0.2):
+    if not (BABY_T[0] - 1.0 <= t <= BABY_T[1]):
         continue
-    u = min(1.0, max(0.0, (t - BABY_T[0]) / (BABY_T[1] - BABY_T[0]))) * (len(order) - 1)
-    a, b = order[int(min(u, len(order) - 2))], order[int(min(u, len(order) - 2)) + 1]
-    k = smooth(0.25, 0.75, u - int(min(u, len(order) - 2)))           # held, then handed on
     ia = PF.index(f)
     bf.append(f)
-    bl[0].append(lerp(band_paths[a][0][ia], band_paths[b][0][ia], k) - 0.22)
-    bl[1].append(lerp(band_paths[a][1][ia], band_paths[b][1][ia], k))
-    bl[2].append(height(bl[0][-1], bl[1][-1]) + 1.12 + 0.1 * math.sin(math.pi * k))
+    bl[0].append(band_paths[GRAVE_WHO][0][ia] - 0.22)
+    bl[1].append(band_paths[GRAVE_WHO][1][ia])
+    bl[2].append(height(bl[0][-1], bl[1][-1]) + 1.12 + 0.02 * math.sin(2 * math.pi * 1.6 * t))   # held before her, rocking with her stride
 key(baby, "location", bf, bl)
-key_scale(baby, [(BABY_T[0] - 0.3, 0), (BABY_T[0] - 0.2, 1), (BABY_T[1] + 0.1, 1), (BABY_T[1] + 0.2, 0)])
+key_scale(baby, [(BABY_T[0] - 1.0, 1), ((JUMPS[1] - 1 - T0) / O.FPS, 1), ((JUMPS[1] - T0) / O.FPS, 0)])   # gone behind the tree
 
 # The small grave, at the edge of the path on the camera's side.
 gi = PF.index(int(fr(GRAVE_T[0])))
@@ -1100,7 +1119,7 @@ for (xa, ya), (xb, yb) in zip(near, near[1:]):
         rx, ry = lerp(xa, xb, u) - random.uniform(0, 2.5), lerp(ya, yb, u) + random.uniform(-1, 1)
         cone(bm, (rx, ry, height(rx, ry)),
              random.uniform(.05, .12), 0.0, random.uniform(1.5, 3.2), 4)       # reeds and papyrus
-for y in range(int(Y_RIVER) - 12, int(Y_RIVER) + 139, 7):      # thorn trees and doum palms along the near bank, a line of trees on the far
+for y in range(int(Y_RIVER) - 12, int(Y_END) + 60, 7):        # thorn trees and doum palms along the near bank, a line of trees on the far, all the way
     by = y + random.uniform(-3, 3)
     bank = river_x(by)
     if bank is None:
@@ -1116,11 +1135,64 @@ for x, y in ((14.5, Y_DRY + 7), (16, Y_DRY + 10), (15, Y_DRY + 17), (18, Y_DRY +
 hippos = obj_from_bm("Hippos", bm, 0.2)
 switch(hippos, JUMPS[1], on=True)
 
+# ---------------------------------------------------------------- down the Nile (04:51-05:51)
+# Nubia, from the rock pillar: the cataract's black granite, boulders in the river off the near
+# bank, and rock knolls on the land; nothing green but the river's own strip.
+bm = bmesh.new()
+for y in range(int(Y_NUBIA) + 4, int(Y_VALLEY) - 4, 3):
+    bank = river_x(y + 0.5)
+    if bank is None:
+        continue
+    for _ in range(3):
+        r = random.uniform(0.8, 3.0)
+        ball(bm, (bank + random.uniform(3, 70), y + random.uniform(-1.5, 1.5), WATER - 0.3 + 0.4 * r), (r, r * random.uniform(.6, 1.0), 0.6 * r), 7)
+for x, y in spaced(60, (6, 160), (Y_NUBIA - 20, Y_VALLEY + 10), 9.0):
+    bank = river_x(y)
+    if bank is not None and x > bank - 4:
+        continue
+    cone(bm, (x, y, height(x, y) - 0.2), random.uniform(1.5, 4.0), random.uniform(0.4, 1.5), random.uniform(1.0, 3.5), 7)
+cataract = obj_from_bm("Nubia: the cataract and the rock", bm, 0.18)
+switch(cataract, JUMPS[2], on=True, off_at=JUMPS[3])
+# Egypt's limestone valley, from the first fig: a pale cliff wall beyond the river's far bank, and
+# doum palms thick along both banks, the green strip.
+bm = bmesh.new()
+bank = river_x(Y_VALLEY) or 12
+for seg in range(8):
+    y0 = Y_VALLEY - 400 + seg * 180
+    cone(bm, (bank + RIVER_WIDTH + random.uniform(650, 800), y0, WATER - 0.5), random.uniform(220, 300), random.uniform(90, 140), random.uniform(110, 150), 8)
+cliff = obj_from_bm("Egypt: the limestone cliff", bm, 0.58)
+switch(cliff, JUMPS[3], on=True, off_at=JUMPS[4])
+bm = bmesh.new()
+for y in range(int(Y_VALLEY) - 10, int(Y_DELTA) + 20, 4):
+    by = y + random.uniform(-2, 2)
+    bank = river_x(by)
+    if bank is None:
+        continue
+    for bx in (bank - random.uniform(1.5, 9), bank + RIVER_WIDTH + random.uniform(2, 20)):
+        tree_mesh(bm, (bx, by, height(bx, by) - 0.1), random.uniform(8, 13), .25, "palm")
+palms = obj_from_bm("Egypt: doum palms", bm, 0.3)
+switch(palms, JUMPS[3], on=True)
+# The head of the delta, from the second fig: the valley opens, the east cliff lower and further
+# off, and ahead, north, the Mokattam's escarpment the band comes up onto at 05:51.
+bm = bmesh.new()
+bank = river_x(Y_DELTA) or 12
+for seg in range(6):
+    y0 = Y_DELTA - 300 + seg * 220
+    cone(bm, (bank + RIVER_WIDTH + random.uniform(1500, 1700), y0, WATER - 0.5), random.uniform(300, 380), random.uniform(120, 180), random.uniform(60, 80), 8)
+for seg in range(5):
+    x0 = bank + RIVER_WIDTH + 80 + seg * 190
+    cone(bm, (x0, Y_END + random.uniform(260, 320), WATER - 0.5), random.uniform(240, 300), random.uniform(100, 140), random.uniform(70, 90), 8)
+mokattam = obj_from_bm("The delta's head: the Mokattam", bm, 0.5)
+switch(mokattam, JUMPS[4], on=True)
+
 # ---------------------------------------------------------------- the trunks that wipe the frame
 for i, (t, rel) in enumerate(WIPES):
     f = int(fr(t))
     bm = bmesh.new()
-    cone(bm, (0, 0, 0), 0.5 if i < 2 else 0.85, 0.42 if i < 2 else 0.75, 22, 10)   # the jumps' trunks old and wide
+    if i == 4:                                                 # Nubia: a pillar of rock at the water's edge
+        cone(bm, (0, 0, 0), 1.1, 0.9, 7, 7)
+    else:
+        cone(bm, (0, 0, 0), 0.5 if i < 2 else 0.85, 0.42 if i < 2 else 0.75, 22, 10)   # the jumps' trunks old and wide
     trunk = obj_from_bm("Trunk that crosses the lens", bm, 0.12)
     tx, ty = LANE_X - CAM_DIST + 1.2 * curve(CAM_LENS, t, ease=True) / 35.0, CAM_Y[f] + rel
     trunk.location = (tx, ty, height(tx, ty) - 0.1)
@@ -1189,7 +1261,7 @@ key_lens(cam1, f1, [FIXED_LENS] * len(f1))
 CUTS = {"1310": (3, None, (-1.3, 0.1, 1.45), 1.42, None, 50),     # a face, close, running with her (the centre woman)
         "1311": (0, 0.5, (-2.5, 0.0, 1.6), 1.55, None, 35),       # the lead man as he passes, looking back
         "1312": (3, 0.5, (-14.0, 0.0, 4.5), 1.0, None, 35),       # wide and high: the band through the forest
-        "1313": (9, 0.4, (-5.5, 4.0, 1.3), 1.0, (7.1, -4.2), 35),   # the rear runners cross it, right to left; then the trees behind them, nothing to be seen
+        "1313": (9, 0.4, (-5.5, 8.0, 1.3), 1.0, (7.1, -4.2), 35),   # planted ahead of the whole band at the cut (your note, 2026-10-17: they were already half past it), so they all cross it, right to left; then the trees behind them, nothing to be seen
         # 1314-1316 from the other side of the band (your note, 2026-10-14): they run to the right of frame
         "1314": (5, 0.5, (4.0, 2.0, 1.2), 1.0, None, 28),         # the girl, running hard, wider, from ahead of her
         "1315": (7, 0.5, (2.2, 0.0, 0.6), 0.8, None, 28),         # spears and legs, low
@@ -1297,7 +1369,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, fifteenth pass"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, sixteenth pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)
@@ -1306,7 +1378,7 @@ r.image_settings.file_format = 'FFMPEG'
 r.ffmpeg.format, r.ffmpeg.codec = 'MPEG4', 'H264'
 r.ffmpeg.constant_rate_factor = 'HIGH'
 r.ffmpeg.gopsize = 12
-out = O.PLAYBLAST / "1200-1395-layout.mp4"
+out = O.PLAYBLAST / "1200-1398-layout.mp4"
 r.filepath = str(out)
 
 O.LAYOUT.mkdir(parents=True, exist_ok=True)
