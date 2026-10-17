@@ -72,7 +72,7 @@ PULSE = 0.07                                      # the camera's beat at the whi
 WHIP_D = 1100.0                                   # how far in the sheet is drawn by the whip's last drawing (pixels at 1920): the far corners' distance, so nothing is left
 BAND = 150.0                                      # the landing: how far outside the rims the lines coming round are drawn as it starts (pixels at 1920), narrowing to nothing
 BAND_FLOW = 120.0                                 # and how far those lines travel in toward the head over the landing (pixels at 1920)
-EDGE = 300.0                                      # the whip: the sheet's edge, as it's drawn in from the frame's, is ragged over this width (pixels at 1920), not a rule
+EDGE = 150.0                                      # the whip: the sheet's edge, as it's drawn in from the frame's, is ragged over this width (pixels at 1920), not a rule
 SHADOW_CUTS = 0.7                                 # the white face's black cuts carry its own lines at this tone (your note, 2026-10-17: the mouth too smooth)
 
 def ease(x):
@@ -202,7 +202,7 @@ def whip(data, light, bare, phi, s, tone, scene, cam, w, h, k, n):
     r = np.hypot(dx, dy)
     ux, uy = dx / np.maximum(r, 1.0), dy / np.maximum(r, 1.0)      # out from the middle of the face
     del dx, dy
-    far = lambda q: WHIP_D / px * q ** 1.5                         # how far in the sheet has come, in samples
+    far = lambda q: WHIP_D / px * q ** 2                           # how far in the sheet has come, in samples: gathering speed
     d0, d1 = far(n / WHIP_N), far((n + 1) / WHIP_N)                 # since the last drawing, and now
     L = WC.ramp01(WC.TONE[0], WC.TONE[1], WC.lit(data, light))      # the sheet's cuts, where they lay
     mean, peak = np.zeros(r.shape, np.float32), np.zeros(r.shape, np.float32)
@@ -211,7 +211,7 @@ def whip(data, light, bare, phi, s, tone, scene, cam, w, h, k, n):
         d = d0 + (d1 - d0) * j / (N - 1)
         xs, ys = cx + ux * (r + d), cy + uy * (r + d)
         margin = np.minimum(np.minimum(xs, w * k - 1 - xs), np.minimum(ys, h * k - 1 - ys))   # to the frame's edge, where the sheet ends
-        inside = np.clip(margin * px / EDGE + 0.5 + 0.7 * (WC.noise2(xs * px / 90.0, ys * px / 90.0, 13) - 0.5), 0.0, 1.0)   # the sheet's edge, ragged either way of where it's come to
+        inside = np.clip(margin * px / EDGE + 0.7 * (WC.noise2(xs * px / 90.0, ys * px / 90.0, 13) - 0.5), 0.0, 1.0) * (margin > 0)   # the sheet's edge, ragged, and nothing from off the frame (a sample off it would draw the edge's own line as a spike)
         ix = np.clip(np.rint(xs), 0, w * k - 1).astype(np.int32)
         iy = np.clip(np.rint(ys), 0, h * k - 1).astype(np.int32)
         del xs, ys
@@ -222,7 +222,7 @@ def whip(data, light, bare, phi, s, tone, scene, cam, w, h, k, n):
             phi_w, s_w, edge = phi[iy, ix], s[iy, ix], inside
         del ix, iy, inside, t
     del ux, uy, r, L
-    streak = np.minimum(0.5 * mean + 0.5 * peak, 0.85) * edge      # never solid: lines, smeared
+    streak = np.minimum(0.5 * mean + 0.5 * peak, 0.7) * edge       # never solid: lines, smeared
     del mean, peak, edge
     return np.where(bare, phi, phi_w), np.where(bare, s, s_w), np.where(bare, tone, streak)
 
@@ -234,27 +234,30 @@ def land(data, light, bare, white, phi, s, tone, w, k, p):
     band of the lines still coming round. Returns the tone of the cuts and the white's fill."""
     Hh, Ww = bare.shape
     px = 1920.0 / (w * k)
-    cols = np.arange(Ww, dtype=np.int32)
-    rows = bare.any(1)
-    left = np.where(rows, bare.argmax(1), 0).astype(np.int32)
-    right = np.where(rows, Ww - 1 - bare[:, ::-1].argmax(1), -1).astype(np.int32)
-    half = np.maximum((right - left) / 2.0, 1.0).astype(np.float32)
-    d = np.minimum(cols[None, :] - left[:, None], right[:, None] - cols[None, :]).astype(np.float32)   # samples in from the nearer rim; negative outside
-    del cols
-    u = d / half[:, None]                                          # 0 at the rims, 1 on the middle line
+    cols = np.broadcast_to(np.arange(Ww, dtype=np.int32)[None, :], bare.shape)
+    far = np.int32(4 * Ww)
+    nl = np.maximum.accumulate(np.where(bare, -far, cols), axis=1)            # along each row: the last column outside the face to the left
+    nr = np.minimum.accumulate(np.where(bare, far, cols)[:, ::-1], axis=1)[:, ::-1]   # and the first to the right
+    dl, dr = (cols - nl).astype(np.float32), (nr - cols).astype(np.float32)   # so each span of the face fills from its own rims, whatever else lies on the row
+    d = np.minimum(dl, dr) - 0.5                                   # samples in from the nearer rim
+    u = d / np.maximum((dl + dr) / 2.0, 1.0)                       # 0 at the rims, 1 on the middle line
+    bl = np.maximum.accumulate(np.where(bare, cols, -far), axis=1)             # outside the face: the nearest of it to the left
+    br = np.minimum.accumulate(np.where(bare, cols, far)[:, ::-1], axis=1)[:, ::-1]   # and to the right
+    dout = np.minimum(cols - bl, br - cols).astype(np.float32)     # samples out from the nearer rim
+    inward = np.where(br - cols < cols - bl, -1.0, 1.0)            # toward the face: left of it, further out is further left
+    del nl, nr, dl, dr, bl, br
     jit = 0.22 * (WC.hash2(np.floor(phi).astype(np.int64), 0, 11) - 0.5) + 0.08 * (WC.noise2(s / 3.0, phi / 2.0, 12) - 0.5)   # each line lands in its own time, a little ragged along it
     front = 1.3 * p
     cover = WC.ramp01(front + 0.03, front - 0.03, u + jit) * bare   # landed: the white, where the lines have come in to
     del u, jit
     fill = np.where(bare, WC.ramp01(WHITE_T - 0.05, WHITE_T, white), 0.0) * cover   # solid, but for the few black cuts: under the brows, the nose, the mouth
     width = max(BAND * (1 - p) / px, 1.0)
-    band = (~bare) & rows[:, None] & (d < 0) & (d > -width)        # outside the rims, the lines still coming round
-    mid = ((left + right) / 2.0)[:, None]
-    shift = np.where(np.arange(Ww)[None, :] < mid, -1.0, 1.0) * (BAND_FLOW * (1 - p) / px)   # those lines flow in toward the head: each shows what lay further out
-    ix = np.clip(np.rint(np.arange(Ww, dtype=np.float32)[None, :] + shift), 0, Ww - 1).astype(np.int32)
+    band = (~bare) & (dout < width)                                # outside the rims, the lines still coming round
+    shift = inward * (BAND_FLOW * (1 - p) / px)                    # those lines flow in toward the head: each shows what lay further out
+    ix = np.clip(np.rint(cols + shift), 0, Ww - 1).astype(np.int32)
     iy = np.broadcast_to(np.arange(Hh, dtype=np.int32)[:, None], ix.shape)
-    coming = WC.ramp01(WC.TONE[0], WC.TONE[1], WC.lit(data, light)[iy, ix]) * WC.ramp01(-width, -0.15 * width, d)
-    del ix, iy, shift, mid
+    coming = WC.ramp01(WC.TONE[0], WC.TONE[1], WC.lit(data, light)[iy, ix]) * WC.ramp01(width, 0.15 * width, dout)
+    del ix, iy, shift, inward, dout, cols
     tone = np.where(bare, tone * (1 - cover), np.where(band, coming, 0.0))
     return tone, fill
 
