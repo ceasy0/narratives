@@ -388,7 +388,7 @@ Your note:
 
 **The apple.** The text says only "fruit." The apple comes later, from Latin, where *malum* (evil) and *mālum* (apple) sound alike. I'd keep the fruit unnamed and not an apple; the treatment can settle what it looks like.
 
-**Question for you:** record it as "the fruit does nothing by itself; the willing is the fall, and the ego comes into being in that willing, one act with the eating"? ([README item 26](../README.md#the-garden))
+**Question for you:** record it as "the fruit does nothing by itself; the willing is the fall, and the ego comes into being in that willing, one act with the eating"? ([README item 17](../README.md#the-garden))
 
 ## Decision
 
