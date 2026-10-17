@@ -926,9 +926,16 @@ def eye_mat(iris=EYE_COLOUR):
     eye = fitted["eyes"]
     cos = [eye.matrix_world @ v.co for v in eye.data.vertices]
     centres = [sum((c for c in cos if (c.x > E.x) == side), Vector()) / sum(1 for c in cos if (c.x > E.x) == side) for side in (True, False)]
+    # The eyes ride the head as the chin lifts (LIFT), so each point is placed by where it rests, not where
+    # it is: its rest position rides with it as an attribute (from the live position, the iris slid up out
+    # of the lids by frame 49 of the breath).
+    if "eye_rest" not in eye.data.attributes:
+        eye.data.attributes.new("eye_rest", 'FLOAT_VECTOR', 'POINT')
+    eye.data.attributes["eye_rest"].data.foreach_set("vector", [x for c in cos for x in c])
+    rest = g.new("ShaderNodeAttribute", attribute_name="eye_rest").outputs["Vector"]
     facing = None
     for c in centres:                               # 1 at the front of each eye, from where the point lies round its centre
-        v = g.new("ShaderNodeVectorMath", [geo.outputs["Position"], tuple(c)], operation='SUBTRACT').outputs[0]
+        v = g.new("ShaderNodeVectorMath", [rest, tuple(c)], operation='SUBTRACT').outputs[0]
         f = g.new("ShaderNodeVectorMath", [g.new("ShaderNodeVectorMath", [v], operation='NORMALIZE').outputs[0], (0.0, -1.0, 0.0)],
                   operation='DOT_PRODUCT').outputs["Value"]
         facing = f if facing is None else g.math('MAXIMUM', facing, f)
