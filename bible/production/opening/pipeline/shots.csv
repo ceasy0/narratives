@@ -1,12 +1,12 @@
 shot,beat,start,end,frames,what
 0100,1,00:00:00,00:10:00,240,The static comes up out of black
-0110,1,00:10:00,00:14:00,96,"Static at full strength, no shape"
-0120,1,00:14:00,00:16:00,48,The static begins to flow
+0110,1,00:10:00,00:14:00,96,"Static at full strength, flowing"
+0120,1,00:14:00,00:16:00,48,The static flows on; the face is about to rise
 0130,1,00:16:00,00:26:00,240,The face rises under the sand
 0140,1,00:26:00,00:38:00,288,The picture holds; the sound draws in
 0200,2,00:38:00,00:38:02,2,Two frames: the sand pressed onto the face
-0210,2,00:38:02,00:38:10,8,The sand blasted inward; the face turns white
-0220,2,00:38:10,00:44:12,146,"The white face alone, eyes closed, six seconds"
+0210,2,00:38:02,00:39:00,22,The sand whipped behind the head in one frame; the lines come round and land on the face
+0220,2,00:39:00,00:44:12,132,"The white face alone, eyes closed"
 0230,2,00:44:12,00:46:00,36,The eyes open; the black gathers into a second face
 0300,3,00:46:00,00:57:00,264,"Two faces: malice and fear, climbing"
 0310,3,00:57:00,00:58:12,36,The dark face comes for the white one
