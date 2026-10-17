@@ -115,7 +115,7 @@ CAM_HEIGHT = 1.5
 # Past the river the walk goes on down the Nile for a minute (your note, 2026-10-17), and the
 # generations pass at three more wipes, each the start of a shot: a rock pillar at the cataracts
 # (04:51), and two old sycamore figs, in Egypt's valley (05:09) and at the head of the delta (05:29).
-WIPES = [(14.8, -0.5), (21.5, 0.54), (25.4, -0.3), (32.0, -0.3), (44.0, -0.3), (62.0, 0.5), (82.0, -0.3)]
+WIPES = [(14.8, -0.5), (21.5, 0.54), (25.4, -0.3), (32.0, -0.3), (42.0, -0.3), (60.0, 0.5), (80.0, -0.3)]
 # Split up (your note, 2026-10-15): once past the leaf, each runner takes their own line through
 # the trees, cutting round the trunks, the band spread 7 m across and 10 m along; they close up
 # again as they charge (SPREAD_T). Per runner in BAND: (across, along) from the band's centre.
@@ -1110,7 +1110,7 @@ near = RIVER_NEAR
 bm = bmesh.new()
 vs = [bm.verts.new((x, y, WATER)) for x, y in near] + [bm.verts.new((x + RIVER_WIDTH, y, WATER)) for x, y in reversed(near)]
 bm.faces.new(vs)
-river = obj_from_bm("River", bm, 0.14)
+river = obj_from_bm("River", bm, 0.62)                       # pale: a flat sheet of sky, so it reads as water, not a wall
 switch(river, JUMPS[1], on=True)
 bm = bmesh.new()
 for (xa, ya), (xb, yb) in zip(near, near[1:]):
@@ -1119,13 +1119,16 @@ for (xa, ya), (xb, yb) in zip(near, near[1:]):
         rx, ry = lerp(xa, xb, u) - random.uniform(0, 2.5), lerp(ya, yb, u) + random.uniform(-1, 1)
         cone(bm, (rx, ry, height(rx, ry)),
              random.uniform(.05, .12), 0.0, random.uniform(1.5, 3.2), 4)       # reeds and papyrus
-for y in range(int(Y_RIVER) - 12, int(Y_END) + 60, 7):        # thorn trees and doum palms along the near bank, a line of trees on the far, all the way
+for y in range(int(Y_RIVER) - 12, int(Y_VALLEY) + 10, 7):     # thorn trees and doum palms along the near bank, a line of trees on the far, to Egypt (its palms are below)
     by = y + random.uniform(-3, 3)
     bank = river_x(by)
     if bank is None:
         continue
-    for bx, kind in ((bank - random.uniform(2, 7), "thorn" if random.random() < 0.6 else "palm"),
-                     (bank + RIVER_WIDTH + random.uniform(2, 14), "palm" if random.random() < 0.4 else "thorn")):
+    nubia = by > Y_NUBIA                                      # Nubia: the strip thin, palms only, every other tree
+    for bx, kind in ((bank - random.uniform(2, 7), "palm" if nubia or random.random() >= 0.6 else "thorn"),
+                     (bank + RIVER_WIDTH + random.uniform(2, 14), "palm" if nubia or random.random() < 0.4 else "thorn")):
+        if nubia and random.random() < 0.5:
+            continue
         tree_mesh(bm, (bx, by, height(bx, by) - 0.1), random.uniform(6, 11) if kind == "palm" else random.uniform(4, 7), .25, kind)
 reeds = obj_from_bm("Reeds and bank trees", bm, 0.3)
 switch(reeds, JUMPS[1], on=True)
@@ -1163,7 +1166,7 @@ for seg in range(8):
 cliff = obj_from_bm("Egypt: the limestone cliff", bm, 0.58)
 switch(cliff, JUMPS[3], on=True, off_at=JUMPS[4])
 bm = bmesh.new()
-for y in range(int(Y_VALLEY) - 10, int(Y_DELTA) + 20, 4):
+for y in range(int(Y_VALLEY) - 10, int(Y_END) + 60, 4):       # and on through the delta's head
     by = y + random.uniform(-2, 2)
     bank = river_x(by)
     if bank is None:
@@ -1327,7 +1330,7 @@ for tr in list(among):
 print("trees among the runners", len(among))
 assert f2[0] == fr(ACTION) and f2[-1] == fr(TRAVEL) - 1
 
-# Camera 3, 04:23-04:51: travelling beside the band, looking east, a little ahead of the centre.
+# Camera 3, 04:23-05:51: travelling beside the band, looking east, a little ahead of the centre.
 cam3 = camera("CAM travelling")
 f3 = [f for f in FR if f >= fr(TRAVEL)]
 pos, tgt = [], []
