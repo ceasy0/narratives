@@ -8,21 +8,24 @@
     blender -b --factory-startup -P beat1.py -- check TC ...  single frames at full size, to look at (work/beat1/check/)
 
 The timeline, from the shot list and the treatment:
-- 00:00-00:10 (0100) the static comes up out of black: the cuts fade in, the finest first.
-- 00:10-00:14 (0110) the static at full strength, the same grain from edge to edge; no shape, no flow.
-- 00:14-00:16 (0120) it begins to flow, left to right, and swells and eddies form in it.
+- 00:00-00:10 (0100) the static comes up out of black, flowing left to right from the first frame
+  (your note, 2026-10-16): the cuts fade in, the finest first.
+- 00:10-00:14 (0110) the static at full strength, the same grain from edge to edge, flowing; no shape.
+- 00:14-00:16 (0120) swells and eddies form in it.
 - 00:16-00:26 (0130) the face rises under it: at the surface at 00:16, unmistakable by 00:26.
 - 00:26-00:38 (0140) the picture holds while the sound draws in; the face all but still.
 - 00:38:00 (0200) two frames: the sand pressed onto the face, its lines driven close and bent hard
   over every contour.
-- 00:38:02 (0210) eight frames, on ones: the static blasted inward, closing on the head and shut
-  behind it, taking the dark with it; the face turns white.
-- 00:38:10 (0220) the white face alone on black, eyes closed: lit from above it, it's white, drawn
-  in a few cuts where its forms turn from the light.
+- 00:38:02 (0210) eight frames, on ones, and all at the same moment (your note, 2026-10-16): the
+  camera beats in and settles back; the static is swept round the head, fastest at its rim, drawn in
+  and shut behind it, taking the dark with it; and the white leaps onto the face.
+- 00:38:02-00:39:00 (0220) the white grows over the face from where the light from above falls
+  highest, fast at first, until the face is all white but for a few black cuts where its forms turn
+  from the light (under the brows, the nose, the mouth); then it holds, alone on black, eyes closed.
 The camera pushes in slowly from the first frame and comes to rest at 00:38 on the framing of the
-style test's still; after the release it holds. Drawings are on twos (each re-cut, so the lines boil
-at their edges); the release is on ones. Writes work/beat1/frames/NNNN.png (film frames),
-work/beat1/beat1-0000-1007.mp4 and work/beat1/beat1-flash.txt.
+style test's still; at the blast it beats once, in and back, then holds. Drawings are on twos
+(each re-cut, so the lines boil at their edges); the release is on ones. Writes
+work/beat1/frames/NNNN.png (film frames), work/beat1/beat1-0000-1007.mp4 and work/beat1/beat1-flash.txt.
 """
 import math
 import os
@@ -49,9 +52,13 @@ END = O.frame("00:42")                            # a few seconds after the rele
 RELEASE = O.frame("00:38")                        # 0200: two frames pressed
 BLAST = RELEASE + 2                               # 0210: eight frames blasted in
 WHITE = O.frame("00:38:10")                       # 0220: the white face alone
+GROW = (BLAST, O.frame("00:39:00"))               # the white growing over the face: from the blast's first frame, all white by 00:39:00
 K = 4                                             # samples a side in each pixel, as the style test's
-WHITE_SUN = Vector((-0.1, 0.45, 0.89)).normalized()   # the white face's light: high, from beyond the head
-CENTRE = Vector((0.0, -0.02, 0.025))              # the middle of the face, for the blast to close on
+WHITE_SUN = Vector((-0.1, 0.45, 0.89)).normalized()   # the white face's light: high, from beyond the head, so the nose's underside and the upper lip are its shadows
+WHITE_T = 0.5                                    # the white face's light below this is left black: under the brows, the nose's underside, the mouth
+CENTRE = Vector((0.0, -0.02, 0.025))              # the middle of the face, for the whip to turn on and the blast to close on
+WHIP = 1.5                                        # how far round the head the static is whipped by the blast's last frame, at the head's rim (radians): a sweep, short of a spiral
+PULSE = 0.07                                      # the camera's beat at the release: how much closer
 
 
 def ease(x):
@@ -66,14 +73,26 @@ def strength(t):
 
 
 def flow(t):
-    """How far the static has flowed, in seconds at full speed: still until 00:14, at full speed
-    from 00:16."""
-    if t <= 14.0:
+    """How far the static has flowed, in seconds at full speed: moving from the first frame (your
+    note, 2026-10-16), and placed so that from 00:16 it lies as it did when it started still."""
+    return t - 15.0
+
+
+def growth(f):
+    """How far the white has grown over the face: a leap on the blast's first frame, with the camera's
+    beat and the whip (your note, 2026-10-16: all at the same moment), then slowing, all by 00:39:00."""
+    x = min(1.0, max(0.0, (f - GROW[0] + 1) / (GROW[1] - GROW[0] + 1)))
+    return 1 - (1 - x) ** 2
+
+
+def pulse(f):
+    """The camera's one beat at the release (your note, 2026-10-16): in over the blast's first two
+    frames, back over the twelve after."""
+    if f < BLAST:
         return 0.0
-    if t >= 16.0:
-        return 1.0 + (t - 16.0)
-    x = (t - 14.0) / 2.0
-    return 2.0 * (x ** 3 - x ** 4 / 2)                # the integral of the ease from 14 to t
+    if f < BLAST + 2:
+        return ease((f - BLAST + 1) / 2.0)
+    return 1.0 - ease((f - BLAST - 1) / 12.0)
 
 
 def shape(t):
@@ -94,10 +113,10 @@ def rise(t):
 
 def aim(cam, f):
     """The camera: a slow push in from the first frame, coming to rest at 00:38 on the style test's
-    still; held from the release."""
+    still; held from the release but for its one beat."""
     e = ease(min(f, RELEASE) / RELEASE)
     target = Vector((0.0, -0.008, 0.0)).lerp(Vector((0.0, -0.014, 0.018)), e)
-    tilt, dist = math.radians(16.0 + 3.25 * e), 1.20 - 0.325 * e
+    tilt, dist = math.radians(16.0 + 3.25 * e), (1.20 - 0.325 * e) * (1 - PULSE * pulse(f))
     cam.location = target + Vector((0.006 * e, -math.sin(tilt) * dist, math.cos(tilt) * dist))
     cam.rotation_euler = (target - cam.location).to_track_quat('-Z', 'Y').to_euler()
 
@@ -139,6 +158,7 @@ def build():
 
 
 def set_bare(block, bare):
+    """The face bare of the sand, for the Bare pass."""
     b = bare.reshape(-1)
     block.data.attributes["bare"].data.foreach_set("color", np.stack([b, b, b, np.ones_like(b)], -1).ravel())
     block.data.update()
@@ -170,7 +190,7 @@ def frame(f, ctx, drawn, w=1920, h=1080, k=K):
         m, td = f, t38
         key = ("blast", f)
         p = (f - BLAST + 1) / (WHITE - BLAST)
-        args = dict(rise=rise(t38), flow=flow(t38) + 0.25 * (f - BLAST + 1), shape=1.0, bend=WC.BEND * (1 - 0.5 * p))
+        args = dict(rise=rise(t38), flow=flow(t38) + 0.5 * (f - BLAST + 1), shape=1.0, bend=WC.BEND * (1 - 0.5 * p))
     else:                                                          # the white face: the sand gone
         m = f // TWOS
         key = ("white", m)
@@ -186,7 +206,7 @@ def frame(f, ctx, drawn, w=1920, h=1080, k=K):
     t = time.time()
     data = render(scene, block, mats["data"], None, "data", w, h, k)
     phi, s = data[..., 0] - 4000.0, data[..., 1] - 4000.0
-    cap, width = 0.36, WC.WIDTH
+    fill = None
     if f < RELEASE:
         light = render(scene, block, mats["lit"], "Raking light", "light", w, h, k)
         tone = WC.tone_of(data, light) * strength(td)
@@ -194,25 +214,48 @@ def frame(f, ctx, drawn, w=1920, h=1080, k=K):
         light = render(scene, block, mats["lit"], "Raking light", "light", w, h, k)
         tone = 0.75 * WC.ramp01(0.25, 1.0, light[..., 0] + WC.GLOW * data[..., 2])
     else:
-        white = render(scene, block, mats["lit_bare"], "White light", "white", w, h, k)[..., 0]
-        face_tone = WC.ramp01(0.05, 0.40, white)                   # the face white, cut away but for its turns from the light
-        if f < WHITE:                                              # the static closing on the head, the face whitening
-            p = (f - BLAST + 1) / (WHITE - BLAST)
+        g = growth(f)
+        bare = render(scene, block, mats["bare"], None, "bare", w, h, k)[..., 0] > 0.5
+        tone = None
+        if g < 1.0:                                                # the face's own cuts, giving way to the white
             light = render(scene, block, mats["lit"], "Raking light", "light", w, h, k)
+            tone = np.where(bare, WC.tone_of(data, light) * (1 - g), 0.0)
+        if f < WHITE:                                              # the whip: the static swung round the head, and drawn in
+            p = (f - BLAST + 1) / (WHITE - BLAST)
             c = world_to_camera_view(scene, cam, CENTRE)
+            cx, cy = c.x * w * k, (1 - c.y) * h * k
             yy, xx = np.mgrid[0:h * k, 0:w * k].astype(np.float32)
-            r = np.hypot(xx - c.x * w * k, yy - (1 - c.y) * h * k) / k
-            a = np.arctan2(yy - (1 - c.y) * h * k, xx - c.x * w * k)
+            dx, dy = xx - cx, yy - cy
+            del xx, yy
+            r = np.hypot(dx, dy) * (1920.0 / (w * k))               # pixels at 1920
+            a = np.arctan2(dy, dx)
+            th = WHIP * p ** 2 * WC.ramp01(300, 560, r) * (560 / np.maximum(r, 560)) ** 1.2   # a vortex: fastest just off the head, slower out from it, still inside it
+            cs, sn = np.cos(th), np.sin(th)
+            xs, ys = cx + dx * cs + dy * sn, cy - dx * sn + dy * cs   # where each point's static came from
+            inside = (xs >= 0) & (xs <= w * k - 1) & (ys >= 0) & (ys <= h * k - 1)   # from off the frame, nothing
+            ix = np.clip(np.rint(xs), 0, w * k - 1).astype(np.int32)
+            iy = np.clip(np.rint(ys), 0, h * k - 1).astype(np.int32)
+            del dx, dy, th, cs, sn, xs, ys
             ragged = 1 + 0.18 * np.sin(3 * a + 1.3 + 2 * p) + 0.09 * np.sin(7 * a - 0.4) + 0.05 * np.sin(13 * a + 2.1)
             reach = (330 + (1500 - 330) * (1 - p) ** 1.6) * ragged  # pixels at 1920: from past the corners to the head, torn
-            static = WC.tone_of(data, light) * WC.ramp01(reach + 40, reach - 40, r * 1920 / w)
-            bare = render(scene, block, mats["bare"], None, "bare", w, h, k)[..., 0] > 0.5
-            tone = np.where(bare, (1 - p) * static + p * face_tone, static * (1 - p ** 3))
-            cap, width = 0.36 + 0.49 * p, WC.WIDTH * (1 + 1.5 * p)
-        else:
-            tone, cap, width = face_tone, 0.85, WC.WIDTH * 2.5      # the lit cuts overlap, gouges and all: solid white
+            swept = WC.ramp01(reach + 80, reach - 80, r) * inside
+            del r, a, ragged, reach, inside
+            static = WC.ramp01(WC.TONE[0], WC.TONE[1], light[..., 0][iy, ix] + WC.GLOW * data[..., 2][iy, ix]) * swept
+            phi, s = np.where(bare, phi, phi[iy, ix]), np.where(bare, s, s[iy, ix])
+            del ix, iy
+            tone = np.where(bare, tone, static)
+        if g > 0.0:                                                # the white, growing from where the light falls highest over all the face
+            white = render(scene, block, mats["lit_bare"], "White light", "white", w, h, k)[..., 0]
+            wb = white[bare]
+            q0 = float((wb < WHITE_T).mean())                      # the share of the face that stays black
+            T = float(np.quantile(wb, q0 + (1 - q0) * (1 - g)))    # the mark comes down through the face's own light, so the white grows evenly: the high places first, then all but the black share
+            fill = np.where(bare, WC.ramp01(T - 0.05, T, white), 0.0)   # solid above the mark; below it black, in a few cuts: under the brows, the nose, the mouth
     print("  passes in %.1fs" % (time.time() - t))
-    return WC.cut(phi, s, tone, m, k, cap, width)
+    img = WC.cut(phi, s, tone, m, k) if tone is not None else None
+    if fill is not None:
+        fimg = WC.cut(phi, s, fill, m, k, 1.0, WC.WIDTH * 2.5)       # lines wide enough to run together: white
+        img = fimg if img is None else np.maximum(img, fimg)
+    return img
 
 
 def run_frames(a, b):
@@ -236,7 +279,7 @@ def run_frames(a, b):
 
 
 KEYS = ["00:01", "00:05", "00:09", "00:12", "00:15", "00:17", "00:20", "00:23", "00:26", "00:32", "00:37:23",
-        "00:38:00", "00:38:01", "00:38:02", "00:38:05", "00:38:08", "00:38:10", "00:40"]
+        "00:38:00", "00:38:01", "00:38:02", "00:38:04", "00:38:06", "00:38:08", "00:38:10", "00:38:14", "00:38:18", "00:39:02"]
 
 
 def run_keys():

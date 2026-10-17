@@ -45,7 +45,7 @@ SUN = Vector((-0.38, 0.80, 0.46)).normalized()    # toward the one light: beyond
 GLOW = 0.10                                       # the static's own light, under the sun's
 V_GRAIN, V_SWELL, V_EDDY = 0.05, 0.015, 0.03      # how fast the flow carries each (m/s), left to right
 SWELL = (0.010, 0.12, 0.024)                      # the static's swells: height, length, breadth (m)
-SKIRT = (24, 0.75)                                # the sand piled round the face: how far (cells of 0.5 mm), how high
+REPOSE = (0.9, 120)                               # the sand heaped against the face: its angle of repose as a slope (42 degrees), and how far out it can reach (cells of 0.5 mm)
 WIDEN = 1.08                                      # the face a little wider than face_test's (your note, 2026-10-15)
 # The cut
 WIDTH = 0.42                                      # half-width of a line in full light, in spacings
@@ -165,12 +165,31 @@ def sample(A, dx, u0, v0, x, y):
     return np.where(inside, v, 0.0).astype(np.float32)
 
 
+def pile(F, dx, mu, n):
+    """Sand heaped against the forms of height map F (cells dx): nowhere steeper than its angle of
+    repose, slope mu, out to n cells; the forms themselves stand as they are."""
+    G = F.astype(np.float32)
+    d, dd = mu * dx, mu * dx * math.sqrt(2)
+    for _ in range(n):
+        H = G.copy()
+        np.maximum(H[1:, :], G[:-1, :] - d, out=H[1:, :])
+        np.maximum(H[:-1, :], G[1:, :] - d, out=H[:-1, :])
+        np.maximum(H[:, 1:], G[:, :-1] - d, out=H[:, 1:])
+        np.maximum(H[:, :-1], G[:, 1:] - d, out=H[:, :-1])
+        np.maximum(H[1:, 1:], G[:-1, :-1] - dd, out=H[1:, 1:])
+        np.maximum(H[1:, :-1], G[:-1, 1:] - dd, out=H[1:, :-1])
+        np.maximum(H[:-1, 1:], G[1:, :-1] - dd, out=H[:-1, 1:])
+        np.maximum(H[:-1, :-1], G[1:, 1:] - dd, out=H[:-1, :-1])
+        G = H
+    return G
+
+
 def drawing(face, rise, flow, shape=1.0, bend=BEND, sp=SP):
     """The block: the sheet's heights, the cut's coordinates (phi, s) and the static's grain, with
     the nose `rise` metres above the sand and the static carried `flow` seconds' worth along; `shape`
     scales its swells and eddies (0: the static has no shape yet); `bend` and `sp`, how far the lines
     bend over the forms and how close they lie (the release presses them). Also returns where the face is
-    out of the sand (`out`) and the face bare of the sand piled round it (`bare`)."""
+    out of the sand (`out`) and the face bare of the sand heaped round it (`bare`)."""
     D, dx, u0, v0 = face
     level = D.max() - rise
     v = v0 + dx * np.arange(D.shape[0])[:, None]
@@ -180,8 +199,10 @@ def drawing(face, rise, flow, shape=1.0, bend=BEND, sp=SP):
     r = 0.0025                                                     # the sand rounds the face's edges
     F = r * np.log1p(np.exp(np.clip((D - level) / r, -60, 60)))
     F = blur(F, 2.0)                                               # and smooths its small forms
-    bare = ramp01(0.0015, 0.004, sample(F, dx, u0, v0, X / WIDEN, Y))
-    F = np.maximum(F, SKIRT[1] * blur(F, SKIRT[0]))                # and piles against it
+    heap = pile(F, dx, *REPOSE)                                    # and heaps against it at its angle of repose, so no steep side is left for the lines to crowd on (your note, 2026-10-16)
+    heap = F + ramp01(0.85, 1.0, oval) * (heap - F)                # but the face's own hollows (the eyes, the nostrils) stay open
+    bare = ramp01(0.0015, 0.004, sample(F, dx, u0, v0, X / WIDEN, Y)) * ramp01(0.003, 0.0005, sample(heap - F, dx, u0, v0, X / WIDEN, Y))   # the face out of the sand, and not under the heap
+    F = heap
     Fs = sample(F, dx, u0, v0, X / WIDEN, Y)
     mound = sample(blur(F, 30.0), dx, u0, v0, X / WIDEN, Y)        # the face's mass, without its forms
     out = ramp01(0.0, 0.006, Fs)                                   # where the face is out of the sand
@@ -189,7 +210,10 @@ def drawing(face, rise, flow, shape=1.0, bend=BEND, sp=SP):
     Z = Fs + swell
     eddy = shape * 0.008 * (noise2((X - V_EDDY * flow) / 0.09, Y / 0.07, 2) - 0.5) * (1 - 0.6 * out)
     phi = (Y - bend * (Z - 0.6 * mound) + eddy) / sp              # bent by the forms more than by the mass, so no band of crowded lines rings the face
-    s = (X - V_GRAIN * flow) / sp / (1 + (STROKE_FACE - 1) * out)
+    py, px = np.gradient(phi, YS, XS)
+    q = np.sqrt(1 + np.minimum(np.abs(px) / np.maximum(np.abs(py), 1e-6), 6.0) ** 2)   # a line's length for each metre across the frame
+    run = XS[0] + np.concatenate([np.zeros((q.shape[0], 1)), np.cumsum(0.5 * (q[:, 1:] + q[:, :-1]) * np.diff(XS)[None, :], 1)], 1)
+    s = (run.astype(np.float32) - V_GRAIN * flow) / sp / (1 + (STROKE_FACE - 1) * out)   # how far along its own line each point is, not across the frame: a stroke climbs the face's side instead of standing on it edge-on, and the flow carries it over the rim onto the face (your note, 2026-10-16: the lines round the face looked stuck)
     g = noise2((X - V_GRAIN * flow) / 0.03, Y / 0.011, 3)
     grain = (0.66 + 0.45 * g) * (1 - out) + (0.95 + 0.15 * g) * out
     return Z, np.stack([phi, s, grain], -1), grain, dict(out=out, bare=bare)
