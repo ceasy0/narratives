@@ -15,7 +15,9 @@ The timeline, from the shot list and the treatment:
 - 00:10-00:16 (0110, 0120) the static at full strength, the same from edge to edge, flowing.
 - 00:16-00:26 (0130) the face rises under it: at the surface at 00:16, unmistakable by 00:26. The sand
   piles round it as in the first render (your note, 2026-10-17: that edge, not the heap that followed it,
-  which also threw a shadow under the chin).
+  which also threw a shadow under the chin), its lit side crossed by the lines and its far side dark, as
+  that render had it (your note of the same day, with its clip: not the second test's fill of thin lines),
+  and its bottom edge coming out of the sheet as the other edges do, since the light casts no shadow.
 - 00:26-00:38 (0140) the picture holds while the sound draws in; the face all but still.
 - 00:38:00 (0200) two frames: the sand pressed onto the face, its lines driven close and bent hard
   over every contour.

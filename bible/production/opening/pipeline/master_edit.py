@@ -1,6 +1,7 @@
 """Build the Opening's master edit: work/edit/opening-master.blend.
 
-    blender -b --factory-startup -P master_edit.py
+    blender -b --factory-startup -P master_edit.py             build the edit
+    blender -b --factory-startup -P master_edit.py -- render   and render it: work/edit/opening-cut.mp4
 
 One strip per shot of shots.csv, each cut from the v3.1 animatic where that shot
 is in it (channel 1; the animatic is 5:00 and the Opening 6:15 since beats 12 and 13 grew,
@@ -8,8 +9,11 @@ so opening.animatic_frame maps one to the other; the walk down the Nile, 04:51-0
 the animatic, and its shots are black), the animatic's guide sound under it in three pieces,
 shifted the same way (channel 5), and on
 channel 2 every layout playblast found in work/playblast/ named
-<first shot>-<last shot>-layout.mp4, placed at its first shot's timecode.
-A marker stands at the start of each beat. Rebuilding replaces the file.
+<first shot>-<last shot>-layout.mp4, placed at its first shot's timecode, and on channel 3 beat 1's
+latest render (work/beat1/half/beat1-half-0000-1007.mp4, or the full-size one if it's newer).
+A marker stands at the start of each beat. Rebuilding replaces the file. With `render`, the whole is
+rendered at 1920 x 1080 to work/edit/opening-cut.mp4: the Opening cut together at its furthest render
+(your ask, 2026-10-17), every clip over the animatic where it exists.
 """
 import sys
 import pathlib
@@ -19,7 +23,9 @@ import bpy
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import opening as O  # noqa: E402
 
-W, H = 960, 540
+ARGS = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+RENDER = "render" in ARGS
+W, H = (1920, 1080) if RENDER else (960, 540)
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
 scene = bpy.data.scenes.new("Opening master edit")
@@ -80,14 +86,24 @@ for f in sorted(O.PLAYBLAST.glob("*-layout.mp4")):
     st.color_tag = 'COLOR_09'
     print("layout strip:", f.name, O.timecode(st.frame_final_start), "to", O.timecode(st.frame_final_end))
 
+beat1 = [p for p in (O.WORK / "beat1" / "beat1-0000-1007.mp4", O.WORK / "beat1" / "half" / "beat1-half-0000-1007.mp4") if p.exists()]
+if beat1:
+    f = max(beat1, key=lambda p: p.stat().st_mtime)             # the latest render of beat 1 and the release, 0:00-0:42
+    st = se.strips.new_movie("BEAT 1 " + f.stem, str(f), channel=3, frame_start=0, fit_method='FIT')
+    st.color_tag = 'COLOR_08'
+    print("beat 1 strip:", f.name, O.timecode(st.frame_final_start), "to", O.timecode(st.frame_final_end))
+
 r.image_settings.media_type = 'VIDEO'
 r.image_settings.file_format = 'FFMPEG'
 r.ffmpeg.format = 'MPEG4'
 r.ffmpeg.codec = 'H264'
 r.ffmpeg.constant_rate_factor = 'MEDIUM'
 r.ffmpeg.audio_codec = 'AAC'
-r.filepath = str(O.EDIT / "opening-master-preview.mp4")
+r.filepath = str(O.EDIT / ("opening-cut.mp4" if RENDER else "opening-master-preview.mp4"))
 
 O.EDIT.mkdir(parents=True, exist_ok=True)
 bpy.ops.wm.save_as_mainfile(filepath=str(O.MASTER))
 print("saved", O.MASTER, "|", len(shots), "shot strips")
+if RENDER:
+    bpy.ops.render.render(animation=True)
+    print("rendered", r.filepath)
