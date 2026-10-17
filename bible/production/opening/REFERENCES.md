@@ -1,6 +1,6 @@
 # The Opening — visual references
 
-> A look book for the Opening (Gen 1:1–2:7, 5:15, [treatment v3.10](../../story/arcs/01-beginnings/opening/TREATMENT.md)). One section per beat, in the treatment's order and times. Started 2026-10-13, at your request ("You should start a page of visual references for the animatic"). It serves the [production plan](./PLAN.md): the looks it names are what the layout and look-development stages aim at. The series' base style is *Arcane*, with the visions and spiritual scenes more vibrant and abstract, like *Spider-Verse* ([Discussion 006](../../discussions/006-2d-or-3d.md)); the Opening's beats 1–9 are the abstract register and beats 10–14 the world. Add to it freely: a reference you send goes in its beat's section.
+> A look book for the Opening (Gen 1:1–2:7, 6:15, [treatment v3.11](../../story/arcs/01-beginnings/opening/TREATMENT.md)). One section per beat, in the treatment's order and times. Started 2026-10-13, at your request ("You should start a page of visual references for the animatic"). It serves the [production plan](./PLAN.md): the looks it names are what the layout and look-development stages aim at. The series' base style is *Arcane*, with the visions and spiritual scenes more vibrant and abstract, like *Spider-Verse* ([Discussion 006](../../discussions/006-2d-or-3d.md)); the Opening's beats 1–9 are the abstract register and beats 10–14 the world. Add to it freely: a reference you send goes in its beat's section.
 
 **How to read it.** Each reference has a title, a maker and year, a link, one line on **what to take** for this beat (motion, light, colour, scale or texture), and its **licence**. "Link only" means it's copyrighted (a film, an artist's work, a paper's figures): look at it, learn from it, but don't put it in the animatic. "Open" means public domain, CC0 or CC BY, so the image can sit on a mood board or in a reference reel with its credit.
 
@@ -238,7 +238,7 @@
 - **Homo ex humo**, Johann Jakob Scheuchzer, *Physica Sacra* (Augsburg and Ulm, 1731), etching by J. A. Fridrich after J. D. Preissler and J. M. Füssli. <https://wellcomecollection.org/works/twbrjsc2>
   *Take:* Adam framed by eleven human embryos and foetal skeletons, from one the size of a seed to a weeping four-month foetus: "man from the dust" told through the science of its day, growth and death in one plate. It's the precedent for this beat, where a body goes back into the ground and something grows from it. **Open (Public Domain Mark, Wellcome Collection).** → `references/img/12-scheuchzer-homo-ex-humo-wellcome.jpg`
 
-## 13. Fill the earth (4:09–4:51)
+## 13. Fill the earth (4:09–5:51)
 
 *Feet over the leaf, right to left; a band always moving left through forest, woodland and grassland, across generations; a big cat, another band, a newborn passed down the line, a child's grave; a green river running north.*
 
@@ -277,7 +277,7 @@ You asked for scenes of people running through dense growth in an action scene (
   *Take:* a wide lens that roves among people under attack, close enough to touch them. **Link only.**
 
 
-## 14. Rest (4:51–5:15)
+## 14. Rest (5:51–6:15)
 
 *A cliff edge at dawn; wind and breathing; the river opening like a hand into braided green channels to the horizon; mist; a flock lifts off in its thousands, turns and settles; the slow move in to the face; the eye with the river in it.*
 

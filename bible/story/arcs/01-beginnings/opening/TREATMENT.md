@@ -1,8 +1,8 @@
 # The Opening — Treatment
 
-> Genesis 1:1–2:7. One sequence, 5:15, no words, unbroken until the people come. It opens Episode 1; the Garden (2:8–3:24) follows it.
+> Genesis 1:1–2:7. One sequence, 6:15, no words, unbroken until the people come. It opens Episode 1; the Garden (2:8–3:24) follows it.
 
-**Status:** v3.10, 2026-10-17: the Opening's beat sheet, 5:15 now that beat 12 runs 27 s and beat 13 42 s (your layout notes), as the [script](../../../../scripts/beginnings/opening.fountain) (v1.8) and the layout are cut to it; the [animatic](../../../../production/opening/README.md) (v3.1) is still 5:00, with beat 12 at 18 s and beat 13 at 36. Everything tagged P5 is yours; everything tagged P6 is my suggestion.
+**Status:** v3.11, 2026-10-17: the Opening's beat sheet, 6:15 now that beat 12 runs 27 s and beat 13 1:42 (your layout notes: the walk goes on down the Nile past the river), as the [script](../../../../scripts/beginnings/opening.fountain) (v1.9) and the layout are cut to it; the [animatic](../../../../production/opening/README.md) (v3.1) is still 5:00, with beat 12 at 18 s and beat 13 at 36. Everything tagged P5 is yours; everything tagged P6 is my suggestion.
 
 **The Opening is the exception to the first pass** (your decision, 2026-10-07), so it has a script and an animatic ahead of the rest. The timings are the table in §2: change a timing here, and the animatic re-renders to it. How the finished Opening gets made is the [production plan](../../../../production/opening/PLAN.md).
 
@@ -37,8 +37,8 @@ Six rules, from your notes. Every beat follows them.
 | 10 | The waters swarm | 1:20–23 | The cell; then the first eyes | The sea; a great sea creature; wings above the surface | 2:46–3:18 | 32s |
 | 11 | The land | 1:24–25 | The animal | Shore and wings, ferns, night; the sky falling | 3:18–3:42 | 24s |
 | 12 | Dust | 2:7 | A dead animal's face; a tree; a leaf | Land, years running | 3:42–4:09 | 27s |
-| 13 | Fill the earth | 1:26–28 | One face, handed down, always walking left | Forest to a green river | 4:09–4:51 | 42s |
-| 14 | Rest | 2:1–7 | The first face again | The delta, green, and birds | 4:51–5:15 | 24s |
+| 13 | Fill the earth | 1:26–28 | One face, handed down, always walking left | Forest to the Nile, and down it | 4:09–5:51 | 1m42s |
+| 14 | Rest | 2:1–7 | The first face again | The delta, green, and birds | 5:51–6:15 | 24s |
 
 **Inside beat 1:** black at 0:00, and the fade starts on that first frame, slowly, the sound a little ahead of the picture; full strength by 0:10; it begins to flow at 0:14; the face starts to stand out at 0:16 and is unmistakable by 0:27; the whisper draws in and climbs from 0:26; the release is at 0:38.
 
@@ -154,7 +154,7 @@ A leaf falls into the frame from above, in front of the trunk, slowly, swinging 
 
 Everything is still. Four seconds.
 
-### 13. Fill the earth (4:09–4:51)
+### 13. Fill the earth (4:09–5:51)
 
 Feet: we never see the people coming, and their legs are the first of them in frame. A crowd of them, running, straight over the leaf, from right to left. The rush of them whips the leaf up and away, tumbling, and as the first foot comes down the view turns with him, at once, and runs with them. Then the first cut in the Opening: the people bring it. People, shouting, wild.
 
@@ -162,13 +162,15 @@ A band of early humans, men and women, with spears and tools, in forest, sprinti
 
 From here the band never stops moving, and neither do we. The view travels beside them, always moving forward with them, however slowly, never toward or away from them (your note, 2026-10-14), and they cross the frame from right to left the whole way; only three of the fast cuts, from the far side of the band, have them running right (your notes, 2026-10-14). Whatever happens to them happens on the move. [[P5: yours (2026-10-05): whether they're fighting, burying a loved one or holding a newborn, they're always still walking forward, to the left, to the next scene. P6: north is screen left, so the view faces east the whole way, toward "Eden, in the east" (2:8).]]
 
-The world is ordinary now: real light, real color, real sound. Only time still skips. Each time the view passes behind a tree or a rise, it's their children, then theirs. We're always on a face, and through all the generations it's nearly the same face. [[P6, kept: from Gen 5:3, a son "in his own likeness, after his image."]]
+The world is ordinary now: real light, real color, real sound. Only time still skips. Each time the view passes behind a tree or a rise, it's their children, then theirs; all but once: the lone tree between the newborn and its grave hides days, not a generation (your note, 2026-10-17: the newborn stays in that woman's hands). We're always on a face, and through all the generations it's nearly the same face. [[P6, kept: from Gen 5:3, a son "in his own likeness, after his image."]]
 
 The forest thins to open woodland and then to grassland. The big cat catches them from behind and drags one of the last two down; the other kills it with one thrust of his spear and hauls him up, and they run on and catch the band up (your note, 2026-10-14). They close up and charge another band, spears levelled, and we see the charge before the other band comes into frame (your note, 2026-10-15); it's ugly and fast, and they keep going, slowing to a walk, a little slower the further they go. A newborn is carried along in the moving line, in one woman's hands the whole way, and nobody stops. The same woman kneels at the edge of the path over a small grave, pushes the last of the earth over it, gets up and walks on. She looks back once. The grave slides out of the frame behind them. [[P1: 1:28, "be fruitful and multiply and fill the earth and subdue it." The two faces' two acts, done by people. P2: you asked whether these people buried their dead. They did, though rarely, and the burials that survive from this time are mostly children's: a toddler at Panga ya Saidi in Kenya, about 78,000 years ago, wrapped and laid on its side; and a child of eight or ten at Taramsa Hill, in the Nile valley itself, about 55,000 years ago, seated in a shallow pit and facing east. P6: the grave is a child's because that's what the record shows; confirmed 2026-10-07. Tension: human death before the Garden ([dossier §4.1](./DOSSIER.md#4-what-pulls-against-it)).]]
 
 Dry country, and a river running north through it, high and wide and green on both banks: reeds and papyrus, trees along the water, hippos in the shallows, birds everywhere. They follow it. [[P2: about 55,000 years ago. The Nile valley is one of the two proposed ways out of Africa, and the genetics of living Egyptians favor it. Between about 56,000 and 44,000 years ago a stronger monsoon over Ethiopia made the Nile run higher. It was a wetter spell, and it may be what opened the way. P5: yours (2026-10-05): the Nile a bit more lush. P6: how much more; [dossier §5](./DOSSIER.md#5-the-science).]]
 
-### 14. Rest (4:51–5:15)
+They follow it down, for a minute more, and the country changes three times, a generation passing at each change (your note, 2026-10-17: the walk goes on past the river, as long as the biomes need). Nubia: bare rock and sand to the water, the river running through black granite with the cataract's boulders in it, the green only the river's own strip. Egypt: the limestone valley, a pale cliff beyond the far bank, doum palms thick along both banks. Then the valley opens toward the head of the delta, and ahead of them stands the escarpment they'll climb. [[P2: the Nile's course from the meeting of the rivers to the Mokattam, [dossier, the route](./DOSSIER.md#the-route-beat-13).]]
+
+### 14. Rest (5:51–6:15)
 
 They come up onto the edge of a cliff and stop. For the first time since the leaf, nobody is moving.
 
