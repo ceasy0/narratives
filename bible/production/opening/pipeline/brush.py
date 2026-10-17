@@ -158,11 +158,14 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
                 Image.fromarray(np.uint8(lip * 255)).save(DEBUG + "-lips.png")
             inside = lip[..., None]
             out = out * (1 - 0.6 * inside) + out * np.array((0.9, 0.78, 0.78)) * 0.6 * inside
-    if brows is not None:                                                              # the brows full (your note)
-        bm = np.clip(brows[..., :3].mean(-1), 0, 1)
+    if brows is not None:                                                              # the brows full, as Vi's (your note, 2026-10-16): solid
+        bm = np.clip(brows[..., :3].mean(-1), 0, 1)                                    # shapes in the hair's colour, with strands along them
         bm = np.asarray(Image.fromarray(np.uint8(bm * 255)).filter(ImageFilter.MaxFilter(5))).astype(np.float32) / 255
-        fill = (smoothstep(0.15, 0.55, blur(bm, 4)) * 0.5)[..., None]                   # a soft shape beneath the hairs: natural, not drawn on
-        out = out * (1 - fill) + np.array((0.28, 0.2, 0.16)) * shade * fill
+        fill = (smoothstep(0.2, 0.55, blur(bm, 4)) * 0.85)[..., None]
+        n = blur_axis(blur_axis(np.random.default_rng(7).random(bm.shape).astype(np.float32), 24, 1), 1, 0)
+        n = (n - n.mean()) / (n.std() + 1e-6)
+        strand = (1.0 - 0.45 * smoothstep(-0.5, -1.4, n) + 0.3 * smoothstep(0.8, 1.6, n))[..., None]
+        out = out * (1 - fill) + np.array((0.2, 0.13, 0.085)) * strand * shade * fill
     if masks is not None and not p.get("strands"):
         if not unlit:
             h = (blur(masks[..., 1], 2) * smoothstep(0.55, 0.95, L) * 0.7)[..., None]     # highlights on the lit ridges
@@ -170,8 +173,8 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
         elif p.get("ridge"):                        # painted highlights on the ridges whatever the light, as Vi's nose and lip have
             h = (smoothstep(0.25, 0.8, blur(masks[..., 1], 2)) * p["ridge"])[..., None]
             out = out * (1 - h) + np.minimum(out * np.array((1.12, 1.09, 1.06)) + 0.05, 1.0) * h
-        lid = (blur(masks[..., 2], 1) * 0.9)[..., None]                               # the lids' line, bold
-        out = out * (1 - lid) + out * np.array((0.3, 0.23, 0.23)) * lid
+        lid = (blur(masks[..., 2], 1) * 0.95)[..., None]                              # the lashes, a filled shape along the lids, near black
+        out = out * (1 - lid) + out * np.array((0.14, 0.1, 0.11)) * lid
     return np.clip(out * 255, 0, 255).astype(np.float32)
 
 

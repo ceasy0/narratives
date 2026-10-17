@@ -7,18 +7,21 @@ import csv
 import pathlib
 
 FPS = 24
-TOTAL = 307 * FPS                             # 5:07 since 2026-10-14 (beat 12 is 7 s longer)
+TOTAL = 315 * FPS                             # 5:15 since 2026-10-16 (beat 12 is 9 s longer than the animatic's, beat 13 six)
 ANIMATIC_TOTAL = 300 * FPS                    # the v3.1 animatic is still 5:00
 
 
 def animatic_frame(f):
-    """Where a frame of the 5:07 Opening is in the 5:00 animatic: the same before 03:42; beat 12
-    (03:42-04:07 now, 03:42-04:00 there) squeezed; everything after it 7 s earlier."""
-    a, b = 222 * FPS, 247 * FPS
+    """Where a frame of the 5:15 Opening is in the 5:00 animatic: the same before 03:42; beat 12
+    (03:42-04:09 now, 03:42-04:00 there) squeezed; the run's fast cuts (04:09-04:23 now,
+    04:00-04:08 there) squeezed; everything after 15 s earlier."""
+    a, b, c = 222 * FPS, 249 * FPS, 263 * FPS
     if f < a:
         return f
     if f < b:
-        return a + round((f - a) * 18 / 25)
+        return a + round((f - a) * 18 / 27)
+    if f < c:
+        return 240 * FPS + round((f - b) * 8 / 14)
     return f - (TOTAL - ANIMATIC_TOTAL)
 
 HERE = pathlib.Path(__file__).resolve().parent

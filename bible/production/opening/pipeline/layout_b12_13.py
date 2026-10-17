@@ -1,4 +1,4 @@
-"""Layout of beat 12 into beat 13 (03:42-04:36), in grey, at true scale.
+"""Layout of beat 12 into beat 13 (03:42-04:51), in grey, at true scale.
 
     blender -b --factory-startup -P layout_b12_13.py            build the scene and save it
     blender -b --factory-startup -P layout_b12_13.py -- render  build, save, and render the playblast
@@ -26,13 +26,13 @@ import opening as O  # noqa: E402
 RENDER = "render" in sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else False
 random.seed(12)
 
-F0, F1 = O.frame("03:42"), O.frame("04:43")       # 5328 .. 6792 (end exclusive)
-T0 = O.frame("04:07")                             # the first footfall: t = 0
+F0, F1 = O.frame("03:42"), O.frame("04:51")       # 5328 .. 6984 (end exclusive)
+T0 = O.frame("04:09")                             # the first footfall: t = 0
 FR = list(range(F0, F1 + 1))
 
 
 def T(tc):
-    """Seconds from 04:00 for a timecode."""
+    """Seconds from 04:09, the first footfall, for a timecode."""
     return (O.frame(tc) - T0) / O.FPS
 
 
@@ -59,7 +59,7 @@ TREE_H = 8.0                   # the tree that grows there, m; we only ever see 
 BRANCH = Vector((LEAF.x, LEAF.y, 3.0))            # the tip of its low branch, over the lane, above the frame
 TREE_GROW = (T("03:54"), T("03:56:12"))           # a shoot, a sapling, a tree; then still
 LEAF_LOOSE = (T("03:58"), T("03:59"))             # the leaf trembles on its stem, then lets go
-LEAF_FALL = (T("03:59"), T("04:03"))              # falls 2.9 m, like a feather; still until 04:07 (4 s)
+LEAF_FALL = (T("03:59"), T("04:05"))              # falls 2.9 m in six seconds, like a feather, swaying (your note, 2026-10-16: slower, swaying more); still until 04:09 (4 s)
 # The unbroken shot, 03:42-04:07, low and right up next to the dead animal (your notes, 2026-10-14),
 # looking straight across the band's path: the head decomposing in the centre of frame, the burrow
 # beside it; then only the stump of the tree that grows there, centred, the forest beyond; the leaf
@@ -68,22 +68,22 @@ LEAF_FALL = (T("03:59"), T("04:03"))              # falls 2.9 m, like a feather;
 # the runners can't be seen coming: their feet and legs come in from the right as they reach the
 # leaf. As the first foot comes down on it, the view turns left with that runner and follows him.
 CAM_FIXED = Vector((LEAF.x - 1.6, LEAF.y, 0.4))    # 40 cm up, 1.6 m from where the leaf lands, 3.4 m from the head
-PITCH = (2.0, -9.0)                                # degrees: level-ish on the face and the tree, then tipped down
+PITCH = (4.0, -9.0)                                # degrees: a little up on the face and the tree, so more of the fall is seen, then tipped down
 TIP_WAIT = 1.0                                     # s: the tip down starts this long after the leaf comes into frame
 TIP_TIME = 2.6                                     # s: and takes this long, slowly, settling after the leaf lands
 FIXED_LENS = 24.0
 TRACK_IN = 0.12                                   # s: from the first footfall, the view takes up the lead runner's pace this smoothly
-ACTION = T("04:08")                               # cut to the fast cuts of the run (SH1310-1316)
-TRAVEL = T("04:15")                               # cut to the travelling camera (SH1320 on)
+ACTION = T("04:10")                               # cut to the fast cuts of the run (SH1310-1316)
+TRAVEL = T("04:23")                               # cut to the travelling camera (SH1320 on)
 
 # The band's speed, m/s, at seconds from 04:07 (linear between the points), from your notes of
 # 2026-10-15: a flat-out sprint from the cat until it's dead, a hard run after it, a sprint again
 # to charge the other band, which only comes into frame once the charge has begun; through the
 # clash they slow, and in SH1360 they're down to a walk, a little slower the further they go.
-CHARGE = T("04:24")            # they charge: flat out again by CHARGE + 0.4
-MEET = T("04:25:12")           # the clash
-SPEED = [(-3, 7.0), (13, 7.0), (14.5, 4.5), (CHARGE - 0.2, 4.5), (CHARGE + 0.4, 7.0), (MEET - 0.2, 7.0),
-         (MEET + 0.6, 3.0), (20, 3.0), (22, 2.0), (36, 1.5)]
+CHARGE = T("04:32")            # they charge: flat out again by CHARGE + 0.4
+MEET = T("04:33:12")           # the clash
+SPEED = [(-3, 7.0), (19, 7.0), (20.5, 4.5), (CHARGE - 0.2, 4.5), (CHARGE + 0.4, 7.0), (MEET - 0.2, 7.0),
+         (MEET + 0.6, 3.0), (26, 3.0), (28, 2.0), (42, 1.5)]
 OTHER_SPEED = 5.5              # m/s: the other band charges too, and slows as they meet
 CATCH_SPEED = 9.0              # m/s: the two from the cat, running the band down again
 # The travelling camera stays this far from the band's path. In these shots it only ever moves
@@ -93,19 +93,23 @@ CAM_DIST = 9.5
 # Its lens, mm, at seconds from 04:07: the framings the earlier passes got by moving in and out
 # (9 m for the cat, 6.5 m after it, 8.5 m for the clash, 10 m at the river), the small zoom in
 # SH1360 once the trunk has passed, and a little more at the grave.
-CAM_LENS = [(6, 35), (9.5, 35), (11, 37), (13.5, 37), (15, 51), (16.5, 51), (17.5, 39), (20.4, 39), (21.6, 43),
-            (26.5, 43), (27.5, 48), (30.5, 48), (33, 33), (36, 33)]
+CAM_LENS = [(12, 35), (15.5, 35), (17, 37), (19.5, 37), (21, 51), (22.5, 51), (23.5, 39), (26.4, 39), (27.6, 43),
+            (32.5, 43), (33.5, 48), (36.5, 48), (39, 33), (42, 33)]
 CAM_MIN_SPEED = 0.5            # m/s: it never stops or goes back, however slowly it goes
 # How far ahead of the band's centre the camera looks, m: it drops back to the rear for the
-# cat (04:18-04:21), then up the line with the newborn (04:29-04:33), lets the line walk through the frame past the grave, then catches up.
-CAM_AHEAD = [(3.5, 1.0), (9.5, 1.0), (11, -2.0), (12.6, -5.0), (13.6, -5.5), (15.6, 0.0), (16.5, 1.0), (20, 1.0), (22, -3.4), (26, 3.2), (30.5, -1.0), (33, 1.0), (36, 1.0)]
+# cat (04:26-04:29), then up the line with the newborn (04:37-04:41), lets the line walk through the frame past the grave, then catches up.
+CAM_AHEAD = [(9.5, 1.0), (15.5, 1.0), (17, -2.0), (18.6, -5.0), (19.6, -5.5), (21.6, 0.0), (22.5, 1.0), (26, 1.0), (28, -3.4), (32, 3.2), (36.5, -1.0), (39, 1.0), (42, 1.0)]
 CAM_HEIGHT = 1.5
 # The trunks that cross the lens, each a generation passing: (seconds from 04:07, where it stands
 # along the path from the camera's own place then). Each stands in front of the camera at a depth
 # that grows with the lens, so it fills the frame the same way whatever the zoom. The third is at
 # the end of the clash, while the camera still moves briskly, so it's a quick wipe (it used to be
-# in SH1360, where the camera now crawls); the fourth is the lone tree in the grass.
-WIPES = [(8.8, -0.5), (15.5, 0.54), (19.4, -0.3), (26.0, -0.3)]
+# in SH1360, where the camera now crawls); the fourth is the lone tree in the grass. The first two
+# fall inside the chase, so the land can't jump there: they're plain trees. At the third the
+# country jumps 700 km north, and at the fourth 900 km more (the route, DOSSIER): the third and
+# fourth are old trees, wide enough to cover the whole frame as they cross it, and the set beyond
+# them switches on the frame they cover it (JUMPS, below).
+WIPES = [(14.8, -0.5), (21.5, 0.54), (25.4, -0.3), (32.0, -0.3)]
 # Split up (your note, 2026-10-15): once past the leaf, each runner takes their own line through
 # the trees, cutting round the trunks, the band spread 7 m across and 10 m along; they close up
 # again as they charge (SPREAD_T). Per runner in BAND: (across, along) from the band's centre.
@@ -151,19 +155,25 @@ def Y(t):
     return YC[int(round(fr(t)))]
 
 
-# Where the country changes along the path: just ahead of the band as the shot of it begins
-# (SH1330 open woodland at 04:17, SH1370 grassland at 04:29, SH1395 dry country at 04:37:12).
-Y_WOOD, Y_GRASS, Y_DRY = Y(T("04:17")) + 2.4, Y(T("04:29")) + 1.3, Y(T("04:37:12")) + 1.8
-ZONES = {"forest": (-25, Y_WOOD), "woodland": (Y_WOOD, Y_GRASS), "grassland": (Y_GRASS, Y_DRY), "dry": (Y_DRY, Y_DRY + 34)}
-print("zones", {k: (round(a), round(b)) for k, (a, b) in ZONES.items()})
+# Where the country changes along the path (route A, the Semliki valley to the Nile: your choice,
+# 2026-10-16, researched in the DOSSIER): just ahead of the band as the shot of it begins. The
+# Congo forest's edge, then its open woodland under the Rwenzori (SH1330 at 04:25); at the third
+# trunk (04:34:10), 700 km north, South Sudan's shea woodland falling to its flat grass plain
+# (SH1370 at 04:37); at the lone tree (04:41), 900 km more, the Sahel's sand and old dunes, with the
+# grave; and the White Nile alongside (SH1395 at 04:45:12). Where the land jumps, the set beyond
+# the trunk switches on the frame it covers the lens (JUMPS): what's seen after is another country.
+Y_WOOD, Y_GRASS, Y_DRY, Y_RIVER = Y(T("04:25")) + 2.4, Y(T("04:37")) + 1.3, Y(T("04:41")) + 1.0, Y(T("04:45:12")) + 1.8
+JUMPS = [int(fr(WIPES[2][0])), int(fr(WIPES[3][0]))]     # the frames the third and fourth trunks cover the lens
+ZONES = {"forest": (-25, Y_WOOD), "woodland": (Y_WOOD, Y_GRASS), "grassland": (Y_GRASS, Y_DRY + 60), "dry": (Y_DRY - 50, Y_RIVER + 34)}
+print("zones", {k: (round(a), round(b)) for k, (a, b) in ZONES.items()}, "| jumps", [O.timecode(f) for f in JUMPS])
 
 # The lie of the land (your note, 2026-10-15: the ground was too flat). Long swells up to about
 # 2 m high and 40 m across, smaller rises, and bumps, from smooth noise; level round where the
 # leaf lands, easing into the swells from 3 m to 14 m off, so the low camera there still sees it
 # (and everything there stays at 0); and falling
 # to the river, which runs north east of the path in the dry country (its near bank, RIVER_NEAR).
-RIVER_NEAR = [(75, Y_DRY - 13), (34, Y_DRY - 5), (15, Y_DRY + 2), (12, Y_DRY + 11), (12, Y_DRY + 139)]
-RIVER_WIDTH = 70.0
+RIVER_NEAR = [(75, Y_RIVER - 13), (34, Y_RIVER - 5), (15, Y_RIVER + 2), (12, Y_RIVER + 11), (12, Y_RIVER + 139)]
+RIVER_WIDTH = 220.0                            # the White Nile above the meeting of the rivers, running high
 WATER = -1.0                                   # the river's level, m
 
 
@@ -183,10 +193,20 @@ def river_x(y):
     return None
 
 
-def height(x, y):
-    """The ground's height at (x, y), m."""
-    h = (_swells(x, y) - _AT_LEAF) * smooth(3.0, 14.0, math.hypot(x - LEAF.x, y - LEAF.y))
-    bank = river_x(y)
+def _dunes(x, y):
+    return 3.0 * noise.noise(Vector((x / 320.0, y / 90.0, 2.2)))
+
+
+def height(x, y, river=True):
+    """The ground's height at (x, y), m: the swells, easing out on the plains of South Sudan (as
+    flat as land gets) and giving way in the Sahel to long low ridges of old dunes held by grass;
+    and, in the Sahel, falling to the river (river=False: the same land with no river in it, the
+    ground seen before the lone tree, where the country is still the plain)."""
+    flat = smooth(Y_GRASS - 15, Y_GRASS + 5, y)
+    dune = smooth(Y_DRY - 15, Y_DRY + 10, y)
+    h = (_swells(x, y) - _AT_LEAF) * smooth(3.0, 14.0, math.hypot(x - LEAF.x, y - LEAF.y)) * (1 - 0.85 * flat * (1 - dune) - 0.6 * dune)
+    h += dune * _dunes(x, y)
+    bank = river_x(y) if river else None
     if bank is not None:                       # down a bank 6 m wide to the water, and up the far side
         h = lerp(h, WATER - 0.4, smooth(5.0, -1.0, bank - x) * (1 - smooth(-1.0, 5.0, x - bank - RIVER_WIDTH)))
     return h
@@ -288,49 +308,101 @@ def in_view(x, y):
     return d.length < 6.0 and d.length > 0 and d.angle(a) < math.radians(45)
 
 
-GX, GY = (-120, 140), (-120, 320)               # the ground modelled at 1 m; flat and low beyond
-_vs = [(x, y, height(x, y)) for y in range(GY[0], GY[1] + 1) for x in range(GX[0], GX[1] + 1)]
+GX, GY = (-120, 340), (-120, 320)               # the ground modelled at 1 m, out past the river's far bank; flat and low beyond
 _w = GX[1] - GX[0] + 1
 _fs = [(j * _w + i, j * _w + i + 1, (j + 1) * _w + i + 1, (j + 1) * _w + i)
        for j in range(GY[1] - GY[0]) for i in range(GX[1] - GX[0])]
-me = bpy.data.meshes.new("Ground")
-me.from_pydata(_vs, [], _fs)
-me.shade_smooth()
-ground = bpy.data.objects.new("Ground", me)
-ground.color = (0.42, 0.42, 0.42, 1.0)
-col.objects.link(ground)
+grounds = []
+for name, river in (("Ground", False), ("Ground, with the river", True)):
+    _vs = [(x, y, height(x, y, river)) for y in range(GY[0], GY[1] + 1) for x in range(GX[0], GX[1] + 1)]
+    me = bpy.data.meshes.new(name)
+    me.from_pydata(_vs, [], _fs)
+    me.shade_smooth()
+    ground = bpy.data.objects.new(name, me)
+    ground.color = (0.42, 0.42, 0.42, 1.0)
+    col.objects.link(ground)
+    grounds.append(ground)
 bm = bmesh.new()
-bmesh.ops.create_grid(bm, x_segments=1, y_segments=1, size=1200, matrix=Matrix.Translation((0, 0, WATER - 0.5)))
+bmesh.ops.create_grid(bm, x_segments=1, y_segments=1, size=70000, matrix=Matrix.Translation((0, 0, WATER - 0.5)))
 obj_from_bm("Ground beyond", bm, 0.42)
 
-# Small things on the ground, so the travelling camera has something to travel past.
+# Small things on the ground, so the travelling camera has something to travel past: in the forest,
+# broad-leaved plants, low and wide (they had been cones, and read as small trees the runners ran
+# through: your note, 2026-10-16); in the woodland, brush and stones; on the plain, grass to the
+# knee or the waist; in the Sahel, pale grass in tussocks and stones. The plain's grass and the
+# Sahel's cover overlap along the path and switch at the lone tree, where the land jumps.
 for zone, (y0, y1) in ZONES.items():
     bm = bmesh.new()
-    n = int((y1 - y0) * {"forest": 15, "woodland": 18, "grassland": 100, "dry": 15}[zone])   # per metre of path
+    n = int((y1 - y0) * {"forest": 15, "woodland": 60, "grassland": 100, "dry": 30}[zone])   # per metre of path
     for _ in range(n):
         x, y = random.uniform(-4, 45), random.uniform(y0, y1)
         if abs(x - LANE_X) < 1.5 and random.random() < 0.8:
             continue
         if in_view(x, y):
             continue
-        if zone == "forest":       # ferns
-            cone(bm, (x, y, height(x, y)), random.uniform(.25, .45), 0.05, random.uniform(.3, .6), 6)
-        elif zone == "woodland":   # brush and stones
-            cone(bm, (x, y, height(x, y)), random.uniform(.15, .5), 0.1, random.uniform(.15, .7), 6)
-        elif zone == "grassland":  # tufts
-            cone(bm, (x, y, height(x, y)), random.uniform(.08, .2), 0.0, random.uniform(.3, .8), 5)
-        else:                      # stones
+        bank = river_x(y)
+        if bank is not None and x > bank - 2.0:
+            continue
+        if zone == "forest":       # broad-leaved plants, low and wide
+            r = random.uniform(.3, .6)
+            ball(bm, (x, y, height(x, y) + 0.04), (r, r * random.uniform(.7, 1.0), 0.3 * r), 6)
+        elif zone == "woodland" and random.random() < 0.8:   # grass between the trees
+            cone(bm, (x, y, height(x, y)), random.uniform(.12, .28), 0.0, random.uniform(.25, .6), 5)
+        elif zone == "woodland":   # and stones
+            r = random.uniform(.15, .45)
+            ball(bm, (x, y, height(x, y)), (r, r * random.uniform(.6, 1.0), 0.4 * r), 6)
+        elif zone == "grassland":  # grass to the knee or the waist
+            cone(bm, (x, y, height(x, y)), random.uniform(.12, .28), 0.0, random.uniform(.25, .6), 5)
+        elif random.random() < 0.7:  # the Sahel: tussocks of short pale grass
+            cone(bm, (x, y, height(x, y)), random.uniform(.12, .25), 0.03, random.uniform(.15, .35), 5)
+        else:                      # and stones
             cone(bm, (x, y, height(x, y)), random.uniform(.15, .6), random.uniform(.1, .3), random.uniform(.1, .35), 5)
-    cover = obj_from_bm("Ground cover, " + zone, bm, 0.33)
-    if zone == "forest":           # bare until the ferns come back at 03:51, up out of the ground
+    cover = obj_from_bm("Ground cover, " + zone, bm, 0.33 if zone != "dry" else 0.45)
+    if zone == "forest":           # bare until the green comes back at 03:51, up out of the ground
         a, b = fr(T("03:51")), fr(T("03:52:12"))
         key(cover, "location", [a, b], [-0.8, 0.0], index=2)
+    elif zone in ("grassland", "woodland"):   # gone at the lone tree, where the country is the Sahel's behind the band too
+        key_scale(cover, [((JUMPS[1] - 1 - T0) / O.FPS, 1.0), ((JUMPS[1] - T0) / O.FPS, 0.0)])
+    elif zone == "dry":            # there from the lone tree
+        key_scale(cover, [((JUMPS[1] - 1 - T0) / O.FPS, 0.0), ((JUMPS[1] - T0) / O.FPS, 1.0)])
+
+
+def switch(ob, jump, on, off_at=None):
+    """Scale an object to nothing, or up from nothing, on the frame a jump's trunk covers the lens
+    (and, with off_at, to nothing again on that later frame)."""
+    pairs = [((jump - 1 - T0) / O.FPS, 0.0 if on else 1.0), ((jump - T0) / O.FPS, 1.0 if on else 0.0)]
+    if off_at is not None:
+        pairs += [((off_at - 1 - T0) / O.FPS, 1.0), ((off_at - T0) / O.FPS, 0.0)]
+    key_scale(ob, pairs)
+
+
+switch(grounds[0], JUMPS[1], on=False)         # the plain's ground, with no river in it, until the lone tree
+switch(grounds[1], JUMPS[1], on=True)          # the Sahel's, falling to the river, from it
 
 
 # ---------------------------------------------------------------- trees
-def tree_mesh(bm, base, h, r):
-    cone(bm, base, r, r * 0.6, h * 0.7, 8)
-    ball(bm, (base[0], base[1], base[2] + h * 0.78), (h * 0.24, h * 0.24, h * 0.22), 8)
+def tree_mesh(bm, base, h, r, kind="hardwood"):
+    """A tree of the country (the route, DOSSIER). hardwood: the Congo forest's, tall and straight,
+    its round crown high up, so the canopy closes the view; acacia: the Semliki woodland's,
+    flat-topped and wide; palm: a Borassus, a thin trunk and a small crown; shea: South Sudan's
+    broad-leaved savanna tree, a round crown on a short trunk; thorn: the Sahel's, small, an
+    umbrella."""
+    x, y, z = base
+    if kind == "hardwood":
+        cone(bm, base, r, r * 0.7, h * 0.75, 8)
+        ball(bm, (x, y, z + h * 0.8), (h * 0.22, h * 0.22, h * 0.2), 8)
+    elif kind == "acacia":
+        cone(bm, base, r, r * 0.5, h * 0.62, 8)
+        ball(bm, (x, y, z + h * 0.72), (h * 0.42, h * 0.42, h * 0.13), 8)
+    elif kind == "palm":
+        cone(bm, base, r, r * 0.8, h * 0.9, 6)
+        ball(bm, (x, y, z + h * 0.92), (h * 0.15, h * 0.15, h * 0.1), 7)
+    elif kind == "shea":
+        cone(bm, base, r, r * 0.6, h * 0.55, 8)
+        ball(bm, (x, y, z + h * 0.72), (h * 0.32, h * 0.32, h * 0.26), 8)
+    else:
+        cone(bm, base, r, r * 0.5, h * 0.6, 6)
+        ball(bm, (x, y, z + h * 0.7), (h * 0.45, h * 0.45, h * 0.11), 7)
 
 
 def spaced(n, xr, yr, gap, keep_out=()):
@@ -345,12 +417,16 @@ def spaced(n, xr, yr, gap, keep_out=()):
     return pts
 
 
-# The forest the band runs through. Every tree here grows during 03:52-03:54,
-# because the time-lapse camera sees it come up; west of x 4.5 only the trees among the
-# runners stand (with the people, below).
+# The forest the band runs through: the Congo forest's eastern edge, tall straight hardwoods whose
+# canopy closes the view, thinning out over its last fifteen metres, where the sun reaches the
+# floor (SH1320). Every tree here grows during 03:52-03:54, because the time-lapse camera sees it
+# come up; west of x 4.5 only the trees among the runners stand (with the people, below).
+EDGE = 15.0                    # m: the forest breaks up over this much of the path before the woodland
 forest_trees = []
-for x, y in spaced(int(2 * (Y_WOOD + 28)), (4.5, 62), (-28, Y_WOOD), 3.0, keep_out=[(SKULL.x, SKULL.y, 6)]):
-    h, r = random.uniform(11, 22), random.uniform(.2, .45)
+for x, y in spaced(int(1.8 * (Y_WOOD + 28)), (4.5, 62), (-28, Y_WOOD), 3.5, keep_out=[(SKULL.x, SKULL.y, 6)]):
+    if random.random() < 0.7 * smooth(Y_WOOD - EDGE, Y_WOOD, y):
+        continue
+    h, r = random.uniform(18, 35), random.uniform(.3, .6)
     bm = bmesh.new()
     tree_mesh(bm, (0, 0, 0), h, r)
     ob = obj_from_bm("Tree", bm, random.uniform(.2, .3))
@@ -359,23 +435,85 @@ for x, y in spaced(int(2 * (Y_WOOD + 28)), (4.5, 62), (-28, Y_WOOD), 3.0, keep_o
     start = T("03:52") + random.uniform(0, 1.4)
     key_scale(ob, [(start - 1, 0.0), (start, 0.0), (start + 0.4, 0.25), (start + 1.0, 1.0)])
     forest_trees.append(ob)
+for side, xr in (("east", (62, 170)), ("west", (-150, -40))):   # and the forest beyond, as one block, out to where the canopy closes
+    bm = bmesh.new()
+    for x, y in spaced(int((xr[1] - xr[0]) * (Y_WOOD + 28) / 45), xr, (-28, Y_WOOD), 3.5):
+        if random.random() < 0.7 * smooth(Y_WOOD - EDGE, Y_WOOD, y):
+            continue
+        tree_mesh(bm, (x, y, height(x, y) - 0.1), random.uniform(18, 35), random.uniform(.3, .6))
+    ob = obj_from_bm("Forest beyond, " + side, bm, 0.24)
+    key(ob, "scale", [fr(T("03:52")), fr(T("03:53"))], [[1, 1], [1, 1], [0, 1]])   # up out of the ground, in place
 
+# The open woodland: the Semliki valley's, acacias with a few Borassus palms, up to the third trunk;
+# beyond it South Sudan's shea woodland, which is there from the frame that trunk covers the lens
+# (the Semliki's woodland goes on the same frame); then a few palms on the grass plain.
+Y_JUMP = CAM_Y[JUMPS[0]]
 bm = bmesh.new()
 woodland = []
-for x, y in spaced(int(0.8 * (Y_GRASS - Y_WOOD)), (5, 60), (Y_WOOD, Y_GRASS), 6.0):   # open woodland
-    h, r = random.uniform(7, 14), random.uniform(.2, .4)
-    tree_mesh(bm, (x, y, height(x, y) - 0.1), h, r)
+for x, y in spaced(int((Y_JUMP + 70 - Y_WOOD) * 215 / 160), (5, 220), (Y_WOOD, Y_JUMP + 70), 11.0):   # open: grass between, the range seen through
+    palm = random.random() < 0.15
+    h, r = (random.uniform(14, 20), random.uniform(.2, .3)) if palm else (random.uniform(6, 12), random.uniform(.2, .4))
+    tree_mesh(bm, (x, y, height(x, y) - 0.1), h, r, "palm" if palm else "acacia")
     woodland.append((x, y, r))
-for x, y in spaced(4, (25, 60), (Y_GRASS, Y_DRY - 1), 12.0):   # lone trees in the grass
-    tree_mesh(bm, (x, y, height(x, y) - 0.1), random.uniform(6, 9), .3)
-far_trees = obj_from_bm("Trees beyond the forest", bm, 0.26)
+semliki_wood = obj_from_bm("Woodland, the Semliki", bm, 0.26)
+switch(semliki_wood, JUMPS[0], on=False)
+bm = bmesh.new()
+for x, y in spaced(int((Y_GRASS - Y_JUMP + 50) * 215 / 80), (5, 220), (Y_JUMP - 50, Y_GRASS), 8.0):
+    h, r = random.uniform(8, 15), random.uniform(.25, .45)
+    tree_mesh(bm, (x, y, height(x, y) - 0.1), h, r, "shea")
+    woodland.append((x, y, r))
+shea_wood = obj_from_bm("Woodland, South Sudan", bm, 0.26)
+switch(shea_wood, JUMPS[0], on=True, off_at=JUMPS[1])
+bm = bmesh.new()
+for x, y in spaced(5, (25, 140), (Y_GRASS, Y_DRY + 30), 25.0):   # a few palms far off on the plain
+    tree_mesh(bm, (x, y, height(x, y) - 0.1), random.uniform(14, 20), .25, "palm")
+far_trees = obj_from_bm("Palms on the plain", bm, 0.26)
+switch(far_trees, JUMPS[1], on=False)
+
+# The Sahel, from the lone tree: scattered thorn trees, and low bare rock hills (jebels) far off on
+# the horizon, one of them beyond the river's far bank.
+bm = bmesh.new()
+for x, y in spaced(40, (4.5, 220), (Y_DRY - 50, Y_RIVER + 60), 12.0):
+    bank = river_x(y)
+    if bank is not None and x > bank - 4:
+        continue
+    tree_mesh(bm, (x, y, height(x, y) - 0.1), random.uniform(3, 6), .18, "thorn")
+thorns = obj_from_bm("Thorn trees", bm, 0.28)
+switch(thorns, JUMPS[1], on=True)
+bm = bmesh.new()
+for x, y, h, r in ((4800, Y_DRY - 900, 180, 900), (6500, Y_DRY + 400, 260, 1400), (8200, Y_DRY + 1900, 150, 1100),
+                   (5600, Y_RIVER + 2600, 220, 1300), (9000, Y_RIVER - 1500, 300, 1700)):
+    cone(bm, (x, y, WATER - 0.5), r, r * 0.25, h, 9)
+jebels = obj_from_bm("Jebels", bm, 0.36)
+switch(jebels, JUMPS[1], on=True)
+
+# The Rwenzori, east across the Semliki valley: the range climbs from the valley floor to over
+# 5,000 m within 30 km, its length along the valley. It rises with the green, 03:50:12-03:54 (the
+# unbroken shot carries the ground from the Hell Creek country to the Congo's edge, and the time-
+# lapse sees the land made), and it's gone at the third trunk, with the Semliki's woodland.
+bm = bmesh.new()
+for i in range(14):
+    y = -60000 + i * 9000 + random.uniform(-2000, 2000)
+    x = random.uniform(24000, 36000)
+    h = random.uniform(2500, 4400) * (1 - 0.5 * (abs(y) / 60000) ** 2)
+    cone(bm, (x, y, WATER - 0.5), random.uniform(11000, 16000), 300, h, 9)
+ball(bm, (21000, 0, WATER - 0.5), (9000, 70000, 1400), 12)       # the foothills, a long low ridge before the peaks
+for i in range(8):                                               # a second row behind, lower
+    y = -56000 + i * 16000 + random.uniform(-3000, 3000)
+    cone(bm, (random.uniform(40000, 48000), y, WATER - 0.5), random.uniform(12000, 18000), 400, random.uniform(1800, 3000), 9)
+rwenzori = obj_from_bm("The Rwenzori", bm, 0.45)
+_r0, _r1 = T("03:50:12"), T("03:54")
+_j = (JUMPS[0] - T0) / O.FPS
+key(rwenzori, "scale", [fr(_r0), fr(_r1), fr(_j) - 1, fr(_j)], [[1, 1, 1, 0], [1, 1, 1, 0], [0, 1, 1, 0]])
 
 # Forest on the other (west) side too, beyond where the travelling camera runs, so the shots from
 # the far side of the band (SH1314-1316) look into trees; it grows with the rest.
 west_trees = []
 for x, y in spaced(int(0.8 * (Y_WOOD + 28)), (-40, -12), (-28, Y_WOOD), 3.5):
+    if random.random() < 0.7 * smooth(Y_WOOD - EDGE, Y_WOOD, y):
+        continue
     bm = bmesh.new()
-    tree_mesh(bm, (0, 0, 0), random.uniform(11, 22), random.uniform(.2, .45))
+    tree_mesh(bm, (0, 0, 0), random.uniform(18, 35), random.uniform(.3, .6))
     ob = obj_from_bm("Tree, west", bm, random.uniform(.2, .3))
     ob.location = (x, y, height(x, y) - 0.1)       # sunk a little, for the slope
     start = T("03:52") + random.uniform(0, 1.4)
@@ -388,7 +526,8 @@ for x, y in spaced(70, (SKULL.x - 1.5, SKULL.x + 22), (SKULL.y - 11, SKULL.y + 1
     if in_view(x, y):
         continue
     bm = bmesh.new()
-    cone(bm, (0, 0, 0), random.uniform(.3, .5), 0.05, random.uniform(.4, .7), 7)
+    r = random.uniform(.3, .55)
+    ball(bm, (0, 0, 0.05), (r, r * random.uniform(.7, 1.0), 0.3 * r), 7)   # a low spray of fronds
     ob = obj_from_bm("Fern", bm, 0.3)
     ob.location = (x, y, height(x, y) - 0.1)       # sunk a little, for the slope
     start = T("03:51") + random.uniform(0, 1.6)
@@ -553,7 +692,7 @@ key(None, "color", [fr(t) for t, _ in sky], [[v for _, v in sky]] * 3, target=wo
 bm = bmesh.new()
 bmesh.ops.create_circle(bm, cap_ends=True, segments=10, radius=1.0,
                         matrix=Matrix.Diagonal((0.06, 0.035, 1, 1)))   # 12 cm by 7 cm
-leaf = obj_from_bm("Leaf", bm, 0.97)   # white in the playblast, so its motion reads at true size
+leaf = obj_from_bm("Leaf", bm, (1.0, 0.92, 0.5, 1.0))   # pale yellow in the grey playblast, so its motion reads at true size even where it's seen from below, unlit
 lf, lloc, lrot = [], [[], [], []], [[], [], []]
 la = LEAF_LOOSE[0]
 ta, tb = LEAF_FALL
@@ -568,14 +707,14 @@ for f in FR:
         ph = 2 * math.pi * 3.0 * (t - la)
         p = (HANG.x, HANG.y + 0.03 * k * math.sin(ph * 0.5), HANG.z - 0.02 * k)
         rot = (0.5 + 0.5 * k * math.sin(ph), 0.3 * k * math.sin(ph * 0.5), 0.0)
-    elif t <= 0.04:                        # the slow fall, then stillness
+    elif t <= 0.04:                        # the slow fall, then stillness (your note, 2026-10-16: slower, swaying more)
         u = min(1.0, max(0.0, (t - ta) / (tb - ta)))
         sway = (1 - u) ** 0.5              # the swinging dies as it comes down, like a feather's
-        ph = 2 * math.pi * 0.5 * (t - ta)
-        z = Z0 * (1 - u) + REST_Z - 0.07 * sway * abs(math.sin(ph))
+        ph = 2 * math.pi * 0.7 * (t - ta)  # a swing every 1.4 s, 0.7 m each way at the start
+        z = Z0 * (1 - u) + REST_Z - 0.08 * sway * abs(math.sin(ph))   # it sinks through each glide and hangs at the turns
         drift = lerp(HANG.x, LEAF.x, smooth(0.0, 1.0, u))                # (none while the branch is over the landing place)
-        p = (drift + 0.05 * sway * math.sin(ph * 0.5), LEAF.y + 0.45 * sway * math.sin(ph), max(z, REST_Z))
-        rot = (0.5 * (1 - u) + 0.6 * sway * math.sin(ph), 0.25 * sway * math.sin(ph * 0.5), 0.6 * u)
+        p = (drift + 0.06 * sway * math.sin(ph * 0.5), LEAF.y + 0.7 * sway * math.sin(ph), max(z, REST_Z))
+        rot = (0.25 * (1 - u) + 0.3 * sway * math.cos(ph), 0.35 * sway * math.sin(ph), 0.6 * u)   # banked a little into each glide (more, and it turned its dark side to the lens)
     else:                                  # whipped up and away by the feet
         w = t - 0.04
         p = (LEAF.x - 0.25 * w, LEAF.y + 3.2 * w + 1.5 * w * w, REST_Z + 2.6 * w - 2.2 * w * w)
@@ -680,7 +819,7 @@ def animate(fig, frames, xs, ys, face=None, pose=None, visible=None):
         key_scale(fig["root"], visible)
 
 
-PF = [f for f in FR if f >= fr(T("04:05"))]        # people exist from 04:05 (they are far off, right)
+PF = [f for f in FR if f >= fr(T("04:07"))]        # people exist from 04:07 (they are far off, right)
 PT = [(f - T0) / O.FPS for f in PF]
 
 # The band: ten people. (name, height m, lateral place in the pack, place along it, spear)
@@ -691,7 +830,7 @@ BAND = [("Lead man", 1.72, 0.0, 3.0, True), ("Woman A", 1.60, 0.7, 2.2, False),
         ("Woman E", 1.62, 0.6, -1.6, False), ("Man F", 1.68, -0.7, -2.2, True),
         ("Man G (rear)", 1.73, 0.4, -3.0, True), ("Man H (rear)", 1.70, -0.4, -3.6, True)]
 LINE = {0: 2.7, 1: 3.6, 2: 1.8, 3: 0.9, 4: 0.0, 5: -0.9, 6: -1.8, 7: -2.7, 8: -3.6}   # index 9 falls at the clash
-CAT_T = (T("04:17"), T("04:21"))
+CAT_T = (T("04:25"), T("04:29"))
 # The cat (your note, 2026-10-14: a fight would look awkward): it runs down the last but one,
 # Man G, leaps and drags him down from behind; the last, Man H, turns back, kills it with one
 # thrust of his spear, hauls Man G up, and the two run on and catch the band up. Nobody stops.
@@ -699,23 +838,26 @@ SEIZED, RESCUER = 8, 9
 GRAB = CAT_T[0] + 1.6                      # the leap lands
 KILL = GRAB + 0.7                          # the spear
 UP = KILL + 0.3                            # the hand up
-CLASH_T = (T("04:24"), T("04:27"))
-BABY_T = (T("04:29"), T("04:33"))
-GRAVE_T = (T("04:34"), T("04:37:12"))
+CLASH_T = (T("04:32"), T("04:35"))
+BABY_T = (T("04:37"), T("04:41"))
+GRAVE_T = (T("04:42"), T("04:45:12"))
 GRAVE_WHO = 2
 GRAVE_PULLER = 7               # Man F, walking up the line behind her, takes her arm and pulls her up and on
 _y_grave = YC[int(fr(GRAVE_T[0]))] + LINE[GRAVE_WHO]
 GRAVE_UP = next((f - T0) / O.FPS for f in FR if f > fr(GRAVE_T[0]) and YC[f] + LINE[GRAVE_PULLER] >= _y_grave - 0.4)
-GLANCE = (T("04:08:16"), T("04:09:10"))   # the lead man looks back over his shoulder (SH1311)
+GLANCE = (T("04:12:02"), T("04:12:22"))   # the lead man looks back over his shoulder as he passes the lens (SH1311)
 # Trees among the runners, from just past the leaf to where they close up to charge: closer in
 # the forest, further apart in the open woodland, and none where the cat comes down on the last men.
 _grab_at = (LANE_X + SPREAD[SEIZED][0], Y(GRAB) + SPREAD[SEIZED][1], 4.0)
 among = []
-for (y0, y1), gap, hr in (((LEAF.y + 7, Y_WOOD), 4.0, (11, 20)), ((Y_WOOD, Y(SPREAD_T[0]) - 3), 6.5, (7, 14))):
-    for x, y in spaced(60, (LANE_X - 2.4, 4.5), (y0, y1), gap, keep_out=[_grab_at]):
+for (y0, y1), gap, hr in (((LEAF.y + 7, Y_WOOD), 4.0, (16, 28)), ((Y_WOOD, Y(SPREAD_T[0]) - 3), 6.5, (7, 14))):
+    for x, y in spaced(60, (LANE_X - 2.4, 4.5), (y0, y1), gap, keep_out=[_grab_at] + [(ob.location.x, ob.location.y, 2.2) for ob in forest_trees if ob.location.x < 8]
+                       + [(x_, y_, 2.2) for x_, y_, _ in woodland if x_ < 8]):   # clear of the forest's own trunks, so no two stand too close to dodge both
+        if random.random() < 0.7 * smooth(Y_WOOD - EDGE, Y_WOOD, y):
+            continue
         h, r = random.uniform(*hr), random.uniform(.2, .4)
         bm = bmesh.new()
-        tree_mesh(bm, (0, 0, 0), h, r)
+        tree_mesh(bm, (0, 0, 0), h, r, "hardwood" if hr[0] > 10 else "acacia")
         ob = obj_from_bm("Tree, among the runners", bm, random.uniform(.2, .3))
         ob.location = (x, y, height(x, y) - 0.1)
         ob["r"] = r
@@ -727,8 +869,9 @@ forest_trees += among
 # What they cut round: (x, y, how near its centre they come), filed by 4 m of path.
 OBST = {}
 for x, y, r in ([(ob.location.x, ob.location.y, ob["r"] + CLEAR) for ob in forest_trees if ob.location.x < 10]
-                + [(x, y, r + CLEAR) for x, y, r in woodland if x < 10] + [(x, y, sz + 0.25) for x, y, sz in bush_at]):
-    OBST.setdefault(int(y // 4), []).append((x, y, r))
+                + [(x, y, r + CLEAR) for x, y, r in woodland if x < 10] + [(x, y, sz + 0.25) for x, y, sz in bush_at]
+                + [(SKULL.x, SKULL.y, 0.3 + CLEAR), (CAM_FIXED.x, CAM_FIXED.y, 0.2 + 0.5)]):   # the stump and the camera at the leaf (a clamp
+    OBST.setdefault(int(y // 4), []).append((x, y, r))                                     # had held everyone west of the stump's line, all the way)
 _side = {}
 
 
@@ -740,7 +883,7 @@ def dodge(x, y, who):
             d = abs(y - oy)
             if d < 2.2 and abs(x - ox) < r:
                 sgn = _side.setdefault((who, ox, oy), 1 if x >= ox else -1)
-                x = ox + sgn * lerp(sgn * (x - ox), r, 1 - smooth(0.4, 2.2, d))
+                x = ox + sgn * lerp(abs(x - ox), r, 1 - smooth(0.4, 2.2, d))   # on the side first chosen, whatever their own line does
     return x
 
 
@@ -756,7 +899,7 @@ for i, (name, h, dx, dy, spear) in enumerate(BAND):
     xs, ys, face, pose = [], [], [], []
     stopped = held = chase = None
     for f, t in zip(PF, PT):
-        u = smooth(20, 22, t)
+        u = smooth(26, 28, t)
         s = smooth(LEAF.y + 1.5, LEAF.y + 8.0, YC[f] + dy) * (1 - smooth(*SPREAD_T, t))   # split up past the leaf
         x = LANE_X + lerp(lerp(dx, SPREAD[i][0], s), 0.12 * (i % 2) - 0.06, u)
         y = YC[f] + lerp(lerp(dy, SPREAD[i][1], s), LINE.get(i, dy), u)
@@ -765,9 +908,7 @@ for i, (name, h, dx, dy, spear) in enumerate(BAND):
             w *= smooth(0.5, 3.0, t)
         x += w * (0.3 * math.sin(0.8 * t + ph[0]) + 0.15 * math.sin(2.1 * t + ph[1]))
         y += w * (0.7 * math.sin(0.5 * t + ph[2]) + 0.3 * math.sin(1.4 * t + ph[3]))
-        x = dodge(x, y, i)                                                              # round the trees,
-        x = min(x, SKULL.x - 0.75 * (1 - smooth(0.6, 1.5, abs(y - SKULL.y))))           # the stump,
-        x = max(x, CAM_FIXED.x + 0.5 * (1 - smooth(0.3, 1.0, abs(y - CAM_FIXED.y))))   # and past the camera
+        x = dodge(dodge(x, y, i), y, i)                                                 # round the trees, the stump and the camera at the leaf (twice: a swerve round one can't end in another)
         a, p = 0.0, None
         if i == 0:                                                    # a look back at what's after them
             a = 0.8 * smooth(GLANCE[0], GLANCE[0] + 0.25, t) * (1 - smooth(GLANCE[1] - 0.25, GLANCE[1], t))
@@ -830,14 +971,16 @@ for i, (name, h, dx, dy, spear) in enumerate(BAND):
         ys.append(y)
         face.append(a)
         pose.append(p)
-    animate(fig, PF, xs, ys, face, pose, visible=[(T("04:04"), 0), (T("04:05"), 1)])
+    animate(fig, PF, xs, ys, face, pose, visible=[(T("04:06"), 0), (T("04:07"), 1)])
     people.append(fig)
     band_paths[i] = (xs, ys)
 
 # The cat: lion-sized, what the band is running from. It is after them from before the leaf, far
-# back; in SH1313 it's charging, closing about 7 m a second (your note, 2026-10-14: faster); it
-# trails them, catches them from behind (the right) at 04:18:14, springs, goes down and is left
-# behind; it cuts round the trees as they do. It bounds as it runs: up and down, nose rocking, at a gallop's rate.
+# back, and it isn't seen in the fast cuts (your note, 2026-10-16: not in SH1313, which looks back
+# into the trees; checked below); it closes from the end of SH1313, about 4 m a second on their
+# 7, trails them in the travelling shot, catches them from behind (the right) at 04:26:14, springs,
+# goes down and is left behind; it cuts round the trees as they do. It bounds as it runs: up and
+# down, nose rocking, at a gallop's rate.
 bm = bmesh.new()
 ball(bm, (0, 0, 0.78), (0.3, 0.95, 0.36), 10)
 ball(bm, (0, 1.0, 0.95), (0.2, 0.24, 0.2), 8)
@@ -851,7 +994,7 @@ xs8, ys8 = band_paths[SEIZED]
 for f, t in zip(PF, PT):
     idx = f - PF[0]
     rear = YC[f] - 3.6
-    gap = curve([(-1.0, 40.0), (3.6, 26.0), (5.2, 15.0), (CAT_T[0] - 0.5, 10.0)], t)   # the charge, then on their heels
+    gap = curve([(-1.0, 40.0), (ACTION + 7.5, 36.0), (CAT_T[0] - 0.5, 10.0)], t)   # far back through the cuts; the charge; then on their heels
     x, y = dodge(LANE_X + 0.1, rear - gap, "cat"), rear - gap
     k = smooth(CAT_T[0] - 0.5, GRAB, t)                               # runs him down
     x, y = lerp(x, xs8[idx], k), lerp(y, ys8[idx] - 0.7, k)
@@ -912,7 +1055,7 @@ for j, (dx, dy, falls) in enumerate([(0.9, 0.0, False), (-0.5, 1.2, True), (0.3,
     animate(fig, PF, xs, ys, face, pose, visible=[(CLASH_T[0] - 4, 0), (CLASH_T[0] - 3.5, 1)])
     other_paths.append((xs, ys))
 
-# The newborn, passed up the line from the rear to the front, 04:22-04:26.
+# The newborn, passed up the line from the rear to the front, 04:37-04:41.
 bm = bmesh.new()
 ball(bm, (0, 0, 0), (0.11, 0.24, 0.1), 8)
 baby = obj_from_bm("Newborn", bm, 0.9)
@@ -940,7 +1083,7 @@ bm = bmesh.new()
 ball(bm, grave_pos, (0.3, 0.5, 0.16), 10)
 grave = obj_from_bm("Small grave", bm, 0.22)
 
-# ---------------------------------------------------------------- the river (04:30)
+# ---------------------------------------------------------------- the river (04:45:12)
 # It runs north (to the left), east of the path: it comes in from the far right and
 # runs alongside from just past where the dry country begins. Banks green: reeds, trees, hippos
 # in the shallows.
@@ -949,6 +1092,7 @@ bm = bmesh.new()
 vs = [bm.verts.new((x, y, WATER)) for x, y in near] + [bm.verts.new((x + RIVER_WIDTH, y, WATER)) for x, y in reversed(near)]
 bm.faces.new(vs)
 river = obj_from_bm("River", bm, 0.14)
+switch(river, JUMPS[1], on=True)
 bm = bmesh.new()
 for (xa, ya), (xb, yb) in zip(near, near[1:]):
     for _ in range(int(math.hypot(xb - xa, yb - ya) * 3.5)):
@@ -956,21 +1100,27 @@ for (xa, ya), (xb, yb) in zip(near, near[1:]):
         rx, ry = lerp(xa, xb, u) - random.uniform(0, 2.5), lerp(ya, yb, u) + random.uniform(-1, 1)
         cone(bm, (rx, ry, height(rx, ry)),
              random.uniform(.05, .12), 0.0, random.uniform(1.5, 3.2), 4)       # reeds and papyrus
-for y in range(int(Y_DRY) - 1, int(Y_DRY) + 139, 9):
-    for bx in (random.uniform(7.5, 9.5), 84 + random.uniform(0, 5)):
-        by = y + random.uniform(-3, 3)
-        tree_mesh(bm, (bx, by, height(bx, by) - 0.1), random.uniform(6, 11), .25)
+for y in range(int(Y_RIVER) - 12, int(Y_RIVER) + 139, 7):      # thorn trees and doum palms along the near bank, a line of trees on the far
+    by = y + random.uniform(-3, 3)
+    bank = river_x(by)
+    if bank is None:
+        continue
+    for bx, kind in ((bank - random.uniform(2, 7), "thorn" if random.random() < 0.6 else "palm"),
+                     (bank + RIVER_WIDTH + random.uniform(2, 14), "palm" if random.random() < 0.4 else "thorn")):
+        tree_mesh(bm, (bx, by, height(bx, by) - 0.1), random.uniform(6, 11) if kind == "palm" else random.uniform(4, 7), .25, kind)
 reeds = obj_from_bm("Reeds and bank trees", bm, 0.3)
+switch(reeds, JUMPS[1], on=True)
 bm = bmesh.new()
 for x, y in ((14.5, Y_DRY + 7), (16, Y_DRY + 10), (15, Y_DRY + 17), (18, Y_DRY + 23)):
     ball(bm, (x, y, WATER), (0.75, 1.9, 0.75), 10)                             # hippos, 3.8 m
 hippos = obj_from_bm("Hippos", bm, 0.2)
+switch(hippos, JUMPS[1], on=True)
 
 # ---------------------------------------------------------------- the trunks that wipe the frame
-for t, rel in WIPES:
+for i, (t, rel) in enumerate(WIPES):
     f = int(fr(t))
     bm = bmesh.new()
-    cone(bm, (0, 0, 0), 0.5, 0.42, 22, 10)
+    cone(bm, (0, 0, 0), 0.5 if i < 2 else 0.85, 0.42 if i < 2 else 0.75, 22, 10)   # the jumps' trunks old and wide
     trunk = obj_from_bm("Trunk that crosses the lens", bm, 0.12)
     tx, ty = LANE_X - CAM_DIST + 1.2 * curve(CAM_LENS, t, ease=True) / 35.0, CAM_Y[f] + rel
     trunk.location = (tx, ty, height(tx, ty) - 0.1)
@@ -979,7 +1129,7 @@ for t, rel in WIPES:
 # ---------------------------------------------------------------- cameras
 def camera(name):
     cd = bpy.data.cameras.new(name)
-    cd.lens, cd.sensor_width, cd.clip_start, cd.clip_end = LENS, 36.0, 0.03, 2000
+    cd.lens, cd.sensor_width, cd.clip_start, cd.clip_end = LENS, 36.0, 0.03, 90000   # out to the mountains
     ob = bpy.data.objects.new(name, cd)
     col.objects.link(ob)
     return ob
@@ -1004,7 +1154,7 @@ def key_lens(cam, frames, lenses):
     key(None, "lens", frames, lenses, index=0, target=cam.data)
 
 
-# Camera 1, 03:42-04:08, one unbroken shot, low, right up next to the dead animal, square to the
+# Camera 1, 03:42-04:10, one unbroken shot, low, right up next to the dead animal, square to the
 # band's path. It doesn't move but to tip down a little with the leaf; then, as the first foot
 # comes down on the leaf, it turns left with that runner and follows him (your note, 2026-10-15):
 # at once, taking up his pace over TRACK_IN, smoothly, with a little room ahead of him, and up
@@ -1027,7 +1177,8 @@ for f in f1:
 key_camera(cam1, f1, pos, tgt)
 key_lens(cam1, f1, [FIXED_LENS] * len(f1))
 
-# Camera 2, 04:08-04:15: fast cuts of the run, to show they're running from something.
+# Camera 2, 04:10-04:23: fast cuts of the run, to show they're running from something. Each is
+# longer now (your note, 2026-10-16: too quick), a second and a quarter to two and three quarters.
 # The first runs with them at their feet; after it, each shot is a camera planted in one place
 # that turns to follow the runners and whips as they go by (your notes, 2026-10-14). Per shot:
 # whom it follows; when in the shot they're abeam of it (0 = the first frame, 1 = the last;
@@ -1038,11 +1189,11 @@ key_lens(cam1, f1, [FIXED_LENS] * len(f1))
 CUTS = {"1310": (3, None, (-1.3, 0.1, 1.45), 1.42, None, 50),     # a face, close, running with her (the centre woman)
         "1311": (0, 0.5, (-2.5, 0.0, 1.6), 1.55, None, 35),       # the lead man as he passes, looking back
         "1312": (3, 0.5, (-14.0, 0.0, 4.5), 1.0, None, 35),       # wide and high: the band through the forest
-        "1313": (9, 0.2, (-3.5, 1.0, 1.5), 1.0, (5.0, -16.0), 35),  # back past the rear: something in the trees
+        "1313": (9, 0.4, (-5.5, 4.0, 1.3), 1.0, (7.1, -4.2), 35),   # the rear runners cross it, right to left; then the trees behind them, nothing to be seen
         # 1314-1316 from the other side of the band (your note, 2026-10-14): they run to the right of frame
         "1314": (5, 0.5, (4.0, 2.0, 1.2), 1.0, None, 28),         # the girl, running hard, wider, from ahead of her
         "1315": (7, 0.5, (2.2, 0.0, 0.6), 0.8, None, 28),         # spears and legs, low
-        "1316": (4, 1.0, (1.2, 1.0, 1.3), 1.2, None, 24)}         # they come at the lens and stream past it
+        "1316": (4, 0.8, (1.2, 1.0, 1.3), 1.2, None, 24)}         # they come at the lens and stream past it
 cam2 = camera("CAM action")
 f2, pos, tgt, lens = [], [], [], []
 for sh in O.shots():
@@ -1067,6 +1218,34 @@ for sh in O.shots():
         lens.append(mm)
 key_camera(cam2, f2, pos, tgt)
 key_lens(cam2, f2, lens)
+# The cat stays out of the fast cuts' frames (your note, 2026-10-16: not in SH1313): its angle from
+# each lens, against the lens's half-width, for every frame of each cut; SH1313 must pass.
+for sh in O.shots():
+    if sh["shot"] not in CUTS:
+        continue
+    worst = None
+    for f in range(sh["start"], sh["end"]):
+        i = f2.index(f)
+        look = (tgt[i] - pos[i]).xy.normalized()
+        to_cat = (Vector((cl[0][f - PF[0]], cl[1][f - PF[0]])) - pos[i].xy).normalized()
+        margin = math.degrees(look.angle(to_cat)) - math.degrees(math.atan(18.0 / lens[i]))
+        worst = margin if worst is None else min(worst, margin)
+    print("SH%s: the cat %s the frame's edge by %.0f degrees" % (sh["shot"], "outside" if worst > 0 else "INSIDE", abs(worst)))
+    assert sh["shot"] != "1313" or worst > 3.0, "the cat is in SH1313's frame"
+# And no runner passes through a trunk in the cuts (your note: people running through trees).
+_near = (9.0, None)
+for sh in O.shots():
+    if sh["shot"] not in CUTS:
+        continue
+    for f in range(sh["start"], sh["end"]):
+        for i_, (xs, ys) in band_paths.items():
+            x, y = xs[f - PF[0]], ys[f - PF[0]]
+            for b in (int(y // 4) - 1, int(y // 4), int(y // 4) + 1):
+                for ox, oy, r in OBST.get(b, ()):
+                    if r - CLEAR < 0.15:       # a bush, not a trunk
+                        continue
+                    _near = min(_near, (math.hypot(x - ox, y - oy) - (r - CLEAR), (sh["shot"], O.timecode(f), BAND[i_][0])))
+print("nearest a runner's centre comes to a trunk's surface in the cuts: %.2f m" % _near[0], _near[1])
 # No trunk where a camera stands or runs.
 for tr in list(among):
     if any((p.xy - tr.location.xy).length < 0.9 for p in pos):
@@ -1076,7 +1255,7 @@ for tr in list(among):
 print("trees among the runners", len(among))
 assert f2[0] == fr(ACTION) and f2[-1] == fr(TRAVEL) - 1
 
-# Camera 3, 04:15-04:43: travelling beside the band, looking east, a little ahead of the centre.
+# Camera 3, 04:23-04:51: travelling beside the band, looking east, a little ahead of the centre.
 cam3 = camera("CAM travelling")
 f3 = [f for f in FR if f >= fr(TRAVEL)]
 pos, tgt = [], []
@@ -1118,7 +1297,7 @@ r.use_stamp = True
 for a in ("date", "render_time", "filename", "scene", "memory", "hostname", "frame_range", "sequencer_strip"):
     setattr(r, "use_stamp_" + a, False)
 r.use_stamp_time = r.use_stamp_frame = r.use_stamp_marker = r.use_stamp_camera = r.use_stamp_lens = True
-r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, fourteenth pass"
+r.use_stamp_note, r.stamp_note_text = True, "Opening layout, beats 12-13, grey, fifteenth pass"
 r.use_stamp_labels = True
 r.stamp_font_size = 15
 r.stamp_background = (0, 0, 0, 0.6)

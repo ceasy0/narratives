@@ -274,7 +274,7 @@ def bake(scene, ob, colour, size, name, folder, ao_distance=0.015, extra=(), for
 
 
 def live_mat(name, png, shadow, light, soft, steps=None, warm=None, sheen=0.0, quiet=None, cool=None, edge=None,
-             roughness=0.42, albedo=None):
+             roughness=0.42, albedo=None, alpha=None):
     """The paint lit live (your note, 2026-10-15: the real shadows): the renderer's own light on the
     surface, its cast shadows included, read as a value and turned into the painter's colours, as
     in your frame of Vi: the paint as it is in full light; deep and warm in shadow, cooler where the
@@ -282,7 +282,8 @@ def live_mat(name, png, shadow, light, soft, steps=None, warm=None, sheen=0.0, q
     broken along brush strokes (edge: the stroke map and how far it moves the edge); and a second,
     gentler turn (steps), so the planes of a form facing the light less take a half-tone. sheen: a
     faint live sheen where the light catches it, none where the attribute `quiet` says. albedo: a
-    colour built in nodes, (Nodes, uv) -> colour socket, instead of the painted png."""
+    colour built in nodes, (Nodes, uv) -> colour socket, instead of the painted png. alpha: (image,
+    cut), a cut-out from the image's alpha (hair cards)."""
     m, g, out = material(name)
     uv = g.new("ShaderNodeTexCoord").outputs["UV"]
     if albedo:                                      # a colour built in nodes instead of a painted image
@@ -312,7 +313,11 @@ def live_mat(name, png, shadow, light, soft, steps=None, warm=None, sheen=0.0, q
         if quiet:
             hi = g.math('MULTIPLY', hi, g.math('SUBTRACT', 1.0, g.new("ShaderNodeAttribute", attribute_name=quiet).outputs["Fac"]))
         c = g.mix(hi, c, (*srgb((1.0, 0.95, 0.9)), 1.0), 'SCREEN')
-    g.nt.links.new(g.new("ShaderNodeEmission", {"Color": c, "Strength": 1.0}).outputs[0], out.inputs["Surface"])
+    shader = g.new("ShaderNodeEmission", {"Color": c, "Strength": 1.0}).outputs[0]
+    if alpha:
+        a = g.remap(g.new("ShaderNodeTexImage", {"Vector": uv}, image=alpha[0]).outputs["Alpha"], alpha[1] - 0.05, alpha[1] + 0.05, 0.0, 1.0, smooth=False)
+        shader = g.new("ShaderNodeMixShader", [a, g.new("ShaderNodeBsdfTransparent").outputs[0], shader]).outputs[0]
+    g.nt.links.new(shader, out.inputs["Surface"])
     return m
 
 

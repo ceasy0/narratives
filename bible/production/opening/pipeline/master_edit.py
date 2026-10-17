@@ -3,7 +3,7 @@
     blender -b --factory-startup -P master_edit.py
 
 One strip per shot of shots.csv, each cut from the v3.1 animatic where that shot
-is in it (channel 1; the animatic is 5:00 and the Opening 5:07 since beat 12 grew,
+is in it (channel 1; the animatic is 5:00 and the Opening 5:15 since beats 12 and 13 grew,
 so opening.animatic_frame maps one to the other), the animatic's guide sound under
 it in two pieces, shifted the same way (channel 5), and on
 channel 2 every layout playblast found in work/playblast/ named

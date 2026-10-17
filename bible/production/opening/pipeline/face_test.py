@@ -6,6 +6,8 @@ item 3; Discussion 006, round 4).
     blender -b --factory-startup -P face_test.py -- reuse      the paint already made (work/styletest/paint/)
     blender -b --factory-startup -P face_test.py -- check      grey front and side views, to set the shape
     blender -b --factory-startup -P face_test.py -- baked      the light painted into the textures, as before
+    blender -b --factory-startup -P face_test.py -- adam reuse still   Adam: the same head with the first version's
+                                                               short hair (MPFB's), in this look; face-adam-*.png
 
 The head is MPFB2's, shaped after Corbin's photos (work/face/, out of git) with its own sliders
 (FACE below): long and lean, a narrow head, high cheekbones over hollow cheeks, a low straight
@@ -31,9 +33,14 @@ cool fill; a rim from behind. face-front-raw.png is the same light shaded plainl
 No outline. Against a dark, cool backdrop. Over the paint, as a face has (your note, 2026-10-15),
 very light marks: freckles, two small moles, a faint birthmark, a thin pale scar.
 
+The lashes are painted as a filled shape along the lids, heavier toward the outer corners, with
+only a few hairs over it, and the brows as full solid shapes in the hair's colour with strands
+along them, as Vi's are (your note, 2026-10-16), rather than drawn hair by hair.
+
 Writes work/styletest/face-front.png (straight on, as your frame of Vi), face-neutral.png and
 face-breath.png (the left three-quarter), face-breath.mp4 and face-sheet.png, and the paint in
-work/styletest/paint/.
+work/styletest/paint/. -- adam writes face-adam-front.png and face-adam-neutral.png (and
+face-adam.blend), Adam's hair painted in paint/adam-hair-colour.png.
 """
 import importlib
 import json
@@ -56,6 +63,8 @@ import painted as P  # noqa: E402
 
 ARGS = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 STILL, CHECK, REUSE = "still" in ARGS, "check" in ARGS, "reuse" in ARGS
+REPAINT = "repaint" in ARGS                        # paint again from the bakes already made (the brush changed, the masks didn't)
+ADAM = "adam" in ARGS                              # Adam: this head with the first version's short hair (your call, 2026-10-16)
 LIVE = "baked" not in ARGS                         # the light from the renderer, not painted in (your note, 2026-10-15)
 OUT = O.WORK / "styletest"
 PAINT = OUT / "paint"
@@ -83,7 +92,7 @@ BREATH_IN = {"nose-left-dilatation": 0.8, "nose-right-dilatation": 0.8, "mouth-o
 LIFT = {"Neck1": -4.0, "Head": -5.0}              # degrees about each bone's x: the chin up
 DEFINE = (0.25, 10)                                # how far the forms are pushed from their smoothed copy; how smooth
 PLANES = (0.5, 0.75, 0.018)                        # how far the forms are flattened onto their planes; how much the shading follows them; their size (m)
-BROWS, LASHES = "eyebrow012", "eyelashes01"
+BROWS, LASHES, SHORT_HAIR = "eyebrow012", "eyelashes01", "short02"
 STUBBLE = 0.0                                      # how much stubble shows (0.3 for the photos' light stubble; 0: clean-shaven, your call, 2026-10-16)
 
 t_start = time.time()
@@ -308,7 +317,7 @@ rig = HS.add_builtin_rig(human, "cmu_mb")
 for pb in rig.pose.bones:
     pb.rotation_mode = 'XYZ'
 fitted = {}                                        # fitted after the rig, so they're rigged with it
-for kind, what in (("eyes", "high-poly"), ("eyebrows", BROWS), ("eyelashes", LASHES)):
+for kind, what in (("eyes", "high-poly"), ("eyebrows", BROWS), ("eyelashes", LASHES)) + ((("hair", SHORT_HAIR),) if ADAM else ()):
     ob = HS.add_mhclo_asset(str(H.mpfb_data(kind) / what / (what + ".mhclo")), human,
                             asset_type=kind.capitalize(), subdiv_levels=0)
     fitted[kind] = ob
@@ -318,8 +327,10 @@ for t, w in BREATH_IN.items():
 
 def painter_masks():
     """One colour per point for the painter: red, the shade under the eyes to leave light; green,
-    the ridges of the forms, where highlights go; blue, the line of the closed lids, where the lashes
-    meet the skin, painted bold and dark, as Vi's lids are."""
+    the ridges of the forms, where highlights go; blue, the lashes as a filled shape (your note,
+    2026-10-16: Vi's are filled in, not drawn hair by hair): a band along each lid where the lashes
+    root, thin at the inner corner and widening toward the outer, the upper lid's heavier and wider
+    than the lower's, painted near black."""
     from mathutils.kdtree import KDTree
     lash = fitted["eyelashes"]
     lv = [lash.matrix_world @ v.co for v in lash.data.vertices]
@@ -329,7 +340,12 @@ def painter_masks():
     kd.balance()
     cols = []
     for i, p in enumerate(pts):
-        lid = ramp01(0.0028, 0.0008, kd.find(p)[2])
+        d = kd.find(p)[2]
+        c = min(EYES, key=lambda c: (p - c).length)
+        outer = ramp01(-0.004, 0.014, (p.x - c.x) * (1.0 if c.x > E.x else -1.0))   # toward the eye's outer corner
+        upper = ramp01(c.z - 0.004, c.z + 0.001, p.z)                                 # the upper lid's lashes
+        w = (0.0012 + 0.0032 * outer) * (0.35 + 0.65 * upper)
+        lid = ramp01(w + 0.0008, w - 0.0006, d) * (0.45 + 0.55 * upper)
         near_eye = min((p - c).length for c in EYES)
         cols.extend((under_eye(p), float(RIDGE[i]) * ramp01(0.016, 0.026, near_eye), lid, 1.0))
     human.data.attributes.new("paint_masks", 'FLOAT_COLOR', 'POINT').data.foreach_set("color", cols)
@@ -443,12 +459,17 @@ def hair(n_locks=130, seed=3):
         if len(roots) >= n_locks:
             break
     part_x = E.x + 0.045                                # his left (+X), above the outer end of the brow, as in the photos
+    front = [i for i in scalp if pts[i].x > part_x - 0.005 and pts[i].y < E.y + 0.045 and pts[i].z > E.z + 0.04]
+    for i in rng.sample(front, len(front)):             # more along the front hairline right of the part (your note, 2026-10-16: a bare patch above the forehead)
+        p = pts[i]
+        if all((p - q).length > 0.0085 for q in roots):
+            roots.append(p)
     wisps = []
     specs = [(r, False) for r in sorted(roots, key=lambda p: -p.z)] + [(r, True) for r in wisps]   # crown first, wisps last
     verts, faces, uvs, along, shade, vn = [], [], [], [], [], []
     cols = 16
     rows = math.ceil(len(specs) / cols)
-    seg = 7
+    seg = 12                                            # round locks (your note: the roots looked blocky)
     for k, (r, wisp) in enumerate(specs):
         _, n0, _ = nearest(r)
         side = 1.0 if r.x > part_x else -1.0
@@ -511,7 +532,7 @@ def hair(n_locks=130, seed=3):
             if s_prev is not None and s.dot(s_prev) < 0:                # no twist where the lock bends
                 s = -s
             s_prev = s
-            w = width * (1 - u ** taper) * (0.75 + 0.25 * min(1.0, u * 6)) + 0.0004
+            w = width * (1 - u ** taper) * (0.35 + 0.65 * min(1.0, u * 4)) + 0.0004   # narrow at the root, as hair leaves the part
             for a in range(seg + 1):
                 ang = 2 * math.pi * a / seg - math.pi / 2      # the seam underneath, out of sight
                 verts.append(tuple(c + s * (0.5 * w * math.cos(ang)) + nq * (0.3 * w * math.sin(ang))))
@@ -552,24 +573,29 @@ def hair(n_locks=130, seed=3):
     ob.matrix_world = mw
     print("hair: %d locks" % len(roots))
     inner = set(scalp)
-    for _ in range(2):
+    for _ in range(3):
         inner |= {b for a, b in ed.tolist() if a in inner} | {a for a, b in ed.tolist() if b in inner}
     keep = [pl for pl in polys if all(v in inner for v in pl)]
     used = sorted({v for pl in keep for v in pl})
     ix = {v: i for i, v in enumerate(used)}
-    ring = {v: 0 for v in scalp}                     # how far out from the scalp each point is: 0 inside, 1 and 2 the rings beyond
-    for r_ in (1, 2):
-        for a, b in ed.tolist():
-            if (a in ring) != (b in ring):
-                ring[b if a in ring else a] = r_
+    s = np.zeros(len(co))                            # 1 on the scalp, dying away smoothly past the hairline (it had stepped down
+    s[scalp] = 1.0                                   # ring by ring of the mesh, and the hairline came out as a zigzag of its edges)
+    for _ in range(6):
+        acc = np.zeros(len(co))
+        np.add.at(acc, ed[:, 0], s[ed[:, 1]])
+        np.add.at(acc, ed[:, 1], s[ed[:, 0]])
+        s[has] = 0.5 * s[has] + 0.5 * acc[has] / deg[has]
+        s[scalp] = np.maximum(s[scalp], 0.85)
+    real = np.array([tuple(pts[v]) for v in range(len(co))])
+    su = s[used]
+    base = co[used] * (1 - su[:, None]) + real[used] * su[:, None]   # on the skin where it's thick; under it where it dies away
     cm = bpy.data.meshes.new("Hair mass")
-    cm.from_pydata([tuple(co[v]) for v in used], [], [tuple(ix[v] for v in pl) for pl in keep])
+    cm.from_pydata([tuple(c) for c in base], [], [tuple(ix[v] for v in pl) for pl in keep])
     cm.update()
     vn = np.empty(len(used) * 3)
     cm.vertices.foreach_get("normal", vn)
-    thick = np.array([(0.006 + 0.008 * ramp01(E.z + 0.04, E.z + 0.11, co[v][2])) * (1.0, 0.45, 0.08)[ring.get(v, 2)]
-                      for v in used])                # thick at the crown, under the locks' lift; to nothing at the hairline
-    cm.vertices.foreach_set("co", (co[used] + thick[:, None] * vn.reshape(-1, 3)).ravel())
+    thick = np.array([0.005 + 0.008 * ramp01(E.z + 0.04, E.z + 0.11, co[v][2]) for v in used]) * su ** 2   # thick at the crown, under the locks' lift; to nothing at the hairline
+    cm.vertices.foreach_set("co", (base + thick[:, None] * vn.reshape(-1, 3)).ravel())
     cm.update()
     cm.shade_smooth()
     cap = bpy.data.objects.new("Hair mass", cm)
@@ -580,8 +606,25 @@ def hair(n_locks=130, seed=3):
     return ob, cap
 
 
+def head_normals(ob):
+    """An asset's shading taken mostly from the head beneath it, as the locks' is: lit as one mass."""
+    bvh = BVHTree.FromPolygons(pts, [tuple(pl.vertices) for pl in human.data.polygons if all(v in sets["body"] for v in pl.vertices)])
+    me = ob.data
+    me.shade_smooth()
+    mw, back = ob.matrix_world, ob.matrix_world.to_3x3().inverted().transposed()
+    vn = []
+    for v in me.vertices:
+        _, nq, _, _ = bvh.find_nearest(mw @ v.co)
+        vn.append(tuple((back @ (nq * 0.75 + (mw.to_3x3() @ v.normal) * 0.25)).normalized()))
+    me.normals_split_custom_set_from_vertices(vn)
+
+
 bpy.context.view_layer.update()
-locks, beneath = hair()
+if ADAM:                                           # Adam: the first version's short hair, MPFB's own asset, lit as one mass
+    locks, beneath = fitted["hair"], None
+    head_normals(locks)
+else:
+    locks, beneath = hair()
 print("head built in %.0fs" % (time.time() - t_start))
 
 
@@ -788,6 +831,14 @@ def hair_mass_colour(g, uv=None):
     return g.mix(g.math('MULTIPLY', dark, 0.65), (*P.srgb((0.27, 0.17, 0.1)), 1.0), (*P.srgb((0.1, 0.07, 0.05)), 1.0))
 
 
+def short_hair_colour(g, uv):
+    """Adam's short hair: almost one colour, a little darker at the roots (the asset's layout runs root to tip up its strips)."""
+    pos = g.new("ShaderNodeTexCoord").outputs["Object"]
+    v = g.new("ShaderNodeSeparateXYZ", [uv]).outputs["Y"]
+    col = g.mix(g.remap(v, 0.0, 1.0, 0.0, 1.0), (*P.srgb((0.24, 0.15, 0.09)), 1.0), (*P.srgb((0.29, 0.18, 0.105)), 1.0))
+    return g.scale(col, g.remap(g.noise(pos, 40.0, 2.0), 0.3, 0.7, 0.92, 1.08))
+
+
 def hair_colour(g, uv):
     a = g.new("ShaderNodeAttribute", attribute_name="along").outputs["Fac"]
     sh = g.new("ShaderNodeAttribute", attribute_name="shade").outputs["Fac"]
@@ -966,27 +1017,49 @@ if CHECK:
     clay = P.paint("Clay", (0.75, 0.72, 0.7), shadow=(0.45, 0.45, 0.5), vary=0.0, strokes=0.0, rim_amount=0.0,
                    crease=0.0, grain=0.0, half=None, hard=0.25)
     for ob in [human, locks, beneath] + list(fitted.values()):
-        P.wear(ob, clay)
+        if ob is not None:
+            P.wear(ob, clay)
 else:
     PAINT.mkdir(parents=True, exist_ok=True)
     skin_png, hair_png = (PAINT / "skin-colour.png", PAINT / "hair-colour.png") if LIVE else (PAINT / "skin-painted.png", PAINT / "hair-painted.png")
-    cutouts = {kind: picture(fitted[kind]) for kind in ("eyebrows", "eyelashes")}   # before the bake's stand-ins replace them
-    if not (REUSE and skin_png.exists() and hair_png.exists()):
-        for ob in [human, locks, beneath] + list(fitted.values()):  # something to cast shadows while baking
+    if ADAM:
+        hair_png = PAINT / "adam-hair-colour.png"
+    cutouts = {kind: picture(fitted[kind]) for kind in ("eyebrows", "eyelashes") + (("hair",) if ADAM else ())}   # before the bake's stand-ins replace them
+    need = [png for png in (skin_png, hair_png) if not (REUSE and png.exists())]
+    if need:
+        keep_mats = {ob: list(ob.data.materials) for ob in [human, locks, beneath] + list(fitted.values()) if ob is not None}
+        for ob in keep_mats:                        # something to cast shadows while baking
             P.wear(ob, P.flat("Bake stand-in", (0.8, 0.8, 0.8)))
-        for kind in ("eyebrows", "eyelashes", "eyes"):    # their shadows on the skin read as eyeshadow
-            fitted[kind].hide_render = True
-        sk = P.bake(scene, human, skin_colour, SKIN_RES, "skin", PAINT, 0.012, form_distance=0.07, light=not LIVE,
-                  extra=(("masks", attr_colour("paint_masks")), ("masks2", attr_colour("paint_masks2")), ("marks", marks),
-                         ("scan", lambda g: g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeUVMap", uv_map=SCAN_UV).outputs["UV"]},
-                                                  image=bpy.data.images["skin scan"]).outputs["Color"])))
-        for kind in ("eyebrows", "eyelashes", "eyes"):
-            fitted[kind].hide_render = False
-        sk["brows"] = bake_brows(SKIN_RES)
-        hb = P.bake(scene, locks, hair_colour, HAIR_RES, "hair", PAINT, 0.01, light=not LIVE, extra=(("masks", attr_colour("hair_masks")),))
-        reg = region()
-        for (src, png, pal, radii, extra) in ((sk, skin_png, "skin", "24,12,6,3", ["--region", str(reg), "--bristles", "0.05", "--threshold", "8"]),
-                                              (hb, hair_png, "hair", "10,5,3", ["--along", "v"])):
+        jobs = []
+        if skin_png in need and REPAINT and (PAINT / "skin-brows.npy").exists():
+            sk = {k: PAINT / ("skin-%s.npy" % k) for k in ("base", "ao", "form", "masks", "masks2", "marks", "scan", "brows")}
+            jobs.append((sk, skin_png, "skin", "24,12,6,3", ["--region", str(region()), "--bristles", "0.05", "--threshold", "8"]))
+        elif skin_png in need:
+            for kind in ("eyebrows", "eyelashes", "eyes"):    # their shadows on the skin read as eyeshadow
+                fitted[kind].hide_render = True
+            sk = P.bake(scene, human, skin_colour, SKIN_RES, "skin", PAINT, 0.012, form_distance=0.07, light=not LIVE,
+                      extra=(("masks", attr_colour("paint_masks")), ("masks2", attr_colour("paint_masks2")), ("marks", marks),
+                             ("scan", lambda g: g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeUVMap", uv_map=SCAN_UV).outputs["UV"]},
+                                                      image=bpy.data.images["skin scan"]).outputs["Color"])))
+            for kind in ("eyebrows", "eyelashes", "eyes"):
+                fitted[kind].hide_render = False
+            sk["brows"] = bake_brows(SKIN_RES)
+            jobs.append((sk, skin_png, "skin", "24,12,6,3", ["--region", str(region()), "--bristles", "0.05", "--threshold", "8"]))
+        if hair_png in need and REPAINT and (PAINT / ("adam-hair-ao.npy" if ADAM else "hair-ao.npy")).exists():
+            hb = {k: PAINT / ("%s-%s.npy" % ("adam-hair" if ADAM else "hair", k)) for k in (("base", "ao") if ADAM else ("base", "ao", "masks"))}
+            jobs.append((hb, hair_png, "hair", "10,5,3", [] if ADAM else ["--along", "v"]))
+        elif hair_png in need:
+            if ADAM:
+                hb = P.bake(scene, locks, short_hair_colour, HAIR_RES, "adam-hair", PAINT, 0.01, light=not LIVE)
+                jobs.append((hb, hair_png, "hair", "10,5,3", []))
+            else:
+                hb = P.bake(scene, locks, hair_colour, HAIR_RES, "hair", PAINT, 0.01, light=not LIVE, extra=(("masks", attr_colour("hair_masks")),))
+                jobs.append((hb, hair_png, "hair", "10,5,3", ["--along", "v"]))
+        for ob, ms in keep_mats.items():
+            ob.data.materials.clear()
+            for mm in ms:
+                ob.data.materials.append(mm)
+        for (src, png, pal, radii, extra) in jobs:
             t = time.time()
             subprocess.run(["py", str(BRUSH), str(src["base"]), str(src.get("light", src["base"])), str(png), "--palette", pal,
                             "--radii", radii, "--ao", str(src["ao"])] + extra + (["--unlit"] if LIVE else [])
@@ -1001,20 +1074,29 @@ else:
                              steps=(0.4, 0.9, 0.5), warm=((1.15, 0.8, 0.7), 0.35), sheen=0.0, roughness=0.3,
                              quiet="lid_region", cool=((0.52, 0.36, 0.32), 0.03, 0.1), edge=(strokes, 0.25)))   # deep warm shadow, lifted where the sky and the floor reach it; the edge a little broken, as Vi's
         P.wear(locks, P.live_mat("Painted hair", hair_png, (0.4, 0.34, 0.36), (1.0, 0.97, 0.92), (0.08, 0.3),
-                             edge=(strokes, 0.3)))
-        P.wear(beneath, P.live_mat("Hair mass", None, (0.4, 0.34, 0.36), (1.0, 0.97, 0.92), (0.08, 0.3), albedo=hair_mass_colour))
+                             edge=(strokes, 0.3), alpha=(cutouts["hair"], 0.5) if ADAM else None))
+        if beneath is not None:
+            P.wear(beneath, P.live_mat("Hair mass", None, (0.4, 0.34, 0.36), (1.0, 0.97, 0.92), (0.08, 0.3), albedo=hair_mass_colour))
     else:
         P.wear(human, painted_mat("Painted skin", skin_png, sheen=0.07, rim=0.12, quiet="lid_region"))
         P.wear(locks, painted_mat("Painted hair", hair_png))
-    if not LIVE:
+    if not LIVE and beneath is not None:
         P.wear(beneath, P.flat("Hair beneath", (0.13, 0.085, 0.055)))
     for kind, col in (("eyebrows", (0.17, 0.12, 0.1)), ("eyelashes", (0.1, 0.07, 0.06))):
         m, g, out = P.material("Painted " + kind)
         tex = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]}, image=cutouts[kind])
         em = g.new("ShaderNodeEmission", {"Color": (*P.srgb(col), 1.0), "Strength": 1.0})
         tr = g.new("ShaderNodeBsdfTransparent")
-        a = g.remap(tex.outputs["Alpha"], 0.03 if kind == "eyelashes" else 0.06, 0.3 if kind == "eyelashes" else 0.4, 0.0, 1.0,
-                    smooth=False)   # a bold lid line; the brows' hairs full over their soft painted shape
+        a = g.remap(tex.outputs["Alpha"], 0.2, 0.6, 0.0, 1.0, smooth=False)   # a few hairs only, over the painted lashes and brows
+        if kind == "eyelashes":                     # and of the lower lashes hardly any: theirs is the painted line, as Vi's
+            lash = fitted[kind]
+            if "upper" not in lash.data.attributes:
+                ups = []
+                for v in lash.data.vertices:
+                    q = lash.matrix_world @ v.co
+                    ups.append(1.0 if q.z > min(EYES, key=lambda c: (q - c).length).z - 0.002 else 0.0)
+                lash.data.attributes.new("upper", 'FLOAT', 'POINT').data.foreach_set("value", ups)
+            a = g.math('MULTIPLY', a, g.math('MULTIPLY_ADD', g.new("ShaderNodeAttribute", attribute_name="upper").outputs["Fac"], 0.85, 0.15))
         g.nt.links.new(g.new("ShaderNodeMixShader", [a, tr.outputs[0], em.outputs[0]]).outputs[0], out.inputs["Surface"])
         P.wear(fitted[kind], m)
         fitted[kind].visible_shadow = False        # their cards' shadows smeared the cheeks
@@ -1033,7 +1115,7 @@ else:                                              # the whole look: glow, grade
 r.use_stamp = False
 scene.frame_start, scene.frame_end = F0, F1
 OUT.mkdir(parents=True, exist_ok=True)
-bpy.ops.wm.save_as_mainfile(filepath=str(OUT / "face.blend"))
+bpy.ops.wm.save_as_mainfile(filepath=str(OUT / ("face-adam.blend" if ADAM else "face.blend")))
 print("built in %.0fs" % (time.time() - t_start))
 
 r.image_settings.media_type = 'IMAGE'
@@ -1045,14 +1127,14 @@ if CHECK:
         r.filepath = str(OUT / ("face-check-%s.png" % name))
         bpy.ops.render.render(write_still=True)
     sys.exit(0)
-for name, f, view in (("front", F0, "front"), ("neutral", F0, "three-quarter"), ("breath", F1, "three-quarter")):
+for name, f, view in (("front", F0, "front"), ("neutral", F0, "three-quarter")) + ((("breath", F1, "three-quarter"),) if not ADAM else ()):
     aim(view)
     scene.frame_set(f)
-    r.filepath = str(OUT / ("face-%s.png" % name))
+    r.filepath = str(OUT / ("face-%s%s.png" % ("adam-" if ADAM else "", name)))
     t = time.time()
     bpy.ops.render.render(write_still=True)
     print("still", r.filepath, "%.1fs" % (time.time() - t))
-    if LIVE and name == "front":                   # the same light, shaded plainly, for comparison
+    if LIVE and name == "front" and not ADAM:      # the same light, shaded plainly, for comparison
         keep = {ob: list(ob.data.materials) for ob in (human, locks)}
         P.wear(human, raw_mat("Plain skin", skin_png))
         P.wear(locks, raw_mat("Plain hair", hair_png))
@@ -1062,7 +1144,7 @@ for name, f, view in (("front", F0, "front"), ("neutral", F0, "three-quarter"), 
             ob.data.materials.clear()
             for mm in ms:
                 ob.data.materials.append(mm)
-if not STILL:
+if not STILL and not ADAM:
     frames = OUT / "face-breath"
     frames.mkdir(exist_ok=True)
     r.filepath = str(frames / "######")
