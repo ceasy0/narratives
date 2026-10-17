@@ -43,7 +43,7 @@ SP = 0.0021                                       # the cuts' spacing: about eig
 BEND = 0.70                                       # how far a line is pushed across the flow by the height under it
 SUN = Vector((-0.38, 0.80, 0.46)).normalized()    # toward the one light: beyond the head and to the left; 26 degrees up
 GLOW = 0.10                                       # the static's own light, under the sun's
-FILL = 0.33                                       # a fill in the sun's shadow, on the grain: thin, broken lines where the sun doesn't reach (your notes, 2026-10-17: the lines under the chin, and the face's dark side still in the fabric), nothing where it does
+FILL = 0.5                                        # on the face alone, where the sun doesn't reach: a fill, broken by the grain, so its far side keeps thin lines instead of going black (your notes, 2026-10-17: the nose clipping out of the fabric); the sheet gets none, and keeps its clumps
 V_GRAIN, V_SWELL, V_EDDY = 0.05, 0.015, 0.03      # how fast the flow carries each (m/s), left to right
 SWELL = (0.010, 0.12, 0.024)                      # the static's swells: height, length, breadth (m)
 SKIRT = (24, 0.75)                                # the sand piled round the face: how far (cells of 0.5 mm), how high (the first beat 1 render's edge, which you prefer: your note, 2026-10-17)
@@ -193,7 +193,7 @@ def drawing(face, rise, flow, shape=1.0, bend=BEND, sp=SP):
     s = (X - V_GRAIN * flow) / sp / (1 + (STROKE_FACE - 1) * out)
     g = noise2((X - V_GRAIN * flow) / 0.03, Y / 0.011, 3)
     grain = (0.66 + 0.45 * g) * (1 - out) + (0.95 + 0.15 * g) * out
-    return Z, np.stack([phi, s, grain], -1), grain, dict(out=out, bare=bare)
+    return Z, np.stack([phi, s, grain + 2.0 * out], -1), grain, dict(out=out, bare=bare)   # `out` packed with the grain, for the fill
 
 
 def build_sheet():
@@ -274,6 +274,7 @@ def setup(scene, sun_dir=SUN):
     s.color_mode = 'RGB'
     sun = bpy.data.objects.new("Raking light", bpy.data.lights.new("Raking light", 'SUN'))
     sun.data.energy, sun.data.angle = math.pi, 0.0                 # a white plane square to it reads 1
+    sun.data.use_shadow = False                                    # it casts no shadow: the face threw one down the sheet that hid the lines under the chin (your note, 2026-10-17); the swells are too low to shadow each other at 26 degrees
     sun.rotation_euler = sun_dir.to_track_quat('Z', 'Y').to_euler()
     scene.collection.objects.link(sun)
     cam = bpy.data.objects.new("Camera", bpy.data.cameras.new("Camera"))
@@ -379,11 +380,19 @@ def box(a, r):
     return (c[n:, n:] - c[:-n, n:] - c[n:, :-n] + c[:-n, :-n]) / (n * n)
 
 
+def unpack(data):
+    """The data pass's third channel: the grain, and packed with it (by 2) where the face is out of the sand."""
+    g = data[..., 2]
+    out = np.clip((g - 1.0) / 2.0, 0.0, 1.0)
+    return g - 2.0 * out, out
+
+
 def lit(data, light):
-    """The light on each point, from the passes: the sun on the grain, the grain's own light, and in
-    the sun's shadow a fill that fades out as the sun comes in."""
-    sun, grain = light[..., 0], data[..., 2]
-    return sun + GLOW * grain + FILL * grain * (1 - ramp01(0.2, 0.6, sun))
+    """The light on each point, from the passes: the sun on the grain, the grain's own light, and on the
+    face, where the sun doesn't reach, a fill broken by the grain that fades out as the sun comes in."""
+    sun = light[..., 0]
+    grain, out = unpack(data)
+    return sun + GLOW * grain + FILL * out * (1 - ramp01(0.05, 0.3, sun)) * (0.4 + 0.6 * np.clip((grain - 0.95) / 0.15, 0.0, 1.0))
 
 
 def tone_of(data, light):

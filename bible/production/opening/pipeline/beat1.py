@@ -69,10 +69,10 @@ WHITE_SUN = Vector((-0.1, 0.45, 0.89)).normalized()   # the white face's light: 
 WHITE_T = 0.5                                    # the white face's light below this is left black: under the brows, the nose's underside, the mouth
 CENTRE = Vector((0.0, -0.02, 0.025))              # the middle of the face, for the whip to go in to
 PULSE = 0.07                                      # the camera's beat at the whip: how much closer
-WHIP_D = 1400.0                                   # how far in the sheet is drawn by the whip's last drawing (pixels at 1920): past the far corners, so nothing is left
+WHIP_D = 1100.0                                   # how far in the sheet is drawn by the whip's last drawing (pixels at 1920): the far corners' distance, so nothing is left
 BAND = 150.0                                      # the landing: how far outside the rims the lines coming round are drawn as it starts (pixels at 1920), narrowing to nothing
 BAND_FLOW = 120.0                                 # and how far those lines travel in toward the head over the landing (pixels at 1920)
-EDGE = 160.0                                      # the whip: the sheet's edge, as it's drawn in from the frame's, is ragged over this width (pixels at 1920), not a rule
+EDGE = 300.0                                      # the whip: the sheet's edge, as it's drawn in from the frame's, is ragged over this width (pixels at 1920), not a rule
 SHADOW_CUTS = 0.7                                 # the white face's black cuts carry its own lines at this tone (your note, 2026-10-17: the mouth too smooth)
 
 def ease(x):
@@ -204,24 +204,26 @@ def whip(data, light, bare, phi, s, tone, scene, cam, w, h, k, n):
     del dx, dy
     far = lambda q: WHIP_D / px * q ** 1.5                         # how far in the sheet has come, in samples
     d0, d1 = far(n / WHIP_N), far((n + 1) / WHIP_N)                 # since the last drawing, and now
-    streak = np.zeros(r.shape, np.float32)
+    L = WC.ramp01(WC.TONE[0], WC.TONE[1], WC.lit(data, light))      # the sheet's cuts, where they lay
+    mean, peak = np.zeros(r.shape, np.float32), np.zeros(r.shape, np.float32)
     N = 5
-    for j in range(N):                                             # the brightest the sheet was along the way
+    for j in range(N):                                             # what the sheet was along the way: its mean (the smear) and its brightest
         d = d0 + (d1 - d0) * j / (N - 1)
         xs, ys = cx + ux * (r + d), cy + uy * (r + d)
         margin = np.minimum(np.minimum(xs, w * k - 1 - xs), np.minimum(ys, h * k - 1 - ys))   # to the frame's edge, where the sheet ends
-        inside = np.clip(margin * px / EDGE, 0.0, 1.0) * (1 + 0.6 * (WC.noise2(xs * px / 90.0, ys * px / 90.0, 13) - 0.5))   # ragged, and fading, as it comes in
+        inside = np.clip(margin * px / EDGE + 0.5 + 0.7 * (WC.noise2(xs * px / 90.0, ys * px / 90.0, 13) - 0.5), 0.0, 1.0)   # the sheet's edge, ragged either way of where it's come to
         ix = np.clip(np.rint(xs), 0, w * k - 1).astype(np.int32)
         iy = np.clip(np.rint(ys), 0, h * k - 1).astype(np.int32)
         del xs, ys
-        np.maximum(streak, WC.ramp01(WC.TONE[0], WC.TONE[1], WC.lit(data, light)[iy, ix]) * inside, out=streak)
-        if j == N - 1:                                             # the lines as they lie now: from where they came
-            phi_w, s_w = phi[iy, ix], s[iy, ix]
-        del ix, iy, inside
-    del ux, uy
-    rp = r * px
-    streak *= 1 + 0.5 * WC.ramp01(700.0, 250.0, rp)               # brighter in to the head, where the sheet is driven closest
-    del r, rp
+        t = L[iy, ix] * inside
+        mean += t / N
+        np.maximum(peak, t, out=peak)
+        if j == N - 1:                                             # the lines as they lie now: from where they came; past the sheet's edge, nothing
+            phi_w, s_w, edge = phi[iy, ix], s[iy, ix], inside
+        del ix, iy, inside, t
+    del ux, uy, r, L
+    streak = np.minimum(0.5 * mean + 0.5 * peak, 0.85) * edge      # never solid: lines, smeared
+    del mean, peak, edge
     return np.where(bare, phi, phi_w), np.where(bare, s, s_w), np.where(bare, tone, streak)
 
 
@@ -296,7 +298,7 @@ def frame(f, ctx, drawn, w=W, h=H, k=K):
         tone = WC.tone_of(data, light) * strength(td)
     elif f < BLAST:                                                # every contour, for a frame
         light = render(scene, block, mats["lit"], "Raking light", "light", w, h, k)
-        tone = 0.75 * WC.ramp01(0.25, 1.0, light[..., 0] + WC.GLOW * data[..., 2])
+        tone = 0.75 * WC.ramp01(0.25, 1.0, light[..., 0] + WC.GLOW * WC.unpack(data)[0])
     else:
         bare = render(scene, block, mats["bare"], None, "bare", w, h, k)[..., 0] > 0.5
         white = render(scene, block, mats["lit_bare"], "White light", "white", w, h, k)[..., 0]
