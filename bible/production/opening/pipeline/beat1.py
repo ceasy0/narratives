@@ -19,17 +19,20 @@ The timeline, from the shot list and the treatment:
 - 00:26-00:38 (0140) the picture holds while the sound draws in; the face all but still.
 - 00:38:00 (0200) two frames: the sand pressed onto the face, its lines driven close and bent hard
   over every contour.
-- 00:38:02 (0210) the whip, on one frame, with the camera's beat (your note, 2026-10-17: no swirl; the
-  sheet whipped behind the head in one instant): what the eye keeps of it, every line smeared along its
-  path in to the head's rim; a second frame of what's left at the rim; then nothing outside the face.
-- 00:38:04-00:39:00 (0220) the lines come round either side of the head and land on the face, filling
-  it white from its two sides in to the middle, fast at first, each line arriving a little before or
-  after its neighbours, the face's own cuts giving way under them; outside the rims, a narrowing band
-  of the lines still coming round. Then the face holds, all white but for a few black cuts where its
-  forms turn from the light (under the brows, the nose, the mouth), alone on black, eyes closed.
+- 00:38:02-00:38:10 (0210) the whip, four drawings on twos, with the camera's beat on the first (your
+  notes, 2026-10-17: no swirl; not in one instant; choppy as a cartoon and still one smooth action): the
+  sheet is drawn in to the head and behind it, every line smeared along its path, the far corners
+  emptying first, the lines crowding and bending as they close on the head, until nothing is left
+  outside the face.
+- 00:38:10-00:39:10 (0220) the lines come round either side of the head and land on the face, on twos,
+  filling it white from its two sides in to the middle, fast at first, each line arriving a little
+  before or after its neighbours, the face's own cuts giving way under them; outside the rims, a
+  narrowing band of the lines still coming round, flowing in. Then the face holds, all white but for a
+  few black cuts where its forms turn from the light (under the brows, the nose, the mouth), those cuts
+  carrying the face's own lines so the mouth isn't a smooth hole; alone on black, eyes closed.
 The camera pushes in slowly from the first frame and comes to rest at 00:38 on the framing of the
-style test's still; on the whip's frame it beats once, in, and settles back over half a second, then
-holds. Drawings are on twos (each re-cut, so the lines boil at their edges); the release is on ones.
+style test's still; on the whip's first frame it beats once, in, and settles back over half a second,
+then holds. Drawings are on twos (each re-cut, so the lines boil at their edges); the release is on ones.
 Writes work/beat1/frames/NNNN.png (film frames), work/beat1/beat1-0000-1007.mp4 and
 work/beat1/beat1-flash.txt; with `half` after the command, a half-size test (960 x 540) into
 work/beat1/half/ instead, about four times as fast.
@@ -59,17 +62,18 @@ W, H, K = (960, 540, 2) if HALF else (1920, 1080, 4)   # the frame, and samples 
 FPS, TWOS = O.FPS, 2
 END = O.frame("00:42")                            # a few seconds after the release
 RELEASE = O.frame("00:38")                        # 0200: two frames pressed
-BLAST = RELEASE + 2                               # 0210: the whip's frame
-LAND = (BLAST + 2, O.frame("00:39:00"))           # 0220: the lines landing on the face, from the frame after the whip's two until it's white
+BLAST = RELEASE + 2                               # 0210: the whip's first frame
+WHIP_N = 4                                        # the whip's drawings, on twos
+LAND = (BLAST + 2 * WHIP_N, O.frame("00:39:10"))  # 0220: the lines landing on the face, on twos, from the whip's end until it's white
 WHITE_SUN = Vector((-0.1, 0.45, 0.89)).normalized()   # the white face's light: high, from beyond the head, so the nose's underside and the upper lip are its shadows
 WHITE_T = 0.5                                    # the white face's light below this is left black: under the brows, the nose's underside, the mouth
 CENTRE = Vector((0.0, -0.02, 0.025))              # the middle of the face, for the whip to go in to
 PULSE = 0.07                                      # the camera's beat at the whip: how much closer
-SMEAR = (420.0, 160.0)                            # the whip's two frames: how far each line is smeared along its path to the head (pixels at 1920)
-RIM = 450.0                                       # the whip's second frame: only what's left this close to the middle of the face (pixels at 1920)
-SP_PX = 8.0                                       # the cut's spacing on screen at this framing (pixels at 1920)
-RADIUS = 480.0                                    # the whip's streaks lie a spacing apart at this distance from the middle of the face (pixels at 1920): closer in they crowd, as the sheet does
+WHIP_D = 1400.0                                   # how far in the sheet is drawn by the whip's last drawing (pixels at 1920): past the far corners, so nothing is left
 BAND = 150.0                                      # the landing: how far outside the rims the lines coming round are drawn as it starts (pixels at 1920), narrowing to nothing
+BAND_FLOW = 120.0                                 # and how far those lines travel in toward the head over the landing (pixels at 1920)
+EDGE = 160.0                                      # the whip: the sheet's edge, as it's drawn in from the frame's, is ragged over this width (pixels at 1920), not a rule
+SHADOW_CUTS = 0.7                                 # the white face's black cuts carry its own lines at this tone (your note, 2026-10-17: the mouth too smooth)
 
 def ease(x):
     x = min(1.0, max(0.0, x))
@@ -89,15 +93,14 @@ def flow(t):
 
 
 def landing(f):
-    """How far the lines have landed on the face: from the frame after the whip's two, fast at first,
-    all by 00:39:00."""
+    """How far the lines have landed on the face: from the whip's end, fast at first, all by 00:39:10."""
     x = min(1.0, max(0.0, (f - LAND[0] + 1) / (LAND[1] - LAND[0] + 1)))
     return 1 - (1 - x) ** 2
 
 
 def pulse(f):
     """The camera's one beat at the release (your notes, 2026-10-16 and 2026-10-17): in on the whip's
-    frame, the same instant the sheet goes, and back over the twelve frames after."""
+    first frame, the same instant the sheet starts to go, and back over the twelve frames after."""
     if f < BLAST:
         return 0.0
     if f == BLAST:
@@ -185,10 +188,11 @@ def render(scene, block, mat, sun, name, w, h, k):
 
 
 def whip(data, light, bare, phi, s, tone, scene, cam, w, h, k, n):
-    """The whip (your note, 2026-10-17: no swirl; the sheet whipped behind the head in one instant,
-    with the camera's beat). What's drawn is what the eye keeps of it: every line smeared along its
-    path in to the head, cut as streaks that run in to its rim, brightest there; on the second frame
-    (n = 1) only what's left at the rim. The face keeps its own cuts."""
+    """The whip (your notes, 2026-10-17: no swirl, not in one instant, choppy as a cartoon and still one
+    smooth action): drawing n of WHIP_N, on twos. The sheet is drawn in to the head and behind it: each
+    point shows what lay further out along its line to the middle of the face, smeared over the distance
+    it came since the last drawing, the far corners emptying first, the lines crowding and bending as
+    they close on the head. The face keeps its own cuts."""
     c = world_to_camera_view(scene, cam, CENTRE)
     cx, cy = c.x * w * k, (1 - c.y) * h * k
     px = 1920.0 / (w * k)                                          # pixels at 1920 for each sample
@@ -196,28 +200,28 @@ def whip(data, light, bare, phi, s, tone, scene, cam, w, h, k, n):
     dx, dy = xx - cx, yy - cy
     del xx, yy
     r = np.hypot(dx, dy)
-    a = np.arctan2(dy, dx)
     ux, uy = dx / np.maximum(r, 1.0), dy / np.maximum(r, 1.0)      # out from the middle of the face
     del dx, dy
+    far = lambda q: WHIP_D / px * q ** 1.5                         # how far in the sheet has come, in samples
+    d0, d1 = far(n / WHIP_N), far((n + 1) / WHIP_N)                 # since the last drawing, and now
     streak = np.zeros(r.shape, np.float32)
-    N = 6
-    for j in range(N):                                             # the brightest the sheet was along each line's path
-        d = SMEAR[n] / px * j / (N - 1)
+    N = 5
+    for j in range(N):                                             # the brightest the sheet was along the way
+        d = d0 + (d1 - d0) * j / (N - 1)
         xs, ys = cx + ux * (r + d), cy + uy * (r + d)
-        inside = (xs >= 0) & (xs <= w * k - 1) & (ys >= 0) & (ys <= h * k - 1)   # from off the frame, nothing
+        margin = np.minimum(np.minimum(xs, w * k - 1 - xs), np.minimum(ys, h * k - 1 - ys))   # to the frame's edge, where the sheet ends
+        inside = np.clip(margin * px / EDGE, 0.0, 1.0) * (1 + 0.6 * (WC.noise2(xs * px / 90.0, ys * px / 90.0, 13) - 0.5))   # ragged, and fading, as it comes in
         ix = np.clip(np.rint(xs), 0, w * k - 1).astype(np.int32)
         iy = np.clip(np.rint(ys), 0, h * k - 1).astype(np.int32)
         del xs, ys
-        np.maximum(streak, WC.ramp01(WC.TONE[0], WC.TONE[1], light[..., 0][iy, ix] + WC.GLOW * data[..., 2][iy, ix]) * inside, out=streak)
+        np.maximum(streak, WC.ramp01(WC.TONE[0], WC.TONE[1], WC.lit(data, light)[iy, ix]) * inside, out=streak)
+        if j == N - 1:                                             # the lines as they lie now: from where they came
+            phi_w, s_w = phi[iy, ix], s[iy, ix]
         del ix, iy, inside
     del ux, uy
     rp = r * px
-    streak *= 0.35 + 0.65 * WC.ramp01(1400.0, 350.0, rp)           # brightest in to the head, where the sheet is driven closest
-    if n == 1:
-        streak *= 0.8 * WC.ramp01(RIM + 60, RIM - 60, rp)          # what's left at the rim
-    phi_w = a * (RADIUS / SP_PX)                                   # the streaks: lines in to the middle of the face
-    s_w = rp / SP_PX                                               # each running along its own path
-    del a, r, rp
+    streak *= 1 + 0.5 * WC.ramp01(700.0, 250.0, rp)               # brighter in to the head, where the sheet is driven closest
+    del r, rp
     return np.where(bare, phi, phi_w), np.where(bare, s, s_w), np.where(bare, tone, streak)
 
 
@@ -243,7 +247,13 @@ def land(data, light, bare, white, phi, s, tone, w, k, p):
     fill = np.where(bare, WC.ramp01(WHITE_T - 0.05, WHITE_T, white), 0.0) * cover   # solid, but for the few black cuts: under the brows, the nose, the mouth
     width = max(BAND * (1 - p) / px, 1.0)
     band = (~bare) & rows[:, None] & (d < 0) & (d > -width)        # outside the rims, the lines still coming round
-    tone = np.where(bare, tone * (1 - cover), np.where(band, WC.tone_of(data, light) * WC.ramp01(-width, -0.15 * width, d), 0.0))
+    mid = ((left + right) / 2.0)[:, None]
+    shift = np.where(np.arange(Ww)[None, :] < mid, -1.0, 1.0) * (BAND_FLOW * (1 - p) / px)   # those lines flow in toward the head: each shows what lay further out
+    ix = np.clip(np.rint(np.arange(Ww, dtype=np.float32)[None, :] + shift), 0, Ww - 1).astype(np.int32)
+    iy = np.broadcast_to(np.arange(Hh, dtype=np.int32)[:, None], ix.shape)
+    coming = WC.ramp01(WC.TONE[0], WC.TONE[1], WC.lit(data, light)[iy, ix]) * WC.ramp01(-width, -0.15 * width, d)
+    del ix, iy, shift, mid
+    tone = np.where(bare, tone * (1 - cover), np.where(band, coming, 0.0))
     return tone, fill
 
 
@@ -260,11 +270,11 @@ def frame(f, ctx, drawn, w=W, h=H, k=K):
         m, td = f, t38
         key = ("pressed", f)
         args = dict(rise=rise(t38), flow=flow(t38), shape=0.0, bend=WC.BEND * (2.5 + (f - RELEASE)), sp=WC.SP * 0.65)   # pressed flat
-    elif f < LAND[1]:                                              # the whip and the landing, on ones: the sheet in flight
-        m, td = f, t38
-        key = ("release", f)
-        p = (f - BLAST + 1) / (LAND[1] - BLAST)
-        args = dict(rise=rise(t38), flow=flow(t38) + 0.5 * (f - BLAST + 1), shape=1.0, bend=WC.BEND * (1 - 0.5 * p))
+    elif f < LAND[1]:                                              # the whip and the landing, on twos: the sheet in flight
+        m, td = f // TWOS, t38
+        key = ("release", m)
+        p = (m * TWOS - BLAST + 1) / (LAND[1] - BLAST)
+        args = dict(rise=rise(t38), flow=flow(t38) + 0.5 * (m * TWOS - BLAST + 1), shape=1.0, bend=WC.BEND * (1 - 0.5 * p))
     else:                                                          # the white face: the sand gone
         m = f // TWOS
         key = ("white", m)
@@ -290,16 +300,15 @@ def frame(f, ctx, drawn, w=W, h=H, k=K):
     else:
         bare = render(scene, block, mats["bare"], None, "bare", w, h, k)[..., 0] > 0.5
         white = render(scene, block, mats["lit_bare"], "White light", "white", w, h, k)[..., 0]
-        if f < LAND[1]:
-            light = render(scene, block, mats["lit"], "Raking light", "light", w, h, k)
-            tone = np.where(bare, WC.tone_of(data, light), 0.0)    # the face's own cuts, until the white covers them
-            if f < LAND[0]:                                        # the whip: two frames
-                phi, s, tone = whip(data, light, bare, phi, s, tone, scene, cam, w, h, k, f - BLAST)
-            else:                                                  # the landing
-                tone, fill = land(data, light, bare, white, phi, s, tone, w, k, landing(f))
-        else:                                                      # the white face
-            tone = None
+        light = render(scene, block, mats["lit"], "Raking light", "light", w, h, k)
+        tone = np.where(bare, WC.tone_of(data, light), 0.0)        # the face's own cuts, until the white covers them
+        if f < LAND[0]:                                            # the whip, on twos
+            phi, s, tone = whip(data, light, bare, phi, s, tone, scene, cam, w, h, k, (f - BLAST) // TWOS)
+        elif f < LAND[1]:                                          # the landing, on twos
+            tone, fill = land(data, light, bare, white, phi, s, tone, w, k, landing(m * TWOS))
+        else:                                                      # the white face: its black cuts carry its own lines
             fill = np.where(bare, WC.ramp01(WHITE_T - 0.05, WHITE_T, white), 0.0)
+            tone = np.where(bare & (fill < 0.5), tone * SHADOW_CUTS, 0.0)
     print("  passes in %.1fs" % (time.time() - t))
     img = WC.cut(phi, s, tone, m, k) if tone is not None else None
     if fill is not None:
@@ -329,7 +338,7 @@ def run_frames(a, b):
 
 
 KEYS = ["00:01", "00:05", "00:09", "00:12", "00:15", "00:17", "00:20", "00:23", "00:26", "00:32", "00:37:23",
-        "00:38:00", "00:38:01", "00:38:02", "00:38:03", "00:38:04", "00:38:06", "00:38:09", "00:38:13", "00:38:18", "00:39:02"]
+        "00:38:00", "00:38:02", "00:38:04", "00:38:06", "00:38:08", "00:38:10", "00:38:14", "00:38:18", "00:38:23", "00:39:12"]
 
 
 def run_keys():

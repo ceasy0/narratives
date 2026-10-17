@@ -43,6 +43,7 @@ SP = 0.0021                                       # the cuts' spacing: about eig
 BEND = 0.70                                       # how far a line is pushed across the flow by the height under it
 SUN = Vector((-0.38, 0.80, 0.46)).normalized()    # toward the one light: beyond the head and to the left; 26 degrees up
 GLOW = 0.10                                       # the static's own light, under the sun's
+FILL = 0.33                                       # a fill in the sun's shadow, on the grain: thin, broken lines where the sun doesn't reach (your notes, 2026-10-17: the lines under the chin, and the face's dark side still in the fabric), nothing where it does
 V_GRAIN, V_SWELL, V_EDDY = 0.05, 0.015, 0.03      # how fast the flow carries each (m/s), left to right
 SWELL = (0.010, 0.12, 0.024)                      # the static's swells: height, length, breadth (m)
 SKIRT = (24, 0.75)                                # the sand piled round the face: how far (cells of 0.5 mm), how high (the first beat 1 render's edge, which you prefer: your note, 2026-10-17)
@@ -378,9 +379,16 @@ def box(a, r):
     return (c[n:, n:] - c[:-n, n:] - c[n:, :-n] + c[:-n, :-n]) / (n * n)
 
 
+def lit(data, light):
+    """The light on each point, from the passes: the sun on the grain, the grain's own light, and in
+    the sun's shadow a fill that fades out as the sun comes in."""
+    sun, grain = light[..., 0], data[..., 2]
+    return sun + GLOW * grain + FILL * grain * (1 - ramp01(0.2, 0.6, sun))
+
+
 def tone_of(data, light):
-    """How wide the cuts go: the sun on the grain, and the grain's own light, from the passes."""
-    return ramp01(TONE[0], TONE[1], light[..., 0] + GLOW * data[..., 2])
+    """How wide the cuts go: the light on the grain, from the passes."""
+    return ramp01(TONE[0], TONE[1], lit(data, light))
 
 
 def cut(phi, s, tone, drawing, K, cap=0.36, width=WIDTH):
