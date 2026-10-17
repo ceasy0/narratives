@@ -249,8 +249,13 @@ def land(data, light, bare, white, phi, s, tone, w, k, p):
     jit = 0.22 * (WC.hash2(np.floor(phi).astype(np.int64), 0, 11) - 0.5) + 0.08 * (WC.noise2(s / 3.0, phi / 2.0, 12) - 0.5)   # each line lands in its own time, a little ragged along it
     front = 1.3 * p
     cover = WC.ramp01(front + 0.03, front - 0.03, u + jit) * bare   # landed: the white, where the lines have come in to
-    del u, jit
     fill = np.where(bare, WC.ramp01(WHITE_T - 0.05, WHITE_T, white), 0.0) * cover   # solid, but for the few black cuts: under the brows, the nose, the mouth
+    if os.environ.get("BEAT1_DEBUG"):                              # the landing's parts, to look at (work/.../debug/)
+        dbg = OUT / "debug"
+        dbg.mkdir(exist_ok=True)
+        for name, a in (("u", np.clip(u, 0.0, 1.0)), ("jit", jit + 0.5), ("cover", cover), ("white", white), ("fill", fill), ("bare", bare.astype(np.float32)), ("tone", tone), ("dout", np.clip(dout / 200.0, 0.0, 1.0))):
+            WC.write_png(dbg / ("%s-%.2f.png" % (name, p)), a[::k, ::k])
+    del u, jit
     width = max(BAND * (1 - p) / px, 1.0)
     band = (~bare) & (dout < width)                                # outside the rims, the lines still coming round
     shift = inward * (BAND_FLOW * (1 - p) / px)                    # those lines flow in toward the head: each shows what lay further out
