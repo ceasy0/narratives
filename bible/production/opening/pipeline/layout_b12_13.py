@@ -97,8 +97,9 @@ CAM_LENS = [(12, 35), (15.5, 35), (17, 37), (19.5, 37), (21, 51), (22.5, 51), (2
             (32.5, 43), (33.5, 48), (36.5, 48), (39, 33), (46, 33), (56, 42), (62, 42), (66, 36), (80, 36), (86, 44), (96, 44), (102, 38)]   # down the Nile: closer in the valley, wider at the delta's head
 CAM_MIN_SPEED = 0.5            # m/s: it never stops or goes back, however slowly it goes
 # How far ahead of the band's centre the camera looks, m: it drops back to the rear for the
-# cat (04:26-04:29), then up the line with the newborn (04:37-04:41), lets the line walk through the frame past the grave, then catches up.
-CAM_AHEAD = [(9.5, 1.0), (15.5, 1.0), (17, -2.0), (18.6, -5.0), (19.6, -5.5), (21.6, 0.0), (22.5, 1.0), (26, 1.0), (28, -3.4), (32, 3.2), (36.5, -1.0), (39, 1.0), (48, 1.0),
+# cat (04:26-04:29), then holds on the woman with the newborn (04:37-04:41, she walks ahead of the
+# centre), lets the line walk through the frame past the grave, then catches up.
+CAM_AHEAD = [(9.5, 1.0), (15.5, 1.0), (17, -2.0), (18.6, -5.0), (19.6, -5.5), (21.6, 0.0), (22.5, 1.0), (26, 1.0), (28, 1.5), (32, 3.2), (36.5, -1.0), (39, 1.0), (48, 1.0),
              (56, -2.5), (62, 1.0), (72, 1.0), (78, -3.0), (84, 1.5), (102, 1.0)]   # down the Nile it lets the line walk through twice more
 CAM_HEIGHT = 1.5
 # The trunks that cross the lens, each a generation passing: (seconds from 04:07, where it stands
@@ -115,7 +116,7 @@ CAM_HEIGHT = 1.5
 # Past the river the walk goes on down the Nile for a minute (your note, 2026-10-17), and the
 # generations pass at three more wipes, each the start of a shot: a rock pillar at the cataracts
 # (04:51), and two old sycamore figs, in Egypt's valley (05:09) and at the head of the delta (05:29).
-WIPES = [(14.8, -0.5), (21.5, 0.54), (25.4, -0.3), (32.0, -0.3), (42.0, -0.3), (60.0, 0.5), (80.0, -0.3)]
+WIPES = [(14.8, -0.5), (21.5, 0.54), (25.4, -0.3), (32.0, -0.3), (42.0, -0.3), (60.0, 0.1), (80.0, -0.1)]
 # Split up (your note, 2026-10-15): once past the leaf, each runner takes their own line through
 # the trees, cutting round the trunks, the band spread 7 m across and 10 m along; they close up
 # again as they charge (SPREAD_T). Per runner in BAND: (across, along) from the band's centre.
@@ -220,10 +221,11 @@ def height(x, y, river=True):
     rock = smooth(Y_NUBIA - 12, Y_NUBIA + 8, y)                   # Nubia: bare rock knolls under the sand
     flood = smooth(Y_VALLEY - 12, Y_VALLEY + 8, y)                # Egypt's valley: the floodplain, flat
     h = (_swells(x, y) - _AT_LEAF) * smooth(3.0, 14.0, math.hypot(x - LEAF.x, y - LEAF.y)) * (1 - 0.85 * flat * (1 - dune) - 0.6 * dune)
-    h += dune * (1 - flood) * _dunes(x, y)
-    h += rock * (1 - flood) * 2.2 * noise.noise(Vector((x / 22.0, y / 22.0, 5.5)))
-    h *= 1 - 0.7 * flood
     bank = river_x(y) if river else None
+    shore = smooth(bank - 45.0, bank - 10.0, x) if bank is not None else 0.0   # the land falls flat to the river, so the water shows from the path
+    h += dune * (1 - flood) * (1 - shore) * _dunes(x, y)
+    h += rock * (1 - flood) * (1 - 0.6 * shore) * 2.2 * noise.noise(Vector((x / 22.0, y / 22.0, 5.5)))
+    h *= 1 - 0.7 * flood
     if bank is not None:                       # down a bank 6 m wide to the water, and up the far side
         h = lerp(h, WATER - 0.4, smooth(5.0, -1.0, bank - x) * (1 - smooth(-1.0, 5.0, x - bank - RIVER_WIDTH)))
     return h
@@ -1118,7 +1120,7 @@ for (xa, ya), (xb, yb) in zip(near, near[1:]):
         u = random.random()
         rx, ry = lerp(xa, xb, u) - random.uniform(0, 2.5), lerp(ya, yb, u) + random.uniform(-1, 1)
         cone(bm, (rx, ry, height(rx, ry)),
-             random.uniform(.05, .12), 0.0, random.uniform(1.5, 3.2), 4)       # reeds and papyrus
+             random.uniform(.05, .12), 0.0, random.uniform(1.0, 2.0), 4)       # reeds, below the camera's eye, so the water shows past them
 for y in range(int(Y_RIVER) - 12, int(Y_VALLEY) + 10, 7):     # thorn trees and doum palms along the near bank, a line of trees on the far, to Egypt (its palms are below)
     by = y + random.uniform(-3, 3)
     bank = river_x(by)
