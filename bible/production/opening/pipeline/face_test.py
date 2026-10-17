@@ -33,14 +33,17 @@ cool fill; a rim from behind. face-front-raw.png is the same light shaded plainl
 No outline. Against a dark, cool backdrop. Over the paint, as a face has (your note, 2026-10-15),
 very light marks: freckles, two small moles, a faint birthmark, a thin pale scar.
 
-The lashes are painted as a filled shape along the lids, heavier toward the outer corners, with
-only a few hairs over it, and the brows as full solid shapes in the hair's colour with strands
-along them, as Vi's are (your note, 2026-10-16), rather than drawn hair by hair.
+The lashes are real hairs, the asset's, drawn fuller than its texture and rooted on a thin dark
+line along the lids; the lower lids keep only the line (your note, 2026-10-17). The brows are full
+solid shapes in the hair's colour with strands along them, as Vi's are (your note, 2026-10-16),
+both the same shape and clean-edged (your note, 2026-10-17). The locks of hair each lie on a layer
+of their own among the locks they cross, so they overlap as styled hair does instead of clipping.
 
 Writes work/styletest/face-front.png (straight on, as your frame of Vi), face-neutral.png and
 face-breath.png (the left three-quarter), face-breath.mp4 and face-sheet.png, and the paint in
 work/styletest/paint/. -- adam writes face-adam-front.png and face-adam-neutral.png (and
-face-adam.blend), Adam's hair painted in paint/adam-hair-colour.png.
+face-adam.blend), with his own paint, paint/adam-skin-colour.png and adam-hair-colour.png, the
+skin under his hair in the hair's colour.
 """
 import importlib
 import json
@@ -67,6 +70,7 @@ REPAINT = "repaint" in ARGS                        # paint again from the bakes 
 ADAM = "adam" in ARGS                              # Adam: this head with the first version's short hair (your call, 2026-10-16)
 LIVE = "baked" not in ARGS                         # the light from the renderer, not painted in (your note, 2026-10-15)
 OUT = O.WORK / "styletest"
+SKIN = "adam-skin" if ADAM else "skin"              # the skin's bakes, each face its own
 PAINT = OUT / "paint"
 BRUSH = pathlib.Path(__file__).resolve().parent / "brush.py"
 FPS = O.FPS
@@ -327,13 +331,17 @@ for t, w in BREATH_IN.items():
 
 def painter_masks():
     """One colour per point for the painter: red, the shade under the eyes to leave light; green,
-    the ridges of the forms, where highlights go; blue, the lashes as a filled shape (your note,
-    2026-10-16: Vi's are filled in, not drawn hair by hair): a band along each lid where the lashes
-    root, thin at the inner corner and widening toward the outer, the upper lid's heavier and wider
-    than the lower's, painted near black."""
+    the ridges of the forms, where highlights go; blue, the line of the lids where the lashes root
+    (your note, 2026-10-17: the lashes lined with the eye), thin, a little heavier toward the outer
+    corner, the upper lid's darker than the lower's; the lashes themselves are the asset's hairs."""
     from mathutils.kdtree import KDTree
     lash = fitted["eyelashes"]
+    bvh = BVHTree.FromPolygons(pts, [tuple(pl.vertices) for pl in human.data.polygons])
     lv = [lash.matrix_world @ v.co for v in lash.data.vertices]
+    dist = [bvh.find_nearest(v)[3] for v in lv]
+    near = sorted(dist)[len(dist) // 4]
+    lv = [v for v, d in zip(lv, dist) if d <= near]                  # the quarter nearest the skin: where the hairs root, on the lid, not their tips
+    print("lash roots: %d points, within %.4f m of the lid" % (len(lv), near))
     kd = KDTree(len(lv))
     for i, v in enumerate(lv):
         kd.insert(v, i)
@@ -344,8 +352,8 @@ def painter_masks():
         c = min(EYES, key=lambda c: (p - c).length)
         outer = ramp01(-0.004, 0.014, (p.x - c.x) * (1.0 if c.x > E.x else -1.0))   # toward the eye's outer corner
         upper = ramp01(c.z - 0.004, c.z + 0.001, p.z)                                 # the upper lid's lashes
-        w = (0.0012 + 0.0032 * outer) * (0.35 + 0.65 * upper)
-        lid = ramp01(w + 0.0008, w - 0.0006, d) * (0.45 + 0.55 * upper)
+        w = (0.0006 + 0.0006 * outer) * (0.6 + 0.4 * upper)
+        lid = ramp01(w + 0.0005, w - 0.0003, d) * (0.4 + 0.6 * upper)
         near_eye = min((p - c).length for c in EYES)
         cols.extend((under_eye(p), float(RIDGE[i]) * ramp01(0.016, 0.026, near_eye), lid, 1.0))
     human.data.attributes.new("paint_masks", 'FLOAT_COLOR', 'POINT').data.foreach_set("color", cols)
@@ -470,88 +478,106 @@ def hair(n_locks=130, seed=3):
     cols = 16
     rows = math.ceil(len(specs) / cols)
     seg = 12                                            # round locks (your note: the roots looked blocky)
-    for k, (r, wisp) in enumerate(specs):
-        _, n0, _ = nearest(r)
-        side = 1.0 if r.x > part_x else -1.0
-        top = ramp01(E.z + 0.04, E.z + 0.11, r.z)        # 1 on the crown, 0 low on the side of the head
-        # The comb, as a smooth field over the head, so neighbouring locks lie the same way: the back
-        # falls to the nape, the sides to the jaw, and right of the part the front sweeps across the
-        # forehead (the fringe), blended from one to the next.
-        back = ramp01(E.y + 0.06, E.y + 0.13, r.y)
-        fringe = (1.0 if side < 0 else 0.0) * ramp01(E.y + 0.07, E.y + 0.03, r.y) * ramp01(0.2, 0.5, top)
-        d_side = Vector((side * (0.25 + 0.7 * top), 0.1, -(1.0 - 0.75 * top)))
-        d = d_side.lerp(Vector((0.2 * side, 0.6, -0.8)), back).lerp(Vector((-0.85, -0.3, -0.42)), fringe)
-        swept = (1.0 if side > 0 else 0.0) * ramp01(E.y + 0.07, E.y + 0.03, r.y)   # right of the part, the front swept back, as in the photos
-        d = d.lerp(Vector((0.5, 0.75, -0.45)), 0.8 * swept)
-        end_z = (E.z - 0.085 + rng.uniform(-0.012, 0.012)) * (1 - back) + (E.z - 0.13) * back
-        end_z = end_z * (1 - fringe) + (E.z - 0.06) * fringe
-        fall = 1.0 - 0.25 * fringe
-        lift = (0.008 + 0.014 * top + 0.003 * (k / len(specs))) * (1 - 0.3 * fringe)   # the crown's over the side's; the fringe close   # the crown's locks lie over the side's; the fringe stands off
-        wave = 40.0 * r.x + 30.0 * r.y                 # neighbours wave together, as combed hair does
-        p = r - n0 * 0.003                              # rooted in the scalp
-        path, norms = [p.copy()], [n0]
-        for i in range(60):
-            q, nq, _ = nearest(p)
-            d = (d - nq * d.dot(nq) * 0.8).normalized()                      # along the head, not into it
-            d = (d + Vector((0, 0, -1)) * fall * (0.015 + 0.012 * i)).normalized()  # falling more as it goes
-            d = (d + d.cross(nq).normalized() * 0.07 * math.sin(0.28 * i + wave)).normalized()   # a slight wave
-            if p.z < end_z + 0.025:                                          # the ends flick out, as in the photos
-                d = (d + nq * 0.35 * ramp01(end_z + 0.025, end_z, p.z)).normalized()
-            p = p + d * 0.008
-            q, nq, _ = nearest(p)
-            li = 0.006 + (lift - 0.006) * ramp01(0, 5, i)              # rising from the part, not standing up from it
-            if (p - q).dot(nq) < li:
-                p = q + nq * li
-            lim = E.z + 0.035 - 0.12 * ramp01(0.065, 0.095, abs(p.x - E.x))
-            if fringe > 0.2:                           # the fringe's edge a diagonal, as in the photos: high at the part, the brow at his right temple
-                lim = max(lim, E.z + 0.03 + 0.55 * (p.x - (E.x - 0.07)))
-            if p.y < E.y + 0.01 and p.z < lim:
-                p.z = lim                              # off the eyes: the fringe stops at the brow, easing down past the temple
-                if fringe > 0.2 and i > 12:
-                    path.append(p.copy())
-                    norms.append(nq)
-                    break                              # a fringe lock ends where it meets its edge, rather than sliding along it
-                if fringe > 0.2:                       # a short one flows on along the edge, toward his right temple
-                    d = (0.3 * d + Vector((-0.88, 0.0, -0.48))).normalized()
-            path.append(p.copy())
-            norms.append(nq)
-            if p.z < end_z and i > 6:
-                break
-        width = rng.uniform(0.005, 0.01) if wisp else rng.uniform(0.045, 0.065)   # big locks that merge into one mass, as Vi's; wisps fine
-        width *= 0.45 + 0.55 * ramp01(0.04, 0.1, 0.008 * (len(path) - 1))           # short ones narrower, not lumps
-        taper = 1.8 if fringe > 0.2 else 3.0                                         # the fringe's ends to points
-        cx, cy = k % cols, k // cols
-        n = len(path)
-        base = len(verts)
-        tone = rng.uniform(0.92, 1.08)
-        s_prev = None
-        for j, (c, nq) in enumerate(zip(path, norms)):
-            u = j / (n - 1)
-            t = (path[min(j + 1, n - 1)] - path[max(j - 1, 0)]).normalized()
-            s = t.cross(nq).normalized()
-            if s_prev is not None and s.dot(s_prev) < 0:                # no twist where the lock bends
-                s = -s
-            s_prev = s
-            w = width * (1 - u ** taper) * (0.35 + 0.65 * min(1.0, u * 4)) + 0.0004   # narrow at the root, as hair leaves the part
-            for a in range(seg + 1):
-                ang = 2 * math.pi * a / seg - math.pi / 2      # the seam underneath, out of sight
-                verts.append(tuple(c + s * (0.5 * w * math.cos(ang)) + nq * (0.3 * w * math.sin(ang))))
-                vn.append(tuple((nq * 0.75 + (s * math.cos(ang) + nq * math.sin(ang)) * 0.25).normalized()))
-                uvs.append(((cx + 0.05 + 0.9 * a / seg) / cols, (cy + 0.03 + 0.94 * u) / rows))
-                along.append(u)
-                shade.append(tone)
-        for j in range(n - 1):
+    # Each lock lies on a layer of its own among the locks it crosses, so where two overlap one lies
+    # clearly over the other (at the same height their surfaces had crossed back and forth in jagged
+    # steps: your note, 2026-10-17, clipping, not styled). The locks are grown twice: first to see
+    # where each runs, then on their layers, the lower roots' locks beneath, the crown's over them.
+    state = rng.getstate()
+    layer, grown = [0] * len(specs), []
+    for pass_ in (0, 1):
+        rng.setstate(state)
+        for k, (r, wisp) in enumerate(specs):
+            _, n0, _ = nearest(r)
+            side = 1.0 if r.x > part_x else -1.0
+            top = ramp01(E.z + 0.04, E.z + 0.11, r.z)        # 1 on the crown, 0 low on the side of the head
+            # The comb, as a smooth field over the head, so neighbouring locks lie the same way: the back
+            # falls to the nape, the sides to the jaw, and right of the part the front sweeps across the
+            # forehead (the fringe), blended from one to the next.
+            back = ramp01(E.y + 0.06, E.y + 0.13, r.y)
+            fringe = (1.0 if side < 0 else 0.0) * ramp01(E.y + 0.07, E.y + 0.03, r.y) * ramp01(0.2, 0.5, top)
+            d_side = Vector((side * (0.25 + 0.7 * top), 0.1, -(1.0 - 0.75 * top)))
+            d = d_side.lerp(Vector((0.2 * side, 0.6, -0.8)), back).lerp(Vector((-0.85, -0.3, -0.42)), fringe)
+            swept = (1.0 if side > 0 else 0.0) * ramp01(E.y + 0.07, E.y + 0.03, r.y)   # right of the part, the front swept back, as in the photos
+            d = d.lerp(Vector((0.5, 0.75, -0.45)), 0.8 * swept)
+            end_z = (E.z - 0.085 + rng.uniform(-0.012, 0.012)) * (1 - back) + (E.z - 0.13) * back
+            end_z = end_z * (1 - fringe) + (E.z - 0.06) * fringe
+            fall = 1.0 - 0.25 * fringe
+            lift = (0.007 + 0.012 * top + 0.0008 * layer[k]) * (1 - 0.3 * fringe)   # the crown's locks lie over the side's; the fringe close
+            wave = 40.0 * r.x + 30.0 * r.y                 # neighbours wave together, as combed hair does
+            p = r - n0 * 0.003                              # rooted in the scalp
+            path, norms = [p.copy()], [n0]
+            for i in range(60):
+                q, nq, _ = nearest(p)
+                d = (d - nq * d.dot(nq) * 0.8).normalized()                      # along the head, not into it
+                d = (d + Vector((0, 0, -1)) * fall * (0.015 + 0.012 * i)).normalized()  # falling more as it goes
+                d = (d + d.cross(nq).normalized() * 0.07 * math.sin(0.28 * i + wave)).normalized()   # a slight wave
+                if p.z < end_z + 0.025:                                          # the ends flick out, as in the photos
+                    d = (d + nq * 0.35 * ramp01(end_z + 0.025, end_z, p.z)).normalized()
+                p = p + d * 0.008
+                q, nq, _ = nearest(p)
+                li = 0.006 + (lift - 0.006) * ramp01(0, 5, i)              # rising from the part, not standing up from it
+                if (p - q).dot(nq) < li:
+                    p = q + nq * li
+                lim = E.z + 0.035 - 0.12 * ramp01(0.065, 0.095, abs(p.x - E.x))
+                if fringe > 0.2:                           # the fringe's edge a diagonal, as in the photos: high at the part, the brow at his right temple
+                    lim = max(lim, E.z + 0.03 + 0.55 * (p.x - (E.x - 0.07)))
+                if p.y < E.y + 0.01 and p.z < lim:
+                    p.z = lim                              # off the eyes: the fringe stops at the brow, easing down past the temple
+                    if fringe > 0.2 and i > 12:
+                        path.append(p.copy())
+                        norms.append(nq)
+                        break                              # a fringe lock ends where it meets its edge, rather than sliding along it
+                    if fringe > 0.2:                       # a short one flows on along the edge, toward his right temple
+                        d = (0.3 * d + Vector((-0.88, 0.0, -0.48))).normalized()
+                path.append(p.copy())
+                norms.append(nq)
+                if p.z < end_z and i > 6:
+                    break
+            if not pass_:                                   # the first pass only finds where each lock runs
+                grown.append(np.array([tuple(c) for c in path]))
+                rng.random(), rng.random()                  # the width's and the tone's draws, so the second pass grows the same locks
+                continue
+            width = rng.uniform(0.005, 0.01) if wisp else rng.uniform(0.045, 0.065)   # big locks that merge into one mass, as Vi's; wisps fine
+            width *= 0.45 + 0.55 * ramp01(0.04, 0.1, 0.008 * (len(path) - 1))           # short ones narrower, not lumps
+            taper = 1.8 if fringe > 0.2 else 3.0                                         # the fringe's ends to points
+            cx, cy = k % cols, k // cols
+            n = len(path)
+            base = len(verts)
+            tone = rng.uniform(0.95, 1.05)                    # close in tone, so where locks overlap no patch stands out
+            s_prev = None
+            for j, (c, nq) in enumerate(zip(path, norms)):
+                u = j / (n - 1)
+                t = (path[min(j + 1, n - 1)] - path[max(j - 1, 0)]).normalized()
+                s = t.cross(nq).normalized()
+                if s_prev is not None and s.dot(s_prev) < 0:                # no twist where the lock bends
+                    s = -s
+                s_prev = s
+                w = width * (1 - u ** taper) * (0.35 + 0.65 * min(1.0, u * 4)) + 0.0004   # narrow at the root, as hair leaves the part
+                for a in range(seg + 1):
+                    ang = 2 * math.pi * a / seg - math.pi / 2      # the seam underneath, out of sight
+                    verts.append(tuple(c + s * (0.5 * w * math.cos(ang)) + nq * (0.24 * w * math.sin(ang))))
+                    vn.append(tuple((nq * 0.75 + (s * math.cos(ang) + nq * math.sin(ang)) * 0.25).normalized()))
+                    uvs.append(((cx + 0.05 + 0.9 * a / seg) / cols, (cy + 0.03 + 0.94 * u) / rows))
+                    along.append(u)
+                    shade.append(tone)
+            for j in range(n - 1):
+                for a in range(seg):
+                    i0 = base + j * (seg + 1) + a
+                    faces.append((i0, i0 + seg + 1, i0 + seg + 2, i0 + 1))      # wound to face outward
+            c0 = len(verts)                                                  # the root closed, so no open end shows at the part
+            verts.append(tuple(path[0]))
+            vn.append(tuple(norms[0]))
+            uvs.append(((cx + 0.5) / cols, (cy + 0.03) / rows))
+            along.append(0.0)
+            shade.append(tone)
             for a in range(seg):
-                i0 = base + j * (seg + 1) + a
-                faces.append((i0, i0 + seg + 1, i0 + seg + 2, i0 + 1))      # wound to face outward
-        c0 = len(verts)                                                  # the root closed, so no open end shows at the part
-        verts.append(tuple(path[0]))
-        vn.append(tuple(norms[0]))
-        uvs.append(((cx + 0.5) / cols, (cy + 0.03) / rows))
-        along.append(0.0)
-        shade.append(tone)
-        for a in range(seg):
-            faces.append((c0, base + a, base + a + 1))
+                faces.append((c0, base + a, base + a + 1))
+        if not pass_:
+            for k in sorted(range(len(specs)), key=lambda k: specs[k][0].z):
+                used = {layer[j] for j in range(len(specs)) if specs[j][0].z < specs[k][0].z and
+                        np.min(np.linalg.norm(grown[k][:, None] - grown[j][None], axis=-1)) < 0.025}
+                layer[k] = next(i for i in range(len(specs)) if i not in used)
+            print("hair: %d layers" % (max(layer) + 1))
     me = bpy.data.meshes.new("Hair locks")
     me.from_pydata(verts, [], faces)
     uv = me.uv_layers.new(name="UVMap")
@@ -623,6 +649,20 @@ bpy.context.view_layer.update()
 if ADAM:                                           # Adam: the first version's short hair, MPFB's own asset, lit as one mass
     locks, beneath = fitted["hair"], None
     head_normals(locks)
+    # The skin under his hair takes the hair's colour, so where the camera sees under its edge it
+    # reads as roots in shade, not as a red band of scalp along the hairline.
+    hb = BVHTree.FromPolygons([locks.matrix_world @ v.co for v in locks.data.vertices], [tuple(pl.vertices) for pl in locks.data.polygons])
+    cover = np.array([1.0 if hb.ray_cast(p + (MW.to_3x3() @ v.normal).normalized() * 0.0005, (MW.to_3x3() @ v.normal).normalized(), 0.04)[0]
+                      else 0.0 for p, v in zip(pts, human.data.vertices)])   # covered: straight out from the skin, the hair
+    ed = np.empty(len(human.data.edges) * 2, np.int64)
+    human.data.edges.foreach_get("vertices", ed)
+    ed = ed.reshape(-1, 2)
+    acc, deg = cover.copy(), np.ones(len(cover))
+    np.add.at(acc, ed[:, 0], cover[ed[:, 1]])
+    np.add.at(acc, ed[:, 1], cover[ed[:, 0]])
+    np.add.at(deg, ed.ravel(), 1.0)
+    human.data.attributes.new("under_hair", 'FLOAT', 'POINT').data.foreach_set(
+        "value", [ramp01(0.3, 0.6, c) for c in acc / deg])   # with its neighbours, so a lone point under a stray strand drops out
 else:
     locks, beneath = hair()
 print("head built in %.0fs" % (time.time() - t_start))
@@ -820,7 +860,10 @@ def skin_colour(g, uv):
     lip = g.new("ShaderNodeAttribute", attribute_name="lip_tint").outputs["Fac"]
     col = g.mix(g.math('MULTIPLY', lip, 0.6), col, g.scale(col, (0.76, 0.52, 0.5)))   # lips their own, a muted rose, as Vi's (their shape painted)
     up = g.new("ShaderNodeAttribute", attribute_name="upper_lip").outputs["Fac"]
-    return g.mix(g.math('MULTIPLY', up, 0.7), col, g.scale(col, (0.8, 0.74, 0.75)))   # the upper lip in its own shade
+    col = g.mix(g.math('MULTIPLY', up, 0.7), col, g.scale(col, (0.8, 0.74, 0.75)))   # the upper lip in its own shade
+    if ADAM:                                        # under his hair, the hair's colour
+        return g.mix(g.new("ShaderNodeAttribute", attribute_name="under_hair").outputs["Fac"], col, (*P.srgb((0.2, 0.125, 0.075)), 1.0))
+    return col
 
 
 def hair_mass_colour(g, uv=None):
@@ -903,8 +946,16 @@ def attr_colour(name):
 
 def bake_brows(size):
     """The brows' shape, cast onto the skin's texture (Cycles, selected to active), so the painter
-    can paint them full underneath their hairs (your note: fuller, thicker brows)."""
+    can paint them full underneath their hairs (your note: fuller, thicker brows). Cast with a
+    mirror image of itself across the face, so both brows take the same shape, the fuller of the
+    two (your note, 2026-10-17: his right brow came out thinner than his left)."""
     brow = fitted["eyebrows"]
+    me = bpy.data.meshes.new_from_object(brow.evaluated_get(bpy.context.evaluated_depsgraph_get()))
+    me.transform(brow.matrix_world)
+    me.transform(Matrix.Translation((E.x, 0, 0)) @ Matrix.Scale(-1, 4, (1, 0, 0)) @ Matrix.Translation((-E.x, 0, 0)))
+    me.flip_normals()
+    twin = bpy.data.objects.new("Brows mirrored", me)
+    scene.collection.objects.link(twin)
     img = bpy.data.images.new("brows bake", size, size, float_buffer=True, alpha=False)
     mb, gb = P.node_mat("Brow shape", lambda g: g.new("ShaderNodeEmission", {"Color": g.new(
         "ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]}, image=cutouts["eyebrows"]).outputs["Alpha"],
@@ -913,9 +964,11 @@ def bake_brows(size):
     gs.nt.nodes.active = gs.new("ShaderNodeTexImage", image=img)
     keep_b, keep_s = list(brow.data.materials), list(human.data.materials)
     P.wear(brow, mb)
+    P.wear(twin, mb)
     P.wear(human, ms)
     bpy.ops.object.select_all(action='DESELECT')
     brow.select_set(True)
+    twin.select_set(True)
     human.select_set(True)
     bpy.context.view_layer.objects.active = human
     t = time.time()
@@ -923,12 +976,13 @@ def bake_brows(size):
                         margin=8, use_clear=True)
     a = np.empty(size * size * 4, np.float32)
     img.pixels.foreach_get(a)
-    path = PAINT / "skin-brows.npy"
+    path = PAINT / (SKIN + "-brows.npy")
     np.save(path, a.reshape(size, size, 4).astype(np.float16))
     for ob, keep in ((brow, keep_b), (human, keep_s)):
         ob.data.materials.clear()
         for mm in keep:
             ob.data.materials.append(mm)
+    bpy.data.objects.remove(twin)
     print("baked brows in %.0fs" % (time.time() - t))
     return path
 
@@ -1022,8 +1076,8 @@ if CHECK:
 else:
     PAINT.mkdir(parents=True, exist_ok=True)
     skin_png, hair_png = (PAINT / "skin-colour.png", PAINT / "hair-colour.png") if LIVE else (PAINT / "skin-painted.png", PAINT / "hair-painted.png")
-    if ADAM:
-        hair_png = PAINT / "adam-hair-colour.png"
+    if ADAM:                                        # his own skin too, its creases and shade under his own short hair, not the long hair's
+        skin_png, hair_png = PAINT / "adam-skin-colour.png", PAINT / "adam-hair-colour.png"
     cutouts = {kind: picture(fitted[kind]) for kind in ("eyebrows", "eyelashes") + (("hair",) if ADAM else ())}   # before the bake's stand-ins replace them
     need = [png for png in (skin_png, hair_png) if not (REUSE and png.exists())]
     if need:
@@ -1031,13 +1085,13 @@ else:
         for ob in keep_mats:                        # something to cast shadows while baking
             P.wear(ob, P.flat("Bake stand-in", (0.8, 0.8, 0.8)))
         jobs = []
-        if skin_png in need and REPAINT and (PAINT / "skin-brows.npy").exists():
-            sk = {k: PAINT / ("skin-%s.npy" % k) for k in ("base", "ao", "form", "masks", "masks2", "marks", "scan", "brows")}
+        if skin_png in need and REPAINT and (PAINT / (SKIN + "-brows.npy")).exists():
+            sk = {k: PAINT / ("%s-%s.npy" % (SKIN, k)) for k in ("base", "ao", "form", "masks", "masks2", "marks", "scan", "brows")}
             jobs.append((sk, skin_png, "skin", "24,12,6,3", ["--region", str(region()), "--bristles", "0.05", "--threshold", "8"]))
         elif skin_png in need:
             for kind in ("eyebrows", "eyelashes", "eyes"):    # their shadows on the skin read as eyeshadow
                 fitted[kind].hide_render = True
-            sk = P.bake(scene, human, skin_colour, SKIN_RES, "skin", PAINT, 0.012, form_distance=0.07, light=not LIVE,
+            sk = P.bake(scene, human, skin_colour, SKIN_RES, SKIN, PAINT, 0.012, form_distance=0.07, light=not LIVE,
                       extra=(("masks", attr_colour("paint_masks")), ("masks2", attr_colour("paint_masks2")), ("marks", marks),
                              ("scan", lambda g: g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeUVMap", uv_map=SCAN_UV).outputs["UV"]},
                                                       image=bpy.data.images["skin scan"]).outputs["Color"])))
@@ -1082,13 +1136,17 @@ else:
         P.wear(locks, painted_mat("Painted hair", hair_png))
     if not LIVE and beneath is not None:
         P.wear(beneath, P.flat("Hair beneath", (0.13, 0.085, 0.055)))
+    fitted["eyebrows"].hide_render = True          # the brows all paint (brush.py), the same on both sides; the asset's own hairs had strayed past one brow's edge
     for kind, col in (("eyebrows", (0.17, 0.12, 0.1)), ("eyelashes", (0.1, 0.07, 0.06))):
         m, g, out = P.material("Painted " + kind)
         tex = g.new("ShaderNodeTexImage", {"Vector": g.new("ShaderNodeTexCoord").outputs["UV"]}, image=cutouts[kind])
         em = g.new("ShaderNodeEmission", {"Color": (*P.srgb(col), 1.0), "Strength": 1.0})
         tr = g.new("ShaderNodeBsdfTransparent")
-        a = g.remap(tex.outputs["Alpha"], 0.2, 0.6, 0.0, 1.0, smooth=False)   # a few hairs only, over the painted lashes and brows
-        if kind == "eyelashes":                     # and of the lower lashes hardly any: theirs is the painted line, as Vi's
+        if kind == "eyelashes":                     # the lashes real hairs, full and dark, a little heavier than the texture draws them (your note, 2026-10-17)
+            a = g.remap(tex.outputs["Alpha"], 0.025, 0.18, 0.0, 1.0, smooth=False)
+        else:                                       # a few hairs only, over the painted brows
+            a = g.remap(tex.outputs["Alpha"], 0.2, 0.6, 0.0, 1.0, smooth=False)
+        if kind == "eyelashes":                     # only the upper: the lower lid's lashes hung far down the cheek, so theirs is the painted line
             lash = fitted[kind]
             if "upper" not in lash.data.attributes:
                 ups = []
@@ -1096,7 +1154,7 @@ else:
                     q = lash.matrix_world @ v.co
                     ups.append(1.0 if q.z > min(EYES, key=lambda c: (q - c).length).z - 0.002 else 0.0)
                 lash.data.attributes.new("upper", 'FLOAT', 'POINT').data.foreach_set("value", ups)
-            a = g.math('MULTIPLY', a, g.math('MULTIPLY_ADD', g.new("ShaderNodeAttribute", attribute_name="upper").outputs["Fac"], 0.85, 0.15))
+            a = g.math('MULTIPLY', a, g.math('MULTIPLY_ADD', g.new("ShaderNodeAttribute", attribute_name="upper").outputs["Fac"], 1.0, 0.0))
         g.nt.links.new(g.new("ShaderNodeMixShader", [a, tr.outputs[0], em.outputs[0]]).outputs[0], out.inputs["Surface"])
         P.wear(fitted[kind], m)
         fitted[kind].visible_shadow = False        # their cards' shadows smeared the cheeks

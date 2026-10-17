@@ -161,11 +161,13 @@ def compose(base, light, mask, palette, ao=None, masks=None, masks2=None, scan=N
     if brows is not None:                                                              # the brows full, as Vi's (your note, 2026-10-16): solid
         bm = np.clip(brows[..., :3].mean(-1), 0, 1)                                    # shapes in the hair's colour, with strands along them
         bm = np.asarray(Image.fromarray(np.uint8(bm * 255)).filter(ImageFilter.MaxFilter(5))).astype(np.float32) / 255
-        fill = (smoothstep(0.2, 0.55, blur(bm, 4)) * 0.85)[..., None]
-        n = blur_axis(blur_axis(np.random.default_rng(7).random(bm.shape).astype(np.float32), 24, 1), 1, 0)
+        global BROWS
+        BROWS = smoothstep(0.3, 0.4, blur(bm, 5))                                       # the gaps between the hairs closed, the edge clean (your note, 2026-10-17)
+        fill = (BROWS * 0.95)[..., None]
+        n = blur_axis(blur_axis(np.random.default_rng(7).random(bm.shape).astype(np.float32), 24, 0), 1, 1)   # along the brows, which run up the texture
         n = (n - n.mean()) / (n.std() + 1e-6)
-        strand = (1.0 - 0.45 * smoothstep(-0.5, -1.4, n) + 0.3 * smoothstep(0.8, 1.6, n))[..., None]
-        out = out * (1 - fill) + np.array((0.2, 0.13, 0.085)) * strand * shade * fill
+        strand = (1.0 - 0.4 * smoothstep(-0.5, -1.4, n) + 0.2 * smoothstep(0.8, 1.6, n))[..., None]
+        out = out * (1 - fill) + np.array((0.15, 0.1, 0.07)) * strand * shade * fill   # dark, as they read with their hairs over them
     if masks is not None and not p.get("strands"):
         if not unlit:
             h = (blur(masks[..., 1], 2) * smoothstep(0.55, 0.95, L) * 0.7)[..., None]     # highlights on the lit ridges
@@ -319,6 +321,7 @@ def stroke_map(size, seed=9):
 
 
 DEBUG = None
+BROWS = None                                        # the brows' shape, once compose has found it
 
 if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "strokes":   # py brush.py strokes OUT.png [SIZE]
     stroke_map(int(sys.argv[3]) if len(sys.argv) > 3 else 2048).save(sys.argv[2])
@@ -362,6 +365,9 @@ if __name__ == "__main__":
         lm = blur(load(a.masks2)[..., 1], 6)[..., None]
         smooth = np.asarray(Image.fromarray(np.uint8(ref)).filter(ImageFilter.GaussianBlur(3))).astype(np.float32)
         canvas = Image.fromarray(np.uint8(np.asarray(canvas).astype(np.float32) * (1 - lm) + smooth * lm))
+    if BROWS is not None:                           # the brows laid again over the strokes, with a little skin round them, so no stroke smears their edge
+        bf = smoothstep(0.0, 0.05, blur(BROWS, 6))[..., None]
+        canvas = Image.fromarray(np.uint8(np.asarray(canvas).astype(np.float32) * (1 - bf) + ref * bf))
     if PALETTES[a.palette].get("strands"):
         canvas = strands(canvas, unlit=a.unlit)
     if a.marks:
