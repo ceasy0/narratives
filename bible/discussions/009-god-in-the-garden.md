@@ -1,6 +1,6 @@
 # 009 — God in the Garden
 
-**Status:** Decided (2026-10-13): God speaks through Adam's ancestor, a real man never called God, as at Mamre, and through the world in two registers; his clothes decided (an off-white linen robe) and their nakedness (real, never sexual, covered by the staging; 2026-10-14); round 4 open: whether Christ is in that man, and the flip at the fall (README item 13).
+**Status:** Decided (2026-10-13): God speaks through Adam's ancestor, a real man never called God, as at Mamre, and through the world in two registers; his clothes decided (an off-white linen robe) and their nakedness (real, never sexual, covered by the staging; 2026-10-14); round 4 open: whether Christ is in that man, and the flip at the fall (README item 25).
 **Needed before:** the Garden's treatment (Genesis 2:8–3:24), the rest of Episode 1
 **Builds on:** [001](./001-how-god-speaks.md) (how God speaks: decided for Genesis) and [007](./007-the-faces-of-god.md) (the faces of God: decided)
 **Positions:** 12 (can God be shown), 21 (how God speaks)
@@ -284,7 +284,7 @@ It reopens the first line of the decision below. Nothing is changed until you de
 
 **Two things it changes, and one it costs.**
 
-1. **The voice.** At Mamre the visitors speak aloud. So the ancestor speaks aloud, with the held note under his voice: that's how the audience knows God is speaking through him, and it's the same sign as the encounter alone. The first words of the series are still a human voice speaking God's words; they're his, not Adam's. The encounter alone (the words in your own voice) stays for scenes with nobody there, from Cain on. *My recommendation; it's your call (README item 13).*
+1. **The voice.** At Mamre the visitors speak aloud. So the ancestor speaks aloud, with the held note under his voice: that's how the audience knows God is speaking through him, and it's the same sign as the encounter alone. The first words of the series are still a human voice speaking God's words; they're his, not Adam's. The encounter alone (the words in your own voice) stays for scenes with nobody there, from Cain on. *My recommendation; it's your call (README item 25).*
 2. **The people outside are seen in the Garden,** in one man. 008 left that open ("that may very well change"); this is the change.
 3. **The cost: the face.** If he bears the Opening's face, he reads as God; if he doesn't, he's a man. Since we're not calling him God, I'd give him the line's face (the cliff's, aged) the way any grandfather has it, and never light or frame him as more than a man. The held note is the only sign.
 
@@ -362,14 +362,14 @@ And: you'll try your best to have no nudity, and if the AI tools can't make it, 
 
 ## Decision
 
-**Decided 2026-10-08, after two rounds; revised 2026-10-13 in round 3** (your answer: God speaks through Adam's ancestor, a real man, as at Mamre). The open details of round 3, and round 4, are README item 13.
+**Decided 2026-10-08, after two rounds; revised 2026-10-13 in round 3** (your answer: God speaks through Adam's ancestor, a real man, as at Mamre). The open details of round 3, and round 4, are README item 25.
 
 - **God speaks through Adam's ancestor** (round 3, 2026-10-13): a real man, old, of the people outside, Adam's and Eve's grandfather (P6), who planted the Garden and is never called God. God is never seen as God; he speaks and acts through this man as through the visitors at Mamre, and through the world. *(Was: "God is not seen in Episode 1," round 1.)*
 - **Two registers for God through the world** (round 2). The first is Discussion 001's device: the world goes quiet, the held note returns, and the words come in the hearer's own voice; it carries every recorded speech. The second is signs and double meanings in the world, which Adam reads: an animal's act, the river, a thing in the Garden meaning two things at once; it carries the silent hours. Nothing in the world speaks. The serpent, a voice from outside with the hiss under it, is the only exception, and it's the counterfeit of both registers.
-- **The command (2:16–17)** is the first thing spoken in the series, at the two trees, after minutes of silent walking (your answers, rounds 1 and 2). *Round 3:* the ancestor is waiting there and speaks it; whether aloud with the held note under it (my pick) or in Adam's own voice is README item 13.
+- **The command (2:16–17)** is the first thing spoken in the series, at the two trees, after minutes of silent walking (your answers, rounds 1 and 2). *Round 3:* the ancestor is waiting there and speaks it; whether aloud with the held note under it (my pick) or in Adam's own voice is README item 25.
 - **The naming (2:19–20)** is shown and wordless: the names are never heard; the looking is the scene (round 2).
-- **The questions (3:9–13) and the sentences (3:14–19)** come through the ancestor (round 3); the voice follows item 13's answer. *(Was: in their own voices, the serpent's sentence in both, out of step, round 1.)*
-- **The clothes (3:21):** one of the named animals is dead (round 2), and the ancestor's hands make the skins into clothes and dress them (round 3, my proposal, in item 13).
+- **The questions (3:9–13) and the sentences (3:14–19)** come through the ancestor (round 3); the voice follows item 25's answer. *(Was: in their own voices, the serpent's sentence in both, out of step, round 1.)*
+- **The clothes (3:21):** one of the named animals is dead (round 2), and the ancestor's hands make the skins into clothes and dress them (round 3, my proposal, in item 25).
 - **What he wears** (round 4): an off-white linen robe, as white as linen gets naturally, never pure white; worn and plainly cut, a man's working clothes.
 - **The sword (3:24):** the Opening's world at full strength, fire turning over, and the cherubim's faces are the Garden's own animals (round 2).
 - **Eve is of one kind with Adam** from the moment she wakes (round 2). We say "of one kind."

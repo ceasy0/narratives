@@ -1,6 +1,6 @@
 # 011 — When God regrets and relents
 
-**Status:** Seeded (2026-10-13): God's regret in Gen 6:6, the first of the stories' own questions; nothing decided (README item 18).
+**Status:** Seeded (2026-10-13): God's regret in Gen 6:6, the first of the stories' own questions; nothing decided (README item 30).
 **Needed before:** hour 3, *The Days of Noah* (Gen 5:1–6:8); then the golden calf (Exod 32), Saul (1 Sam 15) and Jonah
 **Positions:** an open question in [POSITIONS](../canon/POSITIONS.md#open-questions-the-stories-will-raise-on-their-own), "God relenting"
 **Builds on:** [001](./001-how-god-speaks.md) (how God speaks), [007](./007-the-faces-of-god.md) (the malice is a separated part's perception), [010](./010-the-days-of-noah.md) (the flood)
